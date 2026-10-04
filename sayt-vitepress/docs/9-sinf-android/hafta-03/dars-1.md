@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (Android)", "link": "/9-sinf-android/"}, "week": {"n": 3, "link": "/9-sinf-android/hafta-03/"}, "g": 7, "title": "Android Studio va Android SDK bilan tanishuv (2-qism)", "lead": "", "slide": "/slaydlar/9-sinf-android/hafta-03/dars-1.html", "tabs": [{"g": 7, "link": "/9-sinf-android/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/9-sinf-android/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf-android/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "Android Studio va Android SDK bilan tanishuv (3-qism)", "link": "/9-sinf-android/hafta-03/dars-2"}}
+dars: {"sinf": {"name": "9-sinf (Android)", "link": "/9-sinf-android/"}, "week": {"n": 3, "link": "/9-sinf-android/hafta-03/"}, "g": 7, "title": "Android Studio va Android SDK bilan tanishuv (2-qism)", "lead": "Android Studio va Android SDK bilan tanishuv (2-qism): Loyiha strukturasi (java/kotlin, res, AndroidManifest.xml, Gradle)", "slide": "/slaydlar/9-sinf-android/hafta-03/dars-1.html", "tabs": [{"g": 7, "link": "/9-sinf-android/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/9-sinf-android/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf-android/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "Android Studio va Android SDK bilan tanishuv (3-qism)", "link": "/9-sinf-android/hafta-03/dars-2"}}
 ---
 
 Bugungi darsda biz Android Studio loyihasining ichki tuzilishi — ya'ni loyiha papkalari nima uchun kerakligini o'rganamiz. Kotlin kodi qayerda yoziladi, rasmlar va dizaynlar qayerda saqlanadi, `AndroidManifest.xml` fayli nega ilovaning "miyasi" deb atalishini bilib olamiz.

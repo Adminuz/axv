@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (Android)", "link": "/10-sinf-android/"}, "week": {"n": 3, "link": "/10-sinf-android/hafta-03/"}, "g": 13, "title": "7-dars: Git bilan versiya nazorati asoslari", "lead": "", "slide": "/slaydlar/10-sinf-android/hafta-03/dars-7.html", "tabs": [{"g": 13, "link": "/10-sinf-android/hafta-03/dars-7", "current": true}, {"g": 14, "link": "/10-sinf-android/hafta-03/dars-8", "current": false}, {"g": 15, "link": "/10-sinf-android/hafta-03/dars-9", "current": false}], "prev": null, "next": {"g": 14, "title": "8-dars: Git bilan ishlash amaliyoti (Tarmoqlar va Konfliktlar)", "link": "/10-sinf-android/hafta-03/dars-8"}}
+dars: {"sinf": {"name": "10-sinf (Android)", "link": "/10-sinf-android/"}, "week": {"n": 3, "link": "/10-sinf-android/hafta-03/"}, "g": 13, "title": "7-dars: Git bilan versiya nazorati asoslari", "lead": "build.gradle faylining asosiy tuzilmasi va modullararo bog‘lanishi", "slide": "/slaydlar/10-sinf-android/hafta-03/dars-7.html", "tabs": [{"g": 13, "link": "/10-sinf-android/hafta-03/dars-7", "current": true}, {"g": 14, "link": "/10-sinf-android/hafta-03/dars-8", "current": false}, {"g": 15, "link": "/10-sinf-android/hafta-03/dars-9", "current": false}], "prev": null, "next": {"g": 14, "title": "8-dars: Git bilan ishlash amaliyoti (Tarmoqlar va Konfliktlar)", "link": "/10-sinf-android/hafta-03/dars-8"}}
 ---
 
 **Fan:** Advanced Android dasturlash  

@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (Android)", "link": "/9-sinf-android/"}, "week": {"n": 2, "link": "/9-sinf-android/hafta-02/"}, "g": 6, "title": "Android Studio va Android SDK bilan tanishuv (1-qism)", "lead": "", "slide": "/slaydlar/9-sinf-android/hafta-02/dars-3.html", "tabs": [{"g": 4, "link": "/9-sinf-android/hafta-02/dars-1", "current": false}, {"g": 5, "link": "/9-sinf-android/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/9-sinf-android/hafta-02/dars-3", "current": true}], "prev": {"g": 5, "title": "Android ekotizimi va Google xizmatlari (2-qism)", "link": "/9-sinf-android/hafta-02/dars-2"}, "next": null}
+dars: {"sinf": {"name": "9-sinf (Android)", "link": "/9-sinf-android/"}, "week": {"n": 2, "link": "/9-sinf-android/hafta-02/"}, "g": 6, "title": "Android Studio va Android SDK bilan tanishuv (1-qism)", "lead": "Android Studio va Android SDK bilan tanishuv (1-qism): Android Studio interfeysi, SDK Manager va SDK Build-Tools", "slide": "/slaydlar/9-sinf-android/hafta-02/dars-3.html", "tabs": [{"g": 4, "link": "/9-sinf-android/hafta-02/dars-1", "current": false}, {"g": 5, "link": "/9-sinf-android/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/9-sinf-android/hafta-02/dars-3", "current": true}], "prev": {"g": 5, "title": "Android ekotizimi va Google xizmatlari (2-qism)", "link": "/9-sinf-android/hafta-02/dars-2"}, "next": null}
 ---
 
 Bugungi darsda biz mobil ilovalar yaratishning eng asosiy quroli — **Android Studio** dasturi va uning yuragi hisoblangan **Android SDK** (Software Development Kit) bilan yaqindan tanishamiz. Dasturchilar kompyuter orqali telefonni qanday boshqarishi va ADB vositasi qanday ishlashini o'rganamiz.

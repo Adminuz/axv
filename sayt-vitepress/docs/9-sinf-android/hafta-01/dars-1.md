@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (Android)", "link": "/9-sinf-android/"}, "week": {"n": 1, "link": "/9-sinf-android/hafta-01/"}, "g": 1, "title": "Android nima va uning rivojlanish tarixi", "lead": "", "slide": "/slaydlar/9-sinf-android/hafta-01/dars-1.html", "tabs": [{"g": 1, "link": "/9-sinf-android/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/9-sinf-android/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf-android/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "Android tizimi va uning arxitekturasi", "link": "/9-sinf-android/hafta-01/dars-2"}}
+dars: {"sinf": {"name": "9-sinf (Android)", "link": "/9-sinf-android/"}, "week": {"n": 1, "link": "/9-sinf-android/hafta-01/"}, "g": 1, "title": "Android nima va uning rivojlanish tarixi", "lead": "Android nima va uning rivojlanish tarixi: mobil OS tarixi, Google, versiyalar va O'zbekiston ekotizimi", "slide": "/slaydlar/9-sinf-android/hafta-01/dars-1.html", "tabs": [{"g": 1, "link": "/9-sinf-android/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/9-sinf-android/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf-android/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "Android tizimi va uning arxitekturasi", "link": "/9-sinf-android/hafta-01/dars-2"}}
 ---
 
 Bugungi darsda biz dunyodagi eng ommabop mobil operatsion tizim — **Android** bilan tanishamiz. Uning qanday yaratilgani, Google qanday qilib uni global ekotizimga aylantirgani, versiyalarning qiziqarli nomlari va O'zbekistondagi mobil dasturlash imkoniyatlarini o'rganamiz.

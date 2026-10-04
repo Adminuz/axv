@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "hafta"
-hafta: {"sinf": {"name": "10-sinf (UX/UI)", "link": "/10-sinf-uxui/"}, "n": 3, "bob": "", "lessons": [{"g": 13, "title": "7-dars: Ranglar psixologiyasi va tipografiya", "lead": "", "link": "/10-sinf-uxui/hafta-03/dars-7", "slide": "/slaydlar/10-sinf-uxui/hafta-03/dars-7.html"}, {"g": 14, "title": "8-dars: Grid tizimlari va kompozitsiya", "lead": "", "link": "/10-sinf-uxui/hafta-03/dars-8", "slide": "/slaydlar/10-sinf-uxui/hafta-03/dars-8.html"}, {"g": 15, "title": "9-dars: Ikonka, tugma va navigatsiya elementlarini dizayni (UI Kit)", "lead": "", "link": "/10-sinf-uxui/hafta-03/dars-9", "slide": "/slaydlar/10-sinf-uxui/hafta-03/dars-9.html"}]}
+hafta: {"sinf": {"name": "10-sinf (UX/UI)", "link": "/10-sinf-uxui/"}, "n": 3, "bob": "V-bob · Front-End asoslari (HTML5, CSS3, JavaScript)", "lessons": [{"g": 13, "title": "7-dars: Ranglar psixologiyasi va tipografiya", "lead": "Semantik HTML5 teglari va accessibility (WCAG) asoslari", "link": "/10-sinf-uxui/hafta-03/dars-7", "slide": "/slaydlar/10-sinf-uxui/hafta-03/dars-7.html"}, {"g": 14, "title": "8-dars: Grid tizimlari va kompozitsiya", "lead": "Formalar, validatsiya va interfeys elementlari semantikasi", "link": "/10-sinf-uxui/hafta-03/dars-8", "slide": "/slaydlar/10-sinf-uxui/hafta-03/dars-8.html"}, {"g": 15, "title": "9-dars: Ikonka, tugma va navigatsiya elementlarini dizayni (UI Kit)", "lead": "SEO tamoyillari va meta teglarni to'g'ri qo'llash", "link": "/10-sinf-uxui/hafta-03/dars-9", "slide": "/slaydlar/10-sinf-uxui/hafta-03/dars-9.html"}]}
 ---
 
 <div class="blk">

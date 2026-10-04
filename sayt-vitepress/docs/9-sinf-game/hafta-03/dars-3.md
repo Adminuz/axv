@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (Game)", "link": "/9-sinf-game/"}, "week": {"n": 3, "link": "/9-sinf-game/hafta-03/"}, "g": 9, "title": "Ranglar nazariyasi va dizayn asoslari (2-qism): Color Picker, Swatches va Gradient bilan ishlash", "lead": "", "slide": "/slaydlar/9-sinf-game/hafta-03/dars-3.html", "tabs": [{"g": 7, "link": "/9-sinf-game/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/9-sinf-game/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf-game/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "Ranglar nazariyasi va dizayn asoslari (1-qism): RGB va CMYK, rang g'ildiragi va rang psixologiyasi", "link": "/9-sinf-game/hafta-03/dars-2"}, "next": null}
+dars: {"sinf": {"name": "9-sinf (Game)", "link": "/9-sinf-game/"}, "week": {"n": 3, "link": "/9-sinf-game/hafta-03/"}, "g": 9, "title": "Ranglar nazariyasi va dizayn asoslari (2-qism): Color Picker, Swatches va Gradient bilan ishlash", "lead": "Ranglar nazariyasi va dizayn asoslari (2-qism): Color Picker, Swatches va Gradient bilan ishlash", "slide": "/slaydlar/9-sinf-game/hafta-03/dars-3.html", "tabs": [{"g": 7, "link": "/9-sinf-game/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/9-sinf-game/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf-game/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "Ranglar nazariyasi va dizayn asoslari (1-qism): RGB va CMYK, rang g'ildiragi va rang psixologiyasi", "link": "/9-sinf-game/hafta-03/dars-2"}, "next": null}
 ---
 
 

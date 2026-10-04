@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "hafta"
-hafta: {"sinf": {"name": "10-sinf (UX/UI)", "link": "/10-sinf-uxui/"}, "n": 2, "bob": "", "lessons": [{"g": 7, "title": "4-dars: Foydalanuvchi tadqiqot usullari: intervyu, so‘rovnoma, kuzatish", "lead": "", "link": "/10-sinf-uxui/hafta-02/dars-4", "slide": "/slaydlar/10-sinf-uxui/hafta-02/dars-4.html"}, {"g": 8, "title": "5-dars: Persona va empatiya xaritasini yaratish", "lead": "", "link": "/10-sinf-uxui/hafta-02/dars-5", "slide": "/slaydlar/10-sinf-uxui/hafta-02/dars-5.html"}, {"g": 9, "title": "6-dars: Foydalanuvchi tarixi va senariysini yozish (User Story & User Journey Map)", "lead": "", "link": "/10-sinf-uxui/hafta-02/dars-6", "slide": "/slaydlar/10-sinf-uxui/hafta-02/dars-6.html"}]}
+hafta: {"sinf": {"name": "10-sinf (UX/UI)", "link": "/10-sinf-uxui/"}, "n": 2, "bob": "III-bob · UI dizayn elementlari va vizual ierarxiya", "lessons": [{"g": 7, "title": "4-dars: Foydalanuvchi tadqiqot usullari: intervyu, so‘rovnoma, kuzatish", "lead": "Ranglar psixologiyasi va tipografiya", "link": "/10-sinf-uxui/hafta-02/dars-4", "slide": "/slaydlar/10-sinf-uxui/hafta-02/dars-4.html"}, {"g": 8, "title": "5-dars: Persona va empatiya xaritasini yaratish", "lead": "Grid tizimlari va kompozitsiya", "link": "/10-sinf-uxui/hafta-02/dars-5", "slide": "/slaydlar/10-sinf-uxui/hafta-02/dars-5.html"}, {"g": 9, "title": "6-dars: Foydalanuvchi tarixi va senariysini yozish (User Story & User Journey Map)", "lead": "Ikonka, tugma va navigatsiya elementlarini dizayni (UI Kit)", "link": "/10-sinf-uxui/hafta-02/dars-6", "slide": "/slaydlar/10-sinf-uxui/hafta-02/dars-6.html"}]}
 ---
 
 <div class="blk">

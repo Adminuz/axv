@@ -130,18 +130,19 @@ def parse_karta(path):
     """karta.md → {dars_raqami: (bob_nomi, mavzu, holat)} va umumiy hafta soni."""
     if not path.exists():
         return {}, 0
-    lessons, bob = {}, ""
+    lessons, bob = {}, "I-bob"
     for line in path.read_text(encoding="utf-8").split("\n"):
-        m = re.match(r"## ([IVX]+)-bob\.\s*(.*?)\s*\(\d+ dars\)", line)
+        m = re.match(r"##\s*([IVX]+)[- ](?:bob|BOB)\.?\s*(.*?)(?:\s*\(\s*\d+.*?\))?$", line, flags=re.I)
         if m:
-            bob = f"{m.group(1)}-bob · {m.group(2)}"
+            nomi = m.group(2).strip().rstrip(".")
+            bob = f"{m.group(1).upper()}-bob · {nomi}" if nomi else f"{m.group(1).upper()}-bob"
             continue
-        m = re.match(r"\|\s*(\d+)(?:–(\d+))?\s*\|\s*[\d–]+\s*\|\s*(.*?)\s*\|\s*(\S+)\s*\|", line)
-        if m and bob:
+        m = re.match(r"\|\s*(\d+)(?:[–-](\d+))?\s*\|\s*[\d–-]+\s*\|\s*(.*?)\s*\|\s*(\S+)\s*\|", line)
+        if m:
             a = int(m.group(1))
             b = int(m.group(2) or a)
             for n in range(a, b + 1):
-                lessons[n] = (bob, m.group(3), m.group(4))
+                lessons[n] = (bob, m.group(3).strip(), m.group(4).strip())
     total = -(-max(lessons) // DARS_HAFTADA) if lessons else 0
     return lessons, total
 
@@ -247,6 +248,8 @@ def build_sinf(sinf_dir, sinf_name, fan, icon, choraklar, gacha):
                 weeks[n] = (w, *loaded)
     if not weeks:
         return None
+    if choraklar:
+        total = max(total, max(b for _, _, b in choraklar))
     total = max(total, max(weeks))
     out_dir = DOCS / sinf_dir
     if out_dir.exists():

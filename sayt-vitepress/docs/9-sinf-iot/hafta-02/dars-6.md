@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (IoT)", "link": "/9-sinf-iot/"}, "week": {"n": 2, "link": "/9-sinf-iot/hafta-02/"}, "g": 9, "title": "6-dars: Elektron sxema asosida bitta LED lampaning ishlash prinsipi va ulanishi", "lead": "", "slide": "/slaydlar/9-sinf-iot/hafta-02/dars-6.html", "tabs": [{"g": 7, "link": "/9-sinf-iot/hafta-02/dars-4", "current": false}, {"g": 8, "link": "/9-sinf-iot/hafta-02/dars-5", "current": false}, {"g": 9, "link": "/9-sinf-iot/hafta-02/dars-6", "current": true}], "prev": {"g": 8, "title": "5-dars: Tinkercad muhitida virtual elektron komponentlar bilan ishlash", "link": "/9-sinf-iot/hafta-02/dars-5"}, "next": null}
+dars: {"sinf": {"name": "9-sinf (IoT)", "link": "/9-sinf-iot/"}, "week": {"n": 2, "link": "/9-sinf-iot/hafta-02/"}, "g": 9, "title": "6-dars: Elektron sxema asosida bitta LED lampaning ishlash prinsipi va ulanishi", "lead": "Arduino UNO yordamida LED indikatorlari va push-button bilan interaktiv interfeys (2-qism)", "slide": "/slaydlar/9-sinf-iot/hafta-02/dars-6.html", "tabs": [{"g": 7, "link": "/9-sinf-iot/hafta-02/dars-4", "current": false}, {"g": 8, "link": "/9-sinf-iot/hafta-02/dars-5", "current": false}, {"g": 9, "link": "/9-sinf-iot/hafta-02/dars-6", "current": true}], "prev": {"g": 8, "title": "5-dars: Tinkercad muhitida virtual elektron komponentlar bilan ishlash", "link": "/9-sinf-iot/hafta-02/dars-5"}, "next": null}
 ---
 
 **Fan:** Internet of Things (IoT — Buyumlar Interneti)  

@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (IoT)", "link": "/9-sinf-iot/"}, "week": {"n": 3, "link": "/9-sinf-iot/hafta-03/"}, "g": 15, "title": "9-dars: Arduino UNO yordamida LED indikatorlari va push-button bilan interaktiv interfeys (2-qism)", "lead": "", "slide": "/slaydlar/9-sinf-iot/hafta-03/dars-9.html", "tabs": [{"g": 13, "link": "/9-sinf-iot/hafta-03/dars-7", "current": false}, {"g": 14, "link": "/9-sinf-iot/hafta-03/dars-8", "current": false}, {"g": 15, "link": "/9-sinf-iot/hafta-03/dars-9", "current": true}], "prev": {"g": 14, "title": "8-dars: Arduino UNO yordamida LED indikatorlari va push-button bilan ishlash (1-qism)", "link": "/9-sinf-iot/hafta-03/dars-8"}, "next": null}
+dars: {"sinf": {"name": "9-sinf (IoT)", "link": "/9-sinf-iot/"}, "week": {"n": 3, "link": "/9-sinf-iot/hafta-03/"}, "g": 15, "title": "9-dars: Arduino UNO yordamida LED indikatorlari va push-button bilan interaktiv interfeys (2-qism)", "lead": "Mikrokontroller tushunchasi va IoT qurilmalaridagi o‘rni (1-qism)", "slide": "/slaydlar/9-sinf-iot/hafta-03/dars-9.html", "tabs": [{"g": 13, "link": "/9-sinf-iot/hafta-03/dars-7", "current": false}, {"g": 14, "link": "/9-sinf-iot/hafta-03/dars-8", "current": false}, {"g": 15, "link": "/9-sinf-iot/hafta-03/dars-9", "current": true}], "prev": {"g": 14, "title": "8-dars: Arduino UNO yordamida LED indikatorlari va push-button bilan ishlash (1-qism)", "link": "/9-sinf-iot/hafta-03/dars-8"}, "next": null}
 ---
 
 **Fan:** Internet of Things (IoT — Buyumlar Interneti)  

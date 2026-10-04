@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (UX/UI)", "link": "/10-sinf-uxui/"}, "week": {"n": 2, "link": "/10-sinf-uxui/hafta-02/"}, "g": 7, "title": "4-dars: Foydalanuvchi tadqiqot usullari: intervyu, so‘rovnoma, kuzatish", "lead": "", "slide": "/slaydlar/10-sinf-uxui/hafta-02/dars-4.html", "tabs": [{"g": 7, "link": "/10-sinf-uxui/hafta-02/dars-4", "current": true}, {"g": 8, "link": "/10-sinf-uxui/hafta-02/dars-5", "current": false}, {"g": 9, "link": "/10-sinf-uxui/hafta-02/dars-6", "current": false}], "prev": null, "next": {"g": 8, "title": "5-dars: Persona va empatiya xaritasini yaratish", "link": "/10-sinf-uxui/hafta-02/dars-5"}}
+dars: {"sinf": {"name": "10-sinf (UX/UI)", "link": "/10-sinf-uxui/"}, "week": {"n": 2, "link": "/10-sinf-uxui/hafta-02/"}, "g": 7, "title": "4-dars: Foydalanuvchi tadqiqot usullari: intervyu, so‘rovnoma, kuzatish", "lead": "Ranglar psixologiyasi va tipografiya", "slide": "/slaydlar/10-sinf-uxui/hafta-02/dars-4.html", "tabs": [{"g": 7, "link": "/10-sinf-uxui/hafta-02/dars-4", "current": true}, {"g": 8, "link": "/10-sinf-uxui/hafta-02/dars-5", "current": false}, {"g": 9, "link": "/10-sinf-uxui/hafta-02/dars-6", "current": false}], "prev": null, "next": {"g": 8, "title": "5-dars: Persona va empatiya xaritasini yaratish", "link": "/10-sinf-uxui/hafta-02/dars-5"}}
 ---
 
 **Sinf:** 10-sinf  

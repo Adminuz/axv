@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (IoT)", "link": "/9-sinf-iot/"}, "week": {"n": 3, "link": "/9-sinf-iot/hafta-03/"}, "g": 13, "title": "7-dars: Elektron sxema asosida ikki LED lampaning ishlash prinsipi va ulanishi", "lead": "", "slide": "/slaydlar/9-sinf-iot/hafta-03/dars-7.html", "tabs": [{"g": 13, "link": "/9-sinf-iot/hafta-03/dars-7", "current": true}, {"g": 14, "link": "/9-sinf-iot/hafta-03/dars-8", "current": false}, {"g": 15, "link": "/9-sinf-iot/hafta-03/dars-9", "current": false}], "prev": null, "next": {"g": 14, "title": "8-dars: Arduino UNO yordamida LED indikatorlari va push-button bilan ishlash (1-qism)", "link": "/9-sinf-iot/hafta-03/dars-8"}}
+dars: {"sinf": {"name": "9-sinf (IoT)", "link": "/9-sinf-iot/"}, "week": {"n": 3, "link": "/9-sinf-iot/hafta-03/"}, "g": 13, "title": "7-dars: Elektron sxema asosida ikki LED lampaning ishlash prinsipi va ulanishi", "lead": "IoT uchun asosiy qurilmalar: Arduino va Raspberry Pi taqqosi", "slide": "/slaydlar/9-sinf-iot/hafta-03/dars-7.html", "tabs": [{"g": 13, "link": "/9-sinf-iot/hafta-03/dars-7", "current": true}, {"g": 14, "link": "/9-sinf-iot/hafta-03/dars-8", "current": false}, {"g": 15, "link": "/9-sinf-iot/hafta-03/dars-9", "current": false}], "prev": null, "next": {"g": 14, "title": "8-dars: Arduino UNO yordamida LED indikatorlari va push-button bilan ishlash (1-qism)", "link": "/9-sinf-iot/hafta-03/dars-8"}}
 ---
 
 **Fan:** Internet of Things (IoT — Buyumlar Interneti)  

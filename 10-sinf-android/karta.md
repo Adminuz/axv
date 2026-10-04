@@ -34,7 +34,8 @@ Manba: `4.3. Srtandart`, `4.3. Uslubiy ko'rsatma`, `4.3. O'quv qo'llanma`. Agent
 | 10 | 4 | GitLab va Bitbucket’da jamoaviy ish jarayonlari: loyihani klonlash, access va rollar, pipeline | ⬜ |
 | 11 | 4 | Branch, Merge va Pull Request jarayonlari: feature branching, merge konfliktlari, PR va Code Review | ⬜ |
 | 12 | 4 | Continuous Integration (CI/CD) tushunchasi: build va test avtomatlashtirish, GitHub Actions | ⬜ |
-| 14 | 5 | build.gradle faylining asosiy tuzilmasi va modullararo bog‘lanishini biladi; - Build variantlar (debug, release) va ularning farqini tushunadi; | ⬜ |
+| 13 | 5 | build.gradle faylining asosiy tuzilmasi va modullararo bog‘lanishi | ⬜ |
+| 14 | 5 | Build variantlar (debug, release) va ularning farqi | ⬜ |
 | 15 | 5 | Gradle yordamida kutubxonalarni ulash va versiyalarni boshqarish ko‘nikmasiga ega bo‘ladi; | ⬜ |
 | 16 | 6 | Gradle so‘rovlarini (tasks) bajarish va xatoliklarni aniqlashni biladi; | ⬜ |
 | 17 | 6 | build.gradle faylida kutubxonalarni ulash va boshqarishni biladi; | ⬜ |

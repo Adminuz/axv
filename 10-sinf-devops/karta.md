@@ -40,6 +40,23 @@ Manba: `4.5. Uslubiy ko'rsatma`, `4.5. O'quv qo'llanma`. Matnlari `_matn/` papka
 |---|---|---|---|
 | 8 | 3 | Kompyuter tarmoqlari asoslari: Tarmoq turlari (LAN, WAN), OSI 7 qatlamli modeli va TCP/IP steki | 📝 |
 | 9 | 3 | IP manzillash, Subnetting va tarmoq diagnostikasi vositalari (ping, traceroute, ss, netstat, curl) | 📝 |
+| 10 | 4 | Bash skripting asoslari: o'zgaruvchilar, argumentlar va kiritish/chiqarish (read, echo, printf) | ⬜ |
+| 11 | 4 | Shart operatorlari va mantiqiy ifodalar (if/elif/else, test, [[]], arifmetik amallar) | ⬜ |
+| 12 | 4 | Sikllar va takrorlanishlar (for, while, until) hamda matnli oqimlarni qayta ishlash | ⬜ |
+| 13 | 5 | Matn filtralari va muntazam ifodalar: grep, sed, awk va xargs amaliyoti | ⬜ |
+| 14 | 5 | Linux jarayonlari va rejalashtirish: cron, crontab, at va tizim monitoringi (htop, iotop) | ⬜ |
+| 15 | 5 | Linux xavfsizligi va foydalanuvchilar: useradd, usermod, sudoers, SSH kalitlar bilan xavfsiz ulanish | ⬜ |
+| 16 | 6 | Git ilg'or texnikalari: git stash, rebase, cherry-pick va reflog imkoniyatlari | ⬜ |
+| 17 | 6 | Git taglar va versiyalash: semantik versiyalash (SemVer), release yaratish | ⬜ |
+| 18 | 6 | GitHub Flow va GitKraken/CLI orqali jamoaviy kollaboratsiya | ⬜ |
+| 19 | 7 | GitHub Actions asoslari: birinchi workflow yaratish, triggerlar va runnerlar | ⬜ |
+| 20 | 7 | Continuous Integration (CI) amaliyoti: avtomatik testlar va lint tekshiruvlari | ⬜ |
+| 21 | 7 | GitLab CI/CD asoslari: .gitlab-ci.yml strukturasi va pipeline bosqichlari | ⬜ |
+| 22 | 8 | Kompyuter tarmoqlari: Ethernet, MAC manzillar, marshrutlash (routing) va ARP protokoli | ⬜ |
+| 23 | 8 | Tarmoq xavfsizligi asoslari: Firewall tushunchasi, UFW (Uncomplicated Firewall) va iptables | ⬜ |
+| 24 | 8 | NAT (Network Address Translation) va Port Forwarding mexanizmlari | ⬜ |
+| 25 | 9 | Tarmoq xizmatlari va dasturlari: DHCP, SSH xavfsizligi va portlarni skanerlash (nmap) | ⬜ |
+| 26 | 9 | Veb serverlar va proksi: Nginx asoslari, statik kontent va reverse proxy konfiguratsiyasi | ⬜ |
 | 27 | 9 | TCP/IP steki va protokollar ierarxiyasi (OSI vs TCP/IP) | ⬜ |
 | 28 | 10 | IP manzillash asoslari: IPv4 tuzilishi, manzil sinflari va xususiy/ommaviy IP manzillar | ⬜ |
 | 29 | 10 | CIDR notatsiyasi va Subnetting: tarmoq maskasi va qism tarmoqlarni hisoblash | ⬜ |

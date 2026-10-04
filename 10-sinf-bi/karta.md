@@ -14,7 +14,7 @@ Manba: Rasmiy o'quv dasturi (`10-sinf-bi/_matn/oquv-dasturi.txt`), Uslubiy ko'rs
 
 ---
 
-## I BOB. Ma’lumotlar muhandisligiga kirish va ma’lumotlarni boshqarish (27 dars, 1–9 haftalar)
+## I-bob. Ma’lumotlar muhandisligiga kirish va ma’lumotlarni boshqarish (27 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
@@ -48,7 +48,7 @@ Manba: Rasmiy o'quv dasturi (`10-sinf-bi/_matn/oquv-dasturi.txt`), Uslubiy ko'rs
 
 ---
 
-## II BOB. Ma’lumotlar oqimi va avtomatlashtirish (21 dars, 10–16 haftalar)
+## II-bob. Ma’lumotlar oqimi va avtomatlashtirish (21 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
@@ -76,7 +76,7 @@ Manba: Rasmiy o'quv dasturi (`10-sinf-bi/_matn/oquv-dasturi.txt`), Uslubiy ko'rs
 
 ---
 
-## III BOB. Machine Learning (ML)ga kirish (30 dars, 17–26 haftalar)
+## III-bob. Machine Learning (ML)ga kirish (30 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
@@ -113,7 +113,7 @@ Manba: Rasmiy o'quv dasturi (`10-sinf-bi/_matn/oquv-dasturi.txt`), Uslubiy ko'rs
 
 ---
 
-## IV BOB. Integratsiya, avtomatlashtirish va zamonaviy texnologiyalar (24 dars, 27–34 haftalar)
+## IV-bob. Integratsiya, avtomatlashtirish va zamonaviy texnologiyalar (24 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|

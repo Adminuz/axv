@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (Game)", "link": "/9-sinf-game/"}, "week": {"n": 3, "link": "/9-sinf-game/hafta-03/"}, "g": 7, "title": "Photoshop interfeysi va vositalari (3-qism): Qatlamlar bilan amaliy ishlash va assetlar kollaji", "lead": "", "slide": "/slaydlar/9-sinf-game/hafta-03/dars-1.html", "tabs": [{"g": 7, "link": "/9-sinf-game/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/9-sinf-game/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf-game/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "Ranglar nazariyasi va dizayn asoslari (1-qism): RGB va CMYK, rang g'ildiragi va rang psixologiyasi", "link": "/9-sinf-game/hafta-03/dars-2"}}
+dars: {"sinf": {"name": "9-sinf (Game)", "link": "/9-sinf-game/"}, "week": {"n": 3, "link": "/9-sinf-game/hafta-03/"}, "g": 7, "title": "Photoshop interfeysi va vositalari (3-qism): Qatlamlar bilan amaliy ishlash va assetlar kollaji", "lead": "Photoshop interfeysi va vositalari (3-qism): Qatlamlar bilan amaliy ishlash va assetlar kollaji", "slide": "/slaydlar/9-sinf-game/hafta-03/dars-1.html", "tabs": [{"g": 7, "link": "/9-sinf-game/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/9-sinf-game/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf-game/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "Ranglar nazariyasi va dizayn asoslari (1-qism): RGB va CMYK, rang g'ildiragi va rang psixologiyasi", "link": "/9-sinf-game/hafta-03/dars-2"}}
 ---
 
 

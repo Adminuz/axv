@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (BI & ML)", "link": "/10-sinf-bi/"}, "week": {"n": 1, "link": "/10-sinf-bi/hafta-01/"}, "g": 2, "title": "2-dars: Ma'lumotlar arxitekturasi va hayot sikli (Data Architecture & Data Lifecycle)", "lead": "", "slide": "/slaydlar/10-sinf-bi/hafta-01/dars-2.html", "tabs": [{"g": 1, "link": "/10-sinf-bi/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/10-sinf-bi/hafta-01/dars-2", "current": true}, {"g": 3, "link": "/10-sinf-bi/hafta-01/dars-3", "current": false}], "prev": {"g": 1, "title": "1-dars: Ma’lumotlar muhandisligiga kirish (Data Engineering asoslari)", "link": "/10-sinf-bi/hafta-01/dars-1"}, "next": {"g": 3, "title": "3-dars: Ma’lumot formatlari: CSV va JSON bilan ishlash", "link": "/10-sinf-bi/hafta-01/dars-3"}}
+dars: {"sinf": {"name": "10-sinf (BI & ML)", "link": "/10-sinf-bi/"}, "week": {"n": 1, "link": "/10-sinf-bi/hafta-01/"}, "g": 2, "title": "2-dars: Ma'lumotlar arxitekturasi va hayot sikli (Data Architecture & Data Lifecycle)", "lead": "Ma'lumotlar arxitekturasi va hayot sikli (6 qatlam, 7 bosqich, Data Quality mezonlari)", "slide": "/slaydlar/10-sinf-bi/hafta-01/dars-2.html", "tabs": [{"g": 1, "link": "/10-sinf-bi/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/10-sinf-bi/hafta-01/dars-2", "current": true}, {"g": 3, "link": "/10-sinf-bi/hafta-01/dars-3", "current": false}], "prev": {"g": 1, "title": "1-dars: Ma’lumotlar muhandisligiga kirish (Data Engineering asoslari)", "link": "/10-sinf-bi/hafta-01/dars-1"}, "next": {"g": 3, "title": "3-dars: Ma’lumot formatlari: CSV va JSON bilan ishlash", "link": "/10-sinf-bi/hafta-01/dars-3"}}
 ---
 
 **Fan:** BI (Ma'lumotlar muhandisligi va Machine Learning)  

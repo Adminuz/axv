@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (Android)", "link": "/9-sinf-android/"}, "week": {"n": 3, "link": "/9-sinf-android/hafta-03/"}, "g": 9, "title": "Simulyator va Emulator haqida tushuncha (1-qism)", "lead": "", "slide": "/slaydlar/9-sinf-android/hafta-03/dars-3.html", "tabs": [{"g": 7, "link": "/9-sinf-android/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/9-sinf-android/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf-android/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "Android Studio va Android SDK bilan tanishuv (3-qism)", "link": "/9-sinf-android/hafta-03/dars-2"}, "next": null}
+dars: {"sinf": {"name": "9-sinf (Android)", "link": "/9-sinf-android/"}, "week": {"n": 3, "link": "/9-sinf-android/hafta-03/"}, "g": 9, "title": "Simulyator va Emulator haqida tushuncha (1-qism)", "lead": "Simulyator va Emulator haqida tushuncha (1-qism): Simulyator vs Emulyator farqi, AVD yaratish va CPU virtualizatsiyasi", "slide": "/slaydlar/9-sinf-android/hafta-03/dars-3.html", "tabs": [{"g": 7, "link": "/9-sinf-android/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/9-sinf-android/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf-android/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "Android Studio va Android SDK bilan tanishuv (3-qism)", "link": "/9-sinf-android/hafta-03/dars-2"}, "next": null}
 ---
 
 Bugungi darsda biz mobil ilovalarni sinovdan o'tkazishning eng ajoyib vositasi — **Android Emulator** bilan tanishamiz. Qanday qilib kompyuter ichida haqiqiy smartfonni ishga tushirish, simulyator va emulyatorning farqi hamda protsessor virtualizatsiyasi nima ekanini bilib olamiz.
