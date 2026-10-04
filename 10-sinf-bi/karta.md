@@ -1,141 +1,143 @@
 # 10-sinf: o'quv xaritasi (BI va Machine Learning)
 
-Manba: `4.4. Standart`, `4.4. Uslubiy ko`rsatma`, `4.4. O`quv qo`llanma`. Agentlar avval shu faylni o'qiydi, katta .docx'ni qayta o'qimaydi. Matnlari `_matn/` papkasida (chiqarilgan .txt).
+Manba: Rasmiy o'quv dasturi (`10-sinf-bi/_matn/oquv-dasturi.txt`), Uslubiy ko'rsatma va O'quv qo'llanma.
 
-**Tuzilma:** 102 dars, haftasiga 3 dars (har biri 80 daqiqa). Hafta = ceil(dars № / 3), jami 34 hafta.
+**Tuzilma:** 102 dars, haftasiga 3 dars (har biri 80 daqiqa). Hafta = ceil(dars № / 3), jami 34 hafta, 4 chorak.
 
 **Holat belgilari:** ⬜ rejada · 📝 materiallar tayyorlangan · ✅ o'tilgan
 
 ## Joriy holat
 
 - Oxirgi o'tilgan dars: **0**
-- Keyingi dars: **1** (1-hafta)
-- Oxirgi yangilanish: —
+- Keyingi dars: **4** (2-hafta, 1-dars)
+- Oxirgi yangilanish: 1-hafta (1–3 darslar) tayyorlandi
 
-## Eslatmalar
+---
 
-- Dastur: «Muhammad al-Xorazmiy vorislari» tizimi bo'yicha maxsus guruhlar (BI (Ma'lumotlar muhandisligi va Machine Learning)).
-- O'quv yili 34 hafta, haftasiga 3 darsdan jami 102 dars rejalashtirilgan.
-
-
-## 1-bob haqida umumiy ma’lumot
+## I BOB. Ma’lumotlar muhandisligiga kirish va ma’lumotlarni boshqarish (27 dars, 1–9 haftalar)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 1 | 1 | Kompyuter yoki noutbuk (kamida 8 GB RAM tavsiya etiladi) | ⬜ |
-| 2 | 1 | Barqaror internet aloqasi (resurslar va datasetlar uchun) | ⬜ |
-| 3 | 1 | Ma’lumotlar muhandisligi (Data Engineering) nima? | ⬜ |
-| 4 | 2 | Ma’lumotlar arxitekturasi (Data Architecture) tushunchasi | ⬜ |
-| 5 | 2 | Source layer (Manbalar): LMS/SIS eksportlari, Excel/CSV jurnallar, API, sensorlar | ⬜ |
-| 6 | 2 | Ingestion layer (Yig‘ish): fayl import, API orqali olish, stream | ⬜ |
-| 7 | 3 | Storage layer (Saqlash): Raw zona (Data Lake) va/yo DWH ombor | ⬜ |
-| 8 | 3 | Processing/Transform layer (Qayta ishlash): tozalash, birlashtirish, agregatsiya (ETL/ELT) | ⬜ |
-| 9 | 3 | Serving/Consumption layer (Taqdim etish): Data Mart, BI dashboard, ML feature store/ dataset | ⬜ |
-| 10 | 4 | Governance & Observability: monitoring, logging, validation, access control | ⬜ |
-| 11 | 4 | Ma’lumotlar hayot sikli (Data Lifecycle) | ⬜ |
-| 12 | 4 | Collect/Ingest: ma’lumotni olish (CSV/JSON eksport, API) | ⬜ |
-| 13 | 5 | Store: xom holatda saqlash (raw zone) va versiyalash | ⬜ |
-| 14 | 5 | Validate/Clean: sifat tekshiruvi, bo‘sh qiymatlar, duplicate, format xatolarini tuzatish | ⬜ |
-| 15 | 5 | Transform: biznes qoidalari asosida qayta tuzish (staging → mart) | ⬜ |
-| 16 | 6 | Serve/Publish: analitika va hisobotlar uchun taqdim etish | ⬜ |
-| 17 | 6 | Monitor/Log: pipeline ishlashi, xatolar, kechikishlarni kuzatish | ⬜ |
-| 18 | 6 | Archive/Retention: saqlash muddatlari va arxiv siyosati | ⬜ |
-| 19 | 7 | Nega bu mavzu BI va ML uchun “poydevor”? | ⬜ |
-| 20 | 7 | to‘liq (completeness), | ⬜ |
-| 21 | 7 | aniq (accuracy), | ⬜ |
-| 22 | 8 | yagona standartda (consistency), | ⬜ |
-| 23 | 8 | Analitik (o‘quv bo‘limi / reja bo‘limi) – yillar bo‘yicha trendlarni, hududlar reytingini, YoY o‘sish/pasayishni tahlil qiladi, hisobot tayyorlaydi | ⬜ |
-| 24 | 8 | “Qaysi hududlarda o‘quvchi/maktab ko‘rsatkichi juda yuqori?” (yuklama) | ⬜ |
-| 25 | 9 | “Qaysi hududlarda o‘quvchi/o‘qituvchi ko‘rsatkichi yuqori?” (kadr yetishmovchiligi proksisi) | ⬜ |
-| 26 | 9 | “Bitiruvchilar soni trendi qanday o‘zgaryapti?” | ⬜ |
-| 27 | 9 | YoY (yildan-yilga) o‘sish va pasayishlarni topish (LAG) | ⬜ |
-| 28 | 10 | Hududlar reytingi (RANK) | ⬜ |
-| 29 | 10 | 3 yillik moving average (AVG OVER) bilan barqaror trend chiqarish | ⬜ |
-| 30 | 10 | Hisobot (CSV/PDF/Excel) tayyorlash | ⬜ |
-| 31 | 11 | Hudud resurs ko‘rsatkichlariga qarab ta’lim jarayoni bosimini baholash | ⬜ |
-| 32 | 11 | Resurs taqsimoti bo‘yicha tavsiyalar berish (masalan, o‘qituvchi shtati ehtiyoji) | ⬜ |
-| 33 | 11 | CSV/JSON fayllarni yuklash va yangilash | ⬜ |
-| 34 | 12 | Validation: null/duplicate, yil diapazoni, manfiy qiymatlar, hudud nomlari standartligi | ⬜ |
-| 35 | 12 | Raw → processed/csv → parquet pipeline’ni ishlatish va monitoring qilish | ⬜ |
-| 36 | 12 | Direktor platformaga kiradi | ⬜ |
-| 37 | 13 | “Dashboard” bo‘limini tanlaydi | ⬜ |
-| 38 | 13 | “Maktablar soni”, “O‘quvchilar soni”, “O‘qituvchilar soni”, “9/11 bitiruvchilar” KPI kartalarini ko‘radi | ⬜ |
-| 39 | 13 | Filtr orqali hudud va yil ni tanlaydi | ⬜ |
-| 40 | 14 | “Yuklama” bo‘limida quyilarni ko‘radi: | ⬜ |
-| 41 | 14 | o‘quvchi/maktab (resurs bosimi) | ⬜ |
-| 42 | 14 | o‘quvchi/o‘qituvchi (kadr yetishmovchiligi proksisi) | ⬜ |
-| 43 | 15 | “Eng yuqori yuklama hududlar” reyting jadvalini ko‘radi | ⬜ |
-| 44 | 15 | “Hisobotni yuklab olish” tugmasi orqali natijani (CSV/Excel/PDF) yuklab oladi | ⬜ |
-| 45 | 15 | “YoY o‘zgarish” hisobotini ko‘radi: hududlar bo‘yicha o‘quvchilar sonining yillik farqi va foizi (LAG) | ⬜ |
-| 46 | 16 | “Hududlar reytingi” hisobotini ochadi (RANK): | ⬜ |
-| 47 | 16 | o‘quvchi/o‘qituvchi bo‘yicha TOP/BOTTOM hududlar | ⬜ |
-| 48 | 16 | “3 yillik moving average” trendini ko‘radi (AVG OVER) | ⬜ |
-| 49 | 17 | “Ulush (%)” hisobotini ko‘radi: hududning respublika bo‘yicha ulushi (SUM OVER) | ⬜ |
-| 50 | 17 | Natijalarni docs/ bo‘limiga xulosa sifatida yozadi | ⬜ |
-| 51 | 17 | Administrator data/raw/csv/ va data/raw/json/ papkalariga yangi fayllarni joylaydi: | ⬜ |
-| 52 | 18 | maktablar_soni.csv | ⬜ |
-| 53 | 18 | maktab_oquvchilar_soni.csv | ⬜ |
-| 54 | 18 | oqituvchilar_soni.csv (+ oqituvchilar_soni.json bo‘lsa) | ⬜ |
-| 55 | 19 | bitiruvchilar_9_sinf.csv, bitiruvchilar_11_sinf.csv | ⬜ |
-| 56 | 19 | Notebook’da “Raw profiling”ni ishga tushiradi: shape, dtypes, null, duplicate tekshiradi | ⬜ |
-| 57 | 19 | hudud va yil bo‘yicha duplicate yo‘qmi | ⬜ |
-| 58 | 20 | soni manfiy emasmi | ⬜ |
-| 59 | 20 | yil mantiqan to‘g‘rimi (masalan 2000–2025 oralig‘i) | ⬜ |
-| 60 | 20 | “Cleaning” bosqichi: ustun nomlari standard, hudud matni strip, yil va soni numeric | ⬜ |
-| 61 | 21 | Tozalangan ma’lumot data/processed/csv/*_tozalangan.csv ga saqlanadi | ⬜ |
-| 62 | 21 | Keyin Parquet konvertatsiya bajariladi: data/processed/parquet/*.parquet (snappy) | ⬜ |
-| 63 | 21 | SQL bazaga (SQLite) import qilinadi va v_talim view yangilanadi | ⬜ |
-| 64 | 22 | Dashboard yangilanadi, administrator monitoring bo‘limida pipeline natijasini tekshiradi (row count, null check, log) | ⬜ |
-| 65 | 22 | Filtrlar (hudud/yil) tushunarli va to‘g‘ri ishlayaptimi? | ⬜ |
-| 66 | 22 | KPI ko‘rsatkichlar mantiqan to‘g‘rimi (masalan, o‘quvchi/o‘qituvchi juda katta chiqib ketmayaptimi)? | ⬜ |
-| 67 | 23 | SQL natijalarda YoY va reytinglar to‘g‘ri hisoblanganmi? | ⬜ |
-| 68 | 23 | Pipeline validation xatolari aniq chiqayaptimi (null/duplicate/manfiy qiymat)? | ⬜ |
-| 69 | 23 | Export (CSV/Excel) ishlayaptimi? | ⬜ |
-| 70 | 24 | Tanlangan mavzu bo‘yicha quyidagi savollarga javob yozing: | ⬜ |
-| 71 | 24 | Shu ma’lumotlar asosida ssenariy yozing | ⬜ |
-| 72 | 24 | BI Ma‘lumotlar muhandisligi va ML uchun berilgan loyiha mavzularidan birini tanlang.(Loyiha mavzulari rejada ko‘rsatilgan) | ⬜ |
-| 73 | 25 | Ma’lumot formatlari: CSV, JSON, Parquet | ⬜ |
-| 74 | 25 | Sintaksisni ajratib ko'rsatish va avtomatik to'ldirish: Kodni o'qishni yaxshilaydi va kodlashni tezlashtiradi | ⬜ |
-| 75 | 25 | Integratsiyalashgan nosozliklarni tuzatish: Kodni to'g'ridan-to'g'ri muharrirda sinab ko'rish va tuzatishga yordam beradi | ⬜ |
-| 76 | 26 | O'rnatilgan Git integratsiyasi: Oson versiyani boshqarish va hamkorlikni ta'minlaydi | ⬜ |
-| 77 | 26 | Kengaytirilishi: Tillar, mavzular va vositalar uchun kengaytmalar qo'shish imkonini beradi | ⬜ |
-| 78 | 26 | Yuqoridagi amallarni ketma-ketlik bo‘yicha bajaring | ⬜ |
-| 79 | 27 | Quyidagilarni tekshiring: | ⬜ |
-| 80 | 27 | Xulosalaringizni yozing | ⬜ |
-| 81 | 27 | O‘zingiz tanlagan loyihaga doir kerakli fayllarni shakllantiring | ⬜ |
-| 82 | 28 | Ma’lumotlar bazalari: konsept va tuzilma. Relatsion ma’lumotlar bazasi (RDBMS) | ⬜ |
-| 83 | 28 | ma’lumotlarni markazlashtirib saqlaydi; | ⬜ |
-| 84 | 28 | ko‘p foydalanuvchi ishlaganda bir xil ma’lumot bilan ishlashni ta’minlaydi; | ⬜ |
-| 85 | 29 | ma’lumotlar yaxlitligi (integrity) va xavfsizligini boshqaradi; | ⬜ |
-| 86 | 29 | ma’lumot jadval ko‘rinishida saqlanadi; | ⬜ |
-| 87 | 29 | jadvallar o‘rtasida bog‘lanish (FK/PK) o‘rnatiladi; | ⬜ |
-| 88 | 30 | SQL orqali so‘rov va boshqaruv ishlari bajariladi; | ⬜ |
-| 89 | 30 | tranzaksiyalar va ACID tamoyillari qo‘llab-quvvatlanadi; | ⬜ |
-| 90 | 30 | yaxlitlik va cheklovlar (constraints) bilan data quality nazorati kuchli | ⬜ |
-| 91 | 31 | ma’lumotlar jadvallarga yuklanadi (import); | ⬜ |
-| 92 | 31 | schema/kalitlar/bog‘lanishlar aniqlanadi; | ⬜ |
-| 93 | 31 | SQL so‘rovlari orqali ma’lumot olinadi; | ⬜ |
-| 94 | 32 | natija view/hisobot/dashboards qatlamida ishlatiladi | ⬜ |
-| 95 | 32 | SELECT — ma’lumot olish | ⬜ |
-| 96 | 32 | WHERE — shartli qidirish | ⬜ |
-| 97 | 33 | JOIN — jadvallarni bog‘lash | ⬜ |
-| 98 | 33 | GROUP BY — agregatsiya (yig‘indi, o‘rtacha, h.k.) | ⬜ |
-| 99 | 33 | bosqich. PostgreSQL ni o‘rnatish | ⬜ |
-| 100 | 34 | Windows uchun PostgreSQL o'rnatuvchisini yuklab oling | ⬜ |
-| 101 | 34 | PostgreSQL-ni o'rnating | ⬜ |
-| 102 | 34 | O'rnatishni tasdiqlang | ⬜ |
+| 1 | 1 | Ma’lumotlar muhandisligiga kirish (DIKW piramidasi, Data Engineer roli, Data Pipeline) | 📝 |
+| 2 | 1 | Ma'lumotlar arxitekturasi va hayot sikli (6 qatlam, 7 bosqich, Data Quality mezonlari) | 📝 |
+| 3 | 1 | Ma’lumot formatlari: CSV va JSON bilan ishlash (Tabular vs Nested, Medallion arxitekturasi) | 📝 |
+| 4 | 2 | Ma’lumot formatlari: Parquet va Columnar saqlash formati (Snappy siqish, CSV vs Parquet) | ⬜ |
+| 5 | 2 | Ma’lumot formatlari: Avro va formatlarni chuqur taqqoslash | ⬜ |
+| 6 | 2 | Ma’lumotlar bazalari: konsept va tuzilma. Relatsion ma’lumotlar bazasi (RDBMS) asoslari | ⬜ |
+| 7 | 3 | Relyatsion jadvallar, Primary Key, Foreign Key va relyatsion yaxlitlik | ⬜ |
+| 8 | 3 | R-diagrammalar (ERD) loyihalash va SQLite bilan ishlash | ⬜ |
+| 9 | 3 | SQL analitik operatorlari: SELECT, WHERE, ORDER BY, LIMIT asoslari | ⬜ |
+| 10 | 4 | SQL analitik operatorlari: GROUP BY va HAVING bilan ma'lumotlarni guruhlash | ⬜ |
+| 11 | 4 | SQL JOIN turlari (INNER, LEFT, RIGHT, FULL) va amaliy tahlil | ⬜ |
+| 12 | 4 | Subquery, CTE (WITH) va CASE WHEN operatorlari | ⬜ |
+| 13 | 5 | Ma'lumotlar modellashtirish: Kimball metodologiyasi, Star Schema va Snowflake Schema | ⬜ |
+| 14 | 5 | Fakt (Fact) va O'lcham (Dimension) jadvallarini loyihalash | ⬜ |
+| 15 | 5 | Data Mart tushunchasi va sohaga oid martlar yaratish | ⬜ |
+| 16 | 6 | Sekin o'zgaruvchi o'lchamlar (SCD Type 1, Type 2) va surrogat kalitlar | ⬜ |
+| 17 | 6 | Ma'lumotlar ombori: Data Warehouse (DWH) tushunchasi, arxitekturasi va afzalliklari | ⬜ |
+| 18 | 6 | Data Lake konsepsiyasi, Bronze / Silver / Gold zonalari | ⬜ |
+| 19 | 7 | Data Warehouse vs Data Lake vs Modern Lakehouse arxitekturasi | ⬜ |
+| 20 | 7 | ETL va ELT asoslari: farqi, afzalliklari va zamonaviy qo'llanilishi | ⬜ |
+| 21 | 7 | On-premise va Cloud infratuzilmalarda ETL/ELT jarayonlari | ⬜ |
+| 22 | 8 | Data Lake va Data Warehouse integratsiyasi (Data Pipeline amaliyoti) | ⬜ |
+| 23 | 8 | Medallion arxitekturasida ELT jarayonlarini tashkil qilish | ⬜ |
+| 24 | 8 | Ma’lumotlarni boshqarish: Monitoring va Observability tushunchalari | ⬜ |
+| 25 | 9 | Logging tizimlari va xatoliklarni qayd etish | ⬜ |
+| 26 | 9 | Data Validation: Sifat nazorati va avtomatlashtirilgan testlar | ⬜ |
+| 27 | 9 | 1-nazorat ishi: Data Engineering asoslari va amaliy loyiha himoyasi | ⬜ |
 
-## 2-bob haqida umumiy ma’lumot
+---
+
+## II BOB. Ma’lumotlar oqimi va avtomatlashtirish (21 dars, 10–16 haftalar)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
+| 28 | 10 | Big Data mazmuni: 3V/5V tamoyillari va taqsimlangan hisoblashlar | ⬜ |
+| 29 | 10 | Apache Spark arxitekturasi: Driver, Executor, Cluster Manager | ⬜ |
+| 30 | 10 | PySpark asoslari va RDD tushunchasi | ⬜ |
+| 31 | 11 | PySpark DataFrame API va asosiy operatsiyalar | ⬜ |
+| 32 | 11 | PySpark yordamida katta ma'lumotlarni tozalash va sifatini boshqarish | ⬜ |
+| 33 | 11 | Ustunlar darajasida transformatsiyalar va ma'lumot turlarini o'zgartirish | ⬜ |
+| 34 | 12 | Datasetlarni boyitish, birlashtirish (Joins) va agregatsiyalar | ⬜ |
+| 35 | 12 | PySpark bilan End-to-End Pipeline qurish va optimallashtirish | ⬜ |
+| 36 | 12 | dbt (Data Build Tool): Zamonaviy ELT transformatsiyalar va dbt arxitekturasi | ⬜ |
+| 37 | 13 | dbt SQL modellari, Jinja templating va model logikasi | ⬜ |
+| 38 | 13 | dbt models arxitekturasi: Staging, Intermediate, Marts va Tests | ⬜ |
+| 39 | 13 | Apache Airflow: Arxitektura, Scheduler, Webserver va Workerlar | ⬜ |
+| 40 | 14 | Airflow DAGs, Operatorlar va Tasklar bilan ishlash | ⬜ |
+| 41 | 14 | Airflow Workflow Orchestration, Dependencies va Scheduling | ⬜ |
+| 42 | 14 | Airflow va dbt Pipeline integratsiyasi asoslari | ⬜ |
+| 43 | 15 | BashOperator va DbtOperator yordamida dbt modellarini Airflow'da ishga tushirish | ⬜ |
+| 44 | 15 | Airflow'da XCom, Lineage va vazifalar o'rtasida metadata almashish | ⬜ |
+| 45 | 15 | Azure Data Factory: Cloud Orchestration va integratsiya asoslari | ⬜ |
+| 46 | 16 | ADF Linked Services, Datasets va Copy Activity bilan ma'lumot yuklash | ⬜ |
+| 47 | 16 | ADF Mapping Data Flows, Triggers va Cloud Monitoring | ⬜ |
+| 48 | 16 | 2-nazorat ishi: Big Data pipeline va orkestratsiya loyihasi | ⬜ |
 
-## 3-bob haqida umumiy ma’lumot
+---
+
+## III BOB. Machine Learning (ML)ga kirish (30 dars, 17–26 haftalar)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
+| 49 | 17 | Machine Learningga kirish: AI, ML va Deep Learning farqlari | ⬜ |
+| 50 | 17 | ML turlari: Supervised, Unsupervised va Reinforcement Learning | ⬜ |
+| 51 | 17 | ML hayot sikli: Data &rarr; Training &rarr; Testing &rarr; Evaluation | ⬜ |
+| 52 | 18 | Train-Test Split metodologiyasi va modelni o'qitish (fit/predict) | ⬜ |
+| 53 | 18 | Overfitting va Underfitting muammolari va ularning oldini olish | ⬜ |
+| 54 | 18 | Model baholash metrikalari: Confusion Matrix, Accuracy va uning cheklovlari | ⬜ |
+| 55 | 19 | Precision, Recall va F1-score metrikalari | ⬜ |
+| 56 | 19 | Precision-Recall trade-off, ROC-AUC egri chizig'i | ⬜ |
+| 57 | 19 | Ma’lumot tayyorlash (Feature Engineering) ahamiyati | ⬜ |
+| 58 | 20 | Kategorik ustunlarni kodlash (One-Hot Encoding, Label Encoding) | ⬜ |
+| 59 | 20 | Xususiyatlarni masshtablash: MinMax Scaling va StandardScaler | ⬜ |
+| 60 | 20 | Yangi xususiyatlar yaratish (Feature Creation) va tanlash (Selection) | ⬜ |
+| 61 | 21 | Regressiya modellari: Linear Regression nazariyasi ($y = mx + b$) | ⬜ |
+| 62 | 21 | Scikit-learn yordamida Linear Regression modelini qurish va o'qitish | ⬜ |
+| 63 | 21 | Regressiya metrikalari: MSE, RMSE, MAE va $R^2$ score | ⬜ |
+| 64 | 22 | Qoldiqlar tahlili (Residual Analysis) va natijalarni vizualizatsiya qilish | ⬜ |
+| 65 | 22 | Klassifikatsiya vazifasi va KNN (K-Nearest Neighbors) algoritmi | ⬜ |
+| 66 | 22 | Decision Tree (Qarorlar daraxti) algoritmi va talqin qilish | ⬜ |
+| 67 | 23 | Giperparametrlarni sozlash (Hyperparameter Tuning: GridSearchCV) | ⬜ |
+| 68 | 23 | TensorFlow asoslari: Tensorlar, Graf tuzilmasi va Keras kutubxonasi | ⬜ |
+| 69 | 23 | Neyron tarmoq qatlamlari (Dense, Activation: ReLU, Sigmoid) | ⬜ |
+| 70 | 24 | TensorFlow Sequential modelini qurish, o'qitish va baholash | ⬜ |
+| 71 | 24 | PyTorch asoslari: Arxitektura, Tensor operatsiyalari va Autograd | ⬜ |
+| 72 | 24 | PyTorch'da Dataset va DataLoader bilan ishlash | ⬜ |
+| 73 | 25 | PyTorch `torch.nn` yordamida sodda neyron tarmoq qurish va o'qitish sikli | ⬜ |
+| 74 | 25 | Modelni saqlash (joblib, .h5, .pt) va FastAPI ga kirish | ⬜ |
+| 75 | 25 | FastAPI yordamida `/predict` REST API endpoint yaratish | ⬜ |
+| 76 | 26 | Swagger UI orqali API testlash va Uvicorn bilan ishga tushirish | ⬜ |
+| 77 | 26 | ML va Data Pipeline integratsiyasi (Airflow orqali modelni yangilash) | ⬜ |
+| 78 | 26 | 3-nazorat ishi: ML modelini o'qitish va API orqali deploy qilish | ⬜ |
 
-## 4-bob haqida umumiy ma’lumot
+---
+
+## IV BOB. Integratsiya, avtomatlashtirish va zamonaviy texnologiyalar (24 dars, 27–34 haftalar)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
+| 79 | 27 | End-to-End Data Platform arxitekturasi: Source &rarr; ETL &rarr; DWH &rarr; ML &rarr; API &rarr; BI | ⬜ |
+| 80 | 27 | DE va ML integratsiyasi amaliyoti | ⬜ |
+| 81 | 27 | Bulutli saqlash va arxitektura komponentlari (AWS S3, Azure Blob) | ⬜ |
+| 82 | 28 | Ma’lumotlarda xavfsizlik va maxfiylik (Data Privacy) | ⬜ |
+| 83 | 28 | GDPR tamoyillari, Sensitive Data va anonimizatsiya usullari | ⬜ |
+| 84 | 28 | AI etikasi: Model bias, fairness va shaffoflik | ⬜ |
+| 85 | 29 | CI/CD asoslari va GitHub bilan versiyalarni boshqarish | ⬜ |
+| 86 | 29 | GitHub Actions orqali avtomatlashtirilgan pipeline (YAML) yaratish | ⬜ |
+| 87 | 29 | Avtomatlashtirilgan testlar (pytest) va linting tekshiruvlari | ⬜ |
+| 88 | 30 | Docker texnologiyasi: Image va Container tushunchalari | ⬜ |
+| 89 | 30 | Dockerfile yaratish: Python, FastAPI va ML modelni konteynerlash | ⬜ |
+| 90 | 30 | Docker Compose: Multi-container tizimlar (API + DB) | ⬜ |
+| 91 | 31 | Data & ML monitoring va Observability tizimlari | ⬜ |
+| 92 | 31 | Model Drift va Data Drift monitoring qilish usullari | ⬜ |
+| 93 | 31 | Prometheus va Grafana yordamida ko'rsatkichlarni vizual kuzatish | ⬜ |
+| 94 | 32 | Sun’iy intellekt infratuzilmalari: CPU, GPU va TPU arxitekturasi | ⬜ |
+| 95 | 32 | Bulutli ML platformalari (Google Vertex AI, AWS SageMaker) | ⬜ |
+| 96 | 32 | AI infratuzilmasi samaradorligi va xarajatlarni boshqarish (Cost Optimization) | ⬜ |
+| 97 | 33 | Zamonaviy trendlar: Data Mesh arxitekturasi | ⬜ |
+| 98 | 33 | AutoML platformalari va avtomatlashtirilgan ML | ⬜ |
+| 99 | 33 | Generative AI va LLM ekotizimi bilan tanishuv | ⬜ |
+| 100 | 34 | Data Engineering va ML kasbiy yo'nalishlari, Portfolioni GitHub'da shakllantirish | ⬜ |
+| 101 | 34 | 4-nazorat ishi: Yillik yakuniy integratsiyalashgan loyiha taqdimoti | ⬜ |
+| 102 | 34 | Kurs yakuniy xulosalari va kelgusi rivojlanish rejasi | ⬜ |
