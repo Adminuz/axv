@@ -9,8 +9,8 @@ Manba: `2_6_Standart_IoT...`, `2_6_Uslubiy_ko`rsatma...`, `2.6. O`quv qo`llanma`
 ## Joriy holat
 
 - Oxirgi o'tilgan dars: **0**
-- Keyingi dars: **4** (2-hafta)
-- Oxirgi yangilanish: **2026-10-04 (1-hafta materiallari tayyorlandi)**
+- Keyingi dars: **7** (3-hafta)
+- Oxirgi yangilanish: **2026-10-04 (2-hafta materiallari tayyorlandi)**
 
 ## Eslatmalar
 
@@ -24,9 +24,9 @@ Manba: `2_6_Standart_IoT...`, `2_6_Uslubiy_ko`rsatma...`, `2.6. O`quv qo`llanma`
 | 1 | 1 | IoT tushunchasi va qo‘llanish sohalari | 📝 |
 | 2 | 1 | IoT arxitekturasi: Sensorlar, aktuatorlar va apparat ta'minoti | 📝 |
 | 3 | 1 | IoT arxitekturasi: Tarmoq, bulut va foydalanuvchi interfeysi | 📝 |
-| 4 | 2 | Tinkercad.com virtual laboratoriyasida ro‘yxatdan o‘tish va interfeys | ⬜ |
-| 5 | 2 | Tinkercad muhitida virtual elektron komponentlar bilan ishlash | ⬜ |
-| 6 | 2 | Elektron sxema asosida bitta LED lampaning ishlash prinsipi va ulanishi | ⬜ |
+| 4 | 2 | Tinkercad.com virtual laboratoriyasida ro‘yxatdan o‘tish va interfeys | 📝 |
+| 5 | 2 | Tinkercad muhitida virtual elektron komponentlar bilan ishlash | 📝 |
+| 6 | 2 | Elektron sxema asosida bitta LED lampaning ishlash prinsipi va ulanishi | 📝 |
 
 ## II bob. Elektronika va Arduino bilan interaktiv interfeyslar (6 dars)
 
