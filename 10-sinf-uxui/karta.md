@@ -9,8 +9,8 @@ Manba: `4.1.Standart`, `4_1_O'quv_qo'llanma...`, `4_1_Uslubiy_ko'rsatma...`. Mat
 ## Joriy holat
 
 - Oxirgi o'tilgan dars: **0**
-- Keyingi dars: **4** (2-hafta)
-- Oxirgi yangilanish: **2026-10-04 (1-hafta tayyorlandi: 1-3 darslar)**
+- Keyingi dars: **7** (3-hafta)
+- Oxirgi yangilanish: **2026-10-04 (2-hafta tayyorlandi: 4-6 darslar)**
 
 ## Eslatmalar
 
@@ -29,9 +29,9 @@ Manba: `4.1.Standart`, `4_1_O'quv_qo'llanma...`, `4_1_Uslubiy_ko'rsatma...`. Mat
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 4 | 2 | Foydalanuvchi tadqiqot usullari: intervyu, so‘rovnoma, kuzatish | ⬜ |
-| 5 | 2 | Persona va empatiya xaritasini yaratish | ⬜ |
-| 6 | 2 | Foydalanuvchi tarixi va senariysini yozish (User Story & User Journey Map) | ⬜ |
+| 4 | 2 | Foydalanuvchi tadqiqot usullari: intervyu, so‘rovnoma, kuzatish | 📝 |
+| 5 | 2 | Persona va empatiya xaritasini yaratish | 📝 |
+| 6 | 2 | Foydalanuvchi tarixi va senariysini yozish (User Story & User Journey Map) | 📝 |
 
 ## III bob. UI dizayn elementlari va vizual ierarxiya (3 dars)
 
