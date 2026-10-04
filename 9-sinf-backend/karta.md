@@ -9,133 +9,71 @@ Manba: `2.2. Uslubiy ko`rsatma (Advanced Back-end va DevOps).docx`. Agentlar avv
 ## Joriy holat
 
 - Oxirgi o'tilgan dars: **0**
-- Keyingi dars: **1** (1-hafta)
-- Oxirgi yangilanish: —
+- Keyingi dars: **10** (4-hafta)
+- Oxirgi yangilanish: 2026-10-04 (1–3 haftalar materiallari tayyorlandi)
 
 ## Eslatmalar
 
 - Dastur: «Muhammad al-Xorazmiy vorislari» tizimi bo'yicha maxsus guruhlar (Advanced Back-end va DevOps).
 - O'quv yili 34 hafta, haftasiga 3 darsdan jami 102 dars rejalashtirilgan.
+- Rasmiy dasturdagi 5 ta bob asosida tuzilgan.
 
 
-## 1-bob haqida umumiy ma’lumot
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-| 1 | 1 | Python: o‘rnatish, ilk dasturni yozish, o‘zgaruvchilar va ma’lumotlarning sodda toifalari | ⬜ |
-| 2 | 1 | Use admin privilegas when installing py.exe | ⬜ |
-| 3 | 1 | Add python.exe to PATH | ⬜ |
-| 4 | 2 | Agar, bo‘lish belgisini 2 marotaba ishlatilsa, natija, butun son ko‘rinishida qayatariladi. Masalan, 91//2 = | ⬜ |
-| 5 | 2 | Ism – O‘zgaruvchi nomi | ⬜ |
-| 6 | 2 | “Ali” – matnli ma’lumot | ⬜ |
-| 7 | 3 | Yosh – sonli o‘zgaruvchi | ⬜ |
-| 8 | 3 | = belgisi o‘zgaruvchiga qiymat berish uchun ishlatiladi | ⬜ |
-| 9 | 3 | print(ism) uchun natija: Ali | ⬜ |
-| 10 | 4 | print(yosh) uchun natija: | ⬜ |
-| 11 | 4 | "Tanishuv kartochkasi": | ⬜ |
-| 12 | 4 | ism degan o‘zgaruvchi yarating va unga ismingizni yuklang | ⬜ |
-| 13 | 5 | yosh degan o‘zgaruvchi yarating va unga yoshingizni (butun son ko‘rinishida) yuklang | ⬜ |
-| 14 | 5 | kasb degan o‘zgaruvchi yarating va kelajakdagi kasbingizni yozing (masalan: "Dasturchi") | ⬜ |
-| 15 | 5 | Ushbu barcha ma’lumotlarni bitta print ichida ekranga chiqaring | ⬜ |
-| 16 | 6 | "Do‘kon kassasi": | ⬜ |
-| 17 | 6 | non_narxi o‘zgaruvchisini yarating va unga 3000 (so'm) qiymatini bering | ⬜ |
-| 18 | 6 | sut_narxi o‘zgaruvchisini yarating va unga 12500.5 (so'm) qiymatini bering | ⬜ |
-| 19 | 7 | Ikkala mahsulotdan bittadan olganda jami qancha bo‘lishini hisoblab, jami o‘zgaruvchisiga yuklang | ⬜ |
-| 20 | 7 | Natijani ekranga chiqaring | ⬜ |
-| 21 | 7 | Darsda ko’rsatilgan amallarni takroran, mustaqil bajaring | ⬜ |
-| 22 | 8 | Operatorlar va ifodalar. Tarmoqlanuvchi algoritm (if/else) | ⬜ |
-| 23 | 8 | Operand (qiymatlar): 5, 10, “abc”, x, True | ⬜ |
-| 24 | 8 | Operatorlar: +, -, ==, and, or… | ⬜ |
-| 25 | 9 | Qavs va funksiyalar: ( ), len(), int()… | ⬜ |
-| 26 | 9 | Arifmetik ifoda: int yoki float | ⬜ |
-| 27 | 9 | shart rost (True) bo‘lsa — bir amal bajariladi | ⬜ |
-| 28 | 10 | shart yolg‘on (False) bo‘lsa — boshqa amal bajariladi | ⬜ |
-| 29 | 10 | Agar bugun yomg‘ir yog‘sa → soyabon olamiz | ⬜ |
-| 30 | 10 | Aks holda → soyabonsiz chiqamiz | ⬜ |
-| 31 | 11 | if qismi uchun shart beriladi, agar u shart qanoatlantirilsa, amal_1 ishga tushadi | ⬜ |
-| 32 | 11 | U shartdan tashqari qolgan har qanday vaziyatda amal_2 bajariladi | ⬜ |
-| 33 | 11 | if /else operator qaytadigan javob Tue / False bo‘lishiga qarab ishlaydi | ⬜ |
-| 34 | 12 | 1.27 rasmda, agar ball 60 dan katta yoki teng bo‘lsa, foydalanuvchiga O‘tdi degan xabar chiqadi. Qolgan har qanday holatda O‘tmadi degan xabar chiqadi | ⬜ |
-| 35 | 12 | 0 dan katta bo‘lsa — "Musbat son" | ⬜ |
-| 36 | 12 | 0 dan kichik bo‘lsa — "Manfiy son" | ⬜ |
-| 37 | 13 | 0 ga teng bo‘lsa — "Nolga teng" | ⬜ |
-| 38 | 13 | Yoshga qarab toifa aniqlash. Foydalanuvchidan yoshini kiriting: | ⬜ |
-| 39 | 13 | Agar yosh 0–6 bo‘lsa → "Bog‘cha yoshi" | ⬜ |
-| 40 | 14 | 7–17 bo‘lsa → "Maktab o‘quvchisi" | ⬜ |
-| 41 | 14 | 18 va undan katta bo‘lsa → "Voyaga yetgan" | ⬜ |
-| 42 | 14 | Haroratga qarab tavsiya berish. Foydalanuvchidan havo haroratini kiriting (butun son): | ⬜ |
-| 43 | 15 | Agar harorat 0 dan past bo‘lsa → "Sovuq, qalin kiyining" | ⬜ |
-| 44 | 15 | 0 dan 20 gacha bo‘lsa → "Salqin" | ⬜ |
-| 45 | 15 | 20 dan yuqori bo‘lsa → "Issiq" | ⬜ |
-| 46 | 16 | Son musbat, manfiy yoki nol ekanligini aniqlash. Foydalanuvchidan bitta butun son kiritilishini so‘rang | ⬜ |
-| 47 | 16 | Takrorlanuvchi algoritm, takrorlanish operatorlari (for, while). Tanlash operatori (match/case) | ⬜ |
-| 48 | 16 | 10 ta raqamni ekranga chiqarish 10 marta print() yozish o‘rniga sikl ishlatamiz | ⬜ |
-| 49 | 17 | 20 ta o‘quvchining bahosini yig‘ish Har bir bahoni alohida o‘zgaruvchi qilib yozish juda uzun bo‘ladi | ⬜ |
-| 50 | 17 | Biror sonning ko‘paytirish jadvali 5×1, 5×2, …, 5×10 — buni siklsiz yozish ko‘p vaqt oladi | ⬜ |
-| 51 | 17 | Boshlanish (start) — qayerdan boshlaydi? | ⬜ |
-| 52 | 18 | Takrorlanish soni yoki shart — nechta marta yoki qachongacha? | ⬜ |
-| 53 | 18 | O‘zgarish — har aylanishda nima o‘zgaradi? (hisoblagich ortadi) | ⬜ |
-| 54 | 18 | 10 marta chiqarish | ⬜ |
-| 55 | 19 | 1 dan n gacha aylanish | ⬜ |
-| 56 | 19 | 0 dan 20 gacha juft sonlar | ⬜ |
-| 57 | 19 | i — hisoblagich (har aylanishda o‘zgarib boradi) | ⬜ |
-| 58 | 20 | range( ) — qaysi sonlar bo‘yicha aylanishni beradi | ⬜ |
-| 59 | 20 | ichki qism (print, s += i va hokazo) — takrorlanadigan amal | ⬜ |
-| 60 | 20 | n uchun butun son kiritiladi; | ⬜ |
-| 61 | 21 | s – bu, yig’indini hisoblab boruvchi; | ⬜ |
-| 62 | 21 | for siklida 1 dan, n+1 gacha (n ham hisobga olinishi uchun) aylanib chiqadi; | ⬜ |
-| 63 | 21 | s o‘zgaruvchi esa orada hosil bo‘lgan har bir raqami biri biriga qo‘shib boradi va o‘ziga saqlaydi; | ⬜ |
-| 64 | 22 | print() orqali hosil bo‘lgan yig’indi chop etiladi | ⬜ |
-| 65 | 22 | “Parol to‘g‘ri bo‘lmaguncha yana kirit” | ⬜ |
-| 66 | 22 | “0 kiritilmaguncha sonlarni yig‘” | ⬜ |
-| 67 | 23 | “Pul yetmaguncha ishlashni davom ettir” | ⬜ |
-| 68 | 23 | i ning qiymati 1 ga teng; | ⬜ |
-| 69 | 23 | while uchun shart berildi, qachonki i ning qiymati 5 dan kichik yok teng bo‘lsa, ana usha vaqt davomida ishlagin deb; | ⬜ |
-| 70 | 24 | Har bitta while takrorlanganda, i uchun qiymat qo‘shilib boradi, i+1; | ⬜ |
-| 71 | 24 | Qachondir qiymatlar qo‘shilib, natija 5 dan oshishi bilan, while ishlashdan to‘xtaydi | ⬜ |
-| 72 | 24 | parol = “ 1234 ”; | ⬜ |
-| 73 | 25 | userdan parol kiritishini so‘raymiz, kelgan javobni kirit degan o‘zgaruvchiga yuklaymiz; | ⬜ |
-| 74 | 25 | while uchun shart beramiz: kirit degan o‘zgaruvchi qiymati parolga teng bo‘lmaguncha ishlashi kerak; | ⬜ |
-| 75 | 25 | Bajarilishi kerak bo‘lgan amal sifatida, quyidagilar belgilangan: | ⬜ |
-| 76 | 26 | menyu (1, 2, 3…) | ⬜ |
-| 77 | 26 | kunlar, oylar | ⬜ |
-| 78 | 26 | amal belgisi (+, -, *, /) | ⬜ |
-| 79 | 27 | case 1 – agar kiritilgan butun son 1 ga teng bo‘lsa, print(“Dastur boshlandi”) kodi ishga tushadi va user uchun “Dastur boshlandi” degan xabar chiqadi; | ⬜ |
-| 80 | 27 | case 2 – agar, kiritilgan son 2 ga teng bo‘lsa, “ Sozlamalar ochildi ” xabari chiqadi; | ⬜ |
-| 81 | 27 | case 3 – agar, kiritlgan son 3 ga teng bo‘lsa, “ Dastur yopildi ” xabari chiqadi; | ⬜ |
-| 82 | 28 | case - qolgan barcha kiritilgan natijalar uchun “ Noto‘g’ri tanlov ” xabari chiqadi | ⬜ |
-| 83 | 28 | [1, n] intervaldan faqat 3 ga karrali sonlarni chiqarish dasturini for va while bilan yozing | ⬜ |
-| 84 | 28 | [1, 12] intervalda kiritilgan songa qarab tegishli oy nomini chiqarish dasturini tuzing | ⬜ |
-| 85 | 29 | Darsda ko’rsatilgan ishlarni mustaqil takrorlang | ⬜ |
-| 86 | 29 | Pythonda ma’lumotlar tuzilmalari: string, list, tuple, set va dictionary | ⬜ |
-| 87 | 29 | Bizga qidirish kerak (masalan: “Ali bormi?”) | ⬜ |
-| 88 | 30 | Bizga qo‘shish/o‘chirish kerak | ⬜ |
-| 89 | 30 | Bizga takrorlarni olib tashlash kerak | ⬜ |
-| 90 | 30 | Bizga kalit bo‘yicha tez topish kerak (“telefon raqam - ism”) | ⬜ |
-| 91 | 31 | kod murakkablashadi | ⬜ |
-| 92 | 31 | dastur sekinlashadi | ⬜ |
-| 93 | 31 | xato ko‘payadi | ⬜ |
-| 94 | 32 | "Ali" (string) — belgilar ketma-ketligi | ⬜ |
-| 95 | 32 | [1,2,3] (list) — ketma-ket elementlar | ⬜ |
-| 96 | 32 | {"name": "Ali"} (dict) — kalit-qiymat | ⬜ |
-| 97 | 33 | Harf:  A, b | ⬜ |
-| 98 | 33 | Raqam:  1, | ⬜ |
-| 99 | 33 | Belgi:  !, @, # | ⬜ |
-| 100 | 34 | Bo‘sh joy:  “ ” | ⬜ |
-| 101 | 34 | rasmda Stringni 0 – indexdagi belgisini, ya’ni, “ P ” harfini o‘rniga “ J ” harfini almashtirilmoqchi. Natijada, TypeError xatosi yuzaga keldi | ⬜ |
-| 102 | 34 | [ 1:4 ] : Matnni birinchi indeksidan boshlab, to‘rtinchi indeksgacha oraliqda bo‘lgan belgilarini olib beradi | ⬜ |
-
-## 2-bob haqida umumiy ma’lumot
+## I-bob. Python dasturlash tili asoslari (18 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
+| 1–3 | 1 | Python: o‘rnatish, ilk dastur, ma'lumotlar toifalari va o‘zgaruvchilar | 📝 |
+| 4–6 | 2 | Arifmetik, taqqoslash va mantiqiy operatorlar. Tarmoqlanuvchi algoritm (if/else/elif) | 📝 |
+| 7–9 | 3 | Takrorlanuvchi algoritm: for va while sikllari. match/case tanlash operatori | 📝 |
+| 10–12 | 4 | Ma’lumotlar tuzilmalari: satrlar (string) va ro‘yxatlar (list) | ⬜ |
+| 13–15 | 5 | Ma’lumotlar tuzilmalari: kortejlar (tuple), to‘plamlar (set) va lug‘atlar (dict) | ⬜ |
+| 16–18 | 6 | DRY prinsipi, funksiyalar (def), istisnoli holatlar (try/except) va fayllar bilan ishlash | ⬜ |
 
-## 3-bob haqida umumiy ma’lumot
+## II-bob. OOP, Aiogram va Linux asoslari (21 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
+| 19–21 | 7 | Klasslar, obyektlar, konstruktor (__init__) va instance atributlar | ⬜ |
+| 22–24 | 8 | OOP tamoyillari: Inkapsulyatsiya (getter/setter, private atributlar) | ⬜ |
+| 25–27 | 9 | OOP tamoyillari: Merosxo‘rlik (Inheritance) va Polimorfizm (Polymorphism) | ⬜ |
+| 28–30 | 10 | OOP tamoyillari: Abstraksiya (ABC moduli va abstract methodlar) | ⬜ |
+| 31–33 | 11 | Aiogram kutubxonasi yordamida Telegram bot dasturlash asoslari | ⬜ |
+| 34–36 | 12 | Aiogramda FSM holatlari, inline/reply tugmalar va handlerlar | ⬜ |
+| 37–39 | 13 | Linux operatsion tizimi asoslari, buyruqlar satri (CLI) va fayllar boshqaruvi | ⬜ |
 
-## 5-bob haqida umumiy ma’lumot
+## III-bob. PostgreSQL va relyatsion ma'lumotlar bazalari (18 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
+| 40–42 | 14 | PostgreSQL: o‘rnatish, ma'lumotlar bazasi va jadvallar yaratish (CREATE TABLE) | ⬜ |
+| 43–45 | 15 | CRUD amallari: INSERT, SELECT, filtrlar (WHERE, ORDER BY, LIMIT) | ⬜ |
+| 46–48 | 16 | CRUD amallari: UPDATE, DELETE va tranzaksiyalar (BEGIN, COMMIT, ROLLBACK) | ⬜ |
+| 49–51 | 17 | Jadvallarni boshqarish: ALTER TABLE, cheklovlar (PRIMARY KEY, FOREIGN KEY) | ⬜ |
+| 52–54 | 18 | Relyatsion bog‘lanishlar va SQL birlashtirishlari (INNER JOIN, LEFT JOIN) | ⬜ |
+| 55–57 | 19 | Agregat funksiyalar (COUNT, SUM, AVG), GROUP BY va indekslar | ⬜ |
+
+## IV-bob. Asinxron dasturlash va FastAPI freymvorki (24 dars)
+
+| Dars | Hafta | Mavzu | Holat |
+|---|---|---|---|
+| 58–60 | 20 | Asinxron dasturlash asoslari (async/await) va FastAPI bilan tanishuv | ⬜ |
+| 61–63 | 21 | HTTP so‘rovlar (GET, POST, PUT, DELETE), marshrutlash va parametrlar | ⬜ |
+| 64–66 | 22 | Pydantic modellari, ma'lumotlar validatsiyasi va serializatsiya | ⬜ |
+| 67–69 | 23 | SQLAlchemy ORM asoslari: modellar va sessiyalarni ulash | ⬜ |
+| 70–72 | 24 | FastAPI va SQLAlchemy bilan to‘liq CRUD API yaratish | ⬜ |
+| 73–75 | 25 | Fayllar bilan ishlash: upload/download va statik fayllarni uzatish | ⬜ |
+| 76–78 | 26 | Autentifikatsiya va avtorizatsiya: Passlib, JWT tokenlar va OAuth2 | ⬜ |
+| 79–81 | 27 | Interaktiv hujjatlashtirish (Swagger UI, ReDoc) va middleware tizimi | ⬜ |
+
+## V-bob. DevOps, konteynerlar va deploy (21 dars)
+
+| Dars | Hafta | Mavzu | Holat |
+|---|---|---|---|
+| 82–84 | 28 | Versiyalarni boshqarish: Git va GitHub bilan ishlash, branching | ⬜ |
+| 85–87 | 29 | Docker asoslari: Dockerfile yaratish, image va konteynerlarni boshqarish | ⬜ |
+| 88–90 | 30 | Docker Compose: ko‘p konteynerli ilovalar (FastAPI + PostgreSQL) | ⬜ |
+| 91–93 | 31 | Nginx veb-serveri va Reverse Proxy sozlash | ⬜ |
+| 94–96 | 32 | GitHub Actions: CI/CD avtomatlashtirish quvurlari (pipeline) | ⬜ |
+| 97–99 | 33 | Monitoring va logging: tizim holatini kuzatish, xavfsizlik va zaxiralash (backup) | ⬜ |
+| 100–102 | 34 | Loyihani serverga to‘liq joylashtirish (Deploy) va yakuniy taqdimot | ⬜ |
