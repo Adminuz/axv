@@ -9,8 +9,8 @@ Manba: `4.3. Srtandart`, `4.3. Uslubiy ko'rsatma`, `4.3. O'quv qo'llanma`. Agent
 ## Joriy holat
 
 - Oxirgi o'tilgan dars: **0**
-- Keyingi dars: **1** (1-hafta)
-- Oxirgi yangilanish: —
+- Keyingi dars: **4** (2-hafta)
+- Oxirgi yangilanish: **2026-10-04 (1-hafta tayyorlandi: 1-3 darslar)**
 
 ## Eslatmalar
 
@@ -18,47 +18,36 @@ Manba: `4.3. Srtandart`, `4.3. Uslubiy ko'rsatma`, `4.3. O'quv qo'llanma`. Agent
 - O'quv yili 34 hafta, haftasiga 3 darsdan jami 102 dars rejalashtirilgan.
 
 
-## I-BOB. Android loyihalarini boshqarish va versiya nazorati tizimlari127
+## I bob. Android loyihalarini boshqarish va versiya nazorati tizimlari (12 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 1 | 1 | I-BOB. Android loyihalarini boshqarish va versiya nazorati tizimlari127 bo'yicha amaliy mashg'ulot | ⬜ |
-
-## II-BOB. Android arxitekturasi va dastur tuzilmasi148
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-| 2 | 1 | II-BOB. Android arxitekturasi va dastur tuzilmasi148 bo'yicha amaliy mashg'ulot | ⬜ |
-
-## III-BOB. Ma’lumotlar bazalari va sinxronlash tizimlari157
+| 1 | 1 | Gradle konfiguratsiyasi va build tizimi asoslari: settings.gradle, build.gradle, SDK versiyalari | 📝 |
+| 2 | 1 | Build variantlari va Product Flavors: Debug vs Release, R8 optimallashtirish, BuildConfig | 📝 |
+| 3 | 1 | Dependency management va versiyalar bilan ishlash: kutubxonalar, repozitoriylar, Version Catalog (TOML) | 📝 |
+## IV-BOB. Tarmoq va API integratsiyasi 13 6 
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 3 | 1 | III-BOB. Ma’lumotlar bazalari va sinxronlash tizimlari157 bo'yicha amaliy mashg'ulot | ⬜ |
+| 4 | 2 | IV-BOB. Tarmoq va API integratsiyasi 13 6  bo'yicha amaliy mashg'ulot | ⬜ |
 
-## IV-BOB. Tarmoq va API integratsiyasi136
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-| 4 | 2 | IV-BOB. Tarmoq va API integratsiyasi136 bo'yicha amaliy mashg'ulot | ⬜ |
-
-## V-BOB. Jetpack Compose va zamonaviy UI dizayn164
+## V-BOB. Jetpack Compose va zamonaviy UI dizayn 16 4 
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 5 | 2 | V-BOB. Jetpack Compose va zamonaviy UI dizayn164 bo'yicha amaliy mashg'ulot | ⬜ |
+| 5 | 2 | V-BOB. Jetpack Compose va zamonaviy UI dizayn 16 4  bo'yicha amaliy mashg'ulot | ⬜ |
 
-## VI-BOB. Firebase xizmatlari va ilova integratsiyasi184
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-| 6 | 2 | VI-BOB. Firebase xizmatlari va ilova integratsiyasi184 bo'yicha amaliy mashg'ulot | ⬜ |
-
-## VII-BOB. Testlash, tarqatish va yakuniy loyiha144
+## VI-BOB. Firebase xizmatlari va ilova integratsiyasi 18 4 
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 7 | 3 | VII-BOB. Testlash, tarqatish va yakuniy loyiha144 bo'yicha amaliy mashg'ulot | ⬜ |
+| 6 | 2 | VI-BOB. Firebase xizmatlari va ilova integratsiyasi 18 4  bo'yicha amaliy mashg'ulot | ⬜ |
+
+## VII-BOB. Testlash, tarqatish va yakuniy loyiha 14 4 
+
+| Dars | Hafta | Mavzu | Holat |
+|---|---|---|---|
+| 7 | 3 | VII-BOB. Testlash, tarqatish va yakuniy loyiha 14 4  bo'yicha amaliy mashg'ulot | ⬜ |
 
 ## I-BOB. Android loyihalarini boshqarish va versiya nazorati tizimlari
 
