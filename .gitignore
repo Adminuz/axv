@@ -11,6 +11,7 @@ sayt-vitepress/docs/.vitepress/dist/
 sayt-vitepress/docs/.vitepress/cache/
 sayt-vitepress/.vitepress/
 sayt/
+test/
 
 # OS and IDE files
 .DS_Store

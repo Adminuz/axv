@@ -9,9 +9,9 @@
   --line: #3c3c3c;
   --text: #d4d4d4;
   --head: #ffffff;
-  --muted: #8b8b8b;
-  --accent: #569cd6;      /* keyword ko'k */
-  --accent-soft: rgba(86, 156, 214, 0.15);
+  --muted: #b0b0b0;
+  --accent: #58a6ff;      /* keyword ko'k */
+  --accent-soft: rgba(88, 166, 255, 0.15);
   --accent2: #ce9178;     /* string to'q sariq */
   --accent2-soft: rgba(206, 145, 120, 0.15);
   --teal: #4ec9b0;        /* type feruza */
@@ -26,8 +26,8 @@
   --glow2: rgba(197, 134, 192, 0.05);
   --code-bg: #181818;
   --code-fg: #d4d4d4;
-  --tk-kw: #569cd6; --tk-str: #ce9178; --tk-num: #b5cea8; --tk-com: #6a9955; --tk-tag: #569cd6;
-  --tk-attr: #9cdcfe; --tk-fn: #dcdcaa; --tk-type: #4ec9b0; --tk-ctl: #c586c0; --tk-punct: #808080;
+  --tk-kw: #58a6ff; --tk-str: #ce9178; --tk-num: #b5cea8; --tk-com: #85c46e; --tk-tag: #58a6ff;
+  --tk-attr: #9cdcfe; --tk-fn: #dcdcaa; --tk-type: #4ec9b0; --tk-ctl: #c586c0; --tk-punct: #b0b0b0;
   --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 :root[data-theme="light"] {
@@ -119,7 +119,7 @@ svg.ic { width: 1.05em; height: 1.05em; vertical-align: -0.16em; margin-right: 0
 /* ===== Sarlavha va bo'lim slaydlari ===== */
 .reveal section.hero { text-align: center; }
 .reveal .hero h1 { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 2.3em; }
-.badge { display: inline-block; padding: 0.15em 0.7em; border-radius: 999px; font-size: 0.55em; background: var(--card); border: 1px solid var(--line); color: var(--muted); margin: 0.2em; }
+.badge { display: inline-block; padding: 0.15em 0.7em; border-radius: 999px; font-size: 0.55em; background: var(--card-hi); border: 1px solid var(--line); color: var(--text); margin: 0.2em; }
 .reveal section.sec { text-align: left; }
 .reveal .sec .num { font-size: 7em; line-height: 0.9; font-weight: 800; color: transparent; -webkit-text-stroke: 3px var(--accent); opacity: 0.9; }
 .reveal .sec h1 { font-size: 2em; margin-top: 0.1em; }
@@ -130,9 +130,10 @@ svg.ic { width: 1.05em; height: 1.05em; vertical-align: -0.16em; margin-right: 0
 .cards.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .cards.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .cards.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.card { background: linear-gradient(180deg, var(--card-hi), var(--card)); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; box-shadow: var(--shadow); }
+.card { background: linear-gradient(180deg, var(--card-hi), var(--card)); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; box-shadow: var(--shadow); color: var(--text); }
 .card h3 { font-size: 0.85em; margin: 0 0 6px; color: var(--accent); }
 .card p { font-size: 0.62em; margin: 0; color: var(--text); }
+.card li { font-size: 0.62em; color: var(--text); }
 .card.accent { border-color: var(--accent); background: var(--accent-soft); }
 .card.accent2 { border-color: var(--accent2); background: var(--accent2-soft); }
 .card.teal { border-color: var(--teal); background: var(--teal-soft); }
@@ -159,9 +160,10 @@ svg.ic { width: 1.05em; height: 1.05em; vertical-align: -0.16em; margin-right: 0
 
 /* ===== Taqqoslash (vs), iqtibos, chip ===== */
 .vs { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 18px; align-items: stretch; margin-top: 0.6em; }
-.vs .side { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px 20px; font-size: 0.72em; }
+.vs .side { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px 20px; font-size: 0.72em; color: var(--text); }
 .vs .side h3 { margin: 0 0 6px; font-size: 1.05em; color: var(--accent); }
 .vs .side.b h3 { color: var(--teal); }
+.vs .side p, .vs .side li { color: var(--text); }
 .vs .mid { align-self: center; font-weight: 800; color: var(--muted); font-size: 0.9em; }
 .quote { border-left: 6px solid var(--accent); padding: 0.3em 0 0.3em 1em; font-size: 1.05em; font-style: italic; color: var(--head); }
 .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 0.6em; }
@@ -170,7 +172,7 @@ svg.ic { width: 1.05em; height: 1.05em; vertical-align: -0.16em; margin-right: 0
 
 /* ===== Ikki ustun, izoh bloklari ===== */
 .cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: center; }
-.callout { border-left: 6px solid var(--accent); background: var(--accent-soft); padding: 0.5em 0.9em; border-radius: 0 12px 12px 0; font-size: 0.72em; margin-top: 0.7em; }
+.callout { border-left: 6px solid var(--accent); background: var(--accent-soft); padding: 0.5em 0.9em; border-radius: 0 12px 12px 0; font-size: 0.72em; margin-top: 0.7em; color: var(--text); }
 .callout.tip { border-color: var(--good); background: rgba(139, 209, 124, 0.12); }
 .callout.warn { border-color: var(--warn); background: rgba(242, 193, 78, 0.12); }
 .callout.bad { border-color: var(--bad); background: rgba(239, 123, 106, 0.12); }
@@ -196,7 +198,10 @@ svg.ic { width: 1.05em; height: 1.05em; vertical-align: -0.16em; margin-right: 0
 .browser .bar i:nth-child(3) { background: #8bd17c; }
 .browser .bar span { background: #fff; border-radius: 8px; padding: 2px 12px; margin-left: 10px; flex: 1; color: #616161; }
 .browser .page { padding: 16px 20px; }
-.browser .page h1, .browser .page h2, .browser .page h3, .browser .page p { color: #1f1f1f; }
+.browser .page, .browser .page * { color: #1f1f1f; }
+.browser .page h1, .browser .page h2, .browser .page h3, .browser .page h4, .browser .page p { color: #1f1f1f; }
+.browser .page .t-head, .browser .page .t-muted, .browser .page .t-accent { color: #1f1f1f !important; fill: #1f1f1f !important; }
+.browser .page button, .browser .page .btn { color: #ffffff !important; }
 .reveal table { font-size: 0.6em; border-collapse: collapse; margin-top: 0.6em; }
 .reveal table th { color: var(--accent); border-bottom: 2px solid var(--line); text-align: left; padding: 8px 14px; }
 .reveal table td { border-bottom: 1px solid var(--line); padding: 8px 14px; }
