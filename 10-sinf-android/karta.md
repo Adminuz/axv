@@ -9,8 +9,8 @@ Manba: `4.3. Srtandart`, `4.3. Uslubiy ko'rsatma`, `4.3. O'quv qo'llanma`. Agent
 ## Joriy holat
 
 - Oxirgi o'tilgan dars: **0**
-- Keyingi dars: **7** (3-hafta)
-- Oxirgi yangilanish: **2026-10-04 (2-hafta tayyorlandi: 4-6 darslar)**
+- Keyingi dars: **10** (4-hafta)
+- Oxirgi yangilanish: **2026-10-04 (3-hafta tayyorlandi: 7-9 darslar)**
 
 ## Eslatmalar
 
@@ -28,9 +28,9 @@ Manba: `4.3. Srtandart`, `4.3. Uslubiy ko'rsatma`, `4.3. O'quv qo'llanma`. Agent
 | 4 | 2 | Dependency management va ziddiyatlarni hal qilish: tranzitiv bog'liqliklar, exclude, resolutionStrategy | 📝 |
 | 5 | 2 | ProGuard va R8 yordamida kodni optimallashtirish (1-qism): Shrinking, Obfuscation, Optimization | 📝 |
 | 6 | 2 | ProGuard va R8 qoidalari bilan ishlash (2-qism): -keep qoidalari, Reflection, mapping.txt | 📝 |
-| 7 | 3 | Git bilan versiya nazorati asoslari: Git repository, commit, log, .gitignore | ⬜ |
-| 8 | 3 | Git bilan ishlash amaliyoti: fayllar holati, diff, checkout, reset, revert | ⬜ |
-| 9 | 3 | GitHub’da loyihalar yaratish va boshqarish: remote repozitoriy, push, pull, issues, README | ⬜ |
+| 7 | 3 | Git bilan versiya nazorati asoslari: Git repository, commit, log, .gitignore | 📝 |
+| 8 | 3 | Git bilan ishlash amaliyoti: fayllar holati, diff, checkout, reset, revert | 📝 |
+| 9 | 3 | GitHub’da loyihalar yaratish va boshqarish: remote repozitoriy, push, pull, issues, README | 📝 |
 | 10 | 4 | GitLab va Bitbucket’da jamoaviy ish jarayonlari: loyihani klonlash, access va rollar, pipeline | ⬜ |
 | 11 | 4 | Branch, Merge va Pull Request jarayonlari: feature branching, merge konfliktlari, PR va Code Review | ⬜ |
 | 12 | 4 | Continuous Integration (CI/CD) tushunchasi: build va test avtomatlashtirish, GitHub Actions | ⬜ |
