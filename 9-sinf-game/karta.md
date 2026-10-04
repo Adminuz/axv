@@ -9,8 +9,8 @@ Manba: `2.5. Standart (Game Design)`, `2.5. Uslubiy ko'rsatma`, `2.5. O'quv qo'l
 ## Joriy holat
 
 - Oxirgi o'tilgan dars: **0**
-- Keyingi dars: **4** (2-hafta)
-- Oxirgi yangilanish: **2026-10-04 (1-hafta tayyorlandi)**
+- Keyingi dars: **7** (3-hafta)
+- Oxirgi yangilanish: **2026-10-04 (2-hafta tayyorlandi)**
 
 ## Eslatmalar
 
@@ -24,14 +24,14 @@ Manba: `2.5. Standart (Game Design)`, `2.5. Uslubiy ko'rsatma`, `2.5. O'quv qo'l
 | 1 | 1 | Game Design faniga kirish: tushunchasi, ahamiyati, game designer vazifalari va dasturiy vositalar | 📝 |
 | 2 | 1 | O‘yinlarning tarixi va janrlari: evolyutsiya, janrlar tasnifi (Action, RPG, Strategy, Puzzle) | 📝 |
 | 3 | 1 | UI va UX ning Game designdagi roli: diyegetik, nodiyegetik, fazoviy, meta interfeyslar va HUD | 📝 |
-| 4 | 2 | O‘yin loyihalash va ssenariy: g'oya, syujet rivoji, qahramonlar va o'yin mexanikasi asoslari | ⬜ |
+| 4 | 2 | O‘yin loyihalash va ssenariy: g'oya, syujet rivoji, qahramonlar va o'yin mexanikasi asoslari | 📝 |
 
 ## II bob. 2D grafika asoslari va Photoshop (15 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 5 | 2 | Photoshop interfeysi va vositalari (1-qism): 2D grafika turlari (rastr, vektor, fraktal) va interfeys | ⬜ |
-| 6 | 2 | Photoshop interfeysi va vositalari (2-qism): Tanlash vositalari, qatlamlar (Layers) va asosiy uskunalar | ⬜ |
+| 5 | 2 | Photoshop interfeysi va vositalari (1-qism): 2D grafika turlari (rastr, vektor, fraktal) va interfeys | 📝 |
+| 6 | 2 | Photoshop interfeysi va vositalari (2-qism): Tanlash vositalari, qatlamlar (Layers) va asosiy uskunalar | 📝 |
 | 7 | 3 | Photoshop interfeysi va vositalari (3-qism): Qatlamlar bilan amaliy ishlash va assetlar kollaji | ⬜ |
 | 8 | 3 | Ranglar nazariyasi va dizayn asoslari (1-qism): RGB va CMYK, rang g'ildiragi va rang psixologiyasi | ⬜ |
 | 9 | 3 | Ranglar nazariyasi va dizayn asoslari (2-qism): Color Picker, Swatches va Gradient bilan ishlash | ⬜ |
