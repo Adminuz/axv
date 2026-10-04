@@ -1,6 +1,6 @@
 # 9-sinf: o'quv xaritasi (Game Design)
 
-Manba: `2.5. Standart (Game Design)`, `2.5. Uslubiy ko`rsatma`, `2.5. O`quv qo`llanma`. Agentlar avval shu faylni o'qiydi, katta .docx'ni qayta o'qimaydi. Matnlari `_matn/` papkasida (chiqarilgan .txt).
+Manba: `2.5. Standart (Game Design)`, `2.5. Uslubiy ko'rsatma`, `2.5. O'quv qo'llanma`. Matnlari `_matn/` papkasida (chiqarilgan .txt).
 
 **Tuzilma:** 102 dars, haftasiga 3 dars (har biri 80 daqiqa). Hafta = ceil(dars № / 3), jami 34 hafta.
 
@@ -9,193 +9,157 @@ Manba: `2.5. Standart (Game Design)`, `2.5. Uslubiy ko`rsatma`, `2.5. O`quv qo`l
 ## Joriy holat
 
 - Oxirgi o'tilgan dars: **0**
-- Keyingi dars: **1** (1-hafta)
-- Oxirgi yangilanish: —
+- Keyingi dars: **4** (2-hafta)
+- Oxirgi yangilanish: **2026-10-04 (1-hafta tayyorlandi)**
 
 ## Eslatmalar
 
 - Dastur: «Muhammad al-Xorazmiy vorislari» tizimi bo'yicha maxsus guruhlar (Game Design).
 - O'quv yili 34 hafta, haftasiga 3 darsdan jami 102 dars rejalashtirilgan.
 
-
-## I-BOB. 2D GRAFIKA ASOSLARI VA PHOTOSHOP
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-| 1 | 1 | I-BOB. 2D GRAFIKA ASOSLARI VA PHOTOSHOP bo'yicha amaliy mashg'ulot | ⬜ |
-
-## II-BOB. 3D MODELLASHTIRISH ASOSLARI (BLENDER)
+## I bob. Game Design asoslari (4 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 2 | 1 | II-BOB. 3D MODELLASHTIRISH ASOSLARI (BLENDER) bo'yicha amaliy mashg'ulot | ⬜ |
+| 1 | 1 | Game Design faniga kirish: tushunchasi, ahamiyati, game designer vazifalari va dasturiy vositalar | 📝 |
+| 2 | 1 | O‘yinlarning tarixi va janrlari: evolyutsiya, janrlar tasnifi (Action, RPG, Strategy, Puzzle) | 📝 |
+| 3 | 1 | UI va UX ning Game designdagi roli: diyegetik, nodiyegetik, fazoviy, meta interfeyslar va HUD | 📝 |
+| 4 | 2 | O‘yin loyihalash va ssenariy: g'oya, syujet rivoji, qahramonlar va o'yin mexanikasi asoslari | ⬜ |
 
-## III-BOB. O’YIN MUHITI VA LEVEL DESIGN ASOSLARI
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-| 3 | 1 | III-BOB. O’YIN MUHITI VA LEVEL DESIGN ASOSLARI bo'yicha amaliy mashg'ulot | ⬜ |
-
-## IV-BOB. DASTURLASH VA O’YIN MEXANIKASI
+## II bob. 2D grafika asoslari va Photoshop (15 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 4 | 2 | IV-BOB. DASTURLASH VA O’YIN MEXANIKASI bo'yicha amaliy mashg'ulot | ⬜ |
+| 5 | 2 | Photoshop interfeysi va vositalari (1-qism): 2D grafika turlari (rastr, vektor, fraktal) va interfeys | ⬜ |
+| 6 | 2 | Photoshop interfeysi va vositalari (2-qism): Tanlash vositalari, qatlamlar (Layers) va asosiy uskunalar | ⬜ |
+| 7 | 3 | Photoshop interfeysi va vositalari (3-qism): Qatlamlar bilan amaliy ishlash va assetlar kollaji | ⬜ |
+| 8 | 3 | Ranglar nazariyasi va dizayn asoslari (1-qism): RGB va CMYK, rang g'ildiragi va rang psixologiyasi | ⬜ |
+| 9 | 3 | Ranglar nazariyasi va dizayn asoslari (2-qism): Color Picker, Swatches va Gradient bilan ishlash | ⬜ |
+| 10 | 4 | Ranglar nazariyasi va dizayn asoslari (3-qism): O'yin atmosferasiga mos rang palitrasi yaratish | ⬜ |
+| 11 | 4 | O‘yin uchun ikonka va spraytlar yaratish (1-qism): Sprayt va ikonka tushunchasi, formatlar (PNG, SVG) | ⬜ |
+| 12 | 4 | O‘yin uchun ikonka va spraytlar yaratish (2-qism): Personaj va obyektlar uchun spraytlar chizish | ⬜ |
+| 13 | 5 | O‘yin uchun ikonka va spraytlar yaratish (3-qism): Sprayt sheet (atlas) tayyorlash va optimallashtirish | ⬜ |
+| 14 | 5 | UI dizayn: tugmalar, menyular, HUD (1-qism): Tugmalar turlari, holatlari (Normal, Hover, Pressed) | ⬜ |
+| 15 | 5 | UI dizayn: tugmalar, menyular, HUD (2-qism): Bosh menyu, sozlamalar va pauza menyusi dizayni | ⬜ |
+| 16 | 6 | UI dizayn: tugmalar, menyular, HUD (3-qism): Jonli o'yin HUD'i (Health bar, tangalar, mini-xarita) | ⬜ |
+| 17 | 6 | O‘yin interfeysini prototiplash (1-qism): Wireframe, Mockup va Prototype bosqichlari | ⬜ |
+| 18 | 6 | O‘yin interfeysini prototiplash (2-qism): O'yin stsenariysiga mos interfeys sxemasini chizish | ⬜ |
+| 19 | 7 | O‘yin interfeysini prototiplash (3-qism): Photoshop'da to'liq interaktiv o'yin UI prototipini yig'ish | ⬜ |
 
-## V-BOB. O’YIN YARATISHDA JAMOAVIY ISH VA GIT
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-| 5 | 2 | V-BOB. O’YIN YARATISHDA JAMOAVIY ISH VA GIT bo'yicha amaliy mashg'ulot | ⬜ |
-
-## VI-BOB. UNITY O’YIN DIZAYNI
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-| 6 | 2 | VI-BOB. UNITY O’YIN DIZAYNI bo'yicha amaliy mashg'ulot | ⬜ |
-
-## VII-BOB. MARKETING VA NOSHIRLIK
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-| 7 | 3 | VII-BOB. MARKETING VA NOSHIRLIK bo'yicha amaliy mashg'ulot | ⬜ |
-
-## VIII-BOB. YAKUNIY LOYIHA
+## III bob. 3D modellashtirish asoslari (Blender) (17 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 8 | 3 | VIII-BOB. YAKUNIY LOYIHA bo'yicha amaliy mashg'ulot | ⬜ |
+| 20 | 7 | Blender interfeysi va oddiy obyektlar (1-qism): Viewport, Transform (Move, Rotate, Scale) | ⬜ |
+| 21 | 7 | Blender interfeysi va oddiy obyektlar (2-qism): 3D Cursor, navigatsiya va asosiy panellar | ⬜ |
+| 22 | 8 | Blender interfeysi va oddiy obyektlar (3-qism): Yorug'lik manbalari va sodda sahna kompozitsiyasi | ⬜ |
+| 23 | 8 | Mesh va modellashtirish usullari (1-qism): Edit Mode, Vertex, Edge, Face elementlari | ⬜ |
+| 24 | 8 | Mesh va modellashtirish usullari (2-qism): Extrude, Inset, Bevel va Loop Cut amallari | ⬜ |
+| 25 | 9 | Mesh va modellashtirish usullari (3-qism): Modifikatorlar (Subdivision Surface, Mirror, Boolean) | ⬜ |
+| 26 | 9 | Oddiy o‘yin obyektlarini yaratish (1-qism): Low-poly uslubida o'yin modellari (daraxt, tosh, bino) | ⬜ |
+| 27 | 9 | Oddiy o‘yin obyektlarini yaratish (2-qism): Materiallar, ranglar va sodda teksturalash | ⬜ |
+| 28 | 10 | Oddiy o‘yin obyektlarini yaratish (3-qism): Low-poly sahna renderi va o'yin uchun optimallashtirish | ⬜ |
+| 29 | 10 | Animatsiya va effektlar (1-qism): Timeline, Keyframe qo'yish va obyektlarni harakatlantirish | ⬜ |
+| 30 | 10 | Animatsiya va effektlar (2-qism): Dope Sheet, aylanish va masshtab o'zgarishi animatsiyasi | ⬜ |
+| 31 | 11 | Animatsiya va effektlar (3-qism): Kamera animatsiyasi va kinematik ko'rinishlar | ⬜ |
+| 32 | 11 | Animatsiya va effektlar (4-qism): Zarracha effektlari (Particles) va vizual effektlar | ⬜ |
+| 33 | 11 | Loyihani saqlash va eksport qilish (1-qism): O'yin formatlari (FBX, OBJ, glTF) tahlili | ⬜ |
+| 34 | 12 | Loyihani saqlash va eksport qilish (2-qism): Teksturalar bilan birga eksport qilish | ⬜ |
+| 35 | 12 | Loyihani saqlash va eksport qilish (3-qism): 3D assetlarni tekshirish va xatolarni tuzatish | ⬜ |
+| 36 | 12 | 1-oraliq nazorat ishi (Loyiha ishi): 3D o'yin modeli va sahnasini yaratish hamda himoya qilish | ⬜ |
 
-## 1-bob haqida umumiy ma’lumot
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-| 9 | 3 | Photoshop interfeysi va vositalari | ⬜ |
-| 10 | 4 | Kompyuter | ⬜ |
-| 11 | 4 | Adobe Photoshop dasturi | ⬜ |
-| 12 | 4 | Sichqoncha va klaviatura | ⬜ |
-| 13 | 5 | rasmlarni kesish va o’lchamini o’zgartirish; | ⬜ |
-| 14 | 5 | ranglarni tuzatish va bezash; | ⬜ |
-| 15 | 5 | matn va turli shakllar qo’shish; | ⬜ |
-| 16 | 6 | fonni almashtirish; | ⬜ |
-| 17 | 6 | dizayn va grafika ishlari bajarish mumkin | ⬜ |
-| 18 | 6 | operatsion tizim: Windows 10 / 11 yoki macOS; | ⬜ |
-| 19 | 7 | kamida 8 GB tezkor xotira (RAM) tavsiya etiladi; | ⬜ |
-| 20 | 7 | sichqoncha va klaviatura bo’lishi kerak | ⬜ |
-| 21 | 7 | Layer Filter – qatlamlarni turiga qarab tez topish | ⬜ |
-| 22 | 8 | Opacity – qatlamning shaffoflik darajasini o’zgartirish | ⬜ |
-| 23 | 8 | Blend Modes – qatlamlarning bir-biri bilan aralashish usulini belgilash | ⬜ |
-| 24 | 8 | Fill Opacity – qatlam ichki rangining shaffofligini sozlash | ⬜ |
-| 25 | 9 | Visibility (ko’z belgisi) – qatlamni ko’rsatish yoki yashirish | ⬜ |
-| 26 | 9 | Locked – qatlamni tasodifiy tahrirdan himoyalash | ⬜ |
-| 27 | 9 | Link – qatlamlarni bir-biriga bog’lash | ⬜ |
-| 28 | 10 | Layer Effects (fx) – soya, nur va boshqa effektlar qo’shish | ⬜ |
-| 29 | 10 | Add Layer Mask – qatlamning ayrim qismini yashirish | ⬜ |
-| 30 | 10 | Add Adjustment Layer – rang va yorug’likni sozlash | ⬜ |
-| 31 | 11 | Layer Groups – qatlamlarni guruhlash | ⬜ |
-| 32 | 11 | Create New Layer – yangi qatlam yaratish | ⬜ |
-| 33 | 11 | Delete Layer – qatlamni o’chirish | ⬜ |
-| 34 | 12 | Move Tool (V) – obyektni joyidan ko’chirish | ⬜ |
-| 35 | 12 | Brush Tool (B) – rasm chizish va bo’yash | ⬜ |
-| 36 | 12 | Eraser Tool (E) – rasmning ortiqcha qismlarini o’chirish | ⬜ |
-| 37 | 13 | Text Tool (T) – matn yozish | ⬜ |
-| 38 | 13 | Shape Tool (U) – geometrik shakllar chizish | ⬜ |
-| 39 | 13 | Dastur oynasi va vositalari bilan tanishib chiqing | ⬜ |
-| 40 | 14 | Adobe Photoshop dasturini o‘rnating | ⬜ |
-| 41 | 14 | Ranglar nazariyasi va dizayn asoslari | ⬜ |
-| 42 | 14 | Kompyuter  Photoshop dasturi Sichqoncha | ⬜ |
-| 43 | 15 | Text Tool yordamida qisqa matn yozing va uning rangini fon rangiga moslab o‘zgartiring | ⬜ |
-| 44 | 15 | Photoshop dasturida Rectangle yoki Ellipse Tool yordamida shakl chizing va unga gradiyent rang bering | ⬜ |
-| 45 | 15 | O’yin uchun ikonka yaratish | ⬜ |
-| 46 | 16 | Kompyuter Photoshop dasturi Sichqoncha | ⬜ |
-| 47 | 16 | Photoshop dasturida 64×64 px o‘lchamdagi, shaffof fonli oddiy o‘yin ikonkasini yarating va uni PNG formatda saqlang | ⬜ |
-| 48 | 16 | O‘yin ikonkalari nima uchun kerak va ular o‘yin interfeysida qanday vazifani bajaradi? | ⬜ |
-| 49 | 17 | UI dizayn: tugmalar, menyular, HUD | ⬜ |
-| 50 | 17 | Adobe Photoshop dasturini ishga tushiriladi | ⬜ |
-| 51 | 17 | File → New (Ctrl+N) buyrug’i orqali yangi fayl yaratiladi | ⬜ |
-| 52 | 18 | Ochilgan oynada hujjat o’lchamlarini quyidagicha belgilanadi: | ⬜ |
-| 53 | 18 | Fayl nomini “O’yin menyusi” deb yoziladi | ⬜ |
-| 54 | 18 | Create tugmasini bosib yangi ishchi oynani yaratiladi | ⬜ |
-| 55 | 19 | Menyuda asosiy tugmalar qanday joylashtiriladi? | ⬜ |
-| 56 | 19 | O’yin interfeysini prototiplash | ⬜ |
-| 57 | 19 | Photoshop yordamida sodda prototip yarating | ⬜ |
-| 58 | 20 | O‘yin interfeysini prototiplash qanday jarayon? | ⬜ |
-| 59 | 20 | Blender o‘yin dvijogi haqida biladi | ⬜ |
-| 60 | 20 | Blender dastur interfeysi va boshqaruv elementlarini o‘rganib chiqadi | ⬜ |
-| 61 | 21 | Meshlar  va oddiy primitivlar bilan ishlashni o‘rganadi | ⬜ |
-| 62 | 21 | Oddiy o‘yin obyektlarini yaratishni biladi | ⬜ |
-| 63 | 21 | Sahna muhiti bilan ishlashni biladi | ⬜ |
-| 64 | 22 | Blenderda yaratilgan mahsulotlarni saqlash va eksport qilishni o‘rganadi | ⬜ |
-
-## II-bob haqida umumiy ma’lumot
+## IV bob. O‘yin muhiti va Level Design asoslari (14 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 65 | 22 | Blender interfeysi va oddiy obyektlar | ⬜ |
-| 66 | 22 | Kompyuter Blender  dasturi Sichqoncha | ⬜ |
-| 67 | 23 | sahnani yakuniy rasm yoki animatsiyada qanday ko’rinishini oldindan ko’rish; | ⬜ |
-| 68 | 23 | obyektlarning kameraga nisbatan joylashuvini tekshirish; | ⬜ |
-| 69 | 23 | kompozitsiyani to’g’ri sozlash (kadrga sig’dirish); | ⬜ |
-| 70 | 24 | ortiqcha yoki keraksiz obyektlarning kadrga tushib qolmasligini nazorat qilish | ⬜ |
-| 71 | 24 | X o’qi (qizil) bo’yicha chap yoki o’ng tomonga, | ⬜ |
-| 72 | 24 | Y o’qi (yashil) bo’yicha oldinga yoki orqaga, | ⬜ |
-| 73 | 25 | Z o’qi (ko’k) bo’yicha yuqoriga yoki pastga siljitiladi | ⬜ |
-| 74 | 25 | eni (diametri), | ⬜ |
-| 75 | 25 | balandligi, | ⬜ |
-| 76 | 26 | umumiy hajmi kattalashtiriladi yoki kichlashtiriladi | ⬜ |
-| 77 | 26 | X bosilsa — obyekt faqat X o’qi bo’yicha, | ⬜ |
-| 78 | 26 | Y bosilsa — Y o’qi bo’yicha, | ⬜ |
-| 79 | 27 | Z bosilsa — Z o’qi bo’yicha o’lchami o’zgartiriladi | ⬜ |
-| 80 | 27 | obyektning shakli tahrirlanadi va o’zgartiriladi; | ⬜ |
-| 81 | 27 | yuzalar, qirralar va nuqtalar ajratilib tanlanadi; | ⬜ |
-| 82 | 28 | Extrude (E), Scale (S) va Move (G) buyruqlari yordamida yangi shakllar hosil qilinadi; | ⬜ |
-| 83 | 28 | oddiy obyektlardan foydalanib murakkab modellar yaratiladi | ⬜ |
-| 84 | 28 | 3D Viewport oynasida obyektlar bilan ishlashni mashq qiling | ⬜ |
-| 85 | 29 | Standart geometrik primitivlardan foydalanib uy jihozlarining sodda 3D modelini yarating | ⬜ |
-| 86 | 29 | Blender dasturining asosiy interfeysi bilan tanishish | ⬜ |
-| 87 | 29 | Poligonal (Mesh) modellashtirish | ⬜ |
-| 88 | 30 | Kompyuter Blender dasturi Sichqoncha va klaviatura | ⬜ |
-| 89 | 30 | Edit Mode rejimida obyektga shakl bering | ⬜ |
-| 90 | 30 | Cube yoki Cylinder obyektidan foydalanib oddiy 3D buyum (quti, stakan yoki ustun) yarating | ⬜ |
-| 91 | 31 | Oddiy obyektlarni yaratish (standart primitivlar yordamida) | ⬜ |
-| 92 | 31 | Kompyuter Blender Dasturi Sichqoncha | ⬜ |
-| 93 | 31 | Yaratilgan obyektga rang bering va move, scale, rotate instrumentlaridan foydalangan holda  joylastiring | ⬜ |
-| 94 | 32 | Standart primitivlardan foydalangan holda xona uchun devor yaratig | ⬜ |
-| 95 | 32 | Animatsiya va effektlar | ⬜ |
-| 96 | 32 | Kompyuter Blender dasturi  Sichqoncha | ⬜ |
-| 97 | 33 | Yorug‘lik (Light) effektiga animatsiya bering. Chiroq quvvatini (Power) o‘zgartirish orqali sahnada qanday vizual o‘zgarish yuz beradi? | ⬜ |
-| 98 | 33 | tullarni stol atrofida aylanish animatsiyasini bajaring | ⬜ |
-| 99 | 33 | Loyihani saqlash va eksport qilish | ⬜ |
-| 100 | 34 | Kompyuter Blender dasturi Sichqoncha | ⬜ |
-| 101 | 34 | Yuqori menyudan File → Save buyrug’ini tanlanadi | ⬜ |
-| 102 | 34 | Agar loyiha birinchi marta saqlanayotgan bo’lsa, File → Save As tanlanadi | ⬜ |
+| 37 | 13 | O‘yin dunyosi (Game World) dizayni (1-qism): Dunyo turlari, vizual uslub va atmosferani belgilash | ⬜ |
+| 38 | 13 | O‘yin dunyosi (Game World) dizayni (2-qism): Bioma, landshaft va atrof-muhit konsepti | ⬜ |
+| 39 | 13 | O‘yin dunyosi (Game World) dizayni (3-qism): O'yin xaritasi va hududlar balansi | ⬜ |
+| 40 | 14 | O‘yin dunyosi (Game World) dizayni (4-qism): Dunyo tarixi (Lore) va atrof-muhit orqali hikoya qilish | ⬜ |
+| 41 | 14 | Level Design ahamiyati va roli (1-qism): Bosqich dizaynerining vazifalari va prinsiplari | ⬜ |
+| 42 | 14 | Level Design ahamiyati va roli (2-qism): Grayboxing / Whiteboxing usulida bosqich sxemasini qurish | ⬜ |
+| 43 | 15 | Level Design ahamiyati va roli (3-qism): O'yinchi yo'nalishi (Navigation, Signposting, Landmarks) | ⬜ |
+| 44 | 15 | Level Design ahamiyati va roli (4-qism): Choke points, xavfsiz zonalar va fazoviy pacing | ⬜ |
+| 45 | 15 | O‘yin muhiti elementlari (1-qism): Statik va dinamik obyektlar, to'siqlar va platformalar | ⬜ |
+| 46 | 16 | O‘yin muhiti elementlari (2-qism): Interaktiv obyektlar (eshiklar, richaglar, ko'tarma liftlar) | ⬜ |
+| 47 | 16 | O‘yin muhiti elementlari (3-qism): Muhit yoritilishi va audio effektlar uyg'unligi | ⬜ |
+| 48 | 16 | O‘yin darajalari (Levels) (1-qism): Qiyinchilik egri chizig'i (Difficulty curve) va progressiya | ⬜ |
+| 49 | 17 | O‘yin darajalari (Levels) (2-qism): Mukofotlar, yashirin joylar (secrets) va qayta o'ynash qiymati | ⬜ |
+| 50 | 17 | O‘yin darajalari (Levels) (3-qism): Bosqichni test qilish (Playtesting) va balansni to'g'rilash | ⬜ |
 
-## 3-bob haqida umumiy ma’lumot
+## V bob. Dasturlash va o‘yin mexanikasi (Godot) (11 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
+| 51 | 17 | Kodlash asoslari va Godot interfeysi (1-qism): Godot o'yin dvijogi, sahnalar (Scenes) va tugunlar (Nodes) | ⬜ |
+| 52 | 18 | Kodlash asoslari va Godot interfeysi (2-qism): GDScript asoslari: o'zgaruvchilar, funksiyalar, signallar | ⬜ |
+| 53 | 18 | O‘yin mexanikasi va UI elementlari (1-qism): Qahramon harakati (KinematicBody/CharacterBody) | ⬜ |
+| 54 | 18 | O‘yin mexanikasi va UI elementlari (2-qism): Sakrash, to'qnashuvlar (Collisions) va gravitatsiya | ⬜ |
+| 55 | 19 | O‘yin mexanikasi va UI elementlari (3-qism): Tangalar yig'ish mexanikasi va ball hisoblash tizimi | ⬜ |
+| 56 | 19 | O‘yin mexanikasi va UI elementlari (4-qism): O'yin interfeysini (UI) kod bilan bog'lash | ⬜ |
+| 57 | 19 | 2-oraliq nazorat ishi (Loyiha ishi): Godot'da 2D mini-platformer o'yinini yaratish | ⬜ |
+| 58 | 20 | O‘yin matematikasi (1-qism): 2D/3D fazoda vektorlar (Vector2, Vector3), yo'nalish va masofa | ⬜ |
+| 59 | 20 | O‘yin matematikasi (2-qism): Tezlik, tezlanish va fizik kuchlar harakati | ⬜ |
+| 60 | 20 | O‘yin matematikasi (3-qism): Traektoriya hisoblash, burchaklar va snaryad harakati | ⬜ |
+| 61 | 21 | O‘yin matematikasi (4-qism): Tasodifiylik (RNG), ehtimolliklar va o'yin balansi matematikasi | ⬜ |
 
-## 4-bob haqida umumiy ma’lumot
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-
-## 5-bob haqida umumiy ma’lumot
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-
-## 6-bob haqida umumiy ma’lumot
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-
-## 7-bob haqida umumiy ma’lumot
+## VI bob. O‘yin yaratishda jamoaviy ish va Git (13 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
+| 62 | 21 | Game Production jarayoni (1-qism): O'yin yaratish bosqichlari: Pre-production, Production, Post-production | ⬜ |
+| 63 | 21 | Game Production jarayoni (2-qism): Jamoa rollari: Game Designer, Programmer, Artist, Animator, QA Tester | ⬜ |
+| 64 | 22 | Game Production jarayoni (3-qism): Agile, Scrum va Kanban metodologiyalari o'yin ishlab chiqishda | ⬜ |
+| 65 | 22 | Game Production jarayoni (4-qism): Milestone, Sprint rejalashtirish va loyiha muddati nazorati | ⬜ |
+| 66 | 22 | Git da asosiy buyruqlar (1-qism): Git va GitHub tushunchasi, repository yaratish | ⬜ |
+| 67 | 23 | Git da asosiy buyruqlar (2-qism): `git add`, `git commit`, `git push`, `git status` amallari | ⬜ |
+| 68 | 23 | Git da asosiy buyruqlar (3-qism): Tarmoqlar (Branches): `git branch`, `git checkout`, `git switch` | ⬜ |
+| 69 | 23 | Git da asosiy buyruqlar (4-qism): Tarmoqlarni birlashtirish (`git merge`) va ziddiyatlar (Conflicts) | ⬜ |
+| 70 | 24 | Git da asosiy buyruqlar (5-qism): Pull Request (PR), kod va assetlarni birgalikda tekshirish | ⬜ |
+| 71 | 24 | Version controlning afzalliklari (1-qism): Katta hajmli fayllar bilan ishlash va Git LFS (Large File Storage) | ⬜ |
+| 72 | 24 | Version controlning afzalliklari (2-qism): `.gitignore` fayli: dvijok keshlarini repositorydan chiqarish | ⬜ |
+| 73 | 25 | Version controlning afzalliklari (3-qism): Versiyalarni orqaga qaytarish va xatolardan himoyalanish | ⬜ |
+| 74 | 25 | Version controlning afzalliklari (4-qism): GitHub Projects va jamoaviy vazifalar taxtasi amaliyoti | ⬜ |
 
-## 8-bob haqida umumiy ma’lumot
+## VII bob. Unity o‘yin dizayni (10 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
+| 75 | 25 | Unityni o‘rnatish va interfeysi bilan tanishish (1-qism): Unity Hub, versiyalar, Scene va Game oynalari | ⬜ |
+| 76 | 26 | Unityni o‘rnatish va interfeysi bilan tanishish (2-qism): Hierarchy, Inspector, Project va Console panellari | ⬜ |
+| 77 | 26 | Unity komponentalari va UI/HUD (1-qism): GameObjects, Components (Transform, Mesh, Collider, Rigidbody) | ⬜ |
+| 78 | 26 | Unity komponentalari va UI/HUD (2-qism): Prefabs tushunchasi va qayta ishlatiluvchi o'yin obyektlari | ⬜ |
+| 79 | 27 | Unity komponentalari va UI/HUD (3-qism): Canvas tizimi, TextMeshPro, Image va Button komponentalari | ⬜ |
+| 80 | 27 | Unity komponentalari va UI/HUD (4-qism): O'yin ichi HUD ko'rsatkichlari va bosh menyu integratsiyasi | ⬜ |
+| 81 | 27 | 3-oraliq nazorat ishi (Loyiha ishi): Unity'da interaktiv sahna va UI tizimini yig'ish | ⬜ |
+| 82 | 28 | O‘yin yaratishda ijodiy yondashuv (1-qism): Game feel va "Juice" (screen shake, zarba effektlari, audio) | ⬜ |
+| 83 | 28 | O‘yin yaratishda ijodiy yondashuv (2-qism): Vizual kontrast, kompozitsiya va o'yin atmosferasi | ⬜ |
+| 84 | 28 | O‘yin yaratishda ijodiy yondashuv (3-qism): O'yinchini jalb etish (Engagement) va emotsional rezonans | ⬜ |
+
+## VIII bob. Marketing va Publishing (8 dars)
+
+| Dars | Hafta | Mavzu | Holat |
+|---|---|---|---|
+| 85 | 29 | Publishing va Monetization modellari (1-qism): Premium, Free-to-Play (F2P), In-App Purchases, Ads | ⬜ |
+| 86 | 29 | Publishing va Monetization modellari (2-qism): O'yin reklamasi turlari (Rewarded Ads, Interstitial, Banner) | ⬜ |
+| 87 | 29 | Publishing va Monetization modellari (3-qism): O'yinni bozorga chiqarish strategiyasi (Soft Launch, Global Launch) | ⬜ |
+| 88 | 30 | Publishing va Monetization modellari (4-qism): ASO (App Store Optimization): nom, ikonka, skrinshotlar va tavsif | ⬜ |
+| 89 | 30 | Google Play Consoleda o‘yin yuklash qoidalari (1-qism): Ishlab chiquvchi hisobi va dastur talablari | ⬜ |
+| 90 | 30 | Google Play Consoleda o‘yin yuklash qoidalari (2-qism): Yosh toifalari (Content Rating) va maxfiylik siyosati | ⬜ |
+| 91 | 31 | Google Play Consoleda o‘yin yuklash qoidalari (3-qism): APK va AAB (Android App Bundle) eksporti | ⬜ |
+| 92 | 31 | Google Play Consoleda o‘yin yuklash qoidalari (4-qism): Ichki va ochiq test (Internal/Open Testing) jarayoni | ⬜ |
+
+## IX bob. Yakuniy loyiha (10 dars)
+
+| Dars | Hafta | Mavzu | Holat |
+|---|---|---|---|
+| 93 | 31 | GDD (Game Design Document) tuzish (1-qism): GDD strukturasi: o'yin konsepti, asosiy loop va auditoriya | ⬜ |
+| 94 | 32 | GDD (Game Design Document) tuzish (2-qism): Mexanikalar, san'at uslubi va texnik talablar bayoni | ⬜ |
+| 95 | 32 | Prototip yaratish (1-qism): Asosiy o'yin mexanikasini (Core Gameplay Loop) ishlab chiqish | ⬜ |
+| 96 | 32 | Prototip yaratish (2-qism): 2D/3D vizual assetlar va animatsiyalarni sahnaga kiritish | ⬜ |
+| 97 | 33 | Prototip yaratish (3-qism): Foydalanuvchi interfeysi (UI) va audiolarni birlashtirish | ⬜ |
+| 98 | 33 | Prototip yaratish (4-qism): O'yin darajasini to'liq o'ynaladigan holatga keltirish | ⬜ |
+| 99 | 33 | Sinash (Testing) (1-qism): Playtesting o'tkazish va xatoliklarni (Bugs) qayd qilish | ⬜ |
+| 100 | 34 | Sinash (Testing) (2-qism): Foydalanuvchi fikrlari asosida o'yin balansini yaxshilash | ⬜ |
+| 101 | 34 | 4-oraliq nazorat ishi: Yakuniy o'yin loyihasining reliz versiyasini (Build) yig'ish | ⬜ |
+| 102 | 34 | Yakuniy nazorat ishi: O'yin taqdimoti (Pitch) va loyihani to'liq himoya qilish | ⬜ |
