@@ -9,8 +9,8 @@ Manba: `2.5. Standart (Game Design)`, `2.5. Uslubiy ko'rsatma`, `2.5. O'quv qo'l
 ## Joriy holat
 
 - Oxirgi o'tilgan dars: **0**
-- Keyingi dars: **7** (3-hafta)
-- Oxirgi yangilanish: **2026-10-04 (2-hafta tayyorlandi)**
+- Keyingi dars: **10** (4-hafta)
+- Oxirgi yangilanish: **2026-10-04 (3-hafta tayyorlandi)**
 
 ## Eslatmalar
 
@@ -32,9 +32,9 @@ Manba: `2.5. Standart (Game Design)`, `2.5. Uslubiy ko'rsatma`, `2.5. O'quv qo'l
 |---|---|---|---|
 | 5 | 2 | Photoshop interfeysi va vositalari (1-qism): 2D grafika turlari (rastr, vektor, fraktal) va interfeys | 📝 |
 | 6 | 2 | Photoshop interfeysi va vositalari (2-qism): Tanlash vositalari, qatlamlar (Layers) va asosiy uskunalar | 📝 |
-| 7 | 3 | Photoshop interfeysi va vositalari (3-qism): Qatlamlar bilan amaliy ishlash va assetlar kollaji | ⬜ |
-| 8 | 3 | Ranglar nazariyasi va dizayn asoslari (1-qism): RGB va CMYK, rang g'ildiragi va rang psixologiyasi | ⬜ |
-| 9 | 3 | Ranglar nazariyasi va dizayn asoslari (2-qism): Color Picker, Swatches va Gradient bilan ishlash | ⬜ |
+| 7 | 3 | Photoshop interfeysi va vositalari (3-qism): Qatlamlar bilan amaliy ishlash va assetlar kollaji | 📝 |
+| 8 | 3 | Ranglar nazariyasi va dizayn asoslari (1-qism): RGB va CMYK, rang g'ildiragi va rang psixologiyasi | 📝 |
+| 9 | 3 | Ranglar nazariyasi va dizayn asoslari (2-qism): Color Picker, Swatches va Gradient bilan ishlash | 📝 |
 | 10 | 4 | Ranglar nazariyasi va dizayn asoslari (3-qism): O'yin atmosferasiga mos rang palitrasi yaratish | ⬜ |
 | 11 | 4 | O‘yin uchun ikonka va spraytlar yaratish (1-qism): Sprayt va ikonka tushunchasi, formatlar (PNG, SVG) | ⬜ |
 | 12 | 4 | O‘yin uchun ikonka va spraytlar yaratish (2-qism): Personaj va obyektlar uchun spraytlar chizish | ⬜ |
