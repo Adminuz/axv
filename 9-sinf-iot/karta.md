@@ -1,6 +1,6 @@
 # 9-sinf: o'quv xaritasi (IoT — Buyumlar Interneti)
 
-Manba: `2_6_Standart_IoT...`, `2_6_Uslubiy_ko`rsatma...`, `2.6. O`quv qo`llanma`. Agentlar avval shu faylni o'qiydi, katta .docx'ni qayta o'qimaydi. Matnlari `_matn/` papkasida (chiqarilgan .txt).
+Manba: `2_6_Standart_IoT...`, `2_6_Uslubiy_ko`rsatma...`, `2.6. O`quv qo`llanma`. Matnlari `_matn/` papkasida (chiqarilgan .txt).
 
 **Tuzilma:** 102 dars, haftasiga 3 dars (har biri 80 daqiqa). Hafta = ceil(dars № / 3), jami 34 hafta.
 
@@ -9,148 +9,167 @@ Manba: `2_6_Standart_IoT...`, `2_6_Uslubiy_ko`rsatma...`, `2.6. O`quv qo`llanma`
 ## Joriy holat
 
 - Oxirgi o'tilgan dars: **0**
-- Keyingi dars: **1** (1-hafta)
-- Oxirgi yangilanish: —
+- Keyingi dars: **4** (2-hafta)
+- Oxirgi yangilanish: **2026-10-04 (1-hafta materiallari tayyorlandi)**
 
 ## Eslatmalar
 
 - Dastur: «Muhammad al-Xorazmiy vorislari» tizimi bo'yicha maxsus guruhlar (IoT (Internet of Things) — Buyumlar Interneti).
 - O'quv yili 34 hafta, haftasiga 3 darsdan jami 102 dars rejalashtirilgan.
 
-
-
-
-
-
-
-
-
-## I-bob. IoT texnologiyalarining nazariy asoslari va qo‘llanilishi
+## I bob. IoT asoslari va virtual laboratoriya (6 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 1 | 1 | I-bob. IoT texnologiyalarining nazariy asoslari va qo‘llanilishi bo'yicha amaliy mashg'ulot | ⬜ |
+| 1 | 1 | IoT tushunchasi va qo‘llanish sohalari | 📝 |
+| 2 | 1 | IoT arxitekturasi: Sensorlar, aktuatorlar va apparat ta'minoti | 📝 |
+| 3 | 1 | IoT arxitekturasi: Tarmoq, bulut va foydalanuvchi interfeysi | 📝 |
+| 4 | 2 | Tinkercad.com virtual laboratoriyasida ro‘yxatdan o‘tish va interfeys | ⬜ |
+| 5 | 2 | Tinkercad muhitida virtual elektron komponentlar bilan ishlash | ⬜ |
+| 6 | 2 | Elektron sxema asosida bitta LED lampaning ishlash prinsipi va ulanishi | ⬜ |
 
-## II-bob. Mikrokontrollerlar va IoT qurilmalari
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-| 2 | 1 | II-bob. Mikrokontrollerlar va IoT qurilmalari bo'yicha amaliy mashg'ulot | ⬜ |
-
-## III-bob. Dasturlash tillari va dasturlash muhiti
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-| 3 | 1 | III-bob. Dasturlash tillari va dasturlash muhiti bo'yicha amaliy mashg'ulot | ⬜ |
-
-## IV-bob. Sensorlar va ma’lumotlarni yig‘ish
+## II bob. Elektronika va Arduino bilan interaktiv interfeyslar (6 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 4 | 2 | IV-bob. Sensorlar va ma’lumotlarni yig‘ish bo'yicha amaliy mashg'ulot | ⬜ |
+| 7 | 3 | Elektron sxema asosida ikki LED lampaning ishlash prinsipi va ulanishi | ⬜ |
+| 8 | 3 | Arduino UNO yordamida LED indikatorlari va push-button bilan ishlash (1-qism) | ⬜ |
+| 9 | 3 | Arduino UNO yordamida LED indikatorlari va push-button bilan interaktiv interfeys (2-qism) | ⬜ |
+| 10 | 4 | Arduino UNO va tugma orqali LED holatini boshqarish dasturi | ⬜ |
+| 11 | 4 | Breadboardda DIP switch (DPST) va LED yordamida oddiy elektron sikl yaratish (1-qism) | ⬜ |
+| 12 | 4 | Breadboardda DIP switch (DPST) va LED yordamida oddiy elektron sikl yaratish (2-qism) | ⬜ |
 
-## V-bob. Aktuatorlar va aqlli IoT tizimlar
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-| 5 | 2 | V-bob. Aktuatorlar va aqlli IoT tizimlar bo'yicha amaliy mashg'ulot | ⬜ |
-
-## VI-bob. IoT tarmoqlari va protokollar
-
-| Dars | Hafta | Mavzu | Holat |
-|---|---|---|---|
-| 6 | 2 | VI-bob. IoT tarmoqlari va protokollar bo'yicha amaliy mashg'ulot | ⬜ |
-
-## VII-bob. Bulut texnologiyalari va ma’lumotlar bilan ishlash
+## III bob. Mikrokontrollerlar va IoT qurilmalari (Arduino, ESP8266, ESP32) (6 dars)
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 7 | 3 | bajarilgan loyihaning belgilangan talablariga javob berishi; | ⬜ |
-| 8 | 3 | ilovaning asosiy funksiyalari to‘liq va xatosiz ishlashi; | ⬜ |
-| 9 | 3 | foydalanuvchi kutilgan natijalarni olishi; | ⬜ |
-| 10 | 4 | ilova interfeysi qulay, tushunarli va estetik jihatdan yaxshi dizaynlashganligi; | ⬜ |
-| 11 | 4 | animatsiyalar va o‘zaro ta’sir elementlarining borligi; | ⬜ |
-| 12 | 4 | kod toza, o‘qilishi oson, yaxshi tuzilganligi; | ⬜ |
-| 13 | 5 | Mikrokontrollerlarni dasturlashda zamonaviy usullardan foydalanilganligi; | ⬜ |
-| 14 | 5 | loyihaning maqsadi, ishlash printsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi | ⬜ |
-| 15 | 5 | nazariy savollarga to‘liq va aniq javob berilganligi; | ⬜ |
-| 16 | 6 | javoblar faktlarga asoslanganligi va xato yo‘qligi; | ⬜ |
-| 17 | 6 | tushuntirish aniq va misollar bilan boyitilganligi; | ⬜ |
-| 18 | 6 | matnda grammatik va imlo xatolarining kamligi; | ⬜ |
-| 19 | 7 | muammoni tahlil qilinganligi va fikrlarni ifodalashdarajasi | ⬜ |
-| 20 | 7 | belgilangan barcha funksiyalar to‘liq ishlashi; | ⬜ |
-| 21 | 7 | kod o‘qilishi osonligi, izohlar mavjudligi, keraksiz takrorlanishlar  yo‘qligi; | ⬜ |
-| 22 | 8 | zarur texnologiyalar  to‘g‘ri ishlatilganligi; | ⬜ |
-| 23 | 8 | ilova barqarorligi va xatolar yo‘qligi | ⬜ |
-| 24 | 8 | savollarga to‘g‘ri javob berganligi | ⬜ |
-| 25 | 9 | turli turdagi IoT qurilmalari va sensor/aktuatorlar; | ⬜ |
-| 26 | 9 | robototexnika qurilmalari (servo, motor, sensorlar); | ⬜ |
-| 27 | 9 | 3D modellashtirish va prototiplash dasturlari (Tinkercad, Blender); | ⬜ |
-| 28 | 10 | Zamonaviy tarmoq va bulut platformalari (Wi-Fi, Bluetooth, ThingSpeak, Blynk); | ⬜ |
-| 29 | 10 | Sifatli materiallar va 3D printerlar kiradi | ⬜ |
-| 30 | 10 | Sensorlar va aktuatorlarni dastur orqali boshqarish; | ⬜ |
-| 31 | 11 | 3D modellarni loyihalash va prototiplarni tayyorlash; | ⬜ |
-| 32 | 11 | Qurilmalarni ishga tayyorlash, texnika va yong‘in xavfsizligi hamda sanitariya-gigiyena qoidalariga amal qilish; | ⬜ |
-| 33 | 11 | IoT/robototexnika/3D modellashtirish mutaxassisi sifatida faoliyat ko‘rsatish; | ⬜ |
-| 34 | 12 | IoT (Internet of Things) tushunchasi va uning asosiy mazmunini tushunadi; | ⬜ |
-| 35 | 12 | IoT tizimining asosiy tarkibiy qismlari (sensorlar, aktuatorlar, mikrokontrollerlar va tarmoqlar) haqida umumiy tushunchaga ega bo‘ladi; | ⬜ |
-| 36 | 12 | IoT qurilmalarining ishlash prinsipi va o‘zaro bog‘lanishini tushunadi; | ⬜ |
-| 37 | 13 | IoT texnologiyalarining turli sohalarda (uy, ofis, sanoat, tibbiyot, transport, qishloq xo‘jaligi) qo‘llanilishini biladi; | ⬜ |
-| 38 | 13 | IoT tizimlarida ma’lumotlarni yig‘ish, uzatish va qayta ishlash jarayonlarini tushunadi; | ⬜ |
-| 39 | 13 | IoT qurilmalarining bulut texnologiyalari bilan integratsiyasini tushunadi; | ⬜ |
-| 40 | 14 | IoT tizimlarining amaliy ahamiyati, imkoniyatlari va xavfsizlik jihatlari haqida tasavvur hosil qiladi | ⬜ |
-| 41 | 14 | IoT arxitekturasining asosiy qatlamlari va tuzilishini tushunadi; | ⬜ |
-| 42 | 14 | Sensorlar va aktuatorlarning vazifasi hamda ishlash prinsipini izohlay oladi; | ⬜ |
-| 43 | 15 | Tarmoq komponentlari (Wi-Fi, MQTT, HTTP va boshqalar) orqali qurilmalar o‘zaro bog‘lanishini tushunadi; | ⬜ |
-| 44 | 15 | Bulut texnologiyalarining IoT tizimidagi o‘rnini va funksiyasini tushuntira oladi; | ⬜ |
-| 45 | 15 | Foydalanuvchi interfeysi (mobil ilova, veb interfeys) orqali IoT qurilmalarni boshqarish jarayonini tushunadi; | ⬜ |
-| 46 | 16 | IoT tizimida ma’lumot oqimi: sensor → tarmoq → bulut → foydalanuvchi interfeysi ketma-ketligini tushunadi; | ⬜ |
-| 47 | 16 | Oddiy IoT arxitektura modelini tahlil qila oladi va sxematik ko‘rinishda tasvirlay oladi | ⬜ |
-| 48 | 16 | Tinkercad platformasida ro‘yxatdan o‘tish va loyiha yaratishni bajaradi; | ⬜ |
-| 49 | 17 | Virtual laboratoriya interfeysini va asosiy funksiyalarini tushunadi; | ⬜ |
-| 50 | 17 | Elektron komponentlarni (Arduino, LED, rezistor, sensorlar) virtual muhitga joylashtira oladi; | ⬜ |
-| 51 | 17 | Elektron sxemalarni virtual tarzda ulash va simulyatsiya qilishni amalga oshiradi; | ⬜ |
-| 52 | 18 | Tinkercad muhiti orqali kod yozish, tekshirish va ishga tushirishni bajaradi; | ⬜ |
-| 53 | 18 | Simulyatsiya natijalarini kuzatish va xatoliklarni aniqlab tuzatish ko‘nikmasiga ega bo‘ladi | ⬜ |
-| 54 | 18 | LED lampaning ishlash prinsipi va elektr zanjirdagi rolini tushunadi; | ⬜ |
-| 55 | 19 | Bitta LED bilan oddiy elektron sxemani tuza oladi; | ⬜ |
-| 56 | 19 | Ikki LED lampani ketma-ket va parallel ulash farqlarini tushunadi; | ⬜ |
-| 57 | 19 | Rezistorning LED zanjiridagi vazifasini izohlay oladi; | ⬜ |
-| 58 | 20 | Arduino yoki manba orqali LEDni boshqarish asoslarini bajaradi; | ⬜ |
-| 59 | 20 | Amaliy sxemani yig‘ish, sinovdan o‘tkazish va natijalarni tahlil qila oladi | ⬜ |
-| 60 | 20 | Arduino UNO platasining asosiy pinlari va funksiyalarini tushunadi; | ⬜ |
-| 61 | 21 | Push-button va LED indikatorlarning ulanish sxemasini tuza oladi; | ⬜ |
-| 62 | 21 | Tugma bosilganda LEDni boshqaruvchi dastur kodini yozadi; | ⬜ |
-| 63 | 21 | Interaktiv interfeys yaratishda shart operatorlaridan foydalanishni o‘rganadi; | ⬜ |
-| 64 | 22 | Arduino IDE muhitida kod yozish, tekshirish va yuklashni bajaradi; | ⬜ |
-| 65 | 22 | Oddiy interaktiv boshqaruv tizimini amaliy loyihada qo‘llay oladi | ⬜ |
-| 66 | 22 | Breadboard tuzilishi va ishlash prinsipini tushunadi; | ⬜ |
-| 67 | 23 | DIP switch (DPST) ning vazifasi va qo‘llanilishini izohlay oladi; | ⬜ |
-| 68 | 23 | LED va DIP switch yordamida oddiy elektron zanjirni tuza oladi; | ⬜ |
-| 69 | 23 | Elektr siklining ochiq va yopiq holatini amaliy ko‘rsatib bera oladi; | ⬜ |
-| 70 | 24 | Elektron komponentlarni breadboardda to‘g‘ri joylashtirish ko‘nikmasiga ega bo‘ladi; | ⬜ |
-| 71 | 24 | Yig‘ilgan sxemani tekshirish, xatolarni aniqlash va tuzatishni bajaradi | ⬜ |
-| 72 | 24 | IoT tizimlarida qo‘llaniladigan asosiy qurilmalar haqida umumiy tushunchaga ega bo‘ladi; | ⬜ |
-| 73 | 25 | Arduino, ESP8266, ESP32 va Raspberry Pi qurilmalarining vazifasi va farqlarini tushunadi; | ⬜ |
-| 74 | 25 | Har bir qurilmaning IoT loyihalaridagi qo‘llanish sohalarini izohlay oladi; | ⬜ |
-| 75 | 25 | Ushbu qurilmalarning texnik imkoniyatlari (Wi-Fi, GPIO, xotira) haqida tushunchaga ega bo‘ladi; | ⬜ |
-| 76 | 26 | IoT loyihasi uchun mos mikrokontroller yoki platformani tanlash mezonlarini biladi; | ⬜ |
-| 77 | 26 | Qurilmalar o‘rtasidagi o‘zaro ishlash va integratsiya jarayonini tushunadi; | ⬜ |
-| 78 | 26 | Oddiy IoT loyihalarda ushbu qurilmalardan foydalanish ko‘nikmasini hosil qiladi | ⬜ |
-| 79 | 27 | Mikrokontroller tushunchasi va asosiy funksiyalarini tushunadi; | ⬜ |
-| 80 | 27 | Mikrokontroller va mikroprotsessor o‘rtasidagi farqni izohlay oladi; | ⬜ |
-| 81 | 27 | IoT qurilmalarida mikrokontrollerning boshqaruv markazi sifatidagi rolini tushunadi; | ⬜ |
-| 82–83 | 28 | Sensor va aktuatorlarni mikrokontroller bilan ulash jarayonini biladi; | ⬜ |
-| 84 | 28 | Oddiy boshqaruv algoritmlarini mikrokontroller asosida amalga oshira oladi | ⬜ |
-| 85–86 | 29 | ESP8266 va ESP32 mikrokontrollerlarining umumiy tuzilishi va imkoniyatlarini tushunadi; | ⬜ |
-| 87 | 29 | Ularning o‘rnatilgan Wi-Fi va IoT uchun mos xususiyatlarini izohlay oladi; | ⬜ |
-| 88–89 | 30 | ESP8266 va ESP32 o‘rtasidagi asosiy farqlarni (yadro, Bluetooth, tezlik) tushunadi; | ⬜ |
-| 90 | 30 | Ushbu mikrokontrollerlarni IoT loyihalarda qo‘llash sohalarini biladi; | ⬜ |
-| 91–92 | 31 | Arduino IDE muhitida ESP8266 va ESP32 bilan ishlash asoslarini tushunadi; | ⬜ |
-| 93 | 31 | IoT tizimlarida real vaqt ma’lumot uzatishda ESP modullarining rolini tushuntira oladi | ⬜ |
-| 94–95 | 32 | Svetofor tizimining ishlash algoritmini tushunadi; | ⬜ |
-| 96 | 32 | Arduino Uno va Tinkercad muhitida svetofor sxemasini tuza oladi; | ⬜ |
-| 97–98 | 33 | LED lampalar orqali qizil, sariq va yashil signallarni boshqarishni amalga oshiradi; | ⬜ |
-| 99 | 33 | Dasturiy sikl (loop) va vaqt kechikishi (delay) funksiyalaridan foydalanishni o‘rganadi; | ⬜ |
-| 100–101 | 34 | Ketma-ket boshqaruv algoritmini kod shaklida yozib ishga tushira oladi; | ⬜ |
-| 102 | 34 | Virtual simulyatsiya natijalarini kuzatish va tahlil qilishni bajaradi; | ⬜ |
+| 13 | 5 | IoT uchun asosiy qurilmalar: Arduino va Raspberry Pi taqqosi | ⬜ |
+| 14 | 5 | IoT uchun asosiy qurilmalar: ESP8266 va ESP32 imkoniyatlari | ⬜ |
+| 15 | 5 | Mikrokontroller tushunchasi va IoT qurilmalaridagi o‘rni (1-qism) | ⬜ |
+| 16 | 6 | Mikrokontroller tushunchasi va IoT qurilmalaridagi o‘rni (2-qism) | ⬜ |
+| 17 | 6 | ESP8266 va ESP32 mikrokontrollerlari haqida umumiy tushuncha | ⬜ |
+| 18 | 6 | Arduino Uno va Tinkercad asosida svetofor tizimini modellashtirish (1-qism) | ⬜ |
+
+## IV bob. Svetofor, 7-segment displey va servo motorlar (9 dars)
+
+| Dars | Hafta | Mavzu | Holat |
+|---|---|---|---|
+| 19 | 7 | Arduino Uno va Tinkercad asosida ketma-ket ishlaydigan svetofor tizimi (2-qism) | ⬜ |
+| 20 | 7 | Arduino Uno va Tinkercad asosida svetofor tizimi kodini optimallashtirish (3-qism) | ⬜ |
+| 21 | 7 | Seven segment indikatorli taymer bilan svetofor tizimini modellashtirish (1-qism) | ⬜ |
+| 22 | 8 | Seven segment indikatorli taymer bilan svetofor tizimini modellashtirish (2-qism) | ⬜ |
+| 23 | 8 | Arduino asosida servo motorni tugmalar orqali boshqarish (1-qism) | ⬜ |
+| 24 | 8 | Arduino asosida servo motorni boshqarish va holatini 7-segment displeyda ko‘rsatish (2-qism) | ⬜ |
+| 25 | 9 | 7-segmentli LED HT16K33 moduli asosida budilnik tizimini yaratish (1-qism) | ⬜ |
+| 26 | 9 | 7-segmentli LED HT16K33 moduli asosida budilnik tizimini yaratish (2-qism) | ⬜ |
+| 27 | 9 | 7-segmentli LED HT16K33 moduli asosida budilnik tizimini sozlash va sinov (3-qism) | ⬜ |
+
+## V bob. IoT dasturlash tillari, Arduino IDE va LCD displeylar (9 dars)
+
+| Dars | Hafta | Mavzu | Holat |
+|---|---|---|---|
+| 28 | 10 | IoT da ishlatiladigan dasturlash tillari (C/C++, Python, MicroPython) (1-qism) | ⬜ |
+| 29 | 10 | IoT dasturlash tillarining solishtirma tahlili va afzalliklari (2-qism) | ⬜ |
+| 30 | 10 | Arduino IDE dasturi, o'rnatish va undan foydalanish | ⬜ |
+| 31 | 11 | Kod yozish, sintaksis, tekshirish (Verify) va qurilmaga yuklash (Upload) (1-qism) | ⬜ |
+| 32 | 11 | Kod yozish va mikrokontroller xotirasiga yuklash amaliyoti (2-qism) | ⬜ |
+| 33 | 11 | Haqiqiy qurilmada test qilish va xatoliklarni bartaraf etish (Debug) | ⬜ |
+| 34 | 12 | Arduino asosida LCD displeyning kontrastini potensiometr yordamida boshqarish (1-qism) | ⬜ |
+| 35 | 12 | LCD displeyda analog qiymatlarni real vaqtda ko‘rsatish loyihasi (2-qism) | ⬜ |
+| 36 | 12 | I-chorak bo'yicha amaliy loyiha himoyasi va yakuniy test (3-qism) | ⬜ |
+
+## VI bob. Keypad, xavfsizlik tizimlari va elektron qulflar (7 dars)
+
+| Dars | Hafta | Mavzu | Holat |
+|---|---|---|---|
+| 37 | 13 | Arduino asosida 4x4 keypad va LCD display yordamida oddiy kalkulyator (1-qism) | ⬜ |
+| 38 | 13 | Arduino asosida 4x4 keypad va LCD display yordamida oddiy kalkulyator (2-qism) | ⬜ |
+| 39 | 13 | Klaviatura, servo motor, LCD displey va buzzer bilan aqlli xavfsizlik tizimi (1-qism) | ⬜ |
+| 40 | 14 | Klaviatura, servo motor, LCD displey va buzzer bilan aqlli xavfsizlik tizimi (2-qism) | ⬜ |
+| 41 | 14 | Keypad va LCD yordamida parol bilan boshqariladigan elektron qulf (1-qism) | ⬜ |
+| 42 | 14 | Keypad va LCD yordamida parol bilan boshqariladigan elektron qulf (2-qism) | ⬜ |
+| 43 | 15 | Xavfsizlik tizimlarida xato parollar chegarasi va blokirovka mexanizmlari | ⬜ |
+
+## VII bob. Sensorlar bilan ishlash (Harorat, Harakat, Flex, Puls) (14 dars)
+
+| Dars | Hafta | Mavzu | Holat |
+|---|---|---|---|
+| 44 | 15 | Sensorlarning turlari va ishlash prinsipi (harorat, namlik, harakat, yorug‘lik) (1-qism) | ⬜ |
+| 45 | 15 | Sensorlarning texnik xususiyatlari, analog va raqamli signallar (2-qism) | ⬜ |
+| 46 | 16 | Sensorlardan ma’lumot olish va dastur orqali qayta ishlash (1-qism) | ⬜ |
+| 47 | 16 | Sensorlardan olingan ma'lumotlarni kalibrlash va filtrlash (2-qism) | ⬜ |
+| 48 | 16 | Arduino va Flex sensor asosida egilish burchagini o'lchash (1-qism) | ⬜ |
+| 49 | 17 | Flex sensor holatini RGB LED orqali vizual ogohlantirish tizimi (2-qism) | ⬜ |
+| 50 | 17 | Arduino Uno va Tinkercad muhitida PIR harakat sensori bilan tizim modellashtirish (1-qism) | ⬜ |
+| 51 | 17 | PIR harakat sensori bilan harakatni aniqlash va LED ogohlantirish (2-qism) | ⬜ |
+| 52 | 18 | PIR sensori sezgirligi va kechikish vaqtini sozlash amaliyoti (3-qism) | ⬜ |
+| 53 | 18 | Arduino UNO va TMP36 temperatura sensoridan harorat ma'lumotlarini o'qish (1-qism) | ⬜ |
+| 54 | 18 | TMP36 harorat ma'lumotlarini LCD displeyda real vaqtda ko'rsatish (2-qism) | ⬜ |
+| 55 | 19 | Harorat chegaralari bo'yicha sovutish va ogohlantirish tizimi (3-qism) | ⬜ |
+| 56 | 19 | Arduino Uno va MAX30102 puls oksimetr sensori yordamida yurak urish tezligini aniqlash (1-qism) | ⬜ |
+| 57 | 19 | MAX30102 sensori bilan qondagi kislorod miqdorini o'lchash va monitoring (2-qism) | ⬜ |
+
+## VIII bob. Aktuatorlar va aqlli IoT tizimlari (12 dars)
+
+| Dars | Hafta | Mavzu | Holat |
+|---|---|---|---|
+| 58 | 20 | Aktuatorlar (motorlar, servo, rele, LED, buzzer) va ularni boshqarish | ⬜ |
+| 59 | 20 | IoT qurilmasi loyihasida sensor va aktuatorlarni integratsiya qilish | ⬜ |
+| 60 | 20 | Sensor va aktuatorlarni birlashtirib oddiy IoT qurilma yaratish (aqlli chiroq) | ⬜ |
+| 61 | 21 | Tinkercad muhitida Arduino Uno va PIR sensor asosida Relay bilan LED boshqarish (1-qism) | ⬜ |
+| 62 | 21 | Relay moduli bilan 220V yuqori quvvatli yuklamalarni xavfsiz boshqarish (2-qism) | ⬜ |
+| 63 | 21 | Arduino UNO va harorat sensori asosida LCD displeyda ko‘rsatish va buzzer tizimi (1-qism) | ⬜ |
+| 64 | 22 | Harorat kritik ko'rsatkichlarida avtomatik ventilyatorni rele orqali yoqish (2-qism) | ⬜ |
+| 65 | 22 | Arduino asosida PIR harakat sensori bilan avtomatik yoritish tizimini loyihalash (1-qism) | ⬜ |
+| 66 | 22 | PIR harakat sensori bilan avtomatik yoritish tizimini modellashtirish (2-qism) | ⬜ |
+| 67 | 23 | Arduino orqali releni boshqarish va yorug‘lik darajasiga (LDR) qarab avtomatik yoqish (1-qism) | ⬜ |
+| 68 | 23 | LDR fotorezistor va rele asosida tongda o'chuvchi, tunda yonuvchi ko'cha chirog'i (2-qism) | ⬜ |
+| 69 | 23 | Aktuatorlar va relelar bilan xavfsizlik qoidalari amaliyoti | ⬜ |
+
+## IX bob. IoT tarmoqlari, protokollar va masofa sensorlari (12 dars)
+
+| Dars | Hafta | Mavzu | Holat |
+|---|---|---|---|
+| 70 | 24 | IoT qurilmalarda Wi-Fi va Bluetooth simsiz ulanishi | ⬜ |
+| 71 | 24 | MQTT va HTTP protokollari: Publishers, Brokers va Subscribers | ⬜ |
+| 72 | 24 | IoT qurilmalarda REST API ishlatish (GET va POST so'rovlari) (1-qism) | ⬜ |
+| 73 | 25 | REST API orqali mikrokontrollerdan veb-serverga telemetriya yuborish (2-qism) | ⬜ |
+| 74 | 25 | PIR sensori va servo motor asosida aqlli eshikni loyihalash (1-qism) | ⬜ |
+| 75 | 25 | Aqlli eshik tizimini Tinkercad virtual muhitida modellashtirish va sinash (2-qism) | ⬜ |
+| 76 | 26 | Arduino Uno va ultratovush (HC-SR04) sensori asosida masofani hisoblash (1-qism) | ⬜ |
+| 77 | 26 | HC-SR04 sensori va buzzer yordamida avtomobil parkovka radari yaratish (2-qism) | ⬜ |
+| 78 | 26 | HC-SR04 masofa sensori aniqligini oshirish va xatoliklarni bartaraf etish (3-qism) | ⬜ |
+| 79 | 27 | PIR sensorlari asosida universal odam sanash va xonalar monitoringi tizimi (1-qism) | ⬜ |
+| 80 | 27 | Xona sig'imi monitoringi va kiruvchi-chiquvchilar hisoblagich dasturi (2-qism) | ⬜ |
+| 81 | 27 | III-chorak bo'yicha simsiz tarmoqlar va sensorlar integratsiyasi loyihasi (3-qism) | ⬜ |
+
+## X bob. Bulutli IoT platformalari, telemetriya va mobil boshqaruv (9 dars)
+
+| Dars | Hafta | Mavzu | Holat |
+|---|---|---|---|
+| 82 | 28 | IoT qurilmalarning bulut platformalari bilan ma’lumot almashinuvi | ⬜ |
+| 83 | 28 | Blynk platformasi, arxitekturasi va mobil ilova integratsiyasi | ⬜ |
+| 84 | 28 | Blynk orqali smartfon ekranidan svetodiod va releni masofadan yoqish | ⬜ |
+| 85 | 29 | Ubidots va boshqa bulut servislarida IoT loyihalari | ⬜ |
+| 86 | 29 | Ma’lumotlarni vizualizatsiya qilish (grafik, jadval, dashboard yaratish) | ⬜ |
+| 87 | 29 | Real vaqt monitoringi va avtomatik email/telegram bildirishnomalari sozlash | ⬜ |
+| 88 | 30 | Arduino Uno va gaz sensori (MQ-2) yordamida gaz mavjudligini aniqlash va LED tizimi (1-qism) | ⬜ |
+| 89 | 30 | Gaz sensori analog signallarini o'qish va kalibrlash (2-qism) | ⬜ |
+| 90 | 30 | Gaz miqdorini uch darajada aniqlash va 3 rangli LED indikator (1-qism) | ⬜ |
+
+## XI bob. Gaz xavfsizligi, aqlli qishloq xo'jaligi va yakuniy loyihalar (12 dars)
+
+| Dars | Hafta | Mavzu | Holat |
+|---|---|---|---|
+| 91 | 31 | Gaz miqdorini uch darajada aniqlash tizimini avtomatlashtirish (2-qism) | ⬜ |
+| 92 | 31 | Arduino Uno, gaz sensori, LED, buzzer va LCD displey bilan xavfsizlik tizimi (1-qism) | ⬜ |
+| 93 | 31 | LCD displeyda gaz konsentratsiyasini ko'rsatish va buzzer ogohlantirish (2-qism) | ⬜ |
+| 94 | 32 | Gaz konsentratsiyasida avtomatik shamollatish (ventilyator) tizimini boshqarish (1-qism) | ⬜ |
+| 95 | 32 | Gaz xavfsizligi va shamollatish tizimini to'liq sinovdan o'tkazish (2-qism) | ⬜ |
+| 96 | 32 | Arduino Uno va Soil Moisture Sensor yordamida tuproq namligini o‘lchash (1-qism) | ⬜ |
+| 97 | 33 | Tuproq namligi holatini LED indikatorlar orqali ko'rsatish (2-qism) | ⬜ |
+| 98 | 33 | Tinkercad muhitida LCD, tuproq sensori va rele bilan aqlli sug'orish tizimi (1-qism) | ⬜ |
+| 99 | 33 | Aqlli sug'orish tizimini avtomatlashtirish va simulyatsiya qilish (2-qism) | ⬜ |
+| 100 | 34 | Yillik IoT loyihasi: Konseptdan to to'liq ishchi prototipgacha yig'ish | ⬜ |
+| 101 | 34 | Yillik IoT loyihalari taqdimoti va himoyasi | ⬜ |
+| 102 | 34 | Yakuniy nazorat ishi va yil sarhisobi | ⬜ |

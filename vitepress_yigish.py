@@ -67,7 +67,7 @@ SINFLAR = [
     ("9-sinf-game", "9-sinf (Game)", "Game Design", "gamepad-2",
      [("I chorak", 1, 9), ("II chorak", 10, 16), ("III chorak", 17, 26), ("IV chorak", 27, 34)]),
     ("9-sinf-iot", "9-sinf (IoT)", "IoT (Internet of Things) — Buyumlar Interneti", "cpu",
-     [("I chorak", 1, 9), ("II chorak", 10, 16), ("III chorak", 17, 26), ("IV chorak", 27, 34)]),
+     [("I chorak", 1, 12), ("II chorak", 13, 19), ("III chorak", 20, 27), ("IV chorak", 28, 34)]),
 
     # 10-sinf
     ("10-sinf-python", "10-sinf (Python)", "Advanced Python Back-end va Prompt Engineering", "terminal",
