@@ -1,0 +1,238 @@
+<!-- Namuna: faqat <section> slaydlar. Rasm yo'li uchun {{UP}} yozing. Kerak bo'lmagan slaydlarni o'chirib tashlang. -->
+
+      <!-- 1. SARLAVHA: katta logo + gradient sarlavha -->
+      <section class="hero">
+        <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+        <h1>Dars mavzusi</h1>
+        <p class="muted">Bir jumlalik va'da: bugun nimani uddalaymiz</p>
+        <span class="badge">8-sinf</span><span class="badge">Web Full-stack</span><span class="badge">1-hafta · 1-dars</span>
+      </section>
+
+      <!-- 2. BO'LIM SLAYDI: katta raqam (dars qismlarini ajratadi) -->
+      <section class="sec">
+        <div class="num">01</div>
+        <h1>Birinchi bo'lim</h1>
+        <p>Bu bo'limda nima bo'lishini bir jumlada ayting</p>
+      </section>
+
+      <!-- 3. KARTALAR: fragmentlar bilan birin-ketin chiqadi -->
+      <section>
+        <h2>Bugun nimani o'rganamiz?</h2>
+        <div class="cards three">
+          <div class="card fragment fade-up"><div class="icon"><i data-ic="target"></i></div><h3>Birinchi maqsad</h3><p>Qisqa tushuntirish</p></div>
+          <div class="card fragment fade-up"><div class="icon"><i data-ic="puzzle"></i></div><h3>Ikkinchi maqsad</h3><p>Qisqa tushuntirish</p></div>
+          <div class="card fragment fade-up"><div class="icon"><i data-ic="rocket"></i></div><h3>Uchinchi maqsad</h3><p>Qisqa tushuntirish</p></div>
+        </div>
+      </section>
+
+      <!-- 4. KATTA RAQAMLAR (statistika) -->
+      <section>
+        <h2>Raqamlarda</h2>
+        <div class="stats">
+          <div class="stat fragment"><div class="v">5 mlrd+</div><div class="l">internet foydalanuvchisi</div></div>
+          <div class="stat fragment"><div class="v">~2 mlrd</div><div class="l">veb-sayt</div></div>
+          <div class="stat fragment"><div class="v">100 ms</div><div class="l">sahifa ochilish vaqti</div></div>
+        </div>
+      </section>
+
+      <!-- 5. ILLYUSTRATSIYA: katta SVG sxema, fragmentlar bilan bosqichma-bosqich.
+           Ranglar faqat sinflar orqali (fa, fb, fc, la, lb, t-head...), tema almashganda mos tushadi. -->
+      <section>
+        <h2>Sxema: so'rov yo'li</h2>
+        <div class="illus">
+          <svg viewBox="0 0 1000 340">
+            <rect class="fa" x="30" y="90" width="260" height="170" rx="22"/>
+            <svg x="125" y="110" width="70" height="70" viewBox="0 0 24 24" class="ic-s" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg>
+            <text class="t-head" x="160" y="220" text-anchor="middle" font-size="28">Brauzer</text>
+            <rect class="fb" x="710" y="90" width="260" height="170" rx="22"/>
+            <svg x="805" y="110" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/></svg>
+            <text class="t-head" x="840" y="220" text-anchor="middle" font-size="28">Server</text>
+            <g class="fragment"><line class="la flowing" x1="305" y1="150" x2="690" y2="150"/><polygon class="ar-a" points="695,150 678,140 678,160"/><text class="t-accent" x="500" y="136" text-anchor="middle" font-size="22">so'rov</text></g>
+            <g class="fragment"><line class="lc flowing" x1="695" y1="210" x2="310" y2="210"/><polygon class="ar-c" points="305,210 322,200 322,220"/><text x="500" y="244" text-anchor="middle" font-size="22" fill="var(--teal)">javob</text></g>
+          </svg>
+        </div>
+        <aside class="notes">Mentor uchun: avval so'rovni, keyin javobni ko'rsating. Savol bering: nima yuboriladi?</aside>
+      </section>
+
+      <!-- 6. VAQT CHIZIG'I -->
+      <section>
+        <h2>Bosqichlar</h2>
+        <div class="timeline">
+          <div class="tl fragment"><b>1-bosqich.</b> Manzilni yozamiz</div>
+          <div class="tl fragment"><b>2-bosqich.</b> DNS manzilni topadi</div>
+          <div class="tl fragment"><b>3-bosqich.</b> Server sahifani yuboradi</div>
+        </div>
+      </section>
+
+      <!-- 7. TAQQOSLASH (vs) -->
+      <section>
+        <h2>Taqqoslash</h2>
+        <div class="vs">
+          <div class="side fragment"><h3>Front-end</h3>Ko'rinadigan qism: matn, rang, tugma.</div>
+          <div class="mid">VS</div>
+          <div class="side b fragment"><h3>Back-end</h3>Ko'rinmaydigan qism: ma'lumot, parol tekshirish.</div>
+        </div>
+      </section>
+
+      <!-- 8. KOD: qatorlarni birin-ketin ajratib ko'rsatish -->
+      <section>
+        <h2>Kod namunasi</h2>
+        <pre><code class="language-html" data-trim data-noescape data-line-numbers="1-5|3|4">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="uz"&gt;
+  &lt;head&gt;&lt;title&gt;Salom&lt;/title&gt;&lt;/head&gt;
+  &lt;body&gt;&lt;h1&gt;Salom, dunyo!&lt;/h1&gt;&lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+        <div class="callout warn"><i data-ic="triangle-alert"></i>Odatiy xato: yopuvchi tegni unutish.</div>
+      </section>
+
+      <!-- 9. AVTO-ANIMATSIYA: ikkita slayd orasida elementlar silliq o'tadi -->
+      <section data-auto-animate>
+        <h2>Natija</h2>
+        <div class="browser" data-id="box" style="width:520px"><div class="bar"><i></i><i></i><i></i><span>https://misol.uz</span></div><div class="page"><h3>Salom!</h3></div></div>
+      </section>
+      <section data-auto-animate>
+        <h2>Natija</h2>
+        <div class="browser" data-id="box" style="width:1000px"><div class="bar"><i></i><i></i><i></i><span>https://misol.uz</span></div><div class="page"><h3>Salom, dunyo!</h3><p>Brauzer HTML'ni shunday ko'rsatadi.</p></div></div>
+      </section>
+
+      <!-- 10. QADAMLAR + IQTIBOS (o'xshatish) -->
+      <section>
+        <h2>Hayotiy o'xshatish</h2>
+        <div class="quote">DNS — internetning «telefon kitobi»: nomni raqamga aylantiradi.</div>
+        <ol class="steps-n mt">
+          <li class="fragment">Ismni qidiramiz</li>
+          <li class="fragment">Raqamni topamiz</li>
+          <li class="fragment">Qo'ng'iroq qilamiz</li>
+        </ol>
+      </section>
+
+      <!-- 11. JARAYON (flow) + chip'lar -->
+      <section>
+        <h2>Jarayon</h2>
+        <div class="flow">
+          <div class="step"><span class="icon"><i data-ic="laptop"></i></span>1-qadam</div>
+          <div class="arrow"><i data-ic="arrow-right"></i></div>
+          <div class="step"><span class="icon"><i data-ic="satellite-dish"></i></span>2-qadam</div>
+          <div class="arrow"><i data-ic="arrow-right"></i></div>
+          <div class="step"><span class="icon"><i data-ic="monitor"></i></span>3-qadam</div>
+        </div>
+        <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip t">JavaScript</span></div>
+      </section>
+
+      <!-- 12. VERTIKAL (qo'shimcha) SLAYD: pastga bosganda chuqurroq ma'lumot -->
+      <section>
+        <section>
+          <h2>Asosiy fikr</h2>
+          <p>Asosiy slayd. <span class="muted">Chuqurroq bilish uchun pastga ↓</span></p>
+        </section>
+        <section>
+          <h2>Qo'shimcha</h2>
+          <p>Qiziqqanlar uchun chuqurroq ma'lumot.</p>
+        </section>
+      </section>
+
+      <!-- 13. AMALIY TOPSHIRIQ -->
+      <section>
+        <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+        <div class="task"><span class="level easy">Oson</span>Topshiriq matni</div>
+        <div class="task"><span class="level mid">O'rta</span>Topshiriq matni</div>
+        <div class="task"><span class="level hard">Qiyin</span>Qo'shimcha topshiriq</div>
+      </section>
+
+      <!-- 14. XULOSA -->
+      <section>
+        <h2>Xulosa</h2>
+        <div class="cards two">
+          <div class="card"><div class="icon"><i data-ic="circle-check"></i></div><h3>Bugun o'rgandik</h3><p>Asosiy fikrlar</p></div>
+          <div class="card"><div class="icon"><i data-ic="book-open"></i></div><h3>Uyga vazifa</h3><p>Qisqa tavsif</p></div>
+        </div>
+      </section>
+
+
+<!-- ===================== ANIMATSIYALI VA INTERAKTIV BLOKLAR ===================== -->
+
+<!-- 15. ANIMATSIYALI IKONKALAR: data-anim = float | pulse | spin | bounce | wiggle | blink | draw -->
+<section>
+  <h2>Animatsiyali ikonkalar</h2>
+  <div class="cards four">
+    <div class="card"><div class="icon"><i data-ic="rocket" data-anim="float"></i></div><h3>float</h3><p>Yengil ko'tarilib-tushish</p></div>
+    <div class="card"><div class="icon"><i data-ic="wifi" data-anim="pulse"></i></div><h3>pulse</h3><p>Signal, jonli holat</p></div>
+    <div class="card"><div class="icon"><i data-ic="settings" data-anim="spin"></i></div><h3>spin</h3><p>Jarayon, sozlash</p></div>
+    <div class="card"><div class="icon"><i data-ic="lightbulb" data-anim="draw"></i></div><h3>draw</h3><p>Slayd ochilganda chiziladi</p></div>
+  </div>
+  <p class="small mt">Ikonkaga sichqoncha olib borilsa, u silkinadi. <code>bounce</code>, <code>wiggle</code>, <code>blink</code> ham bor.</p>
+</section>
+
+<!-- 16. AYLANADIGAN KARTALAR (bosing) -->
+<section>
+  <h2>Karta: bosing va aylantiring</h2>
+  <div class="cards three">
+    <div class="flip" style="min-height:190px"><div class="flip-in">
+      <div class="face front"><div class="icon"><i data-ic="globe"></i></div><h3>DNS</h3><span class="flip-hint">bosing</span></div>
+      <div class="face back"><p>Domen nomini IP manzilga aylantiradi: internetning «telefon kitobi».</p></div>
+    </div></div>
+    <div class="flip" style="min-height:190px"><div class="flip-in">
+      <div class="face front"><div class="icon"><i data-ic="server"></i></div><h3>Hosting</h3><span class="flip-hint">bosing</span></div>
+      <div class="face back"><p>Sayt fayllari saqlanadigan va doim yoqilgan kompyuter.</p></div>
+    </div></div>
+    <div class="flip" style="min-height:190px"><div class="flip-in">
+      <div class="face front"><div class="icon"><i data-ic="lock"></i></div><h3>HTTPS</h3><span class="flip-hint">bosing</span></div>
+      <div class="face back"><p>Brauzer va server o'rtasidagi ma'lumotni shifrlaydi.</p></div>
+    </div></div>
+  </div>
+</section>
+
+<!-- 17. MINI-TEST: javob bosiladi, to'g'risi yashil, izoh chiqadi -->
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Brauzer sayt manzilini yozganda birinchi nima qiladi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Serverga rasm yuboradi</button>
+      <button class="opt" type="button" data-ok>DNS dan IP manzilni so'raydi</button>
+      <button class="opt" type="button">Saytni o'chiradi</button>
+      <button class="opt" type="button">Parolni so'raydi</button>
+    </div>
+    <div class="explain">To'g'ri: avval manzil (IP) topiladi, keyin server bilan bog'lanadi.</div>
+  </div>
+</section>
+
+<!-- 18. QADAMMA-QADAM (stepper): tugmalar o'zi qo'shiladi -->
+<section>
+  <h2>So'rov yo'li: qadam-baqadam</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="laptop" data-anim="float"></i></div><h3>1. Manzil yoziladi</h3><p>Siz brauzerga <code>misol.uz</code> deb yozasiz.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="satellite-dish" data-anim="pulse"></i></div><h3>2. DNS manzil topadi</h3><p>Nom raqamli IP manzilga aylanadi.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="server"></i></div><h3>3. Server javob beradi</h3><p>HTML, CSS va rasmlar brauzerga yuboriladi.</p></div></div>
+  </div>
+</section>
+
+<!-- 19. SVG ICHIDA IZOHLI QISMLAR: [data-tip] ustiga olib boring yoki bosing -->
+<section>
+  <h2>Sxema: qismlarni bosing</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+      <g data-tip="Brauzer: foydalanuvchi ko'radigan dastur. So'rov yuboradi, javobni chizadi."><rect class="fa" x="40" y="80" width="260" height="140" rx="20"/><text class="t-head" x="170" y="160" text-anchor="middle" font-size="28">Brauzer</text></g>
+      <g data-tip="DNS: nomni IP manzilga aylantiruvchi xizmat."><rect class="fc" x="370" y="80" width="260" height="140" rx="20"/><text class="t-head" x="500" y="160" text-anchor="middle" font-size="28">DNS</text></g>
+      <g data-tip="Server: sayt fayllarini saqlaydi va so'rovga javob beradi."><rect class="fb" x="700" y="80" width="260" height="140" rx="20"/><text class="t-head" x="830" y="160" text-anchor="middle" font-size="28">Server</text></g>
+      <line class="ln flowing" x1="305" y1="150" x2="365" y2="150"/><line class="ln flowing" x1="635" y1="150" x2="695" y2="150"/>
+    </svg>
+  </div>
+  <p class="small">Qismning ustiga sichqoncha olib boring yoki bosing.</p>
+</section>
+
+<!-- 20. OLDIN / KEYIN (swap) va sanaluvchi raqamlar (count) -->
+<section>
+  <h2>Oldin va keyin</h2>
+  <div class="swap">
+    <div class="swap-tabs"><button type="button">Oldin</button><button type="button">Keyin</button></div>
+    <div class="swap-p"><div class="card"><h3>Tartibsiz sahifa</h3><p>Hamma matn bir xil o'lchamda, sarlavha ajralmagan.</p></div></div>
+    <div class="swap-p"><div class="card accent"><h3>Tuzilgan sahifa</h3><p>Sarlavhalar, abzatslar, ro'yxat: o'qish oson.</p></div></div>
+  </div>
+  <div class="stats mt">
+    <div class="stat"><div class="v"><span class="count" data-to="5" data-suf=" mlrd+">0</span></div><div class="l">foydalanuvchi</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="100" data-suf=" ms">0</span></div><div class="l">sahifa ochilishi</div></div>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+{
+  "name": "axv-mentor-sayt",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "yigish": "python3 ../vitepress_yigish.py",
+    "dev": "python3 ../vitepress_yigish.py && vitepress dev docs",
+    "build": "python3 ../vitepress_yigish.py && vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

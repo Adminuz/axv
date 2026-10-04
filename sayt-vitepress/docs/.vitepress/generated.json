@@ -1,0 +1,27 @@
+{
+ "tashkilot": "Muhammad al-Xorazmiy vorislari",
+ "podval": "© 2026 AXVHUB.UZ",
+ "nav": [
+  {
+   "text": "Sinflar",
+   "items": [
+    {
+     "text": "8-sinf",
+     "link": "/8-sinf/"
+    },
+    {
+     "text": "8-sinf (Foundation)",
+     "link": "/8-sinf-cs/"
+    },
+    {
+     "text": "9-sinf",
+     "link": "/9-sinf/"
+    },
+    {
+     "text": "11-sinf",
+     "link": "/11-sinf/"
+    }
+   ]
+  }
+ ]
+}

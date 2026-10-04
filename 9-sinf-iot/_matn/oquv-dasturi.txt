@@ -1,0 +1,2141 @@
+OʻZBEKISTON RESPUBLIKASI  RAQAMLI TEXNOLOGIYALAR VAZIRLIGI
+	
+RAQAMLI TA’LIMNI RIVOJLANTIRISH
+
+“MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN 
+IOT (INTERNET OF THINGS — BUYUMLAR INTERNETI)  (ROBOTOTEXNIKA, 3D MODELLASHTIRISH) YO‘NALISHI BO‘YICHA O‘QUV DASTURI (9-SINFLAR UCHUN)
+	
+
+
+
+
+
+
+
+
+
+
+
+Toshkent – 2026
+MUNDARIJA
+1. Dasturda qoʻllanilgan tayanch atamalar	3
+2. IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish) yo‘nalishining tayanch oʻquv rejasi ...............................................5
+3. IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish) yo‘nalishiga tayyorlashning muddati	……………………........6
+4. IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish)  yo‘nalishining oʻquv mavzu rejasi	…………………………7
+5. IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish)  yo‘nalishining oʻquv dasturi	………………………………..9
+6. IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish)  yo‘nalishi boʻyicha oʻtiladigan dars soatlari…………………...19
+7. Oʻquv jarayonini tashkil etishda oʻqitish metodlari, shakllari va vositalari	23
+8. Baholash mezonlari	24
+9. IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish)  yo‘nalishi tavsifi	27
+9.1. Bitiruvchining kasbiy faoliyati sohalari	27
+9.2. Bitiruvchining kasbiga muvofiq kasbiy faoliyat obyektlari	27
+9.3. IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish)  yo‘nalishi kasbiy faoliyat turlari	27
+9.4. IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish) 	27
+10. Kasbning qoʻllanish sohasi	28
+11. IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish) kasbiga o‘qitish natijalari	29
+12. IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish)  kursi bo‘yicha loyiha ishlari	46
+13. IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish)  xonasi uchun qo‘yiladigan umumiy talablar	47
+14. IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish) xonasini jihozlashga qoʻyilgan talablar…………………………48
+15. IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish) kasbiga oʻrgatish uchun zarur boʻladigan xom ashyolar roʻyxati…………………………………………………………………………....49
+16. Kasbiy taʼlim ustasi lavozimiga qoʻyiladigan talablar	50
+17. 9-sinf oʻquvchilariga qoʻyilgan umumiy malaka talablari	51
+18. Foydalanilgan adabiyotlar va elektron  manbalar roʻyxati	52
+1. DASTURDA QOʻLLANILGAN TAYANCH ATAMALAR
+Kasb – IoT, robototexnika va 3D modellashtirish yo‘nalishida ishlash uchun zarur bo‘lgan nazariy bilimlar, amaliy ko‘nikmalar va malakalarni egallagan, texnik imkoniyatlar va ijodiy qobiliyatlar asosida kasbiy faoliyatni amalga oshirish turi.
+Ko‘nikma – IoT qurilmalari, robotlar va 3D modellashtirish vazifalarini bajarish uchun o‘quvchi egallagan amaliy qobiliyat.
+Bilim – IoT tizimlari, sensorlar, mikrokontrollerlar, robot qismlari va 3D modellashtirish dasturlariga oid o‘rganilgan ma’lumotlarni tushunish, eslab qolish va qo‘llash.
+Kompetensiya – IoT, robototexnika va 3D modellashtirish bo‘yicha olingan bilim va ko‘nikmalarni kundalik hayotiy vazifalar hamda kasbiy faoliyatda qo‘llay olish qobiliyati.
+Kasbiy faoliyat sohasi – IoT asosida aqlli uy va ofis, aqlli transport, aqlli tibbiyot, ishlab chiqarish avtomatlashtirish, robototexnika va 3D prototiplash sohalarida faoliyat yuritish.
+Kasbiy faoliyat obyekti – IoT qurilmalari, sensor va aktuatorlar, robot tizimlari, 3D modellar, dasturiy ta’minot va ularning o‘zaro integratsiyasi.
+Kasbiy faoliyat turi – IoT tizimlarini yaratish va boshqarish, robotlarni yig‘ish va dasturlash, 3D modellashtirish va prototiplash jarayonlarini amalga oshirish usullari va texnologiyalari.
+O‘quv rejasi – IoT, robototexnika va 3D modellashtirish fanini o‘rganishda nazariy va amaliy mashg‘ulotlarning hajmi, tartibi, izchilligi va mazmunini belgilovchi hujjat.
+O‘quv amaliyoti – IoT qurilmalaridan foydalanish, robotlarni yig‘ish va dasturlash, 3D modellar yaratish hamda ularni prototiplashga yo‘naltirilgan o‘quv jarayoni.
+Kasbga tayyorlash o‘quv kursi – 9-sinf o‘quvchilari uchun IoT, robototexnika va 3D modellashtirish bo‘yicha nazariy bilimlar va amaliy mashg‘ulotlarni o‘z ichiga olgan kurs.
+Ta’lim dasturi – IoT, robototexnika va 3D modellashtirish fanining asosiy xususiyatlari (hajmi, mazmuni, natijalari), tashkiliy-pedagogik shart-sharoitlari va metodik ko‘rsatmalar majmui.
+Sensor – tashqi muhitdan (harorat, namlik, harakat, yorug‘lik va h.k.) ma’lumotlarni qabul qilib, IoT qurilmasiga uzatadigan elektron komponent.
+Mikrokontroller – IoT qurilmalari va robotlarni boshqarishda ishlatiladigan kichik hajmli hisoblash qurilmasi (Arduino, ESP32, ESP8266 va boshqalar).
+Aktuator – IoT va robototexnika tizimlarida bajaruvchi qurilma (masalan, motor, servo, rele).
+Robot – dastur asosida turli harakat va vazifalarni bajaruvchi avtomatlashtirilgan tizim.
+3D modellashtirish – Tinkercad, Blender kabi dasturlarda obyektlar, robot detallari yoki IoT qurilmalari korpusini uch o‘lchamli shaklda loyihalash jarayoni.
+3D printer – 3D model fayllari asosida jismoniy obyektlarni qatlamma-qatlam chiqarib beruvchi qurilma.
+IoT tarmog‘i – IoT qurilmalarining bir-biri bilan yoki server bilan aloqasi uchun ishlatiladigan kommunikatsiya muhiti (Wi-Fi, MQTT, HTTP va h.k.).
+Bulutli platforma – IoT qurilmalari yig‘gan ma’lumotlarni saqlash, qayta ishlash va vizuallashtirish uchun mo‘ljallangan onlayn muhit (ThingSpeak, Blynk va boshqalar).
+Yakuniy loyiha – IoT + robototexnika + 3D modellashtirish elementlarini birlashtirgan holda o‘quvchilarning mustaqil ijodiy ishlari (masalan, aqlli uy, aqlli issiqxona, to‘siqlardan qochuvchi robot va h.k.).
+2. IOT (INTERNET OF THINGS — BUYUMLAR INTERNETI) (ROBOTOTEXNIKA, 3D MODELLASHTIRISH) KASBINING TAYANCH OʻQUV REJASI
+T/r
+Tayanch oʻquv reja tarkibi
+Mashg‘ulotlar soni
+Umumiy yuklamaga
+nisbatan foiz hisobida
+I.
+Oʻquv maʼruzasi
+29
+28,4
+II.
+Oʻquv amaliyoti
+68
+66,7
+III.
+Oraliq nazorat ishi (Loyiha ishi)
+4
+3,9
+IV.
+Yakuniy nazorat ishi
+1
+1,0
+Hammasi:
+102
+100
+
+
+3. IOT (INTERNET OF THINGS — BUYUMLAR INTERNETI) (ROBOTOTEXNIKA, 3D MODELLASHTIRISH) KASBIGA TAYYORLASHNING MUDDATI
+Kasb nomi
+IoT (Internet of Things — Buyumlar Interneti)  (Robototexnika, 3D modellashtirish)
+Kasbga tayyorlashning meʼyoriy muddati
+9-sinflarda haftasiga 80 daqiqadan 3 ta dars 
+1 oʻquv yili davomida
+
+
+Sinf
+Oʻquv chorak
+Haftalar soni
+Mashg‘ulotlar soni
+9
+I
+12
+36
+
+II
+7
+21
+
+III
+8
+24
+
+IV
+7
+21
+Jami
+34 hafta
+102
+
+Tushuntirish xati
+1. Umumiy oʻrta taʼlim tashkilotlarida oʻquv yilining 2 - sentabridan kelgusi yilning 25-mayigacha boʻlgan davrda toʻrt chorakka boʻlingan holda tashkil etiladi.
+2. Oʻquv yilining davomiyligi - 34 hafta:
+haftasiga 3 marta belgilangan soatlar doirasidan chiqmagan holda oʻqish tashkil etiladi;
+mashgʻulotning davomiyligi  1 soat 20 daqiqani atshkil etadi;
+mashgʻulotlar oraligʻidagi tanaffusning davomiyligi 5 - 10 daqiqa. 
+3. Oraliq va Yakuniy nazoratlar nazariy yoki koʻrgazmali amaliy imtihon shaklida tasdiqlangan baholash mezonlari asosida oʻtkaziladi.
+
+4. IOT (INTERNET OF THINGS — BUYUMLAR INTERNETI) (ROBOTOTEXNIKA, 3D MODELLASHTIRISH) KASBI OʻQUV MAVZU REJASI.
+T/r
+Mavzu
+Ajratilgan mashg‘ulotlar soni
+shundan
+
+
+
+Nazariy
+Amaliy
+Nazorat ishi
+I-bob
+IoT texnologiyalarining nazariy asoslari va qo‘llanilishi
+12
+3
+9
+
+1.1
+IoT tushunchasi va qo‘llanish sohalari.
+1
+1
+
+
+1.2
+IoT arxitekturasi (sensorlar, aktuatorlar, tarmoq, bulut, foydalanuvchi interfeysi).
+2
+2
+
+
+1.3
+Tinkercad.com virtual laboratoriyasida ro‘yxatdan o‘tish va ishlash.
+2
+
+2
+
+1.4
+Elektron sxema asosida bitta va ikki LED lampaning ishlash prinsipini o‘rganish va amaliy bajarish.
+2
+
+2
+
+1.5
+Arduino UNO yordamida LED indikatorlari va push-button bilan interaktiv interfeys yaratish.
+3
+
+3
+
+1.6
+Breadboardda DIP switch (DPST) va LED yordamida oddiy elektron sikl yaratish.
+2
+
+2
+
+II-bob
+Mikrokontrollerlar va IoT qurilmalari
+15
+5
+10
+
+     2.1
+IoT uchun asosiy qurilmalar (Arduino, ESP8266, ESP32, Raspberry Pi).
+2
+2
+
+
+2.2
+Mikrokontroller tushunchasi va IoT qurilmalaridagi o‘rni.
+2
+2
+
+
+2.3
+ESP8266 va ESP32 mikrokontrollerlari haqida umumiy tushuncha.
+1
+1
+
+
+2.4
+Arduino Uno va Tinkercad virtual laboratoriyasi asosida ketma-ket ishlaydigan svetofor tizimini modellashtirish.
+3
+
+3
+
+2.5
+Arduino Uno va Tinkercad virtual laboratoriyasi asosida seven segment indikatorli taymer bilan ketma-ket ishlaydigan svetofor tizimini modellashtirish.
+2
+
+2
+
+2.6
+Arduino asosida servo motorni tugmalar orqali boshqarish va holatini 7-segment displeyda ko‘rsatish.
+2
+
+2
+
+2.7
+Arduino Uno va Tinkercad muhitida 7-segmentli LED HT16K33 moduli asosida budilnik tizimini ishlab chiqish.
+3
+
+3
+
+III-bob
+Dasturlash tillari va dasturlash muhiti
+15
+6
+8
+1
+3.1
+IoT da ishlatiladigan dasturlash tillari (C/C++, Python, MicroPython).
+2
+2
+
+
+3.2
+Arduino IDE dasturi va undan foydalanish.
+1
+1
+
+
+3.3
+Kod yozish, tekshirish va qurilmaga yuklash jarayoni.
+2
+2
+
+
+3.4
+Haqiqiy qurilmada test qilish va xatoliklarni bartaraf etish.
+1
+1
+
+
+3.5
+Arduino asosida LCD displeyning kontrastini potensiometr yordamida boshqarish va analog qiymatlarni ekranda ko‘rsatish loyihasi.
+3
+
+2
+1
+3.6
+Arduino asosida 4x4 keypad va LCD display yordamida oddiy kalkulyator yaratish.
+2
+
+2
+
+3.7
+Arduino asosida klaviatura, servo motor, LCD displey va buzzer yordamida aqlli xavfsizlik tizimini yaratish.
+2
+
+2
+
+3.8
+Arduino asosida Keypad va LCD yordamida parol bilan boshqariladigan elektron qulflash qurilmasini yaratish.
+2
+
+2
+
+IV-bob
+Sensorlar va ma’lumotlarni yig‘ish
+15
+4
+10
+1
+4.1
+Sensorlarning turlari va ishlash prinsipi (harorat, namlik, harakat, yorug‘lik).
+2
+2
+
+
+4.2
+Sensorlardan ma’lumot olish va dastur orqali qayta ishlash.
+2
+2
+
+
+4.3
+Arduino va Flex sensor asosida egilish burchagini o'lchash hamda holatni RGB LED orqali vizual ogohlantirish tizimi.
+2
+
+2
+
+4.4
+Arduino Uno va Tinkercad.com virtual laboratoriya muhitida PIR (harakat sezuvchi sensor) harakatni sezuvchi tizimni yaratish va modellashtirish.
+3
+
+3
+
+4.5
+Arduino UNO mikrokontrolleri yordamida TMP36 temperatura sensoridan harorat ma'lumotlarini o'qib, LCD displeyda real vaqt rejimida ko'rsatish va potensiometr orqali displey kontrastini sozlash tizimi.
+3
+
+3
+
+4.6
+Arduino Uno mikrokontrolleri va MAX30102 puls oksimetr sensori yordamida yurak urish tezligini aniqlash.
+3
+
+2
+1
+V-bob
+Aktuatorlar va aqlli IoT tizimlar.
+12
+3
+9
+
+5.1
+Aktuatorlar (motorlar, servo, rele, LED, buzzer) va ularni boshqarish.
+1
+1
+
+
+5.2
+IoT qurilmasi loyihasida sensor va aktuatorlarni integratsiya qilish.
+1
+1
+
+
+5.3
+Sensor va aktuatorlarni birlashtirib oddiy IoT qurilma yaratish (masalan, aqlli chiroq).
+1
+1
+
+
+5.4
+Tinkercad muhitida Arduino Uno va PIR sensor asosida Relay bilan boshqariladigan avtomatik LED yoritish tizimini loyihalash.
+2
+
+2
+
+5.5
+Arduino UNO va harorat sensor asosida haroratni LCD displeyda ko‘rsatish hamda LED va buzzer orqali ogohlantirish tizimi.
+2
+
+2
+
+5.6
+Arduino asosida PIR harakat sensori bilan avtomatik yoritish tizimini loyihalash va modellashtirish.
+3
+
+3
+
+5.7
+Arduino orqali releni boshqarish va yorug‘lik darajasiga qarab avtomatik yoqish/o‘chirish tizimi.
+2
+
+2
+
+VI-bob
+IoT tarmoqlari va protokollar.
+12
+4
+7
+1
+6.1
+IoT qurilmalarda Wi-Fi va Bluetooth ulanishi.
+1
+1
+
+
+6.2
+MQTT va HTTP protokollari.
+1
+1
+
+
+6.3
+IoT qurilmalarda REST API ishlatish.
+2
+2
+
+
+6.4
+Arduino Uno va Tinkercad.com virtual laboratoriya muhitida PIR (harakat sezuvchi sensor) harakatni sezuvchi sensor va servo motor asosida aqlli eshikni loyihalash.
+2
+
+2
+
+6.5
+Tinkercad.com virtual laboratoriya muhitida Arduino Uno va ultratovush (HC-SR04) sensori asosida sensor va obyekt o‘rtasidagi masofani hisoblash.
+2
+
+2
+
+6.6
+PIR sensorlari asosida universal odam sanash va xonalar monitoringi tizimini loyihalash.
+4
+
+3
+1
+VII-bob
+Bulut texnologiyalari va ma’lumotlar bilan ishlash.
+21
+4
+15
+1
+7.1
+IoT qurilmalarning bulut platformalari bilan ma’lumot almashinuvi.
+1
+1
+
+
+7.2
+Blynk platformasi va mobil ilova integratsiyasi.
+1
+1
+
+
+7.3
+Ubidots va boshqa bulut servislarida IoT loyihalari.
+1
+1
+
+
+7.4
+Ma’lumotlarni vizualizatsiya qilish (grafik, jadval, dashboard).
+1
+1
+
+
+7.5
+Arduino Uno va gaz sensori yordamida xonada gaz mavjudligini aniqlash va LED orqali vizual aks ettirish tizimini yaratish.
+2
+
+2
+
+7.6
+Arduino Uno va gaz sensori asosida gaz miqdorini uch darajada aniqlash va LED indikatorlar yordamida ko‘rsatish.
+2
+
+2
+
+7.7
+Arduino Uno, gaz sensori, LED, buzzer va LCD displey yordamida gaz miqdorini aniqlash va ko‘rsatish tizimini yaratish.
+3
+
+3
+
+7.8
+Arduino mikrokontrolleri yordamida gaz kontsentratsiyasini aniqlash, xavfli vaziyatlarda ogohlantirish va avtomatik shamollatish tizimini yaratish.
+3
+
+3
+
+7.9
+Arduino Uno va Soil Moisture Sensor yordamida tuproq namligini o‘lchash hamda LED indikatorlar orqali holatini ko‘rsatish.
+2
+
+2
+
+7.10
+Arduino Uno va Tinkercad virtual laboratoriyasi asosida LCD displey, tuproq namligi sensori, LED va buzzer yordamida aqlli sug‘orish va ogohlantirish tizimini modellashtirish.
+4
+
+3
+1
+
+Yakuniy nazorat ishi.
+1
+
+
+1
+Jami:
+102
+29
+68
+5
+5. IOT (INTERNET OF THINGS — BUYUMLAR INTERNETI) (ROBOTOTEXNIKA, 3D MODELLASHTIRISH) KASBI OʻQUV DASTURI
+I-bob. IoT texnologiyalarining nazariy asoslari va qo‘llanilishi
+1.1. IoT tushunchasi va qo‘llanish sohalari
+IoT tushunchasi internet orqali o‘zaro ulangan aqlli qurilmalar tizimini tushunish. Sensorlar yordamida ma’lumotlarni yig‘ish va uzatish. Qurilmalar o‘rtasida avtomatik ma’lumot almashinish. Masofadan boshqarish va monitoringni amalga oshirish. Aqlli uy, sog‘liqni saqlash va sanoatda keng qo‘llash. Real vaqt rejimida tahlil qilish va qaror qabul qilish. IoT texnologiyalari yordamida tizimlarni avtomatlashtirish.
+1.2. IoT arxitekturasi (sensorlar, aktuatorlar, tarmoq, bulut, foydalanuvchi interfeysi)
+IoT arxitekturasi bir nechta asosiy qatlamlardan tashkil topish. Sensorlar orqali muhitdan ma’lumotlarni o‘lchash. Aktuatorlar yordamida buyruqlarni bajarish. Tarmoq orqali qurilmalar o‘rtasida ma’lumot uzatish. Bulut platformasida ma’lumotlarni saqlash va qayta ishlash. Foydalanuvchi interfeysi orqali tizimni kuzatish va boshqarish. Qatlamlararo integratsiya orqali tizim samaradorligini oshirish.
+1.3. Tinkercad.com virtual laboratoriyasida ro‘yxatdan o‘tish va ishlash
+Tinkercad platformasida akkaunt yaratish. Virtual laboratoriya muhitiga kirish. Elektron komponentlarni tanlash va joylashtirish. Sxemalarni simulyatsiya qilish va tekshirish. Kod yozish va virtual qurilmada ishga tushirish. Loyihalarni saqlash va ulashish. Talabalar uchun amaliy tajribani rivojlantirish.
+1.4. Elektron sxema asosida bitta va ikki LED lampaning ishlash prinsipini o‘rganish va amaliy bajarish
+Oddiy elektr zanjiri tuzilishini o‘rganish. Rezistor va LED ulanishini to‘g‘ri bajarish. Tok oqimini nazorat qilish. Bitta LED ishlash prinsipini tushunish. Ikki LED parallel va ketma-ket ulanishini tahlil qilish. Amaliy tajriba orqali sxemani yig‘ish. Natijalarni kuzatish va xulosa chiqarish.
+1.5. Arduino UNO yordamida LED indikatorlari va push-button bilan interaktiv interfeys yaratish
+Arduino UNO platasi bilan ishlashni boshlash. Push-button orqali kirish signalini qabul qilish. LED indikatorlar orqali chiqish natijasini ko‘rsatish. Dastur yordamida mantiqiy boshqaruvni amalga oshirish. Foydalanuvchi bilan interaktiv aloqa yaratish. Tugma bosilish holatini aniqlash. Tizimni real vaqt rejimida boshqarish.
+1.6. Breadboardda DIP switch (DPST) va LED yordamida oddiy elektron sikl yaratish
+Breadboardda komponentlarni to‘g‘ri joylashtirish. DIP switch orqali signal boshqarish. LED yordamida holatni vizual ko‘rsatish. Elektron sikl tuzilishini shakllantirish. Tok oqimini zanjir bo‘ylab taqsimlash. Oddiy boshqaruv mexanizmini yaratish. Amaliy tajriba orqali sxemani sinovdan o‘tkazish.
+II-bob. Mikrokontrollerlar va IoT qurilmalari
+2.1. IoT uchun asosiy qurilmalar (Arduino, ESP8266, ESP32, Raspberry Pi)
+IoT tizimlarida asosiy qurilmalarni tanlash. Arduino, ESP8266, ESP32 va Raspberry Pi platformalarini o‘rganish. Har bir qurilmaning texnik imkoniyatlarini tahlil qilish. Sensor va aktuatorlar bilan integratsiya qilish. Wi-Fi va Bluetooth orqali ulanishni amalga oshirish. Real vaqt rejimida ma’lumot uzatish. IoT loyihalarida optimal qurilmani tanlash.
+2.2. Mikrokontroller tushunchasi va IoT qurilmalaridagi o‘rni
+Mikrokontroller tushunchasini o‘rganish. IoT qurilmalarda markaziy boshqaruv blok sifatida ishlash. Kirish va chiqish signallarini qayta ishlash. Sensorlardan ma’lumotlarni qabul qilish. Aktuatorlarni boshqarish. Energiya tejamkor ishlashni ta’minlash. Aqlli tizimlarni avtomatlashtirish.
+2.3. ESP8266 va ESP32 mikrokontrollerlari haqida umumiy tushuncha
+ESP8266 va ESP32 arxitekturasini o‘rganish. Wi-Fi modulining ishlash prinsipini tushunish. IoT loyihalarda simsiz aloqa o‘rnatish. Sensorlar bilan tezkor ma’lumot almashish. Past energiya sarfi bilan ishlash. Cloud platformalar bilan integratsiya qilish. Real vaqt monitoring tizimlarini yaratish.
+2.4. Arduino Uno va Tinkercad virtual laboratoriyasi asosida ketma-ket ishlaydigan svetofor tizimini modellashtirish
+Svetofor algoritmini ishlab chiqish. LED chiroqlarni ketma-ket boshqarish. Tinkercad muhitida sxemani yig‘ish. Dastur orqali vaqt intervallarini sozlash. Trafik boshqaruv mantiqini modellashtirish. Simulyatsiya natijalarini kuzatish. Amaliy tizimni optimallashtirish.
+2.5. Arduino Uno va Tinkercad virtual laboratoriyasi asosida seven segment indikatorli taymer bilan ketma-ket ishlaydigan svetofor tizimini modellashtirish
+Seven segment displey ishlashini o‘rganish. Taymer algoritmini ishlab chiqish. Svetofor siklini raqamli ko‘rsatish. Arduino orqali displeyni boshqarish. Vaqtni hisoblash va aks ettirish. Tizimni simulyatsiya qilish. Real vaqt boshqaruv tizimini shakllantirish.
+2.6. Arduino asosida servo motorni tugmalar orqali boshqarish va holatini 7-segment displeyda ko‘rsatish.
+Servo motor boshqaruv prinsipini o‘rganish. Tugmalar orqali buyruq kiritish. Burchak qiymatlarini aniqlash. 7-segment displeyda holatni aks ettirish. PWM signal orqali motorni boshqarish. Interaktiv boshqaruv tizimini yaratish. Amaliy sinovdan o‘tkazish.
+2.7. Arduino Uno va Tinkercad muhitida 7-segmentli LED HT16K33 moduli asosida budilnik tizimini ishlab chiqish.
+HT16K33 modulini o‘rganish. Vaqtni dastur orqali sozlash. Budilnik algoritmini ishlab chiqish. Displeyda vaqtni ko‘rsatish. Signal berish tizimini yaratish. Interfeys orqali boshqarish. Aqlli vaqt tizimini modellashtirish.
+III-bob. Dasturlash tillari va dasturlash muhiti
+3.1. IoT da ishlatiladigan dasturlash tillari (C/C++, Python, MicroPython)
+IoT dasturlash tillarini o‘rganish. C/C++ tilida mikrokontroller dasturlash. Python va MicroPython imkoniyatlarini tahlil qilish. Qurilma resurslariga mos dasturlash. Sensor ma’lumotlarini qayta ishlash. Real vaqt tizimlarini dasturlash. Samarali kod yozishni shakllantirish.
+3.2. Arduino IDE dasturi va undan foydalanish
+Arduino IDE interfeysini o‘rganish. Yangi loyiha yaratish. Kod yozish va kompilyatsiya qilish. Board va portni sozlash. Kutubxonalar bilan ishlash. Serial monitor orqali ma’lumot kuzatish. Dastur muhitida test qilish.
+3.3. Kod yozish, tekshirish va qurilmaga yuklash jarayoni
+Kod yozish jarayonini boshlash. Algoritm asosida dastur tuzish. Kompilyatsiya orqali xatoliklarni aniqlash. USB yoki simsiz aloqa orqali yuklash. Qurilmada ishga tushirish. Test jarayonini amalga oshirish. Xatoliklarni bartaraf etish.
+3.4. Haqiqiy qurilmada test qilish va xatoliklarni bartaraf etish
+Qurilmani ulash va ishga tushirish. Sensor signallarini tekshirish. Natijalarni tahlil qilish. Nosozliklarni aniqlash. Debug jarayonini amalga oshirish. Dastur va sxemani optimallashtirish. Barqaror ishlashni ta’minlash.
+3.5. Arduino asosida LCD displeyning kontrastini potensiometr yordamida boshqarish va analog qiymatlarni ekranda ko‘rsatish loyihasi.
+LCD displey ulanishini o‘rganish. Potensiometr orqali kontrastni sozlash. Analog signalni o‘qish. Ma’lumotlarni ekranda ko‘rsatish. Interfeysni qulaylashtirish. Real vaqt vizualizatsiya qilish. Amaliy loyiha bajarish.
+3.6. Arduino asosida 4x4 keypad va LCD display yordamida oddiy kalkulyator yaratish.
+Keypad modulini ulash. Tugma signallarini o‘qish. Hisoblash algoritmini ishlab chiqish. LCD displeyda natijani ko‘rsatish. Foydalanuvchi interfeysini yaratish. Interaktiv dastur tuzish. Amaliy tizimni sinovdan o‘tkazish.
+3.7. Arduino asosida klaviatura, servo motor, LCD displey va buzzer yordamida aqlli xavfsizlik tizimini yaratish.
+Xavfsizlik algoritmini ishlab chiqish. Parol kiritishni tashkil qilish. Servo orqali qulflash mexanizmini boshqarish. LCD orqali holatni ko‘rsatish. Buzzer orqali ogohlantirish berish. Tizimni avtomatlashtirish. Aqlli xavfsizlik tizimini yaratish.
+3.8. Arduino asosida Keypad va LCD yordamida parol bilan boshqariladigan elektron qulflash qurilmasini yaratish.
+Parol tizimini ishlab chiqish. Tugmalar orqali ma’lumot kiritish. To‘g‘ri va noto‘g‘ri parolni aniqlash. Servo yoki rele orqali qulflash. LCD displeyda axborot ko‘rsatish. Xavfsizlik darajasini oshirish. Elektron qulflash tizimini yaratish.
+IV-bob. Sensorlar va ma’lumotlarni yig‘ish
+4.1. Sensorlarning turlari va ishlash prinsipi (harorat, namlik, harakat, yorug‘lik).
+Sensor tushunchasini o‘rganish. Harorat, namlik va yorug‘lik sensorlarini tahlil qilish. Harakat sensorining ishlashini tushunish. Analog va raqamli signalni ajratish. Muhitdan ma’lumot yig‘ish. Signalni qayta ishlash. IoT tizimlarida qo‘llash.
+4.2. Sensorlardan ma’lumot olish va dastur orqali qayta ishlash
+Sensor ma’lumotlarini o‘qish. Analog qiymatlarni raqamlashtirish. Filtrlash va qayta ishlash. Dastur orqali tahlil qilish. Natijalarni saqlash. Real vaqt monitoring qilish. Tizim samaradorligini oshirish.
+4.3. Arduino va Flex sensor asosida egilish burchagini o'lchash hamda holatni RGB LED orqali vizual ogohlantirish tizimi.
+Flex sensorni kalibrlash. Eglish burchagini aniqlash. RGB LED orqali holatni ko‘rsatish. Ranglar orqali vizual ogohlantirish. Analog signalni qayta ishlash. Harakat monitoring qilish. Aqlli nazorat tizimini yaratish.
+4.4. Arduino Uno va Tinkercad.com virtual laboratoriya muhitida PIR (harakat sezuvchi sensor) harakatni sezuvchi tizimni yaratish va modellashtirish.
+PIR sensor ishlash prinsipini o‘rganish. Harakatni aniqlash. Arduino bilan integratsiya qilish. LED yoki signalizatsiya ulash. Tinkercad muhitida modellashtirish. Real vaqt kuzatish. Xavfsizlik tizimini ishlab chiqish.
+4.5. Arduino UNO mikrokontrolleri yordamida TMP36 temperatura sensoridan harorat ma'lumotlarini o'qib, LCD displeyda real vaqt rejimida ko'rsatish va potensiometr orqali displey kontrastini sozlash tizimi.
+TMP36 sensorini ulash. Harorat ma’lumotini o‘qish. Analog signalni qayta ishlash. LCD displeyda real vaqt ko‘rsatish. Potensiometr orqali kontrastni sozlash. Monitoring tizimini yaratish. Amaliy test qilish.
+4.6. MAX30102 sensori yordamida yurak urish tezligini aniqlash
+MAX30102 sensorini o‘rganish. Puls signalini o‘qish. Ma’lumotlarni filtrdan o‘tkazish. Yurak urish tezligini hisoblash. Real vaqt monitoring qilish. Tibbiy IoT tizimiga integratsiya qilish. Sog‘liq monitoring tizimini yaratish.
+V-bob. Aktuatorlar va aqlli IoT tizimlar
+5.1. Aktuatorlar (motor, servo, rele, LED, buzzer) va ularni boshqarish
+Aktuator tushunchasini o‘rganish. Elektr signallarni mexanik harakatga aylantirish. Servo va motorlarni boshqarish. Rele orqali yuqori kuchlanishni boshqarish. LED va buzzer orqali signal berish. Arduino orqali chiqish pinlarini sozlash. Aqlli boshqaruv tizimini yaratish.
+5.2. IoT qurilmasi loyihasida sensor va aktuatorlarni integratsiya qilish
+Sensor va aktuatorlarni bir tizimga birlashtirish. Ma’lumotlarni qabul qilish va qayta ishlash. Qaror qabul qilish algoritmini ishlab chiqish. Aktuator orqali javob reaksiyasini bajarish. Avtomatik boshqaruvni ta’minlash. IoT arxitekturaga mos ishlash. Kompleks tizim yaratish.
+5.3. Sensor va aktuatorlarni birlashtirib oddiy IoT qurilma yaratish (masalan, aqlli chiroq).
+Oddiy IoT loyiha tanlash. Sensor orqali ma’lumot yig‘ish. Dastur orqali tahlil qilish. Aktuator orqali natijani bajarish. Avtomatlashtirish jarayonini shakllantirish. Real vaqt ishlashni ta’minlash. Aqlli qurilma yaratish.
+5.4. Tinkercad muhitida Arduino Uno va PIR sensor asosida Relay bilan boshqariladigan avtomatik LED yoritish tizimini loyihalash
+PIR sensor orqali harakatni aniqlash. Harakat signalini Arduino orqali qabul qilish. Relay modul yordamida LED yoritishni boshqarish. Tinkercad muhitida sxemani modellashtirish. Avtomatik yoqish va o‘chirish algoritmini tuzish. Energiya tejamkor yoritish tizimini yaratish. Tizimni simulyatsiya qilish va tekshirish.
+5.5. Arduino UNO va harorat sensor asosida haroratni LCD displeyda ko‘rsatish hamda LED va buzzer orqali ogohlantirish tizimi
+Harorat sensorini ulash va kalibrlash. Harorat qiymatini o‘qish. LCD displeyda natijani ko‘rsatish. Belgilangan chegaradan oshishda LED yoqish. Buzzer orqali ogohlantirish berish. Real vaqt monitoring qilish. Xavfsizlik tizimini shakllantirish.
+5.6. Arduino asosida PIR harakat sensori bilan avtomatik yoritish tizimini loyihalash va modellashtirish
+Harakatni aniqlash algoritmini tuzish. PIR signalini qayta ishlash. LED yoritishni boshqarish. Tizimni Tinkercad muhitida modellashtirish. Real vaqt ishlashni tekshirish. Aqlli avtomatlashtirishni amalga oshirish. Energiya samaradorligini oshirish.
+5.7. Arduino orqali releni boshqarish va yorug‘lik darajasiga qarab avtomatik yoqish/o‘chirish tizimi
+Rele modulini ulash. Yorug‘lik sensoridan ma’lumot olish. Chegaraviy qiymatni belgilash. Avtomatik yoqish va o‘chirishni dasturlash. Elektr yuklamani xavfsiz boshqarish. Aqlli nazorat tizimini yaratish. Amaliy sinovdan o‘tkazish.
+VI-bob. IoT tarmoqlari va protokollar
+6.1. IoT qurilmalarda Wi-Fi va Bluetooth ulanishi
+Simsiz aloqa texnologiyalarini o‘rganish. Wi-Fi orqali internetga ulanish. Bluetooth orqali qisqa masofali aloqa o‘rnatish. Ma’lumotlarni simsiz uzatish. Qurilmalarni tarmoqqa ulash. Real vaqt monitoring qilish. IoT tizimlarida ulanishni optimallashtirish.
+6.2. MQTT va HTTP protokollari
+MQTT protokolining ishlash prinsipini o‘rganish. Publish va subscribe mexanizmini tushunish. HTTP protokoli orqali so‘rov yuborish. Server va mijoz o‘rtasida aloqa o‘rnatish. IoT qurilmalarda samarali protokol tanlash. Kam kechikish bilan ma’lumot uzatish. Tizim samaradorligini oshirish.
+6.3. IoT qurilmalarda REST API ishlatish
+REST API tushunchasini o‘rganish. Serverga ma’lumot yuborish. JSON formatda ma’lumot almashish. Qurilmalararo integratsiyani amalga oshirish. Cloud platformaga ulanish. Masofaviy boshqaruvni tashkil qilish. IoT tizimida API orqali ishlash.
+6.4. Arduino Uno va Tinkercad.com virtual laboratoriya muhitida PIR (harakat sezuvchi sensor) harakatni sezuvchi sensor va servo motor asosida aqlli eshikni loyihalash.
+Harakatni aniqlash. Servo motor orqali eshikni ochish. Dasturiy boshqaruv algoritmini tuzish. Sensor va aktuator integratsiyasini amalga oshirish. Aqlli kirish tizimini yaratish. Xavfsizlik darajasini oshirish. Tizimni modellashtirish va test qilish.
+6.5. Tinkercad.com virtual laboratoriya muhitida Arduino Uno va ultratovush (HC-SR04) sensori asosida sensor va obyekt o‘rtasidagi masofani hisoblash.
+Ultrasonik sensorni ulash. Signal yuborish va qabul qilish. Masofani hisoblash formulalarini qo‘llash. Obyektgacha bo‘lgan masofani aniqlash. Natijalarni serial monitor orqali ko‘rsatish. Real vaqt o‘lchashni amalga oshirish. Monitoring tizimini yaratish.
+6.8. PIR sensorlari asosida universal odam sanash va xonalar monitoringi tizimini loyihalash
+Kirish va chiqishni aniqlash. PIR sensor signalini qayta ishlash. Odamlar sonini hisoblash. Xonalar monitoringini amalga oshirish. Ma’lumotlarni saqlash va tahlil qilish. Aqlli nazorat tizimini yaratish. IoT monitoring tizimini ishlab chiqish.
+VII-bob. Bulut texnologiyalari va ma’lumotlar bilan ishlash
+7.1. IoT qurilmalarning bulut platformalari bilan ma’lumot almashinuvi
+Bulut texnologiyasini o‘rganish. Ma’lumotlarni serverga yuborish. Masofaviy saqlashni tashkil qilish. Real vaqt monitoring qilish. IoT qurilmalarni cloud bilan integratsiya qilish. Katta hajmdagi ma’lumotlarni qayta ishlash. Tizimni masofadan boshqarish.
+7.2. Blynk platformasi va mobil ilova integratsiyasi
+Blynk ilovasini o‘rnatish. Qurilmani mobil interfeys bilan bog‘lash. Virtual pinlar orqali boshqarish. Real vaqt monitoring qilish. Sensor ma’lumotlarini mobil qurilmada ko‘rsatish. Masofadan boshqaruvni tashkil qilish. IoT interfeysini yaratish.
+7.3. Ubidots va boshqa bulut servislarida IoT loyihalari
+Ubidots platformasini o‘rganish. Ma’lumotlarni cloudga yuborish. Dashboard yaratish. Vizual tahlil qilish. IoT qurilmalarni integratsiya qilish. Ma’lumotlarni saqlash va boshqarish. Aqlli tizimlarni rivojlantirish.
+
+7.4. Ma’lumotlarni vizualizatsiya qilish (grafik, jadval, dashboard)
+Ma’lumotlarni grafik ko‘rinishda aks ettirish. Jadval orqali tahlil qilish. Dashboard yaratish. Real vaqt monitoringni amalga oshirish. Analitik xulosalar chiqarish. Vizual boshqaruv tizimini yaratish. Qaror qabul qilishni optimallashtirish.
+
+7.5. Arduino Uno va gaz sensori yordamida xonada gaz mavjudligini aniqlash va LED orqali vizual aks ettirish tizimini yaratish
+Gaz sensorini Arduino Uno ga ulash. Muhitdagi gaz miqdorini o‘lchash. Analog signalni o‘qish va tahlil qilish. Gaz mavjud bo‘lganda LED ni yoqish. Vizual ogohlantirish tizimini shakllantirish. Xavfsizlik monitoringini amalga oshirish. Real vaqt nazorat qilish.
+
+7.6. Arduino Uno va gaz sensori asosida gaz miqdorini uch darajada aniqlash va LED indikatorlar yordamida ko‘rsatish
+Gaz konsentratsiyasini sensor orqali o‘lchash. Chegaraviy uch darajani belgilash. Past, o‘rta va yuqori darajani aniqlash. Har bir daraja uchun alohida LED yoqish. Ma’lumotlarni dastur orqali qayta ishlash. Xavfsizlik tizimini avtomatlashtirish. Monitoring tizimini yaratish.
+
+7.7. Arduino Uno, gaz sensori, LED, buzzer va LCD displey yordamida gaz miqdorini aniqlash va ko‘rsatish tizimini yaratish
+Gaz sensorini tizimga integratsiya qilish. LCD displeyda gaz qiymatini ko‘rsatish. LED orqali holatni aks ettirish. Buzzer yordamida ogohlantirish berish. Real vaqt monitoringni amalga oshirish. Ma’lumotlarni vizual ko‘rsatish. Aqlli xavfsizlik tizimini yaratish.
+7.8. Arduino mikrokontrolleri yordamida gaz kontsentratsiyasini aniqlash, ogohlantirish va avtomatik shamollatish tizimini yaratish
+Gaz kontsentratsiyasini o‘lchash. Chegaraviy qiymatni aniqlash. Ventilyatorni avtomatik yoqish. Buzzer orqali ogohlantirish berish. Muhit xavfsizligini ta’minlash. Avtomatik shamollatish tizimini boshqarish. IoT asosidagi xavfsizlik tizimini yaratish.
+7.9. Arduino Uno va Soil Moisture Sensor yordamida tuproq namligini o‘lchash hamda LED indikatorlar orqali holatini ko‘rsatish
+Tuproq namligi sensorini ulash. Namlik darajasini o‘lchash. Analog signalni qayta ishlash. LED indikatorlar orqali holatni ko‘rsatish. Sug‘orish zaruratini aniqlash. Qishloq xo‘jaligi monitoringini amalga oshirish. Aqlli nazorat tizimini yaratish.
+7.10. Arduino Uno va Tinkercad virtual laboratoriyasi asosida LCD displey, tuproq namligi sensori, LED va buzzer yordamida aqlli sug‘orish va ogohlantirish tizimini modellashtirish.
+Tinkercad muhitida sxemani yig‘ish. Tuproq namligi sensorini ulash. LED va buzzer orqali ogohlantirish berish. Sug‘orish algoritmini ishlab chiqish. Virtual simulyatsiya qilish. Tizim ishlashini tekshirish. IoT asosidagi aqlli qishloq xo‘jaligi tizimini modellashtirish.
+
+6. IOT (INTERNET OF THINGS — BUYUMLAR INTERNETI) (ROBOTOTEXNIKA, 3D MODELLASHTIRISH) YO‘NALISHI BOʻYICHA OʻTILADIGAN DARS SOATLARI
+t/r
+Mavzular
+I-CHORAK
+
+
+1-hafta
+2-hafta
+3-hafta
+4-hafta
+5-hafta
+6-hafta
+7-hafta
+8-hafta
+9-hafta
+10-hafta
+11-hafta
+12-hafta
+	•	
+IoT tushunchasi va qo‘llanish sohalari.
+1
+
+
+
+
+
+
+
+
+
+
+
+	•	
+IoT arxitekturasi (sensorlar, aktuatorlar, tarmoq, bulut, foydalanuvchi interfeysi).
+2
+
+
+
+
+
+
+
+
+
+
+
+	•	
+Tinkercad.com virtual laboratoriyasida ro‘yxatdan o‘tish va ishlash.
+
+2
+
+
+
+
+
+
+
+
+
+
+	•	
+Elektron sxema asosida bitta va ikki LED lampaning ishlash prinsipini o‘rganish va amaliy bajarish.
+
+1
+1
+
+
+
+
+
+
+
+
+
+	•	
+Arduino UNO yordamida LED indikatorlari va push-button bilan interaktiv interfeys yaratish.
+
+
+2
+1
+
+
+
+
+
+
+
+
+	•	
+Breadboardda DIP switch (DPST) va LED yordamida oddiy elektron sikl yaratish.
+
+
+
+2
+
+
+
+
+
+
+
+
+	•	
+IoT uchun asosiy qurilmalar (Arduino, ESP8266, ESP32, Raspberry Pi).
+
+
+
+
+2
+
+
+
+
+
+
+
+	•	
+Mikrokontroller tushunchasi va IoT qurilmalaridagi o‘rni.
+
+
+
+
+1
+1
+
+
+
+
+
+
+	•	
+ESP8266 va ESP32 mikrokontrollerlari haqida umumiy tushuncha.
+
+
+
+
+
+1
+
+
+
+
+
+
+	•	
+Arduino Uno va Tinkercad virtual laboratoriyasi asosida ketma-ket ishlaydigan svetofor tizimini modellashtirish.
+
+
+
+
+
+1
+2
+
+
+
+
+
+	•	
+Arduino Uno va Tinkercad virtual laboratoriyasi asosida seven segment indikatorli taymer bilan ketma-ket ishlaydigan svetofor tizimini modellashtirish.
+
+
+
+
+
+
+1
+1
+
+
+
+
+	•	
+Arduino asosida servo motorni tugmalar orqali boshqarish va holatini 7-segment displeyda ko‘rsatish.
+
+
+
+
+
+
+
+2
+
+
+
+
+	•	
+Arduino Uno va Tinkercad muhitida 7-segmentli LED HT16K33 moduli asosida budilnik tizimini ishlab chiqish.
+
+
+
+
+
+
+
+
+3
+
+
+
+	•	
+IoT da ishlatiladigan dasturlash tillari (C/C++, Python, MicroPython).
+
+
+
+
+
+
+
+
+
+2
+
+
+	•	
+Arduino IDE dasturi va undan foydalanish.
+
+
+
+
+
+
+
+
+
+1
+
+
+	•	
+Kod yozish, tekshirish va qurilmaga yuklash jarayoni.
+
+
+
+
+
+
+
+
+
+
+2
+
+	•	
+Haqiqiy qurilmada test qilish va xatoliklarni bartaraf etish.
+
+
+
+
+
+
+
+
+
+
+1
+
+	•	
+Arduino asosida LCD displeyning kontrastini potensiometr yordamida boshqarish va analog qiymatlarni ekranda ko‘rsatish loyihasi.
+
+
+
+
+
+
+
+
+
+
+
+3
+
+
+T/r
+Mavzular
+II-CHORAK
+
+
+1-hafta
+2-hafta
+3-hafta
+4-hafta
+5-hafta
+6-hafta
+7-hafta
+1.
+Arduino asosida 4x4 keypad va LCD display yordamida oddiy kalkulyator yaratish.
+2
+
+
+
+
+
+
+2.
+Arduino asosida klaviatura, servo motor, LCD displey va buzzer yordamida aqlli xavfsizlik tizimini yaratish.
+1
+1
+
+
+
+
+
+3.
+Arduino asosida Keypad va LCD yordamida parol bilan boshqariladigan elektron qulflash qurilmasini yaratish.
+
+2
+
+
+
+
+
+4.
+Sensorlarning turlari va ishlash prinsipi (harorat, namlik, harakat, yorug‘lik).
+
+
+2
+
+
+
+
+5.
+Sensorlardan ma’lumot olish va dastur orqali qayta ishlash.
+
+
+1
+1
+
+
+
+6.
+Arduino va Flex sensor asosida egilish burchagini o'lchash hamda holatni RGB LED orqali vizual ogohlantirish tizimi.
+
+
+
+2
+
+
+
+8.
+Arduino Uno va Tinkercad.com virtual laboratoriya muhitida PIR (harakat sezuvchi sensor) harakatni sezuvchi tizimni yaratish va modellashtirish.
+
+
+
+
+3
+
+
+9.
+Arduino UNO mikrokontrolleri yordamida TMP36 temperatura sensoridan harorat ma'lumotlarini o'qib, LCD displeyda real vaqt rejimida ko'rsatish va potensiometr orqali displey kontrastini sozlash tizimi.
+
+
+
+
+
+3
+
+10.
+Arduino Uno mikrokontrolleri va MAX30102 puls oksimetr sensori yordamida yurak urish tezligini aniqlash.
+
+
+
+
+
+
+3
+
+T/r
+Mavzular
+III-CHORAK
+
+
+1-hafta
+2-hafta
+3-hafta
+4-hafta
+5-hafta
+6-hafta
+7-hafta
+8-hafta
+1.
+Aktuatorlar (motorlar, servo, rele, LED, buzzer) va ularni boshqarish.
+1
+
+
+
+
+
+
+
+2.
+IoT qurilmasi loyihasida sensor va aktuatorlarni integratsiya qilish.
+1
+
+
+
+
+
+
+
+3.
+Sensor va aktuatorlarni birlashtirib oddiy IoT qurilma yaratish (masalan, aqlli chiroq).
+1
+
+
+
+
+
+
+
+4.
+Tinkercad muhitida Arduino Uno va PIR sensor asosida Relay bilan boshqariladigan avtomatik LED yoritish tizimini loyihalash.
+
+2
+
+
+
+
+
+
+5.
+Arduino UNO va harorat sensor asosida haroratni LCD displeyda ko‘rsatish hamda LED va buzzer orqali ogohlantirish tizimi.
+
+1
+1
+
+
+
+
+
+6.
+Arduino asosida PIR harakat sensori bilan avtomatik yoritish tizimini loyihalash va modellashtirish.
+
+
+2
+1
+
+
+
+
+7.
+Arduino orqali releni boshqarish va yorug‘lik darajasiga qarab avtomatik yoqish/o‘chirish tizimi.
+
+
+
+2
+
+
+
+
+8.
+IoT qurilmalarda Wi-Fi va Bluetooth ulanishi.
+
+
+
+
+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9.
+MQTT va HTTP protokollari.
+
+
+
+
+
+1
+
+
+
+10.
+IoT qurilmalarda REST API ishlatish.
+
+
+
+
+1
+1
+
+
+11.
+Arduino Uno va Tinkercad.com virtual laboratoriya muhitida PIR (harakat sezuvchi sensor) harakatni sezuvchi sensor va servo motor asosida aqlli eshikni loyihalash.
+
+
+
+
+
+2
+
+
+12.
+Tinkercad.com virtual laboratoriya muhitida Arduino Uno va ultratovush (HC-SR04) sensori asosida sensor va obyekt o‘rtasidagi masofani hisoblash.
+
+
+
+
+
+
+2
+
+13.
+PIR sensorlari asosida universal odam sanash va xonalar monitoringi tizimini loyihalash.
+
+
+
+
+
+
+1
+3
+
+
+T/r
+Mavzular
+IV-CHORAK
+
+
+1-hafta
+2-hafta
+3-hafta
+4-hafta
+5-hafta
+6-hafta
+7-hafta
+1.
+IoT qurilmalarning bulut platformalari bilan ma’lumot almashinuvi.
+1
+
+
+
+
+
+
+2.
+Blynk platformasi va mobil ilova integratsiyasi.
+1
+
+
+
+
+
+
+3.
+Ubidots va boshqa bulut servislarida IoT loyihalari.
+1
+
+
+
+
+
+
+4.
+Ma’lumotlarni vizualizatsiya qilish (grafik, jadval, dashboard).
+
+1
+
+
+
+
+
+5.
+Arduino Uno va gaz sensori yordamida xonada gaz mavjudligini aniqlash va LED orqali vizual aks ettirish tizimini yaratish.
+
+2
+
+
+
+
+
+6.
+Arduino Uno va gaz sensori asosida gaz miqdorini uch darajada aniqlash va LED indikatorlar yordamida ko‘rsatish.
+
+
+2
+
+
+
+
+7.
+Arduino Uno, gaz sensori, LED, buzzer va LCD displey yordamida gaz miqdorini aniqlash va ko‘rsatish tizimini yaratish.
+
+
+1
+2
+
+
+
+8.
+Arduino mikrokontrolleri yordamida gaz kontsentratsiyasini aniqlash, xavfli vaziyatlarda ogohlantirish va avtomatik shamollatish tizimini yaratish.
+
+
+
+1
+2
+
+
+9.
+Arduino Uno va Soil Moisture Sensor yordamida tuproq namligini o‘lchash hamda LED indikatorlar orqali holatini ko‘rsatish.
+
+
+
+
+1
+1
+
+10.
+Arduino Uno va Tinkercad virtual laboratoriyasi asosida LCD displey, tuproq namligi sensori, LED va buzzer yordamida aqlli sug‘orish va ogohlantirish tizimini modellashtirish.
+
+
+
+
+
+2
+2
+11.
+Yakuniy nazorat ishi.
+
+
+
+
+
+
+1
+7. OʻQUV JARAYONINI TASHKIL ETISHDA OʻQITISH METODLARI, SHAKLLARI VA VOSITALARI
+Oʻqitish metodlari - ogʻzaki, koʻrgazmali, amaliy, muammoli-izlanish, mustaqil ishlash va shu kabilar.
+Oʻqitish shakllari
+
+Nazariy
+Amaliy
+Umumiy
+maʼruza;
+ekskursiya (sayohat);
+mustaqil ishlar;
+maslahat olish va shu kabilar.
+amaliy mashgʻulotlar;
+mustaqil uy ishi;
+didaktik, ishchan va rolli oʻyinlar;
+tajriba-konstruktorlik faoliyati, treninglar;
+sayohatlar, olimpiadalar va koʻrik-tanlovlar.
+ommaviy;
+jamoaviy;
+guruhli;
+kichik guruhli;
+juftli;
+yakka tartibda.
+Oʻqitish vositalari
+
+Oʻqitish vositalari
+(oddiy va murakkab)
+Oʻquv qurollari va koʻrgazmali qurollar
+darsliklar, oʻquv qoʻllanmalari;
+metodik qoʻllanmalar;
+maʼlumotnomalar;
+maxsus adabiyotlar;
+metodik tavsiyalar;
+ensiklopediyalar;
+jadval va plakat;
+mulyaj va modellar.
+
+Axborot materiallari va dasturiy taʼminot
+kompyuter;
+amaliy topshiriqlar;
+kasbiy koʻnikma va malakaviy dastur;
+testlar, nazorat topshiriqlari va boshqalar.
+
+
+
+8. BAHOLASH MEZONLARI
+	Oʻquvchilarning kasbga oid bilim, koʻnikma, malaka va kompetensiyalarini baholash va nazorat qilish maqsadida quyidagi nazorat turlari amalga oshiriladi:
+joriy nazorat - soʻrovlar, bajarilgan loyiha ishlarini izohlash tarzida oʻquvchilarning bilimlari, koʻnikma va malakalari muntazam nazorat qilinadi.
+oraliq nazorat - chorak tamom boʻlganda va oʻquv dasturining tegishli boʻlimi tugallangandan keyin oʻquvchilarning bilimlari, koʻnikma va malakalarini baholash uchun amalga oshiriladi. U amaliy, yozma nazorat ishi yoki testlar shaklida oʻtkaziladi. Ushbu nazoratda foydalaniladigan materiallar IoT (Internet of Things – Buyumlar interneti), (Robototexnika va 3D modellashtirish) kasbi boʻyicha kasbiy taʼlim ustasi tomonidan tayyorlanadi. Oraliq nazorat har chorak yakunida o‘taziladi va nazorat ishlarining miqdori va mavzulari oʻquv dasturiga asoslangan rejada belgilanadi hamda muddati va shakli koʻrsatiladi.
+yakuniy nazorat - oʻquv yili tamom boʻlgandan keyin ogʻzaki va amaliy ish koʻrinishida imtihon shaklida amalga oshiriladi. Uning asosida reyting aniqlanadi va oʻquvchini navbatdagi sinfga oʻtkazish toʻgʻrisida qaror qabul qilinadi. Yakuniy nazorat materiallari kasbiy taʼlim ustasi tomonidan oʻquv dasturi asosida tayyorlanadi va ularni amaliy fanlar uslubiy birlashmasi muhokamasidan oʻtkaziladi. Umumiy oʻrta taʼlim muassasalari bitiruvchilari uchun choraklik baholar asosida yillik baho, shuningdek, yakuniy nazoratda olingan baho va yillik baho asosida yakuniy baho aniqlanadi.
+Kasbiy taʼlim yoʻnalishi boʻyicha yakuniy nazorat imtihonlarni oʻtkazish tartibi.
+Kasbiy taʼlim yoʻnalishi boʻyicha oʻquv reja va dasturning barcha talablarini toʻliq bajargan bitiruvchiga maktab direktorining buyrugʻiga asosan amaliy yakuniy nazoratni topshirishga ruxsat beriladi.
+Yakuniy nazorat oʻtkazish jadvali, u oʻtkaziladigan kunlar koʻrsatilgan holda, maktab direktori tomonidan tasdiqlanadi va yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin taʼlim muassasasining oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar xabardor etiladi.
+Yakuniy nazorat amaliy topshiriq shaklida oʻtkaziladi. Bunda yakuniy nazorat savollari orqali bitta amaliy topshiriq beriladi.
+Amaliy topshiriqlar oʻqitilgan mutaxassislik oʻquv dasturi asosida tuziladi va maktabning pedagogik kengashi tomonidan tasdiqlanadi hamda yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin barcha oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar eʼtiboriga yetkaziladi.
+
+Oʻquvchilar bilimi quyidagi mezonlar asosida baholanadi:
+Har bir oʻquvchining kasb boʻyicha oʻzlashtirish darajasi ball tizimi orqali ifodalanadi, ya’ni 100 ballik shkalaga o‘tkaziladi.
+0-59 ball – 2 baho;
+60-70 ball – 3 baho;
+71-89 ball – 4 baho;
+90-100 ball – 5 baho.
+Oʻquvchilarning har bir nazorat turi boʻyicha bilimini baholash va koʻrsatkichini aniqlash ularning kasbni oʻquv dasturi mavzusi boʻyicha tasavvurga ega boʻlishi, mavzuning mohiyatini tushunib yetishi va aytib bera olishi, olgan bilimlarini amalda qoʻllay olishi, ijodiy fikrlay olishi va xulosa qabul qila olishi hamda mustaqil ishlarni bajarishi kabi mezonlarga qarab amalga oshiriladi.
+Jumladan:
+bitiruvchi mustaqil xulosa va qaror qabul qiladi, ijodiy fikrlay oladi, mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (mavzu) boʻyicha tasavvurga ega deb topilganda – 90-100 (aʼlo) ball;
+bitiruvchi mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb(mavzu) boʻyicha tasavvurga ega deb topilganda – 71-89 (yaxshi) ball;
+bitiruvchi olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (mavzu) boʻyicha tasavvurga ega deb topilganda – 60-70 (qoniqarli) ball;
+bitiruvchi kasb dasturini oʻzlashtirmagan, kasbning (mavzuning) mohiyatini tushunmaganda- 0-59 (qoniqarsiz) ball.
+Nazorat turlarini oʻtkazish boʻyicha tuzilgan topshiriqlarning mazmuni oʻquvchining oʻzlashtirishini xolis (obyektiv) va aniq baholash imkoniyatini berishi lozim.
+O‘quvchilar bilimini baholash mezonlari
+Baholash usuli
+Topshiriq
+Baholash mezonlari
+Maksimal ball
+Baholash o‘tkazish vaqti
+Joriy nazorat
+Bajarilgan loyiha ishini
+	•	bajarilgan loyihaning belgilangan talablariga javob berishi; 
+	•	ilovaning asosiy funksiyalari to‘liq va xatosiz ishlashi;
+	•	foydalanuvchi kutilgan natijalarni olishi;
+	•	ilova interfeysi qulay, tushunarli va estetik jihatdan yaxshi dizaynlashganligi;
+	•	animatsiyalar va o‘zaro ta’sir elementlarining borligi;
+	•	kod toza, o‘qilishi oson, yaxshi tuzilganligi;
+	•	Mikrokontrollerlarni dasturlashda zamonaviy usullardan foydalanilganligi;
+	•	loyihaning maqsadi, ishlash printsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi.
+40 ball
+O‘quv jarayoni davomiyligida o‘tkaziladi
+Oraliq nazorat
+Yozma, topshiriqlar 
+	•	nazariy savollarga to‘liq va aniq javob berilganligi;
+	•	javoblar faktlarga asoslanganligi va xato yo‘qligi;
+	•	tushuntirish aniq va misollar bilan boyitilganligi;
+	•	matnda grammatik va imlo xatolarining kamligi;
+	•	muammoni tahlil qilinganligi va fikrlarni ifodalashdarajasi.
+20 ball
+Har chorak yakunida
+
+Amaliy topshiriqlar
+	•	belgilangan barcha funksiyalar to‘liq ishlashi;
+	•	kod o‘qilishi osonligi, izohlar mavjudligi, keraksiz takrorlanishlar  yo‘qligi;
+	•	zarur texnologiyalar  to‘g‘ri ishlatilganligi;
+	•	ilova barqarorligi va xatolar yo‘qligi.
+
+
+
+Test topshiriqlari
+	•	savollarga to‘g‘ri javob berganligi.
+
+
+Yakuniy nazorat
+Loyiha ishlarini yakuni bo‘yicha
+	•	bajarilgan loyihaning belgilangan talablariga javob berishi; 
+	•	ilovaning asosiy funksiyalari to‘liq va xatosiz ishlashi;
+	•	foydalanuvchi kutilgan natijalarni olishi;
+	•	ilova interfeysi qulay, tushunarli va estetik jihatdan yaxshi dizaynlashganligi;
+	•	animatsiyalar va o‘zaro ta’sir elementlarining borligi;
+	•	kod toza, o‘qilishi oson, yaxshi tuzilganligi;
+	•	Mikrokontrollerlarni dasturlashda zamonaviy usullardan foydalanilganligi;
+	•	loyihaning maqsadi, ishlash printsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi.
+40 ball
+O‘quv yili oxirida, kurs yakunida
+Jami
+
+
+100 ball
+
+Oraliq nazoratda  topshiriq  turlaring nazorat jarayonida faqat bitta turidan foydalanish mumkin.
+9. IOT (INTERNET OF THINGS — BUYUMLAR INTERNETI)  (ROBOTOTEXNIKA, 3D MODELLASHTIRISH) KASBI TAVSIFI
+9.1. Bitiruvchining kasbiy faoliyati sohalari
+IoT, Robototexnika va 3D modellashtirish yo‘nalishi bo‘yicha kasb-hunarga tayyorlash kursini to‘liq egallagan bitiruvchi korxonalarda, tashkilotlarda, maktabgacha taʼlim muassasalarida, umumiy o‘rta taʼlim maktablarida va laboratoriyalarda faoliyat yuritishi mumkin. U IoT qurilmalari, robot tizimlari va 3D modellashtirish loyihalari bilan ishlaydi. 
+9.2. Bitiruvchining kasbiga muvofiq kasbiy faoliyat obyektlari
+- turli turdagi IoT qurilmalari va sensor/aktuatorlar;
+- robototexnika qurilmalari (servo, motor, sensorlar);
+- 3D modellashtirish va prototiplash dasturlari (Tinkercad, Blender);
+- Zamonaviy tarmoq va bulut platformalari (Wi-Fi, Bluetooth, ThingSpeak, Blynk);
+- Sifatli materiallar va 3D printerlar kiradi
+9.3. IoT, Robototexnika va 3D modellashtirish kasbiy faoliyat turlari
+IoT va robot tizimlari ish o‘rnini tashkil etish va qurilmalarni sozlash;
+- Sensorlar va aktuatorlarni dastur orqali boshqarish;
+- 3D modellarni loyihalash va prototiplarni tayyorlash;
+- Qurilmalarni ishga tayyorlash, texnika va yong‘in xavfsizligi hamda sanitariya-gigiyena qoidalariga amal qilish;
+- IoT/robototexnika/3D modellashtirish mutaxassisi sifatida faoliyat ko‘rsatish;
+9.4. IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish)
+IoT, Robototexnika va 3D modellashtirish yo‘nalishi bitiruvchisi o‘z kasbiy bilimini chuqurlashtirish maqsadida maxsus kurslarda malakasini oshirishi, kollej, texnikum yoki oliy taʼlim muassasalarida o‘qishni davom ettirishi mumkin.
+10. KASBNING QOʻLLANISH SOHASI
+	Mazkur malaka talabi IoT (Internet of Things — Buyumlar Interneti), Robototexnika va 3D modellashtirish yo‘nalishi bo‘yicha umumiy o‘rta ta’lim muassasalarining 9-sinf o‘quvchilarini kasb-hunarga tayyorlash kurslari (keyingi o‘rinlarda – kasb-hunarga tayyorlash kurslari) doirasida zaruriy bilimlar mazmuni va kasbiy tayyorgarlik darajasiga qo‘yiladigan talablarni, shuningdek o‘quv yuklamalari hajmini va belgilangan talablarni bajarilishini nazorat qilishni belgilaydi.
+Malaka talablari kasbga tayyorlash tayyorgarligi sifati va darajasini baholashda asosiy mezon hisoblanadi. Ushbu talablarning bajarilishi IoT, Robototexnika va 3D modellashtirish yo‘nalishida kasbga tayyorlash bitiruvchilariga tegishli kasbiy darajaga ega ekanligini tasdiqlovchi davlat namunasidagi sertifikat berilishi uchun asos bo‘ladi.
+Mazkur malaka talablari kasbga tayyorlash oʻquv jarayonini tashkil etgan ta’lim muassasalari tomonidan tatbiq etilishi majburiydir.
+Mazkur talablarni bajargan umumiy o‘rta ta’lim tashkilotlarining 9-sinf o‘quvchilari O‘zbekiston Respublikasi Milliy malakalar ramkasining 2-darajali sertifikatiga ega bo‘ladi.
+.
+11. IOT (INTERNET OF THINGS — BUYUMLAR INTERNETI)  (ROBOTOTEXNIKA, 3D MODELLASHTIRISH) KASBIGA O‘QITISH NATIJALARI 
+11.1. Birinchi chorak uchun
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+1.1
+IoT texnologiyalarining nazariy asoslari va qo‘llanilishi
+IoT tushunchasi va qo‘llanish sohalari.
+	•	IoT (Internet of Things) tushunchasi va uning asosiy mazmunini tushunadi;
+	•	IoT tizimining asosiy tarkibiy qismlari (sensorlar, aktuatorlar, mikrokontrollerlar va tarmoqlar) haqida umumiy tushunchaga ega bo‘ladi;
+	•	IoT qurilmalarining ishlash prinsipi va o‘zaro bog‘lanishini tushunadi;
+	•	IoT texnologiyalarining turli sohalarda (uy, ofis, sanoat, tibbiyot, transport, qishloq xo‘jaligi) qo‘llanilishini biladi;
+	•	IoT tizimlarida ma’lumotlarni yig‘ish, uzatish va qayta ishlash jarayonlarini tushunadi;
+	•	IoT qurilmalarining bulut texnologiyalari bilan integratsiyasini tushunadi;
+	•	IoT tizimlarining amaliy ahamiyati, imkoniyatlari va xavfsizlik jihatlari haqida tasavvur hosil qiladi.
+
+1.2
+
+IoT arxitekturasi (sensorlar, aktuatorlar, tarmoq, bulut, foydalanuvchi interfeysi).
+	•	IoT arxitekturasining asosiy qatlamlari va tuzilishini tushunadi;
+	•	Sensorlar va aktuatorlarning vazifasi hamda ishlash prinsipini izohlay oladi;
+	•	Tarmoq komponentlari (Wi-Fi, MQTT, HTTP va boshqalar) orqali qurilmalar o‘zaro bog‘lanishini tushunadi;
+	•	Bulut texnologiyalarining IoT tizimidagi o‘rnini va funksiyasini tushuntira oladi;
+	•	Foydalanuvchi interfeysi (mobil ilova, veb interfeys) orqali IoT qurilmalarni boshqarish jarayonini tushunadi;
+	•	IoT tizimida ma’lumot oqimi: sensor → tarmoq → bulut → foydalanuvchi interfeysi ketma-ketligini tushunadi;
+	•	Oddiy IoT arxitektura modelini tahlil qila oladi va sxematik ko‘rinishda tasvirlay oladi.
+1.3
+
+Tinkercad.com virtual laboratoriyasida ro‘yxatdan o‘tish va ishlash
+	•	Tinkercad platformasida ro‘yxatdan o‘tish va loyiha yaratishni bajaradi;
+	•	Virtual laboratoriya interfeysini va asosiy funksiyalarini tushunadi;
+	•	Elektron komponentlarni (Arduino, LED, rezistor, sensorlar) virtual muhitga joylashtira oladi;
+	•	Elektron sxemalarni virtual tarzda ulash va simulyatsiya qilishni amalga oshiradi;
+	•	Tinkercad muhiti orqali kod yozish, tekshirish va ishga tushirishni bajaradi;
+	•	Simulyatsiya natijalarini kuzatish va xatoliklarni aniqlab tuzatish ko‘nikmasiga ega bo‘ladi.
+1.4
+
+Elektron sxema asosida bitta va ikki LED lampaning ishlash prinsipini o‘rganish va amaliy bajarish
+	•	LED lampaning ishlash prinsipi va elektr zanjirdagi rolini tushunadi;
+	•	Bitta LED bilan oddiy elektron sxemani tuza oladi;
+	•	Ikki LED lampani ketma-ket va parallel ulash farqlarini tushunadi;
+	•	Rezistorning LED zanjiridagi vazifasini izohlay oladi;
+	•	Arduino yoki manba orqali LEDni boshqarish asoslarini bajaradi;
+	•	Amaliy sxemani yig‘ish, sinovdan o‘tkazish va natijalarni tahlil qila oladi.
+
+1.5
+
+Arduino UNO yordamida LED indikatorlari va push-button bilan interaktiv interfeys yaratish
+	•	Arduino UNO platasining asosiy pinlari va funksiyalarini tushunadi;
+	•	Push-button va LED indikatorlarning ulanish sxemasini tuza oladi;
+	•	Raqamli kirish (input) va chiqish (output) tushunchalarini amalda qo‘llay oladi;
+	•	Tugma bosilganda LEDni boshqaruvchi dastur kodini yozadi;
+	•	Interaktiv interfeys yaratishda shart operatorlaridan foydalanishni o‘rganadi;
+	•	Arduino IDE muhitida kod yozish, tekshirish va yuklashni bajaradi;
+	•	Oddiy interaktiv boshqaruv tizimini amaliy loyihada qo‘llay oladi.
+1.6
+
+Breadboardda DIP switch (DPST) va LED yordamida oddiy elektron sikl yaratish
+	•	Breadboard tuzilishi va ishlash prinsipini tushunadi;
+	•	DIP switch (DPST) ning vazifasi va qo‘llanilishini izohlay oladi;
+	•	LED va DIP switch yordamida oddiy elektron zanjirni tuza oladi;
+	•	Elektr siklining ochiq va yopiq holatini amaliy ko‘rsatib bera oladi;
+	•	Elektron komponentlarni breadboardda to‘g‘ri joylashtirish ko‘nikmasiga ega bo‘ladi;
+	•	Yig‘ilgan sxemani tekshirish, xatolarni aniqlash va tuzatishni bajaradi.
+
+2.1
+
+IoT uchun asosiy qurilmalar (Arduino, ESP8266, ESP32, Raspberry Pi)
+	•	IoT tizimlarida qo‘llaniladigan asosiy qurilmalar haqida umumiy tushunchaga ega bo‘ladi;
+	•	Arduino, ESP8266, ESP32 va Raspberry Pi qurilmalarining vazifasi va farqlarini tushunadi;
+	•	Har bir qurilmaning IoT loyihalaridagi qo‘llanish sohalarini izohlay oladi;
+	•	Ushbu qurilmalarning texnik imkoniyatlari (Wi-Fi, GPIO, xotira) haqida tushunchaga ega bo‘ladi;
+	•	IoT loyihasi uchun mos mikrokontroller yoki platformani tanlash mezonlarini biladi;
+	•	Qurilmalar o‘rtasidagi o‘zaro ishlash va integratsiya jarayonini tushunadi;
+	•	Oddiy IoT loyihalarda ushbu qurilmalardan foydalanish ko‘nikmasini hosil qiladi.
+
+2.2
+
+Mikrokontroller tushunchasi va IoT qurilmalaridagi o‘rni
+	•	Mikrokontroller tushunchasi va asosiy funksiyalarini tushunadi;
+	•	Mikrokontroller va mikroprotsessor o‘rtasidagi farqni izohlay oladi;
+	•	IoT qurilmalarida mikrokontrollerning boshqaruv markazi sifatidagi rolini tushunadi;
+	•	Kirish-chiqish pinlari (GPIO) orqali qurilmalarni boshqarish prinsipini tushunadi;
+	•	Sensor va aktuatorlarni mikrokontroller bilan ulash jarayonini biladi;
+	•	Oddiy boshqaruv algoritmlarini mikrokontroller asosida amalga oshira oladi.
+
+2.3
+
+ESP8266 va ESP32 mikrokontrollerlari haqida umumiy tushuncha
+	•	ESP8266 va ESP32 mikrokontrollerlarining umumiy tuzilishi va imkoniyatlarini tushunadi;
+	•	Ularning o‘rnatilgan Wi-Fi va IoT uchun mos xususiyatlarini izohlay oladi;
+	•	ESP8266 va ESP32 o‘rtasidagi asosiy farqlarni (yadro, Bluetooth, tezlik) tushunadi;
+	•	Ushbu mikrokontrollerlarni IoT loyihalarda qo‘llash sohalarini biladi;
+	•	Arduino IDE muhitida ESP8266 va ESP32 bilan ishlash asoslarini tushunadi;
+	•	IoT tizimlarida real vaqt ma’lumot uzatishda ESP modullarining rolini tushuntira oladi.
+
+2.4
+Mikrokontrollerlar va IoT qurilmalari
+Arduino Uno va Tinkercad asosida ketma-ket ishlaydigan svetofor tizimini modellashtirish
+	•	Svetofor tizimining ishlash algoritmini tushunadi;
+	•	Arduino Uno va Tinkercad muhitida svetofor sxemasini tuza oladi;
+	•	LED lampalar orqali qizil, sariq va yashil signallarni boshqarishni amalga oshiradi;
+	•	Dasturiy sikl (loop) va vaqt kechikishi (delay) funksiyalaridan foydalanishni o‘rganadi;
+	•	Ketma-ket boshqaruv algoritmini kod shaklida yozib ishga tushira oladi;
+	•	Virtual simulyatsiya natijalarini kuzatish va tahlil qilishni bajaradi;
+	•	Oddiy avtomatlashtirilgan boshqaruv tizimi modelini yaratish ko‘nikmasiga ega bo‘ladi.
+
+2.5
+
+Arduino Uno va Tinkercad asosida seven segment indikatorli taymer bilan svetofor tizimini
+	•	Seven segment indikatorining tuzilishi va ishlash prinsipini tushunadi;
+	•	Taymer asosida svetofor boshqaruv algoritmini ishlab chiqadi;
+	•	Arduino bilan seven segment displeyni ulash va boshqarishni o‘rganadi;
+	•	Vaqt hisoblash (countdown) funksiyasini dasturiy amalga oshira oladi;
+	•	Svetofor signallarini taymer bilan sinxron ishlashini ta’minlay oladi;
+	•	Tinkercad muhitida murakkabroq elektron modelni simulyatsiya qiladi;
+	•	Amaliy loyihada vizual indikatsiya va avtomatik boshqaruvni integratsiya qila oladi.
+
+2.6
+
+Arduino asosida servo motorni tugmalar orqali boshqarish va holatini 7-segment displeyda ko‘rsatish
+	•	
+	•	Servo motorning ishlash prinsipi va boshqaruv usullarini tushunadi;
+	•	Tugmalar (push-button) orqali servo motorni boshqarish sxemasini tuza oladi;
+	•	PWM signali yordamida servo burchagini boshqarishni o‘rganadi;
+	•	Servo motor holatini 7-segment displeyda aks ettirishni amalga oshiradi;
+	•	Arduino dasturida kirish va chiqish qurilmalarini integratsiya qila oladi;
+	•	Interaktiv boshqaruv tizimini loyihalash va sinovdan o‘tkazish ko‘nikmasiga ega bo‘ladi.
+
+2.7
+
+Arduino Uno va Tinkercad muhitida 7-segmentli LED HT16K33 moduli asosida budilnik tizimini ishlab chiqish
+	•	HT16K33 modulining tuzilishi va ishlash prinsipini tushunadi;
+	•	7-segment displey modulini Arduino bilan ulash va sozlashni o‘rganadi;
+	•	Vaqtni ko‘rsatish va sozlash algoritmini ishlab chiqadi;
+	•	Budilnik (alarm) funksiyasini dasturiy jihatdan amalga oshira oladi;
+	•	Tugmalar orqali vaqt va signal sozlamalarini boshqarishni bajaradi;
+	•	Tinkercad muhitida elektron sxemani modellashtirish va simulyatsiya qilishni amalga oshiradi;
+	•	Aqlli qurilma (smart device) sifatida oddiy budilnik tizimini loyihalash ko‘nikmasiga ega bo‘ladi.
+
+3.1
+Dasturlash tillari va dasturlash muhiti
+IoT da ishlatiladigan dasturlash tillari (C/C++, Python, MicroPython)
+	•	IoT tizimlarida qo‘llaniladigan asosiy dasturlash tillari haqida tushunchaga ega bo‘ladi;
+	•	C/C++, Python va MicroPython tillarining IoT qurilmalaridagi o‘rnini tushunadi;
+	•	Turli mikrokontrollerlar uchun mos dasturlash tilini tanlash mezonlarini biladi;
+	•	IoT loyihalarda dasturlash tillarining afzallik va kamchiliklarini taqqoslay oladi;
+	•	Oddiy IoT qurilmalar uchun dastur yozish asoslarini tushunadi;
+	•	Dasturlash tillaridan foydalangan holda qurilmalarni boshqarish ko‘nikmasiga ega bo‘ladi.
+
+3.2
+
+Arduino IDE dasturi va undan foydalanish
+	•	Arduino IDE dasturining interfeysi va asosiy funksiyalarini tushunadi;
+	•	Arduino platasini tanlash va port sozlamalarini to‘g‘ri o‘rnatishni biladi;
+	•	Kutubxonalarni (libraries) o‘rnatish va ulardan foydalanishni o‘rganadi;
+	•	Oddiy dastur (sketch) yaratish va tahrirlash ko‘nikmasiga ega bo‘ladi;
+	•	Kodni kompilyatsiya qilish va xatoliklarni aniqlash jarayonini tushunadi;
+	•	Arduino IDE orqali dasturiy loyihalarni boshqarish va saqlashni bajaradi.
+
+3.3
+
+Kod yozish, tekshirish va qurilmaga yuklash jarayoni
+	•	Dastur kodini yozishning asosiy bosqichlarini tushunadi;
+	•	Kodni sintaktik tekshirish (verify) jarayonini amalga oshira oladi;
+	•	Qurilmaga dastur yuklash (upload) bosqichlarini izohlay oladi;
+	•	Kompilyatsiya jarayonida yuzaga keladigan xatolarni aniqlay oladi;
+	•	Dasturiy ta’minotni qurilma bilan sinxron ishlashini ta’minlay oladi;
+	•	Kodni optimallashtirish va to‘g‘ri tuzish ko‘nikmasiga ega bo‘ladi
+
+3.4
+
+Haqiqiy qurilmada test qilish va xatoliklarni bartaraf etish
+	•	IoT qurilmani real muhitda sinovdan o‘tkazish jarayonini tushunadi;
+	•	Qurilma ishlashidagi texnik va dasturiy xatolarni aniqlay oladi;
+	•	Serial Monitor orqali ma’lumotlarni kuzatish va tahlil qilishni o‘rganadi;
+	•	Ulanishdagi xatolar (pin, quvvat, sensor) ni aniqlash ko‘nikmasiga ega bo‘ladi;
+	•	Debugging jarayonining asosiy usullarini amalda qo‘llay oladi;
+	•	Qurilma ishlash samaradorligini tekshirish va yaxshilashni bajaradi.
+
+3.5
+
+Arduino asosida LCD displeyning kontrastini potensiometr yordamida boshqarish va analog qiymatlarni ekranda ko‘rsatish loyihasi.
+	•	LCD displeyning tuzilishi va ishlash prinsipini tushunadi;
+	•	Potensiometrning analog boshqaruv qurilmasi sifatidagi vazifasini izohlay oladi;
+	•	LCD displey va potensiometrni Arduino bilan ulash sxemasini tuza oladi;
+	•	Analog signalni o‘qish (analogRead) va qayta ishlashni o‘rganadi;
+	•	Analog qiymatlarni LCD displeyda aks ettirish dasturini yozadi;
+	•	Kontrast sozlash orqali displey sifatini boshqarishni amalga oshiradi;
+	•	Sensor ma’lumotlarini vizual ko‘rsatish ko‘nikmasiga ega bo‘ladi.
+
+
+11.2. Ikkinchi chorak uchun
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+3.6
+Dasturlash tillari va dasturlash muhiti
+
+Arduino asosida 4x4 keypad va LCD display yordamida oddiy kalkulyator yaratish.
+	•	4x4 keypad tuzilishi va ishlash prinsipini tushunadi;
+	•	Keypad va LCD displeyni Arduino bilan integratsiya qila oladi;
+	•	Foydalanuvchi kiritgan ma’lumotlarni qabul qilish algoritmini ishlab chiqadi;
+	•	Oddiy matematik amallarni (qo‘shish, ayirish, ko‘paytirish, bo‘lish) dasturiy amalga oshira oladi;
+	•	Natijalarni LCD displeyda chiqarishni bajaradi;
+	•	Kutubxonalar (Keypad, LiquidCrystal) bilan ishlash ko‘nikmasiga ega bo‘ladi;
+	•	Interaktiv foydalanuvchi interfeysiga ega qurilma yaratish ko‘nikmasini hosil qiladi.
+
+3.7
+
+Arduino asosida klaviatura, servo motor, LCD displey va buzzer yordamida aqlli xavfsizlik tizimini yaratish.
+	•	Aqlli xavfsizlik tizimining ishlash algoritmini tushunadi;
+	•	Klaviatura, servo motor, LCD va buzzer komponentlarini ulash sxemasini tuza oladi;
+	•	Parol kiritish va tekshirish dasturini ishlab chiqadi;
+	•	Servo motor orqali mexanik qulflash/boshqaruvni amalga oshira oladi;
+	•	Buzzer yordamida ogohlantirish signalini yaratishni o‘rganadi;
+	•	LCD displeyda tizim holatini aks ettirishni bajaradi;
+	•	Kompleks IoT qurilma komponentlarini integratsiya qilish ko‘nikmasiga ega bo‘ladi.
+
+3.8
+
+Arduino asosida Keypad va LCD yordamida parol bilan boshqariladigan elektron qulflash qurilmasini yaratish.
+	•	Elektron qulflash tizimining ishlash prinsipini tushunadi;
+	•	Keypad orqali parol kiritish mexanizmini dasturiy amalga oshira oladi;
+	•	LCD displeyda foydalanuvchi xabarlari va holatni ko‘rsatishni o‘rganadi;
+	•	To‘g‘ri va noto‘g‘ri parol holatlarini aniqlash algoritmini yozadi;
+	•	Xavfsizlik tizimlarida autentifikatsiya tushunchasini tushunadi;
+	•	Amaliy loyihada oddiy elektron xavfsizlik qurilmasini ishlab chiqish ko‘nikmasiga ega bo‘ladi
+
+4.1
+Sensorlar va ma’lumotlarni yig‘ish
+Sensorlarning turlari va ishlash prinsipi (harorat, namlik, harakat, yorug‘lik).
+	•	Turli xil sensorlar (harorat, namlik, harakat, yorug‘lik) turlari haqida tushunchaga ega bo‘ladi;
+	•	Sensorlarning ishlash prinsipi va o‘lchash mexanizmini tushunadi;
+	•	Analog va raqamli sensorlar o‘rtasidagi farqlarni izohlay oladi;
+	•	Sensorlarning IoT tizimlaridagi qo‘llanilish sohalarini biladi;
+	•	Sensorlardan olinadigan ma’lumotlarning fizik kattaliklar bilan bog‘liqligini tushunadi;
+	•	Amaliy loyihalarda mos sensorni tanlash ko‘nikmasiga ega bo‘ladi.
+
+4.2
+
+Sensorlardan ma’lumot olish va dastur orqali qayta ishlash.
+	•	Sensorlardan ma’lumot o‘qish jarayonini tushunadi;
+	•	Analog va raqamli signallarni dastur orqali qayta ishlashni o‘rganadi;
+	•	Sensor ma’lumotlarini o‘zgaruvchilarda saqlash va tahlil qilishni bajaradi;
+	•	Shart operatorlari asosida sensor ma’lumotlariga qarab boshqaruv algoritmini tuza oladi;
+	•	Sensor ma’lumotlarini vizual ko‘rsatish va monitoring qilishni tushunadi;
+	•	Real vaqt rejimida ma’lumotlarni qayta ishlash ko‘nikmasiga ega bo‘ladi.
+
+4.3
+
+Arduino va Flex sensor asosida egilish burchagini o'lchash hamda holatni RGB LED orqali vizual ogohlantirish tizimi.
+	•	Flex sensorning tuzilishi va ishlash prinsipini tushunadi;
+	•	Eglish burchagini o‘lchash uchun analog signalni o‘qishni o‘rganadi;
+	•	Arduino bilan Flex sensorni ulash va sozlashni bajara oladi;
+	•	RGB LED yordamida rangli vizual ogohlantirish tizimini yaratadi;
+	•	Sensor qiymatiga qarab ranglarni boshqarish algoritmini ishlab chiqadi;
+	•	Analog ma’lumotlarni qayta ishlash va kalibrlashni tushunadi;
+	•	Interaktiv monitoring va ogohlantirish tizimini loyihalash ko‘nikmasiga ega bo‘ladi.
+
+4.4
+
+Arduino Uno va Tinkercad.com virtual laboratoriya muhitida PIR (harakat sezuvchi sensor) harakatni sezuvchi tizimni yaratish va modellashtirish.
+	•	PIR sensorning ishlash prinsipi va qo‘llanilishini tushunadi;
+	•	Harakatni aniqlash algoritmini ishlab chiqadi;
+	•	Arduino va PIR sensor ulanish sxemasini tuza oladi;
+	•	Tinkercad muhitida harakat sezuvchi tizimni modellashtiradi;
+	•	Sensor signali asosida LED yoki signal qurilmasini boshqarishni amalga oshiradi;
+	•	Virtual simulyatsiya orqali tizim ishlashini tahlil qilish ko‘nikmasiga ega bo‘ladi.
+
+4.5
+
+Arduino UNO mikrokontrolleri yordamida TMP36 temperatura sensoridan harorat ma'lumotlarini o'qib, LCD displeyda real vaqt rejimida ko'rsatish va potensiometr orqali displey kontrastini sozlash tizimi.
+	•	TMP36 temperatura sensorining ishlash prinsipini tushunadi;
+	•	Analog harorat ma’lumotlarini o‘qish va qayta ishlashni o‘rganadi;
+	•	LCD displey va potensiometrni Arduino bilan ulash sxemasini tuza oladi;
+	•	Real vaqt rejimida haroratni o‘lchash va ekranda aks ettirishni bajaradi;
+	•	Analog qiymatlarni Selsiy darajaga aylantirish algoritmini tushunadi;
+	•	Displey kontrastini potensiometr orqali boshqarishni amalga oshiradi;
+	•	Sensorli monitoring tizimini amaliy loyihada qo‘llash ko‘nikmasiga ega bo‘ladi.
+4.6
+
+Arduino Uno mikrokontrolleri va MAX30102 puls oksimetr sensori yordamida yurak urish tezligini aniqlash.
+	•	MAX30102 sensorining ishlash prinsipi va biometrik o‘lchash asoslarini tushunadi;
+	•	Yurak urish tezligini aniqlash uchun sensor ma’lumotlarini o‘qishni o‘rganadi;
+	•	Arduino bilan puls oksimetr sensorini ulash va sozlashni bajara oladi;
+	•	Sensor ma’lumotlarini dastur orqali filtrlash va tahlil qilishni tushunadi;
+	•	Real vaqt rejimida yurak urish tezligini hisoblash algoritmini ishlab chiqadi;
+	•	O‘lchov natijalarini displey yoki Serial Monitor orqali ko‘rsatishni amalga oshiradi;
+	•	Biotibbiy IoT tizimlarida sensorlardan foydalanish ko‘nikmasiga ega bo‘ladi.
+
+  
+11.3. Uchinchi chorak uchun
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+5.1
+Aktuatorlar va aqlli IoT tizimlar.
+Aktuatorlar (motorlar, servo, rele, LED, buzzer) va ularni boshqarish.
+	•	Aktuator tushunchasi va IoT tizimlaridagi vazifasini tushunadi;
+	•	Motor, servo, rele, LED va buzzerning ishlash prinsipi haqida tushunchaga ega bo‘ladi;
+	•	Aktuatorlarni mikrokontroller bilan ulash sxemasini tuza oladi;
+	•	Raqamli va PWM signallar orqali aktuatorlarni boshqarishni o‘rganadi;
+	•	Turli aktuatorlarning qo‘llanish sohalarini izohlay oladi;
+	•	Amaliy loyihalarda aktuatorlarni boshqarish algoritmini ishlab chiqish ko‘nikmasiga ega bo‘ladi.
+5.2
+
+IoT qurilmasi loyihasida sensor va aktuatorlarni integratsiya qilish.
+	•	Sensor va aktuatorlarni yagona tizimga integratsiya qilish prinsipini tushunadi;
+	•	Kirish (sensor) va chiqish (aktuator) o‘rtasidagi bog‘lanishni izohlay oladi;
+	•	Sensor ma’lumotiga asoslangan avtomatik boshqaruv algoritmini tuza oladi;
+	•	IoT qurilmalarda real vaqt boshqaruv jarayonini tushunadi;
+	•	Integratsiyalashgan tizimlarda ma’lumot oqimini tahlil qila oladi;
+	•	Kompleks IoT loyihalarni loyihalashning asosiy bosqichlarini biladi.
+5.3
+
+Sensor va aktuatorlarni birlashtirib oddiy IoT qurilma yaratish (masalan, aqlli chiroq).
+	•	Oddiy IoT qurilma arxitekturasini tushunadi;
+	•	Sensor va aktuatorlarni birgalikda ishlashini ta’minlay oladi;
+	•	Aqlli chiroq kabi avtomatik boshqaruv tizimini loyihalashni o‘rganadi;
+	•	Shart operatorlari asosida qurilma boshqaruv dasturini yozadi;
+	•	Qurilmaning ishlash jarayonini sinovdan o‘tkazish va tahlil qilishni bajaradi;
+	•	Amaliy IoT qurilma yaratish bo‘yicha boshlang‘ich ko‘nikmaga ega bo‘ladi.
+
+5.4
+
+Tinkercad muhitida Arduino Uno va PIR sensor asosida Relay bilan boshqariladigan avtomatik LED yoritish tizimini loyihalash.
+	•	PIR sensor va relay modulining ishlash prinsipini tushunadi;
+	•	Arduino Uno bilan PIR va relay ulanish sxemasini tuza oladi;
+	•	Harakat aniqlanganda LEDni avtomatik yoqish algoritmini ishlab chiqadi;
+	•	Tinkercad muhitida elektron sxemani modellashtirish va simulyatsiya qilishni bajaradi;
+	•	Avtomatik yoritish tizimining dasturiy boshqaruvini amalga oshiradi;
+	•	Sensor signallarini qayta ishlash va rele orqali yuklamani boshqarishni o‘rganadi;
+	•	Aqlli yoritish tizimi modelini tahlil qilish va optimallashtirish ko‘nikmasiga ega bo‘ladi.
+
+5.5
+
+Arduino UNO va harorat sensor asosida haroratni LCD displeyda ko‘rsatish hamda LED va buzzer orqali ogohlantirish tizimi.
+	•	Harorat sensorining ishlash prinsipi va o‘lchash mexanizmini tushunadi;
+	•	Harorat ma’lumotlarini o‘qish va LCD displeyda aks ettirishni o‘rganadi;
+	•	Belgilangan harorat chegarasiga ko‘ra ogohlantirish algoritmini ishlab chiqadi;
+	•	LED va buzzer orqali vizual va ovozli ogohlantirish tizimini yaratadi;
+	•	Sensor, displey va aktuatorlarni yagona tizimga integratsiya qila oladi;
+	•	Real vaqt monitoring va ogohlantirish tizimini loyihalash ko‘nikmasiga ega bo‘ladi;
+	•	Amaliy IoT monitoring tizimining ishlashini tahlil qila oladi.
+
+5.6
+
+Avtomatik xona yoritish tizimi arduino, PIR motion va LDR sensorlari asosida loyihalash.
+	•	PIR va LDR sensorlarining birgalikda ishlash prinsipini tushunadi;
+	•	Yorug‘lik darajasi va harakat ma’lumotlarini birgalikda tahlil qilishni o‘rganadi;
+	•	Arduino bilan ko‘p sensorli tizim ulanish sxemasini tuza oladi;
+	•	Avtomatik yoritish uchun mantiqiy boshqaruv algoritmini ishlab chiqadi;
+	•	Energiya tejamkor aqlli yoritish tizimini loyihalash ko‘nikmasiga ega bo‘ladi;
+	•	Sensor ma’lumotlariga asoslangan qaror qabul qilish dasturini yozadi;
+	•	Amaliy smart home tizimining oddiy modelini yaratadi.
+
+5.7
+
+Arduino asosida PIR harakat sensori bilan avtomatik yoritish tizimini loyihalash va modellashtirish.
+	•	PIR harakat sensorining ishlash prinsipi va qo‘llanilishini tushunadi;
+	•	Harakat aniqlash asosida yoritish tizimini boshqarish algoritmini tuza oladi;
+	•	Arduino va PIR sensor ulanish sxemasini to‘g‘ri loyihalay oladi;
+	•	LED yoki lampani avtomatik boshqarish dasturini yozadi;
+	•	Tizimni modellashtirish va sinovdan o‘tkazish ko‘nikmasiga ega bo‘ladi;
+	•	Aqlli yoritish tizimining amaliy qo‘llanilishini tushunadi.
+
+5.8
+
+Arduino orqali releni boshqarish va yorug‘lik darajasiga qarab avtomatik yoqish/o‘chirish tizimi.
+	•	Rele modulining ishlash prinsipi va yuklama boshqaruvidagi rolini tushunadi;
+	•	LDR yoki yorug‘lik sensoridan ma’lumot o‘qishni o‘rganadi;
+	•	Yorug‘lik darajasiga asoslangan avtomatik boshqaruv algoritmini ishlab chiqadi;
+	•	Arduino orqali rele yordamida qurilmalarni yoqish va o‘chirishni amalga oshiradi;
+	•	Energiya samarador aqlli boshqaruv tizimini loyihalash ko‘nikmasiga ega bo‘ladi;
+	•	Sensor va aktuatorlarga asoslangan avtomatlashtirilgan IoT tizimini tahlil qila oladi.
+
+6.1
+IoT tarmoqlari va protokollar.
+IoT qurilmalarda Wi-Fi va Bluetooth ulanishi.
+	•	IoT qurilmalarda simsiz aloqa texnologiyalari (Wi-Fi va Bluetooth) tushunchasini biladi;
+	•	Wi-Fi va Bluetooth o‘rtasidagi asosiy farqlarni izohlay oladi;
+	•	IoT qurilmalarni simsiz tarmoqqa ulash jarayonini tushunadi;
+	•	Ma’lumotlarni simsiz uzatish va qabul qilish prinsipini tushunadi;
+	•	IoT loyihalarda mos aloqa texnologiyasini tanlash mezonlarini biladi;
+	•	Simsiz ulanish asosida oddiy IoT tizimlarni loyihalash ko‘nikmasiga ega bo‘ladi.
+
+6.2
+
+MQTT va HTTP protokollari.
+	•	MQTT va HTTP protokollarining asosiy vazifasi va ishlash prinsipini tushunadi;
+	•	IoT tizimlarida ma’lumot uzatishda protokollarning rolini izohlay oladi;
+	•	MQTT (publish/subscribe) va HTTP (request/response) modelini taqqoslay oladi;
+	•	Real vaqt ma’lumot almashinuvida MQTT protokolining afzalliklarini tushunadi;
+	•	IoT qurilmalar va server o‘rtasidagi aloqa jarayonini tahlil qila oladi;
+	•	Amaliy IoT loyihalarda mos protokolni tanlash ko‘nikmasiga ega bo‘ladi.
+6.3
+
+IoT qurilmalarda REST API ishlatish
+	•	REST API tushunchasi va uning IoT tizimlaridagi o‘rnini tushunadi;
+	•	IoT qurilmalar va bulut/server o‘rtasida API orqali ma’lumot almashish jarayonini biladi;
+	•	GET, POST, PUT, DELETE so‘rovlarining asosiy vazifalarini tushunadi;
+	•	JSON formatida ma’lumot yuborish va qabul qilishni tushunadi;
+	•	API orqali sensor ma’lumotlarini uzatish algoritmini izohlay oladi;
+	•	IoT qurilmani veb yoki bulut platformasi bilan integratsiya qilish ko‘nikmasiga ega bo‘ladi.
+
+6.4
+
+Arduino Uno va Tinkercad.com virtual laboratoriya muhitida PIR (harakat sezuvchi sensor) harakatni sezuvchi sensor va servo motor asosida aqlli eshikni loyihalash.
+	•	PIR sensor va servo motorning ishlash prinsipini tushunadi;
+	•	Harakat aniqlash asosida aqlli eshik boshqaruv algoritmini ishlab chiqadi;
+	•	Arduino Uno bilan PIR sensor va servo motor ulanish sxemasini tuza oladi;
+	•	Servo motor yordamida eshik ochish va yopish mexanizmini boshqaradi;
+	•	Tinkercad muhitida tizimni modellashtirish va simulyatsiya qilishni bajaradi;
+	•	Sensor ma’lumotiga asoslangan avtomatik boshqaruv dasturini yozadi;
+	•	Smart home tizimlarida aqlli eshik modelini loyihalash ko‘nikmasiga ega bo‘ladi.
+
+6.5
+
+Tinkercad.com virtual laboratoriya muhitida Arduino Uno va ultratovush (HC-SR04) sensori asosida sensor va obyekt o‘rtasidagi masofani hisoblash.
+	•	HC-SR04 ultratovush sensorining ishlash prinsipini tushunadi;
+	•	Masofa o‘lchash algoritmini (echo va trigger signallari) tushunadi;
+	•	Arduino bilan ultratovush sensor ulanish sxemasini tuza oladi;
+	•	O‘lchangan masofani dastur orqali hisoblash va qayta ishlashni o‘rganadi;
+	•	Natijalarni Serial Monitor yoki displeyda aks ettirishni bajaradi;
+	•	Tinkercad muhitida sensor asosidagi o‘lchov tizimini modellashtira oladi.
+
+6.6
+
+PIR sensorlari asosida universal odam sanash va xonalar monitoringi tizimini loyihalash.
+	•	PIR sensorlari yordamida harakatni aniqlash prinsipini tushunadi;
+	•	Odam kirish-chiqishini aniqlash algoritmini ishlab chiqadi;
+	•	Ko‘p sensorli monitoring tizimi arxitekturasini tushunadi;
+	•	Arduino bilan PIR sensorlarini integratsiya qilishni bajara oladi;
+	•	Xonadagi odamlar sonini hisoblash va monitoring qilish dasturini yozadi;
+	•	Real vaqt rejimida monitoring tizimini modellashtirish ko‘nikmasiga ega bo‘ladi;
+	•	Aqlli bino (smart building) tizimlarida monitoring tizimlarining amaliy ahamiyatini tushunadi.
+
+
+
+
+
+
+
+11.4. To‘rtinchi chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+7.1
+Bulut texnologiyalari va ma’lumotlar bilan ishlash.
+IoT qurilmalarning bulut platformalari bilan ma’lumot almashinuvi.
+	•	IoT qurilmalar va bulut platformalari o‘rtasidagi ma’lumot almashinuvi jarayonini tushunadi;
+	•	Sensor ma’lumotlarini bulutga yuborish va saqlash prinsipini biladi;
+	•	IoT tizimlarida real vaqt ma’lumot uzatish jarayonini izohlay oladi;
+	•	Bulut orqali masofadan monitoring va boshqaruv imkoniyatlarini tushunadi;
+	•	IoT qurilmalarni server yoki bulut tizimi bilan integratsiya qilishni o‘rganadi;
+	•	Ma’lumot xavfsizligi va uzatish ishonchliligi haqida tushunchaga ega bo‘ladi.
+
+7.2
+
+Blynk platformasi va mobil ilova integratsiyasi.
+	•	Blynk platformasining IoT tizimlaridagi vazifasini tushunadi;
+	•	Mobil ilova orqali IoT qurilmalarni boshqarish jarayonini biladi;
+	•	Arduino yoki ESP qurilmasini Blynk platformasiga ulashni o‘rganadi;
+	•	Virtual pinlar orqali ma’lumot uzatish va qabul qilishni tushunadi;
+	•	Real vaqt monitoring va masofadan boshqaruv interfeysini yaratadi;
+	•	IoT loyihalarda mobil boshqaruv tizimini loyihalash ko‘nikmasiga ega bo‘ladi.
+
+7.3
+
+Ubidots va boshqa bulut servislarida IoT loyihalari.
+	•	Ubidots va boshqa IoT bulut servislarining imkoniyatlarini tushunadi;
+	•	IoT qurilmalarni bulut platformalariga ulash bosqichlarini biladi;
+	•	Sensor ma’lumotlarini bulutga yuborish va qayta ishlashni o‘rganadi;
+	•	Dashboard va monitoring tizimlarini yaratish jarayonini tushunadi;
+	•	Turli bulut platformalarini taqqoslash va mos servisni tanlashni biladi;
+	•	Amaliy IoT loyihalarni bulut asosida boshqarish ko‘nikmasiga ega bo‘ladi.
+
+7.4
+
+Ma’lumotlarni vizualizatsiya qilish (grafik, jadval, dashboard).
+	•	IoT tizimlarida ma’lumotlarni vizualizatsiya qilish tushunchasini biladi;
+	•	Grafik, jadval va dashboardlar orqali ma’lumotlarni tahlil qilishni tushunadi;
+	•	Real vaqt ma’lumotlarini vizual ko‘rsatish usullarini o‘rganadi;
+	•	Monitoring interfeyslarini loyihalash asoslarini biladi;
+	•	Sensor ma’lumotlarini grafik ko‘rinishda taqdim etish ko‘nikmasiga ega bo‘ladi;
+	•	Vizualizatsiya orqali qaror qabul qilish jarayonini tushunadi.
+
+7.5
+
+Arduino Uno va gaz sensori yordamida xonada gaz mavjudligini aniqlash va LED orqali vizual aks ettirish tizimini yaratish.
+	•	Gaz sensorining ishlash prinsipi va qo‘llanilishini tushunadi;
+	•	Gaz mavjudligini aniqlash algoritmini ishlab chiqadi;
+	•	Arduino bilan gaz sensor va LED ulanish sxemasini tuza oladi;
+	•	Sensor ma’lumotiga asoslangan vizual ogohlantirish tizimini yaratadi;
+	•	Real vaqt gaz monitoring tizimini loyihalash ko‘nikmasiga ega bo‘ladi;
+	•	Amaliy xavfsizlik tizimlarida gaz sensorlarining ahamiyatini tushunadi.
+
+7.6
+
+Arduino Uno va gaz sensori asosida gaz miqdorini uch darajada aniqlash va LED indikatorlar yordamida ko‘rsatish.
+	•	Gaz miqdorini o‘lchash va darajalarga ajratish prinsipini tushunadi;
+	•	Sensor ma’lumotlarini past, o‘rta va yuqori darajalarga ajratishni o‘rganadi;
+	•	Bir nechta LED indikatorlar orqali holatni ko‘rsatish algoritmini ishlab chiqadi;
+	•	Arduino dasturida shart operatorlari asosida boshqaruvni amalga oshiradi;
+	•	Ko‘p darajali ogohlantirish tizimini loyihalash ko‘nikmasiga ega bo‘ladi;
+	•	Amaliy gaz xavfsizlik monitoring tizimini yaratishni o‘rganadi.
+
+7.7
+
+Arduino Uno, gaz sensori, LED, buzzer va LCD displey yordamida gaz miqdorini aniqlash va ko‘rsatish tizimini yaratish.
+	•	Gaz sensori, LCD, LED va buzzer komponentlarini integratsiya qilishni tushunadi;
+	•	Gaz miqdorini o‘qish va LCD displeyda aks ettirishni o‘rganadi;
+	•	Xavfli holatlarda buzzer orqali ovozli ogohlantirish tizimini yaratadi;
+	•	Vizual va ovozli signalizatsiya tizimini dasturiy boshqaradi;
+	•	Real vaqt monitoring va ogohlantirish algoritmini ishlab chiqadi;
+	•	Sensor va aktuatorlarga asoslangan kompleks IoT tizimini loyihalay oladi;
+	•	Xavfsizlikka yo‘naltirilgan aqlli monitoring qurilmasini yaratish ko‘nikmasiga ega bo‘ladi.
+
+7.8
+
+Arduino mikrokontrolleri yordamida gaz kontsentratsiyasini aniqlash, xavfli vaziyatlarda ogohlantirish va avtomatik shamollatish tizimini yaratish.
+	•	Gaz kontsentratsiyasini o‘lchash va tahlil qilish prinsipini tushunadi;
+	•	Xavfli gaz darajasini aniqlash algoritmini ishlab chiqadi;
+	•	Buzzer, fan yoki rele orqali avtomatik shamollatish tizimini boshqaradi;
+	•	Sensor ma’lumotlariga asoslangan avtomatik qaror qabul qilishni o‘rganadi;
+	•	IoT asosidagi xavfsizlik tizimlarini loyihalash ko‘nikmasiga ega bo‘ladi;
+	•	Real vaqt ogohlantirish va himoya tizimini modellashtira oladi;
+	•	Aqlli xavfsizlik va monitoring tizimlarining amaliy ahamiyatini tushunadi.
+
+7.9
+
+Arduino Uno va Soil Moisture Sensor yordamida tuproq namligini o‘lchash hamda LED indikatorlar orqali holatini ko‘rsatish.
+	•	Tuproq namligi sensorining ishlash prinsipini tushunadi;
+	•	Tuproq namligini o‘lchash va tahlil qilishni o‘rganadi;
+	•	Arduino bilan soil moisture sensor va LED ulanish sxemasini tuza oladi;
+	•	Namlik darajasiga qarab LED indikatorlarni boshqarish algoritmini ishlab chiqadi;
+	•	Aqlli qishloq xo‘jaligi (smart agriculture) tizimlarining asoslarini tushunadi;
+	•	Sensor ma’lumotlariga asoslangan monitoring tizimini yaratish ko‘nikmasiga ega bo‘ladi.
+
+7.10
+
+Arduino Uno va Tinkercad virtual laboratoriyasi asosida LCD displey, tuproq namligi sensori, LED va buzzer yordamida aqlli sug‘orish va ogohlantirish tizimini modellashtirish.
+	•	Aqlli sug‘orish tizimining ishlash prinsipini tushunadi;
+	•	Tuproq namligi sensoridan ma’lumot o‘qish va qayta ishlashni o‘rganadi;
+	•	LCD displeyda namlik qiymatlarini real vaqt rejimida ko‘rsatishni bajaradi;
+	•	LED va buzzer orqali ogohlantirish tizimini yaratadi;
+	•	Tinkercad muhitida kompleks tizimni modellashtirish va simulyatsiya qilishni amalga oshiradi;
+	•	Avtomatik sug‘orish uchun mantiqiy boshqaruv algoritmini ishlab chiqadi;
+	•	Smart agriculture uchun IoT asosidagi monitoring va boshqaruv tizimini loyihalash ko‘nikmasiga ega bo‘ladi.
+
+
+
+12. IOT (INTERNET OF THINGS — BUYUMLAR INTERNETI)  (ROBOTOTEXNIKA, 3D MODELLASHTIRISH) KURSI BO‘YICHA LOYIHA ISHLARI.
+IoT (Internet of Things — Buyumlar interneti), (Robototexnika, 3D modellashtirish) kursi davomida bajariladigan loyihalar o‘tilgan mavzular doirasida beriladi va joriy nazorat ishlarini baholashda asos bo‘ladi. Kursda tahsil olayotgan har bir o‘quvchiga loyiha topshiriqlari individual tarzda beriladi. Berilgan loyihalarni kurs davomida yoki yakuniy loyiha sifatida bajarish mumkin.
+№
+Loyiha mavzulari
+	•	
+Aqlli uy tizimi yaratish (chiroq, eshik, harorat boshqaruvi).
+	•	
+Aqlli issiqxona loyihasi (harorat, namlik va sug‘orishni avtomatlashtirish).
+	•	
+IoT asosida harakat sezuvchi xavfsizlik tizimi yaratish.
+	•	
+Masofadan boshqariladigan robot yaratish.
+	•	
+IoT orqali suv yoki energiya iste’molini kuzatish tizimi yaratish.
+	•	
+3D printer yordamida robot yoki IoT qurilmasi korpusini loyihalash.
+	•	
+Aqlli ob-havo monitoring qurilmasi yaratish.
+	•	
+Aqlli ob-havo monitoring qurilmasi yaratish.
+	•	
+Robot yordamida oddiy vazifalarni bajaruvchi avtomatlashtirilgan tizim yaratish.
+	•	
+IoT qurilmalarini mobil ilova orqali boshqarish (masofadan).
+	•	
+Aqlli shahar loyihasi (transport va yo‘l harakatini monitoring qilish).
+	•	
+IoT orqali sog‘liqni nazorat qiluvchi tizim yaratish.
+	•	
+Oddiy robot arxitekturasi va sensor integratsiyasi bilan loyihani tayyorlash.
+	•	
+3D modellashtirish orqali robot yoki IoT prototipini tayyorlash.
+	•	
+IoT qurilmalarining energiya iste’moli monitoringini amalga oshirish.
+	•	
+Masofaviy robot yoki IoT qurilmasini mobil ilova orqali boshqarish.
+	•	
+IoT asosida avtomatik signal tizimi yaratish.
+	•	
+Aqlli transport tizimi loyihasi (yo‘nalish va vaqtni kuzatish).
+	•	
+IoT orqali maishiy qurilmalarni avtomatlashtirish tizimi yaratish.
+ 
+13. IOT (INTERNET OF THINGS — BUYUMLAR INTERNETI)  (ROBOTOTEXNIKA, 3D MODELLASHTIRISH)  XONASI UCHUN QOʻYILADIGAN UMUMIY TALABLAR
+IoT, Robototexnika va 3D modellashtirish xonasi maktab binosining ikki va undan yuqori qavatda alohida binoda joylashgan bo‘lishi kerak;
+	•	Xonaning umumiy maydoni 69 m² bo‘lishi tavsiya etiladi;
+	•	Barcha o‘quv xonalari tabiiy va sun’iy kombinatsiyalangan yoritishga ega bo‘lishi kerak;
+	•	Xona harorati 17-22o C boʻlishi kerak.
+IoT, Robototexnika va 3D modellashtirish xonasi  mashgʻulotlar boshlanishidan oldin va tugagandan soʻng, shamollatiladi. Shamollatishning davomiyligi ob-havo sharoiti, shamolning yoʻnalishi va tezligi, isitish tizimining samaradorligi bilan belgilanadi.
+IoT, Robototexnika va 3D modellashtirish xonasi  uchun ajratilgan xonadagi haroratni meʼyorida saqlab turish uchun sovutish va isitish tizimi (konditsioner) oʻrnatilgan boʻlishi kerak. 
+IoT, Robototexnika va 3D modellashtirish xonasi uchun ajratilgan xonada birinchi tibbiy yordam koʻrsatish uchun tibbiy toʻplamlar boʻlishi kerak.
+IoT, Robototexnika va 3D modellashtirish xonasi uchun quyidagi boʻyoq ranglarini qoʻllash tavsiya etiladi: shiftlar uchun moviy rang, devorlar uchun — qaymoq rang, pushti, yashil, koʻk ranglarning ochiq ohanglari, mebel (shkaflar, stollar) uchun — tabiiy yoki och jigarrang, toʻq  jigarrang; eshiklar, deraza romlari uchun — oq ranglar.
+14. IOT (INTERNET OF THINGS — BUYUMLAR INTERNETI)  (ROBOTOTEXNIKA, 3D MODELLASHTIRISH)  KASBIGA OʻQITISH XONASINI JIHOZLASHGA QOʻYILGAN TALABLAR
+T/r
+Jihoz nomi
+Oʻlchov birligi
+Soni
+Jihoz rasmi
+1.
+Monitor uzunligi toʻgʻridan — toʻgʻri 1920 pixels 1080 pixels boʻlishi kerak. 
+toʻplam
+1
+
+2.
+UHD-384x2160-4k,
+QHD-2560X1440
+FHD-1920X1080
+HD-1280X720
+toʻplam
+1
+
+3.
+Processor boʻyi 22x27
+ATX/EATX
+toʻplam
+1
+
+4.
+Kompyuter klaviaturasi oʻlchami 445-mm 136-mm
+dona
+1
+
+5.
+Kompyuter sichqonchasi oʻlchami 101-mm 75-mm
+dona
+1
+
+
+15. IOT (INTERNET OF THINGS — BUYUMLAR INTERNETI)  (ROBOTOTEXNIKA, 3D MODELLASHTIRISH)  KASBIGA OʻRGATISH UCHUN ZARUR BOʻLADIGAN XOM ASHYOLAR ROʻYXATI
+T/r 
+Xom ashyo va materiallar nomi 
+Oʻlchov birligi
+Bir oʻquvchi uchun belgilangan miqdor 
+1.
+Mikrokontrollerlar to‘plami (Arduino Uno, ESP32, ESP8266, Raspberry Pi va h.k).
+dona
+1
+2.
+Sensorlar to‘plami (DHT11, PIR, LDR, HC-SR04 va h.k).
+dona
+1
+3.
+Aktuatorlar to‘plami (servo, motor, relay va h.k).
+dona
+1
+4.
+IoT tizimlar uchun bulutli platformalar (Thingspeak, Blynk va Ubidots).
+dona
+1
+5.
+Dasturiy vositalar (Arduino IDE, Python +Flask, MQTT broker)
+dona
+1
+6.
+Dasturiy vositalar (Tinkercad.com, Wokwi.com va Blender).
+dona
+1
+7.
+Robot uchun 3D printer+PLA filament
+dona
+1
+8
+Robot uchun (Shassi, motorlar, L298N va batareya modullari.)
+dona
+1
+
+16. KASBIY TAʼLIM USTASI LAVOZIMIGA QOʻYILADIGAN TALABLAR
+T/r
+Lavozim nomi
+Ta’lim darajasi
+Malakaviy talablar
+Ish tajribasi va shaxsiy sifatlari
+1
+
+
+IoT (Internet of Things — Buyumlar interneti)  (robototexnika, 3D modellashtirish) yo‘nalishi bo‘yicha mentor.
+Oliy ma’lumot
+IoT tizimlari, Robototexnika va dasturlash 
+IoT (Buyumlar interneti), robototexnika, dasturlash bo‘yicha chuqur nazariy va amaliy bilimga ega; IoT arxitekturasi, sensorlar, aktuatorlar, bulut platformalari (ThingSpeak, Blynk, Ubidots), mikrokontrollerlar (Arduino, ESP8266, ESP32, Raspberry Pi) bo‘yicha mustahkam ko‘nikmalarga ega;   IoT qurilmalarini yig‘ish, ulash, dasturlash va bulutga integratsiya qilish bo‘yicha loyiha tajribasiga ega;  jamoa bilan ishlash, o‘quvchilar bilan samarali muloqot qilish, ularga motivatsiya bera olish, murakkab jarayonlarni sodda qilib tushuntirib bera olish qobiliyatlariga ega;
+
+
+Lavozim vazifalari:
+biriktirilgan guruhlarda о‘quv amaliyoti mashgʻulotlarni о‘tish, ishlab chiqarish amaliyotiga rahbarlik qilish; 
+о‘quv ustaxonalarida, poligonlarda va о‘quv xо‘jaligida jihozlar va texnika vositalarini amaliy mashgʻulotlarga tayyorlash; 
+kerak bо‘ladigan xom-ashyo va materiallarni tayyorlash, texnologik xaritalarni ishlab chiqish, mashgʻulotga sarf bо‘ladigan xom-ashyo sarfini aniqlash, hisobini yuritish;
+о‘quvchilarni oraliq, bitiruv amaliy imtihonlarini topshirishga tayyorlash, biriktirilgan guruhlarda tarbiyaviy ish olib borish, о‘quv mashgʻulot jurnallarini yuritish va saqlash; 
+taʼlim-tarbiya jarayoni davomida о‘quv-texnika jihozlari va vositalaridan, ustaxonalardan, maktabga qarashli jihozlardan ehtiyotkorlik bilan foydalanish;
+tanlab olingan kasb-hunarni egallash jarayonida о‘quvchilarning kasbiy layoqat, kо‘nikma va malakalarini shakllantirish;
+kasb-hunarga tayyorlash tizimi va mazmunini jamiyat ehtiyojlaridan, fan, madaniyat va zamonaviy innovatsion texnika yutuqlaridan kelib chiqqan holda takomillashtirish;
+ish о‘rinlarini jihozlash, yongʻinga qarshi himoya, xavfsizlik texnikasi va mehnatni muhofaza qilish qoidalari va meʼyorlarining bajarilishini taʼminlash. 
+Bilishi kerak:
+Taʼlimga oid О‘zbekiston Respublikasi qonunlarini, kasbiy va amaliy faoliyatga tegishli masalalar bо‘yicha meʼyoriy va uslubiy hujjatlarni, mehnat qonunchiligi, mehnat muhofazasining qoidalari va meʼyorlarini, xavfsizlik texnikasi qoidalarini.
+Malaka talablari: 
+Pedagogik, muhandis-pedagogik yoki biriktirilgan guruh tayyorlov yо‘nalishiga mos ravishda kamida oʻrta maxsus maʼlumotga ega boʻlishi kerak. 
+
+17. 9-SINF OʻQUVCHILARIGA QOʻYILGAN UMUMIY MALAKA TALABLARI
+Bilim
+Sensorlar va aktuatorlarning nima ekanligini va ular bilan ishlash qoidalarini, IoT qurilmalarini dasturlash dasturlarini o‘rnatish va ishlatishni, robototexnika tizimlarini masofadan boshqarish asoslarini, hamda dasturlash asoslari va IoT, robototexnika loyihalarini yaratish bilimlariga ega bo‘lishi kerak.
+Koʻnikma
+IoT qurilmalarini dasturlash va sozlash, sensorlar va aktuatorlar bilan ishlash, robototexnika tizimlarini masofadan boshqarish, 3D modellashtirish muhitlarida qurilma detallarini loyihalash, IoT va robototexnika loyihalarini yaratish uchun zarur dasturlarni o‘rnatish va ulardan foydalanish koʻnikmalariga ega boʻlishi kerak.
+Kompetensiya
+IoT qurilmalarini dasturlash va sozlash, sensorlar va aktuatorlar bilan ishlash, mikrokontrollerlar orqali qurilmalarni boshqarish, robototexnika tizimlarini masofadan boshqarish va ulash imkoniyatlarini qo‘llash, 3D modellashtirish muhitlarida qurilma detallarini yaratish, joylashtirish, tahrirlash va loyihalarni formatlash, hamda IoT va robototexnika loyihalarida zarur dasturiy vositalardan foydalanish va murakkab effektlar qo‘llash kompetensiyalariga ega bo‘lishi kerak.
+
+18. FOYDALANILGAN ADABIYOTLAR VA ELEKTRON  MANBALAR ROʻYXATI
+Foydalanilgan adabiyotlar roʻyxati.
+	•	Raj Kamal, “Internet of Things” Architecture and Design Principles, <<McGraw Hill Education (India) Private Limited >> 2017, 551 pages. ISBN-13: 978-93-5260-522-4.
+	•	Х.Н. Зайнидинов, С.У. Махмуджанов, И.Юсупов, Н.С. Маматов Интернет вещей (учебное). T., «Aloqachi», 2023, 206 стр.
+	•	M. Kranz, Building the Internet of Things, 2017, Hoboken, New Jersey: JohnWiley & Sons, Inc.
+	•	Mr.M. Anantha Guptha, “Internet of Things & Its applications”, Lecture notes, 2021, 146 pages.
+	•	Н. В. Папуловская, “Основы интернета вещей”, Учебно-методическое пособие, Уральский федеральный университет, 2022, 104 pages, ISBN 978-5-7996-3537-4
+	•	П.А. Кокунин, И.И. Латыпов, Л.С. Латыпова, “Введение в интернет вещей”, Учебное пособие 2022, 148 pages, ISBN 978-5-00130-649-8
+
+Elektron manbalar.
+	1. https://www.espressif.com/en/products/socs/esp8266
+2. https://docs.espressif.com/projects/esp-idf/en/latest/esp32/
+3. https://www.raspberrypi.org/documentation
+4. https://learn.adafruit.com/
+5. https://thingspeak.com/docs
+6. https://docs.blynk.io/
+7. https://www.tinkercad.com/learn/design
+8. https://www.iotsecurityfoundation.org/
+
+
+

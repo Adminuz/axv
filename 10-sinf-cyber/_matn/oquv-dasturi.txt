@@ -1,0 +1,1291 @@
+OʻZBEKISTON RESPUBLIKASI  RAQAMLI TEXNOLOGIYALAR VAZIRLIGI
+	
+RAQAMLI TA’LIMNI RIVOJLANTIRISH
+
+“MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN 
+KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) YO‘NALISHI BO‘YICHA O‘QUV DASTURI
+(10-SINFLAR UCHUN)
+	
+
+
+
+
+
+
+
+
+
+
+
+
+Toshkent – 2025
+MUNDARIJA
+ TOC \o "1-3" \h \z \u  HYPERLINK \l "_Toc214608411" 1. Dasturda qoʻllanilgan tayanch atamalar	 PAGEREF _Toc214608411 \h 3
+ HYPERLINK \l "_Toc214608412" 2. Kiberxavfsizlik (penetration testing va ethical hacking) kasbining tayanch oʻquv rejasi	 PAGEREF _Toc214608412 \h 5
+ HYPERLINK \l "_Toc214608413" 3. Kiberxavfsizlik (penetration testing va ethical hacking) kasbiga tayyorlashning muddati	 PAGEREF _Toc214608413 \h 6
+ HYPERLINK \l "_Toc214608414" 4. Kiberxavfsizlik (penetration testing va ethical hacking) kasbi oʻquv mavzu rejasi	 PAGEREF _Toc214608414 \h 7
+ HYPERLINK \l "_Toc214608415" 5. Kiberxavfsizlik (penetration testing va ethical hacking) kasbi oʻquv dasturi	 PAGEREF _Toc214608415 \h 10
+ HYPERLINK \l "_Toc214608416" 6. Kiberxavfsizlik (penetration testing va ethical hacking) yo‘nalishi boʻyicha oʻtiladigan dars soatlari	 PAGEREF _Toc214608416 \h 15
+ HYPERLINK \l "_Toc214608417" 7. Oʻquv jarayonini tashkil etishda oʻqitish metodlari, shakllari va vositalari	 PAGEREF _Toc214608417 \h 19
+ HYPERLINK \l "_Toc214608418" 8. Baholash mezonlari	 PAGEREF _Toc214608418 \h 20
+ HYPERLINK \l "_Toc214608419" 9. Kiberxavfsizlik (penetration testing va ethical hacking) kasbi tavsifi	 PAGEREF _Toc214608419 \h 23
+ HYPERLINK \l "_Toc214608420" 10. Kasbning qoʻllanish sohasi	 PAGEREF _Toc214608420 \h 25
+ HYPERLINK \l "_Toc214608421" 11. Kiberxavfsizlik (penetration testing va ethical hacking) kasbiga o‘qitish natijalari	 PAGEREF _Toc214608421 \h 26
+ HYPERLINK \l "_Toc214608422" 12. Kiberxavfsizlik (penetration testing va ethical hacking) kursi bo‘yicha oraliq va yakuniy nazorat ishlari	 PAGEREF _Toc214608422 \h 45
+ HYPERLINK \l "_Toc214608423" 13. Kiberxavfsizlik (penetration testing va ethical hacking) xonasi uchun qoʻyiladigan umumiy talablar	 PAGEREF _Toc214608423 \h 48
+ HYPERLINK \l "_Toc214608424" 14. Kiberxavfsizlik (penetration testing va ethical hacking) kasbiga oʻqitish xonasini jihozlashga qoʻyilgan talablar	 PAGEREF _Toc214608424 \h 50
+ HYPERLINK \l "_Toc214608425" 15. Kiberxavfsizlik (penetration testing va ethical hacking) kasbiga oʻrgatish uchun zarur boʻladigan dasturiy vositalar roʻyxati	 PAGEREF _Toc214608425 \h 51
+ HYPERLINK \l "_Toc214608426" 16. Kasbiy taʼlim ustasi lavozimiga qoʻyiladigan talablar	 PAGEREF _Toc214608426 \h 52
+ HYPERLINK \l "_Toc214608427" 17. 10-sinf oʻquvchilariga qoʻyilgan umumiy malaka talablari	 PAGEREF _Toc214608427 \h 54
+ HYPERLINK \l "_Toc214608428" 18. Foydalanilgan adabiyotlar va elektron  manbalar roʻyxati	 PAGEREF _Toc214608428 \h 55
+
+
+
+
+1. DASTURDA QOʻLLANILGAN TAYANCH ATAMALAR
+Kasb - maxsus tayyorgarlik va ish tajribasi natijasida maʼlum bir sohada kasbiy faoliyatni amalga oshirish uchun lozim boʻlgan nazariy bilimlar, amaliy koʻnikma va malakalar majmuasini egallagan, jismoniy imkoniyat, aqliy qobiliyat va yuridik huquqlari taʼminlangan mehnat faoliyati (mashgʻuloti)ning turidir.
+Koʻnikma - muayyan vazifani bajarish uchun egallangan qobiliyat.
+Bilim - oʻrganilgan maʼlumotlarni eslab qolish va qayta tushuntirib berish.
+Kompetensiya - mavjud bilim, koʻnikma va malakalarni kundalik faoliyatda qoʻllay olish qobiliyati.
+Kasbiy faoliyat sohasi - ilmiy, ijtimoiy, iqtisodiy, ishlab chiqarishda namoyon boʻladigan kasbiy faoliyat obyektlarining majmui.
+Kasbiy faoliyat obyekti - predmetlar, voqeliklar, jarayonlar va faoliyat doirasida harakatga yoʻnaltirilgan tizimlar.
+Kasbiy faoliyat turi - kasbiy faoliyat obyektiga taʼsir qilishning usullari, uslublari va tavsifi.
+Oʻquv rejasi - oʻquv faoliyati turlari, oʻquv amaliyotlari (modullari) va ishlab chiqarish amaliyotlari tarkibi, ularni oʻrganish izchilligi, soha va tarmoqlarda ish turlarining mavsumiyligini hamda soatlardagi hajmini belgilaydigan hujjat.
+Oʻquv amaliyoti - nazariy bilim va amaliy koʻnikmalarini integratsiyalashga qaratilgan oʻquv jarayonining elementi. 
+Kasbga tayyorlash oʻquv kursi - umumiy oʻrta taʼlim tashkilotlarining  10-sinf oʻquvchilari uchun tashkil etilgan kasb-hunarga oʻrgatish darslari majmuasi.
+Taʼlim dasturi - taʼlimning asosiy xususiyatlari (hajmi, mazmuni, rejalashtirilgan natijalar), tashkiliy-pedagogik shart-sharoitlar, umumiy talablar, shuningdek, taʼlimni tashkil etish va amalga oshirish uchun zarur boʻlgan oʻquv-metodik koʻrsatmalar majmui.
+Kibermakon - axborot texnologiyalari yordamida yaratilgan virtual muhit.
+Axborot xavfsizligi – axborotning holati bo‘lib, unga binoan axborotga tasodifan yoki atayin ruxsatsiz ta’sir etishga yoki ruxsatsiz undan foydalanishga yo‘l qo‘yilmaydi.
+Axborotni himoyalash – axborot xavfsizligini ta’minlashga yo‘naltirilgan choralar kompleksi.
+Kiberxavfsizlik – hisoblashlarga asoslangan bilim sohasi bo‘lib, buzg‘unchilar mavjud bo‘lgan sharoitda amallarni to‘g‘ri bajarilishini kafolatlash uchun o‘zida texnologiya, inson, axborot va jarayonlarni mujassamlashtiradi.
+Aktiv - himoyalanuvchi axborot yoki resurslar.
+Kibertahdid – kibermakonda shaxs, jamiyat va davlat manfaatlariga tahdid soluvchi shart-sharoitlar va omillar majmui.
+Zaiflik – bir yoki bir nechta tahdidlarni amalga oshirishga imkon beruvchi tashkilot aktivi yoki boshqaruv tizimidagi kamchilik.
+Kiberhujum - kibermakonda apparat, apparat-dasturiy va dasturiy vositalardan foydalangan holda qasddan amalga oshiriladigan, kiberxavfsizlikka tahdid soladigan harakat.
+Kiberjinoyatchilik –  g‘arazli  yoki  xuliganlik  maqsadlarida  himoyalashning kompyuter  tizimlarini  buzib  ochishga,  axborotni  o‘g‘irlashga  yoki  buzishga yo‘naltirilgan alohida shaxslarning yoki guruhlarning harakatlari.
+Kiberetika – kompyuterlar bilan bog‘liq falsafiy soha bo‘lib, foydalanuvchilarning xatti-harakatlari, kompyuterlar nimaga dasturlashtirilganligi, umuman insonlarga va jamiyatga qanday ta’sir ko‘rsatishini o‘rganadi.
+Kiber huquq – axborotlashtirish, axborot resurslari va axborot tizimlaridan foydalanish sohasidagi munosabatlarni tartibga solishga hamda himoya qilishga qaratilgan huquq sohasidir.
+Ijtimoiy (sotsial injineriya) muhandislik - turli psixologik usullar va firibgarlik amaliyotining to‘plami, uning maqsadi firibgarlik yo‘li bilan shaxs to‘g‘risida maxfiy ma’lumotlarni olish.
+Konfidensiallik – axborot yoki uni eltuvchisining shunday holatiki, undan ruxsatsiz tanishishning yoki nusxalashning oldi olingan bo‘ladi.
+Yaxlitlik – axborotning buzilmagan ko‘rinishida (axborotning qandaydir qayd etilgan holatiga nisbatan o‘zgarmagan shaklda) mavjud bo‘lishi ifodalangan xususiyati.
+Foydalanuvchanlik – avtorizatsiyalangan mantiqiy obyekt so‘rovi bo‘yicha axborotning tayyorlik va foydalanuvchanlik holatida bo‘lishi xususiyati.
+Risk – potensial foyda yoki zarar bo‘lib, umumiy holda har qanday vaziyatga biror bir hodisani yuzaga kelish ehtimoli qo‘shilganida risk paydo bo‘ladi.
+Parol - bu shaxsni yoki huquqlarni tasdiqlash uchun yaratilgan maxfiy so‘z yoki belgilar to‘plami. Parol ma’lumotni ruxsatsiz kirishdan himoya qilish uchun foydalaniladi.
+Identifikatsiya (Identification) - foydalanuvchini uning identifikatori (nomi) bo‘yicha aniqlash jarayoni.
+Autentifikatsiya (Authentication) — ma’lum qilingan foydalanuvchi, jarayon yoki qurilmaning haqiqiy ekanligini tekshirish muolajasi.
+Avtorizatsiya (Authorization) — subektga tizimda ma’lum vakolat va resurslarni berish muolajasi, ya’ni avtorizatsiya subyekt harakati doirasini va u foydalanadigan resurslarni belgilaydi.
+2. KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) KASBINING TAYANCH OʻQUV REJASI
+T/r
+Tayanch oʻquv reja tarkibi
+Mashg‘ulotlar soni
+Umumiy yuklamaga nisbatan foiz hisobida
+I.
+Oʻquv maʼruzasi
+41
+40,2
+II.
+Oʻquv amaliyoti
+56
+54,9
+III.
+Oraliq nazorat ishi (Loyiha ishi)
+4
+3,9
+IV.
+Yakuniy nazorat ishi
+1
+1,0
+Hammasi:
+102
+100
+
+
+3. KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) KASBIGA TAYYORLASHNING MUDDATI
+Kasb nomi
+Kiberxavfsizlik (penetration testing va ethical hacking)
+Kasbga tayyorlashning meʼyoriy muddati
+10-sinflarda haftasiga 80 daqiqadan 3 ta dars 
+1 oʻquv yili davomida
+
+
+Sinf
+Oʻquv chorak
+Haftalar soni
+Mashg‘ulotlar soni
+10
+I
+12
+36
+II
+7
+21
+III
+8
+24
+IV
+7
+21
+Jami
+34 hafta
+102
+Tushuntirish xati
+1. Umumiy oʻrta taʼlim tashkilotlarida oʻquv yilining 2 - sentabridan kelgusi yilning 25-mayigacha boʻlgan davrda toʻrt chorakka boʻlingan holda tashkil etiladi.
+2. Oʻquv yilining davomiyligi - 34 hafta:
+haftasiga 3 marta belgilangan soatlar doirasidan chiqmagan holda oʻqish tashkil etiladi;
+mashgʻulotning davomiyligi  1 soat 20 daqiqani tashkil etadi;
+mashgʻulotlar oraligʻidagi tanaffusning davomiyligi 5 - 10 daqiqa. 
+3. Oraliq va yakuniy nazoratlar nazariy yoki koʻrgazmali amaliy imtihon shaklida tasdiqlangan baholash mezonlari asosida oʻtkaziladi.
+
+4. KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) KASBI OʻQUV MAVZU REJASI
+T/r
+Mavzu
+Ajratilgan mashg‘ulotlar soni
+shundan
+NazariyAmaliyNazorat ishiI bob
+Kiberxavfsizlikka kirish
+8
+4
+4
+
+
+Kiberxavfsizlik asoslari
+1
+1
+
+
+
+Kibertahdidlarning turlari
+2
+1
+1
+
+
+CIA uchligi
+2
+1
+1
+
+
+Xavfsizlikni anglash tushunchasi
+3
+1
+2
+
+II bob
+Kompyuter tarmoqlari va Internet xavfsizligi
+11
+5
+6
+
+
+Tarmoq asoslari
+1
+1
+
+
+
+Tarmoq qurilmalari va xavfsizlik muammolari
+3
+1
+2
+
+
+IP-manzillash va qism tarmoqlar (subnets)
+2
+1
+1
+
+
+Tarmoqlararo ekran va filtrlash
+2
+1
+1
+
+
+Tarmoqlarda VPN qurish va shifrlash
+3
+1
+2
+
+III bob
+Operatsion tizimlar va fayl xavfsizligi
+9
+4
+5
+
+
+Windows va Linux xavfsizligi
+2
+1
+1
+
+
+Fayl tizimlari va foydalanishlarni boshqarish
+2
+1
+1
+
+
+Operatsion tizim jurnallari va auditlash
+3
+1
+2
+
+
+Foydalanuvchi qayd yozuvi va parollar siyosati
+2
+1
+1
+
+IV bob
+Kriptografiya asoslari
+12
+5
+6
+1
+
+Kriptografiyaga kirish
+2
+1
+1
+
+
+Simmetrik va ochiq kalitli shifrlash algoritmlari
+2
+1
+1
+
+
+Xesh funksiyalar
+2
+1
+1
+
+
+Ochiq kalitlar infratuzilmasi
+2
+1
+
+1
+
+Kriptografik algoritmlardan real hayotda foydalanish
+4
+1
+3
+
+V bob
+Web xavfsizlik va ethical hacking asoslari
+12
+5
+7
+
+
+Web saytlar qanday ishlaydi?
+2
+1
+1
+
+
+Keng tarqalgan web zaifliklar
+3
+1
+2
+
+
+Ethical hacking va qonuniy asoslar
+2
+1
+1
+
+
+Websayt xavfsizligi vositalari
+2
+1
+1
+
+
+OWASP TOP 10 zaifliklari
+3
+1
+2
+
+VI bob
+Simsiz tarmoqda suqilib kirish testlarini o‘tkazish
+12
+5
+6
+1
+
+WI-FI xavfsizlik protokollari
+2
+1
+1
+
+
+Simsiz tarmoqlarga qaratilgan hujumlar
+3
+1
+1
+1
+
+Tarmoqni skanerlash usullari
+2
+1
+1
+
+
+Zaifliklarni baholash
+2
+1
+1
+
+
+Parolga qaratilgan hujumlar
+3
+1
+2
+
+VII bob
+Ijtimoiy muhandislik va inson omili
+8
+3
+5
+
+
+Ijtimoiy muhandislikka kirish
+2
+1
+1
+
+
+Keng tarqalgan ijtimoiy muhandislik hujumlari
+2
+1
+1
+
+
+Internetda shaxsiylik va raqamli iz
+4
+1
+3
+
+VIII bob
+Zararli dasturlar tahlili va undan himoyalanish
+12
+4
+7
+1
+
+Zararli dastur turlari
+2
+1
+1
+
+
+Antivirus va anti-malware vositalari
+3
+1
+2
+
+
+Sandboxing va ajratish
+4
+1
+2
+1
+
+Ransomware zararli dasturi
+3
+1
+2
+
+IX bob
+Raqamli kriminalistika va insidentlarga javob berish
+9
+4
+5
+
+
+Raqamli kriminalistikaga kirish
+1
+1
+
+
+
+Raqamli dalillarni saqlash zanjiri
+3
+1
+2
+
+
+Hodisalarni qayta qurish
+2
+1
+1
+
+
+Xotira kriminalistikasi
+3
+1
+2
+
+X bob
+Individual va ethical loyihalar
+9
+2
+5
+2
+
+Kiberxavfsizlik sohasida karyera va xalqaro sertifikatlar
+1
+1
+
+
+
+Loyiha yo‘riqnomasi va axloqiy qoidalar
+7
+1
+5
+1
+42.
+Yakuniy nazorat ishi
+1
+
+
+1
+Jami:102415655. KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) KASBI OʻQUV DASTURI
+
+I BOB. KIBERXAVFSIZLIKKA KIRISH
+Kiberxavfsizlik asoslari
+Axborot xavfsizligining asosiy tushunchalari: axborot xavfsizligi, kiberxavfsizlik, kiberjinoyat, kiberqonun, tahdid, aktiv, kiberhujum. Nima uchun kundalik raqamli hayotda kiberxavfsizlik muhim. Axborot xavfsizligida inson ahamiyati. Axborot xavfsizligi sohalari. 
+ Kibertahdidlarning turlari
+Kibertahdid va uning tasnifi. Zararli dasturlar, fishing, to‘lov dasturlari va ijtimoiy muhandislik. Kibertahdidlarni amalga oshirishda asosiy maqsad va motivatsiyalar. Kibertahdidlar bo‘yicha so‘ngi statistik ma’lumotlar. Amaliy mashg‘ulot: Kibertahdidlarni aniqlash.
+CIA uchligi
+CIA uchligi: Confidentiality (konfidensiallik), Integrity (yaxlitlik), Availability (foydalanuvchanlik) tushunchalari. Turli shart va holatlar uchun ushbu 3 omilni muhimligi. Amaliy mashg‘ulot: Hujumlarni tasniflash.
+ Xavfsizlikni anglash tushunchasi
+Xavfsizlik tafakkuri nima? Xavfsizlik tafakkuri nima uchun kerak? Xavfsizlik tafakkurining asosiy tamoyillari. 	Xavfsizlik tafakkurini shakllantirish usullari. Amaliy mashg‘ulotlar: Xavfsizlik zaifliklarini topish, Raqamli gigiena amaliyoti.
+II BOB. KOMPYUTER TARMOQLARI VA INTERNET XAVFSIZLIGI
+Tarmoq asoslari
+Tarmoq tushunchasi, uning turlari. Tarmoq topologiyalari. OSI va TCP/IP modellari: har bir sathning vazifasi, har bir sath uchun muhim parametrlar.
+Tarmoq qurilmalari va xavfsizlik muammolari
+Tarmoq qurilmalari: tarmoq kabeli, hab, repetir, tarmoq kartasi, ko‘prik, switch, router, gateway. Tarmoq xavfsizligi muammolari. Amaliy mashg‘ulotlar: Tarmoq qatlamini o‘rganish, Kuzatuvchi marshrutlar.
+IP-manzillash va qismtarmoqlar (subnets)
+IPv4/ IPv6 tarmoq protokoli. Qism tarmoq maskalari va tarmoq segmentatsiyasi. IP manzillari guruhlari. IP manzillarni tarqatish. Amaliy mashg‘ulot: IP sozlanmalarini amalga oshirish.
+Tarmoqlararo ekran va filtrlash
+Tarmoqlararo ekran vositasi, uning turlari, asosiy vazifalari. Tarmoqlararo ekan vositasida tarmoqni himoyalash, tarmoqni filtrlash qoidalarini o‘rnatish. Amaliy mashg‘ulot: Tarmoqlararo ekan vositasini sozlash.
+Tarmoqlarda VPN qurish va shifrlash
+IP protokolining xavfsizlik muammosi. Shifrlash tushunchasi. Tunellash tushunchasi. VPN vositasi va uning asosiy maqsadi. VPN vositalarining tasnifi. Amaliy mashg‘ulotlar: VPN aloqa o‘rnatish, Tarmoq hujumini simulyatsiya qilish.
+III BOB. OPERATSION TIZIMLAR VA FAYL XAVFSIZLIGI
+ Windows va Linux xavfsizligi
+Operatsion tizimlar (OT) haqida umumiy tushuncha. OT turlari. Windows/ Linux Otlarining xavfsizlik arxitekturasi va imtiyozlar. Amaliy mashg‘ulot: Linux OT fundamental buyruqlari.
+ Fayl tizimlari va foydalanishlarni boshqarish
+Fayl tizimlari: mazmuni, vazifalari va xususiyatlari.  Fayl egaligi.  Fayl ruxsatlari. Foydalanuvchilar va guruhlar toifalari.  Amaliy mashg‘ulot: Linux OTda imtiyozlarni boshqarish.
+ Operatsion tizim jurnallari va auditlash
+Operatsion tizimlarning hodisalarni qaydlash jurnallari. Qaydlash jurnallari orqali tahdidlarni aniqlash. Amaliy mashg‘ulotlar: Fayllarni shifrlash, Xavfsiz Boot va yangilanishlar.
+ Foydalanuvchi qayd yozuvi va parollar siyosati
+Operatsion tizimlarda foydalanuvchilarni boshqarish: yangi foydalanuvchi yaratish, mavjudini o‘chirish. Imtiyozlarni ajratish. Parollarni bardoshligini baholash. Parollardan foydalanish davrini sozlash. Amaliy mashg‘ulot: Foydalanuvchilarni boshqarish.
+IV BOB. KRIPTOGRAFIYA ASOSLARI
+ Kriptografiyaga kirish
+Kriptografiyaning asosiy tushunchalari: shifrlash, deshifrlash, kalit, alifbo, kodlash. Kriptografik himoyaning asosiy maqsadi. Zamonaviy kriptografiyaning bo‘limlari. Amaliy mashg‘ulot: Kriptografiyaning matematik asosi.
+ Simmetrik va ochiq kalitli shifrlash algoritmlari
+Simmetrik shifrlash algoritmlari. Ochiq kalitli shifrlash algoritmlari. Afzalliklari va kamchiliklari. TEA algoritmi. RSA algoritmi. Amaliy mashg‘ulot: Sodda o‘rniga qo‘yish shifri.
+
+ Xesh funksiyalar
+Xesh funksiyalar. Ma’lumotlarni yaxlitligini ta’minlashda xesh funksiyalarni ahamiyati. MD5 xesh funksiyasi. Amaliy mashg‘ulot: Fayllarni xeshlash.
+
+ Ochiq kalitlar infratuzilmasi
+Elektron raqamli imzo.  Imzo muolajalari: imzo qo‘yish, imzoni tekshirish.  Ochiq kalitlar infrastrukturasi. Amaliy mashg‘ulot: Raqamli sertifikatni yaratish.
+ Kriptografik algoritmlardan real hayotda foydalanish
+Kriptografik protokollar. Dasturiy-apparat kriptografik vositalar. HTTPS protokoli. SSH protokoli. IPSec protokoli. Amaliy mashg‘ulotlar: HTTPS tekshiruvi, Parolni barcha variantlarini hisoblash.
+V BOB. WEB XAVFSIZLIK VA ETHICAL HACKING ASOSLARI
+ Web saytlar qanday ishlaydi?
+Web sayt nima va u qanday ishlaydi.  Web sayt turlari: statik va dinamik sayt. Klient-server arxitekturasi. Amaliy mashg‘ulot: Web so‘rovlarni tahlil qilish.
+ Keng tarqalgan web zaifliklar
+SQL inyeksiya, XSS, CSRF va obro‘sizlantirilgan autentifikatsiya.  Amaliy mashg‘ulot: SQL inyeksiyasi, XSS hujumi.
+ Ethical hacking va qonuniy asoslar
+Ethical hacking (etik xakerlik) nima? Etik xakerlar turlari? Axloqiy xakerlikda tizim xakerligining asosiy tushunchalari. Amaliy mashg‘ulot: Pen Testni simulyatsiya qilish.
+ Websayt xavfsizligi vositalari
+Burp Suite, OWASP ZAP va Wappalyzer vositalarini muhokama qilish. Amaliy mashg‘ulot: Zaif web saytlarni skanerlash. 
+ OWASP TOP 10 zaifliklari
+OWASP loyihasi, maqsadi va dasturiy vositalari. OWASP TOP 10 zaifliklar ro‘yxati. Amaliy mashg‘ulot: Zaifliklarni bartaraf etish, Sodda xavfsiz web formani yaratish.
+VI BOB. SIMSIZ TARMOQDA SUQILIB KIRISH TESTLARINI O‘TKAZISH
+ WI-FI xavfsizlik protokollari
+Simsiz tarmoq va uning turlari. WEP, WPA, WPA2 va WPA3 protokollari. Wi-Fi simsiz tarmog‘ida mavjud xavfsizlik muammolari. Amaliy mashg‘ulot: WI-FI trafik tahlili.
+ Simsiz tarmoqlarga qaratilgan hujumlar
+Simsiz tarmoqlarga qaratilgan hujumlar: Spoofing; Nazoratlanmaydigan hudud; Ruxsatsiz suqilib kirish; DoS/DDoS; O‘rtaga turgan odam hujumi.. Amaliy mashg‘ulot: Qalbaki boshqaruv nuqtasini o‘rnatish.
+ Tarmoqni skanerlash usullari
+Tarmoqni skanerlash usullari. Ping yuborish orqali aniqlash.  Portlarni skanerlash. Nmap vositasi.  Amaliy mashg‘ulot: Nmap vositasidan foydalanish.
+
+ Zaifliklarni baholash
+Zaifliklani baholash va uning muhimligi.  Zaifliklani baholash jarayonining bosqichlari. Zaifliklarni baholash usullari va vositalari.  Amaliy mashg‘ulot: Zaifliklarni skanerlash o‘rganish.
+ Parolga qaratilgan hujumlar
+Parolga  qaratilgan hujumlar: lug‘atga asoslangan, qo‘pol kuch va rainbow jadvali hujumlari. Amaliy mashg‘ulot: Parolni aniqlashni o‘rganish, Wi-Fi tarmog‘ining xavfsizlik darajasini testlash.
+VII BOB. IJTIMOIY MUHANDISLIK VA INSON OMILI
+ Ijtimoiy muhandislikka kirish
+Xavfsizlikda psixologik ta’sir etish usullari. Mashhur ijtimoiy muhandislik sohasi vakillari. Amaliy mashg‘ulot: Fishing elektron pochta xabarlarini tahlil qilish.
+ Keng tarqalgan ijtimoiy muhandislik hujumlari
+Ijtimoiy injineriyaning amalga oshirish sikli. Keng tarqalgan ijtimoiy injineriya hujumlari: Fishing, Pretexting, Water holing, Baiting, Spear phishing, Quid Pro Quo, Scareware, Tailgating (piggybacking), Quishing. Amaliy mashg‘ulot: Ogohlantirish plakatlarini yaratish.
+ Internetda shaxsiylik va raqamli iz
+Internetda shaxsiy ma’lumotlarni oshkor bo‘lishi holatlari. Ularni aniqlash usullari va vositalari. Shaxsiy ma’lumotlarni oshkor etmaslik bo‘yicha tavsiyalar. Amaliy mashg‘ulot: Raqamli izni kuzatib borish, Ijtimoiy media xavfsizlik sozlanmalari, Internetda foydalanish bo‘yicha shaxsiy xavfsizlik rejasini yaratish.
+VIII BOB. ZARARLI DASTURLAR TAHLILI VA UNDAN HIMOYALANISH
+ Zararli dastur turlari
+Zararli dasturlar. Ularni yaratishdan asosiy maqsad. Uning yaratilish tarixi. Zararli dasturlarning turlari: viruslar, troyanlar, ransomware, spyware, adware, botnet, rootkit. Amaliy mashg‘ulot: Zararli dasturlar hatti harakatini kuzatish.
+ Antivirus va anti-malware vositalari
+Zararli dasturlarni aniqlash usullari va ularning kamchiliklari. Zararli dasturlarni aniqlashning zamonaviy vositalari. Amaliy mashg‘ulot: Zararli dastur borligini aniqlash, Antivirus dasturiy vositasini o‘rnatish.
+ Sandboxing va ajratish
+Virtual mashina texnologiyasi. Virtual mashina vositalari. Sandboxing vositalari. Amaliy mashg‘ulot: VirtualBoxdan xavfsiz foydalanish.
+ Ransomware zararli dasturi
+Ransomware dasturi, uning maqsadi, turlari, tarqalish usullari. Ransomware zararli dasturidan himoyalanish usullari. Ma’lumotlarni zaxira nusxalash, qayta tiklash usullari. Amaliy mashg‘ulot: Ma’lumotlarni qayta tiklashni o‘rganish, Operatsion tizimni qayta tiklashni o‘rganish, Shubhali jarayonlarni aniqlash.
+IX BOB. RAQAMLI KRIMINALISTIKA VA INSIDENTLARGA JAVOB BERISH
+ Raqamli kriminalistikaga kirish
+Kiberjinoyat amalga oshirilganidan so‘ng jarayonni tadqiq etish. Raqamli kriminalistikaning muhimligi. Uning asosi bosqichlari: ma’lumotlarni to‘plash, o‘rganish, ma’lumotlarni tahlillash, hisobot yozish. Raqamli kriminalistika vositalari. Asosiy sohalari.
+ Raqamli dalillarni saqlash zanjiri
+Raqamli dalillarni saqlash zanjiri: muhimligi, dalillarni saqlashdagi murakkabliklar. Dalillarni saqlash zanjiri shakllantirish bo‘yicha tavsiyalar. Amaliy mashg‘ulot: Kriminalistik obrazni yaratish, O‘chirilgan fayllarni qayta tiklash.
+ Hodisalarni qayta qurish
+Raqamli sud ekspertizasida vaqt jadvalini tahlil qilish. Vaqt jadvali ma’lumotlarining asosiy manbalari. Vaqt jadvalini tahlil qilishdagi asosiy usullar.  Vaqt jadvalini tahlil qilishda kerakli vositalar va ilovalar. Vaqt jadvalini tahlil qilishdagi murakkabliklar. Amaliy mashg‘ulot: Vaqt jadvaliga amalga oshirilgan hujumni tahlillash.
+ Xotira kriminalistikasi
+O‘zgaruvchan xotira. Xotira iyerarxiyasi. RAM xotira tuzulishi. RAM xotirani kriminalistik tahlili. Bo‘shliq xotira (Memory dump). Amaliy mashg‘ulot: Bo‘shliq xotira (Memory dump) tahlili, Xotirada ichki tahdidlarni aniqlash.
+X BOB. INDIVIDUAL VA ETHICAL LOYIHALAR
+ Kiberxavfsizlik sohasida karyera va xalqaro sertifikatlar
+Kiberxavfsizlik sohasida karyerani amalga oshirish. Xalqaro sertifikatlar: CEH, Security+ va boshqalar.
+ Loyiha yo‘riqnomasi va axloqiy qoidalar
+CTF musobaqalari. Yakuniy loyiha uchun axloqiy qoidalarni o‘rnatish.. Amaliy mashg‘ulot: Xavfsiz tarmoqni qurish, Suqilib kirish testini amalga oshirish, Capture the Flag (CTF) haqida, Web CTF masalalari, Parolni topishga qaratilgan CTF masalalari.
+6. KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) YO‘NALISHI BOʻYICHA OʻTILADIGAN DARS SOATLARI
+T/r
+Mavzular
+I-CHORAK
+
+
+
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta8-hafta9-hafta10-hafta11-hafta12-hafta1.Kiberxavfsizlik asoslari12.Kibertahdidlarning turlari23.CIA uchligi24.Xavfsizlikni anglash tushunchasi125.Tarmoq asoslari16.Tarmoq qurilmalari va xavfsizlik muammolari37.IP-manzillash va qism tarmoqlar (subnets)28.Tarmoqlararo ekran va filtrlash119.Tarmoqlarda VPN qurish va shifrlash2110.Windows va Linux xavfsizligi211.Fayl tizimlari va foydalanishlarni boshqarish212.Operatsion tizim jurnallari va auditlash1213.Foydalanuvchi qayd yozuvi va parollar siyosati1114.Kriptografiyaga kirish215.Simmetrik va ochiq kalitli shifrlash algoritmlari216.Xesh funksiyalar1117.Ochiq kalitlar infratuzilmasi. Nazorat ishi.2
+
+T/r
+Mavzular
+II-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta1.Kriptografik algoritmlardan real hayotda foydalanish3 1     2.Web saytlar qanday ishlaydi?23.Keng tarqalgan web zaifliklar34.Ethical hacking va qonuniy asoslar25.Websayt xavfsizligi vositalari116.OWASP TOP 10 zaifliklari217.WI-FI xavfsizlik protokollari28.Simsiz tarmoqlarga qaratilgan hujumlar. Nazorat ishi.3
+T/r
+Mavzular
+III-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta8-hafta1.Tarmoqni skanerlash usullari22.Zaifliklarni baholash113.Parolga qaratilgan hujumlar214.Ijtimoiy muhandislikka kirish25.Keng tarqalgan ijtimoiy muhandislik hujumlari26.Internetda shaxsiylik va raqamli iz137.Zararli dastur turlari28.Antivirus va anti-malware vositalari129.Sandboxing va ajratish. Nazorat ishi.13
+
+T/r
+Mavzular
+IV-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta1.Ransomware zararli dasturi21      2.Raqamli kriminalistikaga kirish1     3.Raqamli dalillarni saqlash zanjiri  124.Hodisalarni qayta qurish  115.Xotira kriminalistikasi  216.Kiberxavfsizlik sohasida karyera va xalqaro sertifikatlar  17.Loyiha yo‘riqnomasi va axloqiy qoidalar. Nazorat ishi. Yakuniy nazorat.  1337. OʻQUV JARAYONINI TASHKIL ETISHDA OʻQITISH METODLARI, SHAKLLARI VA VOSITALARI
+Oʻqitish metodlari - ogʻzaki, koʻrgazmali, amaliy, muammoli-izlanish, mustaqil ishlash va shu kabilar.
+Oʻqitish shakllari
+Nazariy
+Amaliy
+Umumiy
+maʼruza;
+ekskursiya (sayohat);
+mustaqil ishlar;
+maslahat olish va shu kabilar.
+amaliy mashgʻulotlar;
+mustaqil uy ishi;
+didaktik, ishchan va rolli oʻyinlar;
+tajriba-konstruktorlik faoliyati, treninglar;
+sayohatlar, olimpiadalar va koʻrik-tanlovlar.
+ommaviy;
+jamoaviy;
+guruhli;
+kichik guruhli;
+juftli;
+yakka tartibda.
+Oʻqitish vositalari
+Oʻqitish vositalari
+(oddiy va murakkab)
+Oʻquv qurollari va koʻrgazmali qurollar
+darsliklar, oʻquv qoʻllanmalari;
+metodik qoʻllanmalar;
+maʼlumotnomalar;
+maxsus adabiyotlar;
+metodik tavsiyalar;
+ensiklopediyalar;
+jadval va plakat;
+mulyaj va modellar.
+Axborot materiallari va dasturiy taʼminot
+kompyuter;
+amaliy topshiriqlar;
+kasbiy koʻnikma va malakaviy dastur;
+testlar, nazorat topshiriqlari va boshqalar.
+
+8. BAHOLASH MEZONLARI
+	Oʻquvchilarning kasbga oid bilim, koʻnikma, malaka va kompetensiyalarini baholash va nazorat qilish maqsadida quyidagi nazorat turlari amalga oshiriladi:
+joriy nazorat - soʻrovlar, bajarilgan loyiha ishlarini izohlash tarzida oʻquvchilarning bilimlari, koʻnikma va malakalari muntazam nazorat qilinadi.
+oraliq nazorat - chorak tamom boʻlganda va oʻquv dasturining tegishli boʻlimi tugallangandan keyin oʻquvchilarning bilimlari, koʻnikma va malakalarini baholash uchun amalga oshiriladi. U amaliy, yozma nazorat ishi yoki testlar shaklida oʻtkaziladi. Ushbu nazoratda foydalaniladigan materiallar fan o‘qituvchisi tomonidan tayyorlanadi. Oraliq nazorat har chorak yakunida o‘taziladi va nazorat ishlarining miqdori va mavzulari oʻquv dasturiga asoslangan rejada belgilanadi hamda muddati va shakli koʻrsatiladi.
+yakuniy nazorat - oʻquv yili tamom boʻlgandan keyin ogʻzaki va amaliy ish koʻrinishida imtihon shaklida amalga oshiriladi. Uning asosida reyting aniqlanadi va oʻquvchini navbatdagi sinfga oʻtkazish toʻgʻrisida qaror qabul qilinadi. Yakuniy nazorat materiallari kasbiy taʼlim ustasi tomonidan oʻquv dasturi asosida tayyorlanadi va ularni amaliy fanlar uslubiy birlashmasi muhokamasidan oʻtkaziladi. Umumiy oʻrta taʼlim muassasalari bitiruvchilari uchun choraklik baholar asosida yillik baho, shuningdek, yakuniy nazoratda olingan baho va yillik baho asosida yakuniy baho aniqlanadi.
+Kasbiy taʼlim yoʻnalishi boʻyicha yakuniy nazorat imtihonlarni oʻtkazish tartibi.
+Kasbiy taʼlim yoʻnalishi boʻyicha oʻquv reja va dasturning barcha talablarini toʻliq bajargan bitiruvchiga maktab direktorining buyrugʻiga asosan amaliy yakuniy nazoratni topshirishga ruxsat beriladi.
+Yakuniy nazorat oʻtkazish jadvali, u oʻtkaziladigan kunlar koʻrsatilgan holda, maktab direktori tomonidan tasdiqlanadi va yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin taʼlim muassasasining oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar xabardor etiladi.
+Yakuniy nazorat amaliy topshiriq shaklida oʻtkaziladi. Bunda yakuniy nazorat savollari orqali bitta amaliy topshiriq beriladi.
+Amaliy topshiriqlar oʻqitilgan mutaxassislik oʻquv dasturi asosida tuziladi va maktabning pedagogik kengashi tomonidan tasdiqlanadi hamda yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin barcha oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar eʼtiboriga yetkaziladi.
+Oʻquvchilar bilimi quyidagi mezonlar asosida baholanadi:
+Har bir oʻquvchining kasb boʻyicha oʻzlashtirish darajasi ball tizimi orqali ifodalanadi, ya’ni 100 ballik shkalaga o‘tkaziladi:
+0-59 ball – 2 baho;
+60-70 ball – 3 baho;
+71-89 ball – 4 baho;
+90-100 ball – 5 baho.
+Oʻquvchilarning har bir nazorat turi boʻyicha bilimini baholash va koʻrsatkichini aniqlash ularning kasbni oʻquv dasturi mavzusi boʻyicha tasavvurga ega boʻlishi, mavzuning mohiyatini tushunib yetishi va aytib bera olishi, olgan bilimlarini amalda qoʻllay olishi, ijodiy fikrlay olishi va xulosa qabul qila olishi hamda mustaqil ishlarni bajarishi kabi mezonlarga qarab amalga oshiriladi.
+Jumladan:
+bitiruvchi mustaqil xulosa va qaror qabul qiladi, ijodiy fikrlay oladi, mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (mavzu) boʻyicha tasavvurga ega deb topilganda – 90-100 (aʼlo) ball;
+bitiruvchi mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb(mavzu) boʻyicha tasavvurga ega deb topilganda – 71-89 (yaxshi) ball;
+bitiruvchi olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (mavzu) boʻyicha tasavvurga ega deb topilganda – 60-70 (qoniqarli) ball;
+bitiruvchi kasb dasturini oʻzlashtirmagan, kasbning (mavzuning) mohiyatini tushunmaganda- 0-59 (qoniqarsiz) ball.
+Nazorat turlarini oʻtkazish boʻyicha tuzilgan topshiriqlarning mazmuni oʻquvchining oʻzlashtirishini xolis (obyektiv) va aniq baholash imkoniyatini berishi lozim.
+O‘quvchilar bilimini baholash mezonlari
+Baholash usuli
+Topshiriq
+Baholash mezonlari
+Maksimal ball
+Baholash o‘tkazish vaqti
+Joriy nazorat
+Bajarilgan amaliy ishlar
+maruzalarga oid amaliy ishlarni to‘liq va to‘g‘ri bajarganligi;
+nazariy savollarga to‘g‘ri javob berganligi;
+topshiriqlarni xavfsizlik qoidalaridan kelib chiqqan holda bajarganligi.
+40 ball
+O‘quv jarayoni davomiyligida o‘tkaziladi
+Oraliq nazorat
+Nazariy topshiriqlar
+nazariy savollarga to‘liq va aniq javob berilganligi;
+javoblar faktlarga asoslanganligi va xato yo‘qligi;
+tushuntirish aniq va misollar bilan boyitilganligi;
+muammoni tahlil qilinganligi va fikrlarni ifodalash darajasi.
+20 ball
+Har chorak yakunida
+Amaliy topshiriqlar
+Berilgan amaliy topshiriq bo‘yicha muammoning yechilganligi;
+Kerakli dasturiy vositalardan mustaqil foydalanilganligi;
+Amalga oshirilgan ishlarni nazariy asosini bilishi;
+Olingan natijalar bo‘yicha hisobotni batafsil shakllantirishi.
+Test topshiriqlari
+Savollarga to‘g‘ri javob berganligi.
+Yakuniy nazorat
+Nazariy topshiriqlar
+nazariy savollarga to‘liq va aniq javob berilganligi;
+javoblar faktlarga asoslanganligi va xato yo‘qligi;
+tushuntirish aniq va misollar bilan boyitilganligi;
+muammoni tahlil qilinganligi va fikrlarni ifodalash darajasi.
+40 ball
+O‘quv yili oxirida, kurs yakunida
+Amaliy topshiriqlar
+Berilgan amaliy loyiha topshiriqlari bo‘yicha muammoning yechilganligi;
+Kerakli dasturiy vositalardan mustaqil foydalanilganligi;
+Amalga oshirilgan ishlarni nazariy asosini bilishi;
+Olingan natijalar bo‘yicha hisobotni batafsil shakllantirishi.
+Jami:
+
+
+100 ball
+
+Oraliq nazoratda  topshiriq  turlaring nazorat jarayonida faqat bitta turidan foydalanish mumkin.
+9. KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) KASBI TAVSIFI
+9.1. Bitiruvchining kasbiy faoliyati sohalari
+Kiberxavfsizlik (penetration testing va ethical hacking) kasb-hunarga tayyorlash kursini muvaffaqiyatli tugatgan o‘quvchi ilmiy-tаdqiqot institutlаri, dаvlаt vа nodаvlаt korxonаlаr, vazirlik va idoralar, qo‘mitalar, banklar, ishlab chiqarish sohalari, xizmat ko‘rsatish sohalari, kompaniyalar, tаshkilotlаr, muаssаsаlаr, dаvlаt boshqаruvi orgаnlаri va umumiy o‘rta, professional kаsbiy tа’limning dаvlаt hamda nodаvlаt muаssаsаlаridа quyidagi kasbiy faoliyat sohalarida faoliyat yuritishi mumkin:
+tashkilotlar va kompaniyalar tarmoqlarini, web ilovalarini va tizimlarini zaifliklar uchun test qiluvchi axloqiy xakerlik sohasida;
+LAN/WAN va korporativ tarmoqlarda xavfsizlikni ta’minlovchi tarmoq xavfsizligi sohasida;
+tashkilotning axborot xavfsizligi siyosatlari va protokollarini ishlab chiqadigan axborot xavfsizligi analitigi sohasida;
+ma’lumotlar shifrlash, xeshlash va raqamli imzo texnologiyalari bilan ishlaydigan kriptografiya sohasida;
+Windows, Linux va virtualizatsiya muhiti xavfsizligini ta’minlaydigan tizim va server xavfsizligi sohasida;
+kiberhujumlar va hodisalarni aniqlash, tahlil qilish va tiklash sohasida;
+kiberxavfsizlik bo‘yicha maktab, kollej va kompaniyalarda treninglar o‘tkazuvchi o‘quv-treyning sohasida.
+9.2. Bitiruvchining kasbiga muvofiq kasbiy faoliyat obyektlari
+tarmoqlar va ularning infratuzilmasi;
+operatsion tizimlar va serverlar;
+axborot tizimlari va ma’lumotlar bazalari;
+web ilovalar va bulut xizmatlari;
+xavfsizlik vositalari;
+kompyuter virusi va zararli dasturlar;
+axborot oqimi va aloqa kanallari kiradi.
+9.3. Kasbiy faoliyat turlari
+Kiberxavfsizlik (penetration testing va ethical hacking) kasb-hunarga tayyorlash kursini muvaffaqiyatli tugatgan o‘quvchi quyidagi faoliyat turlarida ishlash mumkin:
+axloqiy xaker;
+tarmoq xavfsizligi mutaxassisi;
+axborot xavfsizligi analitigi;
+kriptografiya va ma’lumotlarni himoya qilish bo‘yicha mutaxassis;
+tizim va server xavfsizligi mutaxassisi;
+kiberinsidentlarga javob berish va raqamli kriminalistika mutaxassisi;
+kiberxavfsizlik bo‘yicha maslahatchi;
+o‘quv va treyning mutaxassisi.
+9.4. Kasbiy kompetensiyalariga qoʻyiladigan talablar
+- kiberxavfsizlik asoslari: xavf, zaiflik, hujum va himoya kontseptsiyalarini, tarmoqlar va operatsion tizimlar arxitekturasini, kriptografiya, raqamli imzo, shifrlash va xeshlash asoslarini, axloqiy va huquqiy qoidalar: qonuniy suqilib kirish testlari, axborot xavfsizligi siyosatlari kabi tushunchalarni bilishi;
+- tarmoq va tizimlarni skanerlash, paketlarni tahlil qilish va zaifliklarni aniqlash; suqilib kirish va axloqiy xakerlik metodologiyalarini qo‘llash; tarmoq himoya vositalari orqali tizimlarni himoya qilish; virtual muhit (VirtualBox, VMware) va Linux/Windows OS bilan ishlash; xavfsizlik hodisalari va loglarni tahlil qilish;
+- tizim va tarmoqlardagi zaifliklarni aniqlash va xavfsizlik choralari ishlab chiqish; Red/Blue Team ssenariylarida murakkab vazifalarni bajarish; hodisalarga javob berish va zararli dasturlar tahlili bo‘yicha tez va aniq qaror qabul qilish;
+- loyihalarda jamoa bilan hamkorlik qilish, vazifalarni taqsimlash va hisobot tayyorlash; natijalarni yozma va og‘zaki shaklda tushuntirish;
+- qonun va axloqiy qoidalarga rioya qilgan holda suqilib kirish testlari va xavfsizlik tadqiqotlarini amalga oshirish; maxfiy ma’lumotlar bilan ishlashda ehtiyotkorlikni saqlash.
+9.5. Kasbiy rivojlanish istiqbollari
+Kiberxavfsizlik (penetration testing va ethical hacking) kasbini egallagan bitiruvchi o‘z malakasini quyidagi yo‘nalishlarda davom ettirishi mumkin:
+o‘rta maxsus va oliy ta’lim muassasalari: axborot xavfsizligi, kiberxavfsizlik injiniringi, kompyuter injiniringi va dasturiy injiniring kabi ta’lim sohalari bo‘yicha;
+malaka oshirish va qo‘shimcha kurslar: CompTIA Security+, Certified Information Systems Security Professional (CISSP), Certified Ethical Hacker (CEH), Certified Information Systems Auditor (CISA), Certified Information Security Manager (CISM), GIAC Certified Incident Handler (GCIH), Systems Security Certified Practitioner (SSCP) kabi xalqaro kurslarda ta’lim olish;
+kasbiy faoliyatni kengaytirish: kompyuter injiniringi va dasturiy injiniring ta’lim yo‘nalishlariga oid kasbiy faoliyat sohalarida.
+10. KASBNING QOʻLLANISH SOHASI
+	Mazkur malaka talabi “Kiberxavfsizlik (penetration testing va ethical hacking)” kasbi boʻyicha umumiy oʻrta taʼlim muassasalarining 10-sinf oʻquvchilarini kasb-hunarga tayyorlash kurslari (keyingi oʻrinlarda - kasb-hunarga tayyorlash kurslari) boʻyicha ishchilarni tayyorlashning zaruriy bilimlar mazmunini va kasbiy tayyorgarlik darajasiga qoʻyiladigan talablarni, shuningdek oʻquv yuklamalari hajmini va belgilangan talablarni bajarilishini nazoratini belgilaydi. 
+Malaka talablari kasbga oʻrgatish tayyorgarligi sifati va darajasini baholashda asosiy mezon hisoblanadi. Mazkur talablarning bajarilishi kasbga tayyorlash bitiruvchilariga kasbning tegishli darajasini olganligi toʻgʻrisida davlat namunasidagi sertifikat berilishi uchun asos hisoblanadi.
+Malaka talablari kasbga tayyorlash oʻquv jarayonini tashkil qilgan taʼlim tashkilotlari tomonidan tatbiq etilishi majburiydir.
+Mazkur talablarni bajargan umumiy oʻrta taʼlim tashkilotlarining 10-sinf oʻquvchilari Oʻzbekiston Respublikasi Milliy malakalar ramkasining 2-darajali sertifikatga ega boʻladi.
+11. KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) KASBIGA O‘QITISH NATIJALARI
+11.1. Birinchi chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+1
+Kiberxavfsizlikka kirish
+Kiberxavfsizlik asoslari
+Kiberxavfsizlikning asosiy tushunchalarini ayta oladi va uning zamonaviy raqamli jamiyatdagi ahamiyatini tushuntira oladi.
+Ma’lumot, axborot va raqamli aktivlar o‘rtasidagi farqni farqlay oladi hamda ularning har biri nima uchun himoyaga muhtojligini tushuntira oladi.
+Inson xatti-harakati, texnologiya va kiberxavfsizlikdagi zaifliklar o‘rtasidagi aloqani kundalik hayot misolida tushuntira oladi.
+Shaxsiy kiberxavfsizlik amaliyotlari — kuchli parollar yaratish, dasturiy ta’minotni yangilab turish, xavfsiz internetdan foydalanish kabi asosiy ko‘nikmalarni namoyon eta oladi.
+Axborot xavfsizligi va kiberxavfsizlik o‘rtasidagi farqni tushuntira oladi.
+2
+Kibertahdidlarning turlari
+Kiber tahdid atamasini anglaydi va uning shaxslar, tashkilotlar hamda jamiyatga ta’sirini tushuntira oladi.
+Asosiy kiber tahdid turlarini — zararli dasturlar, fishing, ransomware dasturlari va ijtimoiy muhandislikni aniqlay va toifalarga ajrata oladi.
+Fishing hujumlari qanday amalga oshirilishini tushuntira oladi va soxta xabarlar yoki veb-saytlarning belgilari ni aniqlay oladi.
+Ijtimoiy muhandislik hujumlarining real misollarini baholaydi va inson xabardorligi va xulq-atvori asosida himoya strategiyalarini taklif qila oladi.
+3
+CIA uchligi
+CIA triadasining uchta asosiy tamoyilini — maxfiylik, yaxlitlik va foyalanuvchanlikni anglaydi va ularning kiberxavfsizlikdagi ahamiyatini tushuntira oladi.
+Har bir tamoyilning ma’lumot va axborot tizimlarini himoya qilishdagi rolini tasvirlay oladi.
+Maxfiylik, yaxlitlik va foydalanuvchanlik tushunchalarini real hayotdagi xavfsizlik hodisalari misolida farqlay oladi.
+Xavfsizlik siyosatlari, foydalanishni nazoratlash va tizimni loyihalash orqali CIA tamoyillari qanday saqlanishini tahlil qila oladi.
+Xavfsiz tizimlarni loyihalash yoki boshqarishda uch tamoyil o‘rtasidagi muvozanatni baholay oladi.
+4
+Xavfsizlikni anglash tushunchasi
+Xavfsizlikni anglash tushunchasini biladi va uning kiberxavfsizlikda nima uchun muhimligini tushuntira oladi.
+Hacker (hujumchi) va himoyachi (mudofaa qiluvchi) nuqtai nazarlaridagi farqni ajrata oladi.
+Hujumchi xatti-harakatlarini tushunish qanday qilib kuchliroq xavfsizlik tizimlarini yaratishga yordam berishini tushuntira oladi.
+Hujumchilar foydalanadigan insoniy va texnik zaifliklarni aniqlay oladi.
+Xavfsizlikni anglashni qo‘llab, raqamli vaziyatlarni tahlil qiladi va mumkin bo‘lgan zaiflik yoki hujum yo‘llarini oldindan taxmin qila oladi.
+Oldini olish, doimiy kuzatish va kiber tahdidlarga bardoshlilikni ta’minlovchi faol xavfsizlik tafakkurini shakllantira oladi.
+5
+Kompyuter tarmoqlari va Internet xavfsizligi
+Tarmoq asoslari
+Kompyuter tarmog‘i tushunchasini tushunadi va uning raqamli aloqa jarayonidagi o‘rnini tushuntira oladi.
+Asosiy tarmoq elementlarini — IP manzil, MAC manzil, DNS, marshrutizator (router) va kommutator (switch) ni tushuntira oladi.
+Qurilmalar IP manzillash va marshrutlash tamoyillari orqali qanday o‘zaro aloqa o‘rnatishini tushuntira oladi.
+DNS tizimining vazifasini — domen nomlarini IP manzillarga aylantirish jarayonini tasvirlay oladi.
+Simli va simsiz tarmoqlar o‘rtasidagi farqni, ularning afzalliklari va cheklovlarini ajrata oladi.
+Marshrutizator, kommutator va boshqa tarmoq qurilmalari ma’lumot oqimini qanday boshqarishi va ulanishni ta’minlashini namoyon eta oladi.
+6
+Tarmoq qurilmalari va xavfsizlik muammolari
+OSI va TCP/IP modellari tuzilmasi va maqsadini tasvirlay oladi.
+OSI modelining 7 ta qatlami va TCP/IP modelining 4 ta qatlamini aniqlay oladi hamda ularning asosiy funksiyalarini tushuntira oladi.
+OSI va TCP/IP modellari o‘rtasidagi o‘xshashliklar va farqlarni taqqoslay oladi.
+Tarmoq orqali ma’lumotlarning qadoqlanishi (encapsulation) va qatlamlar bo‘ylab uzatilishini tushuntira oladi.
+7
+IP-manzillash va qism tarmoqlar (subnets)
+IP manzil nima ekanini aniqlaydi va uning tarmoqdagi qurilmalarni aniqlashdagi rolini tushuntira oladi.
+IPv4 va IPv6 manzillash sxemalari o‘rtasidagi farqlarni (format va hajm bo‘yicha) ajratib ko‘rsata oladi.
+Pastki tarmoq niqobi (subnet mask) nima ekanini va u tarmoqni kichik segmentlarga ajratishda qanday ishlashini tushuntira oladi.
+Subnet niqobi yordamida IP manzilning tarmoq va xost qismlarini hisoblay oladi. 
+Tarmoq segmentatsiyasining ishlash samaradorligi va xavfsizlikni oshirishdagi ahamiyatini tasvirlay oladi.
+Subnet niqobi tushunchalarini qo‘llab, kichik tashkilot yoki laboratoriyalar uchun oddiy tarmoq topologiyalarini loyihalashni amalga oshira oladi.
+8
+Tarmoqlararo ekran va filtrlash
+Tarmoqlararo ekran (firewall) nima ekanini aniqlaydi va uning tarmoq xavfsizligidagi rolini tushuntira oladi.
+Tarmoqlararo ekranlar oldindan belgilangan qoidalar asosida tarmoq trafigini kuzatishi, ruxsat berishi yoki bloklashi jarayonini tasvirlay oladi.
+Apparat (hardware) va dasturiy (software) tarmoqlararo ekranlar o‘rtasidagi farqlarni ajrata oladi hamda ularning qo‘llaniladigan joylarini tushuntira oladi.
+Tarmoqlararo ekranlar filtrlashining asosiy turlarini — paket filtrlash, holatni tekshirish (stateful inspection) va ilova qatlamida filtrlashni tushuntira oladi.
+Perimetr, ichki va shaxsiy tarmoqlararo ekranlar kabi odatdagi konfiguratsiyalarni aniqlay oladi.
+Tarmoqlararo ekranlarni ruxsatsiz foydalanish, zararli dasturlar kirib kelishi va xizmat ko‘rsatishni rad etish (DoS) hujumlarini oldini olishdagi rolini tahlil qila oladi.
+9
+Tarmoqlarda VPN qurish va shifrlash
+Virtual shaxsiy tarmoq (VPN) tushunchasini anglaydi va uning ochiq tarmoqlarda xavfsiz ulanishni ta’minlashdagi maqsadini tushuntira oladi.
+Tunnellash jarayonini va VPN tarmoqlari ma’lumotlarni uzatish vaqtida qanday himoyalashini (qadoqlash orqali) tasvirlay oladi.
+Shifrlash (encryption)ning uzatilayotgan ma’lumotlarning maxfiyligi va yaxlitligini ta’minlashdagi rolini tushuntira oladi.
+Eng ko‘p qo‘llaniladigan VPN protokollari – IPsec, L2TP, OpenVPN va WireGuard o‘rtasidagi farqlarni ajrata oladi.
+VPN texnologiyasining xavfsizlik, tezlik va qulaylik nuqtai nazaridan afzalliklari va cheklovlarini aniqlay oladi.
+VPN va shifrlash eshitish, ma’lumot o‘g‘irlanishi va tarmoqni kuzatish kabi tahdidlardan foydalanuvchilarni himoya qilishdagi rolini tahlil qila oladi.
+10
+Operatsion tizimlar va fayl xavfsizligi
+Windows vs Linux xavfsizligi
+Windows va Linux operatsion tizimlarining xavfsizlikni loyihalash va mantig‘i bo‘yicha asosiy farqlarini tasvirlay oladi.
+Har ikki tizimda foydalanuvchi qayd yozuvlari, guruhlar va ruxsatlar qanday boshqarilishini tushuntira oladi.
+Foydalanishni nazoratlash mexanizmlarini (masalan, Windows OTdagi NTFS ruxsatlari, Linux OTdagi fayl rejim bitlari va sudo) taqqoslay oladi.
+Har ikkala tizimdagi xavfsizlik vositalari va funksiyalarini — Windows Defender, BitLocker, SELinux, AppArmor kabi — anglay oladi.
+Tizim yangilanishlari, foydalanuvchi imtiyozlari va xizmat sozlamalarining umumiy xavfsizlik darajasiga ta’sirini tahlil qila oladi.
+Windows va Linux tizimlarida asosiy xavfsizlikni mustahkamlash (hardening) usullarini amalda qo‘llay oladi.
+11
+Fayl tizimlari va foydalanishlarni boshqarish
+Fayl tizimi tushunchasini anglaydi va uning ma’lumotlarni saqlash, tartibga solish va boshqarishdagi rolini tushuntira oladi.
+Windows va Linux operatsion tizimlarida fayl ruxsatlari va egalik huquqi qanday ishlashini tasvirlay oladi.
+O‘qish (read), yozish (write) va bajarish (execute) ruxsatlarini hamda ularning foydalanuvchi, guruh va boshqalar uchun qo‘llanilishini farqlay oladi.
+Foydalanishni nazoratlash ro‘yxatlari (ACLs) fayl va papka ruxsatlarini aniq darajada boshqarish imkonini berishini tushuntira oladi.
+Noto‘g‘ri fayl ruxsatlari yoki egalik sozlamalari natijasida yuzaga keladigan xavfsizlik xatarlarini aniqlay oladi.
+Windows va Linux tizimlarida fayllar va kataloglarni himoyalash uchun mos ruxsat va egalik sozlamalarini qo‘llay oladi.
+12
+Foydalanuvchi qayd yozuvi va parollar siyosati
+Operatsion tizimlarda foydalanuvchi qayd yozuvlari tuzilmasi va maqsadini tushuntira oladi.
+Foydalanuvchi rollari, guruhlar va imtiyozlar tushunchasini hamda ularning tizim xavfsizligidagi rolini tasvirlay oladi.
+Administrator/root va oddiy foydalanuvchi imtiyozlari o‘rtasidagi farqni bilib, imtiyozlarni ajratish tamoyilini tushuntira oladi.
+Parol siyosatining asosiy elementlari – uzunlik, murakkablik, amal qilish muddati va qayta ishlatish cheklovlarini aniqlay oladi.
+Zaif parollar va noto‘g‘ri boshqaruv natijasida tizim buzilish xavfini tahlil qila oladi.
+Windows va Linux tizimlarida xavfsiz foydalanuvchi boshqaruvi va parol siyosatini joriy eta oladi.
+13
+Operatsion tizim jurnallari va auditlash
+Tizim jurnali (log) nima ekanligini aniqlab, ularning tizim xavfsizligi va ishonchliligini ta’minlashdagi rolini tushuntira oladi.
+Turli log turlarini (masalan, tizim, ilova, xavfsizlik, tarmoq loglari) va ularning maqsadini aniqlay oladi.
+Windows va Linux tizimlarida audit jarayoni qanday amalga oshirilishini tasvirlay oladi.
+Log yozuvlarini tahlil qilib, shubhali faoliyat yoki buzilish urinishlarini aniqlay oladi.
+Loglarni ko‘rish va hodisalarni kuzatish uchun Event Viewer, journalctl, syslog kabi vositalardan foydalana oladi.
+Loglarni saqlash siyosati va ularni boshqarishning kriminalistik hamda xavfsizlik standartlariga muvofiqlikdagi ahamiyatini tushuntira oladi.
+14
+Kriptografiya asoslari
+Kriptografiyaga kirish
+Kriptografiya tushunchasini anglab, uning kiberxavfsizlik va ma’lumotlarni himoyalashdagi ahamiyatini tushuntira oladi.
+Oddiy misollar yordamida shifrlash va deshifrlash jarayonlarini tasvirlay oladi.
+Simmetrik va ochiq kalitli kriptografiya o‘rtasidagi farqni farqlay oladi.
+Shifrlash kalitlarining rolini va kalitlarni boshqarishning xavfsizlikdagi muhimligini tushuntira oladi.
+Kriptografiyaning amaliy qo‘llanilishiga (masalan, HTTPS, xabar almashish ilovalari, raqamli imzo) misollar keltira oladi.
+Kriptografiya bilan maxfiylik, yaxlitlik va autentifikatsiya o‘rtasidagi bog‘liqlikni tushuna oladi.
+15
+Simmetrik va ochiq kalitli shifrlash algoritmlari
+Simmetrik va ochiq kalitli shifrlash usullari o‘rtasidagi asosiy farqni tushuntira oladi.
+Simmetrik va ochiq kalitli shifrlashning tezlik, xavfsizlik va kalit boshqaruvi bo‘yicha afzallik va kamchiliklarini taqqoslay oladi.
+TEA (Tiny Encryption Algorithm) algoritmining simmetrik blokli shifrlash mexanizmini tasvirlay oladi.
+RSA algoritmining ochiq kalitli shifrlash tizimidagi ishlash prinsipini tushuntira oladi.
+AES va RSA algoritmlari amaliyotda qo‘llaniladigan sohalarni (masalan, VPN, HTTPS, raqamli imzo) aniqlay oladi.
+AES va RSA asosida shifrlash va deshifrlash jarayonini amaliy tarzda ko‘rsata oladi.
+16
+Xesh funksiyalar
+Xesh funksiya nima ekanligini anglab, ularning ma’lumotlar yaxlitligini ta’minlashdagi rolini tushuntira oladi.
+Bir tomonlamalik va kolliziyaga bardoshlilik kabi xavfsiz xesh funksiyaning asosiy xususiyatlarini tasvirlay oladi.
+MD5, SHA-1 va SHA-2 kabi keng tarqalgan xesh algoritmlarni taqqoslab, ularning farqi va xavfsizlik darajasini tushuntira oladi.
+MD5 va SHA-1 kabi eski algoritmlar nega endi xavfsiz hisoblanmasligini tushuntira oladi.
+Xesh funksiyalarining amaliy qo‘llanilishi – parollarni saqlash, raqamli imzo, fayl yaxlitligini tekshirish kabi misollarni tushuntira oladi.
+SHA256sum yoki xesh kalkulyatorlari yordamida xesh yaratish va tekshirish jarayonini amaliy ko‘rsata oladi.
+17
+Ochiq kalitlar infratuzilmasi
+Ochiq kalitli infratuzilma (PKI) nima ekanligini aniqlab, uning zamonaviy kiberxavfsizlik tizimlaridagi rolini tushuntira oladi.
+PKI tizimining asosiy qismlari – sertifikat markazi (CA), ro‘yxatga olish markazi (RA) va raqamli sertifikatlarni tasvirlay oladi.
+Raqamli imzolar qanday ishlashini hamda ular autentifikatsiya, yaxlitlik va inkor etib bo‘lmaslikni qanday ta’minlashini tushuntira oladi.
+O‘z-o‘zidan imzolangan va CA tomonidan berilgan sertifikatlar o‘rtasidagi farqni hamda ularning ishonchlilik darajasini farqlay oladi.
+PKI tizimining HTTPS, elektron pochtada shifrlash kabi amaliy qo‘llanilishini anglay oladi.
+Operatsion tizim yoki brauzer vositalari yordamida sertifikatlarni ko‘rish, tekshirish va boshqarish jarayonini amaliy ko‘rsata oladi.
+
+11.2. Ikinchi chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+1
+Kriptografiya asoslari
+Kriptografik algoritmlardan real hayotda foydalanish
+Shifrlash internet orqali uzatilayotgan ma’lumotlarni qanday himoya qilishini tushuntira oladi.
+HTTPS va SSL/TLS protokollarining veb-aloqani himoyalashdagi rolini tasvirlay oladi.
+HTTPS xavfsiz ulanishi jarayonidagi asosiy bosqichlarni, jumladan sertifikat tekshiruvini aniqlay oladi.
+Nuqtadan-nuqtagacha shifrlash (E2EE) tushunchasini va u xabarlarning maxfiyligini qanday ta’minlashini tushuntira oladi.
+Xabar almashish ilovalari, elektron pochta va bulutli saqlash xizmatlarida shifrlashning qo‘llanilishini taqqoslay oladi.
+Veb-saytning xavfsizlik sertifikatini tekshirib, shifrlangan aloqa belgilarini (masalan, qulf belgisi, HTTPS) amaliy aniqlay oladi.
+2
+Web xavfsizlik va ethical hacking asoslari
+Web saytlar qanday ishlaydi?
+Mijoz-server modeli asoslarini va brauzerlar bilan veb-serverlar o‘rtasidagi aloqa qanday amalga oshishini tushuntira oladi.
+HTTP protokolining veb-kontentni uzatish va qabul qilishdagi rolini tasvirlay oladi.
+Veb-sahifalarni yaratishda HTMLning asosiy tuzilmasi va maqsadini aniqlay oladi.
+HTTP va HTTPS o‘rtasidagi farqni farqlab, xavfsiz aloqaning ahamiyatini tushuntira oladi.
+Oddiy veb so‘rov va javob jarayonini misollar yordamida ko‘rsata oladi.
+HTTP, HTML, DNS kabi veb texnologiyalar bilan internet tizimi ishlash mexanizmi o‘rtasidagi bog‘liqlikni tushuna oladi.
+3
+Keng tarqalgan web zaifliklar
+Veb zaiflik nima ekanligini aniqlab, nega veb-ilovalar tez-tez hujum obyekti bo‘lishini tushuntira oladi.
+SQL Injection hujumi qanday amalga oshishini hamda foydalanuvchi kiritgan ma’lumotlar orqali bazaga noqonuniy kirish qanday sodir bo‘lishini tasvirlay oladi.
+XSS (Cross-Site Scripting) hujumlari orqali tajovuzkorlar veb-sahifalarga zararli skriptlar joylashtirishi mumkinligini tushuntira oladi.
+CSRF (Cross-Site Request Forgery) hujumining tamoyillarini va u autentifikatsiyadan o‘tgan foydalanuvchi harakatlarini qanday buzishini tushuna oladi.
+Autentifikatsiya buzilishi va sessiya boshqaruvi zaifliklari bilan bog‘liq muammolarni aniqlay oladi.
+Ushbu veb zaifliklarning oldini olish uchun asosiy himoya choralarini va xavfsiz dasturlash amaliyotlarini biladi va qo‘llay oladi.
+4
+Ethical hacking va qonuniy asoslar
+Ethical (axloqiy) xakerlik tushunchasini anglab, uni zararli xakerlik faoliyatlaridan farqlay oladi.
+Oq haker, kulrang haker va qora haker turlarini hamda ularning maqsadlarini tasvirlay oladi.
+Mas’uliyatli hakerlik va kiberxavfsizlik tadqiqotlarini boshqaruvchi axloqiy tamoyillarni tushuntira oladi.
+Kiberxavfsizlik sohasidagi asosiy qonunlar va me’yorlarni aniqlab, ular qonuniy va noqonuniy harakatlarni qanday belgilashini biladi.
+Kiberjinoyatlarning oqibatlari — huquqiy, axloqiy va ijtimoiy ta’sirlarni tushuna oladi.
+Har qanday xavfsizlik sinovini o‘tkazishdan avval ruxsat va rozilik olishning muhimligini anglay oladi.
+5
+Websayt xavfsizligi vositalari
+Burp Suite, OWASP ZAP va Wappalyzer kabi mashhur veb xavfsizlik testlash vositalarining maqsadi va imkoniyatlarini aniqlay oladi.
+Burp Suite yordamida HTTP so‘rov va javoblarini tutish, tahlil qilish va o‘zgartirish jarayonini tushuntira oladi.
+OWASP ZAP vositasining veb-ilovalar zaifliklarini avtomatik aniqlashdagi ish mexanizmini tasvirlay oladi.
+Wappalyzer yordamida veb-saytning texnologiyalari, platformalari va CMS tizimlarini aniqlay oladi.
+Ushbu vositalar yordamida veb zaifliklarni aniqlashning qo‘lda va avtomatik usullarini taqqoslay oladi.
+Xavfsiz, axloqiy va boshqariladigan test muhitida ushbu vositalardan birini yoki bir nechtasini amaliy qo‘llay oladi.
+6
+OWASP TOP 10 zaifliklari
+OWASP Top 10 ro‘yxati nimani anglatishini va u veb-ilovalar xavfsizligi uchun nega muhim ekanligini tushuntira oladi.
+Eng keng tarqalgan veb zaifliklarni, jumladan inyeksiya hujumlari, obro‘sizlantirilgan autentifikatsiya va noto‘g‘ri xavfsizlik sozlamalarini aniqlay oladi.
+XSS (cross-site scripting) va CSRF (cross-site request forgery) hujumlarining veb-ilovalarga ta’sirini tushuntira oladi.
+Noaniq deserializatsiya, yetarli log yuritmaslik va monitoring yetishmasligi veb tizimlar xavfsizligiga qanday ta’sir ko‘rsatishini tasvirlay oladi.
+OWASP Top 10da keltirilgan xavf-xatarlarni kamaytirish uchun xavfsiz kod yozish amaliyotining ahamiyatini anglay oladi.
+7
+Simsiz tarmoqda suqilib kirish testlarini o‘tkazish
+WI-FI xavfsizlik protokollari
+Wi-Fi xavfsizlik protokollari nima ekanini va ular simsiz aloqani himoya qilishda nega muhimligini tushuntira oladi.
+WEP (Wired Equivalent Privacy) protokolining asosiy tuzilmasi va ishlash mexanizmini tasvirlay oladi.
+WEP protokolini zamonaviy tarmoqlarda xavfsiz emas holga keltiruvchi zaifliklar va kamchiliklarni tahlil qila oladi.
+WEP ga nisbatan WPA2 da joriy etilgan AES shifrlash va CCMP rejimi kabi xavfsizlik yaxshilanishlarini taqqoslay oladi.
+WPA3 protokolining SAE (Simultaneous Authentication of Equals) va forward secrecy kabi yangi xususiyatlarini aniqlay oladi.
+Eng mos protokol va shifrlash sozlamalarini tanlab, Wi-Fi tarmog‘ini xavfsiz sozlashni amaliy bajara oladi.
+8
+Simsiz tarmoqlarga qaratilgan hujumlar
+Qayta autentifikatsiyalash, spoofing va soxta boshqarish nuqtasi (AP) kabi keng tarqalgan simsiz hujumlarni aniqlaydi va ularning maqsadlarini tushuntira oladi.
+Qayta autentifikatsiyalash hujumi mijozlarni Wi-Fi tarmog‘idan qanday uzib qo‘yishi va bu holatning odatiy oqibatlarini tasvirlay oladi.
+MAC spoofing, SSID spoofing kabi turli spoofing turlarini va hujumchilar ularni qurilmalar yoki tarmoqlar sifatida soxtalashtirib qanday foydalanishini tushuntira oladi.
+Soxta boshqarish nuqtasi (rogue AP) nima ekanligini, u qanday joylashtirilishini va foydalanuvchilar hamda tashkilotlar uchun qanday xavf-xatarlar tug‘dirishini aniqlay oladi.
+Tarmoqni kuzatish, kuchli autentifikatsiya/shifrlash, APlarni oq ro‘yxatga olish va foydalanuvchi xabardorligi kabi aniqlash va yumshatish strategiyalarini tahlil qila oladi.
+Nazoratli laboratoriya muhitida soxta APlarni aniqlash yoki tarmoqni tekshirish kabi simsiz zaifliklarni sinashning xavfsiz va etik usullarini amaliy ko‘rsata oladi.
+
+
+
+
+
+
+
+
+
+
+
+11.3. Uchinchi chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+1
+Simsiz tarmoqda suqilib kirish testlarini o‘tkazish
+Tarmoqni skanerlash usullari
+Tarmoqni skanerlash maqsadini aniqlaydi va administratorlar hamda hujumchilar qachon va nima uchun skanerlashni amalga oshirishlarini tushuntira oladi.
+Ping sweep, ARP discovery va host discovery kabi keng tarqalgan skanerlash usullarini tasvirlab, ularning qayerda va nima uchun qo‘llanilishini ko‘rsata oladi.
+TCP SYN, TCP connect, UDP kabi port skanerlash turlarini tushuntirib, ularning har biri nishon haqida qanday ma’lumot berishini bayon eta oladi.
+Nmap vositasining asosiy imkoniyatlari va skanerlash rejimlarini aniqlay oladi.
+Skanerlash natijalarini tahlil qilib, ochiq, yopiq, filtrlangan portlarni ajratib ko‘ra oladi va ularning xavfsizlik nuqtai nazaridan nima anglatishini ayta oladi.
+Laboratoriya muhitida skanerlash vositalarini (masalan, Nmap, ping) xavfsiz va axloqiy tarzda ishlatishni amalda ko‘rsata oladi.
+2
+Zaifliklarni baholash
+Zaiflik tushunchasini tahdid va ekspluatatsiya (foydalanish) kabi atamalardan farqlay oladi.
+Tashkilotning xavfsizlik dasturi doirasida zaifliklarni baholashning maqsadi va bosqichlarini tushuntira oladi.
+Nessus, OpenVAS, Nikto kabi zaifliklarni aniqlash vositalari va usullarini aniqlay oladi.
+Zaiflikni aniqlash, tahlil qilish, tasdiqlash va hisobot berish bosqichlarini tasvirlay oladi.
+CVSS (Umumiy Zaiflik Baholash Tizimi) kabi tizimlardan foydalanib, zaifliklarni ustuvorlik darajasi bo‘yicha tartiblashni amalga oshira oladi.
+Xavfsiz laboratoriya muhitida oddiy zaifliklarni baholashni bajarib, natijalarni tahlil qiladi va bartaraf etish choralarini taklif qilish.
+3
+
+Parolga qaratilgan hujumlar
+Lug‘atga asoslangan hujumi, qo‘pol kuch (brute-force) va rainbow-jadval hujumlari kabi keng tarqalgan parol hujum turlarini bilish va ularning asosiy tamoyillarini bayon etish.
+Lug‘atga asoslangan va qo‘pol kuch hujumlarining resurs va vaqt talablarini taqqoslab, qaysi vaziyatda qaysi usul qo‘llanilishini farqlay oladi.
+Rainbow-jadvallar parolni buzishni qanday tezlashtirishini va parollarni salt (tuz) bilan saqlash bu tahdidni qanday kamaytirishini tushuntira oladi.
+Qayta ishlatilgan parollar, keng tarqalgan so‘zlar yoki etarli entropiyaga ega emasligi kabi zaif yoki buzilgan parollarni ko‘rsatuvchi belgilarni aniqlay oladi.
+Parol-xeshni saqlash amaliyotlarini tahlil qilib, qaysi usullar hujumlarga chidamlilikni qanday oshirishini baholay oladi.
+Xavfsizlik choralarini amaliy tatbiq qila oladi va ularga oid tavsiyalar bera oladi.
+4
+Ijtimoiy muhandislik va inson omili
+Ijtimoiy muhandislikka kirish
+Ijtimoiy muhandislik tushunchasini aniqlab, uning texnik xakerlikdan farqli ravishda inson psixologiyasiga tayanishini tushuntira oladi.
+Fishing, pretexting, baiting va tailgating kabi keng tarqalgan ijtimoiy muhandislik hujum turlarini tasvirlay oladi.
+Ushbu hujumlarning asosida yotgan ishonch, qo‘rquv, qiziqish, shoshilinchlik va avtoritet kabi psixologik omillarni tushuntira oladi.
+Haqiqiy hayotdagi ijtimoiy muhandislik hujumlari misollarini keltirib, ularning foydalanuvchilar va tashkilotlar uchun oqibatlarini aniqlay oladi.
+Manipulyatsiyaning dastlabki belgilarini tanib, ma’lumotni tekshirish va aloqa haqiqiyligini aniqlash orqali hujumlardan qanday himoyalanishni tushuntira oladi.
+Shubhali elektron xatlarni xabar berish, shaxsni tasdiqlash va boshqalarni ogohlikka o‘rgatish kabi amaliy himoya va javob choralarini amalda ko‘rsata oladi.
+5
+Keng tarqalgan ijtimoiy muhandislik hujumlari
+Baiting, pretexting va tailgating nima ekanligini tushunadi hamda bu hujumlar inson xulq-atvori va ishonchidan qanday foydalanishini tushuntira oladi.
+Baiting hujumlari qanday qilib qiziqish yoki ochko‘zlik orqali qurbonlarni xavfsizlikni buzishga undashini tasvirlay oladi.
+Pretexting — bu hujumchi soxta voqealar yoki shaxslar yaratib, maxfiy ma’lumotlarni qo‘lga kiritadigan ijtimoiy muhandislik turi ekanligini tushuntira oladi.
+Tailgating (yoki piggybacking) hujumlari qanday qilib fizik foydalanishni boshqarish zaifliklaridan foydalanishini izohlay oladi.
+Ushbu hujumlarning haqiqiy hayotdagi yoki amaliy modellashtirilgan misollarini aniqlaydi va ularning tashkilotlarga ta’sirini baholay oladi.
+Xavfsizlik xabardorligi, tekshirish tartiblari va foydalanishni nazoratlashni kuchaytirish kabi amaliy himoya choralarini amalda qo‘llay oladi.
+6
+Internetda shaxsiylik va raqamli iz
+Onlayn maxfiylik va raqamli iz tushunchalarini anglaydi hamda har bir onlayn harakat qanday iz qoldirishini tushuntira oladi.
+Veb-saytlar, ilovalar va ijtimoiy tarmoqlar tomonidan to‘planadigan shaxsiy ma’lumot turlarini aniqlay oladi.
+Korxonalar, reklama beruvchilar va hujumchilar ushbu ma’lumotlardan profil yaratish, kuzatish yoki suiste’mol qilish uchun qanday foydalanishini tushuntira oladi.
+Kuki ma’lumotlar, geolokatsiya ma’lumotlari, brauzer izlari (fingerprinting) va ommaviy ulashish bilan bog‘liq maxfiylik xatarlarini tasvirlay oladi.
+Maxfiylik sozlamalari, VPN, shifrlash va ijtimoiy tarmoqlarda mas’uliyat bilan shaxsiy ma’lumotlarni himoya qilish usullarini baholay oladi.
+Sozlamalarni o‘zgartirish, eski ma’lumotlarni o‘chirish va maxfiylik vositalaridan foydalanish orqali o‘z raqamli izlarini kamaytirishni amaliy bajara oladi.
+7
+Zararli dasturlar tahlili va undan himoyalanish
+Zararli dastur turlari
+Zararli dastur (malware) tushunchasini anglaydi va uning kompyuter tizimlariga zarar yetkazishdagi maqsadini tushunadi.
+Viruslar, qurtlar, troyanlar, josus dasturlar (spyware), reklama dasturlari (adware) va ransomware kabi asosiy zararli dastur turlarini farqlay oladi.
+Har bir zararli dastur turi tarmoq, fayl yoki foydalanuvchi harakatlari orqali qanday tarqalishi va tizimni yuqtirishini tushuntira oladi.
+Zararli dastur yuqtirilganligini bildiruvchi belgilarning asosiy turlarini va ularning tizim ishlashiga hamda ma’lumot xavfsizligiga ta’sirini aniqlay oladi.
+Haqiqiy hayotdagi zararli dastur hujumlari misollarini keltirib, ularning moliyaviy va maxfiylik oqibatlarini tushunadi.
+Antivirus dasturlari, tarmoqlararo ekran (firewall), xavfsiz brauzer odatlari va muntazam yangilash orqali zararli dasturlardan himoyalanish usullarini baholay oladi.
+8
+Antivirus va anti-malware vositalari
+Antivirus va zararli dasturlarga qarshi vositalarning asosiy vazifalarini tushuntira oladi.
+Antivirus dasturi imzo asosida (signature-based), evristik (heuristic) va hatti-harakat tahlili (behavioral analysis) kabi aniqlash usullarini tasvirlay oladi.
+Antivirus vositalarining real vaqt rejimida himoya va talabga ko‘ra skanerlash funksiyalarini farqlay oladi.
+Murakkab zararli dasturlar tomonidan antivirus tizimlarini chetlab o‘tish uchun ishlatiladigan usullarni va antivirusning cheklovlarini aniqlay oladi.
+Antivirus vositalarining tarmoqlararo ekran (firewall), tarmoq hujumlarini aniqlash tizimlari (IDS) va yangilanishlar bilan birgalikdagi samaradorligini baholay oladi.
+Maksimal himoya uchun antivirus dasturini o‘rnatish, sozlash va yangilash jarayonlarini amaliy ko‘rsatib bera oladi.
+9
+Sandboxing va ajratish
+Kiberxavfsizlik va zararli dasturlarni tahlil qilishda qumli muhit (sandboxing) va ajratish (izolyatsiya) tushunchalarini aniqlay oladi.
+Qumli muhit yordamida shubhali dasturlarni xavfsiz sinovdan o‘tkazish va asosiy tizimni himoya qilish jarayonini tushuntira oladi.
+Virtual mashinalar (VM), konteynerlar va emulyatorlar yordamida dasturlarni qanday ajratish (izolyatsiya qilish) mumkinligini tasvirlay oladi.
+Zararli dasturlarni aniqlash va o‘rganishda qumli quti muhitning afzalliklari va cheklovlarini aniqlay oladi.
+VMware, VirtualBox yoki shunga o‘xshash vositalardan foydalanib xavfsiz sinov muhiti yaratishni amaliy ko‘rsatib bera oladi.
+Zamonaviy hodisalarga javob (incident response) va raqamli kriminalistika (digital forensics) jarayonlarida sandboxing va virtualizatsiyaning ahamiyatini baholay oladi.
+
+11.4. To‘rtinchi chorak uchun
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+1
+Zararli dasturlar tahlili va undan himoyalanish
+Ransomware zararli dasturi
+Ransomware nima ekanligini aniqlaydi va u ma’lumotlarni shifrlab, to‘lov talab qilish orqali qanday ishlashini tushuntira oladi.
+Phishing xabarlari, zararli havolalar va dasturdagi zaifliklar orqali ransomware qanday tarqalishini aniqlay oladi.
+Ransomware zararini kamaytirishda muntazam ma’lumot zaxiralashning asosiy strategik ahamiyatini tushuntira oladi.
+Lokal disklar, tashqi qurilmalar yoki bulutli saqlash yordamida zaxiralash va tiklash rejalarini amaliy ko‘rsatib bera oladi.
+Ransomware tomonidan zaxira fayllarni shifrlashning oldini olish uchun offlayn va o‘zgarmas (immutable) zaxiralarning ahamiyatini aniqlay oladi.
+Ransomware hodisalariga javob choralarini — zararni cheklash, aloqa o‘rnatish va ma’lumotlarni tiklash bosqichlarini baholay oladi.
+2
+Raqamli kriminalistika va insidentlarga javob berish
+Raqamli kriminalistikaga kirish
+Raqamli kriminalistika tushunchasini anglaydi va uning kiberhodisalar va kiberjinoyatlarni tekshirishdagi rolini tushunadi.
+Dalillarni yig‘ish, saqlash, tahlil qilish va hisobot tayyorlash kabi kriminalistik tekshiruv jarayon bosqichlarini tushuntira oladi.
+Log fayllar, o‘chirilgan ma’lumotlar, elektron pochta va tarmoq izlari kabi raqamli dalillar turlarini aniqlay oladi.
+Kompyuter, smartfon va saqlash qurilmalaridan ma’lumotlarni qayta tiklash va tahlil qilish uchun kriminalistik vositalardan foydalanish jarayonini tasvirlay oladi.
+Ishonchli dalillarni ta’minlash uchun dalillarni kuzatish zanjiri (chain of custody) va ma’lumot yaxlitligining ahamiyatini aniqlay oladi.
+Raqamli kriminalistika tashkilotlarga kiberhujumlarni aniqlash, ularga javob berish va xatolardan saboq olishda qanday yordam berishini baholay oladi.
+3
+Raqamli dalillarni saqlash zanjiri
+Dalillarni kuzatish zanjiri (chain of custody) tushunchasini aniqlaydi va uning raqamli kriminalistik tekshiruvlardagi muhim rolini tushunadi.
+Dalillarni uzluksiz kuzatish ularning haqiqiyligi va sudda qabul qilinishi uchun nega muhimligini tushuntira oladi.
+Dalillarni yig‘ish, tashish, saqlash va tahlil qilish bosqichlarida hujjatlashtirish tartibini tasvirlay oladi.
+Dalillarni kuzatish zanjirini buzishi mumkin bo‘lgan xatoliklar va xavf omillarini aniqlay oladi.
+Kriminalistik standartlarga muvofiq dalillarni belgilash, muhrlash va ro‘yxatga olish jarayonlarini amaliy ko‘rsatib bera oladi.
+Hujjatlashtirish, vaqt belgilari (time stamps) va ruxsat etilgan foydalanish orqali raqamli dalil yaxlitligini saqlashning ahamiyatini baholay oladi.
+4
+Hodisalarni qayta qurish
+Log tahlili va vaqt jadvalini qayta tiklash (timeline reconstruction) tushunchalarini raqamli kriminalistika kontekstida aniqlay oladi.
+Tizim va dasturiy log fayllar orqali foydalanuvchi faoliyati, tizim hodisalari va xavfsizlik buzilishlari haqida qanday dalillar olinishini tushuntira oladi.
+Tizim loglari, tarmoq loglari, tarmoqlararo ekran (firewall) loglari va dastur loglari kabi turli log turlarini aniqlay oladi.
+Kiberhodisaning ketma-ketligini va sabablarini aniqlash uchun vaqt bo‘yicha hodisalar ketma-ketligini (timeline) tuzib chiqadi.
+Autopsy, ELK Stack, Splunk kabi kriminalik vositalar yordamida loglarni bog‘lash va hodisalarni qayta tiklash jarayonini amaliy ko‘rsatib bera oladi.
+Log va vaqt jadvali tahlilining hodisalarga javob berish (incident response), tahdidlarni izlash (threat hunting) va hujumdan keyingi tekshiruvlardagi ahamiyatini baholay oladi.
+5
+Xotira kriminalistikasi
+Xotira kriminalistikasi (memory forensics) tushunchasini anglaydi va uning zamonaviy kibertekshiruvlardagi ahamiyatini tushunadi.
+Kompyuter tizimlarida operativ xotira (RAM)ning tuzilishi va vazifasini tasvirlay oladi.
+Operativ xotirani olish (RAM capture) orqali ishlayotgan jarayonlar, tarmoq ulanishlari va shifrlash kalitlari kabi muhim dalillarni qanday saqlash mumkinligini tushuntira oladi.
+FTK Imager, Belkasoft RAM Capturer yoki Volatility kabi vositalar yordamida xotirani olish va tahlil qilish jarayonini amaliy ko‘rsatib bera oladi.
+Xotirada topilishi mumkin bo‘lgan kriminalistik artefaktlar — zararli dastur izlari, ochiq fayllar va foydalanuvchi sessiyalarini aniqlay oladi.
+Xotira kriminalistikasining hodisalarga javob berish (incident response) va real vaqt rejimida tahdidlarni aniqlashdagi ahamiyatini baholay oladi.
+6
+Individual va ethical loyihalar
+Kiberxavfsizlik sohasida karyera va xalqaro sertifikatlar
+Kiberxavfsizlik sohasidagi asosiy kasbiy rollarni — penetratsion sinovchi, xavfsizlik tahlilchisi, hodisalarga javob beruvchi va kriminalistika mutaxassisi kabi lavozimlarni anglay oladi.
+Turli kiberxavfsizlik yo‘nalishlari uchun zarur bo‘lgan ko‘nikmalar va bilim sohalarini tushuntira oladi.
+Xalqaro tan olingan sertifikatlar — CompTIA Security+, CEH (Certified Ethical Hacker), CISSP va CISM haqida ma’lumot bera oladi.
+Hujumkor (offensive), himoyaviy (defensive) va tahliliy (analytical) kiberxavfsizlik yo‘nalishlarini farqlay oladi.
+Kiberxavfsizlik kasbida axloqiy me’yorlarga rioya qilish va qonuniy javobgarlikni tushunishning ahamiyatini anglay oladi.
+Shaxsiy kasbiy yo‘l xaritasini tuzib, o‘z qiziqishlari, ta’limi va sertifikatlarini aniq kiberxavfsizlik maqsadlariga yo‘naltira oladi.
+7
+Loyiha yo‘riqnomasi va axloqiy qoidalar.
+Kiberxavfsizlik tajribalari va xakerlik loyihalarida axloqiy va huquqiy chegaralarni tushunib oladi.
+Kiberxavfsizlik loyihalarida loyiha rejalashtirish va hujjatlashtirishning to‘g‘ri standartlarini qo‘llay oladi.
+Axloqiy xakerlik faoliyati va ruxsatsiz yoki zararli harakatlar o‘rtasidagi farqni aniqlay oladi.
+Suqilib kirish sinovlari yoki simulyatsiyalarni o‘tkazishda tashkilot va qonuniy xulq-atvor qoidalariga rioya qiladi.
+Loyiha davomida ma’lumot maxfiyligi, sir saqlash va intellektual mulkka hurmat tamoyillarini namoyon etadi.
+Axloqiy kiberxavfsizlik maqsadlari va mas’uliyat bilan mos keluvchi axloqiy loyiha taklifini ishlab chiqadi.
+
+12. KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) KURSI BO‘YICHA ORALIQ VA YAKUNIY NAZORAT ISHLARI
+Kiberxavfsizlik (penetration testing va ethical hacking) kursi davomida amalga oshiriladigan oraliq nazorat va yakuniy nazorat ishlari quyidagi keltirilgan mavzular asosida amalga oshirilishi tavsiya etiladi. Mazkur mavzular ro‘yxati mashg‘ulot olib boruvchi o‘qituvchi tomonidan kengaytirilishi mumkin.
+Oraliq nazorat ishlari
+Nazariy savollar:
+CIA uchligi tushunchasini tushuntiring va real misollar keltiring.
+Tahdid, zaiflik va hujum tushunchalari farqini ayting va bularga misollar keltiring.
+Keng tarqalgan tarmoq hujumini tushuntiring (masalan, ARP spoofing, DoS, sniffing) va ularni bartaraf etish choralarini ayting.
+Simmetrik va ochiq kalitli shifrlash farqini tushuntiring.
+Ruxsat va rozilik nuqtai nazaridan axloqiy va noqonuniy xakerlikni tushuntiring.
+Raqamli iz (digital footprint) ni tushuntiring va maxfiylikni saqlash usullarini ayting.
+Firewall va IDS/IPS vositalarining vazifalarini tushuntiring va tarmoq diagrammasida ifodalang.
+Zararli fayl (malware) ishlashi hayot siklini tushuntiring va har bir bosqich uchun oldini olish chorasini ayting.
+Suqilib kirishlar testning bosqichlarini sanab chiqing va qaysi bosqichlar uchun ruxsat talab etilishini aniqlang.
+Operatsion tizimlarni himoyalash muhimligini tushuntiring (Windows va Linux uchun).
+Amaliy topshiriqlar:
+Tarmoqni skanerlash va tavsiyalar berish:
+Nmap yoki Zenmap orqali lokal virtual tarmoqdagi faol hostlar va ochiq portlarni aniqlang.
+Natijalarni tahlil qiling va xavfsizlik bo‘yicha tavsiyalar bering.
+Parol bardoshligini sinash:
+Kuchli va zaif parollar yarating va John the Ripper yoki CrackStation bilan tekshiring.
+Parol siyosati yaxshilanishi bo‘yicha tavsiyalar yozing.
+Paket tahlili:
+Wireshark yordamida tarmoq trafikini tutib oling.
+Hech bo‘lmasa bitta xavfsiz bo‘lmagan protokolni aniqlang va uni yaxshilashni taklif qiling.
+Operatsion tizimni mustahkamlash vazifasi:
+OT yangilanishlarini o‘rnating, keraksiz xizmatlarni o‘chiring, firewallni yoqing (Windows Defender yoki ufw).
+Barcha o‘zgartirishlarni hujjatlashtiring.
+Oddiy shifrlash vazifasi:
+OpenSSL yoki VeraCrypt orqali xabarni shifrlang va qayta oching.
+Kalit yaratish va boshqarish jarayonini tushuntiring.
+Yakuniy nazorat ishlari
+Nazariy savollar:
+Axloqiy xakerlik bosqichlarini tushuntiring va hisobotning ahamiyatini ko‘rsating.
+Xavfsiz kodlash va web xavfsizligini tushuntiring (SQL Injection, XSS, CSRF).
+Tizim hodisalariga javob berish bosqichlarini tushuntiring.
+Ma’lumotlarni shifrlash va xeshlashning ahamiyati haqida yozing.
+Ijtimoiy muhandislikni tushuntiring va unga qarshi choralarni ayting.
+Bulutli hisoblash tizimlarida xavfsizlik muammolari va ularni bartaraf etish yo‘llarini tushuntiring.
+Blue-team va Red-team maqsadlarini farqlang.
+Axloqiy va huquqiy jihatlarni tushuntiring (ta’lim muhitida penetration testing).
+Amaliy topshiriqlar:
+Jamoaviy CTF simulyatsiyasi:
+Ikki jamoa tuzing: Red team (hujum) va Blue team (mudofaa).
+Red team boshqariladigan exploitlar bajaradi (web, tarmoq yoki parol hujumlari).
+Blue team IDS, log va firewall yordamida aniqlash va bartaraf etish vazifasini bajaradi.
+Har ikki jamoa jarayon va saboqlarni hujjatlashtiradi.
+Hodisaga javob berish:
+Simulyatsiya qilingan buzilish loglarini tahlil qiling.
+Obro‘sizlantirilgan ko‘rsatkichlarni (Indicators of compromise) aniqlang va tiklash bo‘yicha tavsiyalar bering.
+Web xavfsizlik bahosi:
+Test web ilovasida zaifliklarni skanerlash.
+Kamida 2 ta muammoni aniqlash va tuzatish.
+Xavfsiz tarmoqni loyihalash:
+Routers, firewall, DMZ va VPN bilan maktab tarmog‘ining xavfsiz arxitekturasini chizing va asoslab bering.
+Shifrlash amaliyoti:
+Python yoki OpenSSL yordamida xabarlarni shifrlash va deshifrlash.
+Har bir yuqoridagi ishlar uchun yakuni hisobot va taqdimot:
+5–7 sahifalik hujjat topshiring: metodlar, screenshotlar, axloqiy qoidalar va himoya qilish bo‘yicha takliflar.
+Guruh oldida taqdimot qiling; aniqlik, to‘g‘rilik va jamoaviy ishlash baholanadi.
+13. KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) XONASI UCHUN QOʻYILADIGAN UMUMIY TALABLAR
+Kiberxavfsizlik (penetration testing va ethical hacking) laboratoriyasi uchun fizik muhit xavfsiz, moslashuvchan va texnik talablarni to‘liq qondiruvchi bo‘lishi zarur. Quyida asosiy talablar keltirilgan:
+Xona hajmi va sig‘imi
+O‘quv xonasi bir vaqtda 15–25 nafar o‘quvchi uchun mo‘ljallangan bo‘lishi kerak. Bu son o‘qituvchiga har bir talabani individual nazorat qilish va amaliy mashg‘ulotlar jarayonida yordam ko‘rsatish imkonini beradi.
+Joylashuv va mebel jihozlari
+Parta va stollar ko‘chiriladigan yoki guruh holida joylashtiriladigan bo‘lishi maqsadga muvofiq. Bunday joylashuv o‘quvchilarni yakka tartibda yoki jamoaviy (Red/Blue Team) ishlashga tayyorlaydi.
+Elektr ta’minoti
+Har bir ish joyida kamida ikkita elektr rozetkasi bo‘lishi kerak. Bu noutbuklar, tarmoq uskunalari va boshqa qurilmalarni xavfsiz ulash imkonini beradi. Elektr simlari tartibli joylashtirilgan, uzilishlardan himoyalangan bo‘lishi zarur.
+Yoritish va mikroiqlim
+Xonada tabiiy va sun’iy yoritish muvozanatli bo‘lishi kerak. Shuningdek, xona ventilyatsiya va konditsioner tizimi bilan jihozlanadi. Uzoq davom etadigan amaliy mashg‘ulotlar uchun qulay harorat (20–24°C) va namlik darajasi ta’minlanadi.
+Xavfsizlik zonasi va kirish nazorati
+Laboratoriya xonasi maxsus qulflanadigan bo‘lishi kerak. Kirish faqat o‘qituvchi, laboratoriya ma’muri va dars davomida belgilangan talabalar uchun ruxsat etiladi. Bu uskunalarning saqlanishi va axborot xavfsizligini ta’minlaydi.
+Ko‘rgazmali vositalar
+Xonada oq doska yoki interfaol smart-doska o‘rnatilgan bo‘lishi zarur. U tarmoq topologiyalari, hujum ssenariylari va kiberxavfsizlik konsepsiyalarini amaliy tushuntirishda ishlatiladi.
+Internet va lokal tarmoq ulanishi
+Laboratoriyada ichki (lokal) tarmoq mavjud bo‘lishi, ammo asosiy maktab tarmog‘idan ajratilgan bo‘lishi shart. Bu tajriba jarayonida xavfsizlikni ta’minlaydi va tasodifiy zararli faoliyatning tashqi tarmoqqa chiqishiga yo‘l qo‘ymaydi.
+Jihozlarni joylashtirish
+Kompyuterlar orasida kamida 70–80 sm masofa bo‘lishi, har bir talaba uchun qulay harakatlanish imkonini yaratadi. Tarmoq uskunalari (router, switch, server) alohida stend yoki javonlarda joylashtiriladi.
+Favqulodda holat vositalari
+Laboratoriyada yong‘inga qarshi o‘t o‘chirgich, favqulodda chiqish yo‘li belgisi, va birinchi yordam qutisi mavjud bo‘lishi zarur. Bu o‘quv jarayonida yuzaga kelishi mumkin bo‘lgan texnik va fizik xavf holatlariga tayyorlikni ta’minlaydi.
+Gigiyena va texnik xizmat
+Xona muntazam tozalab turilishi, changsiz muhitda uskunalarning ishlashi va xizmat muddati uzaytiriladi. Har oyda elektr xavfsizligi va uskunalar ishlash holati tekshiruvdan o‘tkaziladi.
+14. KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) KASBIGA OʻQITISH XONASINI JIHOZLASHGA QOʻYILGAN TALABLAR
+T/rJihoz nomiOʻlchov birligiSoniJihoz rasmi1.O‘quvchi ishchi kompyuteri: Intel i5/Ryzen 5 yoki undan yuqoru, 8–16 GB RAM, 512 GB SSD, Monitor 27.To‘plam15-25 SHAPE  \* MERGEFORMAT 2.O‘qituvchi ishchi kompyuteri: Intel i7/Ryzen 7+, 16–32 GB RAM, 1 TB SSD, dual monitor 27.To‘plam1 INCLUDEPICTURE "https://m.media-amazon.com/images/I/41onx9IMDXL._AC_UF1000,1000_QL80_.jpg" \* MERGEFORMATINET 3.Tarmoq jiholari: 
+2-3 router, Dona2 INCLUDEPICTURE "https://www.cisco-russia.ru.com/image/cache/catalog/data/cisco7201.800x800-1000x800.jpg" \* MERGEFORMATINET 2 ta switch, Dona2 INCLUDEPICTURE "https://m.media-amazon.com/images/I/51jshcAupKL._AC_SL1280_.jpg" \* MERGEFORMATINET Wi-Fi AP.Dona24.Tashqi xotira: USB 3.0 flesh xotiralar (16–32 GB) yoki taqsimlangan tarmoq.Dona5 SHAPE  \* MERGEFORMAT 5.ProyektorDona1 INCLUDEPICTURE "https://m.media-amazon.com/images/I/61pKMIi0AfL._AC_UF1000,1000_QL80_.jpg" \* MERGEFORMATINET 15. KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) KASBIGA OʻRGATISH UCHUN ZARUR BOʻLADIGAN DASTURIY VOSITALAR ROʻYXATI
+T/r 
+Dasturiy vosita nomi 
+Izoh
+1.
+Operatsion tizim
+Host OT: Windows 10/11 yoki Ubuntu 22.04 LTS;
+Virtualizatsiya platformasi: VirtualBox (majburiy) yoki VMware Workstation Player;
+Qo‘shimcha: Kali Linux, Ubuntu Server, Windows Server.
+2.
+Tarmoq skanerlari
+Nmap, Zenmap, Angry IP Scanner
+3.
+Paketlarni tutib oluvchilar
+Wireshark, tcpdump
+4.
+Parol & xeshlash vositalari
+John the Ripper, Hashcat, Hydra
+5.
+Web xavfsizlik
+OWASP ZAP, Burp Suite Community, Nikto
+6.
+Exploit Frameworklari
+Metasploit, Searchsploit
+7.
+Kriminalistik vositalar
+Autopsy, FTK Imager, Volatility
+8.
+Kriptografik vositalar
+OpenSSL, VeraCrypt, Python PyCryptodome
+9.
+Firewall / IDS
+pfSense, Snort, Suricata
+10.
+Tizimni monitoringlash
+Sysinternals Suite, htop, netstat
+11.
+Xavfsiz kodlash uchun vositalar
+Visual Studio Code, GCC, Python3, Git
+
+16. KASBIY TAʼLIM USTASI LAVOZIMIGA QOʻYILADIGAN TALABLAR
+№
+Lavozim nomlanishi
+Ta’lim darajasi
+Malakaviy talablar
+Ish tajribasi va shaxsiy sifatlari
+1
+Informatika va axborot texnologiyalari, axborot xavfsizligi bo‘yicha mentor
+O‘rta maxsus yoki oliy ma’lumot
+Mutaxassisligiga talab qo‘yilmaydi
+Axborot texnologiyalari, axborot xavfsizligi va dasturlash bo‘yicha chuqur bilim va zamonaviy ko‘nikmaga ega;
+Mazkur yo‘nalish bo‘yicha kamida 2 yil o‘quvchilar bilan ishlash tajribasiga ega (mehnat daftarchasi yoki ma’lumotnoma asosida);
+Taqdim etilgan o‘quv reja va dasturlar asosida darslarni tashkillashtirish, shuningdek, ularni o‘quvchilarni bilim darajasi, qiziqishi va talablariga ko‘ra moslashtira olish ko‘nikmasi ega;
+Ijodkorlik, jamoa bilan ishlash, moslashuvchanlik, tashkilotchilik va muloqot o‘rnatish ko‘nikmalariga ega.
+Lavozim vazifalari:
+biriktirilgan guruhlarda о‘quv amaliyoti mashgʻulotlarni о‘tish, ishlab chiqarish amaliyotiga rahbarlik qilish; 
+о‘quv laboratoriyalarida jihozlar, texnika vositalar va dasturlarni amaliy mashgʻulotlarga tayyorlash; 
+о‘quvchilarni oraliq, bitiruv amaliy imtihonlarini topshirishga tayyorlash, biriktirilgan guruhlarda tarbiyaviy ish olib borish, о‘quv mashgʻulot jurnallarini yuritish va saqlash; 
+taʼlim-tarbiya jarayoni davomida о‘quv-texnika jihozlari va vositalaridan, ustaxonalardan, maktabga qarashli jihozlardan ehtiyotkorlik bilan foydalanish;
+tanlab olingan kasb-hunarni egallash jarayonida о‘quvchilarning kasbiy layoqat, kо‘nikma va malakalarini shakllantirish;
+kasb-hunarga tayyorlash tizimi va mazmunini jamiyat ehtiyojlaridan, fan, madaniyat va zamonaviy innovatsion texnika yutuqlaridan kelib chiqqan holda takomillashtirish;
+ish о‘rinlarini jihozlash, yongʻinga qarshi himoya, xavfsizlik texnikasi va mehnatni muhofaza qilish qoidalari va meʼyorlarining bajarilishini taʼminlash. 
+Bilishi kerak:
+Taʼlimga oid О‘zbekiston Respublikasi qonunlarini, kasbiy va amaliy faoliyatga tegishli masalalar bо‘yicha meʼyoriy va uslubiy hujjatlarni, mehnat qonunchiligi, mehnat muhofazasining qoidalari va meʼyorlarini, xavfsizlik texnikasi qoidalarini bilishi.
+Malaka talablari: 
+Pedagogik, muhandis-pedagogik yoki biriktirilgan guruh tayyorlov yо‘nalishiga mos ravishda kamida oʻrta maxsus maʼlumotga ega boʻlishi kerak. 
+17. 10-SINF OʻQUVCHILARIGA QOʻYILGAN UMUMIY MALAKA TALABLARI
+Bilim
+Talabalar kiberxavfsizlik, tarmoqlar, operatsion tizimlar, kriptografiya va etik-huquqiy qoidalar bo‘yicha nazariy bilimlarga ega bo‘lib, ularni amaliy mashg‘ulotlarda to‘g‘ri qo‘llay olishlari kerak.
+Koʻnikma
+Talabalar o‘z bilimlarini amaliy vazifalarda qo‘llash, virtualizatsiya, tarmoq skanerlash, paket tahlili, suqilib kirishga asoslangan testlar va jamoaviy ishlar orqali mustaqil va samarali natijaga erishish ko‘nikmalariga ega bo‘lishi kerak.
+Kompetensiya
+Talabalar o‘z bilim va ko‘nikmalarini birlashtirib murakkab kiberxavfsizlik vazifalarini mustaqil, xavfsiz va mas’uliyatli bajarish, xavflarni tahlil qilish va amaliy tavsiyalar berish kompetensiyasiga ega bo‘lishi kerak.
+
+18. FOYDALANILGAN ADABIYOTLAR VA ELEKTRON  MANBALAR ROʻYXATI
+Foydalanilgan adabiyotlar roʻyxati:
+1. Patrick Engebretson. The Basics of Hacking  and Penetration Testing. Second Edition. 2013.  ISBN 978-0-12-411644-3
+2. Georgia Weidman. Penetration testing. 2014. ISBN-10: 1-59327-564-1.
+3. Offensive Security. Penetration Testing with Kali Linux. 2018. 
+4. S.K.Ganiev, A.A.Ganiev, Z.T.Xudoykulov, Kiberxavfsizlik asoslari, -T.: “Iqtisod-Moliya”, 2021, -228 b.
+5. EC-Council. Penetration Testing: Procedures & Methodologies. 2011. ISBN-10: 1-4354-8367-7.
+Elektron manbalar:
+	1. Kiberxavfsizlik freymworklari, standartlar, xavf boshqaruvi va testlar bo‘yicha rasmiy hujjatlar:  HYPERLINK "https://www.nist.gov/cyberframework" https://www.nist.gov/cyberframework 
+2. Axborot xavfsizligi boshqaruvi tizimi (ISMS) standartlari:  HYPERLINK "https://www.iso.org/isoiec-27001-information-security.html" https://www.iso.org/isoiec-27001-information-security.html 
+3. Axloqiy xakerlik va CEH (Certified Ethical Hacker) kurslari bo‘yicha tavsiyalar:  HYPERLINK "https://www.eccouncil.org/" https://www.eccouncil.org/
+4. Web ilovalar xavfsizligi, zaifliklar, testlash metodologiyalari:  HYPERLINK "https://owasp.org/" https://owasp.org/
+5. Onlayn kurslar: kiberxavfsizlik, penetration testing, lab mashg‘ulotlar:  HYPERLINK "https://www.cybrary.it/" https://www.cybrary.it/
+6. Kurslar va sertifikatlar, akademik kurslar:  HYPERLINK "https://www.edx.org/learn/cybersecurity" https://www.edx.org/learn/cybersecurity
+7. Universitet kurslari va lab materiallari:  HYPERLINK "https://www.coursera.org/" https://www.coursera.org/
+8. Algoritmlar, kriptografiya va ma’lumotlar strukturalari asoslari:  HYPERLINK "https://www.khanacademy.org/computing/computer-science" https://www.khanacademy.org/computing/computer-science
+9. Bepul kurs materiallari va laboratoriya misollari:  HYPERLINK "https://ocw.mit.edu/" https://ocw.mit.edu/
+10. Interaktiv lablar va CTF (Capture The Flag) mashg‘ulotlari:  HYPERLINK "https://tryhackme.com/" https://tryhackme.com/
+11. Real penetratsion testing mashg‘ulotlari:  HYPERLINK "https://www.hackthebox.eu/" https://www.hackthebox.eu/
+12. Tarmoq paketlarini tahlil qilish bo‘yicha rasmiy qo‘llanma:  HYPERLINK "https://www.wireshark.org/docs/" https://www.wireshark.org/docs/
+13. Axloqiy hujum uchun OT, penetration testing va lab:  HYPERLINK "https://www.kali.org/" https://www.kali.org/
+14. Mahalliy kiberxavfsizlik yangiliklari va qonunlar:  HYPERLINK "https://csec.uz/uz/" https://csec.uz/uz/
+
+
+
+
+
+
+
+
+PAGE   \* MERGEFORMAT31
+
+
+
+

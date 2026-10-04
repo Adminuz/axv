@@ -1,0 +1,1478 @@
+OʻZBEKISTON RESPUBLIKASI  RAQAMLI TEXNOLOGIYALAR VAZIRLIGI
+	
+RAQAMLI TA’LIMNI RIVOJLANTIRISH
+
+“MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN 
+ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING YOʻNALISHI BOʻYICHA OʻQUV DASTURI
+(10-SINFLAR UCHUN)
+
+
+
+TOSHKENT – 2025
+
+MUNDARIJA
+1. DASTURDA QOʻLLANILGAN TAYANCH ATAMALAR	4
+3. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  KASBIGA TAYYORLASHNING MUDDATI	8
+4. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  KASBI OʻQUV MAVZU REJASI	9
+5. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  KASBI OʻQUV DASTURI	11
+6. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  YOʻNALISHI BOʻYICHA OʻTILADIGAN DARS SOATLARI	18
+7. OʻQUV JARAYONINI TASHKIL ETISHDA OʻQITISH METODLARI, SHAKLLARI VA VOSITALARI	22
+8. BAHOLASH MEZONLARI	23
+9. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  KASBI TAVSIFI	28
+9.1. Bitiruvchining kasbiy faoliyati sohalari	28
+9.2. Bitiruvchining kasbiga muvofiq kasbiy faoliyat obyektlari	28
+9.3. Advanced Python Back-end va Prompt Engineering  kasbiy faoliyat turlari	28
+9.4. Advanced Python Back-end va Prompt Engineering	28
+10. KASBNING QOʻLLANISH SOHASI	29
+11. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING   KASBIGA OʻQITISH NATIJALARI	30
+12. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  KURSI BOʻYICHA LOYIHA ISHLARI	47
+13. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  XONASI UCHUN QOʻYILADIGAN UMUMIY TALABLAR	49
+14. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  KASBIGA OʻQITISH XONASINI JIHOZLASHGA QOʻYILGAN TALABLAR	50
+15. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  KASBIGA OʻRGATISH UCHUN ZARUR BOʻLADIGAN XOM ASHYOLAR ROʻYXATI	51
+16. KASBIY TAʼLIM USTASI LAVOZIMIGA QOʻYILADIGAN TALABLAR	52
+17. 10-sinf OʻQUVCHILARIGA QOʻYILGAN UMUMIY MALAKA TALABLARI	54
+18. FOYDALANILGAN ADABIYOTLAR VA ELEKTRON  MANBALAR ROʻYXATI	55
+
+
+
+1. DASTURDA QOʻLLANILGAN TAYANCH ATAMALAR 
+Kasb - maxsus tayyorgarlik va ish tajribasi natijasida maʼlum bir sohada kasbiy faoliyatni amalga oshirish uchun lozim boʻlgan nazariy bilimlar, amaliy koʻnikma va malakalar majmuasini egallagan, jismoniy imkoniyat, aqliy qobiliyat va yuridik huquqlari taʼminlangan mehnat faoliyati (mashgʻuloti)ning turidir.
+Koʻnikma - muayyan vazifani bajarish uchun egallangan qobiliyat.
+Bilim - oʻrganilgan maʼlumotlarni eslab qolish va qayta tushuntirib berish.
+Kompetensiya - mavjud bilim, koʻnikma va malakalarni kundalik faoliyatda qoʻllay olish qobiliyati.
+Kasbiy faoliyat sohasi - ilmiy, ijtimoiy, iqtisodiy, ishlab chiqarishda namoyon boʻladigan kasbiy faoliyat obyektlarining majmui.
+Kasbiy faoliyat obyekti - predmetlar, voqeliklar, jarayonlar va faoliyat doirasida harakatga yoʻnaltirilgan tizimlar.
+Kasbiy faoliyat turi - kasbiy faoliyat obyektiga taʼsir qilishning usullari, uslublari va tavsifi.
+Oʻquv rejasi - oʻquv faoliyati turlari, oʻquv amaliyotlari (modullari) va ishlab chiqarish amaliyotlari tarkibi, ularni oʻrganish izchilligi, soha va tarmoqlarda ish turlarining mavsumiyligini hamda soatlardagi hajmini belgilaydigan hujjat.
+Oʻquv amaliyoti - nazariy bilim va amaliy koʻnikmalarini integratsiyalashga qaratilgan oʻquv jarayonining elementi. 
+Kasbga tayyorlash oʻquv kursi - umumiy oʻrta taʼlim tashkilotlarining  10-sinf oʻquvchilari uchun tashkil etilgan kasb-hunarga oʻrgatish darslari majmuasi.
+Taʼlim dasturi - taʼlimning asosiy xususiyatlari (hajmi, mazmuni, rejalashtirilgan natijalar), tashkiliy-pedagogik shart-sharoitlar, umumiy talablar, shuningdek, taʼlimni tashkil etish va amalga oshirish uchun zarur boʻlgan oʻquv-metodik koʻrsatmalar majmui.
+Windows operatsion tizimida ishlash - kompyuterlarning texnik tomondan mukammallashishi hamda grafik imkoniyatlarining rivojlanib borishi dasturchilarda grafik interfeysli qobiq-dasturlar ishlab chiqarish fikrini uygʻotdi. 
+Kompyuterni yigʻish tartibi - statsionar kompyuterni oʻzingiz yigʻish uchun siz bir nechta nyuanslarni bilishingiz kerak. Bu bitta butunga ulanadigan qurilmalar toʻplamini toʻgʻri tanlash uchun zarur. 
+Kompyuterdagi nosozliklarni bartaraf etish - mobil kompyuterlar bilan ishlashda baʼzida maʼlum bir xato yoki nosozlik sababini topish qiyin. Muayyan muammolarni topish uchun siz maxsus dasturlar va usullardan foydalanishingiz kerak.
+Kompyuterni ishga tushirish - quvvat manbai kompyuterga ulanganda, yuklash jarayoni boshlanadi. BIOS (Basic In-Out System) kompyuterning asosiy qurilmalarini soʻrovdan oʻtkazadigan POST (Power On Self Test) dasturini ishga tushiradi.
+Monitorlar tuzilmalari - kompyuter monitori(monitor) - grafik, matnli maʼlumotlarni ekranga chiqarib berish uchun xizmat qiladigan qurilmadir, ekranga chiqarish monitor displeyi orqali amalga oshiriladi.
+Notebooklar turlari - hajmi va diagonal. Ushbu toifani guruhlarga boʻlish mumkin: 7-10 dyuymli diagonali — netbuklar, 11-13 — subnotebooklar (qurilma standartdan kichikroq, ammo deyarli bir xil funksionallikka ega), 14-16 dyuym — standart va 16 va undan ortiq narsalar almashtirish ish stoli kompyuter.
+Flash xotiraga ega qurilmalari - odatda kompyuterlarda ishlatiladigan oddiy RAM xotira (Random Access Memory) uchuvchi hisoblanadi. Yaʼni, kompyuterni oʻchirib qoʻysangiz, xotira yangilanganda saqlanadigan barcha maʼlumotlar yoʻqoladi. Bunga qaramasdan, flesh xotira doimiy emas, yaʼni bu turdagi xotira texnologiyasida saqlanadigan maʼlumotlar quvvatni kesganda saqlanadi degan maʼnoni anglatadi. 
+Kompyuter tarmoqlarga ulash taʼminotini tashkil qilish - aksariyat zamonaviy kompyuterlar qandaydir kompyuter tarmogʻiga ulangan. Bunday tuzilmaning yaratilishi kerakli maʼlumotlarga tezkor kirish imkonini beradi. Bundan tashqari, mahalliy tarmoqlar bir nechta foydalanuvchilarga maʼlum bir vazifa ustida sinxron ishlashga imkon beradi.
+Operatsion tizimga xizmat koʻrsatish - operatsion tizimning taʼrifi va bugungi kunda ishlatiladigan operatsion tizimlarning misollari Odatda OS sifatida qisqartirilgan operatsion tizim kuchli va odatda kompyuterda apparat va boshqa dasturlarni boshqaradigan yirik dastur hisoblanadi. 2. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING KASBINING TAYANCH OʻQUV REJASI
+T/r
+Tayanch oʻquv reja tarkibi
+Mashgʻulotlar soni
+Umumiy yuklamaga
+nisbatan foiz hisobida
+I.
+Oʻquv maʼruzasi
+13
+12,8
+II.
+Oʻquv amaliyoti
+84
+82,2
+III.
+Oraliq nazorat ishi (Loyiha ishi)
+4
+4,0
+IV.
+Yakuniy nazorat ishi
+1
+1,0
+Hammasi:
+102
+100
+
+
+3. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  KASBIGA TAYYORLASHNING MUDDATI
+Kasb nomi
+Advanced Python Back-end va Prompt Engineering 
+Kasbga tayyorlashning meʼyoriy muddati
+10-sinflarda haftasiga 80 daqiqadan 3 ta dars 
+1 oʻquv yili davomida
+
+
+Sinf
+Oʻquv chorak
+Haftalar soni
+Mashgʻulotlar soni
+10
+I
+12
+36
+
+II
+7
+21
+
+III
+8
+24
+
+IV
+7
+21
+Jami
+34 hafta
+102
+Tushuntirish xati
+1. Umumiy oʻrta taʼlim tashkilotlarida oʻquv yilining 2 - sentabridan kelgusi yilning 25-mayigacha boʻlgan davrda toʻrt chorakka boʻlingan holda tashkil etiladi.
+2. Oʻquv yilining davomiyligi - 34 hafta:
+haftasiga 3 marta belgilangan soatlar doirasidan chiqmagan holda oʻqish tashkil etiladi;
+mashgʻulotning davomiyligi  1 soat 20 daqiqani atshkil etadi;
+mashgʻulotlar oraligʻidagi tanaffusning davomiyligi 5 - 10 daqiqa. 
+3. Oraliq va Yakuniy nazoratlar nazariy yoki koʻrgazmali amaliy imtihon shaklida tasdiqlangan baholash mezonlari asosida oʻtkaziladi.
+
+4. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  KASBI OʻQUV MAVZU REJASI
+T/r
+Mavzu
+Ajratilgan mashgʻulotlar soni
+shundan
+
+
+
+Nazariy
+Amaliy
+Nazorat ishi
+I-bob
+Django REST freymvork
+36
+7
+28
+1
+	•	
+Django REST Framework. Server side rendering va user side rendering tushunchalari.
+1
+1
+
+
+	•	
+DRF loyiha qurish: MBni loyihalash. Loyihani yaratish, dastlabki sozlamalar.
+2
+
+3
+
+	•	
+Model, View va Serializer. Routerlar.
+5
+1
+4
+
+	•	
+Foydalanuvchilarni boshqarish: Identifikatsiya, autentifikatsiya va avtorizatsiya. Token, session va JWT
+4
+1
+3
+
+	•	
+Ruxsatlar bilan ishlash
+2
+
+2
+
+	•	
+Filtrlash, qidiruv va tartiblash
+3
+
+3
+
+	•	
+Pagination va throttling
+3
+1
+2
+
+	•	
+Statik fayllar bilan ishlash. Fayllarni yuklash va koʻchirib olish
+3
+
+3
+
+	•	
+APIni testlash. APIni hujjatlashtirish. (Swagger, Redoc)
+3
+1
+2
+
+	•	
+API havfsizligini ta’minlash
+4
+1
+3
+
+	•	
+Tayyor loyihani hostingga joylash (deploy). Oraliq nazorat.
+5
+1
+3
+1
+II-bob
+FastAPI
+31
+3
+27
+1
+	•	
+FastAPI loyiha yaratish. Loyiha uchun MB ni loyihalash va yaratish, dastlabki sozlamalar.
+4
+1
+3
+
+	•	
+Foydalanuvchilarni boshqarish: Identifikatsiya, autentifikatsiya va avtorizatsiya. Token, session va JWT
+3
+
+3
+
+	•	
+CRUD amallarni bajarish (model, forma, validatsiya). Oraliq nazorat.
+6
+1
+4
+1
+	•	
+Filtrlash, qidiruv va tartiblash
+3
+
+3
+
+	•	
+Fayllar bilan ishlash
+2
+
+2
+
+	•	
+Loyihani yakunlash
+4
+
+4
+
+	•	
+Docker orqali deploy qilish
+3
+1
+2
+
+	•	
+FastAPI da real time ilova ishlab chiqish (Web socket)
+6
+
+6
+
+III-bob
+Prompt engineering
+35
+3
+30
+2
+	•	
+Sun’iy intellekt va LLM modellarga kirish
+1
+1
+
+
+	•	
+Prompt Engineering mohiyati va tamoyillari
+1
+1
+
+
+	•	
+Rollar va kontekst asosidagi promptlar
+3
+
+3
+
+	•	
+Chain-of-Thought (fikrlash zanjiri)
+3
+
+3
+
+	•	
+Zero-shot, One-shot, Few-shot prompting. Oraliq nazorat
+4
+
+3
+1
+	•	
+ReAct prompting va Reasoning
+2
+
+2
+
+	•	
+Kod va ma’lumotlar uchun promptlar.
+2
+
+2
+
+	•	
+Matn tahlili va hujjatlar bilan ishlash
+3
+
+3
+
+	•	
+Rasm va dizayn promptlari (multimodal). Ovozli va multimodal promptlar
+4
+
+4
+
+	•	
+Custom GPT yoki domen-spetsifik yordamchi yaratish
+3
+
+3
+
+	•	
+Etika, xavfsizlik va fakt tekshirish
+1
+1
+
+
+	•	
+API integratsiyasi va avtomatlashtirish
+3
+
+3
+
+	•	
+Mini loyiha – domen asosida AI yordamchi
+3
+
+3
+
+	•	
+Yakuniy loyiha taqdimoti va tahlili. Oraliq nazorat.
+2
+
+1
+1
+34.
+Yakuniy nazorat ishi
+1
+
+
+1
+Jami:
+102
+13
+84
+5
+5. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  KASBI OʻQUV DASTURI
+I BOB. Django REST freymvork
+	•	Django REST Framework. Server side rendering va user side rendering tushunchalari.
+Django REST Framework haqida umumiy tushuncha. REST arxitektura prinsiplari. Server Side Rendering (SSR) tushunchasi. User Side Rendering (CSR) tushunchasi.
+	•	DRF loyiha qurish: MBni loyihalash. Loyihani yaratish, dastlabki sozlamalar.
+Ma’lumotlar bazasini loyihalash (Database Design). Django loyihasini yaratish va DRF oʻrnatish. Bazaviy konfiguratsiya va sozlamalar. PostgreSQL bilan bogʻlash.
+	•	Model, View va Serializer. Routerlar.
+Model tushunchasi va ularni yaratish. Serializer va ModelSerializer. APIView va GenericAPIView. ViewSet va Routerlar. View, Serializer va Router oʻrtasidagi oʻzaro bogʻliqlik.
+	•	Foydalanuvchilarni boshqarish: Identifikatsiya, autentifikatsiya va avtorizatsiya. Token, session va JWT
+Identifikatsiya, autentifikatsiya va avtorizatsiya tushunchalari. Custom User Model yaratish. JWT (JSON Web Token) autentifikatsiyasi. Avtorizatsiya va ruxsat darajalari (Permissions).
+	•	Ruxsatlar bilan ishlash
+DRF da ruxsatlar (permissions) tushunchasi va ularning autentifikatsiyadan farqi. DRF tizimidagi ruxsatlar arxitekturasi. Standart ruxsat sinflari. Default permissionlarni REST_FRAMEWORK sozlamasida belgilash. Obyekt darajasidagi ruxsatlar (object-level permissions). Foydalanuvchiga tegishli obyektni tahrirlash yoki oʻchirishga cheklov qoʻyish. Custom permission yaratish. Custom permission’ni view yoki viewsetga biriktirish. Turli endpointlar uchun turlicha ruxsatlar qoʻllash amaliyoti.
+	•	Filtrlash, qidiruv va tartiblash
+DRF’da ma’lumotlarni filtrlash (Filtering) tushunchasi va asosiy prinsiplari. django-filter kutubxonasini oʻrnatish va DRF bilan integratsiya. FilterSet sinfi yordamida maxsus filtrlash logikasini yaratish. DRF’dagi SearchFilter orqali matn boʻyicha qidiruv. OrderingFilter orqali ma’lumotlarni tartiblash. Bir nechta filtr, qidiruv va tartiblashni birlashtirib ishlatish. URL orqali query parametrlar bilan filtering, search va ordering amalga oshirish.
+	•	Pagination va throttling
+Pagination tushunchasi va turlari. Custom pagination. Throttling tushunchasi va turlari. Custom throttling va sozlamalar. Amaliy qo‘llanish va samaradorlik.
+	•	Statik fayllar bilan ishlash. Fayllarni yuklash va koʻchirib olish
+Statik va media fayllar tushunchasi. Fayl yuklash va saqlash. Serializer orqali fayl qabul qilish. Fayl validatsiyasi va yuklab olish. Statik va media fayllarni boshqarish.
+	•	APIni testlash. APIni hujjatlashtirish. (Swagger, Redoc)
+API testlashning maqsadi va ahamiyati. Django REST Framework’da test muhiti. Pytest yordamida testlash. Postman orqali qoʻlda testlash. Swagger va Redoc hujjatlashtirish.
+	•	API havfsizligini ta’minlash
+API xavfsizligi va asosiy tahdidlar. HTTPS va SSL sertifikatlari. CSRF va API kalitlari himoyasi. Throttling va CORS sozlamalari. Ma’lumot validatsiyasi va server xavfsizligi.
+	•	Tayyor loyihani hostingga joylash (deploy)
+Deploy tushunchasi va umumiy jarayon. Loyiha muhiti va sozlamalar. Hosting platformalari va ularning cheklovlari. Ma’lumotlar bazasi va fayl boshqaruvi. Gunicorn, Nginx va xavfsizlik sozlamalari.
+II BOB. FastAPI
+	•	FastAPI loyiha yaratish. Loyiha uchun MB ni loyihalash va yaratish, dastlabki sozlamalar.
+FastAPI va kerakli kutubxonalarni oʻrnatish. Loyiha papkalar tuzilmasini yaratish. .env fayl va konfiguratsiya sozlamalarini tayyorlash. Ma’lumotlar bazasi sxemasini (ER diagramma) loyihalash. Ma’lumotlar bazasini yaratish(PostgreSQL)  va ulanish. Loyiha ishga tushirilishini testlash (Swagger, Uvicorn)
+	•	Foydalanuvchilarni boshqarish: Identifikatsiya, autentifikatsiya va avtorizatsiya. Token, session va JWT
+Foydalanuvchi modeli va roʻyxatdan oʻtish. Identifikatsiya va autentifikatsiya. Parollarni xavfsiz saqlash. Token asosida autentifikatsiya (JWT, OAuth2PasswordBearer). Avtorizatsiya rollari va ruxsatlar.
+	•	CRUD amallarni bajarish (model, forma, validatsiya)
+CRUD amallari mohiyati. SQLAlchemy model yaratish. Pydantic schema va validatsiya. CRUD endpointlar (POST, GET, PUT, DELETE). Javob formatlash va xatoliklarni boshqarish.
+	•	Filtrlash, qidiruv va tartiblash
+Filtrlash tushunchasi. Query parametrlar orqali filtrlash. Qidiruv va tartiblash. SQLAlchemy bilan filtrlash (AND/OR, ilike). Pydantic va pagination integratsiyasi.
+	•	Fayllar bilan ishlash
+FastAPI da fayllar bilan ishlashning umumiy prinsiplari. UploadFile va File yordamida fayl yuklash. Fayllarni saqlash va konfiguratsiyasi. Fayl validatsiyasi va yuklab olish. Fayllarni boshqarish va xavfsizlik.
+	•	Loyihani yakunlash
+Loyiha kodini tozalash va strukturani yakuniy holatga keltirish. Sozlamalar va konfiguratsiyalarni (.env, settings.py) yakuniy koʻrinishda tayyorlash. Xatoliklar (Exception) va javob formatlarini standartlashtirish. Swagger va ReDoc hujjatlarini tekshirish va loyihani hujjatlashtirish. Ma’lumotlar bazasi migratsiyalarini tekshirish va yakuniy alembic upgrade bajarish.
+	•	Docker orqali deploy qilish
+Docker va konteynerlash tushunchalari. Dockerfile va image yaratish. docker-compose.yml bilan servislarni birlashtirish. Ma’lumotlar bazasi va muhit sozlamalari. Konteynerlarni boshqarish va deploy jarayoni.
+	•	FastAPI da real time ilova ishlab chiqish (Web socket)
+Real vaqtda ishlaydigan ilovalar tushunchasi. Real time ilovalar ishlatilish joylari. Websocket tushunchasi. Real time ilova tayyorlash
+III BOB. Prompt engineering
+	•	Sun’iy intellekt va LLM modellarga kirish
+Sun’iy intellekt va mashinaviy oʻqitish asoslari. Katta til modellari va ularning arxitekturasi. Mashhur LLM modellari va farqlari. LLM’larni oʻqitish va moslashtirish usullari. LLM’larning imkoniyatlari va amaliy qoʻllanilishi.
+	•	Prompt Engineering mohiyati va tamoyillari
+Prompt Engineering tushunchasi va tamoyillari. Kontekst oynasi va prompting usullari. Rollar va mantiqiy strategiyalar. Strukturali va formatlangan promptlar. Yaxshi va yomon promptlar tahlili.
+	•	Rollar va kontekst asosidagi promptlar
+Rollarga asoslangan prompting tushunchasi. System, user va assistant rollari. Kontekst berish va boshqarish. Persona va context injection usullari. Rol asosida moslashtirilgan promptlar yaratish.
+	•	Chain-of-Thought (fikrlash zanjiri)
+Chain-of-Thought (CoT) tushunchasi va uning ishlash tamoyili. Fikr zanjiri orqali modelning mantiqiy xulosalar chiqarishi. CoT prompting misollari va ularni qoʻllash holatlari. Yashirin fikrlash (hidden reasoning) va ochiq fikrlash (visible reasoning) farqi. CoT bilan murakkab masalalarni bosqichma-bosqich yechish. Multi-step reasoning va intermediate steps tahlili. CoT va ReAct metodlarining oʻzaro bogʻliqligi. CoT natijalarini testlash va sifatini baholash.
+	•	Zero-shot, One-shot, Few-shot prompting
+Zero-shot prompting mohiyati va foydalanish sohalari. One-shot promptingda namunaviy misoldan foydalanish. Few-shot prompting orqali modelni kontekstga oʻrgatish. Har bir usulning afzallik va cheklovlarini solishtirish. Misollar sonining javob sifatiga ta’siri. Amaliy misollar: matn tahlili, kod yozish, savol-javob. Koʻp misolli promptingda “memory overflow” muammosi. Zero/One/Few-shot usullarni kombinatsiya qilish.
+	•	ReAct prompting va Reasoning
+ReAct prompting (Reasoning + Acting) tushunchasi. Fikr yuritish (reasoning) va harakat (acting) bosqichlarini ajratish. Modelga qaror qabul qilish zanjirini oʻrgatish. Agent asosida javob shakllantirish jarayoni. ReAct prompting misollari (chatbot, tahlil, qidiruv). Reasoning sifati va toʻgʻriligini tekshirish. ReAct va Chain-of-Thought oʻrtasidagi farq. ReAct prompting samaradorligini oʻlchash.
+	•	Kod va ma’lumotlar uchun promptlar
+Kod generatsiyasi uchun samarali prompt tuzilmasi. Ma’lumotlarni tahlil qilish uchun prompt misollari. Kodni optimallashtirish va tushuntirishga yoʻnaltirilgan promptlar. SQL, Python, FastAPI kabi texnologiyalar uchun maxsus promptlar. Kod xatolarini aniqlash va tuzatish uchun prompting. Ma’lumot toʻplamlarini yaratish yoki oʻzgartirish promptlari. Promptlar orqali kod sharhlash (code review) avtomatlashtirish. AI yordamida ma’lumotlar vizualizatsiyasi uchun prompting.
+	•	Matn tahlili va hujjatlar bilan ishlash
+Uzun matnlarni qisqartirish (summarization) promptlari. Hujjatdan asosiy ma’lumotlarni ajratish (information extraction). Matn tasnifi (classification) va sentiment tahlili. PDF, DOCX, TXT fayllarni oʻqish va tahlil qilish uchun prompting. Hujjat asosida savol-javob (Q&A) tizimlarini yaratish. AI yordamida matnni tahrirlash va qayta yozish. Avtomatik tarjima va grammatik tuzatish promptlari. Hujjat tahlilida kontekstni saqlash strategiyalari.
+	•	Rasm va dizayn promptlari (multimodal). Ovozli va multimodal promptlar
+Multimodal AI tushunchasi va ishlash prinsipi. Rasm generatsiyasi uchun prompt tuzilmasi (DALL·E, Midjourney). Ovozli promptlar va nutqni matnga aylantirish (speech-to-text). Rasm tahlili (image captioning, object detection) uchun prompting. Dizayn va UI elementlarini yaratishda AI’dan foydalanish. Multimodal modellar (GPT-4o, Gemini, Claude 3) imkoniyatlari. Matn + rasm + ovoz kombinatsiyalari orqali ijodiy prompting. Multimodal promptingdagi muvofiqlik va sinxronizatsiya muammolari.
+	•	Custom GPT yoki domen-spetsifik yordamchi yaratish
+Custom GPT tushunchasi va amaliy ahamiyati. Maxsus rol va kontekst berish orqali domen moslashtirish. Oʻquv ma’lumotlari asosida yordamchini oʻqitish. Parametrlar va cheklovlarni (instruction, tone, style) sozlash. Ma’lum bir soha (tibbiyot, ta’lim, dasturlash) uchun GPT yaratish. API orqali Custom GPT bilan integratsiya. Custom yordamchining test va tahlil jarayoni. Domen-spetsifik AI yordamchining foydalanuvchi interfeysi.
+	•	Etika, xavfsizlik va fakt tekshirish
+Sun’iy intellektda etik tamoyillar va mas’uliyatli foydalanish. Model javoblarida xolislik va diskriminatsiyani oldini olish. Ma’lumotlarning maxfiyligi va foydalanuvchi xavfsizligi. AI chiqishlarida faktlarni tekshirish (fact-checking). Halüsinatsiya (hallucination) muammosi va uni kamaytirish. Censorship va kontent filtrlash mexanizmlari. LLM’larda soxta ma’lumotlar bilan ishlash. Etika va xavfsizlik boʻyicha xalqaro standartlar.
+	•	API integratsiyasi va avtomatlashtirish
+LLM API’lari (OpenAI, Anthropic, Google, Mistral) bilan ishlash. Python orqali prompt yuborish va javoblarni olish. Avtomatlashtirilgan ish oqimlari (workflow automation). FastAPI orqali AI modellarni integratsiya qilish. Prompt natijalarini tizimga kiritish yoki saqlash. API orqali foydalanuvchi soʻrovlarini qayta ishlash. Chatbot va xizmatlar uchun avtomatik prompt mexanizmlari. Rejalashtirilgan (schedule) avtomatik AI jarayonlari.
+	•	Mini loyiha – domen asosida AI yordamchi
+Domen tanlash va loyiha gʻoyasini aniqlash. Maxsus prompt dizayni va test ma’lumotlarini tayyorlash. FastAPI yoki Streamlit interfeysi yaratish. API orqali modelni bogʻlash va sinovdan oʻtkazish. Javoblarni filtrlash va foydalanuvchi tajribasini yaxshilash. Domen-spetsifik soʻrovlarni avtomatlashtirish. Yordamchi foydalanuvchi uchun interaktiv javoblar yaratish. Loyiha natijalarini tahlil qilish va optimallashtirish.
+	•	Yakuniy loyiha taqdimoti va tahlili
+Yakuniy loyiha maqsadi va natijalarini umumlashtirish. Loyihaning texnik arxitekturasi va ishlash jarayoni. Demo yoki taqdimot tayyorlash (PowerPoint, Streamlit, video). Loyiha samaradorligini va AI javoblar sifatini tahlil qilish. Foydalanuvchi fikr-mulohazalarini yigʻish va tahlil qilish. Yaxshilash takliflari va kelajakdagi rivojlantirish yoʻnalishlari. Loyiha hisobotini yozish (texnik + analitik qism). Natijaviy xulosalar va taqdimot yakuni.
+
+
+
+
+6. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  YOʻNALISHI BOʻYICHA OʻTILADIGAN DARS SOATLARI
+T/r
+Mavzular
+I-CHORAK
+
+
+1-hafta
+2-hafta
+3-hafta
+4-hafta
+5-hafta
+6-hafta
+7-hafta
+8-hafta
+9-hafta
+1.
+Django REST Framework. Server side rendering va user side rendering tushunchalari.
+1
+
+
+
+
+
+
+
+
+2.
+DRF loyiha qurish: MBni loyihalash. Loyihani yaratish, dastlabki sozlamalar.
+2
+
+
+
+
+
+
+
+
+3.
+Model, View va Serializer. Routerlar.
+
+3
+2
+
+
+
+
+
+
+4.
+Foydalanuvchilarni boshqarish: Identifikatsiya, autentifikatsiya va avtorizatsiya. Token, session va JWT
+
+
+1
+3
+
+
+
+
+
+5.
+Ruxsatlar bilan ishlash
+
+
+
+
+2
+
+
+
+
+6.
+Filtrlash, qidiruv va tartiblash
+
+
+
+
+1
+2
+
+
+
+7.
+Pagination va throttling
+
+
+
+
+
+1
+2
+
+
+8.
+Statik fayllar bilan ishlash. Fayllarni yuklash va koʻchirib olish
+
+
+
+
+
+
+1
+2
+
+9.
+APIni testlash. APIni hujjatlashtirish. (Swagger, Redoc). Oraliq nazorat.
+
+
+
+
+
+
+
+1
+3
+
+
+
+T/r
+Mavzular
+II-CHORAK
+
+
+1-hafta
+2-hafta
+3-hafta
+4-hafta
+5-hafta
+6-hafta
+7-hafta
+1.
+API havfsizligini ta’minlash
+3
+1
+
+
+
+
+
+2.
+Tayyor loyihani hostingga joylash (deploy). Nazorat ishi.
+
+2
+2
+
+
+
+
+3.
+FastAPI loyiha yaratish. Loyiha uchun MB ni loyihalash va yaratish, dastlabki sozlamalar.
+
+
+1
+3
+
+
+
+4.
+Foydalanuvchilarni boshqarish: Identifikatsiya, autentifikatsiya va avtorizatsiya. Token, session va JWT
+
+
+
+
+3
+
+
+5.
+CRUD amallarni bajarish (model, forma, validatsiya). Oraliq nazorat.
+
+
+
+
+
+3
+3
+
+T/r
+Mavzular
+III-CHORAK
+
+
+1-hafta
+2-hafta
+3-hafta
+4-hafta
+5-hafta
+6-hafta
+7-hafta
+8-hafta
+9-hafta
+10-hafta
+1.
+Filtrlash, qidiruv va tartiblash
+3
+
+
+
+
+
+
+
+
+
+2.
+Fayllar bilan ishlash
+
+2
+
+
+
+
+
+
+
+
+3.
+Loyihani yakunlash
+
+1
+3
+
+
+
+
+
+
+
+4.
+Docker orqali deploy qilish
+
+
+
+3
+
+
+
+
+
+
+5.
+FastAPI da real time ilova ishlab chiqish (Web socket)
+
+
+
+
+3
+3
+
+
+
+
+6.
+Sun’iy intellekt va LLM modellarga kirish
+
+
+
+
+
+
+1
+
+
+
+7.
+Prompt Engineering mohiyati va tamoyillari
+
+
+
+
+
+
+1
+
+
+
+8.
+Rollar va kontekst asosidagi promptlar
+
+
+
+
+
+
+1
+2
+
+
+9.
+Chain-of-Thought (fikrlash zanjiri)
+
+
+
+
+
+
+
+1
+2
+
+10.
+Zero-shot, One-shot, Few-shot prompting. Oraliq nazorat.
+
+
+
+
+
+
+
+
+1
+3
+
+
+T/r
+Mavzular
+IV-CHORAK
+
+
+1-hafta
+2-hafta
+3-hafta
+4-hafta
+5-hafta
+6-hafta
+7-hafta
+8-hafta
+1.
+ReAct prompting va Reasoning
+2
+
+
+
+
+
+
+
+2.
+Kod va ma’lumotlar uchun promptlar.
+1
+1
+
+
+
+
+
+
+3.
+Matn tahlili va hujjatlar bilan ishlash
+
+1
+2
+
+
+
+
+
+4.
+Rasm va dizayn promptlari (multimodal). Ovozli va multimodal promptlar
+
+
+1
+3
+
+
+
+
+5.
+Custom GPT yoki domen-spetsifik yordamchi yaratish
+
+
+
+
+3
+
+
+
+6.
+Etika, xavfsizlik va fakt tekshirish
+
+
+
+
+
+1
+
+
+7.
+API integratsiyasi va avtomatlashtirish
+
+
+
+
+
+2
+1
+
+8.
+Mini loyiha – domen asosida AI yordamchi
+
+
+
+
+
+
+2
+1
+9.
+Yakuniy loyiha taqdimoti va tahlili. Oraliq nazorat.
+
+
+
+
+
+
+
+1
+10.
+Yakuniy nazorat ishi.
+
+
+
+
+
+
+
+1
+7. OʻQUV JARAYONINI TASHKIL ETISHDA OʻQITISH METODLARI, SHAKLLARI VA VOSITALARI
+Oʻqitish metodlari - ogʻzaki, koʻrgazmali, amaliy, muammoli-izlanish, mustaqil ishlash va shu kabilar.
+Oʻqitish shakllari
+Nazariy
+Amaliy
+Umumiy
+maʼruza;
+mustaqil ishlar;
+maslahat olish va shu kabilar.
+amaliy mashgʻulotlar;
+mustaqil uy ishi;
+didaktik, ishchan va rolli oʻyinlar;
+tajriba-konstruktorlik faoliyati, treninglar;
+olimpiadalar va koʻrik-tanlovlar.
+ommaviy;
+jamoaviy;
+guruhli;
+kichik guruhli;
+juftli;
+yakka tartibda.
+Oʻqitish vositalari
+Oʻqitish vositalari
+(oddiy va murakkab)
+Oʻquv qurollari va koʻrgazmali qurollar
+darsliklar, oʻquv qoʻllanmalari;
+metodik qoʻllanmalar;
+maʼlumotnomalar;
+maxsus adabiyotlar;
+metodik tavsiyalar;
+ensiklopediyalar;
+jadval va plakat;
+mulyaj va modellar.
+
+Axborot materiallari va dasturiy taʼminot
+kompyuter;
+amaliy topshiriqlar;
+kasbiy koʻnikma va malakaviy dastur;
+testlar, nazorat topshiriqlari va boshqalar.
+
+
+8. BAHOLASH MEZONLARI
+	Oʻquvchilarning kasbga oid bilim, koʻnikma, malaka va kompetensiyalarini baholash va nazorat qilish maqsadida quyidagi nazorat turlari amalga oshiriladi:
+joriy nazorat - soʻrovlar, bajarilgan loyiha ishlarini izohlash tarzida oʻquvchilarning bilimlari, koʻnikma va malakalari muntazam nazorat qilinadi.
+oraliq nazorat - chorak tamom boʻlganda va oʻquv dasturining tegishli boʻlimi tugallangandan keyin oʻquvchilarning bilimlari, koʻnikma va malakalarini baholash uchun amalga oshiriladi. U amaliy, yozma nazorat ishi yoki testlar shaklida oʻtkaziladi. Ushbu nazoratda foydalaniladigan materiallar Advanced Python Back-end va Prompt Engineering  kasbi boʻyicha kasbiy taʼlim ustasi tomonidan tayyorlanadi. Oraliq nazorat har chorak yakunida oʻtaziladi va nazorat ishlarining miqdori va mavzulari oʻquv dasturiga asoslangan rejada belgilanadi hamda muddati va shakli koʻrsatiladi.
+yakuniy nazorat - oʻquv yili tamom boʻlgandan keyin ogʻzaki va amaliy ish koʻrinishida imtihon shaklida amalga oshiriladi. Uning asosida reyting aniqlanadi va oʻquvchini navbatdagi sinfga oʻtkazish toʻgʻrisida qaror qabul qilinadi. Yakuniy nazorat materiallari kasbiy taʼlim ustasi tomonidan oʻquv dasturi asosida tayyorlanadi va ularni amaliy fanlar uslubiy birlashmasi muhokamasidan oʻtkaziladi. Umumiy oʻrta taʼlim muassasalari bitiruvchilari uchun choraklik baholar asosida yillik baho, shuningdek, yakuniy nazoratda olingan baho va yillik baho asosida yakuniy baho aniqlanadi.
+Kasbiy taʼlim yoʻnalishi boʻyicha yakuniy nazorat imtihonlarni oʻtkazish tartibi.
+Kasbiy taʼlim yoʻnalishi boʻyicha oʻquv reja va dasturning barcha talablarini toʻliq bajargan bitiruvchiga maktab direktorining buyrugʻiga asosan amaliy yakuniy nazoratni topshirishga ruxsat beriladi.
+Yakuniy nazorat oʻtkazish jadvali, u oʻtkaziladigan kunlar koʻrsatilgan holda, maktab direktori tomonidan tasdiqlanadi va yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin taʼlim muassasasining oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar xabardor etiladi.
+Yakuniy nazorat amaliy topshiriq shaklida oʻtkaziladi. Bunda yakuniy nazorat savollari orqali bitta amaliy topshiriq beriladi.
+Amaliy topshiriqlar oʻqitilgan mutaxassislik oʻquv dasturi asosida tuziladi va maktabning pedagogik kengashi tomonidan tasdiqlanadi hamda yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin barcha oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar eʼtiboriga yetkaziladi.
+Oʻquvchilar bilimi quyidagi mezonlar asosida baholanadi:
+Har bir oʻquvchining kasb boʻyicha oʻzlashtirish darajasi ball tizimi orqali ifodalanadi, ya’ni 100 ballik shkalaga oʻtkaziladi.
+0-59 ball – 2 baho;
+60-70 ball – 3 baho;
+71-89 ball – 4 baho;
+90-100 ball – 5 baho.
+Oʻquvchilarning har bir nazorat turi boʻyicha bilimini baholash va koʻrsatkichini aniqlash ularning kasbni oʻquv dasturi mavzusi boʻyicha tasavvurga ega boʻlishi, mavzuning mohiyatini tushunib yetishi va aytib bera olishi, olgan bilimlarini amalda qoʻllay olishi, ijodiy fikrlay olishi va xulosa qabul qila olishi hamda mustaqil ishlarni bajarishi kabi mezonlarga qarab amalga oshiriladi.
+Jumladan:
+bitiruvchi mustaqil xulosa va qaror qabul qiladi, ijodiy fikrlay oladi, mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (mavzu) boʻyicha tasavvurga ega deb topilganda – 90-100 (aʼlo) ball;
+bitiruvchi mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb(mavzu) boʻyicha tasavvurga ega deb topilganda – 71-89 (yaxshi) ball;
+bitiruvchi olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (mavzu) boʻyicha tasavvurga ega deb topilganda – 60-70 (qoniqarli) ball;
+bitiruvchi kasb dasturini oʻzlashtirmagan, kasbning (mavzuning) mohiyatini tushunmaganda- 0-59 (qoniqarsiz) ball.
+Nazorat turlarini oʻtkazish boʻyicha tuzilgan topshiriqlarning mazmuni oʻquvchining oʻzlashtirishini xolis (obyektiv) va aniq baholash imkoniyatini berishi lozim.
+Oʻquvchilar bilimini baholash mezonlari
+Baholash usuli
+Topshiriq
+Baholash mezonlari
+Maksimal ball
+Baholash oʻtkazish vaqti
+Joriy nazorat
+Bajarilgan loyiha ishini
+bajarilgan loyihaning belgilangan talablariga javob berishi; 
+ilovaning asosiy funksiyalari toʻliq va xatosiz ishlashi;
+foydalanuvchi kutilgan natijalarni olishi;
+kod toza, oʻqilishi oson, yaxshi tuzilganligi;
+dasturlashning zamonaviy usullaridan foydalanilganligi;
+loyihaning maqsadi, ishlash prinsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi.
+40 ball
+Oʻquv jarayoni davomiyligida oʻtkaziladi
+Oraliq nazorat
+Yozma, topshiriqlar 
+nazariy savollarga toʻliq va aniq javob berilganligi;
+javoblar faktlarga asoslanganligi va xato yoʻqligi;
+tushuntirish aniq va misollar bilan boyitilganligi;
+matnda grammatik va imlo xatolarining kamligi;
+muammoni tahlil qilinganligi va fikrlarni ifodalashdarajasi.
+40 ball
+Har chorak yakunida
+
+Amaliy topshiriqlar
+belgilangan barcha funksiyalar toʻliq ishlashi;
+kod oʻqilishi osonligi, izohlar mavjudligi, keraksiz takrorlanishlar  yoʻqligi;
+zarur texnologiyalar  toʻgʻri ishlatilganligi;
+ilova barqarorligi va xatolar yoʻqligi.
+
+
+
+Test topshiriqlari
+savollarga toʻgʻri javob berganligi.
+
+
+Yakuniy nazorat
+Loyiha ishlarini yakuni boʻyicha
+bajarilgan loyihaning belgilangan talablariga javob berishi; 
+ilovaning asosiy funksiyalari toʻliq va xatosiz ishlashi;
+foydalanuvchi kutilgan natijalarni olishi;
+kod toza, oʻqilishi oson, yaxshi tuzilganligi;
+dasturlashning zamonaviy usullaridan foydalanilganligi;
+loyihaning maqsadi, ishlash printsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi.
+20 ball
+Oʻquv yili oxirida, kurs yakunida
+Jami
+
+
+100 ball
+
+Oraliq nazoratda  topshiriq  turlarining faqat bitta turidan foydalanish mumkin.
+
+9. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  KASBI TAVSIFI
+9.1. Bitiruvchining kasbiy faoliyati sohalari
+Advanced Python Back-end va Prompt Engineering  kasbi boʻyicha kasb-hunarga tayyorlash kursini toʻliq oʻzlashtirgan oʻquvchi backend dasturlash, ma’lumotlar bazasi boshqaruvi, mikroxizmatlar arxitekturasi, hamda Prompt engineering sohalarida faoliyat yurita oladi.
+9.2. Bitiruvchining kasbiga muvofiq kasbiy faoliyat obyektlari
+- turli tipdagi jihozlar va asbob-uskunalar;
+- zamonaviy kompyuter dasturlari;
+- zamonaviy drayverlar, simli tarmoq qurilmalari;
+- simsiz tarmoq qurilmalari va sifatli xom ashyolar kiradi.
+9.3. Advanced Python Back-end va Prompt Engineering  kasbiy faoliyat turlari
+- Python backend dasturchi;
+- Prompt engineer.
+9.4. Advanced Python Back-end va Prompt Engineering  
+Advanced Python Back-end va Prompt Engineering  kasbini egallagan bitiruvchi keyinchalik kasbiy taʼlimini chuqurlashtirish maqsadida maxsus kurslarda malakasini oshirishi, kollej, texnikum va Oliy taʼlim muassasalarida oʻqishi mumkin.
+10. KASBNING QOʻLLANISH SOHASI
+	Mazkur malaka talabi “Advanced Python Back-end va Prompt Engineering ” kasbi boʻyicha umumiy oʻrta taʼlim muassasalarining 10-sinf oʻquvchilarini kasb-hunarga tayyorlash kurslari (keyingi oʻrinlarda - kasb-hunarga tayyorlash kurslari) boʻyicha ishchilarni tayyorlashning zaruriy bilimlar mazmunini va kasbiy tayyorgarlik darajasiga qoʻyiladigan talablarni shuningdek oʻquv yuklamalari hajmini va belgilangan talablarni bajarilishini nazoratini belgilaydi. 
+Malaka talablari kasbga oʻrgatish tayyorgarligi sifati va darajasini baholashda asosiy mezon hisoblanadi. Mazkur talablarning bajarilishi kasbga tayyorlash bitiruvchilariga kasbning tegishli darajasini olganligi toʻgʻrisida davlat namunasidagi sertifikat berilishi uchun asos hisoblanadi.
+Malaka talablari kasbga tayyorlash oʻquv jarayonini tashkil qilgan taʼlim tashkilotlari tomonidan tatbiq etilishi majburiydir.
+Mazkur talablarni bajargan umumiy oʻrta taʼlim tashkilotlarining 10-sinf oʻquvchilari Oʻzbekiston Respublikasi Milliy malakalar ramkasining 2-darajali sertifikatga ega boʻladi.
+11. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING   KASBIGA OʻQITISH NATIJALARI
+11.1. Birinchi chorak uchun
+№
+BOB
+MAVZU
+Bilim va koʻnikma
+	•	
+Django REST freymvork
+Django REST Framework. Server side rendering va user side rendering tushunchalari.
+	•	Django REST Framework yordamida backend logikani API koʻrinishida ajratish va rendering jarayonlarini boshqarish koʻnikmasi;
+	•	Server side rendering (SSR) va client side rendering (CSR) orasidagi farqlarni tushunish hamda ularning afzallik va kamchiliklarini tahlil qilish;
+	•	Django templating tizimi orqali SSR asosida dinamik sahifalar yaratishni amalda bajarish;
+	•	Ma’lumotlarni foydalanuvchiga yuborish jarayonida JSON, HTML yoki boshqa formatlar orqali render qilish usullarini qoʻllash.
+	•	
+
+DRF loyiha qurish: MBni loyihalash. Loyihani yaratish, dastlabki sozlamalar.
+	•	Django REST Framework loyihasining bazaviy tuzilmasini yaratish va sozlash koʻnikmasi;
+	•	Ma’lumotlar bazasi (PostgreSQL, SQLite va boshqalar) bilan bogʻlanish va migratsiyalarni amalga oshirish;
+	•	Django settings faylida REST konfiguratsiyalarini toʻgʻri sozlash malakasi;
+	•	REST API loyihasini modulli tuzilma asosida tashkil etish va versiyalashni oʻrganish;
+	•	Django ORM orqali ma’lumotlar bazasi modelini loyihalash koʻnikmasi. 
+	•	
+
+Model, View va Serializer. Routerlar.
+	•	Model, View va Serializerlar oʻrtasidagi bogʻliqlikni toʻgʻri tashkil etish;
+	•	Serializer yordamida ma’lumotlarni JSON formatiga oʻtkazish va teskari jarayonni amalga oshirish;
+	•	APIView, GenericView va ViewSet’lardan foydalanish malakasi;
+	•	Routerlar orqali URL yoʻnalishlarini avtomatik boshqarish;
+	•	Kodni modulli va qayta foydalaniladigan shaklda yozish koʻnikmasi.
+	•	
+
+Foydalanuvchilarni boshqarish: Identifikatsiya, autentifikatsiya va avtorizatsiya. Token, session va JWT
+	•	Djangoʻda foydalanuvchi modelini yaratish va kengaytirish koʻnikmasi;
+	•	Session va token asosidagi autentifikatsiya mexanizmlarini tushunish;
+	•	JWT (JSON Web Token) orqali xavfsiz kirish tizimini oʻrnatish;
+	•	DRF’ning permissions va authentication tizimlarini amalda qoʻllash;
+	•	Foydalanuvchilarni roʻyxatdan oʻtkazish, login/logout va parolni tiklash amaliyotlarini bajarish.
+	•	
+
+Ruxsatlar bilan ishlash
+	•	DRF’ning permissions klasslarini yaratish va sozlash koʻnikmasi;
+	•	API darajasida ruxsatlarni foydalanuvchi turi asosida boshqarish;
+	•	Custom permissionlar yozish va ularni view darajasida qoʻllash;
+	•	Autentifikatsiya va avtorizatsiya oʻrtasidagi farqni amalda tushunish;
+	•	Ma’lumotlarga kirish nazoratini xavfsizlik talablariga muvofiq ta’minlash. 
+	•	
+
+Filtrlash, qidiruv va tartiblash
+	•	django-filter kutubxonasidan foydalanib API darajasida ma’lumotlarni filtrlash;
+	•	Qidiruv imkoniyatlarini SearchFilter orqali joriy etish;
+	•	Ma’lumotlarni OrderingFilter yordamida tartiblashni sozlash;
+	•	Query parametrlar orqali foydalanuvchi soʻrovlariga mos natijalarni qaytarish;
+	•	Murakkab filterlar va bir nechta shartlarni kombinatsiyalashni oʻrganish.
+	•	
+
+Pagination va throttling
+	•	DRF’da pagination turlarini (PageNumberPagination, LimitOffsetPagination, CursorPagination) qoʻllash;
+	•	Katta hajmdagi ma’lumotlar bilan ishlashda resurslarni optimallashtirish koʻnikmasi;
+	•	throttling yordamida API’ga ortiqcha murojaatlarni cheklash;
+	•	Foydalanuvchi va IP manzili asosida tezlikni boshqarish;
+	•	Performance monitoring orqali samarali soʻrov boshqaruvini oʻrganish. 
+	•	
+
+Statik fayllar bilan ishlash. Fayllarni yuklash va koʻchirib olish
+	•	Djangoʻda MEDIA va STATIC fayllarni toʻgʻri boshqarish va sozlash;
+	•	Fayllarni yuklash uchun FileField va ImageField turlaridan foydalanish;
+	•	DRF serializerlari orqali fayl yuklash va yuklab olish jarayonlarini tashkil etish;
+	•	Media fayllarni xavfsiz tarzda saqlash va URL orqali taqdim etish;
+	•	Fayl yuklash limitlari va fayl validatsiyasini oʻrnatish koʻnikmasi.
+	•	
+
+APIni testlash. APIni hujjatlashtirish. (Swagger, Redoc)
+	•	DRF API endpointlarini pytest yoki unittest yordamida testlash koʻnikmasi;
+	•	API testlari orqali funksionallikni va xavfsizlikni tekshirish;
+	•	Swagger va Redoc orqali avtomatik API hujjatlarini yaratish;
+	•	OpenAPI spetsifikatsiyasi asosida API hujjatlarini optimallashtirish;
+	•	Test-driven development (TDD) yondashuvini amalda qoʻllash.
+11.2. Ikinchi chorak uchun
+№
+BOB
+MAVZU
+Bilim va koʻnikma
+	•	
+Django REST freymvork
+API havfsizligini ta’minlash
+	•	DRF Authentication va Permission qatlamlarini toʻgʻri tanlash va kombinatsiya qilish (Session, Token, JWT, Custom);
+	•	Rate limiting (ThrottleClasses) orqali soʻrovlar tezligini boshqarish va DoS xavfini kamaytirish;
+	•	CSRF, CORS va HTTP Only Cookie/ SameSite strategiyalarini sozlash;
+	•	Kiruvchi ma’lumotlarni serializer validatsiyasi, field-level va object-level tekshiruvlar bilan himoyalash;
+	•	Parollarni xeshlash, refresh/blacklist JWT joriy etish va token rotatsiyasini yoʻlga qoʻyish;
+	•	Audit loglar, DRF exception handler va custom logging bilan hodisalarni kuzatish.
+	•	
+
+Tayyor loyihani hostingga joylash (deploy)
+	•	cPanel’da Python App (Passenger/WsgiApp) yaratish, virtual environment ochish va pip install -r requirements.txt orqali bogʻliqliklarni oʻrnatish;
+	•	passenger_wsgi.py (yoki wsgi kirish nuqtasi) orqali Django ilovasini ishga tushirish va settings.py da DEBUG=False, ALLOWED_HOSTS, CSRF_TRUSTED_ORIGINS ni toʻgʻri sozlash;
+	•	Statik fayllarni collectstatic bilan yigʻish va Static Files hamda Media papkalarini cPanel File Manager yoki .htaccess orqali xizmat qilish;
+	•	.env faylida sirlar va DATABASE_URL ni saqlash, cPanel “Environment Variables” orqali konfiguratsiya kiritish va parollarni oshkor qilmaslik;
+	•	Postgres/MySQL’ga ulanishni Ahost’da mavjud ma’lumotlar bazasi xizmati orqali sozlash, masofaviy ulanish ruxsatlarini toʻgʻri berish;
+	•	WhiteNoise yoki nginx proxysiz statik xizmat koʻrsatish variantlarini tanlash, kerak boʻlsa X-Forwarded-Proto va HTTPS majburiy yoʻnaltirishni yoqish;
+	•	
+FastAPI
+FastAPI loyiha yaratish. Loyiha uchun MB ni loyihalash va yaratish, dastlabki sozlamalar.
+	•	FastAPI loyihasining asosiy tuzilmasini tashkil etish va main.py, routers, schemas, models fayllarini toʻgʻri joylashtirish;
+	•	SQLAlchemy yoki Tortoise ORM orqali ma’lumotlar bazasini loyihalash va yaratish koʻnikmasi;
+	•	Alembic yordamida migratsiyalarni boshqarish;
+	•	settings.py yoki .env orqali konfiguratsiyalarni xavfsiz saqlash;
+	•	FastAPI loyihasini modulli va kengaytiriladigan arxitektura asosida tuzish. 
+	•	
+
+Foydalanuvchilarni boshqarish: Identifikatsiya, autentifikatsiya va avtorizatsiya. Token, session va JWT
+	•	Foydalanuvchi modelini yaratish va OAuth2PasswordBearer orqali login tizimini joriy etish;
+	•	JWT tokenlar bilan autentifikatsiya jarayonini tushunish va amalda qoʻllash;
+	•	Session va cookie asosidagi autentifikatsiyani sozlash;
+	•	Xavfsizlik uchun parollarni bcrypt yoki passlib bilan xeshlash;
+	•	Foydalanuvchi rollari va ruxsatlarini aniqlash orqali avtorizatsiyani tashkil etish. 
+	•	
+
+CRUD amallarni bajarish (model, forma, validatsiya)
+	•	SQLAlchemy ORM yordamida ma’lumotlar ustida Create, Read, Update, Delete amallarini bajarish;
+	•	Pydantic BaseModel orqali ma’lumotlarni validatsiya qilish;
+	•	CRUD logikasini alohida repository yoki service qatlamlariga ajratish koʻnikmasi;
+	•	Soʻrovlar (request) va javoblar (response) uchun model strukturasi yaratish;
+	•	API endpointlarda validatsiya va xatoliklarni toʻgʻri qaytarish amaliyoti.
+11.3. Uchinchi chorak uchun
+№
+BOB
+MAVZU
+Bilim va koʻnikma
+	•	
+FastAPI
+Filtrlash, qidiruv va tartiblash
+	•	Soʻrov parametrlari (Query, Filter, Depends) orqali ma’lumotlarni filtrlash;
+	•	SQLAlchemy’da filter, like, in_ operatorlari yordamida qidiruvni amalga oshirish;
+	•	Ma’lumotlarni foydalanuvchi soʻroviga mos tarzda tartiblashni oʻrganish;
+	•	Dinamik qidiruv va kompleks filter tizimlarini loyihalash;
+	•	API darajasida qidiruvni optimallashtirish va samaradorlikni oshirish. 
+	•	
+
+Fayllar bilan ishlash
+	•	FastAPI’da UploadFile va File obyektlari yordamida fayllarni qabul qilishni oʻrganish;
+	•	Yuklangan fayllarni serverda xavfsiz saqlash va ularga URL orqali murojaat qilish;
+	•	Fayl turlarini va hajmini validatsiya qilish;
+	•	Rasmlar, PDF va boshqa turdagi fayllarni qayta ishlash (resizing, renaming, path);
+	•	Fayllarni yuklab olish (download) API endpointlarini yaratish.
+	•	
+
+Loyihani yakunlash
+	•	API endpointlarini toʻliq testdan oʻtkazish va xatoliklarni bartaraf etish;
+	•	Swagger yoki ReDoc orqali loyiha hujjatlarini yaratish va tekshirish;
+	•	CORS, middleware, exception handler kabi qoʻshimcha sozlamalarni joriy etish;
+	•	Ishlab chiqish va test muhiti (dev/test/prod) konfiguratsiyasini tayyorlash;
+	•	Loyihani tayyor holda sinovdan oʻtkazib, deployga tayyorlash. 
+	•	
+
+Docker orqali deploy qilish
+	•	Dockerfile yozish va FastAPI loyihasini konteynerga joylashtirish;
+	•	docker-compose yordamida API, ma’lumotlar bazasi va boshqa xizmatlarni birlashtirish;
+	•	Konteynerlarda portlar, environment oʻzgaruvchilarini va volyumlarni boshqarish;
+	•	Docker image yaratish va uni test serverda ishga tushirish koʻnikmasi;
+	•	FastAPI loyihasini Docker orqali bulut (VPS, CPanel, Render, Railway) muhitiga joylashtirish.
+	•	
+
+FastAPI da real time ilova ishlab chiqish (Web socket)
+	•	Real time ilova haqida tushunchaga ega bo‘lish;
+	•	Real time ilova arxitekturasini qura olish;
+	•	Real time API – Websocket haqida tushunchaga ega bo‘lish;
+	•	FastAPIda real time ilova uchun backend yozish va uni frontend bilan integratsiya qila olish ko‘nikmasiga ega bo‘lish.
+	•	
+	•	
+Prompt engieering
+Sun’iy intellekt va LLM modellarga kirish
+	•	LLM (Large Language Model) va sun’iy intellektning ishlash prinsiplari haqida chuqur tushuncha hosil qilish;
+	•	Transformer arxitekturasi va uning tabiiy tilni qayta ishlashdagi oʻrni;
+	•	AI model treningi, dataset va fine-tuning jarayonlarini tahlil qilish;
+	•	AI va LLM’larning amaliy sohalardagi (ta’lim, sogʻliq, biznes) qoʻllanilishini anglash;
+	•	Model natijalarini baholash va interpretatsiya qilish koʻnikmasi.
+	•	
+
+Prompt Engineering mohiyati va tamoyillari
+	•	Prompt Engineering tushunchasi va asosiy maqsadlarini tushunish;
+	•	Samarali prompt tuzilmasi (rol, vazifa, kontekst, format)ni shakllantirish;
+	•	Model javobini boshqarish uchun kontekstli va strukturalangan promptlardan foydalanish;
+	•	“Few-shot” va “instruction-based” prompting metodologiyalarini amalda qoʻllash;
+	•	AI javoblarini optimallashtirish va noaniqliklarni kamaytirish koʻnikmasi.
+	•	
+
+Rollar va kontekst asosidagi promptlar
+	•	Promptda rollarni (masalan, oʻqituvchi, dasturchi, tahlilchi) toʻgʻri belgilash;
+	•	Kontekstli promptlar yordamida modelni kerakli yoʻnalishda boshqarish;
+	•	Rollar orqali modelning nutq uslubi va javob shaklini moslashtirish;
+	•	Koʻp bosqichli muloqotlarda kontekstni saqlash va uzatish koʻnikmasi;
+	•	Rollar yordamida domen-spetsifik AI yordamchilarini yaratish. 
+	•	
+
+Chain-of-Thought (fikrlash zanjiri)
+	•	Chain-of-Thought (CoT) prompting orqali modelning mantiqiy fikrlash jarayonini chuqurlashtirish;
+	•	Bosqichma-bosqich (step-by-step) tahlilga asoslangan promptlarni yaratish;
+	•	Murakkab masalalarda modeldan tafakkur zanjirini chiqarish koʻnikmasi;
+	•	Mantiqiy izchillik va xulosaviy fikrlashni kuchaytirish;
+	•	CoT metodini hisob-kitob, kod tahlili va qaror chiqarish jarayonlarida qoʻllash.
+	•	
+
+Zero-shot, One-shot, Few-shot prompting
+	•	Zero-shot prompting orqali misolsiz vazifalarni bajarishni oʻrganish;
+	•	One-shot va Few-shot prompting yordamida misollar asosida modelni yoʻnaltirish;
+	•	Modellarning oʻrganish qobiliyatini misollar soniga nisbatan tahlil qilish;
+	•	Amaliy masalalarda “prompt pattern”larni sinovdan oʻtkazish;
+	•	Har xil prompt strategiyalarini natijalar sifatiga qarab solishtirish. 
+	•	
+
+ReAct prompting va Reasoning
+	•	ReAct prompting orqali “fikrlash + harakat” jarayonlarini uygʻunlashtirish;
+	•	Modelga mantiqiy xulosalash (reasoning) va fakt asosida qaror chiqarishni oʻrgatish;
+	•	Fikr zanjiri va harakat buyruqlarini integratsiya qilish;
+	•	ReAct yondashuvi yordamida agent-tizimlar yaratish;
+	•	Reasoning jarayonini tahlil qilish va natijalarni tushuntirish koʻnikmasi. 
+	•	
+
+Kod va ma’lumotlar uchun promptlar
+	•	Kod generatsiyasi uchun samarali va aniqlik keltiruvchi promptlar tuzish;
+	•	AI yordamida xatoliklarni topish va kodni optimallashtirish;
+	•	Kod tahlili, sharhlash va ma’lumotlar strukturasi bilan ishlash;
+	•	Ma’lumotlar tozalash, konvertatsiya qilish va tahlil qilish uchun AI’dan foydalanish;
+	•	Kod yozish jarayonini avtomatlashtirish koʻnikmasi.
+11.4. Toʻrtinchi  chorak uchun
+№
+BOB
+MAVZU
+Bilim va koʻnikma
+	•	
+Prompt engieering
+Matn tahlili va hujjatlar bilan ishlash
+	•	Uzun matnlarni qisqartirish (summarization) va asosiy fikrlarni ajratish;
+	•	Hujjatlar orasida qidiruv, tahlil va ma’lumotlarni ajratib olish;
+	•	NLP texnikalarini prompt orqali boshqarish va matnlarni tasniflash;
+	•	Turli formatdagi (PDF, DOCX, HTML) matnlarni tahlil qilish koʻnikmasi;
+	•	AI yordamida matnlarni tarjima, tahrir va stilistik optimallashtirish. 
+	•	
+
+Rasm va dizayn promptlari (multimodal). Ovozli va multimodal promptlar
+	•	Multimodal modellar (rasm, matn, audio) bilan ishlash prinsiplarini oʻrganish;
+	•	Rasm yaratish uchun kreativ va texnik jihatdan toʻliq promptlar tuzish;
+	•	Ovozli promptlar yordamida interaktiv tizimlar yaratish;
+	•	Vizual dizayn, infografika va UI komponentlari uchun AI’dan foydalanish;
+	•	Matn, rasm va ovozni uygʻunlashtirgan multimodal tizimlarni loyihalash. 
+	•	
+
+Custom GPT yoki domen-spetsifik yordamchi yaratish
+	•	Ma’lum soha (ta’lim, tibbiyot, biznes) uchun maxsus GPT yordamchi yaratish;
+	•	Custom instructions, data fine-tuning va knowledge grounding asoslarini oʻrganish;
+	•	Shaxsiylashtirilgan javob uslubi va doimiy xotira tizimini sozlash;
+	•	API orqali Custom GPT’ni boshqa tizimlarga integratsiya qilish;
+	•	Domen-spetsifik yordamchi testlash va ishlashini tahlil qilish.
+	•	
+
+Etika, xavfsizlik va fakt tekshirish
+	•	AI model javoblarida aniqlik, ishonchlilik va fakt tekshirish jarayonlarini oʻrganish;
+	•	Sun’iy intellektda etik masalalar: xolislik, maxfiylik, manipulyatsiya;
+	•	Hallucination (notoʻgʻri ma’lumot) hodisasini kamaytirish usullarini bilish;
+	•	Foydalanuvchi ma’lumotlarini himoya qilish va xavfsiz promptlar yaratish;
+	•	Model javoblarini manba asosida verifikatsiya qilish. 
+	•	
+
+API integratsiyasi va avtomatlashtirish
+	•	AI API’lari (OpenAI, HuggingFace, Gemini va boshqalar) bilan ishlashni oʻrganish;
+	•	Promptlarni avtomatik yuborish, javobni qayta ishlash va tizimlarga ulash;
+	•	Python, JavaScript yoki boshqa tillar orqali avtomatlashtirilgan ish oqimlarini yaratish;
+	•	Zapier, Make, n8n kabi vositalar yordamida integratsiyalarni sozlash;
+	•	AI natijalarini real vaqtda ishlovchi ilovalarga joylashtirish.
+	•	
+
+Mini loyiha – domen asosida AI yordamchi
+	•	Tanlangan soha uchun (masalan, ta’lim yoki sogʻliqni saqlash) AI yordamchi loyihasi yaratish;
+	•	Ma’lumotlarni tahlil qilish va foydalanuvchi ehtiyojlariga mos interfeys yaratish;
+	•	Prompt tuzilmasi, javob strategiyasi va muloqot oqimini loyihalash;
+	•	API va ma’lumotlar bazasi bilan ishlaydigan tizimni yaratish;
+	•	Loyiha natijasini sinovdan oʻtkazish va foydalanuvchi fikrini tahlil qilish.
+	•	
+
+Yakuniy loyiha taqdimoti va tahlili
+	•	Loyiha konsepsiyasi, yechim arxitekturasi va prompt strategiyasini taqdim etish;
+	•	Amaliy natijalarni tahlil qilish va muammolarni aniqlash;
+	•	AI model ishlash samaradorligini mezonlar asosida baholash;
+	•	Yakuniy hisobot, hujjatlashtirish va vizual taqdimot tayyorlash;
+	•	Guruhda ishlash, natijalarni himoya qilish va feedback asosida takomillashtirish. 
+
+
+12. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  KURSI BOʻYICHA LOYIHA ISHLARI
+Advanced Python Back-end va Prompt Engineering  kursi davomida bajariladigan loyihalar oʻtilgan mavzular doirasida beriladi va joriy nazorat ishlarini baholashda asos boʻladi. Kursda tahsil olayotgan har bir oʻquvchiga loyiha topshiriqlari individual tarzda beriladi. Berilgan loyihalarni kurs davomida yoki yakuniy loyiha sifatida bajarish mumkin.
+№
+Loyiha mavzulari
+1
+FastAPI + GPT asosida talabalar uchun avtomatik test yaratish platformasi;
+2
+DRF bilan yaratilgan “Smart Support” API: foydalanuvchi savollariga AI orqali javob berish;
+3
+AI Prompt generatori: foydalanuvchi sohasiga mos promptlarni taklif qiluvchi FastAPI ilova;
+3
+FastAPI va GPT integratsiyasida avtomatik hujjat tahlilchi (contract analyzer);
+4
+Prompt Engineering va DRF asosida matnni ovozga aylantiruvchi multimodal servis;
+5
+FastAPI va PostgreSQL asosida AI yordamida kod sharhlovchi va optimallashtiruvchi tizim;
+6
+DRF + LLM asosida foydalanuvchi yozgan matnlarni grammatik jihatdan tahrir qiluvchi API;
+7
+FastAPI va GPT asosida sun’iy intellekt yordamida rezyume tahlil va baholash platformasi;
+8
+LLM asosida ilmiy maqolalarni tahlil qilib tavsiya beruvchi DRF backend;
+9
+FastAPI va GPT bilan ishlaydigan kod yozish uchun interaktiv oʻquv platformasi;
+10
+AI asosida ijtimoiy tarmoqlardagi postlarni tahlil qiluvchi tizimni DRF orqali yaratish;
+11
+DRF va LLM asosida foydalanuvchi ma’lumotlarini kategoriyalovchi avtomatik API;
+12
+FastAPI asosida AI yordamida biznes reja yaratish platformasi;
+13
+AI yordamida talabalar loyihalarini tahlil qiluvchi DRF web-ilova;
+14
+Prompt Engineering asosida koʻp tilli tarjimon (translator) API FastAPI yordamida;
+15
+DRF asosida AI matn tahlili va sentiment baholash API;
+16
+FastAPI + GPT yordamida shaxsiy oʻqituvchi (AI Tutor) yaratish loyihasi;
+17
+DRF orqali ishlaydigan “AI yozuvchi” (content writer) platformasi;
+18
+FastAPI asosida promptlarni saqlash, baholash va takomillashtirish tizimi (PromptHub);
+19
+AI yordamida video ssenariy yaratish va DRF orqali media fayllarni boshqarish tizimi;
+20
+FastAPI + GPT orqali shifokor yozuvlarini tibbiy hisobotga aylantiruvchi tizim;
+21
+Prompt Engineering va DRF asosida AI yordamida kod sinovlari (test generation) API;
+
+
+13. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  XONASI UCHUN QOʻYILADIGAN UMUMIY TALABLAR
+Advanced Python Back-end va Prompt Engineering  xonasi maktab binosining ikki va undan yuqori qavatda alohida binoda joylashgan boʻlishi;
+	•	Advanced Python Back-end va Prompt Engineering  xonasining umumiy maydoni 63 m2;
+	•	barcha oʻquv binolarini tabiiy, sunʼiy kombinatsiyalangan yoritishga ega boʻlishi;
+	•	Xona harorati 17-22o C boʻlishi kerak.
+Advanced Python Back-end va Prompt Engineering  xonasi mashgʻulotlar boshlanishidan oldin va tugagandan soʻng, shamollatiladi. Shamollatishning davomiyligi ob-havo sharoiti, shamolning yoʻnalishi va tezligi, isitish tizimining samaradorligi bilan belgilanadi.
+Advanced Python Back-end va Prompt Engineering  xonasi uchun ajratilgan xonadagi haroratni meʼyorida saqlab turish uchun sovutish va isitish tizimi (konditsioner) oʻrnatilgan boʻlishi kerak. 
+Advanced Python Back-end va Prompt Engineering  xonasi uchun ajratilgan xonada birinchi tibbiy yordam koʻrsatish uchun tibbiy toʻplamlar boʻlishi kerak.
+Advanced Python Back-end va Prompt Engineering  xonasi uchun quyidagi boʻyoq ranglarini qoʻllash tavsiya etiladi: shiftlar uchun moviy rang, devorlar uchun — qaymoq rang, pushti, yashil, koʻk ranglarning ochiq ohanglari, mebel (shkaflar, stollar) uchun — tabiiy yoki och jigarrang, toʻq  jigarrang; eshiklar, deraza romlari uchun — oq ranglar.
+14. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  KASBIGA OʻQITISH XONASINI JIHOZLASHGA QOʻYILGAN TALABLAR
+T/r
+Jihoz nomi
+Oʻlchov birligi
+Soni
+Jihoz rasmi
+1.
+Monitor uzunligi toʻgʻridan — toʻgʻri 1920 pixels 1080 pixels boʻlishi kerak. 
+toʻplam
+1
+
+2.
+UHD-384x2160-4k,
+QHD-2560X1440
+FHD-1920X1080
+HD-1280X720
+toʻplam
+1
+
+3.
+Processor boʻyi 22x27
+ATX/EATX
+toʻplam
+1
+
+4.
+Kompyuter klaviaturasi oʻlchami 445-mm 136-mm
+dona
+1
+
+5.
+Kompyuter sichqonchasi oʻlchami 101-mm 75-mm
+dona
+1
+
+
+15. ADVANCED PYTHON BACK-END VA PROMPT ENGINEERING  KASBIGA OʻRGATISH UCHUN ZARUR BOʻLADIGAN XOM ASHYOLAR ROʻYXATI
+T/r 
+Xom ashyo va materiallar nomi 
+Oʻlchov birligi
+Bir oʻquvchi uchun belgilangan miqdor 
+1.
+Monitor (uzunligi toʻgʻridan — toʻgʻri 1920 pixels 1080 pixels)
+dona
+1
+2.
+UHD-384x2160-4k,
+dona
+1
+3.
+QHD-2560X1440
+dona
+1
+4.
+FHD-1920X1080
+dona
+1
+5.
+HD-1280X720
+dona
+1
+6.
+Protsessor (22x27 ATX/EATX)
+dona
+1
+7.
+Kompyuter klaviaturasi (445-mm 136-mm)
+dona
+1
+8.
+Kompyuter sichqonchasi (101-mm 75-mm)
+dona
+1
+
+16. KASBIY TAʼLIM USTASI LAVOZIMIGA QOʻYILADIGAN TALABLAR
+T/r
+Lavozim nomi
+MMSK bоʼyicha kodi
+Xodimlar toifasi
+Taʼlimning eng past darajasi
+2108
+
+3709
+Ishlab chiqarish taʼlimi ustasi
+1345
+
+2320
+Boshqaruv, ishlab chiqarish
+Mutaxassis
+O/M, Oʻ/M
+
+Lavozim vazifalari:
+biriktirilgan guruhlarda о‘quv amaliyoti mashgʻulotlarni о‘tish, ishlab chiqarish amaliyotiga rahbarlik qilish; 
+о‘quv ustaxonalarida, poligonlarda va о‘quv xо‘jaligida jihozlar va texnika vositalarini amaliy mashgʻulotlarga tayyorlash; 
+kerak bо‘ladigan xom-ashyo va materiallarni tayyorlash, texnologik xaritalarni ishlab chiqish, mashgʻulotga sarf bо‘ladigan xom-ashyo sarfini aniqlash, hisobini yuritish;
+о‘quvchilarni oraliq, bitiruv amaliy imtihonlarini topshirishga tayyorlash, biriktirilgan guruhlarda tarbiyaviy ish olib borish, о‘quv mashgʻulot jurnallarini yuritish va saqlash; 
+taʼlim-tarbiya jarayoni davomida о‘quv-texnika jihozlari va vositalaridan, ustaxonalardan, maktabga qarashli jihozlardan ehtiyotkorlik bilan foydalanish;
+tanlab olingan kasb-hunarni egallash jarayonida о‘quvchilarning kasbiy layoqat, kо‘nikma va malakalarini shakllantirish;
+kasb-hunarga tayyorlash tizimi va mazmunini jamiyat ehtiyojlaridan, fan, madaniyat va zamonaviy innovatsion texnika yutuqlaridan kelib chiqqan holda takomillashtirish;
+ish о‘rinlarini jihozlash, yongʻinga qarshi himoya, xavfsizlik texnikasi va mehnatni muhofaza qilish qoidalari va meʼyorlarining bajarilishini taʼminlash. 
+Bilishi kerak:
+Taʼlimga oid О‘zbekiston Respublikasi qonunlarini, kasbiy va amaliy faoliyatga tegishli masalalar bо‘yicha meʼyoriy va uslubiy hujjatlarni, mehnat qonunchiligi, mehnat muhofazasining qoidalari va meʼyorlarini, xavfsizlik texnikasi qoidalarini.
+Malaka talablari: 
+Pedagogik, muhandis-pedagogik yoki biriktirilgan guruh tayyorlov yо‘nalishiga mos ravishda kamida oʻrta maxsus maʼlumotga ega boʻlishi kerak.
+
+17. 10-sinf OʻQUVCHILARIGA QOʻYILGAN UMUMIY MALAKA TALABLARI
+Bilim
+Backend dasturlash hamda Prompt engineering boʻyicha kerakli dasturlar, backend dasturlash va Prompt engineeringning nazariy asoslari, turli tizimlar ularning arxitekturasi, qanday qurilishi haqida bilimlarga ega boʻlishi kerak.
+Koʻnikma
+Backend tizimlarni ishlab chiqish uchun tayyor yechimlarga tayanib dasturiy ta’minotni ishlab chiqish; dasturlarni clean code qoidalariga rioya qilgan holda yozish; zarurat tugʻilganda modullarga boʻlish; AI vositalarini professional ishlatish koʻnikmalariga ega boʻlishi kerak.
+Kompetensiya
+Tizimning backend qismini eng yaxshi amaliyotlar (best practice) dan foydalangan holda loyihalash; muayyan loyiha uchun texnik topshiriqni ishlab chiqish va arxitekturaviy yechimlar taqdim etish; Prompt engineer sifatida professional promptlar yoza olish kompetensiyalariga ega boʻlishi kerak.
+
+18. FOYDALANILGAN ADABIYOTLAR VA ELEKTRON  MANBALAR ROʻYXATI
+Foydalanilgan adabiyotlar roʻyxati.
+	•	Eliot Andres & Pierre Colombo, Prompt Engineering for Generative AI: From GPT-3 to ChatGPT and Beyond, Packt Publishing, 2024, 320 sahifa.
+Elektron manbalar
+	•	Rasmiy DRF dokumentatsiyasi – https://www.django-rest-framework.org 
+	•	Django rasmiy hujjatlari (API integratsiyasi boʻlimi bilan) – https://docs.djangoproject.com/en/stable 
+	•	RealPython – Building APIs with Django REST Framework – https://realpython.com/django-rest-framework-quick-start 
+	•	TestDriven.io – Django REST Framework Tutorials – https://testdriven.io/blog/topics/django/ 
+	•	DRF GitHub repozitoriyasi – https://github.com/encode/django-rest-framework
+	•	FastAPI rasmiy sayti – https://fastapi.tiangolo.com/ 
+	•	FastAPI GitHub repozitoriysi – https://github.com/tiangolo/fastapi 
+	•	Medium – Modern API Development with FastAPI – https://medium.com/tag/fastapi 
+	•	OpenAI – Official Prompt Engineering Guide – https://platform.openai.com/docs/guides/prompt-engineering 
+	•	DeepLearning.AI – ChatGPT Prompt Engineering for Developers (Andrew Ng) – https://learn.deeplearning.ai/chatgpt-prompt-eng/ 
+	•	GitHub – Awesome Prompt Engineering Collection – https://github.com/dair-ai/awesome-prompt-engineering 
+	•	Anthropic – Claude Prompting Guide – https://docs.anthropic.com/claude/docs/prompt-engineering 
+	•	Microsoft – Prompt Engineering Techniques – https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/prompt-engineering 
+	•	PromptHero – Prompt Library and Examples – https://prompthero.com/ 
+	•	LangChain Documentation – Prompt Templates – https://python.langchain.com/docs/modules/model_io/prompts/ 
+	•	Pinecone – Practical Prompt Engineering Blog – https://www.pinecone.io/learn/prompt-engineering/ 
+	•	Google AI Studio – Prompt Design and Tuning – https://aistudio.google.com/ 
+	•	Hugging Face – Prompt Engineering with Transformers – https://huggingface.co/docs/transformers/en/main_classes/pipelines 

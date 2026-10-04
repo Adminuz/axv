@@ -1,0 +1,1473 @@
+OʻZBEKISTON RESPUBLIKASI  RAQAMLI TEXNOLOGIYALAR VAZIRLIGI
+	
+RAQAMLI TA’LIMNI RIVOJLANTIRISH
+
+“MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN 
+BI MUTAXASSISLIGI (MA’LUMOTLAR TAHLILI)
+YO’NALISHI BO’YICHA O’QUV DASTURI
+(9-SINFLAR UCHUN)
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+Toshkent – 2025
+
+
+MUNDARIJA
+ TOC \o "1-3" \h \z \u  HYPERLINK \l "_Toc216340505" 1. DASTURDA QOʻLLANILGAN TAYANCH ATAMALAR	 PAGEREF _Toc216340505 \h 5
+ HYPERLINK \l "_Toc216340506" 2. BI MA’LUMOTLAR TAHLILI KASBINING TAYANCH OʻQUV REJASI	 PAGEREF _Toc216340506 \h 8
+ HYPERLINK \l "_Toc216340507" 3. BI MA’LUMOTLAR TAHLILI KASBIGA TAYYORLASHNING MUDDATI	 PAGEREF _Toc216340507 \h 9
+ HYPERLINK \l "_Toc216340508" 4. BI MA’LUMOTLAR TAHLILI DASTURLASH KASBI OʻQUV MAVZU REJASI	 PAGEREF _Toc216340508 \h 10
+ HYPERLINK \l "_Toc216340509" 5. BI MA’LUMOTLAR TAHLILI KASBI OʻQUV DASTURI	 PAGEREF _Toc216340509 \h 12
+ HYPERLINK \l "_Toc216340548" 6. BI MA’LUMOTLAR TAHLILI YO’NALISHI BOʻYICHA OʻTILADIGAN DARS SOATLARI	 PAGEREF _Toc216340548 \h 12
+ HYPERLINK \l "_Toc216340550" 7. OʻQUV JARAYONINI TASHKIL ETISHDA OʻQITISH METODLARI, SHAKLLARI VA VOSITALARI	 PAGEREF _Toc216340550 \h 13
+ HYPERLINK \l "_Toc216340551" 8. BAHOLASH MEZONLARI	 PAGEREF _Toc216340551 \h 14
+ HYPERLINK \l "_Toc216340590" 9. BI MA’LUMOTLAR TAHLILI KASBI TAVSIFI	 PAGEREF _Toc216340590 \h 17
+ HYPERLINK \l "_Toc216340596" 10. KASBNING QOʻLLANISH SOHASI	 PAGEREF _Toc216340596 \h 20
+ HYPERLINK \l "_Toc216340597" 11. BI MA’LUMOTLAR TAHLILI KASBIGA O’QITISH NATIJALARI	 PAGEREF _Toc216340597 \h 21
+ HYPERLINK \l "_Toc216340602" 12. BI MA’LUMOTLAR TAHLILI KURSI BO’YICHA LOYIHA ISHLARI	 PAGEREF _Toc216340602 \h 39
+ HYPERLINK \l "_Toc216340603" 13. BI MA’LUMOTLAR TAHLILI XONASI UCHUN QOʻYILADIGAN UMUMIY TALABLAR	 PAGEREF _Toc216340603 \h 41
+ HYPERLINK \l "_Toc216340604" 14. BI MA’LUMOTLAR TAHLILI KASBIGA OʻQITISH XONASINI JIHOZLASHGA QOʻYILGAN TALABLAR	 PAGEREF _Toc216340604 \h 43
+ HYPERLINK \l "_Toc216340605" 15. BI MA’LUMOTLAR TAHLILI KASBIGA OʻRGATISH UCHUN ZARUR BOʻLADIGAN XOM ASHYOLAR ROʻYXATI	 PAGEREF _Toc216340605 \h 44
+ HYPERLINK \l "_Toc216340606" 16. BI MA’LUMOTLAR TAHLILI USTASI LAVOZIMIGA QOʻYILADIGAN TALABLAR	 PAGEREF _Toc216340606 \h 45
+ HYPERLINK \l "_Toc216340607" 17. 9-SINF OʻQUVCHILARIGA QOʻYILGAN UMUMIY MALAKA TALABLARI	 PAGEREF _Toc216340607 \h 46
+ HYPERLINK \l "_Toc216340608" 18. FOYDALANILGAN ADABIYOTLAR VA ELEKTRON  MANBALAR ROʻYXATI	 PAGEREF _Toc216340608 \h 47
+
+
+
+1. DASTURDA QOʻLLANILGAN TAYANCH ATAMALAR           
+Kasb - maxsus tayyorgarlik va ish tajribasi natijasida maʼlum bir sohada kasbiy faoliyatni amalga oshirish uchun lozim boʻlgan nazariy bilimlar, amaliy koʻnikma va malakalar majmuasini egallagan, jismoniy imkoniyat, aqliy qobiliyat va yuridik huquqlari taʼminlangan mehnat faoliyati (mashgʻuloti)ning turidir.
+Koʻnikma - muayyan vazifani bajarish uchun egallangan qobiliyat.
+Bilim - oʻrganilgan maʼlumotlarni eslab qolish va qayta tushuntirib berish.
+Kompetensiya - mavjud bilim, koʻnikma va malakalarni kundalik faoliyatda qoʻllay olish qobiliyati.
+Kasbiy faoliyat sohasi - ilmiy, ijtimoiy, iqtisodiy, ishlab chiqarishda namoyon boʻladigan kasbiy faoliyat obyektlarining majmui.
+Kasbiy faoliyat obyekti - predmetlar, voqeliklar, jarayonlar va faoliyat doirasida harakatga yoʻnaltirilgan tizimlar.
+Kasbiy faoliyat turi - kasbiy faoliyat obyektiga taʼsir qilishning usullari, uslublari va tavsifi.
+Oʻquv rejasi - oʻquv faoliyati turlari, oʻquv amaliyotlari (modullari) va ishlab chiqarish amaliyotlari tarkibi, ularni oʻrganish izchilligi, soha va tarmoqlarda ish turlarining mavsumiyligini hamda soatlardagi hajmini belgilaydigan hujjat.
+Oʻquv amaliyoti - nazariy bilim va amaliy koʻnikmalarini integratsiyalashga qaratilgan oʻquv jarayonining elementi. 
+Kasbga tayyorlash oʻquv kursi - umumiy oʻrta taʼlim tashkilotlarining  9-sinf oʻquvchilari uchun tashkil etilgan kasb-hunarga oʻrgatish darslari majmuasi.
+Taʼlim dasturi - taʼlimning asosiy xususiyatlari (hajmi, mazmuni, rejalashtirilgan natijalar), tashkiliy-pedagogik shart-sharoitlar, umumiy talablar, shuningdek, taʼlimni tashkil etish va amalga oshirish uchun zarur boʻlgan oʻquv-metodik koʻrsatmalar majmui.
+Windows operatsion tizimida ishlash - kompyuterlarning texnik tomondan mukammallashishi hamda grafik imkoniyatlarining rivojlanib borishi dasturchilarda grafik interfeysli qobiq-dasturlar ishlab chiqarish fikrini uygʻotdi. 
+Kompyuterni yigʻish tartibi - statsionar kompyuterni oʻzingiz yigʻish uchun siz bir nechta nyuanslarni bilishingiz kerak. Bu bitta butunga ulanadigan qurilmalar toʻplamini toʻgʻri tanlash uchun zarur. 
+Kompyuterdagi nosozliklarni bartaraf etish - mobil kompyuterlar bilan ishlashda baʼzida maʼlum bir xato yoki nosozlik sababini topish qiyin. Muayyan muammolarni topish uchun siz maxsus dasturlar va usullardan foydalanishingiz kerak.
+Kompyuterni ishga tushirish - quvvat manbai kompyuterga ulanganda, yuklash jarayoni boshlanadi. BIOS (Basic In-Out System) kompyuterning asosiy qurilmalarini soʻrovdan oʻtkazadigan POST (Power On Self Test) dasturini ishga tushiradi.
+Monitorlar tuzilmalari - kompyuter monitori(monitor) - grafik, matnli maʼlumotlarni ekranga chiqarib berish uchun xizmat qiladigan qurilmadir, ekranga chiqarish monitor displeyi orqali amalga oshiriladi.
+Notebooklar turlari - hajmi va diagonal. Ushbu toifani guruhlarga boʻlish mumkin: 7-10 dyuymli diagonali — netbuklar, 11-13 — subnotebooklar (qurilma standartdan kichikroq, ammo deyarli bir xil funksionallikka ega), 14-16 dyuym — standart va 16 va undan ortiq narsalar almashtirish ish stoli kompyuter.
+Flash xotiraga ega qurilmalari - odatda kompyuterlarda ishlatiladigan oddiy RAM xotira (Random Access Memory) uchuvchi hisoblanadi. Yaʼni, kompyuterni oʻchirib qoʻysangiz, xotira yangilanganda saqlanadigan barcha maʼlumotlar yoʻqoladi. Bunga qaramasdan, flesh xotira doimiy emas, yaʼni bu turdagi xotira texnologiyasida saqlanadigan maʼlumotlar quvvatni kesganda saqlanadi degan maʼnoni anglatadi. 
+Kompyuter tarmoqlarga ulash taʼminotini tashkil qilish - aksariyat zamonaviy kompyuterlar qandaydir kompyuter tarmogʻiga ulangan. Bunday tuzilmaning yaratilishi kerakli maʼlumotlarga tezkor kirish imkonini beradi. Bundan tashqari, mahalliy tarmoqlar bir nechta foydalanuvchilarga maʼlum bir vazifa ustida sinxron ishlashga imkon beradi.
+Operatsion tizimga xizmat koʻrsatish - operatsion tizimning taʼrifi va bugungi kunda ishlatiladigan operatsion tizimlarning misollari Odatda OS sifatida qisqartirilgan operatsion tizim kuchli va odatda kompyuterda  HYPERLINK "https://uz.eyewated.com/sizning-kompyuteringiz-haqida-bilishingiz-kerak-bolgan-hamma-narsalar/" apparat va boshqa dasturlarni boshqaradigan yirik dastur hisoblanadi.
+Business Intelligence (BI) - Ma’lumotlarni yig’ish, tahlil qilish va vizual tarzda taqdim etish orqali tashkilotlarga ma’lumotga asoslangan qarorlar qabul qilishga yordam beradigan texnologiyalar va usullar majmuasi.
+Ma’lumotlar bazasi (Database) - Tizimli tarzda tashkil etilgan va boshqariladigan, kompyuter tizimi orqali saqlanadigan ma’lumotlar to’plami.
+Ma’lumotlar ombori (Data Warehouse) - Turli manbalardan kelgan katta hajmdagi ma’lumotlarni birlashtiruvchi, BI jarayonlari uchun moslashtirilgan maxsus ma’lumotlar bazasi.
+Ma’lumotlar vizualizatsiyasi - Ma’lumotlarni grafik shaklda (diagramma, grafik, interaktiv dashboard) taqdim etish usuli.
+Dashboard (Ko’rsatkichlar paneli) - Muayyan jarayon yoki faoliyat ko’rsatkichlarini real vaqt rejimida kuzatish va tahlil qilish uchun ishlab chiqilgan interaktiv vizual panel.
+
+
+
+2. BI MA’LUMOTLAR TAHLILI KASBINING TAYANCH OʻQUV REJASI
+T/r
+Tayanch oʻquv reja tarkibi
+Mashg’ulotlar soni
+Umumiy yuklamaga
+nisbatan foiz hisobida
+I.
+Oʻquv maʼruzasi
+30
+29,4%
+II.
+Oʻquv amaliyoti
+67
+65,7%
+III.
+Oraliq nazorat ishi (Loyiha ishi)
+4
+3,9%
+IV.
+Yakuniy nazorat ishi
+1
+1,0%
+Hammasi:
+102
+100
+
+
+3. BI MA’LUMOTLAR TAHLILI KASBIGA TAYYORLASHNING MUDDATI
+Kasb nomi
+Ma’lumotlar tahlili
+Kasbga tayyorlashning meʼyoriy muddati
+9-sinflarda haftasiga 80 daqiqadan 3 ta dars 
+1 oʻquv yili davomida
+
+
+Sinf
+Oʻquv chorak
+Haftalar soni
+Mashg’ulotlar soni
+9
+I
+12
+36
+II
+7
+21
+III
+8
+24
+IV
+7
+21
+Jami
+34 hafta
+102
+
+Tushuntirish xati
+
+1. Umumiy oʻrta taʼlim tashkilotlarida oʻquv yilining 2 - sentyabridan kelgusi yilning 25-mayigacha boʻlgan davrda toʻrt chorakka boʻlingan holda tashkil etiladi.
+2. Oʻquv yilining davomiyligi - 34 hafta:
+haftasiga 3 marta belgilangan soatlar doirasidan chiqmagan holda oʻqish tashkil etiladi;
+mashgʻulotning davomiyligi  1 soat 20 daqiqani tashkil etadi;
+mashgʻulotlar oraligʻidagi tanaffusning davomiyligi 5 - 10 daqiqa. 
+3. Oraliq va Yakuniy nazoratlar nazariy yoki koʻrgazmali amaliy imtihon shaklida tasdiqlangan baholash mezonlari asosida oʻtkaziladi.
+
+4. BI MA’LUMOTLAR TAHLILI DASTURLASH KASBI OʻQUV MAVZU REJASI
+T/r
+Mavzu nomi
+Ajratilgan mashg’ulotlar soni
+Shundan:
+Ma’ruza
+Amaliy  
+Nazorat ishi
+
+I BOBMa’lumotlar tahliliga kirish va Excel bilan ishlash8261
+Ma’lumotlar tahliliga kirish. Excel - Ma’lumotlar bilan ishlashning fundamental vositasi
+4
+2
+2
+ 
+
+2
+Excel: professional jadval tuzish, formatlash va ma’lumotlarni strukturalash 
+1
+
+1
+ 
+
+3
+Excel formulalari
+1
+
+1
+ 
+
+4
+Ma’lumotlarni tozalash I
+1
+
+1
+ 
+
+5
+Pivot Jadvallar va Vizualizatsiya
+1
+
+1
+ 
+
+II BOBSQL va relatsion ma’lumotlar tahlili2872016
+Ma’lumotlar bazasi va relatsion model tushunchasi
+3
+1
+2
+ 
+
+7
+SQL asoslari: SELECT, WHERE, ORDER BY
+4
+1
+3
+ 
+
+8
+Aggregatsiya va GROUP BY
+4
+1
+3
+ 
+
+9
+Shartli tahlil: CASE WHEN, segmentatsiya va klassifikatsiya
+4
+1
+3
+ 
+
+10
+JOINlar: ko’p jadvalli tahlil va ma’lumotlarni birlashtirish
+4
+1
+3
+ 
+
+11
+Murakkab SQL I: Subquery va CTE yordamida murakkab so’rovlar tuzish
+4
+1
+3
+ 
+
+12
+Murakkab SQL II: Window functions, ranking va analitik hisoblashlar
+5
+1
+3
+1
+
+III BOBPython orqali tahlil qilish21614113
+Ma’lumot tahlili uchun Python asoslari. 
+3
+1
+2
+ 
+
+14
+NumPy asoslari: Arraylar, vektorlashtirish va matematik amallar
+4
+1
+3
+ 
+
+15
+Pandas asoslari: Ma’lumot strukturalari (Series, DataFrame)
+4
+1
+3
+ 
+
+16
+Ma’lumotlarni tozalash va transformatsiya qilish. 
+3
+1
+2
+ 
+
+17
+Ma’lumotlarni birlashtirish va agregatsiya
+3
+1
+2
+ 
+
+18
+Ma’lumotlarni qayta shakllantirish va vizuallashtirish. 
+4
+1
+2
+1
+
+`Power BI va vizuallashtirish331022119
+Business Intelligence tushunchasi va Power BI asoslari.
+2
+1
+1
+ 
+
+20
+Ma’lumot manbalariga ulashish: Excel, CSV, SQL. Relatsion fayllar
+2
+1
+1
+ 
+
+21
+Power Query: ma’lumotlarni professional tayyorlash (ETL)
+4
+1
+3
+ 
+
+22
+Ma’lumotlarni modellashtirish
+4
+1
+3
+ 
+
+23
+Asosiy DAX funksiyalari bilan ishlash
+5
+1
+4
+ 
+
+24
+Kengaytirilgan DAX funksiyalari 
+7
+1
+5
+1
+
+25
+Vizualizatsiya
+2
+1
+1
+ 
+
+26
+Dashboard Dizayn tamoyillari
+2
+1
+1
+ 
+
+27
+Interaktivlik va ma’lumot bilan storytelling
+3
+1
+2
+ 
+
+28
+Power BI Service
+2
+1
+1
+ 
+
+V BOBZamonaviy tahlil va amaliy BI tizimlari1255229
+Ma’lumotlar integratsiyasi: SQL-Python-Power BI 
+2
+1
+1
+ 
+
+30
+Sun’iy intellekt yordamida tahlil.
+2
+1
+1
+ 
+
+31
+ Mashinaviy o’qitish haqida tushuncha. 
+2
+1
+1
+ 
+
+32
+Ma’lumot etikasi va maxfiylik.
+2
+1
+1
+ 
+
+33
+ Ma’lumotlarni boshqarish (Data Governance)
+3
+1
+1
+1
+
+34Yakuniy Nazorat ishi1  1 
+Jami:
+102
+30
+67
+5
+
+
+5. BI MA’LUMOTLAR TAHLILI KASBI OʻQUV DASTURI
+I BOB. Ma’lumotlar tahliliga kirish va dasturlash asoslari
+
+Ma’lumotlar tahliliga kirish. Excel - Ma’lumotlar bilan ishlashning fundamental vositasi
+Ma’lumot tushunchasi va uning iqtisodiy ahamiyati. Data → Information → Knowledge → Wisdom (DIKW piramidasi). Business Intelligence (BI) nima? BI’s Big Four va qiymat taklifi. BI tizimining asosiy komponentlari. BI tizimlarining hayotiy sikli (BI Lifecycle). BI tizimlarining asosiy turlari. BI foydalanuvchi rollari va ularning funksiyalari. BI tizimlarining afzalliklari. BI tizimlarining amaliy qo’llanilishi. Ma’lumot tahlilining zamonaviy trendlari. Excel muhiti va asosiy vositalari.  Excel’da ma’lumot tahlilining amaliy qo’llanilishi. Ma’lumotlarni kiritish va formatlash.
+
+Excel: professional jadval tuzish, formatlash va ma’lumotlarni strukturalash 
+ Professional jadval tushunchasi. Ma’lumotlarni strukturalash tamoyillari (ustun nomlari, data types, normal shakl). Jadval arxitekturasi: header, data, summary bloklari. Excel Table funksiyasi va uning afzalliklari. Sort va Filter mexanizmlari. Conditional formatting va vizual ajratish. Freeze Panes va navigatsiya qulayliklari. Ma’lumotlarni professional ko’rinishda taqdim etish tamoyillari. Amaliy biznes dataset bilan ishlash.
+Excel formulalari 
+Formulalar va funksiyalar tushunchasi. Nisbiy va absolut katak manzillari. Asosiy funksiyalar: SUM, AVERAGE, COUNT, IF, COUNTIF, SUMIF. Mantiqiy operatorlar va shartli hisob-kitoblar. Qidiruv va bog’lash funksiyalari: XLOOKUP, INDEX-MATCH. Ko’p jadvalli ishlash tamoyillari. Formulalardagi xatolar va ularni aniqlash. Hisob-kitoblarni optimallashtirish va avtomatlashtirish.
+Ma’lumotlarni tozalash va transformatsiya qilish 
+Data cleaning tushunchasi va ma’lumot sifati. Dublikatlar va ularni aniqlash. Bo’sh qiymatlar bilan ishlash. Noto’g’ri formatlarni tuzatish. Text-to-Columns mexanizmi. Ustunlarni birlashtirish va ajratish. Kategoriyalash va kodlash. Ma’lumotlarni transformatsiya qilish tamoyillari. Tahlilga tayyor dataset yaratish.
+Pivot jadvallar va vizualizatsiya 
+Pivot jadval tushunchasi va uning analitik ahamiyati. Rows, Columns, Values va Filters maydonlari. Aggregatsiya funksiyalari (Sum, Count, Average). Guruhlash va segmentatsiya. Pivot chart yaratish. Vizual tahlil asoslari. Trend va taqqoslash tahlili. Analitik xulosa chiqarish. 
+II BOB. SQL va relatsion ma’lumotlar tahlili 
+Ma’lumotlar bazasi va relatsion model tushunchasi
+Ma’lumotlar bazasi tushunchasi va uning axborot tizimlaridagi o’rni. Relatsion model asoslari. Jadval (table), ustun (column), satr (row) tushunchalari. Primary Key va Foreign Key mohiyati. Jadvallar o’rtasidagi aloqalar (relationships). One-to-many va many-to-one bog’lanishlar. Relatsion sxema va uning tahlildagi ahamiyati. Ma’lumotlar bazasining BI jarayonidagi o’rni.
+SQL asoslari: SELECT, WHERE, ORDER BY
+SQL tilining vazifasi va qo’llanilish sohasi. SELECT operatori orqali ma’lumot tanlash. WHERE yordamida shartli filtrlash. Taqqoslash va mantiqiy operatorlar (AND, OR). ORDER BY yordamida tartiblash (ASC, DESC). Oddiy SQL so’rovlarini tuzish. Ma’lumotlarni analitik maqsadda ajratib olish.
+Aggregatsiya va GROUP BY
+Ma’lumotlarni hisoblash, guruhlash, toifalash, statistik ko’rinishda analiz qilish ko’nikmasi. Aggregatsiya funksiyalari – umumiy hisob va tahlil (SUM, AVG, MIN, MAX, COUNT). GROUP BY haqida asosiy tushuncha va bir nechta ustun bilan GROUP BY ishlatish. HAVING guruhlangan natija ko’rsatish. GROUP BY + ORDER BY. DISTINCT va COUNT DISTINCT. NULL qiymatlar aggregatsiyada ishlatilishi. PIVOT va UNPIVOT asoslari jadvalni kengaytirish yoki kichraytirish, “cross-tab” ko’rinish
+Shartli tahlil: CASE WHEN, segmentatsiya va klassifikatsiya
+CASE WHEN operatori orqali shartli hisoblashlar. Ma’lumotlarni kategoriyalash va segmentatsiya. Klassifikatsiya va biznes qoidalarini SQL’da ifodalash. Analitik ustunlar yaratish. Shartli mantiq asosida xulosa chiqarish.
+
+JOINlar: ko’p jadvalli tahlil va ma’lumotlarni birlashtirish
+INNER JOIN, LEFT JOIN tushunchalari. Primary va Foreign Key asosida jadval birlashtirish. Ko’p jadvalli so’rovlar tuzish. Ma’lumotlarni konsolidatsiya qilish. Birlashtirilgan dataset asosida kompleks tahlil. Jadval strukturasini to’g’ri loyihalash tushuntirish. Jadval aloqalari - 1-to-1 (One-to-One), 1-to-many (One-to-Many) many-to-many (Many-to-Many). junction/bridge table. Join turlari (asosiy va kengaytirilgan). INNER JOIN - faqat mos tushgan yozuvlar uchun. LEFT JOIN - chap jadvalning hammasi va mos tushganlar uchun. RIGHT JOIN - o’ng jadvalning hammasi + mos tushganlar uchun. FULL OUTER JOIN- ikkala tomondagi barcha yozuvlar uchun. CROSS JOIN (Cartesian join) - har bir yozuvni boshqasi bilan ko’paytirish uchun (m×n). Murakkab Join usullari. CROSS APPLY/OUTER APPLY	funksiya/ subquery natijasini har bir satrga qo’llash. Derived tables bilan join	FROM qismida vaqtinchalik subquery bilan join. Vaqtinchalik jadvallar bilan join	#temp_table, @table_variable bilan biriktirish. Join + subquery kombinatsiyalari	ON/WHERE ichida subquery ishlatish. ON qismida mantiqiy operatorlar (AND/OR)
+
+Murakkab SQL I: Subquery va CTE yordamida murakkab so’rovlar tuzish
+Subquery tushunchasi va turlari. Ichki so’rovlarni WHERE, FROM va SELECT ichida qo’llash. CTE (Common Table Expression) mohiyati va afzalliklari. Murakkab tahlilni bosqichma-bosqich tuzish. Virtual jadvallar bilan ishlash. Katta va murakkab so’rovlarni qismlarga bo’lish, Derived Tables (Hosil qilingan jadvallar) SELECT so’rovi ichida vaqtinchalik hosil qilinadigan jadvallar. CTE (Common Table Expression): Recursive CTE - O’zini takrorlaydigan CTE, Viewlar - Saqlanadigan SELECT so’rovi (virtual jadval). Mahalliy va global temp jadvallar: # TempTable, ##TempTable. Saqlangan protseduralar (Oldindan yozilgan va saqlangan SQL kod bloklari, parametr bilan yoki parametrisiz). Subquery (Ichki so’rovlar): Mustaqil (Independent / Non-correlated), Korrelatsiyalangan (Correlated), EXISTS va IN farqlari. Subquery va JOIN taqqoslanishi.
+
+Murakkab SQL II: Window functions, ranking va analitik hisoblashlar
+Window functions tushunchasi. PARTITION BY va ORDER BY mantiqi. Ranking funksiyalari (ROW_NUMBER, RANK, DENSE_RANK). Running total va trendga o’xshash hisoblashlar. Analitik hisobotlar yaratish. “Top N” va guruh ichidagi taqqoslash tahlili. Window Functions (Oynali funksiyalar) ning ahamiyati, OVER(), PARTITION BY, ORDER BY sintaksisi (PARTITION BY, ORDER BY, ROWS BETWEEN), Raqam va Rang funksiyalari (ROW_NUMBER(), RANK(), DENSE_RANK()), Qo’shni qatorlar bilan ishlash  LEAD(), LAG(), FIRST_VALUE(), LAST_VALUE(), NTH_VALUE(expr, n), Window aggregatsiyalari: Sintaksis, Funksiyalar SUM() OVER(...) - yig’indini hisoblash, AVG() OVER(...) - o’rtacha qiymat, MIN(), MAX() OVER(...) - minimal va maksimal qiymat, Frame tushunchasi PRECEDING - oynaning oldingi qatorlarini qamrab oladi, FOLLOWING - oynaning keyingi qatorlarini qamrab oladi, CURRENT ROW - hozirgi qator, Ko’p yillik yoki harakatlanuvchi oynali hisob-kitoblar
+
+
+II BOB. Python orqali ma’lumotlar tahlili
+ Ma’lumot tahlili uchun Python asoslari.
+Python - Asosiy tushunchalar: Oʻzgaruvchilar va Maʼlumot Turlari (Variables & Data Types), Amallar (Operators), Boshqaruv Tuzilmalari (Control Structures), Funksiyalar (Functions). Data Structures (Ma’lumotlar tuzilmalari): Lists (Ro’yxatlar), Tuples (Kuplelar), Dictionaries (Lug’atlar), Sets (To’plamlar), Functions (Funktsiyalar) - Parametrli funktsiyalar va Lambda (Anonim funktsiyalar). Ma’lumotlar tahlili uchun asosiy amaliyotlar: Matematik amallar, String operations, Loops and Conditions. Jupyter Notebook asoslari: Cells-kod yoki matn yozish. Markdown-izoh, sarlavha, formulalar yozish. Magic commands-%timeit kodni tezlik bilan o’lchash. Inline plots-Matplotlib bilan grafiklarni to’g’ridan-to’g’ri notebookda ko’rsatish. Python interpreteri va Jupyter Notebook.  Ma’lumotlar tahlil uchuh kutubxonalar turlari (NumPy, Pandas Matplotlib/Seaborn, SciPy, Statmodels/ Scikit-Learn)
+NumPy asoslari: Arraylar, vektorlashtirish va matematik amallar   
+Numpy haqida tushuncha. NumPy bilan ishlash, Array yaratish, Array xususiyatlari, Array operatsiyalari, Indexing & Slicing, Random numbers. Broadcasting va Vektorlashtirish (Vectorization)-NumPy arraylari ustida element-wise operatsiyalarni sikl ishlatmasdan bajarish, Sikl bilan solishtirish. Matematik amallar: Asosiy matematik funksiyalar, 2D arrayda operatsiyalar, Element-wise matematik funksiyalar, Random numbers (Tasodifiy sonlar). NumPy natijalarini Pandas yoki BI tizimlari bilan integratsiya. 
+ Pandas asoslari: Ma’lumot strukturalari (Series, DataFrame) 
+Pandas haqida tushuncha. Pandas Ma’lumot Strukturasi: Series, DataFrame. DataFrame yaratish. Ma’lumotni o’qish: CSV, Excel, JSON, SQL. Ma’lumotlarni tekshirish (Data Inspection). Ma’lumotlarni indekslash va tanlash (Indexing & Selecting Data: single column, multiple columns, rows by label, rows by position). Boolean filtering and sorting- shartli filtrlash va saralash. 
+Ma’lumotlarni tozalash va transformatsiya qilish. 
+Ma’lumotlarni Tozalash va Transformatsiya qilish. Bo’sh qiymatlar bilan ishlash (Handling Missing Values), Takroriy qatorlarni o’chirish (Removing Duplicates), Ma’lumot turini o’zgartirish (Data Type Conversions). Matn ustunlari bilan ishlash (String Operations), Ma’lumotlarni qayta shakllantirish (Reshaping): Pivot Table, Melt, Stack/Unstack. 
+Ma’lumotlarni birlashtirish va agregatsiya
+Ma’lumotlarni birlashtirish va agregatsiya (Python – Pandas)
+Bir nechta dataset bilan ishlash, ularni yagona strukturaga keltirish va umumiy ko’rsatkichlarni hisoblash jarayoni. Data integration va summary analytics asoslari. merge() funksiyasi orqali jadvallarni kalit ustunlar asosida birlashtirish (inner, left, right join). concat() yordamida datasetlarni qo’shish. groupby() mexanizmi orqali ma’lumotlarni guruhlash. Aggregatsiya funksiyalari: sum(), mean(), count(), min(), max(). Birlashtirilgan ma’lumotlar asosida segmentlar kesimida tahlil o’tkazish. Pivot table’ga o’xshash hisoblashlarni Python muhitida amalga oshirish. Analitik xulosa chiqarish va biznes ko’rsatkichlarni hisoblash.
+ Ma’lumotlarni qayta shakllantirish va vizuallashtirish 
+Ma’lumotlarni tahlil uchun qulay formatga keltirish (data reshaping) va natijalarni vizual ko’rinishda taqdim etish jarayoni. Wide va long format tushunchalari. pivot() va pivot_table() orqali jadvalni qayta tuzish, melt() yordamida ma’lumotlarni long formatga o’tkazish. Index va ustunlar bilan ishlash, qayta indekslash (reset/set index). Guruhlangan natijalarni pivot ko’rinishda chiqarish. Matplotlib/Seaborn yordamida asosiy vizualizatsiyalar: bar chart, line chart, histogram, scatter, boxplot. Grafik tanlash tamoyillari, trend va taqqoslashlarni vizual tahlil qilish. Vizual natijalar asosida xulosa chiqarish va analitik hisobot uchun grafiklarni tayyorlash.
+III BOB. Power BI asoslari va ma’lumotlar vizualizatsiyasi
+Business Intelligence tushunchasi va Power BI asoslari. 
+Business Intelligence (BI) tushunchasi va uning tashkilotlardagi ahamiyati. BI jarayoni: ma’lumotni yig’ish, qayta ishlash, tahlil qilish va qaror qabul qilish. BI tizimining asosiy komponentlari: ma’lumot manbalari, ETL jarayoni, ma’lumot modeli, analitik hisoblashlar va vizualizatsiya. BI tizimlarining afzalliklari va amaliy qo’llanilishi.
+Power BI platformasi va uning imkoniyatlari. Power BI ekotizimi (Desktop, Service, Mobile, Gateway). Power BI Desktop interfeysi (Home, Model, View, Report bo’limlari). Views (Report, Data, Model) vazifalari. Ma’lumot manbalariga ulanish (Excel, CSV, SQL, relatsion fayllar). Power BI’da ilk analitik loyiha yaratish va asosiy dashboard qurish.
+Ma’lumot manbalariga ulashish: Excel, CSV, SQL. Relatsion fayllar 
+Ma’lumot manbalari tushunchasi va ularning Business Intelligence jarayonidagi o’rni. Excel va CSV fayllarni import qilish asoslari. SQL server va ma’lumotlar bazasiga ulanish mexanizmi. Relatsion fayllar va jadval aloqalari (relationships) tushunchasi. Turli manbalardan olingan ma’lumotlarni yagona analitik muhitga yuklash. Bir nechta dataset bilan ishlash va ularni modelga tayyorlash jarayoni. 
+ Power Query: ma’lumotlarni professional tayyorlash (ETL)
+Power Query asoslari: oddiy transformatsiyalar, ma’lumot turlari, tozalash. Kengaytirilgan ma’lumot tayyorlash: merge, append, split, iflos ma’lumotlarni tozalash, ETL jarayoni va Power BI ichida ma’lumotni shakllantirish (tahlilga tayyorlash). Query Dependencies va ma’lumot oqimini boshqarish. Applied Steps bilan ishlash va transformatsiya ketma-ketligini tahlil qilish. Performance yaxshilash — query folding, keraksiz bosqichlarni kamaytirish. 
+Ma’lumot modellashtirish 
+Model yaratish, jadvallar o’rtasidagi bog’lanishlar, star va snowflake sxemalari. Ma’lumot modeli nima va uning ma’lumotlar tahlili tizimidagi roli.  Modeling Theory: Star schema, Snowflake schema, Normalization vs denormalization, Fact va Dimension jadvallar, Keys va relationships. Fact va Dimension jadval tushunchalari.  Building the Model: Bog’lanish (Relationship) turlari, Bog’lanishlar yaratish va kardinallik, Date Table va Calendar funksiyasi. Hierarchy va drill-down imkoniyatlari. Modelni optimallashtirish (performance tuning). Circular reference muammolarini oldini olish
+
+ Asosiy DAX funksiyalari bilan ishlash. 
+DAX (Data Analysis Expressions) tili haqida umumiy tushuncha. DAX nima va qayerda ishlatiladi. Calculated Columns vs Measures: asosiy farqlar. Row context va formula evaluation, Asosiy agregatsiya funksiyalari:SUM, AVERAGE, COUNT, DISTINCTCOUNT. Yangi measure yaratish (simple KPIs). DAX Context va Filter Logic. Row Context va Filter Context tushunchasi. Context transition (CALCULATE bilan). Filter logic qanday ishlaydi? CALCULATE funksiyasiga kirish. Simple calculated measures. Filtrlangan qiymatlarni hisoblash: CALCULATE + FILTER; ALL, ALLEXCEPT qo’llanishi. Time Intelligence asoslari.  Date Table, nisbiy vaqtlar, asosiy vaqt DAX funksiyalari. Date Table zarurati va xususiyatlari. Calendar va CalendarAuto funksiyalari. Relative time functions (Year-to-Date, Month-to-Date, Quarter-to-Date). Asosiy Time Intelligence funksiyalari (SAMEPERIODLASTYEAR, DATEADD, TOTALYTD / TOTALMTD, PREVIOUSMONTH / PREVIOUSYEAR). Trendlarni tahlil qilish uchun vaqt o’zgaruvchilari
+ Kengaytirilgan DAX funksiyalari va Analitik modellashtirish
+Kengaytirilgan DAX: CALCULATE + FILTER, murakkab kontekstni boshqarish. Virtual jadvallar va iteratorlar (SUMX, AVERAGEX, MINX, MAXX, FILTER va boshqalar). Murakkab KPIlar: running total, YTD, MTD, QTD, o’sish foizlari. Munosabatlar bilan ishlash: faol bo’lmagan (inactive) munosabatlar, USERELATIONSHIP, CROSSFILTER, many-to-many holatlar. DAXda vaqt qatorlari va trend tahlili: moving average, rolling periods, period-over-period solishtirish. Optimallashtirish: performance tuning, measure optimallashtirish, model hajmini kamaytirish, VertiPaq samaradorligi. 
+Vizualizatsiya  
+Ma’lumotlarni grafik va diagrammalar orqali taqdim etish asoslari. Asosiy grafik turlari (Bar, Line, Pie, Matrix, Table) va ularning qo’llanilish sohalari. Map va custom visuals imkoniyatlari. Grafik tanlash tamoyillari va vizual xatolardan qochish. Trend, taqqoslash va ulush tahlilini vizual shaklda ifodalash. Analitik xulosa chiqarish uchun vizual ma’lumotdan foydalanish.
+Dashboard dizayn tamoyillari
+Dashboard tuzilmasi va strukturasi. KPI va muhim ko’rsatkichlarni ustuvor joylashtirish. Ranglar va vizual urg’u berish qoidalari. Minimalizm va o’qilishi oson dizayn. Foydalanuvchi tajribasi (UX) asoslari. Professional va mantiqiy joylashtirilgan dashboard yaratish tamoyillari.
+Interaktivlik va ma’lumot bilan storytelling
+Interaktiv dashboard tushunchasi. Slicer, filter, drill-down va bookmark funksiyalari. Dinamik tahlil va foydalanuvchi bilan interaktiv ishlash. Ma’lumot asosida mantiqiy hikoya (data storytelling) yaratish. Insight va xulosalarni samarali taqdim etish. Qaror qabul qilish jarayonida analitik hisobotlardan foydalanish.
+ Power BI Service 
+Power BI Service. Onlayn platformaning vazifalari va arxitekturasi. Workspace’lar bilan ishlash: Personal, Shared va Premium Workspaces. Dataset, Report va Dashboardlar tuzilmasi. Ma’lumotlarni avtomatik yangilash: scheduled refresh va gateway sozlamalari. Ruxsatlar va xavfsizlik, foydalanuvchi rollari, share, app yaratish. Dashboardlarni ulashish va jamoaviy kollaboratsiya. Power BI App yaratish va tarqatish. Q&A funksiyasi orqali tabiiy til bilan so’rov berish. Alert va subscriptions orqali kuzatuv va ogohlantirish tizimi. Power BI Mobile uchun optimallashtirilgan ko’rinish. Power BI Service va Power BI Desktop o’rtasidagi farqlar.).
+
+IV BOB. Maʼlumotlardan Amaliyotga Kiritishgacha: Zamonaviy BI  tizimi
+Ma’lumotlar integratsiyasi: Python – SQL - Power BI 
+Ma’lumotlar integratsiyasi: SQL–Python–Power BI. SQL orqali ma’lumotlarni olish va tayyorlash, Python yordamida qo’shimcha tozalash, transformatsiya va tahlil qilish, Power BI’da yakuniy vizualizatsiya va dashboard yaratish jarayoni. SQL so’rovlar orqali ma’lumotlarni chiqarish va birlashtirish, Python’da ma’lumotlarni cleaning, reshaping, analytics amallaridan o’tkazish, Pandas DataFrame’larini Power BI uchun eksport qilish. Power BI’da SQL va Python natijalarini ulash, DirectQuery va import rejimlari, ETL jarayonining to’liq oqimi (Extract (SQL), Transform (Python), Load (Power BI)). Integratsiya orqali yakuniy KPIs, vizual hisobotlar va interaktiv dashboard yaratish imkoniyatlari.
+ Sun’iy intellekt yordamida tahlil 
+Sun’iy intellekt yordamida tahlil. AI va Machine Learning asosida ma’lumotlardan avtomatik xulosa chiqarish, prognozlash va naqshlarni aniqlash. Klassifikatsiya, regressiya, clustering kabi modellardan foydalanish. Python kutubxonalari (scikit-learn, TensorFlow, PyTorch) orqali modellash jarayoni. AI asosidagi feature engineering, model tanlash va baholash. BI tizimlarida AI qo’llanilishi. Power BI’dagi AI visuals, Smart Narrative, Key Influencers, AutoML funksiyalari. Natural Language Query yordamida tahlilni soddalashtirish. Real vaqtli tahlil va AI asosidagi avtoprognozlar. Sun’iy intellektning biznes qarorlarini qo’llab-quvvatlashdagi o’rni va AI etikasi.
+Mashinaviy o’qitish (Machine Learning) asoslari 
+ML tushunchasi va uning turlari: nazoratli (supervised), nazoratsiz (unsupervised) va mustahkamlovchi (reinforcement) o’qitish. Ma’lumotlarni tayyorlash, tozalash va xususiyatlar engineering jarayoni. Asosiy ML modellari: regressiya, klassifikatsiya, clustering. Modelni o’qitish, test qilish va baholash metrikalari (accuracy, precision, recall, RMSE). Overfitting va underfitting tushunchalari, modelni tartibga solish (regularization). Kross-valitatsiya yordamida barqaror model yaratish. Python kutubxonalari orqali ML amaliyoti — scikit-learn bilan modellash, bashorat yaratish va natijalarni tahlil qilish. MLning biznesdagi qo’llanilishi va real hayotdagi misollar.
+Ma’lumot etikasi va maxfiylik
+Data Ethics tushunchasi va axloqiy tamoyillar. Ma’lumotdan foydalanishda shaffoflik va rozilik. Shaxsiy ma’lumotlarni himoya qilish (Personal Data Protection). Global qonunlar: GDPR, CCPA, va O’zbekiston Respublikasining “Shaxsiy ma’lumotlar to’g’risida”gi qonuni. Kiberxavfsizlik asoslari: phishing, ransomware, unauthorized access. Etik AI (sun’iy intellekt qarorlarining adolatliligi). Data breach (ma’lumot oqishi) misollari: Facebook, Cambridge Analytica. Ma’lumotni saqlashda anonimlashtirish va shifrlash usullari.
+
+Ma’lumotlarni boshqarish (Data Governance)
+Data Governance tushunchasi va maqsadi. Ma’lumotlarni boshqarish siyosatining ahamiyati. Data Owner, Data Steward va Data User rollari. Ma’lumot sifatini nazorat qilish mezonlari (Accuracy, Consistency, Completeness, Timeliness). Data Standardization va Data Catalog tushunchalari. Metadata boshqaruvi (data tavsiflarini yuritish). Data Lineage (ma’lumot manbasini kuzatish). Tashkilotlarda Data Governance siyosatini joriy etish bosqichlari. Case Study: “Bankdagi ma’lumot sifatini yaxshilash tizimi”. Muhokama: BI loyihalarida Data Governance’ning roli.
+Nazorat ishi №4: Yakuniy BI tizimini ishlab chiqish va taqdim etish 
+Python → SQL → Power BI integratsiyasi asosida yakuniy tizim yaratish. ETL jarayonini amalda ko’rsatish (Extract, Transform, Load). Ma’lumot modellashtirish (Fact va Dimension jadvallari). DAX yordamida KPI va hisoblash formulalarini yaratish. Dashboard dizayni: rang, joylashuv, foydalanuvchi qulayligi. Power BI Service orqali loyihani nashr etish. Mobil BI versiyasini sinovdan o’tkazish. AI yordamida tahlil elementini qo’shish. Ma’lumot xavfsizligi va etik tamoyillarga rioya etish. Taqdimot va himoya: loyiha natijalarini sharhlash, savol-javob sessiyasi. Baholash mezonlari: aniqlik, funksionallik, vizual sifat, ijodkorlik.
+
+
+
+
+
+
+
+
+
+
+
+
+6. BI MA’LUMOTLAR TAHLILI YO’NALISHI BOʻYICHA OʻTILADIGAN DARS SOATLARI
+T/r
+Mavzular
+
+
+
+I-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta8-hafta9-hafta10-hafta11-hafta12-hafta1.Ma’lumotlar tahliliga kirish. Excel - Ma’lumotlar bilan ishlashning fundamental vositasi32.Excel: professional jadval tuzish, formatlash va ma’lumotlarni strukturalash 23.Excel formulalari114.Ma’lumotlarni tozalash 25.Pivot Jadvallar va Vizualizatsiya26Ma’lumotlar bazasi va relatsion model tushunchasi117SQL asoslari: SELECT, WHERE, ORDER BY218Aggregatsiya va GROUP BY219Shartli tahlil: CASE WHEN, segmentatsiya va klassifikatsiya2210JOINlar: ko’p jadvalli tahlil va ma’lumotlarni birlashtirish1311Murakkab SQL I: Subquery va CTE yordamida murakkab so’rovlar tuzish3112Murakkab SQL II: Window functions, ranking va analitik hisoblashlar23
+
+T/r
+Mavzular
+II-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta1.Ma’lumot tahlili uchun Python asoslari. 32.NumPy asoslari: Arraylar, vektorlashtirish va matematik amallar313.Pandas asoslari: Ma’lumot strukturalari (Series, DataFrame)224.Ma’lumotlarni tozalash va transformatsiya qilish. 125.Ma’lumotlarni birlashtirish va agregatsiya126.Ma’lumotlarni qayta shakllantirish va vizuallashtirish. 13
+T/r
+Mavzular
+III-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta8-hafta1.Business Intelligence tushunchasi va Power BI asoslari.22.Ma’lumot manbalariga ulashish: Excel, CSV, SQL. Relatsion fayllar113.Power Query: ma’lumotlarni professional tayyorlash (ETL)224.Ma’lumotlarni modellashtirish135.Asosiy DAX funksiyalari bilan ishlash326.Kengaytirilgan DAX funksiyalari 133
+
+T/r
+Mavzular
+IV-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta1.Vizualizatsiya22.Dashboard Dizayn tamoyillari113.Interaktivlik va ma’lumot bilan storytelling214.Power BI Service25.Ma’lumotlar integratsiyasi: SQL-Python-Power BI 26.Sun’iy intellekt yordamida tahlil117.Mashinaviy o’qitish haqida tushuncha28.Ma’lumot etikasi va maxfiylik29Ma’lumotlarni boshqarish (Data Governance)137. OʻQUV JARAYONINI TASHKIL ETISHDA OʻQITISH METODLARI, SHAKLLARI VA VOSITALARI
+Oʻqitish metodlari - ogʻzaki, koʻrgazmali, amaliy, muammoli-izlanish, mustaqil ishlash va shu kabilar.
+Oʻqitish shakllari
+
+Nazariy
+Amaliy
+Umumiy
+maʼruza;
+ekskursiya (sayohat);
+mustaqil ishlar;
+maslahat olish va shu kabilar.
+amaliy mashgʻulotlar;
+mustaqil uy ishi;
+didaktik, ishchan va rolli oʻyinlar;
+tajriba-konstruktorlik faoliyati, treninglar;
+sayohatlar, olimpiadalar va koʻrik-tanlovlar.
+ommaviy;
+jamoaviy;
+guruhli;
+kichik guruhli;
+juftli;
+yakka tartibda.
+Oʻqitish vositalari
+
+Oʻqitish vositalari
+(oddiy va murakkab)
+Oʻquv qurollari va koʻrgazmali qurollar
+darsliklar, oʻquv qoʻllanmalari;
+metodik qoʻllanmalar;
+maʼlumotnomalar;
+maxsus adabiyotlar;
+metodik tavsiyalar;
+ensiklopediyalar;
+jadval va plakat;
+mulyaj va modellar.
+Axborot materiallari va dasturiy taʼminot
+kompyuter;
+amaliy topshiriqlar;
+kasbiy koʻnikma va malakaviy dastur;
+testlar, nazorat topshiriqlari va boshqalar.
+
+
+
+8. BAHOLASH MEZONLARI
+	Oʻquvchilarning kasbga oid bilim, koʻnikma, malaka va kompetensiyalarini baholash va nazorat qilish maqsadida quyidagi nazorat turlari amalga oshiriladi:
+joriy nazorat - soʻrovlar, bajarilgan loyiha ishlarini izohlash tarzida oʻquvchilarning bilimlari, koʻnikma va malakalari muntazam nazorat qilinadi.
+oraliq nazorat - chorak tamom boʻlganda va oʻquv dasturining tegishli boʻlimi tugallangandan keyin oʻquvchilarning bilimlari, koʻnikma va malakalarini baholash uchun amalga oshiriladi. U amaliy, yozma nazorat ishi yoki testlar shaklida oʻtkaziladi. Ushbu nazoratda foydalaniladigan materiallar Android dasturlash kasbi boʻyicha kasbiy taʼlim ustasi tomonidan tayyorlanadi. Oraliq nazorat har chorak yakunida o’tkaziladi va nazorat ishlarining miqdori va mavzulari oʻquv dasturiga asoslangan rejada belgilanadi hamda muddati va shakli koʻrsatiladi.
+yakuniy nazorat - oʻquv yili tamom boʻlgandan keyin ogʻzaki va amaliy ish koʻrinishida imtihon shaklida amalga oshiriladi. Uning asosida reyting aniqlanadi va oʻquvchini navbatdagi sinfga oʻtkazish toʻgʻrisida qaror qabul qilinadi. Yakuniy nazorat materiallari kasbiy taʼlim ustasi tomonidan oʻquv dasturi asosida tayyorlanadi va ularni amaliy fanlar uslubiy birlashmasi muhokamasidan oʻtkaziladi. Umumiy oʻrta taʼlim muassasalari bitiruvchilari uchun choraklik baholar asosida yillik baho, shuningdek, yakuniy nazoratda olingan baho va yillik baho asosida yakuniy baho aniqlanadi.
+Kasbiy taʼlim yoʻnalishi boʻyicha yakuniy nazorat imtihonlarni oʻtkazish tartibi.
+Kasbiy taʼlim yoʻnalishi boʻyicha oʻquv reja va dasturning barcha talablarini toʻliq bajargan bitiruvchiga maktab direktorining buyrugʻiga asosan amaliy yakuniy nazoratni topshirishga ruxsat beriladi.
+Yakuniy nazorat oʻtkazish jadvali, u oʻtkaziladigan kunlar koʻrsatilgan holda, maktab direktori tomonidan tasdiqlanadi va yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin taʼlim muassasasining oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar xabardor etiladi.
+Yakuniy nazorat amaliy topshiriq shaklida oʻtkaziladi. Bunda yakuniy nazorat savollari orqali bitta amaliy topshiriq beriladi.
+Amaliy topshiriqlar oʻqitilgan mutaxassislik oʻquv dasturi asosida tuziladi va maktabning pedagogik kengashi tomonidan tasdiqlanadi hamda yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin barcha oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar eʼtiboriga yetkaziladi.
+Oʻquvchilar bilimi quyidagi mezonlar asosida baholanadi:
+Har bir oʻquvchining kasb boʻyicha oʻzlashtirish darajasi ball tizimi orqali ifodalanadi, ya’ni 100 ballik shkalaga o’tkaziladi.
+0-59 ball – 2 baho;
+60-70 ball – 3 baho;
+71-89 ball – 4 baho;
+90-100 ball – 5 baho.
+Oʻquvchilarning har bir nazorat turi boʻyicha bilimini baholash va koʻrsatkichini aniqlash ularning kasbni oʻquv dasturi mavzusi boʻyicha tasavvurga ega boʻlishi, mavzuning mohiyatini tushunib yetishi va aytib bera olishi, olgan bilimlarini amalda qoʻllay olishi, ijodiy fikrlay olishi va xulosa qabul qila olishi hamda mustaqil ishlarni bajarishi kabi mezonlarga qarab amalga oshiriladi.
+Jumladan:
+bitiruvchi mustaqil xulosa va qaror qabul qiladi, ijodiy fikrlay oladi, mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (mavzu) boʻyicha tasavvurga ega deb topilganda – 90-100 (aʼlo) ball;
+bitiruvchi mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb(mavzu) boʻyicha tasavvurga ega deb topilganda – 71-89 (yaxshi) ball;
+bitiruvchi olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (mavzu) boʻyicha tasavvurga ega deb topilganda – 60-70 (qoniqarli) ball;
+bitiruvchi kasb dasturini oʻzlashtirmagan, kasbning (mavzuning) mohiyatini tushunmaganda- 0-59 (qoniqarsiz) ball.
+Nazorat turlarini oʻtkazish boʻyicha tuzilgan topshiriqlarning mazmuni oʻquvchining oʻzlashtirishini xolis (obyektiv) va aniq baholash imkoniyatini berishi lozim.
+O’quvchilar bilimini baholash mezonlari
+Baholash usuli
+Topshiriq
+Baholash mezonlari
+Maksimal ball
+Baholash o’tkazish vaqti
+Joriy nazorat
+Bajarilgan loyiha ishini
+Bajarilgan loyiha BI tizimi talablariga javob berishi;
+Hisobotlar, dashboardlar va so’rovlar to’liq va xatosiz ishlashi;
+Foydalanuvchi kutilgan tahliliy natijalarni olishi;
+Interfeys qulay, tushunarli va estetik jihatdan yaxshi dizaynlashganligi;
+Vizualizatsiyalar va interaktiv elementlar mavjudligi; 
+Zamonaviy BI texnologiyalari va usullaridan foydalanilganligi;
+Loyihaning maqsadi, ishlash printsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi
+40 ball
+O’quv jarayoni davomiyligida o’tkaziladi
+Oraliq nazorat
+Yozma, topshiriqlar 
+Nazariy savollarga to’liq va aniq javob berilganligi;
+Javoblar faktlarga asoslanganligi va xato yo’qligi;
+Tushuntirish aniq va misollar bilan boyitilganligi;
+Matnda grammatik va imlo xatolarining kamligi;
+Ma’lumotlar tahlili va qaror qabul qilish jarayonlari tahlil qilinganligi
+20 ball
+Har chorak yakunida
+Amaliy topshiriqlar
+Belgilangan barcha funksiyalar to’liq ishlashi;
+Zarur BI vositalari va texnologiyalar to’g’ri ishlatilganligi;
+Hisobotlar va dashboardlarning barqarorligi va xatolar yo’qligi
+Test topshiriqlari
+Nazariy va amaliy savollarga to’g’ri javob berganligi
+Yakuniy nazorat
+Loyiha ishlarini yakuni bo’yicha
+Loyihaning belgilangan talablariga javob berishi;
+Dashboardlar, hisobotlar va tahlillar to’liq va xatosiz ishlashi;
+Foydalanuvchi kutilgan tahliliy natijalarni olishi;
+Interfeys qulay, tushunarli va estetik jihatdan yaxshi dizaynlashganligi;
+Vizualizatsiyalar va interaktiv elementlar mavjudligi;
+Zamonaviy BI texnologiyalari va metodlaridan foydalanilganligi;
+Loyihaning maqsadi, ishlash prinsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi
+40 ball
+O’quv yili oxirida, kurs yakunida
+Jami
+
+
+100 ball
+
+
+Oraliq nazoratda  topshiriq  turlaring nazorat jarayonida faqat bitta turidan foydalanish mumkin.
+9. BI MA’LUMOTLAR TAHLILI KASBI TAVSIFI
+9.1. Bitiruvchining kasbiy faoliyati sohalari
+Business Intelligence (BI) yo’nalishi bo’yicha kasb-hunarga tayyorlash kursini to’liq o’zlashtirgan bitiruvchi tashkilot va korxonalarda, ta’lim muassasalarida, xizmat ko’rsatish, savdo, moliya hamda IT sohalarida ma’lumotlarni tahlil qilish, ularni vizualizatsiya qilish va boshqaruv qarorlarini qo’llab-quvvatlash tizimlarini ishlab chiqish bo’yicha faoliyat yuritadi. Bitiruvchi BI mutaxassisi sifatida turli darajadagi boshqaruv organlariga ma’lumotli, tahliliy hisobotlar tayyorlash hamda biznes jarayonlarni optimallashtirishda ishtirok etadi. 
+9.2. Bitiruvchining kasbiga muvofiq kasbiy faoliyat obyektlari
+Analitik faoliyat - ma’lumotlarni yig’ish, tozalash, tahlil qilish va hisobotlar tayyorlash; KPI va dashboardlarni yaratish orqali qaror qabul qilishni qo’llab-quvvatlash.
+Texnologik faoliyat - SQL, Python, Power BI, Tableau, Apache Superset va bulutli platformalarda (Azure, AWS) ma’lumotlar bilan ishlash, ETL jarayonlarini amalga oshirish.
+Loyihaviy faoliyat - BI tizimlarini loyihalash, ma’lumot modellarini yaratish, analitik jarayonlarni avtomatlashtirish va integratsiya qilish.
+Boshqaruv faoliyati ma’lumotlarni boshqarish (Data Governance), sifat nazorati va xavfsizlik siyosatini amalga oshirish, tahliliy jamoa ishini muvofiqlashtirish.
+Tadqiqot va innovatsion faoliyat - sun’iy intellekt va mashinaviy o’qitish texnologiyalarini BI tizimlariga qo’llash, yangi analitik yechimlar ishlab chiqish.
+Konsultativ faoliyat - tashkilotlar uchun BI tizimlarini joriy etish bo’yicha maslahat berish, foydalanuvchilarni o’qitish va tahliliy natijalarni taqdim etish.
+Etik va huquqiy faoliyat - ma’lumotlar bilan ishlashda etik tamoyillar va qonuniy me’yorlarga rioya etish, ma’lumotlarning maxfiyligi va xavfsizligini ta’minlash.
+9.3. BI Ma’lumotlar tahlili kasbiy faoliyat turlari
+Bitiruvchi quyidagi turdagi kasbiy faoliyatlarni amalga oshiradi:
+ma’lumotlarni yig’ish, tozalash va tahlil qilish jarayonlarini tashkil etish;
+korxona yoki tashkilot uchun analitik hisobotlar tayyorlash va ularni taqdim etish;
+BI tizimini yaratish va uni texnik hamda amaliy jihatdan qo’llab-quvvatlash;
+ma’lumotlar asosida strategik qarorlar ishlab chiqish jarayonida ishtirok etish;
+texnika xavfsizligi, axborot xavfsizligi hamda ma’lumot maxfiyligini ta’minlash qoidalariga rioya etish.
+9.4. BI Ma’lumotlar tahlili mutaxassisining kasbiy lavozimlari
+Bitiruvchi quyidagi lavozimlarda faoliyat yuritishi mumkin:
+Business Intelligence (BI) analitigi
+Ma’lumotlar tahlilchisi (Data Analyst)
+Ma’lumotlar muhandisi (Data Engineer)
+BI dasturchisi (BI Developer)
+Ma’lumotlar vizualizatsiyasi mutaxassisi (Data Visualization Specialist)
+ETL (Extract, Transform, Load) mutaxassisi
+Sun’iy intellekt yordamida tahlilchi (AI Analyst)
+Mashinalar o’qitilishi yordamchisi (Machine Learning Assistant)
+Bulutli ma’lumotlar integratori (Cloud Data Integrator)
+Hisobot va analitik tizimlar bo’yicha konsultant
+9.5. BI Ma’lumotlar tahlili bo’yicha malaka oshirish imkoniyatlari
+Bitiruvchi BI, Data Science va AI yo’nalishlarida xalqaro sertifikatlash dasturlari, onlayn kurslar va amaliy loyihalar orqali o’z malakasini doimiy ravishda oshirishi mumkin.
+Professional sertifikatlash dasturlari:
+Microsoft Certified: Power BI Data Analyst, Azure Data Engineer
+Google: Data Analytics Professional Certificate
+IBM: Data Science and BI Foundations
+Tableau: Desktop Specialist / Certified Data Analyst
+AWS va Azure bo’yicha Cloud Data Integration sertifikatlari.
+Qo’shimcha dasturlash va tahlil ko’nikmalari:
+Python va R dasturlash tillarida chuqurlashgan analitika (NumPy, Pandas, Scikit-learn).
+SQL va Apache Spark’da katta ma’lumotlar bilan ishlash.
+Ma’lumotlar vizualizatsiyasi va Machine Learning asoslari.
+Akademik ta’lim va ilmiy yo’nalishlar:
+“Ma’lumotlar tahlili”, “Sun’iy intellekt”, “Big Data texnologiyalari”, “Biznes analitika” yo’nalishlarida bakalavr va magistratura bosqichida ta’limni davom ettirish.
+Xalqaro o’quv dasturlarida ishtirok etish (Coursera, edX, Udemy, DataCamp).
+ Kasbiy rivojlanish va amaliy tajriba:
+IT va biznes sohalarida amaliy BI loyihalarida qatnashish.
+Tahliliy markazlar, IT kompaniyalar va startaplarda stajirovka o’tash.
+Sun’iy intellekt va analitika bo’yicha xalqaro konferensiyalar, hackathon va seminarlar orqali tajriba almashish.
+10. KASBNING QOʻLLANISH SOHASI
+	Mazkur malaka talabi “BI (Ma’lumotlar tahlili)” kasbi boʻyicha umumiy oʻrta taʼlim muassasalarining 9-sinf oʻquvchilarini kasb-hunarga tayyorlash kurslari (keyingi oʻrinlarda - kasb-hunarga tayyorlash kurslari) boʻyicha ishchilarni tayyorlashning zaruriy bilimlar mazmunini va kasbiy tayyorgarlik darajasiga qoʻyiladigan talablarni shuningdek oʻquv yuklamalari hajmini va belgilangan talablarni bajarilishini nazoratini belgilaydi. 
+Malaka talablari kasbga oʻrgatish tayyorgarligi sifati va darajasini baholashda asosiy mezon hisoblanadi. Mazkur talablarning bajarilishi kasbga tayyorlash bitiruvchilariga kasbning tegishli darajasini olganligi toʻgʻrisida davlat namunasidagi sertifikat berilishi uchun asos hisoblanadi.
+Malaka talablari kasbga tayyorlash oʻquv jarayonini tashkil qilgan taʼlim tashkilotlari tomonidan tatbiq etilishi majburiydir.
+Mazkur talablarni bajargan umumiy oʻrta taʼlim tashkilotlarining 9-sinf oʻquvchilari Oʻzbekiston Respublikasi Milliy malakalar ramkasining 2-darajali sertifikatga ega boʻladi.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11. BI MA’LUMOTLAR TAHLILI KASBIGA O’QITISH NATIJALARI
+11.1. Birinchi chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko’nikma
+
+Ma’lumotlar tahliliga kirish va dasturlash asoslari
+  Ma’lumotlar tahliliga kirish. Excel - Ma’lumotlar bilan ishlashning fundamental vositasi
+Ma’lumot (Data) tushunchasi, uning iqtisodiy ahamiyati va DIKW piramidasi (Data → Information → Knowledge → Wisdom) bo’yicha asosiy bilimlarga ega bo’ladi.
+Business Intelligence (BI) — uning mazmuni, BI’s Big Four, qiymat taklifi, asosiy komponentlari, hayotiy sikli, turlari, foydalanuvchi rollari va afzalliklarini tushunadi.
+BI tizimlarining amaliy qo’llanilishi va ma’lumot tahlilining zamonaviy trendlari haqida tushunchaga ega bo’ladi.
+Ma’lumotlar tahlili tushunchasini anglaydi
+Ma’lumotlarning asosiy turlarini (sonli, matnli, sana) farqlay oladi
+Ma’lumotlar bilan ishlash bosqichlarini tushunadi
+Excel dasturining maqsadi va qo’llanilish sohasini biladi
+Excel interfeysi elementlari (sheet, cell, range, formula bar) bilan ishlay oladi
+Oddiy jadval tuza oladi
+Ma’lumotlarni to’g’ri kiritish va formatlashni amalga oshira oladi
+Qator va ustunlar bilan ishlay oladi
+Ma’lumotlarni saqlash va ochishni biladi
+Boshlang’ich darajadagi oddiy hisob-kitoblarni bajarishga tayyor bo’ladi
+
+Excel: professional jadval tuzish, formatlash va ma’lumotlarni strukturalash
+Professional jadval tuzish tamoyillarini tushunadi
+Ma’lumotlarni to’g’ri strukturalash (ustun nomlari, kategoriyalar, format) qoidalarini biladi
+Header, data va summary qismlarini ajrata oladi
+Excel formatlash vositalaridan (font, border, alignment, number format) foydalana oladi
+Jadvalni Table formatiga o’tkazishni biladi
+Ma’lumotlarni saralash (Sort) va filtrlash (Filter) funksiyalaridan foydalana oladi
+Freeze panes, column width, row height kabi sozlamalarni qo’llay oladi
+Ma’lumotlarni professional ko’rinishda taqdim eta oladi
+Tahlil uchun tayyor, tartibli va strukturalangan dataset yaratish ko’nikmasiga ega bo’ladi
+
+Excel formulalari
+
+•  Excel formulalari va funksiyalari tushunchasini anglaydi
+•  Asosiy funksiyalarni qo’llay oladi:
+SUM
+AVERAGE
+COUNT
+IF
+COUNTIF
+SUMIF
+•  Shartli hisob-kitoblarni bajarishni biladi
+•  Ma’lumotlarni qidirish va bog’lash funksiyalaridan foydalana oladi:
+XLOOKUP
+INDEX-MATCH
+•  Ko’p jadvalli ma’lumotlar bilan ishlay oladi
+•  Formulalarda absolut va nisbiy katak manzillaridan foydalana oladi
+•  Tahlil uchun kerakli hisob-kitoblarni mustaqil yaratish ko’nikmasiga ega bo’ladi
+•  Hisoblash natijalarini tekshirish va xatolarni aniqlashni biladi
+
+Ma’lumotlarni tozalash
+Ma’lumotlarni tozalash (data cleaning) tushunchasi va ahamiyatini anglaydi
+Dublikat yozuvlarni aniqlash va o’chirishni biladi
+Bo’sh qiymatlar bilan ishlay oladi
+Noto’g’ri formatlarni aniqlash va tuzatishni biladi
+Text-to-columns funksiyasidan foydalana oladi
+Ma’lumotlarni transformatsiya qilish (formatni o’zgartirish) ko’nikmasiga ega bo’ladi
+Ma’lumotlarni kategoriyalashni amalga oshira oladi
+Ustunlarni birlashtirish va ajratish amallarini bajaradi
+Tahlil uchun toza va strukturali dataset tayyorlay oladi
+Ma’lumot sifati (data quality)ning tahlil natijasiga ta’sirini tushunadi
+
+Pivot Jadvallar va Vizualizatsiya
+Pivot jadval tushunchasi va uning tahlildagi ahamiyatini anglaydi
+Pivot jadval yaratish va ma’lumotlarni guruhlashni biladi
+Ma’lumotlarni satr (rows), ustun (columns) va qiymat (values) maydonlariga joylashtira oladi
+Agregatsiya amallarini qo’llay oladi (Sum, Count, Average va boshqalar)
+Pivot jadval yordamida tezkor tahlil o’tkaza oladi
+Filtrlash va slicerlar orqali ma’lumotlarni boshqara oladi
+Pivot chart (grafik) yaratishni biladi
+Asosiy grafik turlarini (bar, line, pie) qo’llay oladi
+Grafik asosida xulosa chiqarish ko’nikmasiga ega bo’ladi
+Tahlil natijalarini vizual shaklda taqdim eta oladi
+
+Ma’lumotlar bazasi va relatsion model tushunchasi
+Ma’lumotlar bazasi (Database) tushunchasini anglaydi
+Ma’lumotlar bazasining afzalliklarini (tartib, xavfsizlik, tezkor qidiruv) tushunadi
+Jadval (table), ustun (column) va satr (row) tushunchalarini farqlay oladi
+Birlamchi kalit (Primary Key) va tashqi kalit (Foreign Key) tushunchalarini biladi
+Relatsion model mohiyatini tushunadi
+Jadvallar o’rtasidagi aloqalarni (relationships) anglaydi
+One-to-many munosabatni tushuntira oladi
+Ma’lumotlarni relatsion ko’rinishda tasavvur qila oladi
+Oddiy relatsion sxema chizish ko’nikmasiga ega bo’ladi
+Ma’lumotlar bazasining tahlil jarayonidagi o’rnini tushunadi
+
+
+SQL asoslari – SELECT, WHERE, ORDER BY
+SQL tilining maqsadi va qo’llanilish sohasini tushunadi
+SELECT operatori yordamida jadvaldan ma’lumot tanlashni biladi
+Kerakli ustunlarni ajratib olish ko’nikmasiga ega bo’ladi
+WHERE operatori yordamida ma’lumotlarni shart asosida filtrlashni biladi
+Taqqoslash operatorlari (=, >, <, >=, <=, <>)dan foydalana oladi
+AND, OR mantiqiy operatorlarini qo’llay oladi
+ORDER BY operatori yordamida natijalarni tartiblashni biladi
+ASC va DESC tartiblash usullarini qo’llay oladi
+Oddiy SQL so’rovlarini mustaqil yozish ko’nikmasiga ega bo’ladi
+SQL yordamida ma’lumotlarni tahlil qilishning boshlang’ich bosqichini amalga oshira oladi
+
+Aggregatsiya va GROUP BY
+Aggregatsiya tushunchasini va uning tahlildagi ahamiyatini anglaydi
+Asosiy agregatsiya funksiyalarini biladi:
+COUNT
+SUM
+AVG
+MIN
+MAX
+GROUP BY operatori yordamida ma’lumotlarni guruhlashni biladi
+Guruhlangan ma’lumotlar asosida umumiy ko’rsatkichlarni hisoblay oladi
+WHERE va GROUP BY operatorlarini birgalikda qo’llay oladi
+HAVING operatori yordamida guruhlangan natijalarni filtrlashni biladi
+Guruhlash orqali statistik xulosalar chiqarish ko’nikmasiga ega bo’ladi
+Ma’lumotlarni segmentlarga ajratib tahlil qilishni amalga oshira oladi
+Oddiy hisobot ko’rinishidagi SQL so’rovlarini yozish ko’nikmasini shakllantiradi
+ 
+
+Shartli tahlil – CASE WHEN, segmentatsiya va klassifikatsiya
+Shartli tahlil tushunchasini anglaydi
+CASE WHEN operatorining vazifasini tushunadi
+Shart asosida yangi ustun (calculated field) yaratishni biladi
+Ma’lumotlarni kategoriyalarga ajratish (segmentatsiya) ko’nikmasiga ega bo’ladi
+Qiymatlar asosida klassifikatsiya qilishni amalga oshira oladi
+Bir nechta shartli operatorlardan (AND, OR) foydalanishni biladi
+Biznes qoidalarini SQL orqali ifodalash ko’nikmasini shakllantiradi
+Ma’lumotlarni guruhlar bo’yicha tahlil qilishni amalga oshira oladi
+Segmentlar asosida xulosa chiqarish ko’nikmasiga ega bo’ladi
+Analitik fikrlash va shartli mantiqni SQL orqali qo’llay oladi
+
+
+JOINlar – ko’p jadvalli tahlil va ma’lumotlarni birlashtirish
+JOIN tushunchasini va nima uchun kerakligini anglaydi
+Bir nechta jadvaldan ma’lumotlarni birlashtirib tahlil qilishni biladi
+Jadval aloqalarini (Primary Key / Foreign Key) asosida JOIN qurishni biladi
+Asosiy JOIN turlarini qo’llay oladi: INNER JOIN, LEFT JOIN (basic), (zarur bo’lsa) RIGHT JOIN
+JOIN natijasida takrorlanish (duplicate rows) paydo bo’lishi mumkinligini tushunadi
+Birlashtirilgan ma’lumotlar asosida SELECT + WHERE + ORDER BY + GROUP BY ishlata oladi
+Ko’p jadvalli so’rovlar yordamida amaliy tahlil topshiriqlarini bajara oladi
+
+Murakkab SQL I – Subquery va CTE yordamida murakkab so’rovlar tuzish
+Subquery (ichki so’rov) tushunchasini anglaydi
+Subquery’ni WHERE, FROM yoki SELECT ichida qo’llashni biladi (basic)
+CTE (Common Table Expression) tushunchasini va afzalliklarini tushunadi
+Murakkab so’rovni bosqichma-bosqich tuzish ko’nikmasiga ega bo’ladi
+Natijani qayta ishlash va oraliq natijalarni ajratib olishni biladi
+So’rovni o’qilishi oson va tartibli yozishni o’rganadi
+CTE orqali analiz uchun qulay “virtual jadval” yaratishni bajara oladi
+
+Murakkab SQL II – Window functions, ranking va analitik hisoblashlar
+Window function (oyna funksiyalari) tushunchasini anglaydi
+PARTITION BY va ORDER BY mantiqini tushunadi
+Ranking funksiyalarini qo’llay oladi: ROW_NUMBER, RANK, DENSE_RANK
+Guruh ichida tartiblash va reyting chiqarishni bajara oladi
+Running total (yig’ma summa) va moving analysis (soddalashtirilgan) tushunchasini biladi
+Analitik hisoblashlarni (guruhlar kesimida taqqoslash) amalga oshira oladi
+Ma’lumotlar bo’yicha “top N” tahlil va trendga o’xshash analizlarni bajara oladi
+
+11.2. Ikkinchi chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko’nikma
+
+III BOB. Python orqali ma’lumotlar tahlili
+Ma’lumot tahlili uchun Python asoslari
+Python nima ekanini, uning ishlash prinsiplari va asosiy imkoniyatlarini tushuntirib bera oladi.
+O’zgaruvchilar va ma’lumot turlari (variables & data types) bilan ishlay oladi hamda ular ustida amallar bajaradi.
+Asosiy operatorlar, boshqaruv tuzilmalari (if-else, for, while) va funksiyalarni (def, parametrli, lambda) qo’llay oladi.
+Python’dagi asosiy ma’lumotlar tuzilmalari list, tuple, dictionary, set  bilan ishlash ko’nikmasiga ega bo’ladi.
+Ma’lumotlar tahlili uchun zarur amallarni bajara oladi: matematik hisoblar, string manipulyatsiyalari, shartlar va takrorlash operatorlari.
+Jupyter Notebook muhiti bilan ishlay oladi: kod va matn yozish, markdown qo’llash, formulalar kiritish, magic commands (%timeit) ishlatish.
+Matplotlib yordamida grafiklarni to’g’ridan-to’g’ri Notebookda (inline plots) chiqarishni biladi.
+Python interpreteri va Jupyter Notebook o’rtasidagi farqni tushunadi va ular bilan mustaqil ishlay oladi.
+Ma’lumot tahlili uchun asosiy kutubxonalar NumPy, Pandas, Matplotlib/Seaborn, SciPy, Statsmodels/Scikit-Learnning vazifalari va qo’llash sohalarini tushunadi.
+
+NumPy asoslari: Arraylar, vektorlashtirish va matematik amallar   
+NumPy kutubxonasi haqida umumiy tushunchaga ega bo’ladi va uning ma’lumot tahlilidagi ahamiyatini tushuntira oladi.
+NumPy yordamida array (massiv)lar yaratish, ularning asosiy xususiyatlari va tuzilishini tahlil qila oladi.
+Arraylar ustida element-wise operatsiyalarni bajarish, indexing va slicing usullari orqali ma’lumotlarni tanlab olishni biladi.
+Random modulidan foydalanib tasodifiy sonlar generatsiya qilish ko’nikmasiga ega bo’ladi.
+Broadcasting mexanizmini tushunadi va sikl ishlatmasdan vektorlashtirilgan (vectorized) operatsiyalarni bajaradi.
+Asosiy matematik funksiyalarni qo’llab, 1D va 2D arraylarda amallar bajaradi.
+NumPy natijalarini Pandas DataFrame’lariga yoki BI tizimlariga integratsiya qila oladi.
+
+ Pandas asoslari: Ma’lumot strukturalari (Series, DataFrame)
+Pandas haqida umumiy tushunchaga ega bo’ladi va uning ma’lumot tahlilidagi o’rnini tushunadi.
+Pandas’ning asosiy ma’lumot strukturasi Series va DataFrame bilan ishlay oladi.
+DataFrame yaratishning turli usullarini (dictionary, list, NumPy array, external files) qo’llay oladi.
+Turli manbalardan ma’lumot yuklashni biladi: CSV, Excel, JSON, SQL.
+Ma’lumotlarni tekshirish (data inspection) amallarini bajaradi: .head(), .info(), .describe().
+Ma’lumotlarni tanlash va indekslash bo’yicha ko’nikmaga ega bo’ladi:
+bitta ustun, bir nechta ustunlarni tanlash
+.loc orqali label bo’yicha qator tanlash
+.iloc orqali pozitsiya bo’yicha tanlash
+Boolean filtering yordamida shart asosida ma’lumotlarni filtrlashni biladi.
+sort_values() yordamida ma’lumotlarni saralashni bajaradi.
+
+Ma’lumotlarni tozalash va transformatsiya qilish. 
+Bo’sh qiymatlar bilan ishlashni biladi: ularni to’ldirish, o’chirish yoki mos strategiya bilan almashtirish.
+Takroriy qatorlarni aniqlaydi va remove duplicates yordamida tozalaydi.
+Ustunlarning ma’lumot turini (data type) to’g’ri konvertatsiya qila oladi.
+Matn ustunlari bilan ishlashni biladi: tozalash, bo’lish, birlashtirish, almashtirish.
+Ma’lumotlarni turli manbalardan birlashtiradi: merging, joining va concatenation amallarini bajaradi.
+Ma’lumotlar shaklini o’zgartiradi: pivot table, melt, stack/unstack bilan qayta tuzadi.
+
+Ma’lumotlarni birlashtirish va agregatsiya
+Bir nechta dataset bilan ishlash zaruratini tushunadi
+Pandas kutubxonasida merge() funksiyasi yordamida jadvallarni birlashtirishni biladi
+Inner, left, right join tushunchalarini anglaydi
+Ustun (key) orqali jadvallarni bog’lashni amalga oshira oladi
+•  concat() funksiyasi yordamida ma’lumotlarni qo’shishni biladi
+•  groupby() funksiyasi yordamida ma’lumotlarni guruhlashni biladi
+Agregatsiya amallarini qo’llay oladi:
+sum()
+mean()
+count()
+min()
+max()
+Guruhlangan ma’lumotlar asosida statistik xulosa chiqarishni biladi
+Ko’p jadvalli tahlilni Python muhitida amalga oshira oladi
+Analitik fikrlash asosida agregatsiya natijalarini talqin qila oladi
+
+Ma’lumotlarni qayta shakllantirish va vizuallashtirish
+Ma’lumotlarni qayta shakllantirish (data reshaping) tushunchasini anglaydi
+pivot() va pivot_table() funksiyalaridan foydalana oladi
+melt() yordamida ma’lumotlarni “long format”ga o’tkazishni biladi
+Index va ustunlar bilan ishlash ko’nikmasiga ega bo’ladi
+Ma’lumotlarni tahlil uchun qulay ko’rinishga keltira oladi
+Matplotlib yordamida asosiy grafiklar chiza oladi:
+Bar chart
+Line chart
+Histogram
+Seaborn yordamida vizual tahlilni amalga oshira oladi
+Grafik asosida trend va taqqoslashlarni tahlil qila oladi
+Vizual natijalar asosida xulosa chiqarish ko’nikmasini shakllantiradi
+Python muhitida analitik hisobot tayyorlashni amalga oshira oladi
+
+
+
+11.3. Uchinchi chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko’nikma
+
+IV BOB. Power BI va vizuallashtirish
+Business Intelligence tushunchasi va Power BI asoslari
+Business Intelligence (BI) tizimi, uning maqsadi, imkoniyatlari va afzalliklari haqida umumiy tushuncha hosil qiladi.
+BI jarayonining bosqichlarini (ma’lumotni yuklash → transformatsiya qilish → model yaratish → tahlil va vizualizatsiya → qaror qabul qilish) tushunadi.
+Power BI ekotizimi va uning tarkibiy qismlari (Desktop, Service, Mobile, Gateway) o’rtasidagi farqlarni anglaydi.
+Power BI Desktop interfeysi (Home, Model, View, Report bo’limlari) bilan mustaqil ishlay oladi.
+Report, Data va Model view bo’limlarining vazifalarini tushunadi va to’g’ri qo’llay oladi.
+Power BI’ning ish falsafasini — ma’lumotga asoslangan analitik fikrlashni anglaydi.
+Turli ma’lumot manbalariga ulanishni biladi (Excel, CSV, SQL va boshqa relatsion fayllar).
+Power BI Desktopda oddiy analitik loyiha yaratish, ma’lumotni yuklash va asosiy vizualizatsiyalarni qurish ko’nikmasiga ega bo’ladi.
+Dashboard va hisobot tushunchalarini farqlay oladi hamda ularni amaliy qo’llay oladi.
+
+Ma’lumot manbalariga ulanish – Excel, CSV, SQL, relatsion fayllar
+Ma’lumot manbalari tushunchasi va ularning tahlil jarayonidagi ahamiyatini anglaydi.
+Turli formatdagi ma’lumot manbalarini farqlay oladi (Excel, CSV, ma’lumotlar bazasi, relatsion fayllar).
+Excel va CSV fayllarni Power BI muhitiga import qilish ko’nikmasiga ega bo’ladi.
+SQL serverga ulanish asoslarini tushunadi va oddiy ma’lumot bazasidan ma’lumot yuklay oladi.
+Relatsion fayllar va jadvallar o’rtasidagi aloqalar (relationships) tushunchasini anglaydi.
+Bir nechta manbadan olingan ma’lumotlarni yagona tahlil muhitiga yuklashni amalga oshira oladi.
+Ma’lumotlarni yuklash jarayonida xatolarni aniqlash va tuzatish ko’nikmasiga ega bo’ladi.
+Tahlil jarayonining boshlang’ich bosqichi sifatida ma’lumotni to’g’ri tanlash va ulashish muhimligini tushunadi.
+
+Power Query: ma’lumotlarni professional tayyorlash (ETL)
+Power Query interfeysi va uning BI jarayonidagi o’rnini tushunadi.
+Ma’lumot turlari (data types) bilan to’g’ri ishlay oladi va ustunlarni boshqara oladi (qo’shish, o’chirish, qayta nomlash).
+Ma’lumotlarni filtrlash, saralash va tozalash amallarini mustaqil bajaradi.
+Noto’g’ri, bo’sh yoki ortiqcha ma’lumotlarni aniqlash va tuzatish ko’nikmasiga ega bo’ladi.
+Merge (jadval birlashtirish) va Append (jadval qo’shish) amallarini amaliy qo’llay oladi.
+Bir nechta manbadan olingan ma’lumotlarni yagona strukturaga keltira oladi.
+ETL (Extract, Transform, Load) jarayonining mohiyatini va bosqichlarini anglaydi.
+Data shaping orqali tahlilga tayyor, toza va strukturali dataset yaratadi.
+Ma’lumotlarni modelga yuklashdan oldingi tayyorgarlik bosqichini to’g’ri amalga oshira oladi.
+
+Ma’lumotlarni modellashtirish
+Data model tushunchasini va uning Business Intelligence jarayonidagi ahamiyatini anglaydi.
+Jadval va ular o’rtasidagi aloqalar (relationships) mohiyatini tushunadi.
+Relationship yaratish va sozlash ko’nikmasiga ega bo’ladi.
+Cardinality tushunchasini (one-to-many, many-to-one) farqlay oladi va to’g’ri qo’llay oladi.
+Jadval aloqalarining tahlil natijasiga ta’sirini tushunadi.
+Star schema modelining asosiy tuzilishini anglaydi.
+Fact va Dimension jadvallarni farqlay oladi hamda ularning vazifasini tushunadi.
+Tahlil uchun optimallashtirilgan va mantiqan to’g’ri tuzilgan data model yaratish zarurligini anglaydi.
+Power BI muhitida model asosida samarali tahlil va hisob-kitoblarni amalga oshira oladi.
+
+Asosiy DAX funksiyalari bilan ishlash
+DAX (Data Analysis Expressions) tilining maqsadi va BI jarayonidagi o’rnini tushunadi.
+Calculated column va Measure o’rtasidagi farqni anglaydi va ularni to’g’ri qo’llay oladi.
+Asosiy DAX funksiyalarini amaliy qo’llay oladi: SUM, COUNT, AVERAGE.
+Filter context tushunchasini va uning hisob-kitoblarga ta’sirini anglaydi.
+Oddiy KPI (asosiy samaradorlik ko’rsatkichlari) measure’larini yaratish ko’nikmasiga ega bo’ladi.
+Sana jadvali (Date table) tushunchasini va uning vaqtga bog’liq tahlildagi ahamiyatini tushunadi.
+Data model asosida to’g’ri va samarali hisob-kitoblar yaratishni o’rganadi.
+Dashboardlarda dinamik va interaktiv hisoblashlarni amalga oshira oladi.
+DAX orqali ma’lumotlarni analitik darajada tahlil qilish ko’nikmasini shakllantiradi.
+
+Kengaytirilgan DAX funksiyalari
+CALCULATE funksiyasining mohiyatini va uning filter kontekstini o’zgartirishdagi rolini anglaydi.
+FILTER funksiyasi yordamida murakkab shartli hisob-kitoblarni amalga oshira oladi.
+Iterator funksiyalarini (SUMX, AVERAGEX) tushunadi va amaliy qo’llay oladi.
+Running total (yig’ma summa) va Growth % ko’rsatkichlarini hisoblash ko’nikmasiga ega bo’ladi.
+YTD, MTD, QTD kabi vaqtga bog’liq analitik hisob-kitoblarni bajara oladi.
+USERELATIONSHIP va CROSSFILTER funksiyalari yordamida jadval aloqalarini boshqarishni biladi.
+Murakkab DAX formulalarini model strukturasiga mos ravishda tuza oladi.
+Model optimizatsiyasi asoslarini tushunadi va samarali hisob-kitob yaratish zarurligini anglaydi.
+Dashboardlarda dinamik, professional va analitik darajadagi KPI va metrikalarni ishlab chiqara oladi.
+Katta hajmdagi ma’lumotlar bilan ishlashda DAX samaradorligini baholay oladi.
+
+Vizualizatsiya
+Ma’lumotlarni vizual ko’rinishda taqdim etishning ahamiyatini tushunadi.
+Asosiy grafik turlarini (Bar, Line, Pie) maqsadga mos ravishda tanlay va qo’llay oladi.
+Matrix va Table vizuallari orqali tuzilmaviy tahlilni amalga oshira oladi.
+Map va custom visuals imkoniyatlaridan samarali foydalana oladi.
+Grafik tanlash tamoyillarini (aniqlik, soddalik, maqsadga moslik) anglaydi.
+Trend, taqqoslash va ulush tahlilini vizual shaklda ifodalay oladi.
+Vizual xatolarni aniqlay oladi va ularni oldini olish ko’nikmasiga ega bo’ladi.
+Vizual natijalar asosida analitik xulosa chiqarish ko’nikmasini shakllantiradi.
+
+A Dashboard dizayn tamoyillari
+Dashboard tuzilmasi va strukturaviy joylashtirish tamoyillarini tushunadi.
+KPI va muhim ko’rsatkichlarni ustuvor tartibda joylashtira oladi.
+Ranglardan samarali va professional foydalanish qoidalarini anglaydi.
+Vizual balans va minimalizm tamoyillarini qo’llay oladi.
+UX (foydalanuvchi tajribasi) asoslarini tushunadi.
+Foydalanuvchi e’tiborini boshqarish (vizual urg’u berish) ko’nikmasiga ega bo’ladi.
+Yaxshi va yomon dashboard misollarini tahlil qila oladi.
+Professional va o’qilishi oson dashboard yaratish ko’nikmasini shakllantiradi.
+
+Interaktivlik va ma’lumot bilan storytelling
+Interaktiv dashboard tushunchasini va uning afzalliklarini anglaydi.
+Slicer, Drill-down, Drill-through va Bookmark funksiyalarini qo’llay oladi.
+Filtrlar yordamida dinamik tahlilni amalga oshira oladi.
+Ma’lumot asosida mantiqiy hikoya (data storytelling) tuza oladi.
+Insight va xulosalarni vizual tarzda taqdim etish ko’nikmasiga ega bo’ladi.
+Dashboard orqali qaror qabul qilish jarayonini tushunadi.
+Foydalanuvchi bilan interaktiv muloqot qiluvchi analitik hisobot yaratadi.
+
+Power BI Service
+Power BI Service onlayn platformasining vazifalari, arxitekturasi va Power BI Desktop bilan farqlarini tushunadi.
+Dataset, Report va Dashboard tuzilmasi hamda ularning o’zaro bog’liqligini anglaydi.
+Hisobotlarni Power BI Service’ga publish qilish va ularni boshqarish ko’nikmasiga ega bo’ladi.
+Workspace turlari (Personal, Shared, Premium) bilan ishlay oladi hamda rollar va cheklovlarni farqlay oladi.
+Jamoaviy ishlash (collaboration) jarayonini tashkil eta oladi va workspace boshqaruvini amalga oshira oladi.
+Kontentni ulashish, foydalanuvchi rollarini sozlash va ruxsatlarni boshqarish ko’nikmasiga ega bo’ladi.
+Power BI Apps yaratish, ularni foydalanuvchilarga tarqatish va boshqarishni biladi.
+Scheduled refresh va gateway sozlamalari orqali ma’lumotlarni avtomatik yangilashni yo’lga qo’ya oladi.
+Q&A funksiyasi yordamida tabiiy til orqali ma’lumot so’rashdan samarali foydalanadi.
+Alert va subscription sozlamalari orqali monitoring va avtomatik ogohlantirish tizimini ishga tushira oladi.
+Dashboardlarni Power BI Mobile uchun optimallashtirish va moslashtirilgan ko’rinish yaratish ko’nikmasiga ega bo’ladi.
+Xavfsizlik, ruxsatlar va best practices tamoyillarini amaliy qo’llay oladi.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11.4. To’rtinchi chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko’nikma
+
+Maʼlumotlardan Amaliyotga Kiritishgacha: Zamonaviy BI  tizimi
+Ma’lumotlar integratsiyasi: Python – SQL – Power BI
+SQL orqali ma’lumotlarni olish, filtrlash, birlashtirish va tahlilga tayyorlashni amalga oshira oladi.
+Python yordamida ma’lumotlarni tozalash (cleaning), qayta shakllantirish (reshaping) va tahlil (analytics) jarayonlarini bajaradi.
+Pandas DataFrame’larini Power BI uchun eksport qilish va ulardan samarali foydalanishni biladi.
+Power BI’da SQL va Python natijalarini ulash, DirectQuery va Import rejimlari bilan ishlay oladi.
+ETL jarayonining to’liq oqimini (Extract — SQL, Transform — Python, Load — Power BI) tushunadi va amalda qo’llay oladi.
+Yakuniy KPIlar, vizual hisobotlar va interaktiv dashboardlar yaratish ko’nikmalariga ega bo’ladi.
+Turli platformalar (SQL → Python → Power BI) o’rtasida ma’lumotlarni uzviy integratsiya qilish jarayonini boshqara oladi.+++++
+Integratsiyalangan ma’lumotlardan biznes qarorlarini qo’llab-quvvatlovchi analitik natijalar yaratishni biladi..
+
+Sun’iy intellekt yordamida tahlil
+Sun’iy intellekt (AI) va Machine Learning tushunchalarini hamda ular ma’lumotlardan avtomatik xulosa chiqarish, prognozlash va naqshlarni aniqlashda qanday ishlatilishini tushunadi.
+Klassifikatsiya, regressiya va clustering kabi asosiy ML modellari bilan ishlash tamoyillarini biladi va ularni real ma’lumotlarga qo’llay oladi.
+Python kutubxonalari (scikit-learn, TensorFlow, PyTorch) yordamida modellash jarayonini bajaradi: model yaratish, o’qitish, tekshirish va natijani tahlil qilish.
+Feature engineering, model tanlash va baholash kabi AI jarayonlarining asosiy bosqichlarini qo’llay oladi.
+BI tizimlarida AI funksiyalaridan foydalanadi: Power BI’dagi AI visuals, Smart Narrative, Key Influencers, AutoML imkoniyatlarini qo’llay oladi.
+Natural Language Query orqali tahlilni soddalashtirishni hamda foydalanuvchi uchun tezkor analitik javoblar yaratishni biladi.
+Real vaqtli (Real-time) tahlil va AI asosidagi avtoprognozlar (forecasting) bilan ishlay oladi.
+Sun’iy intellektning biznes qarorlarini qo’llab-quvvatlashdagi o’rnini tushunadi va AI etikasi tamoyillariga amal qiladi.
+
+Mashinaviy o’qitish (Machine Learning) asoslari
+Machine Learning (ML) tushunchasi va AI ichidagi o’rnini tushunadi.
+ML turlarini farqlaydi: Supervised, Unsupervised, Reinforcement Learning.
+Linear Regression modelini yaratishni biladi (fit, predict jarayonlari).
+Train-test split usuli bilan modelni o’qitadi va sinovdan o’tkazadi.
+K-Means algoritmini qo’llab klasterlash (segmentatsiya)ni amalga oshiradi.
+Modelni baholash mezonlarini (R², MSE, RMSE) biladi.
+Python’da scikit-learn kutubxonasi bilan model yaratadi.
+ML modelini Power BI yoki Excel natijalari bilan taqqoslay oladi
+Ma’lumotlar asosida prognozlash (forecasting) va tavsiya tizimini yaratadi. ML model natijalarini grafik va vizual tarzda tahlil qiladi.
+
+Ma’lumot etikasi va maxfiylik
+Data Ethics tushunchasi va ma’lumot bilan ishlashdagi axloqiy me’yorlarni tushunadi.
+Ma’lumotdan foydalanishda shaffoflik, halollik va rozilik tamoyillariga amal qiladi.
+Shaxsiy ma’lumotlarni himoya qilish tamoyillarini biladi.
+Global qonunlar: GDPR, CCPA, O’zbekiston Respublikasining “Shaxsiy ma’lumotlar to’g’risida”gi qonunini tushunadi.
+Kiberxavfsizlik asoslarini biladi (phishing, ransomware, unauthorized access).
+Etik AI tushunchasini biladi — sun’iy intellekt qarorlarining adolatliligini ta’minlay oladi.
+Data breach (ma’lumot oqishi) holatlarini tahlil qiladi (Facebook, Cambridge Analytica misolida).
+Ma’lumotni anonimlashtirish va shifrlash usullarini biladi.
+Maxfiylik siyosatini tashkilot darajasida qo’llay oladi.
+Ma’lumotlar bilan ishlashda foydalanuvchi huquqlariga hurmat bilan yondashadi.
+
+Ma’lumotlarni boshqarish (Data Governance)
+Data Governance tushunchasi va maqsadini tushunadi.
+Ma’lumot boshqaruvi siyosatini ishlab chiqish bosqichlarini biladi.
+Data Owner, Data Steward va Data User rollarini farqlay oladi.
+Ma’lumot sifatining asosiy mezonlarini biladi: aniqlik (accuracy), izchillik (consistency), to’liqlik (completeness), o’z vaqtida yangilanish (timeliness).
+Data Standardization va Data Catalog tushunchalarini tushunadi.
+Metadata boshqaruvini amalga oshira oladi.
+Data Lineage (ma’lumot manbasini kuzatish) jarayonini biladi.
+Tashkilotda Data Governance siyosatini joriy etish modelini ishlab chiqadi.
+Case Study: “Bankdagi ma’lumot sifatini yaxshilash tizimi” asosida amaliy tahlil o’tkazadi.
+BI loyihalarida Data Governance’ning barqaror tahlil uchun ahamiyatini tushunadi.
+
+12. BI MA’LUMOTLAR TAHLILI KURSI BO’YICHA LOYIHA ISHLARI
+BI Ma’lumotlar tahlili kursi davomida bajariladigan loyihalar o’tilgan mavzular doirasida beriladi va joriy nazorat ishlarini baholashda asos bo’ladi. Kursda tahsil olayotgan har bir o’quvchiga loyiha topshiriqlari individual va guruh ishi tarzida beriladi. Berilgan loyihalarni kurs davomida yoki yakuniy loyiha sifatida bajarish mumkin.
+№
+Loyiha nomi
+Case (Vazifa mazmuni)
+Asosiy vositalar
+Dataset manbasi / Link
+1
+Excel asosida savdo tahlili
+Savdo ma’lumotlaridan foyda, xarajat va o’sish ko’rsatkichlari bo’yicha 3 KPI yaratish
+Excel
+Superstore Dataset (Kaggle)
+2
+Power Query orqali ma’lumot tozalash
+Mijozlar bazasidagi duplikat, null va xatoliklarni tozalash
+Power Query
+Sample Sales Data (Kaggle)
+3
+ETL jarayoni: CSV → Clean → Load
+Ko’p manbali ma’lumotlarni birlashtirish va Power BI’da yuklash
+Excel, Power Query
+Retail Sales Data (Kaggle)
+4
+SQL asosida ma’lumot tanlash
+Filtrlash, saralash, LIKE, TOP, CASE funksiyalari bilan tahlil
+SQL (PostgreSQL / MySQL)
+IMDb Movies Dataset
+5
+SQL JOIN amaliyoti
+Bir nechta jadvallarni JOIN orqali bog’lab tahlil qilish
+SQL
+HR Employee Dataset
+6
+SQL Window Functions tahlili
+ROW_NUMBER, RANK, LAG/LEAD yordamida trendlarni tahlil qilish
+SQL
+Finance Stock Prices Dataset
+7
+SSIS ETL Pipeline
+SSIS orqali avtomatik ma’lumot yuklash jarayoni yaratish
+SSIS
+AdventureWorks DW
+8
+Python orqali ma’lumot tozalash
+Pandas yordamida missing values, duplicates, types cleaning
+Python (Pandas)
+Housing Dataset (Kaggle)
+9
+NumPy bilan matematik tahlil
+Arraylar, broadcasting, random numbers asosida hisob-kitob
+Python (NumPy)
+Synthetic Data
+10
+Pandas orqali vaqt qatorlari
+Datetime, resampling, rolling windows bilan tahlil
+Python (Pandas)
+AirPassengers Dataset
+11
+Pandas GroupBy & Aggregation
+Mijoz bo’yicha sotuvlar, kategoriya bo’yicha o’rtacha qiymatlar
+Python
+Sales Data (Kaggle)
+12
+Pandas reshaping — Pivot/Melt
+Ma’lumotni pivot va melt yordamida qayta shakllantirish
+Python
+EU Employment Dataset
+13
+Spark asosida katta ma’lumot tahlili
+SparkSession → RDD → DataFrame orqali parallel tahlil
+Apache Spark
+NYC Taxi Data
+14
+Spark SQL bilan tahlil
+SELECT, FILTER, GROUP BY, repartition orqali optimizatsiya
+Spark SQL
+Retail Big Data
+15
+Power BI asosiy dashboard
+Savdo bo’yicha interaktiv dashboard yaratish
+Power BI
+Superstore Dataset
+16
+DAX orqali KPI yaratish
+YTD, MTD, QoQ, Running Total kabi DAX o’lchovlari
+Power BI (DAX)
+Finance Dataset
+17
+Power BI vizualizatsiya & UX
+Dashboard dizayni, slicerlar, KPI cards, drill-down
+Power BI
+Marketing Campaign Dataset
+18
+Tableau’da interaktiv dashboard
+Story Points + KPI indikatorlar bilan tahlil
+Tableau
+Global Superstore
+19
+Tableau’da LOD Expressions
+FIXED, INCLUDE, EXCLUDE orqali chuqur tahlil
+Tableau
+Airbnb Listings Dataset
+20
+Apache Superset bilan tahlil
+Dataset yaratish, chart yaratish va dashboard yig’ish
+Superset
+Covid-19 Dataset
+21
+Python–SQL–Power BI integratsiyasi
+SQL → Python → Power BI ETL pipeline qurish
+SQL, Python, Power BI
+Online Retail Data
+22
+Docker bilan analitika muhiti
+Python + BI + Database konteynerlarini yaratish
+Docker
+Any Sample Dataset
+23
+Machine Learning asoslari
+Klassifikatsiya modeli: churn prediction
+Python (scikit-learn)
+Telco Customer Churn
+24
+AI yordamida prognozlash
+LSTM/ML modeli orqali kelajakki sotuvlarni bashorat qilish
+Python
+Sales Forecasting Dataset
+25
+Data Governance Case Study
+Ma’lumot sifati, xavfsizlik va etik muammolarni tahlil qilish
+Documentation Project
+—
+
+
+
+
+
+
+
+
+
+
+
+
+13. BI MA’LUMOTLAR TAHLILI XONASI UCHUN QOʻYILADIGAN UMUMIY TALABLAR
+Business Intelligence (BI) kursi xonasi maktab binosining ikki va undan yuqori qavatida alohida binoda joylashgan bo’lishi kerak. Xonaning minimal maydoni 63 kvadrat metrni tashkil etishi tavsiya etiladi, bu esa o’quvchilar va o’qituvchilar uchun qulay ish muhitini ta’minlaydi. Shu bilan birga, xonaning joylashuvi mashg’ulotlar davomida tinchlik va konsentratsiyani saqlash imkonini berishi lozim.
+Xonada tabiiy va sun’iy kombinatsiyalangan yoritish bo’lishi majburiydir. Tabiiy yorug’lik o’quvchilarni charchashdan saqlaydi va ko’zlar uchun qulay muhit yaratadi, sun’iy yorug’lik esa mashg’ulotlarning har bir soatida yetarli yoritishni ta’minlaydi. Xona harorati 17–20°C darajasida bo’lishi shart va mashg’ulotlar boshlanishidan oldin hamda tugagandan so’ng xona shamollatiladi. Shamollatish davomiyligi ob-havo sharoiti, shamol yo’nalishi va tezligi hamda isitish tizimining samaradorligi bilan belgilanadi. Haroratni me’yorda saqlash uchun xonada sovutish va isitish tizimi, jumladan konditsioner o’rnatilgan bo’lishi lozim.
+Texnologik jihozlar BI kursi xonasining samarali ishlashi uchun muhim hisoblanadi. Har bir o’quvchi uchun zamonaviy kompyuterlar ta’minlanadi, ular minimal 8 GB RAM, 256 GB SSD va Windows yoki Mac OS operatsion tizimi bilan ishlashi lozim. Shuningdek, BI dasturiy ta’minotlari, jumladan Power BI, Tableau, Excel, SQL Server va boshqa BI platformalar mavjud bo’lishi shart. Mashg’ulotlar davomida ma’lumotlar serveriga ulanish va amaliy ishlar uchun yuqori tezlikdagi internet aloqasi, projektor, katta ekran va audio tizim ishlatiladi. Shuningdek, printer va skanerlar hisobot va hujjatlarni tayyorlash imkonini beradi.
+Xonada xavfsizlik va sog’liqni saqlash talablariga ham e’tibor qaratiladi. Birinchi tibbiy yordam ko’rsatish uchun to’plamlar mavjud bo’lishi, favqulodda vaziyatlarda chiqish yo’llari va xavfsizlik belgilari ko’rsatilgan bo’lishi kerak. Elektr tarmoqlari va uzatma rozetkalari mashg’ulotlar davomida yetarli bo’lishi lozim. Shu bilan birga, ma’lumotlar xavfsizligi uchun server va tarmoqlar bilan bog’liq jihozlar, jumladan switch va routerlar ham mavjud bo’lishi zarur.
+Xonadagi rang-baranglik va interyer dizayni o’quvchilarning qulayligi va konsentratsiyasini ta’minlaydi. Shiftlar moviy rangda bo’lishi tavsiya etiladi, devorlar uchun qaymoq, pushti, yashil yoki och ko’k ranglar tanlanadi. Mebel tabiiy yog’och rang yoki och-to’q jigarrang bo’lishi lozim, eshiklar va deraza romlari esa oq rangda bo’lishi maqsadga muvofiqdir. Bu rang kombinatsiyasi xonada qulay va tinch ish muhitini yaratadi.
+Shu tarzda, BI kursi xonasi o’quvchilar va o’qituvchilar uchun nafaqat texnologik jihatdan qulay, balki estetik va xavfsiz muhit yaratadi. Xonadagi jihozlar, yoritish, harorat, rang-baranglik va xavfsizlik choralari kursning samarali o’tishini ta’minlaydi hamda o’quv jarayonining sifatini oshiradi.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14. BI MA’LUMOTLAR TAHLILI KASBIGA OʻQITISH XONASINI JIHOZLASHGA QOʻYILGAN TALABLAR
+T/rJihoz nomiOʻlchov birligiSoniJihoz rasmi1.Monitor uzunligi toʻgʻridan — toʻgʻri 1920 pixels 1080 pixels boʻlishi kerak. toʻplam12.UHD-384x2160-4k,
+QHD-2560X1440
+FHD-1920X1080
+HD-1280X720toʻplam13.Processor boʻyi 22x27
+ATX/EATXtoʻplam14.Kompyuter klaviaturasi oʻlchami 445-mm 136-mmdona15.Kompyuter sichqonchasi oʻlchami 101-mm 75-mmdona1
+15. BI MA’LUMOTLAR TAHLILI KASBIGA OʻRGATISH UCHUN ZARUR BOʻLADIGAN XOM ASHYOLAR ROʻYXATI
+T/r 
+Xom ashyo va materiallar nomi 
+Oʻlchov birligi
+Bir oʻquvchi uchun belgilangan miqdor 
+1.
+Monitor (uzunligi toʻgʻridan — toʻgʻri 1920 pixels 1080 pixels)
+dona
+1
+2.
+UHD-384x2160-4k,
+dona
+1
+3.
+QHD-2560X1440
+dona
+1
+4.
+FHD-1920X1080
+dona
+1
+5.
+HD-1280X720
+dona
+1
+6.
+Protsessor (22x27 ATX/EATX)
+dona
+1
+7.
+Kompyuter klaviaturasi (445-mm 136-mm)
+dona
+1
+8.
+Kompyuter sichqonchasi (101-mm 75-mm)
+dona
+1
+
+16. BI MA’LUMOTLAR TAHLILI USTASI LAVOZIMIGA QOʻYILADIGAN TALABLAR
+T/r
+Lavozim nomi
+MMSK bоʼyicha kodi
+Xodimlar toifasi
+Taʼlimning eng past darajasi
+2108
+
+3709
+Ishlab chiqarish taʼlimi ustasi
+1345
+
+2320
+Boshqaruv, ishlab chiqarish
+Mutaxassis
+O/M, Oʻ/M
+
+Lavozim vazifalari:
+biriktirilgan guruhlarda о’quv amaliyoti mashgʻulotlarni о’tish, ishlab chiqarish amaliyotiga rahbarlik qilish; 
+о’quv ustaxonalarida, poligonlarda va о’quv xо’jaligida jihozlar va texnika vositalarini amaliy mashgʻulotlarga tayyorlash; 
+kerak bо’ladigan xom-ashyo va materiallarni tayyorlash, texnologik xaritalarni ishlab chiqish, mashgʻulotga sarf bо’ladigan xom-ashyo sarfini aniqlash, hisobini yuritish;
+о’quvchilarni oraliq, bitiruv amaliy imtihonlarini topshirishga tayyorlash, biriktirilgan guruhlarda tarbiyaviy ish olib borish, о’quv mashgʻulot jurnallarini yuritish va saqlash; 
+taʼlim-tarbiya jarayoni davomida о’quv-texnika jihozlari va vositalaridan, ustaxonalardan, maktabga qarashli jihozlardan ehtiyotkorlik bilan foydalanish;
+tanlab olingan kasb-hunarni egallash jarayonida о’quvchilarning kasbiy layoqat, kо’nikma va malakalarini shakllantirish;
+kasb-hunarga tayyorlash tizimi va mazmunini jamiyat ehtiyojlaridan, fan, madaniyat va zamonaviy innovatsion texnika yutuqlaridan kelib chiqqan holda takomillashtirish;
+ish о’rinlarini jihozlash, yongʻinga qarshi himoya, xavfsizlik texnikasi va mehnatni muhofaza qilish qoidalari va meʼyorlarining bajarilishini taʼminlash. 
+Bilishi kerak:
+Taʼlimga oid О’zbekiston Respublikasi qonunlarini, kasbiy va amaliy faoliyatga tegishli masalalar bо’yicha meʼyoriy va uslubiy hujjatlarni, mehnat qonunchiligi, mehnat muhofazasining qoidalari va meʼyorlarini, xavfsizlik texnikasi qoidalarini.
+Malaka talablari: 
+Pedagogik, muhandis-pedagogik yoki biriktirilgan guruh tayyorlov yо’nalishiga mos ravishda kamida oʻrta maxsus maʼlumotga ega boʻlishi kerak. 
+
+
+
+
+
+17. 9-SINF OʻQUVCHILARIGA QOʻYILGAN UMUMIY MALAKA TALABLARI
+Bilim
+Kompyuterning tuzilishi, fayllar bilan ishlash va operatsion tizim (Windows yoki macOS) asoslarini bilishi. Axborot texnologiyalari, ma’lumot va axborot tushunchalarini farqlay olishi. Internet, brauzer, elektron pochta va bulutli saqlash (Google Drive, OneDrive) kabi raqamli vositalardan foydalana olishi. Microsoft Excel yoki Google Sheets dasturlarining asosiy imkoniyatlarini bilishi (formulalar, diagrammalar, filtrlash). Oddiy ingliz tilidagi texnik so’zlar (data, report, table, file, chart) bilan tanish bo’lishi. Raqamli xavfsizlik, maxfiylik va ma’lumotlardan to’g’ri foydalanish qoidalarini bilishi.
+Koʻnikma
+Kompyuterdan mustaqil foydalanish (matn kiritish, fayl ochish, saqlash, papkalar bilan ishlash). Elektron jadvallar (Excel yoki Sheets) yordamida oddiy hisob-kitoblarni bajarish. Internetdan ma’lumot izlash, yuklab olish va havolalar bilan ishlash. Diagramma, jadval va grafiklarni yaratish orqali ma’lumotni vizual ko’rsatish. Google Forms yoki Excel orqali oddiy ma’lumot to’plashni amalga oshira olish. O’quv topshiriqlarini raqamli formatda (Word, Excel, PDF) tayyorlash va yubora olish. Jamoa bilan ishlashda onlayn vositalardan (Google Docs, Teams, Zoom) foydalana olish.
+Kompetensiya
+Raqamli savodxonlik kompetensiyasi: kompyuter va internet texnologiyalaridan o’qish, yozish va ma’lumot almashishda samarali foydalana oladi.
+Analitik fikrlash kompetensiyasi: sonli ma’lumotni tushunadi, solishtira oladi va oddiy xulosalar chiqara oladi.
+O’zini o’rganishga tayyorlik kompetensiyasi: yangi dasturlarni o’rganishga, sinovdan o’tishga va mustaqil ishlashga tayyor bo’ladi.
+Texnologik kompetensiya: ofis va bulut texnologiyalaridan (Excel, Google Sheets, Drive) foydalanish qobiliyatiga ega.
+Kommunikativ kompetensiya: o’quv topshiriqlarida muloqot, taqdimot va jamoaviy ishda faol bo’ladi.
+Mas’uliyat va axborot madaniyati kompetensiyasi: ma’lumot bilan ishlashda halollik, ehtiyotkorlik va intizomni saqlaydi.
+
+18. FOYDALANILGAN ADABIYOTLAR VA ELEKTRON  MANBALAR ROʻYXATI
+Apache Software Foundation (2023) Apache Spark Documentation. Available at:  HYPERLINK "https://spark.apache.org/docs/latest/" \t "_new" https://spark.apache.org/docs/latest/ (Accessed: 2026).
+Apache Superset Contributors (2023) Apache Superset Documentation. Available at:  HYPERLINK "https://superset.apache.org/docs/" \t "_new" https://superset.apache.org/docs/ (Accessed: 2026).
+Burns, B., Grant, B., Oppenheimer, D., Brewer, E. and Wilkes, J. (2016) ‘Borg, Omega, and Kubernetes’, Communications of the ACM, 59(5), pp. 50–57.
+Cairo, A. (2016) The Truthful Art: Data, Charts, and Maps for Communication. Berkeley: New Riders.
+Coursera (2023) Machine Learning. Available at:  HYPERLINK "https://www.coursera.org/learn/machine-learning" \t "_new" https://www.coursera.org/learn/machine-learning (Accessed: 2026).
+DataCamp (2023) Data Science and Analytics Courses. Available at:  HYPERLINK "https://www.datacamp.com/" \t "_new" https://www.datacamp.com/ (Accessed: 2026).
+DAMA International (2017) DAMA-DMBOK: Data Management Body of Knowledge. 2nd edn. New Jersey: Technics Publications.
+Docker, Inc. (2023) Docker Documentation. Available at:  HYPERLINK "https://docs.docker.com/" \t "_new" https://docs.docker.com/ (Accessed: 2026).
+Downey, A. (2015) Think Python. 2nd edn. Sebastopol: O’Reilly Media.
+Elmasri, R. and Navathe, S. (2016) Fundamentals of Database Systems. 7th edn. Boston: Pearson.
+European Union (2018) General Data Protection Regulation (GDPR). Available at:  HYPERLINK "https://gdpr.eu/" \t "_new" https://gdpr.eu/ (Accessed: 2026).
+fast.ai (2023) Practical Deep Learning for Coders. Available at:  HYPERLINK "https://course.fast.ai/" \t "_new" https://course.fast.ai/ (Accessed: 2026).
+Few, S. (2012) Show Me the Numbers: Designing Tables and Graphs to Enlighten. 2nd edn. Burlingame: Analytics Press.
+Floridi, L., Cowls, J., Beltrametti, M. et al. (2018) ‘AI4People—An ethical framework for a good AI society’, Minds and Machines, 28(4), pp. 689–707.
+Géron, A. (2022) Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow. 3rd edn. Sebastopol: O’Reilly Media.
+Golfarelli, M. and Rizzi, S. (2009) Data Warehouse Design. New York: McGraw-Hill.
+Goodfellow, I., Bengio, Y. and Courville, A. (2016) Deep Learning. Cambridge, MA: MIT Press.
+Google Cloud (2023) MLOps: Continuous Delivery and Automation Pipelines in Machine Learning. Available at: https://cloud.google.com/architecture/mlops-continuous-delivery (Accessed: 2026).
+Hunter, J. D. (2007) ‘Matplotlib: A 2D graphics environment’, Computing in Science & Engineering, 9(3), pp. 90–95.
+IBM (2023) MLOps and Model Deployment. Available at: https://www.ibm.com/topics/mlops (Accessed: 2026).
+Inmon, W. H. (2005) Building the Data Warehouse. 4th edn. New York: Wiley.
+James, G., Witten, D., Hastie, T. and Tibshirani, R. (2021) An Introduction to Statistical Learning. 2nd edn. New York: Springer.
+Karau, H., Konwinski, A., Wendell, P. and Zaharia, M. (2015) Learning Spark. Sebastopol: O’Reilly Media.
+Kimball, R. and Ross, M. (2013) The Data Warehouse Toolkit. 3rd edn. Hoboken: Wiley.
+Khatri, V. and Brown, C. V. (2010) ‘Designing data governance’, Communications of the ACM, 53(1), pp. 148–152.
+Kleppmann, M. (2017) Designing Data-Intensive Applications. Sebastopol: O’Reilly Media.
+McKinney, W. (2022) Python for Data Analysis. 3rd edn. Sebastopol: O’Reilly Media.
+Merkel, D. (2014) ‘Docker: Lightweight Linux containers for consistent development and deployment’, Linux Journal, 2014(239).
+Microsoft (2023a) Power BI Documentation. Available at: https://learn.microsoft.com/power-bi/ (Accessed: 2026).
+Microsoft (2023b) SQL Server Documentation. Available at: https://learn.microsoft.com/sql/ (Accessed: 2026).
+Microsoft Learn (2023) Power BI Training. Available at: https://learn.microsoft.com/training/powerplatform/power-bi/ (Accessed: 2026).
+Molinaro, A. (2020) SQL Cookbook. 2nd edn. Sebastopol: O’Reilly Media.
+Ng, A. (2018) Machine Learning. Coursera. Available at:  HYPERLINK "https://www.coursera.org/learn/machine-learning" \t "_new" https://www.coursera.org/learn/machine-learning (Accessed: 2026).
+NumPy Developers (2023) NumPy Documentation. Available at:  HYPERLINK "https://numpy.org/doc/" \t "_new" https://numpy.org/doc/ (Accessed: 2026).
+Otto, B. (2011) ‘Organizing data governance’, Journal of Enterprise Information Management, 24(4), pp. 355–372.
+Pandas Development Team (2023) Pandas Documentation. Available at:  HYPERLINK "https://pandas.pydata.org/docs/" \t "_new" https://pandas.pydata.org/docs/ (Accessed: 2026).
+PostgreSQL Global Development Group (2023) PostgreSQL Documentation. Available at:  HYPERLINK "https://www.postgresql.org/docs/" \t "_new" https://www.postgresql.org/docs/ (Accessed: 2026).
+Russo, M. and Ferrari, A. (2019) The Definitive Guide to DAX. Redmond: Microsoft Press.
+Silberschatz, A., Korth, H. F. and Sudarshan, S. (2020) Database System Concepts. 7th edn. New York: McGraw-Hill.
+Tableau Software (2023) Tableau Documentation. Available at: https://help.tableau.com/ (Accessed: 2026).
+VanderPlas, J. (2016) Python Data Science Handbook. Sebastopol: O’Reilly Media.
+Zaharia, M., Xin, R. S., Wendell, P. et al. (2016) Apache Spark: The Definitive Guide. Sebastopol: O’Reilly Media.
+ 
+
+
+
+
+
+
+
+
+
+
+PAGE   \* MERGEFORMAT10
+
+
+
+

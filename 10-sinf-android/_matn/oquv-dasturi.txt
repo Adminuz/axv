@@ -1,0 +1,1285 @@
+OʻZBEKISTON RESPUBLIKASI  RAQAMLI TEXNOLOGIYALAR VAZIRLIGI
+	
+RAQAMLI TA’LIMNI RIVOJLANTIRISH
+
+“MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN 
+ADVANCED ANDROID DASTURLASH YO‘NALISHI BO‘YICHA O‘QUV DASTURI
+(10-SINFLAR UCHUN)
+	
+
+
+
+
+
+
+
+
+
+
+
+
+Toshkent - 2025
+
+
+MUNDARIJA
+ TOC \o "1-3" \h \z \u  HYPERLINK \l "_Toc207718330" 1. Dasturda qoʻllanilgan tayanch atamalar	 PAGEREF _Toc207718330 \h 3
+ HYPERLINK \l "_Toc207718332" 2. Advanced Android dasturlash kasbining tayanch oʻquv rejasi	5
+ HYPERLINK \l "_Toc207718333" 3. Advanced Android dasturlash kasbiga tayyorlashning muddati	6
+ HYPERLINK \l "_Toc207718334" 4. Advanced Android dasturlash kasbi oʻquv mavzu rejasi	7
+ HYPERLINK \l "_Toc207718335" 5. Advanced Android dasturlash kasbi oʻquv dasturi	10
+ HYPERLINK \l "_Toc207718336" 6. Advanced Android dasturlash yo‘nalishi boʻyicha oʻtiladigan dars soatlari	15
+7.  HYPERLINK \l "_Toc207718337" Androidda sodda o‘yinlar yaratish va nazorat ishi.	19
+ HYPERLINK \l "_Toc207718338" 8. Oʻquv jarayonini tashkil etishda oʻqitish metodlari, shakllari va vositalari	 PAGEREF _Toc207718338 \h 20
+ HYPERLINK \l "_Toc207718339" 9. Baholash mezonlari	 PAGEREF _Toc207718339 \h 17
+ HYPERLINK \l "_Toc207718340" 10. Advanced Android dasturlash kasbi tavsifi	 PAGEREF _Toc207718340 \h 20
+ HYPERLINK \l "_Toc207718341" 10.1. Bitiruvchining kasbiy faoliyati sohalari:	 PAGEREF _Toc207718341 \h 20
+ HYPERLINK \l "_Toc207718342" 10.2. Bitiruvchining kasbiga muvofiq kasbiy faoliyat obyektlari:	 PAGEREF _Toc207718342 \h 20
+ HYPERLINK \l "_Toc207718343" 10.3. Advanced Android dasturlash kasbiy faoliyat turlari:	 PAGEREF _Toc207718343 \h 20
+ HYPERLINK \l "_Toc207718344" 10.4. Android dasturlash:	 PAGEREF _Toc207718344 \h 20
+ HYPERLINK \l "_Toc207718345" 11. Kasbning qoʻllanish sohasi	 PAGEREF _Toc207718345 \h 21
+ HYPERLINK \l "_Toc207718346" 12. Advanced Android dasturlash xonasi uchun qoʻyiladigan umumiy talablar	 PAGEREF _Toc207718346 \h 22
+ HYPERLINK \l "_Toc207718347" 13. Advanced Android dasturlash kasbiga oʻqitish xonasini jihozlashga qoʻyilgan talablar	 PAGEREF _Toc207718347 \h 23
+ HYPERLINK \l "_Toc207718348" 14. Advanced Android dasturlash kasbiga oʻrgatish uchun zarur boʻladigan xom ashyolar roʻyxati	 PAGEREF _Toc207718348 \h 24
+ HYPERLINK \l "_Toc207718349" 15. Kasbiy taʼlim ustasi lavozimiga qoʻyiladigan talablar	 PAGEREF _Toc207718349 \h 25
+ HYPERLINK \l "_Toc207718350" 16. 9-sinf oʻquvchilariga qoʻyilgan umumiy malaka talablari	 PAGEREF _Toc207718350 \h 26
+ HYPERLINK \l "_Toc207718351" 17. Foydalanilgan adabiyotlar va elektron  manbalar roʻyxati	 PAGEREF _Toc207718351 \h 27
+
+
+
+1. DASTURDA QOʻLLANILGAN TAYANCH ATAMALAR           
+Kasb - Advanced Android dasturlash bo‘yicha nazariy bilimlar, amaliy ko‘nikma va malakalarni egallab, mobil ilovalarni ishlab chiqish, sinovdan o‘tkazish va nashr qilishga qodir mutaxassislik faoliyatini amalga oshirish uchun zarur tayyorgarlikka ega bo‘lgan mehnat faoliyati turi.
+Ko‘nikma - Android Studio, IntelliJ IDEA, Java yoki Kotlin tillarida dastur yozish, interfeys yaratish (XML yoki Jetpack Compose orqali), ma’lumotlar bazasi (SQLite, Firebase Firestore) bilan ishlash, ilovani testlash va nashr qilishni o‘z ichiga olgan amaliy faoliyatni bajarish qobiliyati.
+Bilim - Android operatsion tizimi, Java/Kotlin dasturlash tillari sintaksisi, ma’lumotlar tuzilmalari, foydalanuvchi interfeysi (UI) elementlari, tarmoq texnologiyalari (Retrofit, Volley, OkHttp) hamda Firebase xizmatlari haqidagi nazariy ma’lumotlarni o‘zlashtirish va tushuntirish imkoniyati.
+Kompetensiya - Dasturchilik jarayonida olingan bilim va ko‘nikmalarni amaliy loyihalarda qo‘llash, muammoli vaziyatlarni tahlil qilish, texnik yechimlarni ishlab chiqish hamda dasturiy mahsulotni foydalanuvchiga qulay shaklda yaratish qobiliyati.
+Kasbiy faoliyat sohasi - Mobil dasturlash, axborot texnologiyalari, dasturiy ta’minot ishlab chiqish, foydalanuvchi interfeysi loyihalash va ma’lumotlar bazasi bilan ishlash yo‘nalishlarini qamrab oladi.
+Kasbiy faoliyat obyekti - Mobil ilovalar, foydalanuvchi interfeyslari, ma’lumotlar bazalari, tarmoq orqali ma’lumot almashish tizimlari, dasturiy kod va foydalanuvchi tajribasi (UX).
+Kasbiy faoliyat turi - Android platformasi uchun dasturiy ta’minot yaratish, texnik sinovdan o‘tkazish, dizayn va texnik hujjatlarni ishlab chiqish, Firebase va Google Play Console orqali ilovani joylashtirish faoliyatlari majmui.
+O‘quv rejasi - “Android dasturlash” fani bo‘yicha o‘quv mashg‘ulotlari tarkibi, ularni o‘rganish ketma-ketligi, amaliy mashg‘ulotlar, oraliq va yakuniy nazorat ishlarining umumiy hajmi va mazmunini belgilovchi hujjat.
+O‘quv amaliyoti - Android Studio muhitida loyihalar yaratish, Java yoki Kotlin dasturlari yozish, XML interfeys chizish, ma’lumotlar bazasi bilan ishlash, ilovani testlash va xatoliklarni tuzatish jarayonlari.
+Kasbga tayyorlash o‘quv kursi - 9-sinf o‘quvchilari uchun mo‘ljallangan, mobil dasturlashning zamonaviy vositalarini (Android Studio, Firebase, Retrofit, Firestore, Google Play Console) o‘rgatuvchi amaliy yo‘nalishdagi darslar majmuasi.
+Ta’lim dasturi - “Android dasturlash” fanining maqsadi, mazmuni, o‘quv natijalari, tashkiliy-pedagogik shart-sharoitlari hamda nazorat va baholash tartibini belgilovchi me’yoriy-uslubiy hujjat.
+Android Studio muhiti - Android ilovalarini ishlab chiqish uchun mo‘ljallangan integratsiyalashgan dasturlash muhiti (IDE) bo‘lib, u Java, Kotlin, XML, Compose, Gradle va Emulator vositalarini o‘z ichiga oladi.
+Gradle - Android loyihalarini build, sinxronizatsiya va kompilyatsiya qilish tizimi.
+GitHub / GitLab / Bitbucket - onlayn platformalar bo‘lib, jamoaviy dastur ishlab chiqishni tashkil etadi.
+XML (Extensible Markup Language) - Android ilovalarida foydalanuvchi interfeysining (UI) tuzilmasini yaratish uchun ishlatiladigan belgilash tili.
+Retrofit, Volley, OkHttp - Internet orqali ma’lumot almashish (API so‘rovlar) uchun qo‘llaniladigan Android kutubxonalari.
+Firebase - Google tomonidan yaratilgan mobil platforma bo‘lib, u autentifikatsiya (login/ro‘yxatdan o‘tish), ma’lumotlar bazasi (Firestore, Realtime DB), bildirishnomalar va tahlil xizmatlarini taqdim etadi.
+MVVM (Model -View-ViewModel) - ilovaning mantiqiy arxitekturasini qatlamlarga ajratish modeli.
+MVP (Model-View-Presenter) - foydalanuvchi interfeysi va biznes mantiqni ajratish tamoyiliga asoslangan model.
+MVI (Model-View-Intent) - foydalanuvchi harakatlarini voqealar (intent) orqali boshqaruvchi arxitektura.
+Google Play Console - Dasturchilar uchun yaratilgan xizmat bo‘lib, unda Android ilovalari sinovdan o‘tkazilib, Play Market’da nashr qilinadi.
+Android Emulator - Android qurilmasining virtual nusxasi bo‘lib, dasturchilarga ilovalarni kompyuterda testlash imkonini beradi.
+
+
+2. ADVANCED ANDROID DASTURLASH KASBINING TAYANCH OʻQUV REJASI
+T/r
+Tayanch oʻquv reja tarkibi
+Mashg‘ulotlar soni
+Umumiy yuklamaga
+nisbatan foiz hisobida
+I.
+Oʻquv maʼruzasi
+40
+39.2
+II.
+Oʻquv amaliyoti
+57
+55.8
+III.
+Oraliq nazorat ishi (Loyiha ishi)
+4
+3.9
+IV.
+Yakuniy nazorat ishi
+1
+1,0
+Hammasi:
+102
+100
+
+
+3. ADVANCED ANDROID DASTURLASH KASBIGA TAYYORLASHNING MUDDATI
+Kasb nomi
+Advanced Android dasturlash
+Kasbga tayyorlashning meʼyoriy muddati
+10-sinflarda haftasiga 80 daqiqadan 3 ta dars 
+1 oʻquv yili davomida
+
+
+Sinf
+Oʻquv chorak
+Haftalar soni
+Mashg‘ulotlar soni
+10
+I
+12
+36
+II
+7
+21
+III
+8
+24
+IV
+7
+21
+Jami
+34 hafta
+102
+
+Tushuntirish xati
+
+1. Umumiy oʻrta taʼlim tashkilotlarida oʻquv yilining 2 - sentyabridan kelgusi yilning 25-mayigacha boʻlgan davrda toʻrt chorakka boʻlingan holda tashkil etiladi.
+2. Oʻquv yilining davomiyligi - 34 hafta:
+haftasiga 3 marta belgilangan soatlar doirasidan chiqmagan holda oʻqish tashkil etiladi;
+mashgʻulotning davomiyligi  1 soat 20 daqiqani tashkil etadi;
+mashgʻulotlar oraligʻidagi tanaffusning davomiyligi 5 - 10 daqiqa. 
+3. Oraliq va Yakuniy nazoratlar nazariy yoki koʻrgazmali amaliy imtihon shaklida tasdiqlangan baholash mezonlari asosida oʻtkaziladi.
+
+4. ADVANCED ANDROID DASTURLASH KASBI OʻQUV MAVZU REJASI
+T/r
+Mavzu
+Ajratilgan mashg‘ulotlar soni
+shundan
+Nazariy
+Amaliy
+Nazorat ishi
+I-BOB. Android loyihalarini boshqarish va versiya nazorati tizimlari1275
+
+1
+Gradle konfiguratsiyasi va build variantlari
+2
+1
+1
+
+2
+Dependency management va versiyalar bilan ishlash
+2
+1
+1
+
+3
+ProGuard va R8 yordamida kodni optimallashtirish
+2
+1
+1
+
+4
+Git bilan versiya nazorati asoslari
+2
+1
+1
+
+5
+GitHub’da loyihalar yaratish va boshqarish
+1
+0
+1
+
+6
+GitLab va Bitbucket’da jamoaviy ish jarayonlari
+1
+1
+0
+
+7
+Branch, Merge va Pull Request jarayonlari
+1
+1
+0
+
+8
+Continuous Integration (CI/CD) tushunchasi
+1
+1
+0
+
+II-BOB. Android arxitekturasi va dastur tuzilmasi1486
+
+10
+MVVM (Model-View-ViewModel) arxitekturasi asoslari
+2
+1
+1
+
+11
+MVI (Model-View-Intent) yondashuvi
+1
+1
+0
+
+12
+MVP (Model-View-Presenter) modeli
+1
+1
+0
+
+13
+ViewModel va LiveData bilan ishlash
+2
+1
+1
+
+14
+StateFlow va SharedFlow oqimlarini boshqarish
+2
+1
+1
+
+15
+Repository pattern va ma’lumot oqimini loyihalash
+2
+1
+1
+
+16
+Dependency Injection (Dagger, Hilt, Koin)
+2
+1
+1
+
+17
+Clean Architecture tamoyillari
+1
+1
+
+
+18
+Amaliy mashg‘ulot: “Smart Finance App — MVVM asosida hisob-kitob moduli yaratish”
+1
+
+1
+
+III-BOB. Ma’lumotlar bazalari va sinxronlash tizimlari1577
+1
+20
+SQLite bilan ma’lumot saqlash
+2
+1
+1
+
+21
+Room Database orqali ORM ishlatish
+2
+1
+1
+
+22
+Realm Database bilan real vaqtli ma’lumot almashish
+2
+1
+1
+
+23Firebase Firestore bilan ma’lumot sinxronligi, Oraliq nazorat
+3
+1
+1
+1
+24
+Repository qatlamida ma’lumotlar oqimi
+1
+1
+
+
+25
+Offline/online sinxronizatsiya mexanizmlari
+1
+1
+
+
+26
+JSON formatida ma’lumot almashish
+2
+1
+1
+
+27
+Data Caching va Local Storage strategiyalari
+1
+
+1
+
+28
+Amaliy mashg‘ulot: “Smart Finance App - Offline va Cloud sinxronizatsiya
+1
+
+1
+
+IV-BOB. Tarmoq va API integratsiyasi1367
+
+30
+Retrofit bilan RESTful API chaqirish
+2
+1
+1
+
+31
+Volley orqali HTTP so‘rovlarni yuborish
+1
+
+1
+
+32
+OkHttp bilan tarmoq nazorati va interceptorlardan foydalanish
+1
+
+1
+
+33
+API javoblarini JSON formatida tahlil qilish (Gson, Moshi)
+1
+1
+
+
+34
+Autentifikatsiya: OAuth2.0 va Token almashuvi
+1
+1
+0
+
+35
+Error handling va retry strategiyalari
+1
+
+1
+
+36
+Retrofit + Room integratsiyasi (API cache)
+2
+1
+1
+
+37
+Amaliy mashg‘ulot: “Smart Finance App - Valyuta va API integratsiyasi”
+2
+1
+1
+
+38
+API xavfsizligi va versiyalash tamoyillari
+1
+1
+
+
+V-BOB. Jetpack Compose va zamonaviy UI dizayn16411
+1
+40Jetpack Compose’da State Management (remember, mutableStateOf) , Oraliq nazorat
+2
+1
+
+1
+41
+Layoutlar: Column, Row, Box, LazyColumn, LazyRow
+2
+
+2
+
+42
+Material3 komponentlari va temalar bilan ishlash
+3
+1
+2
+
+43
+Navigation Component va multi-screen arxitekturasi
+2
+
+2
+
+44
+Rasm, ikon va animatsiyalar bilan ishlash
+1
+
+1
+
+45
+Custom Composable elementlar yaratish
+1
+
+1
+
+46
+Gesture Detection va foydalanuvchi interaktivligi
+2
+1
+1
+
+47
+Adaptive UI va responsiv dizayn (mobil, planshet, TV)
+1
+1
+
+
+48
+UI testlash (Espresso, Compose Testing)
+2
+
+2
+
+VI-BOB. Firebase xizmatlari va ilova integratsiyasi18413
+1
+50
+Firebase Authentication: foydalanuvchini ro‘yxatdan o‘tkazish
+2
+1
+1
+
+51
+Google, Facebook va Email orqali login
+1
+
+1
+
+52
+Firebase Firestore orqali ma’lumot almashish
+2
+
+2
+
+53
+Firebase Cloud Messaging (FCM) bilan push xabarnomalar
+2
+1
+1
+
+54
+Firebase Storage bilan fayl yuklash
+1
+
+1
+
+55
+Firebase Remote Config va A/B Testing
+2
+1
+
+1
+56
+Firebase Analytics bilan ilova tahlili
+1
+
+1
+
+57
+Firebase Crashlytics bilan xatolarni kuzatish
+1
+
+1
+
+58
+Smart Finance App - Foydalanuvchi tizimi va xabarnomalar
+4
+
+4
+
+VII-BOB. Testlash, tarqatish va yakuniy loyiha1448
+2
+60
+JUnit bilan unit testlar yozish
+2
+1
+1
+
+61
+Mockito bilan komponentlarni soxtalashtirish (mocking)
+1
+
+1
+
+62
+Espresso bilan UI testlarini avtomatlashtirish
+1
+
+1
+
+63
+Firebase Test Lab va real qurilmalarda sinov
+2
+
+2
+
+64
+Test Coverage va Continuous Testing tushunchalari
+1
+1
+
+
+65
+Ilovani APK/AAB shaklida yaratish
+2
+
+2
+
+66
+Google Play Console orqali ilovani nashr qilish
+1
+1
+
+
+67
+Versiya boshqaruvi va yangilanish jarayoni
+1
+1
+
+
+68
+UX baholash va foydalanuvchi tajribasi tahlili, Oraliq nazorat
+2
+
+1
+1
+69Yakuniy nazorat (Loyiha himoyasi)11
+JAMI:10240575
+
+5. ADVANCED ANDROID DASTURLASH KASBI OʻQUV DASTURI
+I-BOB. Android loyihalarini boshqarish va versiya nazorati tizimlari
+Gradle konfiguratsiyasi va build variantlari: Gradle fayllarining tuzilmasi (build.gradle, settings.gradle), dependency’larni e’lon qilish, build variantlar (debug, release) yaratish, buildType va flavor’lar bilan ishlash, Gradle skriptlarini avtomatlashtirish. Dependency management va versiyalar bilan ishlash: Kutubxona versiyalarini boshqarish, implementation va api farqlari, versiyalarni yangilash strategiyasi, dependency conflicts yechimi, BOM (Bill of Materials) orqali boshqaruv. ProGuard va R8 yordamida kodni optimallashtirish: Kodni minimallashtirish (minifyEnabled), ProGuard qoidalari, R8 optimizatsiyasi, mapping fayllarni yaratish va tahlil qilish, ilova xavfsizligini oshirish. Git bilan versiya nazorati asoslari: Git repository yaratish, commit, push, pull amallari, .gitignore va .gitattributes fayllari, git log orqali tarixni tahlil qilish. GitHub’da loyihalar yaratish va boshqarish: Repository yaratish va ulashish, README fayl yaratish, issues va branches  bilan ishlash, pull request jarayonlari, GitHub Actions bilan CI/CD. GitLab va Bitbucket’da jamoaviy ish jarayonlari: Loyihani klonlash, jamoaviy branch strategiyasi, merge request jarayoni, access va roles boshqaruvi, pipeline sozlash. Branch, Merge va Pull Request jarayonlari: Branch turlari (main, develop, feature), merge usullari (fast-forward, squash),  konfliklarni yechish, pull request yaratish, kodni review qilish. Continuous Integration (CI/CD) tushunchasi: CI/CD ishlash prinsipi, build va test avtomatlashtirish, GitHub Actions va GitLab CI misollari, pipeline yaratish, deploy jarayonini nazorat qilish.
+II-BOB. Android arxitekturasi va dastur tuzilmasi
+MVVM arxitekturasi asoslari: Model-View-ViewModel tushunchasi, data binding, ViewModel lifecycle, repository bilan aloqasi,  UI’dan mustaqil logika tashkil etish. MVI (Model-View-Intent) yondashuvi: Intentlar orqali foydalanuvchi harakatlarini boshqarish, state’larni kuzatish, reducer funksiyasi, UI reaktivligi, Compose bilan MVI integratsiyasi. MVP (Model-View-Presenter) modeli: View va Presenter o‘rtasidagi aloqa, interfeyslar orqali bog‘lash, testlash qulayliklari,  mas’uliyatni ajratish, eski loyihalar uchun qo‘llanishi. ViewModel va LiveData bilan ishlash: LiveData kuzatuvchilari  (observe), ViewModelProvider orqali chaqirish, MutableLiveData va StateFlow farqi, lifecycle aware komponentlar, foydalanuvchi holatini saqlash. StateFlow va SharedFlow oqimlarini boshqarish: Flow asoslari, StateFlow bilan real vaqt oqimlari, SharedFlow yordamida hodisalarni qayta ishlash, collectAsState bilan UI yangilash, error handling oqimlari. Repository pattern va ma’lumot oqimini loyihalash: Repository qatlamining vazifasi, ma’lumot manbalarini ajratish (local va remote),  interface orqali implementatsiya, testlanadigan arxitektura, data caching. Dependency Injection (Dagger, Hilt, Koin): DI tushunchasi, Dagger komponentlari, Hilt modullari, Koin soddalashtirilgan sintaksisi,  servislar orasidagi bog‘liqlikni kamaytirish. Clean Architecture tamoyillari: Domain, data va presentation  qatlamlari, interfeyslar orqali mustaqillik, entity va use-case’lar,  SOLID prinsiplari, kodni kengaytirish imkoniyati. Amaliy mashg‘ulot – “Smart Finance App: MVVM asosida hisob-kitob moduli”: ViewModel orqali hisoblash logikasi, Room’dan ma’lumot olish, Compose UI’da natija chiqarish, foydalanuvchi interfeysini holatga bog‘lash, oraliq nazorat ishlanmasi.
+III-BOB. Ma’lumotlar bazalari va sinxronlash tizimlari
+SQLite bilan ma’lumot saqlash: SQL asoslari, jadval yaratish (CREATE TABLE), CRUD amallari, SQLiteOpenHelper sinfi, local database bilan ishlash. Room Database orqali ORM ishlatish: Entity, DAO va Database annotatsiyalari, LiveData bilan ma’lumot kuzatish, @Insert,  @Update, @Delete amallari, coroutine asosida so‘rovlar. Realm Database bilan real vaqtli ma’lumot almashish: Realm o‘rnatish va konfiguratsiya, obyektlar asosida saqlash, kuzatuvchilar  bilan ishlash, tezkor sinxronizatsiya, mobil cache mexanizmi. Firebase Firestore bilan ma’lumot sinxronligi: Real-time database va  Firestore farqi, collection-document tuzilmasi, addSnapshotListener, ma’lumot o‘zgarishini onlayn kuzatish, xavfsizlik qoidalari. Repository qatlamida ma’lumotlar oqimi: Local va remote data source integratsiyasi, data refresh strategiyasi, suspend fun orqali  oqim boshqaruvi, ViewModel’da ma’lumotni birlashtirish, error handling. Offline/online sinxronizatsiya mexanizmlari: Network monitoring, cache priority modeli, offline saqlash va qayta yuborish, ConnectivityManager  bilan aloqani aniqlash, Firestore offline mode. JSON formatida ma’lumot almashish: JSON tuzilmasi (object, array),  Gson va Moshi bilan serialization/deserialization, model  sinflarni moslashtirish, nested obyektlar, JSON xatolarni tahlil qilish. Data caching va Local Storage strategiyalari: Cache qatlamlari, SharedPreferences va fayl-based cache, Room caching,  retrofit response cache, xotira va tezlik muvozanatini saqlash. Amaliy mashg‘ulot – “Smart Finance App: Offline va Cloud sinxronizatsiya”: Room + Firestore integratsiyasi, foydalanuvchi balansini avtomatik yangilash, internet yo‘q paytda ma’lumotni saqlash, qayta ulanish mexanizmi.
+IV-BOB. Tarmoq va API integratsiyasi
+Retrofit bilan RESTful API chaqirish: Retrofit sozlash, interfeysda endpoint’lar, @GET va @POST so‘rovlar, coroutine bilan  asinxron ishlash, JSON javoblarini modelga o‘tkazish. Volley orqali HTTP so‘rovlarni yuborish: RequestQueue va JsonObjectRequest, onResponse va onErrorResponse ishlov  berish, progress ko‘rsatkichlari, caching funksiyasi, API tezkorligi. OkHttp bilan tarmoq nazorati va interceptorlar: Logging interceptor, header qo‘shish, custom interceptor, tarmoq xatoliklarini tahlil qilish, offline cache. API javoblarini JSON formatida tahlil qilish (Gson, Moshi): Gson  builder, @SerializedName, nested JSON obyektlari, parsing  jarayonida xatolarni ushlash, dynamic key bilan ishlash. Autentifikatsiya: OAuth2.0 va Token almashuvi: Access va refresh tokenlar, API kalitlarini xavfsiz saqlash, authorization  header yaratish, token yangilash, foydalanuvchi sessiyasi nazorati. Error handling va retry strategiyalari: Tarmoq xatoliklarini  aniqlash (IOException, HttpException), retry mexanizmi, exponential  backoff, foydalanuvchi xabar berish tizimi, global error handler. Retrofit + Room integratsiyasi (API cache): Remote ma’lumotni saqlash, Room orqali lokal qayta ishlash, UI’da real vaqt yangilanishi,  API’dan ma’lumotlarni sinxronlashtirish, offline-first strategiya. Amaliy mashg‘ulot – “Smart Finance App: Valyuta va API integratsiyasi”: API’dan kurslarni olish, real vaqt yangilanishi, foydalanuvchi interfeysida valyuta hisoblash, xatolarni boshqarish, oraliq nazorat. API xavfsizligi va versiyalash tamoyillari: HTTPS talablari, API key’larni yashirish, versiyalarni (v1, v2) boshqarish, backward compatibility, autentifikatsiya qatlamini himoyalash.
+V-BOB. Jetpack Compose va zamonaviy UI dizayn
+State Management: remember va mutableStateOf, hoisting konsepti, Compose’da holatni boshqarish, StateFlow integratsiyasi, UI qayta chizilish jarayoni. Layoutlar: Column, Row, Box joylashuvi, LazyColumn va LazyRow ro‘yxatlari, Modifier parametrlar, alignment, padding va spacing. Material3 komponentlari: Temalar yaratish, rang palitralari, Typography bilan ishlash, Card va Button komponentlari, dark/light rejimlar. Navigation Component va multi-screen arxitekturasi: NavController, composable ekranlar o‘rtasida o‘tish, argument uzatish,  BottomNavigation integratsiyasi, back-stack boshqaruvi. Rasm, ikon va animatsiyalar bilan ishlash: Image va Icon  composable’lar, painterResource, animatsiyalar (animateDp, animateColor),  Lottie integratsiyasi, UI dinamizmini oshirish. Custom Composable elementlar: Reusable UI komponentlar yaratish, slot API ishlatish, parametrlar bilan moslashuvchan elementlar, styling va theming, preview test. Gesture Detection va foydalanuvchi interaktivligi: Tap, swipe, drag, long-press hodisalarini ushlash, pointerInput API, animatsiyalar bilan  bog‘lash, interaktiv elementlar yaratish, feedback. Adaptive UI va responsiv dizayn: ConstraintLayout va BoxWithConstraints, ekran o‘lchamiga moslashuv, tablet/TV dizayni, windowSizeClass, dynamic UI yaratish. UI testlash (Espresso, Compose Testing): Test case yozish, elementlarni onNodeWithText orqali aniqlash, UI xatti-harakatlarni tekshirish, performans testlari, CI bilan integratsiya.
+VI-BOB. Firebase xizmatlari va ilova integratsiyasi
+Firebase Authentication: Foydalanuvchini ro‘yxatdan o‘tkazish, login/logout funksiyalari, Email, Google, Facebook bilan autentifikatsiya,  token asosida sessiya boshqaruvi, xavfsizlik qoidalari. Firebase Firestore orqali ma’lumot almashish: Collection/document tuzilmasi, CRUD amallari, addSnapshotListener, offline rejimda ishlash, real-time yangilanish. Firebase Cloud Messaging (FCM): Push xabarnomalar yaratish, topic subscription, foydalanuvchi targeting, bildirishnomalarni  UI’da ko‘rsatish, foreground/background xatti-harakatlari. Firebase Storage bilan fayl yuklash: Rasm va hujjatlarni saqlash, fayl yuklab olish (downloadUrl), progress kuzatish, foydalanuvchi  profil rasmini o‘zgartirish, ruxsatlarni boshqarish. Firebase Remote Config va A/B Testing: Dynamic konfiguratsiyalar, parametrlarni masofadan yangilash, foydalanuvchilar uchun A/B test, natijalarni tahlil qilish, tajriba asosida interfeysni optimallashtirish. Firebase Analytics bilan ilova tahlili: Foydalanuvchi harakatlarini kuzatish, event yaratish, dashboard orqali tahlil, ilova samaradorligini baholash, foydalanuvchi segmentatsiyasi. Firebase Crashlytics bilan xatolarni kuzatish: Real-time crash loglar, stack trace tahlili, foydalanuvchi konteksti, crash alert, xatolarni kamaytirish strategiyasi. Smart Finance App – Foydalanuvchi tizimi va xabarnomalar: Auth + Firestore integratsiyasi, shaxsiy ma’lumotlar boshqaruvi, FCM xabarnomalarini yuborish, tahlil qilish, oraliq nazorat.
+VII-BOB. Testlash, tarqatish va yakuniy loyiha
+JUnit bilan unit testlar yozish: Test sinflar yaratish, @Test annotatsiyasi, assert funksiyalari, test jarayonlarini avtomatlashtirish, test log tahlili. Mockito bilan komponentlarni soxtalashtirish (mocking): Mock obyektlar yaratish, when va verify funksiyalari, testlarda real  ma’lumotlardan mustaqillik, dependency mocklash, test izolyatsiyasi. Espresso bilan UI testlarini avtomatlashtirish: UI elementlarini topish, foydalanuvchi harakatlarini simulyatsiya qilish, test ssenariylari  yozish, natijalarni tahlil qilish, CI integratsiyasi. Firebase Test Lab va real qurilmalarda sinov: Ilovani turli qurilmalarda sinash, crash monitoring, performance test, test natijalarini vizual tahlil, optimallashtirish takliflari. Test Coverage va Continuous Testing: Kod qamrovini o‘lchash, test hisobotlarini yaratish, CI’da testlarni avtomatik ishga tushirish, regressiya testlash, tahliliy metrikalar. Ilovani APK/AAB shaklida yaratish: Build variantlarini tayyorlash, ilovani sign qilish (keyStore), release variant yaratish,  AAB formatida eksport, versiya raqamlarini boshqarish. Google Play Console orqali ilovani nashr qilish: Developer account sozlash, metadata tayyorlash (ikon, tavsif, screenshot),  test kanallarini yaratish, beta va production nashr, yangilanishlarni joylashtirish. Versiya boshqaruvi va yangilanish jarayoni: Semantik versiyalash (1.0.0 → 1.1.0), changelog tayyorlash, foydalanuvchi bildirishnomalari, orqaga moslik, yakuniy loyiha himoyasi uchun tayyorgarlik.
+
+
+
+
+6. ADVANCED ANDROID DASTURLASH YO‘NALISHI BOʻYICHA OʻTILADIGAN DARS SOATLARI
+T/r
+Mavzular
+I-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta8-hafta9-hafta10-hafta11-hafta12-haftaGradle konfiguratsiyasi va build variantlari2Dependency management va versiyalar bilan ishlash11ProGuard va R8 yordamida kodni optimallashtirish2Git bilan versiya nazorati asoslari2GitHub’da loyihalar yaratish va boshqarish1GitLab va Bitbucket’da jamoaviy ish jarayonlari1Branch, Merge va Pull Request jarayonlari1Continuous Integration (CI/CD) tushunchasi1MVVM (Model-View-ViewModel) arxitekturasi asoslari2MVI (Model-View-Intent) yondashuvi1MVP (Model-View-Presenter) modeli1ViewModel va LiveData bilan ishlash2StateFlow va SharedFlow oqimlarini boshqarish2Repository pattern va ma’lumot oqimini loyihalash11Dependency Injection (Dagger, Hilt, Koin)2Clean Architecture tamoyillari1Amaliy mashg‘ulot: “Smart Finance App - MVVM asosida hisob-kitob moduli yaratish”1SQLite bilan ma’lumot saqlash11Room Database orqali ORM ishlatish11Realm Database bilan real vaqtli ma’lumot almashish2Firebase Firestore bilan ma’lumot sinxronligi3
+T/r
+Mavzular
+II-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-haftaRepository qatlamida ma’lumotlar oqimi1Offline/online sinxronizatsiya mexanizmlari1JSON formatida ma’lumot almashish2Data Caching va Local Storage strategiyalari1Amaliy mashg‘ulot: “Smart Finance App - Offline va Cloud sinxronizatsiya1Retrofit bilan RESTful API chaqirish11Volley orqali HTTP so‘rovlarni yuborish1OkHttp bilan tarmoq nazorati va interceptorlardan foydalanish1API javoblarini JSON formatida tahlil qilish (Gson, Moshi)1Autentifikatsiya: OAuth2.0 va Token almashuvi1Error handling va retry strategiyalari1Retrofit + Room integratsiyasi (API cache)2Amaliy mashg‘ulot: “Smart Finance App - Valyuta va API integratsiyasi”1API xavfsizligi va versiyalash tamoyillari1Jetpack Compose’da State Management (remember, mutableStateOf) ,Oraliq nazorat.2
+T/r
+Mavzular
+III-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta8-haftaLayoutlar: Column, Row, Box, LazyColumn, LazyRow2Material3 komponentlari va temalar bilan ishlash12Navigation Component va multi-screen arxitekturasi11Rasm, ikon va animatsiyalar bilan ishlash1Custom Composable elementlar yaratish1Gesture Detection va foydalanuvchi interaktivligi2Adaptive UI va responsiv dizayn (mobil, planshet, TV)1UI testlash (Espresso, Compose Testing)2Firebase Authentication: foydalanuvchini ro‘yxatdan o‘tkazish11Google, Facebook va Email orqali login1Firebase Firestore orqali ma’lumot almashish11Firebase Cloud Messaging (FCM) bilan push xabarnomalar1Firebase Storage bilan fayl yuklash1Firebase Remote Config va A/B Testing3
+T/r
+Mavzular
+IV-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-haftaFirebase Analytics bilan ilova tahlili1Firebase Crashlytics bilan xatolarni kuzatish2Smart Finance App — Foydalanuvchi tizimi va xabarnomalar31JUnit bilan unit testlar yozish2Mockito bilan komponentlarni soxtalashtirish (mocking)1Espresso bilan UI testlarini avtomatlashtirish1Firebase Test Lab va real qurilmalarda sinov11Test Coverage va Continuous Testing tushunchalari1Ilovani APK/AAB shaklida yaratish11Google Play Console orqali ilovani nashr qilish1Versiya boshqaruvi va yangilanish jarayoni1UX baholash va foydalanuvchi tajribasi tahlili, Oraliq nazorat2Yakuniy nazorat (Loyiha himoyasi)1
+7. ANDROIDDA SODDA O‘YINLAR YARATISH VA NAZORAT ISHI.
+Android platformasida 2D formatdagi eng sodda o‘yinlarni yaratish orqali o‘quvchilarda dasturlashga qiziqish, mantiqiy fikrlash va ijodkorlikni rivojlantirish. Dars davomida Android Studio muhiti asosida o‘yin loyihasining tuzilishi, o‘yin oynasi (Game Screen) va bosh menyu (Main Menu) yaratish, o‘yinchi obyektini (character/player) chizish va harakatlantirish, fon rasmlari va oddiy animatsiyalarni qo‘llash ko‘rib chiqiladi. O‘yin jarayonini boshqarish uchun Timer/Handler/Coroutines yordamida o‘yin sikli (game loop) tashkil etish, sensor (touch) orqali boshqarish, to‘qnashuvlarni (collision) aniqlash, hisoblagichlar (score, vaqt, jonlar) bilan ishlash amaliy misollarda tushuntiriladi.
+O‘quvchilar kichik loyihalar sifatida “Topni ushla”, “Obyektlardan qochish”, “Tap o‘yini” kabi sodda o‘yinlarni yaratadilar, unda asosiy UI elementlari, rasm va ovoz resurslari, oddiy animatsiya va o‘yin qoidalari bosqichma-bosqich joriy etiladi. O‘yin kodini optimallashtirish, xatolarni topish va tuzatish uchun Logcat va debugging vositalaridan foydalanish ko‘nikmalari mustahkamlanadi. Nazorat ishi doirasida o‘quvchi o‘qituvchi bergan texnik topshiriq asosida o‘zining sodda o‘yin loyihasini ishlab chiqadi, funksiyalarini namoyish etadi va qisqacha taqdimot qiladi; bunda g‘oya, texnik bajarilish, dizayn va o‘yin jarayonining barqaror ishlashi bo‘yicha baholanadi.
+
+8. OʻQUV JARAYONINI TASHKIL ETISHDA OʻQITISH METODLARI, SHAKLLARI VA VOSITALARI
+Oʻqitish metodlari - ogʻzaki, koʻrgazmali, amaliy, muammoli-izlanish, mustaqil ishlash va shu kabilar.
+Oʻqitish shakllari
+
+Nazariy
+Amaliy
+Umumiy
+maʼruza;
+ekskursiya (sayohat);
+mustaqil ishlar;
+maslahat olish va shu kabilar.
+Amaliy mashg‘ulotlarni samarali tashkil etish maqsadida o‘quvchilar sonidan kelib chiqib 3–4 kishilik kichik guruhlar shakllantiriladi. Ushbu guruhlar birgalikda loyihalar, kod yozish, Git orqali versiya nazorati va boshqa amaliy topshiriqlarni jamoaviy tarzda bajarishi ta’minlanadi.
+ommaviy;
+jamoaviy;
+guruhli;
+kichik guruhli;
+juftli;
+yakka tartibda.
+Oʻqitish vositalari
+
+Oʻqitish vositalari
+(oddiy va murakkab)
+Oʻquv qurollari va koʻrgazmali qurollar
+darsliklar, oʻquv qoʻllanmalari;
+metodik qoʻllanmalar;
+maʼlumotnomalar;
+maxsus adabiyotlar;
+metodik tavsiyalar;
+ensiklopediyalar;
+jadval va plakat;
+mulyaj va modellar.
+Axborot materiallari va dasturiy taʼminot
+kompyuter;
+amaliy topshiriqlar;
+kasbiy koʻnikma va malakaviy dastur;
+testlar, nazorat topshiriqlari va boshqalar.
+
+
+
+9. BAHOLASH MEZONLARI
+	Oʻquvchilarning kasbga oid bilim, koʻnikma, malaka va kompetensiyalarini baholash va nazorat qilish maqsadida quyidagi nazorat turlari amalga oshiriladi:
+joriy nazorat - soʻrovlar, bajarilgan loyiha ishlarini izohlash tarzida oʻquvchilarning bilimlari, koʻnikma va malakalari muntazam nazorat qilinadi.
+oraliq nazorat - chorak tamom boʻlganda va oʻquv dasturining tegishli boʻlimi tugallangandan keyin oʻquvchilarning bilimlari, koʻnikma va malakalarini baholash uchun amalga oshiriladi. U amaliy, yozma nazorat ishi yoki testlar shaklida oʻtkaziladi. Ushbu nazoratda foydalaniladigan materiallar Advanced Android Dasturlash kasbi boʻyicha kasbiy taʼlim ustasi tomonidan tayyorlanadi. Oraliq nazorat har chorak yakunida o‘tkaziladi va nazorat ishlarining miqdori va mavzulari oʻquv dasturiga asoslangan rejada belgilanadi hamda muddati va shakli koʻrsatiladi.
+yakuniy nazorat - oʻquv yili tamom boʻlgandan keyin ogʻzaki va amaliy ish koʻrinishida imtihon shaklida amalga oshiriladi. Uning asosida reyting aniqlanadi va oʻquvchini navbatdagi sinfga oʻtkazish toʻgʻrisida qaror qabul qilinadi. Yakuniy nazorat materiallari kasbiy taʼlim ustasi tomonidan oʻquv dasturi asosida tayyorlanadi va ularni amaliy fanlar uslubiy birlashmasi muhokamasidan oʻtkaziladi. Umumiy oʻrta taʼlim muassasalari bitiruvchilari uchun choraklik baholar asosida yillik baho, shuningdek, yakuniy nazoratda olingan baho va yillik baho asosida yakuniy baho aniqlanadi.
+Kasbiy taʼlim yoʻnalishi boʻyicha yakuniy nazorat imtihonlarni oʻtkazish tartibi.
+Kasbiy taʼlim yoʻnalishi boʻyicha oʻquv reja va dasturning barcha talablarini toʻliq bajargan bitiruvchiga maktab direktorining buyrugʻiga asosan amaliy yakuniy nazoratni topshirishga ruxsat beriladi.
+Yakuniy nazorat oʻtkazish jadvali, u oʻtkaziladigan kunlar koʻrsatilgan holda, maktab direktori tomonidan tasdiqlanadi va yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin taʼlim muassasasining oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar xabardor etiladi.
+Yakuniy nazorat amaliy topshiriq shaklida oʻtkaziladi. Bunda yakuniy nazorat savollari orqali bitta amaliy topshiriq beriladi.
+Amaliy topshiriqlar oʻqitilgan mutaxassislik oʻquv dasturi asosida tuziladi va maktabning pedagogik kengashi tomonidan tasdiqlanadi hamda yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin barcha oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar eʼtiboriga yetkaziladi.
+
+Oʻquvchilar bilimi quyidagi mezonlar asosida baholanadi:
+Har bir oʻquvchining kasb boʻyicha oʻzlashtirish darajasi ball tizimi orqali ifodalanadi, ya’ni 100 ballik shkalaga o‘tkaziladi.
+0-59 ball – 2 baho;
+60-70 ball – 3 baho;
+71-89 ball – 4 baho;
+90-100 ball – 5 baho.
+Oʻquvchilarning har bir nazorat turi boʻyicha bilimini baholash va koʻrsatkichini aniqlash ularning kasbni oʻquv dasturi mavzusi boʻyicha tasavvurga ega boʻlishi, mavzuning mohiyatini tushunib yetishi va aytib bera olishi, olgan bilimlarini amalda qoʻllay olishi, ijodiy fikrlay olishi va xulosa qabul qila olishi hamda mustaqil ishlarni bajarishi kabi mezonlarga qarab amalga oshiriladi.
+Jumladan:
+bitiruvchi mustaqil xulosa va qaror qabul qiladi, ijodiy fikrlay oladi, mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (mavzu) boʻyicha tasavvurga ega deb topilganda – 90-100 (aʼlo) ball;
+bitiruvchi mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb(mavzu) boʻyicha tasavvurga ega deb topilganda – 71-89 (yaxshi) ball;
+bitiruvchi olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (mavzu) boʻyicha tasavvurga ega deb topilganda – 60-70 (qoniqarli) ball;
+bitiruvchi kasb dasturini oʻzlashtirmagan, kasbning (mavzuning) mohiyatini tushunmaganda- 0-59 (qoniqarsiz) ball.
+Nazorat turlarini oʻtkazish boʻyicha tuzilgan topshiriqlarning mazmuni oʻquvchining oʻzlashtirishini xolis (obyektiv) va aniq baholash imkoniyatini berishi lozim.
+O‘quvchilar bilimini baholash mezonlari
+Baholash usuli
+Topshiriq
+
+Baholash mezonlari
+Maksimal ball
+Baholash o‘tkazish vaqti
+Joriy nazorat
+Bajarilgan loyiha ishini
+bajarilgan loyihaning belgilangan talablariga javob berishi; 
+ilovaning asosiy funksiyalari to‘liq va xatosiz ishlashi;
+foydalanuvchi kutilgan natijalarni olishi;
+ilova interfeysi qulay, tushunarli va estetik jihatdan yaxshi dizaynlashganligi;
+animatsiyalar va o‘zaro ta’sir elementlarining borligi;
+kod toza, o‘qilishi oson, yaxshi tuzilganligi;
+android dasturlashning zamonaviy usullaridan foydalanilganligi;
+loyihaning maqsadi, ishlash prinsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi.
+40 ball
+O‘quv jarayoni davomiyligida o‘tkaziladi
+Oraliq nazorat
+Yozma, topshiriqlar 
+nazariy savollarga to‘liq va aniq javob berilganligi;
+javoblar faktlarga asoslanganligi va xato yo‘qligi;
+tushuntirish aniq va misollar bilan boyitilganligi;
+matnda grammatik va imlo xatolarining kamligi;
+muammoni tahlil qilinganligi va fikrlarni ifodalash darajasi.
+20 ball
+Har chorak yakunida
+Amaliy topshiriqlar
+belgilangan barcha funksiyalar to‘liq ishlashi;
+kod o‘qilishi osonligi, izohlar mavjudligi, keraksiz takrorlanishlar  yo‘qligi;
+zarur texnologiyalar  to‘g‘ri ishlatilganligi;
+ilova barqarorligi va xatolar yo‘qligi.
+Test topshiriqlari
+savollarga to‘g‘ri javob berganligi.
+Yakuniy nazorat
+Loyiha ishlarini yakuni bo‘yicha
+bajarilgan loyihaning belgilangan talablariga javob berishi; 
+ilovaning asosiy funksiyalari to‘liq va xatosiz ishlashi;
+foydalanuvchi kutilgan natijalarni olishi;
+ilova interfeysi qulay, tushunarli va estetik jihatdan yaxshi dizaynlashganligi;
+animatsiyalar va o‘zaro ta’sir elementlarining borligi;
+kod toza, o‘qilishi oson, yaxshi tuzilganligi;
+android dasturlashning zamonaviy usullaridan foydalanilganligi;
+loyihaning maqsadi, ishlash prinsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi.
+40 ball
+O‘quv yili oxirida, kurs yakunida
+Jami
+
+
+100 ball
+
+
+Oraliq nazoratda  topshiriq  turlaring nazorat jarayonida faqat bitta turidan foydalanish mumkin.
+10. ADVANCED ANDROID DASTURLASH KASBI TAVSIFI
+10.1. Bitiruvchining kasbiy faoliyati sohalari
+“Advanced Android dasturlash” kasb-hunarga tayyorlash kursini muvaffaqiyatli tugatgan o‘quvchi mobil ilovalar ishlab chiqish va texnik qo‘llab-quvvatlash sohasida boshlang‘ich darajadagi amaliy faoliyatni amalga oshira oladi. U quyidagi yo‘nalishlarda faoliyat yuritishi mumkin:
+ta’lim muassasalari, startap loyihalar va IT kompaniyalarda mobil dasturlash bo‘yicha amaliyotchi yoki texnik yordamchi sifatida;
+tashkilot va korxonalarning ichki mobil yechimlarini (hisobot, nazorat, servis ilovalari) ishlab chiqishda ishtirok etuvchi dasturchi sifatida;
+frilanser yoki mustaqil loyiha ishlab chiquvchi sifatida oddiy Android ilovalarni yaratish bo‘yicha xizmat ko‘rsatuvchi sifatida.
+10.2. Bitiruvchining kasbiga muvofiq kasbiy faoliyat obyektlari
+Bitiruvchi faoliyat yuritishi mumkin bo‘lgan asosiy obyektlar:
+Android ilovalar va ularning komponentlari (Activity, Fragment, Service, Broadcast Receiver);
+Dasturlash muhitlari: Android Studio, IntelliJ IDEA;
+Foydalanuvchi interfeyslari (UI/UX) – XML, Material Design, Jetpack Compose asosida yaratilgan sahifalar;
+Ma’lumotlar bazalari: SQLite, Room, Firebase Firestore;
+Internet texnologiyalari: Retrofit, Volley, OkHttp asosida yaratilgan API interfeyslar;
+Bulutli xizmatlar: Firebase Authentication, Cloud Storage, Google Play Console;
+Sinov muhiti va asboblar: Android Emulator, real qurilmalar, Logcat, Debug tizimlari.
+10.3. ADVANCED ANDROID DASTURlASH kasbiy faoliyat turlari
+Bitiruvchi quyidagi kasbiy faoliyat turlarini bajarishga tayyorlanadi:
+Android Studio muhiti va zarur asbob-uskunalarni o‘rnatish, sozlash va ulardan samarali foydalanish;
+Dasturiy loyihalar yaratish, kod tuzilmasini to‘g‘ri tashkil etish va fayl arxitekturasini yuritish;
+Java yoki Kotlin tillarida mobil ilovalar ishlab chiqish;
+UI elementlarini loyihalash va interaktiv sahifalarni yaratish;
+Ma’lumotlar bazasi bilan ishlash, CRUD amaliyotlarini bajarish;
+Internet orqali ma’lumot almashish (API so‘rovlar, JSON parsing);
+Firebase xizmatlari yordamida foydalanuvchi autentifikatsiyasi va ma’lumotlar saqlashni amalga oshirish;
+Ilovani sinovdan o‘tkazish (debug, test, logcat) va yakuniy APK faylini tayyorlash;
+Dastur xavfsizligini ta’minlash va foydalanuvchi ma’lumotlarini himoyalash;
+Google Play Console orqali ilovani nashr qilish bosqichlarini bajarish.
+10.4. ADVANCED ANDROID DASTURlASH bo‘yicha malaka talablari
+Bitiruvchi quyidagi kasbiy malakalarni egallaydi:
+Android Studio muhitida mustaqil loyiha yaratish va ishga tushirish;
+UI/UX dizayn elementlarini Material Design standartlariga mos ishlab chiqish;
+Dasturlash jarayonida algoritmik va mantiqiy fikrlashni qo‘llash;
+Kichik hajmli real loyihalarda jamoa bilan ishlash va kod versiyasini boshqarish (Git);
+Ma’lumotlar bilan ishlashda xatoliklarni aniqlash, tahlil qilish va bartaraf etish.
+10.5. Kasbiy rivojlanish istiqbollari
+Advanced Android Dasturlash kasbini egallagan bitiruvchi o‘z malakasini quyidagi yo‘nalishlarda davom ettirishi mumkin:
+Malaka oshirish va qo‘shimcha kurslar: Jetpack Compose, Firebase, Kotlin Coroutines, Clean Architecture bo‘yicha;
+O‘rta maxsus va oliy ta’lim muassasalari: axborot texnologiyalari, dasturiy injiniring yoki kompyuter tizimlari mutaxassisligi bo‘yicha;
+Kasbiy faoliyatni kengaytirish: Android dasturchi, mobil dastur testlovchisi, UI/UX dizayneri yoki backend integratsiya mutaxassisi sifatida.
+11. KASBNING QOʻLLANISH SOHASI
+	Mazkur malaka talabi “Advanced Android dasturlash” kasbi bo‘yicha umumiy o‘rta ta’lim muassasalarining 10-sinf o‘quvchilari uchun kasb-hunarga tayyorlash kurslari (keyingi o‘rinlarda - kasb-hunarga tayyorlash kurslari) doirasida mobil dasturlashning boshlang‘ich bosqichini o‘rganish uchun ishlab chiqilgan.
+Mazkur dastur o‘quvchilarda mobil ilovalar yaratish, testlash va foydalanuvchi interfeysini loyihalash bo‘yicha zaruriy nazariy bilimlar va amaliy ko‘nikmalarni shakllantirishni ko‘zda tutadi.
+Mazkur malaka talabi quyidagilarni belgilaydi:
+Advanced Android Dasturlash bo‘yicha ishchilarni tayyorlashning zaruriy bilimlar mazmuni, o‘quv yuklamasi hajmi hamda kasbiy tayyorgarlik darajasiga qo‘yiladigan asosiy talablarni;
+“Android dasturlash” kursini o‘qitishda ta’lim jarayonini tashkil etish va baholash mezonlarini;
+O‘quv jarayoni davomida nazorat ishlari, oraliq loyihalar va yakuniy loyiha himoyasi orqali o‘quvchilarning egallagan bilim va ko‘nikmalarini amaliy baholash tartibini.
+Malaka talablari quyidagilar uchun asos bo‘ladi:
+kasbga tayyorlash sifati va darajasini aniqlashda asosiy mezon sifatida foydalaniladi;
+o‘quv dasturini amalga oshirayotgan ta’lim tashkilotlari tomonidan o‘quvchilarning kasbiy tayyorgarligini baholashda asos sifatida qabul qilinadi;
+o‘quv dasturini to‘liq o‘zlashtirgan bitiruvchilarga kasbning tegishli darajasini tasdiqlovchi davlat namunasidagi sertifikatni berish uchun asos hisoblanadi.
+Mazkur malaka talablari barcha umumiy o‘rta ta’lim tashkilotlari tomonidan tatbiq etilishi majburiydir.
+“Android dasturlash” kasb-hunarga tayyorlash kursini to‘liq o‘zlashtirgan 10-sinf o‘quvchilari O‘zbekiston Respublikasi Milliy malakalar ramkasining 2-darajali sertifikatini olish huquqiga ega bo‘ladi.
+12. ADVANCED ANDROID DASTURLASH  KASBIGA O‘QITISH NATIJALARI
+12.1. Birinchi chorak uchun
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+I-BOB. Android loyihalarini boshqarish va versiya nazorati tizimlariGradle konfiguratsiyasi va build variantlari- Gradle tizimining Android loyihalaridagi o‘rni va vazifasini tushunadi;
+- build.gradle faylining asosiy tuzilmasi va modullararo bog‘lanishini biladi; - Build variantlar (debug, release) va ularning farqini tushunadi;
+- Gradle yordamida kutubxonalarni ulash va versiyalarni boshqarish ko‘nikmasiga ega bo‘ladi;
+- Gradle so‘rovlarini (tasks) bajarish va xatoliklarni aniqlashni biladi;
+Dependency management va versiyalar bilan ishlash- Android loyihalarida kutubxonalar (dependencies) roli va ularning turlari haqida tushuncha hosil qiladi;
+- build.gradle faylida kutubxonalarni ulash va boshqarishni biladi;
+- implementation, api, compileOnly kabi dependency turlarining farqini tushunadi;
+- Kutubxona versiyalarini yangilash va moslik muammolarini hal qilish ko‘nikmasiga ega bo‘ladi;
+- Versiyalarni avtomatik boshqarish va yangilanishni tekshirish usullarini qo‘llay oladi;
+ProGuard va R8 yordamida kodni optimallashtirish- Kodni qisqartirish (shrinking), chalkashtirish (obfuscation) va optimallashtirishning maqsadi va foydasini tushunadi;
+- R8 ning Android’da standart bo‘lishi, ProGuard’dan farqi va ularning ishlash tamoyillarini biladi;
+- proguard-rules.pro faylida - keep, - dontwarn, sinf/a’zo patternlari bilan ishlashni amaliy qo‘llay oladi;
+- Obfuskatsiya sababli yuzaga keladigan xatolarni aniqlash, mapping.txt orqali stacktrace’ni deobfuskatsiya qilishni biladi;
+Git bilan versiya nazorati asoslari- Git tizimining versiya nazorati uchun ahamiyatini tushunadi;
+- Loyiha o‘zgarishlarini saqlash, kuzatish va boshqarish jarayonlarini biladi;
+- .gitignore faylini Android loyihasi uchun to‘g‘ri sozlashni o‘rganadi;
+- Tarmoqlar (branch) yaratish, birlashtirish va versiyalarni boshqarish ko‘nikmasiga ega bo‘ladi;
+- GitHub, GitLab kabi platformalar bilan sinxron ishlashni biladi;
+
+
+GitHub’da loyihalar yaratish va boshqarish
+- GitHub platformasining maqsadi va imkoniyatlarini tushunadi;
+- Yangi repozitoriya (repository) yaratish va uni lokal loyiha bilan bog‘lashni biladi; -  
+- Collaborator qo‘shish, kod sharhlash (pull request) va muhokama (issue) jarayonlarini amaliy bajaradi; 
+- GitHub Actions orqali avtomatik build va testlarni sozlash haqida tushuncha hosil qiladi; 
+- Jamoaviy loyihalarda kodni saqlash, baham ko‘rish va boshqarish bo‘yicha mustaqil ishlay oladi.
+
+GitLab va Bitbucketda jamoaviy ish jarayonlari
+- GitLab va Bitbucket platformalarining vazifasi va GitHub’dan farqini tushunadi;
+- Branch va merge jarayonlarini jamoaviy muhitda to‘g‘ri tashkil etish ko‘nikmasiga ega bo‘ladi;
+- Merge Request, Issue Tracker va Pipeline funksiyalarining ishlash tamoyillarini o‘rganadi;
+- Continuous Integration (CI) va Continuous Deployment (CD) jarayonlarini sozlash haqida tushuncha hosil qiladi;
+
+Branch, Merge va Pull Request jarayonlari
+- Branch (tarmoq) tushunchasini va uning loyihalarda rolini tushunadi;
+- Yangi branch yaratish, unga o‘tish va o‘zgarishlarni mustaqil tarzda sinovdan o‘tkazishni biladi;
+- Asosiy tarmoqqa (main/master) o‘zgartirishlarni birlashtirish (merge) jarayonini bajaradi;
+- Merge vaqtida kelib chiqadigan konfliktlarni aniqlash va hal etish ko‘nikmasiga ega bo‘ladi;
+- Kod sharhlari (code review) va tasdiqlash (approve) mexanizmlaridan foydalanishni o‘rganadi;
+Continuous Integration (CI/CD) tushunchasijarayonlari- Continuous Integration (CI) va Continuous Deployment (CD) tushunchalarining mohiyatini tushunadi;
+- CI/CD ning dastur ishlab chiqish jarayonini avtomatlashtirishdagi ahamiyatini biladi;
+- .yaml konfiguratsiya fayllarining tuzilishi va bosqichlarini (build, test, deploy) tushunadi;
+- CD bosqichida ilovani avtomatik tarzda Play Market yoki serverga joylashtirish jarayonini tushunadi;
+- CI jarayonida xatoliklarni aniqlash, test natijalarini tahlil qilish va avtomatik tuzatish mexanizmlarini biladi;
+II-BOB. Android arxitekturasi va dastur tuzilmasi
+MVVM (Model-View-ViewModel) arxitekturasi asoslari
+- MVVM arxitekturasining maqsadi va uning afzalliklarini tushunadi;
+- Model, View va ViewModel qatlamlarining vazifalari va o‘zaro aloqasini biladi;
+- Data Binding va LiveData yordamida UI va ma’lumotlar o‘rtasidagi sinxronlashuvni o‘rganadi; 
+- Jetpack komponentlari (ViewModel, LiveData, Repository) bilan ishlashni amaliyotda qo‘llay oladi; 
+- MVVM yordamida kodni modulli, testlanadigan va oson kengaytiriladigan shaklda yozishni biladi;
+
+MVI (Model-View-Intent) yondashuvi
+- MVI arxitektura naqshining mohiyatini va uni MVVM dan farqlovchi jihatlarni tushunadi;
+- Model, View va Intent qatlamlarining vazifalari va o‘zaro ishlash tamoyillarini biladi;
+- UI holatini (state) yagona oqim sifatida boshqarish tamoyillarini o‘rganadi;
+- Intents orqali foydalanuvchi harakatlarini kuzatish va ularni ViewModel yoki Reducer orqali qayta ishlashni biladi;
+- MVI yordamida barqaror va testlanadigan foydalanuvchi interfeysini qurishni o‘rganadi;
+
+MVP (Model-View-Presenter) modeli
+- MVP arxitektura naqshining mohiyatini va uni MVVM hamda MVI dan farqini tushunadi; 
+- Model, View va Presenter qismlarining vazifalari hamda o‘zaro aloqasini biladi;
+- Presenter orqali foydalanuvchi harakatlarini boshqarish va View bilan ma’lumot almashishni o‘rganadi;
+- Ma’lumotlarni Model qatlamida saqlash va yangilash jarayonlarini amalda qo‘llay oladi;
+- Kichik Android loyihalarida MVP arxitekturasini to‘g‘ri qo‘llay oladi.
+
+ViewModel va LiveData bilan ishlash
+- ViewModel va LiveData komponentlarining maqsadi va afzalliklarini tushunadi;
+- LiveData yordamida ma’lumotlar o‘zgarishini real vaqt rejimida kuzatish ko‘nikmasiga ega bo‘ladi;
+- ViewModel va LiveData ni birgalikda qo‘llab, UI va ma’lumotlar sinxronlashuvini ta’minlay oladi;
+- MVVM arxitekturasida ViewModel va LiveData’ni to‘g‘ri joylashtirish hamda amaliy loyihalarda tatbiq etish ko‘nikmasiga ega bo‘ladi.
+StateFlow va SharedFlow oqimlarini boshqarish- Kotlin Flow kutubxonasining asosiy tushunchalari va afzalliklarini tushunadi;
+- StateFlow va SharedFlow oqimlarining farqi va ularning ishlash tamoyillarini biladi;
+- CoroutineScope doirasida Flow oqimlarini boshqarish va bekor qilish (cancel) ko‘nikmasiga ega bo‘ladi;
+- SharedFlow orqali bir nechta kuzatuvchilarga (collectors) ma’lumot uzatish jarayonini tushunadi;
+- emit, collect, replay, subscription kabi asosiy funksiyalarni amalda qo‘llay oladi;
+
+
+Repository pattern va ma’lumot oqimini loyihalash
+- Repository pattern’ning maqsadi va uni MVVM arxitekturadagi o‘rni haqida tushuncha hosil qiladi;
+- DataSource tushunchasini va ma’lumot oqimining (data flow) yo‘nalishini o‘rganadi;
+- Remote (masofaviy) va Local (mahalliy) manbalar o‘rtasida sinxronlash jarayonini tushunadi;
+- Repository qatlamida xatoliklarni (Exception Handling) to‘g‘ri boshqarish ko‘nikmasiga ega bo‘ladi;
+- Barqaror, kengaytiriladigan va testlanadigan ma’lumot oqimini loyihalashni o‘rganadi.
+Dependency Injection (Dagger, Hilt, Koin)- Dependency Injection (DI) tushunchasini va uning dastur arxitekturasidagi o‘rnini tushunadi;
+- Dastur komponentlari orasidagi bog‘liqlikni kamaytirish va modullilikni oshirishning ahamiyatini biladi;
+- Dagger va Hilt kutubxonalarining ishlash tamoyillari va ularning farqlarini o‘rganadi;
+- @Inject, @Module, @Provides, @Singleton annotatsiyalarining vazifasini biladi;
+Clean Architecture tamoyillari- Clean Architecture konsepsiyasining mohiyatini va dastur tuzilmasini yaxshilashdagi rolini tushunadi;
+- Arxitekturaning asosiy qatlamlari - Presentation, Domain va Data qismlarining vazifalarini biladi;
+- Har bir qatlamning o‘zaro mustaqilligi va bog‘lanish chegaralarini (boundaries) o‘rganadi;
+- Use Case (Interactor) orqali biznes mantiqni alohida boshqarish usulini biladi;
+- Repository va Entity’lar orqali ma’lumot oqimini qatlamlar orasida to‘g‘ri tashkil eta oladi;
+
+
+Amaliy mashg‘ulot: “Smart Finance App - MVVM asosida hisob-kitob moduli yaratish”
+- MVVM arxitekturasi asosida ilova modullarini tuzish jarayonini amalda bajaradi;
+- ViewModel va LiveData orqali foydalanuvchi ma’lumotlarini boshqarish va saqlashni biladi;
+- RecyclerView yordamida moliyaviy ma’lumotlarni ro‘yxat ko‘rinishida chiqarish ko‘nikmasiga ega bo‘ladi;
+- Room ma’lumotlar bazasidan foydalanib, kiritilgan xarajat va daromadlarni saqlashni o‘rganadi;
+- Data Binding orqali interfeys va ma’lumotlar o‘rtasida avtomatik bog‘lanish yaratadi;
+
+
+SQLite bilan ma’lumot saqlash
+- SQLite ma’lumotlar bazasining tuzilmasi va ishlash prinsipi haqida tushunchaga ega bo‘ladi;
+- Jadval (table) yaratish va maydonlarga ma’lumot kiritish (INSERT) amallarini bajaradi;
+- SQL buyruqlari yordamida ma’lumotlarni yangilash (UPDATE) va o‘chirish (DELETE)ni bajaradi;
+- SELECT operatori orqali kerakli yozuvlarni saralab olishni o‘rganadi;
+- Smart Finance ilovasida xarajatlar ro‘yxatini saqlash uchun SQLite bazasini qo‘llaydi.
+
+
+Room Database orqali ORM ishlatish
+- Room kutubxonasining asosiy komponentlari (Entity, DAO, Database) bilan ishlashni biladi;
+- ORM texnologiyasining SQL kodlarini soddalashtirishdagi afzalliklarini tushunadi;
+- Room orqali CRUD (Create, Read, Update, Delete) amallarini bajarishni o‘rganadi;
+- LiveData va ViewModel orqali ma’lumotlarning real vaqt yangilanishini kuzatadi;
+- Smart Finance ilovasida foydalanuvchi ma’lumotlarini Room orqali saqlaydi va o‘qiydi.
+
+
+Realm Database bilan real vaqtli ma’lumot almashish
+- Realm ma’lumotlar bazasining tuzilishi va afzalliklarini biladi;
+- Realm orqali offline va online sinxronizatsiyani tashkil etish usullarini o‘rganadi;
+- Model sinflarini yaratish va ulardan ma’lumot olish jarayonini tushunadi;
+- Ma’lumot o‘zgarishlarini real vaqt rejimida kuzatish uchun Listener mexanizmini qo‘llaydi;
+- Smart Finance ilovasida foydalanuvchi tranzaksiyalarini real vaqt rejimida sinxronlashtiradi.
+
+
+Firebase Firestore bilan ma’lumot sinxronligi
+- Firestore bazasining “collection” va “document” tuzilmasini tushunadi;
+- CRUD amallarini (create, read, update, delete) Firestore orqali bajaradi;
+- Real vaqt rejimida ma’lumot yangilanishini kuzatadi va sinxronlash mexanizmini o‘rganadi;
+- Firestore xavfsizlik qoidalari (rules) bilan ishlashni biladi;
+- Smart Finance ilovasida xarajat va daromadlar ma’lumotlarini Firestore’da saqlaydi.
+
+
+Repository qatlamida ma’lumotlar oqimi
+- Repository pattern’ning vazifasi va afzalliklarini tushunadi;                                                      - Ma’lumot manbalarini (Room, Firestore, Retrofit) yagona qatlamda birlashtirishni o‘rganadi;                                                                                                                                     - ViewModel orqali Repository bilan muloqot o‘rnatishni biladi;                                              - Ma’lumot oqimini kuzatish uchun LiveData yoki Flow mexanizmini qo‘llaydi;                           - Smart Finance ilovasida Repository qatlamidan foydalanib, offline va online ma’lumotlarni boshqaradi.
+
+
+12.2. Ikinchi chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+
+III-BOB. Ma’lumotlar bazalari va sinxronlash tizimlari
+Offline/online sinxronizatsiya mexanizmlari
+- Internet mavjud emasligida ilovaning ishlash prinsipini tushunadi;                                                   - Ma’lumotlarni vaqtincha saqlash va keyinchalik sinxronlash usullarini o‘rganadi;               - Network Callback yordamida tarmoq holatini aniqlaydi;                                                                       - Smart Finance ilovasida offline rejimda kiritilgan ma’lumotni internet yoqilgach sinxronlashni qo‘llaydi;                                                                                                                               - Ma’lumot ziddiyatlarini (conflict) hal qilish mexanizmini tushunadi.
+
+JSON formatida ma’lumot almashish
+- JSON (JavaScript Object Notation) tuzilmasi va sintaksisini biladi;                                                      - JSON ma’lumotlarini Kotlin obyektlariga o‘tkazish (parse) jarayonini o‘rganadi;                                    - Gson va Moshi kutubxonalarining farqlarini tushunadi;                                                                         - Smart Finance ilovasida serverdan kelgan ma’lumotlarni JSON formatida qayta ishlaydi;                    - RESTful API bilan ishlashda JSON’ning rolini anglaydi.
+
+Data Caching va Local Storage strategiyalari
+- Data caching’ning mohiyatini va ilovalardagi rolini tushunadi;                                                             - Local va Memory cache o‘rtasidagi farqni biladi;                                                                                  - Room yoki SharedPreferences orqali ma’lumotni vaqtincha saqlash usullarini o‘rganadi;                   - Internet ulanmagan paytda ma’lumotni cache’dan o‘qish mexanizmini qo‘llaydi;                                 - Smart Finance App’da valyuta kurslarini cache yordamida offline ko‘rsatadi.
+
+Amaliy mashg‘ulot: “Smart Finance App - Offline va Cloud sinxronizatsiya”
+- Smart Finance ilovasida Room va Firestore bazalarini birlashtirishni o‘rganadi;                                  - Internet mavjudligiga qarab offline va online rejimlarni sozlaydi;                                                       - Sinxronlash mexanizmini real vaqt rejimida testlaydi;                                                                         - Xatoliklarni aniqlash va qayta sinxronlashni o‘rganadi;                                                                           - Loyiha bo‘yicha mustaqil kod yozish va testlash ko‘nikmasiga ega bo‘ladi.
+
+Retrofit bilan RESTful API chaqirish
+- Retrofit kutubxonasining asosiy komponentlari (Interface, Call, Response) bilan ishlashni biladi;                                                                                                                                                            - GET, POST, PUT, DELETE metodlari orqali ma’lumot almashishni o‘rganadi;                                    - Gson Converter yordamida JSON javoblarini Kotlin obyektlariga o‘tkazadi;                                        - Retrofit va Coroutine integratsiyasi yordamida asinxron so‘rovlar bajarishni o‘rganadi;                      - Smart Finance ilovasida valyuta kurslarini olish uchun RESTful API bilan ishlaydi.
+
+Volley orqali HTTP so‘rovlarni yuborish
+- Volley kutubxonasining asosiy imkoniyatlarini tushunadi;                                                                     - GET va POST so‘rovlarini yuborish va javoblarni qayta ishlashni o‘rganadi;                                        - Tarmoqdagi xatolarni (error listener) aniqlash va boshqarish usullarini biladi;                                       - Caching mexanizmini sozlab, tarmoq samaradorligini oshiradi;                                                - Smart Finance ilovasida tezkor so‘rovlar uchun Volley kutubxonasini qo‘llaydi.
+
+OkHttp bilan tarmoq nazorati va interceptorlardan foydalanish
+- OkHttp kutubxonasining vazifasi va afzalliklarini tushunadi;                                                                 - Interceptor yordamida so‘rovga token va header qo‘shishni o‘rganadi;                                         - Tarmoq loglarini kuzatish uchun HttpLoggingInterceptor’dan foydalanadi;                                           - So‘rovni kechiktirish yoki takrorlash mexanizmini qo‘llaydi;                                                                  - Smart Finance ilovasida tarmoq so‘rovlarini OkHttp orqali optimallashtiradi.
+
+API javoblarini JSON formatida tahlil qilish (Gson, Moshi)
+- JSON parsing jarayonini chuqur tushunadi;                                                                                             - Gson va Moshi kutubxonalarining afzalliklarini solishtiradi;                                                               - Annotatsiyalar orqali JSON maydonlarini obyektlarga moslashtiradi;                                                      - Smart Finance ilovasida serverdan olingan ma’lumotlarni avtomatik qayta ishlaydi;                             - JSON parsing jarayonida xatoliklarni aniqlab, ularni boshqaradi.
+
+Autentifikatsiya: OAuth2.0 va Token almashuvi
+- OAuth2.0 protokolining ishlash mexanizmini biladi;                                                                             - Token generatsiyasi va uni saqlash usullarini o‘rganadi;                                                                        - API so‘rovlariga Bearer Token qo‘shish amaliyotini bajaradi;                                                                  - Refresh token yordamida avtorizatsiya sessiyasini yangilashni o‘rganadi;                                            - Smart Finance ilovasida foydalanuvchi autentifikatsiyasi uchun token tizimini qo‘llaydi.
+
+IV-BOB. Tarmoq va API integratsiyasi
+Autentifikatsiya: OAuth2.0 va Token almashuvi
+- OAuth2.0 protokolining mohiyatini va uning xavfsiz autentifikatsiyadagi rolini tushunadi;
+- Access Token, Refresh Token va Authorization Code tushunchalarini biladi;
+- REST API bilan ishlashda Token almashuvi (token exchange) jarayonini o‘rganadi;
+- Retrofit yoki OkHttp orqali avtorizatsiya so‘rovlarini yuborish va javoblarni qayta ishlashni biladi;
+- Token’larni xavfsiz saqlash va ularni avtomatik yangilash (refresh) mexanizmini amalda qo‘llay oladi;
+Error handling va retry strategiyalari- Android ilovalarida xatoliklarni aniqlash, tahlil qilish va boshqarishning asosiy tamoyillarini tushunadi;
+- Try-catch bloklari, Exception sinflari va Result tipidan foydalanishni biladi;
+- Network xatoliklari (timeout, no connection, 404, 500) holatlarini aniqlash va qayta ishlash ko‘nikmasiga ega bo‘ladi;
+- Retrofit va Coroutines’da retry, onFailure, catch mexanizmlaridan foydalanishni o‘rganadi;
+- Retry strategiyalarini (fixed delay, exponential backoff) amaliyotda qo‘llay oladi;
+Retrofit + Room integratsiyasi (API cache)- Retrofit va Room kutubxonalarining vazifasi hamda ularning o‘zaro integratsiyasini tushunadi;
+- API’dan olingan ma’lumotlarni Room ma’lumotlar bazasiga saqlash (cache) jarayonini o‘rganadi;
+- Dao, Entity, va Repository qatlamlari orqali ma’lumot almashuv oqimini to‘g‘ri tashkil etadi;
+- Offline rejimda saqlangan ma’lumotlarni ko‘rsatish va sinxronlashni amalda qo‘llay oladi;
+- Retrofit orqali API chaqiruv natijalarini JSON’dan obyektga parse qilishni biladi;
+Amaliy mashg‘ulot: “Smart Finance App - Valyuta va API integratsiyasi”- Valyuta kurslari API’larini (JSON) o‘qish va Retrofit bilan integratsiya qilishni biladi;
+- Model-Repository-ViewModel oqimida ma’lumotlarni olish, qayta ishlash va UI’ga uzatishni amalda bajaradi;
+- Konvertatsiya formulalarini (base, target, amount) qo‘llab, natijani BigDecimal bilan aniq hisoblay oladi;
+- Room orqali kurslarni keshga saqlash, offline ko‘rsatish va periodik yangilash strategiyasini sozlaydi;
+- Xatolarni (timeout, 4xx/5xx) tutish, retry (exponential backoff) va foydalanuvchi xabarnomasini (Snackbar/Dialog) joriy qiladi;
+
+
+API xavfsizligi va versiyalash tamoyillari
+- API xavfsizligini ta’minlashning asosiy tamoyillari (HTTPS, Token, OAuth2.0) haqida tushunchaga ega bo‘ladi;
+- Access Token va Refresh Token orqali foydalanuvchi autentifikatsiyasini amalga oshirishni biladi;
+- API versiyalash (v1, v2, v3) zaruriyatini va orqaga moslikni (backward compatibility) tushunadi;
+- API kalitlarini (API keys) xavfsiz saqlash va foydalanishni amalda qo‘llay oladi;
+- So‘rov va javoblarda (request/response) xavfsizlikni ta’minlash uchun sarlavhalar (headers) bilan ishlashni biladi;
+Jetpack Compose’da State Management (remember, mutableStateOf)- Jetpack Compose’da holat (state) boshqaruvining asosiy tamoyillarini tushunadi;
+- remember va mutableStateOf funksiyalarining vazifasi va ularning farqini biladi;
+- UI elementlarining o‘zgarishini real vaqt rejimida boshqarish va yangilashni o‘rganadi;
+- ViewModel bilan Compose holatini sinxronlashtirishni (state hoisting) biladi;
+- Ko‘p ekranli ilovalarda holatni barqaror saqlash va qayta ishlash (recomposition) jarayonlarini o‘rganadi;
+
+12.3. Uchinchi chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+IV-BOB. Tarmoq va API integratsiyasiLayoutlar: Column, Row, Box, LazyColumn, LazyRow- Jetpack Compose’da asosiy layout elementlari — Column, Row, Box ning vazifasini tushunadi;
+- UI elementlarini vertikal va gorizontal joylashtirish tamoyillarini biladi;
+- Modifier yordamida layout’larni o‘lchamini, joylashuvini va oraliqlarini boshqarish ko‘nikmasiga ega bo‘ladi;
+- LazyColumn va LazyRow yordamida katta hajmdagi ro‘yxatlar bilan samarali ishlashni o‘rganadi;
+- Scrollable (aylanadigan) interfeyslar yaratish va ularni optimallashtirishni biladi;
+Material3 komponentlari va temalar bilan ishlash- Material Design 3 (Material You) konsepsiyasi va uning Android interfeyslaridagi ahamiyatini tushunadi;
+- Material3 kutubxonasidagi asosiy komponentlar (Button, TextField, Card, Scaffold, TopAppBar) bilan ishlashni biladi;
+- MaterialTheme orqali ranglar, shriftlar va shakllarni (shapes) boshqarish ko‘nikmasiga ega bo‘ladi;
+- colorScheme va typography yordamida loyihaga mos dizayn yaratishni o‘rganadi;
+- UI dizaynni modulli va qayta foydalaniladigan holatda tashkil etishni o‘rganadi;
+Navigation Component va multi-screen arxitekturasi- Android ilovalarida navigatsiya tizimining maqsadi va tuzilishini tushunadi;
+- Navigation Component yordamida ekranlar (fragmentlar yoki composable’lar) o‘rtasida o‘tishni boshqarishni biladi;
+- NavController, NavHost, va NavGraph elementlarining vazifasini o‘rganadi;
+- SafeArgs yordamida ekranlar orasida xavfsiz ma’lumot uzatish ko‘nikmasiga ega bo‘ladi;
+- Multi-screen (ko‘p sahifali) arxitektura tuzish va foydalanuvchi oqimini (user flow) loyihalashni o‘rganadi;
+
+
+Rasm, ikon va animatsiyalar bilan ishlash
+- Android’da rasm (image) va ikon (icon) formatlari hamda ularning afzalliklarini tushunadi;
+- SVG va vektor ikonalar bilan ishlash, ularni turli o‘lcham va ranglarda qo‘llash - ko‘nikmasiga ega bo‘ladi;
+- Harakat (motion) va o‘tish (transition) effektlarini foydalanuvchi interfeysida to‘g‘ri joylashtirishni biladi;
+- Lottie kutubxonasi orqali murakkab JSON animatsiyalarni integratsiya qilishni o‘rganadi;
+Custom Composable elementlar yaratish- Jetpack Compose’da @Composable funksiyasi va uning ishlash mexanizmini tushunadi;
+- UI komponentlarini qayta foydalaniladigan (reusable) qilib yaratish tamoyillarini biladi;
+- Parametrli Composable funksiyalar yozish va ularni loyihada modulli qo‘llashni o‘rganadi;
+- State bilan ishlaydigan interaktiv komponentlar (masalan, tugmalar, kartalar, kiritish maydonlari) yaratishni biladi;
+Custom Composable’larni Preview orqali tekshirish va optimallashtirishni o‘rganadi;
+
+
+Gesture Detection va foydalanuvchi interaktivligi
+- Gesture (harakat) tushunchasi va uning Android ilovalarida o‘rni haqida tushunchaga ega bo‘ladi;
+- Tap, LongPress, Swipe, Drag kabi foydalanuvchi harakatlarini aniqlash usullarini biladi;
+- GestureDetector va Modifier.pointerInput funksiyalaridan foydalanishni o‘rganadi;
+- Interaktiv elementlarga harakatlar qo‘shish va ularga javob berish mexanizmini biladi;
+- Smart Finance App’da foydalanuvchi xarajat kartasini “swipe” orqali o‘chirish funksiyasini yaratadi.
+
+Adaptive UI va responsiv dizayn (mobil, planshet, TV)
+- Adaptive UI tushunchasini va uning dizayndagi ahamiyatini tushunadi;
+- Ekran o‘lchamiga qarab avtomatik moslashuvchi interfeys yaratish ko‘nikmasiga ega bo‘ladi;
+- ConstraintLayout, BoxWithConstraints va WindowSizeClass vositalaridan foydalanishni o‘rganadi;
+- Turli qurilmalarda (mobil, planshet, TV) dizaynni testlashni biladi;
+- Smart Finance App’da barcha ekranlar uchun moslashuvchan interfeys yaratadi.
+
+UI testlash (Espresso, Compose Testing)
+- UI testlashning maqsadi va ilova sifatini oshirishdagi rolini tushunadi;
+- Espresso kutubxonasida UI elementlarini tanlash va avtomatik test yozishni o‘rganadi;
+- Compose Testing API yordamida deklarativ interfeyslarni sinovdan o‘tkazishni biladi;
+- Foydalanuvchi harakatlarini simulyatsiya qilish va natijalarni tekshirish usullarini o‘rganadi;
+- Smart Finance App’da “Xarajat qo‘shish” sahifasi uchun avtomatik UI test yozadi.
+
+Firebase Authentication: foydalanuvchini ro‘yxatdan o‘tkazish
+- Firebase Authentication xizmatining maqsadini va ishlash tamoyilini tushunadi;
+- Email, telefon yoki Google akkaunti orqali foydalanuvchini ro‘yxatdan o‘tkazish usullarini o‘rganadi;
+- Autentifikatsiya jarayonida xavfsizlik va ma’lumot maxfiyligini ta’minlashni biladi;
+- Sessiyalarni boshqarish va foydalanuvchi kirishini tekshirish ko‘nikmasiga ega bo‘ladi;
+- Smart Finance App’da foydalanuvchi ro‘yxatdan o‘tishi va tizimga kirishini amalga oshiradi.
+
+Google, Facebook va Email orqali login
+- OAuth2.0 protokoli asosida uchinchi tomon orqali tizimga kirish mexanizmini tushunadi;
+- Firebase Authentication’da Google va Facebook login integratsiyasini sozlashni o‘rganadi;
+- API kalitlari va xavfsizlik sozlamalarini to‘g‘ri kiritishni biladi;
+- Email orqali ro‘yxatdan o‘tish va parolni tiklash funksiyalarini o‘rganadi;
+- Smart Finance App’da foydalanuvchi turli login usullari orqali tizimga kirishini amalga oshiradi.
+
+Firebase Firestore orqali ma’lumot almashish
+- Firestore bazasining tuzilishi - “collection” va “document” tushunchalarini biladi;
+- CRUD amallarini (yaratish, o‘qish, yangilash, o‘chirish) Firestore’da bajarishni o‘rganadi;
+- Real vaqtli ma’lumot almashish va sinxron yangilanishni tashkil etishni biladi;
+- Firestore xavfsizlik qoidalarini (rules) sozlash va foydalanishni o‘rganadi;
+- Smart Finance App’da foydalanuvchining moliyaviy ma’lumotlarini Firestore orqali saqlaydi va yangilaydi.
+
+Firebase Cloud Messaging (FCM) bilan push xabarnomalar
+- FCM (Firebase Cloud Messaging) xizmatining maqsadi va ishlash jarayonini biladi;
+- Ilova foydalanuvchiga push bildirishnoma yuborish uchun FCM tokenlaridan foydalanishni o‘rganadi;
+- Xabarnoma turlarini (notification va data message) farqlaydi;
+- Ilovada foydalanuvchi byudjeti oshganda avtomatik ogohlantirish chiqarishni sozlaydi;
+- Smart Finance App’da push xabarnomalarni yuborish va boshqarish funksiyasini ishlab chiqadi.
+
+Firebase Storage bilan fayl yuklash
+- Firebase Storage xizmatining maqsadi va ishlash mexanizmini tushunadi;                                                   - Foydalanuvchidan rasm yoki fayl tanlab olish jarayonini o‘rganadi;                                                      - Faylni yuklash, yuklash jarayonini kuzatish va URL manzilini olishni biladi;                                        - Yuklangan fayllarni Firestore bilan bog‘lab, ilovada aks ettirishni o‘rganadi;                                       - Smart Finance App’da kvitansiyalar va rasm fayllarini bulutga yuklashni amalga oshiradi.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12.4. To‘rtinchi  chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+
+VI-BOB. Firebase xizmatlari va ilova integratsiyasi
+Firebase Remote Config va A/B Testing
+- Remote Config xizmatining ilovadagi sozlamalarni masofadan boshqarish imkonini berishini tushunadi;                                                                                                                                    - A/B Testing orqali foydalanuvchilarga turli interfeys yoki funksiyalarni sinovdan o‘tkazish usulini biladi;                                                                                                                                              - Ilovadagi o‘zgarishlarni yangilanishsiz (real vaqt rejimida) qo‘llashni o‘rganadi;                       - Foydalanuvchi guruhlariga mos sozlamalarni yaratish ko‘nikmasiga ega bo‘ladi;                                 - Smart Finance App’da interfeys ranglari yoki reklama joylashuvini testlab optimallashtiradi.
+
+Firebase Analytics bilan ilova tahlili
+- Firebase Analytics xizmatining asosiy imkoniyatlarini va afzalliklarini biladi;                                        - Ilovada foydalanuvchi faoliyatini kuzatuvchi “event” va “user property”larni yaratishni o‘rganadi;                                                                                                                                                  - Olingan tahliliy ma’lumotlardan foydalangan holda foydalanuvchi xatti-harakatlarini tahlil qiladi;                                                                                                                                          - Foydalanuvchi faol soatlarini aniqlash va ilova funksiyalarini baholashni o‘rganadi;                           - Smart Finance App’da eng ko‘p ishlatiladigan bo‘limlarni aniqlab, tahliliy hisobot tayyorlaydi.
+
+Firebase Crashlytics bilan xatolarni kuzatish
+- Crashlytics xizmatining ishlash prinsipi va maqsadini tushunadi;                                                          - Ilovada paydo bo‘ladigan xatoliklarni (crash) aniqlash va ularni kuzatish mexanizmini o‘rganadi;                                                                                                                                                  - Xato loglarini Firebase konsolida tahlil qilib, muammoning sababini topishni o‘rganadi;                 - Real vaqt rejimida xabar olish (alert) funksiyasini sozlashni biladi;                                                        - Smart Finance App’da crashlar yuz berganda avtomatik xatolik hisobotlarini ishlab chiqadi.
+
+Smart Finance App — Foydalanuvchi tizimi va xabarnomalar
+- Firebase Authentication orqali foydalanuvchini ro‘yxatdan o‘tkazish va tizimga kiritishni biladi;                                                                                                                                                           - Firestore bilan integratsiya qilib, foydalanuvchi ma’lumotlarini xavfsiz saqlashni o‘rganadi;                                                                                                                                                     - FCM yordamida push xabarnomalar yuborish jarayonini tushunadi;                                                                                                                                 - Foydalanuvchining byudjet chegarasi oshganda avtomatik bildirishnomalar chiqishini sozlaydi;                                                                                                                                                                                  - Smart Finance App’da autentifikatsiya, sinxronlash va ogohlantirish tizimini ishlab chiqadi.
+
+JUnit bilan unit testlar yozish
+- JUnit test kutubxonasining asosiy imkoniyatlarini biladi;                                                                       - Koddagi funksiyalarni sinovdan o‘tkazish uchun test metodlarini yozadi;                                              - Test natijalarini tahlil qilib, dasturdagi xatoliklarni aniqlaydi;                                                                                         - Testlarni avtomatlashtirish va CI/CD tizimiga ulashni o‘rganadi;                                                              - Smart Finance App’da hisob-kitob modulini unit test orqali sinovdan o‘tkazadi.
+
+VII-BOB. Testlash, tarqatish va yakuniy loyiha
+Mockito bilan komponentlarni soxtalashtirish (mocking)
+- Mockito kutubxonasining maqsadi va afzalliklarini tushunadi;                                                              - Soxta obyektlar (Mock, Stub) yaratish va ularni test muhiti bilan integratsiya qilishni o‘rganadi;                                                                                                                                                     - Real server o‘rniga soxta ma’lumotlar yordamida test o‘tkazishni biladi;                                                   - Komponentlararo bog‘liqlikni mustaqil tekshirishni o‘rganadi;                                                                - Smart Finance App’da foydalanuvchi autentifikatsiyasi moduli uchun Mockito test yozadi.
+
+
+
+Espresso bilan UI testlarini avtomatlashtirish
+- Espresso kutubxonasining imkoniyatlari va qo‘llanilish maqsadini tushunadi;                                   - Foydalanuvchi harakatlarini (bosish, matn kiritish, o‘tish) avtomatik testlaydi;                                   - UI elementlarini tanlash va natijani tekshirish (assertion) jarayonlarini o‘rganadi;                               - Foydalanuvchi interfeysining barqarorligini baholashni biladi;                                                              - Smart Finance App’da xarajat kiritish sahifasining ishlashini UI test orqali sinaydi.
+
+Firebase Test Lab va real qurilmalarda sinov
+- Firebase Test Lab xizmatining imkoniyatlarini va foydasini biladi;                                                       - Turli ekran o‘lchamlari va Android versiyalarida avtomatik test o‘tkazishni o‘rganadi;                         - Test natijalarini (log, video, crash report) tahlil qilishni biladi;                                                            - Ilova barqarorligini real qurilmalarda baholashni o‘rganadi;                                                                  - Smart Finance App’da ko‘p qurilmali muhitda sinov o‘tkazadi va natijalarni tahlil qiladi.
+
+Test Coverage va Continuous Testing tushunchalari
+- Test Coverage tushunchasini va uni o‘lchash mezonlarini tushunadi;                                                       - Continuous Testing jarayonining afzalliklarini biladi;                                                                           - Kodni yangilaganda avtomatik testlarni ishga tushirishni o‘rganadi;                                                         - Test qamrovini oshirish uchun strategiyalar ishlab chiqadi;                                                                      - Smart Finance App’da kodning test bilan qamrov foizini aniqlaydi va yaxshilaydi.
+
+Ilovani APK/AAB shaklida yaratish
+- APK va AAB fayllarining farqi va qo‘llanilish sohalarini biladi;                                                                                                                  - Gradle build variantlarini sozlab, ishlab chiqarish rejimini yaratadi;                                                  - Imzolangan (signed) fayl yaratish jarayonini o‘rganadi;                                                                         - Build jarayonidagi xatoliklarni aniqlash va tuzatishni biladi;                                                                 - Smart Finance App uchun ishlab chiqarishga tayyor AAB fayl yaratadi.
+
+Google Play Console orqali ilovani nashr qilish
+- Google Play Console interfeysi va funksiyalarini biladi;                                                             - Ilova faylini joylashtirish, tavsif, ikonka va skrinshotlarni qo‘shish jarayonini o‘rganadi;               - Maxfiylik siyosati va versiya boshqaruvi talablarini tushunadi;                                                         - Test foydalanuvchilar uchun “Closed testing” rejimini sozlashni biladi;                                      - Smart Finance App loyihasini Play Console’da sinov nashrida joylashtiradi.
+
+Versiya boshqaruvi va yangilanish jarayoni
+- Ilovaning yangi versiyalarini ishlab chiqish va boshqarish jarayonini biladi;                                         - Semantic Versioning tizimi (major.minor.patch) bo‘yicha versiya belgilaydi;                                     - Changelog yozish va foydalanuvchiga yangilanish haqida ma’lumot berish usullarini o‘rganadi;                                                                                                                                                    - Ilova versiyasini Play Console orqali yangilash jarayonini biladi;                                                          - Smart Finance App’da yangi funksiya qo‘shilganda versiyani to‘g‘ri boshqaradi.
+
+UX baholash va foydalanuvchi tajribasi tahlili
+- UX (User Experience) tushunchasi va uning ilova samaradorligiga ta’sirini tushunadi;                        - Foydalanuvchi testlari va so‘rovnomalar orqali tahlil o‘tkazishni o‘rganadi;                                  - Analytics ma’lumotlarini tahlil qilib, foydalanuvchi odatlarini baholaydi;                                             - UX yaxshilash uchun dizayn o‘zgarishlarini ishlab chiqadi;                                                                   - Smart Finance App’da foydalanuvchi tajribasini tahlil qilib, interfeysni optimallashtiradi.
+
+
+
+
+13. ADVANCED ANDROID DASTURLASH KURSI BO‘YICHA LOYIHA ISHLARI
+Advanced Android dasturlash kursi davomida bajariladigan loyihalar o‘tilgan mavzular doirasida beriladi va joriy nazorat ishlarini baholashda asos bo‘ladi. Kursda tahsil olayotgan har bir o‘quvchiga loyiha topshiriqlari individual tarzda beriladi. Berilgan loyihalarni kurs davomida yoki yakuniy loyiha sifatida bajarish mumkin.
+№Loyiha nomiQisqacha tavsif
+1Smart Finance App
+Foydalanuvchining daromad va xarajatlarini boshqaradigan, offline va cloud sinxronizatsiyaga ega moliyaviy boshqaruv ilovasi.
+2MyNotes Pro
+Matnli va ovozli eslatmalarni saqlash, tahrirlash va Firebase orqali sinxronlash imkoniyatiga ega ilova.
+3FitLife Tracker
+Kundalik jismoniy faollik, suv va kaloriyalarni hisoblab boruvchi sog’lom turmush ilovasi.
+4EduQuiz Mobile
+Testlar va savollar bazasiga ega interaktiv ta’lim ilovasi, natijalar Firebase’da saqlanadi.
+5WeatherNow App
+Retrofit orqali OpenWeather API’dan ma’lumot olib, real vaqt ob-havo prognozini ko’rsatadi.
+6TravelMap Explorer
+Xarita asosida sayohat rejalashtirish, joylarni belgilash va saqlash funksiyasiga ega ilova.
+7TaskFlow Manager
+Offline ishlovchi va internet orqali sinxronlanadigan shaxsiy topshiriqlar rejalashtiruvchi ilova.
+8Expense Splitter
+Guruhdagi xarajatlarni avtomatik hisoblab, ulushlarni aniqlab beruvchi ilova.
+9NewsAggregator App
+Retrofit yordamida yangiliklar API’laridan ma’lumot olib, turkumlar bo‘yicha ko‘rsatuvchi ilova.
+10Health Reminder
+Dori ichish yoki mashg‘ulotlar uchun foydalanuvchiga xabarnoma yuboradigan sog‘lomlik ilovasi.
+11CryptoRate Monitor
+Kriptovalyuta kurslarini API orqali real vaqt rejimida kuzatuvchi ilova.
+12StudyTimer Focus
+Pomodoro usuliga asoslangan vaqt boshqaruv tizimi, o‘qish samaradorligini grafikda ko‘rsatadi.
+13Travel Budget Calculator
+Sayohat uchun xarajatlarni hisoblab, byudjetni rejalashtirish imkonini beradi.
+14Chatly Messenger
+Real vaqtli chat tizimi, foydalanuvchilar o‘zaro xabar almashadilar.
+15ShopSmart E-commerce Demo
+Mahsulotlar katalogi, savatcha va buyurtmalar tizimini o‘z ichiga olgan onlayn savdo ilovasi.
+16Fitness Planner
+Mashg‘ulot jadvalini yaratish va foydalanuvchining maqsadlariga qarab tahlil qilish imkoniyatini beradi.
+17BudgetSync Cloud
+Offline byudjet ilovasi bo‘lib, internet mavjud bo‘lganda Firestore bilan sinxronlashadi.
+18Eventify Organizer
+Tadbirlarni rejalashtirish va foydalanuvchilarga push xabarnoma yuborish imkonini beruvchi tizim.
+19MovieBox Catalog
+Retrofit yordamida TMDB API’dan film ma’lumotlarini olib, afishalar va reytinglarni ko‘rsatadi.
+ 
+
+ 
+14. ADVANCED ANDROID DASTURLASH XONASI UCHUN QOʻYILADIGAN UMUMIY TALABLAR
+Advanced Android dasturlash xonasi maktab binosining ikki va undan yuqori qavatda alohida binoda joylashgan boʻlishi;
+Advanced Android dasturlash xonasining umumiy maydoni 63 m2;
+barcha oʻquv binolarini tabiiy, sunʼiy kombinatsiyalangan yoritishga ega boʻlishi;
+Xona harorati 17-20o C boʻlishi kerak.
+Advanced Android dasturlash xonasi mashgʻulotlar boshlanishidan oldin va tugagandan soʻng, shamollatiladi. Shamollatishning davomiyligi ob-havo sharoiti, shamolning yoʻnalishi va tezligi, isitish tizimining samaradorligi bilan belgilanadi.
+Advanced Android dasturlash xonasi uchun ajratilgan xonadagi haroratni meʼyorida saqlab turish uchun sovitish va isitish tizimi (konditsioner) oʻrnatilgan boʻlishi kerak. 
+Advanced Android dasturlash xonasi uchun ajratilgan xonada birinchi tibbiy yordam koʻrsatish uchun tibbiy toʻplamlar boʻlishi kerak.
+Advanced Android dasturlash xonasi uchun quyidagi boʻyoq ranglarini qoʻllash tavsiya etiladi: shiftlar uchun moviy rang, devorlar uchun — qaymoq rang, pushti, yashil, koʻk ranglarning ochiq ohanglari, mebel (shkaflar, stollar) uchun — tabiiy yoki och jigarrang, toʻq  jigarrang; eshiklar, deraza romlari uchun — oq ranglar.
+15. ADVANCED ANDROID DASTURLASH KASBIGA OʻQITISH XONASINI JIHOZLASHGA QOʻYILGAN TALABLAR
+T/rJihoz nomiOʻlchov birligiSoniJihoz rasmi1.Monitor Full HD - 1920×1080 piksel (kamida); tavsiya: 2K (2560×1440), 23.8 (24 dyum) dan kichik bo‘lmasligi keraktoʻplam152.Shaxsiy kompyuter (o‘quvchi uchun): Intel Core i5 (10-avlod) yoki Ryzen 5 3600+, RAM 16 GB, SSD 512 GB, integratsiyalashgan grafik/GTX 1050 darajasigacha, kamida 2×USB 3.0, 1×HDMI, LAN 1 Gbit/stoʻplam153.Kompyuter klaviaturasi oʻlchami 445-mm 136-mmdona154.Kompyuter sichqonchasi oʻlchami 101-mm 75-mmdona15
+16. ADVANCED ANDROID DASTURLASH KASBIGA OʻRGATISH UCHUN ZARUR BOʻLADIGAN XOM ASHYOLAR ROʻYXATI
+T/r 
+Xom ashyo va materiallar nomi 
+Oʻlchov birligi
+Bir oʻquvchi uchun belgilangan miqdor 
+1.
+Monitor Full HD - 1920×1080 piksel (kamida); tavsiya: 2K (2560×1440), 23.8 (24 dyuym) dan kichik bo‘lmasligi kerak
+dona
+15
+2.
+Intel Core i5 (10-avlod) yoki Ryzen 5 3600+
+dona
+15
+3.
+RAM 16 GB
+dona
+15
+4.
+integratsiyalashgan grafik/GTX 1050 darajasigacha
+dona
+15
+5.
+SSD 512 GB
+dona
+15
+7.
+Kompyuter klaviaturasi (445-mm 136-mm)
+dona
+15
+8.
+Kompyuter sichqonchasi (101-mm 75-mm)
+dona
+15
+
+17. KASBIY TAʼLIM USTASI LAVOZIMIGA QOʻYILADIGAN TALABLAR
+T/r
+Lavozim nomlanishi
+Ta’lim darajasi
+Malakaviy talablar
+Ish tajribasi va shaxsiy sifatlari
+1
+Android dasturlash yo‘nalishi bo‘yicha mentor
+O‘rta maxsus yoki oliy ma’lumotli
+Android dasturlash bo‘yicha amaliy bilim va ko‘nikmalarga ega; o‘quv-amaliy jarayonini rejalashtirish, texnologik xaritalar tuzish va mashg‘ulot hujjatlarini yurita olish; 
+Raqamli texnologiyalar, dasturlash bo‘yicha chuqur
+bilim va zamonaviy
+ko‘nikmalarga ega;
+mazkur yo‘nalish bo‘yicha
+kamida 2 yil o‘quvchilar bilan
+ishlash tajribasiga ega (mehnat
+daftarchasi yoki
+ma‘lumotnoma asosida):
+taqdim etilgan o‘quv reja va
+dasturlar asosida darslarni
+tashkillashtirish, shuningdek
+ularni o‘quvchilarning
+darajasi, qiziqishi va
+talablariga ko‘ra moslashtira
+olish ko‘nikmasi;
+ijodkorlik, jamoa bilan
+ishlash, moslashuvchanlik,
+tashkilotchilik, muloqot
+ko'nikmalariga ega.
+
+Lavozim vazifalari:
+biriktirilgan guruhlarda о‘quv amaliyoti mashgʻulotlarni о‘tish, ishlab chiqarish amaliyotiga rahbarlik qilish; 
+о‘quv ustaxonalarida, poligonlarda va о‘quv xо‘jaligida jihozlar va texnika vositalarini amaliy mashgʻulotlarga tayyorlash; 
+kerak bо‘ladigan xom-ashyo va materiallarni tayyorlash, texnologik xaritalarni ishlab chiqish, mashgʻulotga sarf bо‘ladigan xom-ashyo sarfini aniqlash, hisobini yuritish;
+о‘quvchilarni oraliq, bitiruv amaliy imtihonlarini topshirishga tayyorlash, biriktirilgan guruhlarda tarbiyaviy ish olib borish, о‘quv mashgʻulot jurnallarini yuritish va saqlash; 
+taʼlim-tarbiya jarayoni davomida о‘quv-texnika jihozlari va vositalaridan, ustaxonalardan, maktabga qarashli jihozlardan ehtiyotkorlik bilan foydalanish003B
+tanlab olingan kasb-hunarni egallash jarayonida о‘quvchilarning kasbiy layoqat, kо‘nikma va malakalarini shakllantirish;
+kasb-hunarga tayyorlash tizimi va mazmunini jamiyat ehtiyojlaridan, fan, madaniyat va zamonaviy innovatsion texnika yutuqlaridan kelib chiqqan holda takomillashtirish;
+ish о‘rinlarini jihozlash, yongʻinga qarshi himoya, xavfsizlik texnikasi va mehnatni muhofaza qilish qoidalari va meʼyorlarining bajarilishini taʼminlash. 
+Bilishi kerak:
+Taʼlimga oid О‘zbekiston Respublikasi qonunlarini, kasbiy va amaliy faoliyatga tegishli masalalar bо‘yicha meʼyoriy va uslubiy hujjatlarni, mehnat qonunchiligi, mehnat muhofazasining qoidalari va meʼyorlarini, xavfsizlik texnikasi qoidalarini.
+Malaka talablari: 
+Pedagogik, muhandis-pedagogik yoki biriktirilgan guruh tayyorlov yо‘nalishiga mos ravishda kamida oʻrta maxsus maʼlumotga ega boʻlishi kerak. 
+
+
+
+
+
+18. 10-SINF OʻQUVCHILARIGA QOʻYILGAN UMUMIY MALAKA TALABLARI
+Bilim
+     Android Studio dasturini o‘rnatish, uning interfeysi va asosiy funksiyalari bilan tanishish, mobil ilovalar yaratilish tamoyillari, foydalanuvchi interfeysi (UI) tuzilmasi va dasturlash (Java/Kotlin) asoslari bo‘yicha nazariy bilimlarga ega bo‘lishi kerak.
+Koʻnikma
+     Advanced Android dasturlash muhitida yangi loyiha yaratish, interfeys (XML) tuzish, komponentlarga effektlar va animatsiyalar qo‘llash, ilovalarni tahrirlash va sinovdan o‘tkazish, ma’lumotlar bilan ishlash (SQLite, SharedPreferences), hamda mobil ilovaga oddiy funksiyalar (hisoblash, saralash, filtr qo‘llash)ni qo‘shish ko‘nikmalariga ega bo‘lishi kerak.
+Kompetensiya
+    Advanced Android dasturlash jarayonida qurilma (telefon, planshet, emulator) imkoniyatlaridan foydalanish, foydalanuvchi interfeysini loyihalash, ilovani ishga tushirish va testlash, dastur kodini tahrirlash, natijalarni vizual tarzda ko‘rsatish (diagramma, grafik, interfeys elementi) kompetensiyalariga ega bo‘lishi kerak.
+
+19. FOYDALANILGAN ADABIYOTLAR VA ELEKTRON  MANBALAR ROʻYXATI
+Foydalanilgan adabiyotlar roʻyxati.
+F. Zeev. Android operatsion tizimi uchun smartfon va planshetlarga ilovalar yaratish
+Yan Darvin. Android: Retseptlar to‘plami. Mobil ilovalar ishlab chiquvchilar uchun masalalar va ularning yechimlari.
+Bill Fillips. Android: Kotlin tilida professional darajada dasturlash.
+L. Pirskaya. Android Studio muhitida mobil ilovalar ishlab chiqish.
+D. Jemyorov. Amaliyotda Kotlin
+D. Kolisnichenko. Android uchun dasturlash
+Elektron manbalar:
+Android dokumentatsyasi:  HYPERLINK "https://developer.android.com/" https://developer.android.com/
+Google gaydlar:  HYPERLINK "https://developer.android.com/guide" \t "_blank" https://developer.android.com/guide
+Google Pathways:  HYPERLINK "https://developers.google.com/learn/pathways" https://developers.google.com/learn/pathways
+Metanit.com :  HYPERLINK "https://metanit.com/java/android/" https://metanit.com/java/android/
+
+
+
+
+
+
+
+
+
+PAGE   \* MERGEFORMAT6
+
+
+
+

@@ -1,0 +1,1 @@
+Lucide icons (https://github.com/lucide-icons/lucide), version 1.49.0. ISC License (parts: MIT, Feather).

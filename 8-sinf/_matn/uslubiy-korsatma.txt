@@ -1,0 +1,171 @@
+OʻZBEKISTON RESPUBLIKASI RAQAMLI TEXNOLOGIYALAR VAZIRLIGI
+RAQAMLI TA’LIMNI RIVOJLANTIRISH
+“MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN 
+WEB FULL-STACK DASTURLASH YO‘NALISHI BO‘YICHA O‘QUV QO‘LLANMA
+(8-SINFLAR UCHUN)
+Mazkur uslubiy ko‘rsatma Muhammad al-Xorazmiy nomidagi Toshkent axborot texnologiyalari universitetida yaratilgan.
+Toshkent-2025
+MUNDARIJA
+KIRISH……………………………………………………………………..…5
+I-BOB. HTML TILI VA VEB-SAHIFA TUZISHNING ASOSLARI ……7
+Internet qanday ishlaydi? DNS, hosting, domain.Front-end va Back-end texnologiyalari.……………………………………….…………………….8
+HTML hujjatining umumiy strukturasi va asosiy teglari, atributlari………
+Rasm, jadval, ro‘yxat va forma elementlari bilan ishlash teglari.…………….
+HTML5 texnologiyalari: yangi teglar, atributlar va semantik elementlarning roli………………………………………………………………………….
+II-BOB. CSS TEXNOLOGIYASI VA SAHIFA DIZAYNI……………….
+CSS asoslari: elementlarni tanlash, rang va shrift bilan ishlash.……………
+Veb-sahifani tuzishda box model, flexbox va grid tizimlari. ………………
+Moslashuvchan (responsiv) dizayn va media so‘rovlar va Figma haqida ma’lumot va ishlash………………………………………………………….
+Git va Github, hosting va SEO bo‘yicha umumiy bilimlar.Jamoa bilan ishlash va loyiha qilish………………………………………………………………..
+CSSda animatsiyalar va transformatsiyalar. Serverga deploy qilish.…………
+III-BOB.  JAVASCRIPT VA JQUERY  ASOSLARI………………………..
+ Algoritm tushunchasi, uning ahamiyati va dasturlashdagi roli. Algoritmlarning asosiy turlari va blok sxemalar orqali ifodalanishi.………...
+ JavaScript’da shart operatorlari, sikllar va funksiyalar. …………………….
+ DOM va BOM bilan ishlash. Javascriptni Html ga bog‘lash.……………….
+ Eventlar va interaktivlik qo‘shish. Javascript asosida mini loyiha qilish.…..
+ jQuery bilan tanishuv va asosiy imkoniyatlar.………………….…….…….
+IV-BOB. PYTHON ASOSLARI (PYTHON FUNDAMENTALS)………….
+ Back-end haqida umumiy ma’lumot. Pythonga kirish va o‘rnatish…………
+O‘zgaruvchilar va ma’lumot turlari, operators va expressions ……………..
+ Functions va Modules, exception handling (xatoliklarni boshqarish)………
+Advanced Function Concepts (Lambda, Decorators).………………………
+ Object-Oriented Programming (OOP) asoslari.……………………………
+     V-BOB. TELEGRAM BOT ASOSLARI (PYTHON VA TELEGRAM BOT.
+Telegram bot nima ekanligini tushunish va ish muhitini tayyorlash. …...…..
+Telegram botni ishga tushirish (updater va dispatcher).MessageHandler bilan oddiy xabarlarni qabul qilish……………………………………………
+CommandHandler bilan (/start, /help) komandalarni ishlatish.Echo bot yaratish: foydalanuvchi yozgan xabarni qaytarish.…………………………..
+VI-BOB. POSTGRESQL VA DJANGO (DATABASE VA BACKEND)……
+ PostgreSQLga kirish va muhitni tayyorlash………………………………….  
+ Ma’lumotlar bazasi va jadval yaratish. CRUD operatsiyalari………………..
+ Django bilan tanishuv va muhitni tayyorlash.  ……………………………….
+ Views va Templates... …………………………………………..…………...
+ Forms va User Inputlar bilan ishlash.………………………………………..
+ Authentication va authorization……………………………………………..
+ Advanced ORM va QuerySet, Deployment va Best practices………………..
+VII-BOB. DJANGO REST FRAMEWORK (DRF) VA SERVERGA DEPLOY………………………………………………………………………..
+ Advanced serializers va validation…………………………………………..
+ DRF signals va business logic. Testing (REST API Test). Deploy server…...
+Docker (ixtiyoriy / kengaytirilgan), CI/CD…………………………………..
+ GLOSSARY…………………………………………………………………...
+FOYDALANILGAN ADABIYOTLAR……………………………………...
+KIRISH
+Zamonaviy raqamli jamiyatda veb-saytlar, onlayn xizmatlar, web-ilovalar va interaktiv platformalar inson faoliyatining deyarli barcha sohalariga chuqur kirib borgan. Bugungi kunda bank xizmatlari, ta’lim tizimi, elektron hukumat, biznes jarayonlari va hatto kundalik muloqot ham web texnologiyalarsiz tasavvur qilib bo‘lmaydi. Shunday ekan, funksional, xavfsiz, kengaytiriladigan va foydalanuvchiga qulay web-loyihalar yaratish — har bir dasturchining asosiy kompetensiyalaridan biri hisoblanadi. Ushbu o‘quv qo‘llanma aynan Web Full-Stack dasturlash yo‘nalishining nazariy va amaliy jihatlarini yoritishga qaratilgan bo‘lib, o‘quvchilarda zamonaviy web-ilovalarni to‘liq siklda ishlab chiqish ko‘nikmalarini shakllantirishni maqsad qiladi.
+Qo‘llanmaning birinchi qismi Front-end dasturlash asoslariga bag‘ishlanadi. Unda HTML orqali sahifalarning semantik tuzilmasi, CSS va Bootstarp CSS yordamida dizayn va layout yaratish, JavaScript orqali esa dinamik funksiyalarni joriy etish bo‘yicha fundamental bilimlar beriladi. Responsiv dizayn, interaktiv UI yaratish, komponentlarga bo‘lingan arxitektura kabi tushunchalar chuqur tahlil qilinadi.
+Ikkinchi qism Back-end dasturlash mavzularini qamrab olib, server tomonida ma’lumotlarni qayta ishlash, API yaratish, autentifikatsiya va avtorizatsiya, xavfsizlik, ma’lumotlar bazalari bilan ishlash kabi amaliy jarayonlarni o‘rgatadi. Bu bo‘limda o‘quvchilar Python (Django yoki DRF) backend texnologiyalar orqali kuchli va ishonchli server arxitekturasini yaratish ko‘nikmalariga ega bo‘ladilar.
+Keyingi bo‘limlarda ma’lumotlar bazalari —PostgreSQL bilan ishlash, model tuzilmalari, murakkab so‘rovlar, optimizatsiya va ma’lumotlar yaxlitligini ta’minlash jarayonlari yoritib beriladi. Shuningdek, ORM texnologiyalari, migratsiyalar hamda ma’lumotlar arxitekturasini rejalash bo‘yicha nazariy va amaliy mashg‘ulotlar beriladi.
+Darslikning so‘nggi qismi web Full-stack integratsiyasi, ya’ni front-end va back-end qismlarini yagona tizimga birlashtirish, REST API va JSON bilan ishlash, autentifikatsiya jarayonlarini birlashtirish, real loyihalarni deploy qilish (VPS, Docker, Nginx) kabi jarayonlarga bag‘ishlanadi. Bundan tashqari, Git/GitHub orqali versiyalarni boshqarish, loyihalarni sinovdan o‘tkazish va xatoliklarni to‘g‘rilash kabi dasturchilar uchun zarur bo‘lgan professional ko‘nikmalar ham beriladi.
+Ushbu o‘quv qo‘llanma o‘quvchilarga nafaqat mustahkam nazariy bilim, balki amaliy loyihalar orqali haqiqiy bozor talablariga mos Web Full-stack dasturchi sifatida shakllanish imkonini beradi. Darslikni to‘liq o‘zlashtirgan o‘quvchi mustaqil ravishda to‘liq web-ilova yaratish, server va mijoz tomonini boshqarish, ma’lumotlar bilan ishlash hamda yakuniy loyihani deploy qilish darajasigacha yetadi.
+Natijada, o‘quvchi funksional, xavfsiz va zamonaviy raqamli mahsulotlarni yaratishga qodir, to‘liq Web Full-stack mutaxassis sifatida shakllanadi.
+-1194435-21463000
+593979043751505
+05
+-10801354679950Ta’lim maqsadlari
+HTML (HyperText Markup Language) nima ekanini tushunadi.
+Veb-sahifaning asosiy tuzilmasi (html, head, body) bilan tanishadi.
+HTML teglarining vazifasi va ishlash mantig‘ini biladi.
+Sarlavha teglarini (h1–h6) to‘g‘ri qo‘llay oladi.
+Matn teglarini (p, span, strong, em) farqlay oladi.
+Giperhavola yaratish (a tegi) va link turlari bilan ishlay oladi.
+Rasm joylash (img) va rasm atributlari (src, alt) bilan ishlashni biladi.
+Ro‘yxatlar (ul, ol, li) yordamida kontentni tuzishni o‘rganadi.
+Jadvallar (table, tr, td, th) yaratish bo‘yicha asosiy ko‘nikmaga ega bo‘ladi.
+Formalar (form, input, label, button) bilan ishlashning asosiy bosqichlarini tushunadi.
+Semantik teglar (header, footer, section, article, nav) maqsadini biladi.
+HTML atributlari va ularning sahifadagi funksiyasini tushunadi.
+Brauzer HTML kodni qanday interpretatsiya qilishini anglaydi.
+Oddiy statik veb-sahifa tuzishni mustaqil bajara oladi.
+Tuzilgan sahifani to‘g‘ri formatlash va strukturani toza saqlash qoidalarini o‘zlashtiradi.
+00Ta’lim maqsadlari
+HTML (HyperText Markup Language) nima ekanini tushunadi.
+Veb-sahifaning asosiy tuzilmasi (html, head, body) bilan tanishadi.
+HTML teglarining vazifasi va ishlash mantig‘ini biladi.
+Sarlavha teglarini (h1–h6) to‘g‘ri qo‘llay oladi.
+Matn teglarini (p, span, strong, em) farqlay oladi.
+Giperhavola yaratish (a tegi) va link turlari bilan ishlay oladi.
+Rasm joylash (img) va rasm atributlari (src, alt) bilan ishlashni biladi.
+Ro‘yxatlar (ul, ol, li) yordamida kontentni tuzishni o‘rganadi.
+Jadvallar (table, tr, td, th) yaratish bo‘yicha asosiy ko‘nikmaga ega bo‘ladi.
+Formalar (form, input, label, button) bilan ishlashning asosiy bosqichlarini tushunadi.
+Semantik teglar (header, footer, section, article, nav) maqsadini biladi.
+HTML atributlari va ularning sahifadagi funksiyasini tushunadi.
+Brauzer HTML kodni qanday interpretatsiya qilishini anglaydi.
+Oddiy statik veb-sahifa tuzishni mustaqil bajara oladi.
+Tuzilgan sahifani to‘g‘ri formatlash va strukturani toza saqlash qoidalarini o‘zlashtiradi.
+-10896603596005I-BOB. HTML TILI VA VEB-SAHIFA TUZISHNING ASOSLARI
+0I-BOB. HTML TILI VA VEB-SAHIFA TUZISHNING ASOSLARI
+1-bob haqida umumiy ma’lumot. 
+Ushbu bob “HTML tili va veb-sahifa tuzishning asoslari”ga bag‘ishlangan bo‘lib, zamonaviy veb-dasturlashning eng muhim bosqichi — veb-sahifa strukturasi bilan tanishtiradi. HTML (HyperText Markup Language) har qanday veb-loyiha poydevorini tashkil etadi va kontentni brauzerga to‘g‘ri ko‘rinishda yetkazib berish uchun xizmat qiladi. Shuning uchun HTML tilini to‘g‘ri o‘zlashtirish keyingi CSS, JavaScript va boshqa front-end texnologiyalarni o‘rganish uchun mustahkam asos yaratadi.
+Bob davomida o‘quvchi HTMLning vazifasi, teglarning ishlash mantig‘i, sahifa tuzilmasi va semantik elementlar bilan tanishadi. Shuningdek, sarlavha, matn, ro‘yxat, jadval, rasm va giperhavolalar kabi asosiy elementlarni yaratish bo‘yicha dastlabki amaliy ko‘nikmalarga ega bo‘ladi. Formalar bilan ishlash bo‘yicha kirish darajasidagi ma’lumotlar ham berilib, interaktiv sahifalar yaratish tamoyillari tushuntiriladi.
+Ushbu bobning asosiy maqsadi — o‘quvchini HTML sintaksisi, teglar tizimi va sahifa tuzilishi bilan tanishtirish, shuningdek, sodda va toza kod yozish ko‘nikmasini shakllantirishdir. Bob yakuniga kelib o‘quvchi mustaqil ravishda oddiy statik veb-sahifa tuza oladi va uning asosiy komponentlarini boshqarish bo‘yicha amaliy tajribaga ega bo‘ladi.
+Internet qanday ishlaydi? DNS, hosting, domain.Front-end va Back-end texnologiyalari(Ma’ruza mashg‘uloti)
+Internetning ishlash prinsipi va ma’lumot almashinuvi jarayoni.
+Domen (Domain) tushunchasi va uning vazifasi.
+DNS (Domain Name System) nima va domen nomlarini IP manzillarga o‘girish jarayoni.
+Hosting tushunchasi va veb-sahifani serverda joylashtirish tamoyillari.
+Veb-sahifa brauzer tomonidan qanday yuklanishi (HTTP/HTTPS).
+Front-end texnologiyalari va ularning vazifasi.
+Back-end texnologiyalari va ularning roliga doir asosiy tushunchalar.
+Front-end va Back-end o‘rtasidagi farqlar hamda ularning o‘zaro bog‘liqligi.
+Reja:
+Internetning ishlash prinsipi va ma’lumot almashinuvi jarayoni.
+Domen (Domain) tushunchasi va uning vazifasi.
+DNS (Domain Name System) nima va domen nomlarini IP manzillarga o‘girish jarayoni.
+Hosting tushunchasi va veb-sahifani serverda joylashtirish tamoyillari.
+Veb-sahifa brauzer tomonidan qanday yuklanishi (HTTP/HTTPS).
+Front-end texnologiyalari va ularning vazifasi.
+Back-end texnologiyalari va ularning roliga doir asosiy tushunchalar.
+Front-end va Back-end o‘rtasidagi farqlar hamda ularning o‘zaro bog‘liqligi.
+Reja:
+34290308610UX dizayn, foydalanuvchi tajribasi, wireframe, prototiplash, foydalanuvchi tadqiqoti, UI komponentlar, foydalanuvchi kuzatuvi, maket.
+Kalit so‘zlar
+0UX dizayn, foydalanuvchi tajribasi, wireframe, prototiplash, foydalanuvchi tadqiqoti, UI komponentlar, foydalanuvchi kuzatuvi, maket.
+Kalit so‘zlar
+UI va UX dizayn zamonaviy veb-saytlar va mobil ilovalarning ajralmas qismi hisoblanadi. Bu foydalanuvchilarga qulay, tez va yoqimli tajriba taqdim etish uchun ishlatiladi. 
+UX - User Experience (foydalanuvchi tajribasi). Boshqacha qilib aytganda, foydalanuvchi interfeysi bilan ishlay oladigan tajriba / taassurot. U maqsadga erisha oladimi va buni bajarish qanchalik oddiy yoki murakkab shuni belgilaydi.
+UI - User Interface (foydalanuvchi interfeysi) - interfeysning qanday ko‘rinishda va qanday strukturaviy xususiyatlarga ega bo‘lishi. Masalan, Google Maps ilovasini ochganingizda ko‘rgan xarita, tugmalar va menyular — bularning barchasi UI dizaynga kiradi. Yaxshi UI dizaynda barcha elementlar uyg‘un va o‘zaro bog‘liq bo‘lishi kerak. 
+UX/UI dizayn sohasi veb-saytlar, mobil ilovalar, internet platformalar, dashboardlar, aqlli qurilmalar va boshqa IT-mahsulotlarning dizayni hamda prototipini yaratish bilan shug‘ullanadi. UX dizayn foydalanuvchi ehtiyojlarini markazga qo‘yadi — ya’ni “foydalanuvchi uchun qanchalik qulay bo‘ladi?” degan savolga javob izlaydi. UX dizaynerlar foydalanuvchi muammolarini o‘rganadi, ularga yechim topadi, interfeys qulayligini ta’minlaydi, sketch, wireframe va prototiplar yaratadi, mahsulotni test qilib, uni doimiy takomillashtirib boradi.
+UI dizayn esa mahsulotning chiroyli, yoqimli va estetik jihatdan jozibador bo‘lishini ta’minlaydi. UI dizaynerlar ranglar bilan ishlaydi, to‘g‘ri shriftlarni tanlaydi, ikonlar va grafik elementlarni ishlab chiqadi, vizual dizaynning umumiy uyg‘unligini yaratadi. Ular foydalanuvchi ko‘zi bilan ko‘radigan barcha interfeys qismlarini shakllantiradi.
+1.1-jadval. UI va UX dizayn o‘rtasidagi farq
+UI dizayn
+UX dizayn
+Tashqi ko‘rinishni tayyorlaydi
+Umumiy tajribani shakllantiradi
+Ranglar, tugmalar, shriftlar
+Qulaylik, tezlik, hissiy tajriba
+Ko‘zga ko‘rinadigan qismlar
+Foydalanuvchining ichki his-tuyg‘ulari
+UI dizaynining asosiy tamoyillaridan biri bular to‘rtta C ni o‘rganishdir:
+Control (Nazorat) – foydalanuvchi interfeysni boshqara olishi, ya’ni harakatlari natijasini nazorat qilish imkoniyatiga ega bo‘lishi kerak. Masalan, “Bekor qilish (Undo)” yoki “Orqaga (Back)” funksiyalari foydalanuvchiga xatolarni to‘g‘rilash imkonini beradi. Bu ishonch va qulaylikni oshiradi.
+Consistency (Izchillik) – interfeys elementlari (tugmalar, ranglar, belgilar, menyular) bir xil mantiq va uslubda ishlatilishi lozim. Izchil dizayn foydalanuvchining orientatsiyasini osonlashtiradi va yangi funksiyalarni tez tushunib olishga yordam beradi.
+Comfortability (Qulaylik) – foydalanuvchi uchun mahsulot bilan ishlash jarayoni tabiiy, oddiy va stresssiz bo‘lishi zarur. Interfeys ergonomik jihatdan qulay joylashgan, elementlar orasidagi masofa optimal, yozuvlar o‘qilishi oson bo‘lishi kerak.
+Cognitive Load (Kognitiv yuklanish) – foydalanuvchini ortiqcha ma’lumot, bezak yoki matn bilan charchatishdan saqlanish zarur. Interfeys iloji boricha sodda, aniq va tushunarli bo‘lishi kerak. Har bir sahifada foydalanuvchi faqat kerakli ma’lumotni tez topa olishi lozim.
+UX dizaynning asosiy tamoyillari quyidagilardan iborat:
+Foydalanuvchi markazida bo‘lish (User-Centered Design) – dizayn jarayonining barcha bosqichlari foydalanuvchi ehtiyojlari, maqsadlari va odatlarini hisobga olgan holda amalga oshiriladi.
+Qulaylik va intuitivlik (Usability &amp; Intuitiveness) – foydalanuvchi mahsulotni hech qanday qo‘shimcha tushuntirishsiz, tabiiy tarzda tushunib ishlata olishi kerak.
+Izchillik (Consistency) – interfeys elementlari (tugmalar, ranglar, belgilar) har bir sahifada bir xil mantiq va uslubda qo‘llanilishi lozim. Bu foydalanuvchining orientatsiyasini osonlashtiradi.
+Oddiylik va aniqlik (Simplicity &amp; Clarity) – dizayn ortiqcha bezaklardan holi, sodda va aniq bo‘lishi kerak. Har bir element maqsadga yo‘naltirilgan bo‘lishi zarur.
+Fikr-mulohaza (Feedback) – foydalanuvchi har bir amal bajarganda tizim unga javob qaytarishi (masalan, tugma bosilganda rang o‘zgarishi yoki xabar chiqishi) kerak.
+Moslashuvchanlik (Flexibility &amp; Accessibility) – dizayn turli ekran o‘lchamlari, qurilmalar va foydalanuvchi imkoniyatlariga (jumladan, nogironlar uchun) mos bo‘lishi lozim.
+Testlash va takomillashtirish (Testing &amp; Iteration) – UX dizayn doimiy sinov va foydalanuvchi fikri asosida yaxshilanib boradi; bu jarayon hech qachon yakuniy bosqich bilan cheklanmaydi.
+ Maketlar — bu loyihalarning dastlabki qadamlarida dizayn va strukturaning umumiy ko‘rinishini shakllantirish uchun ishlatiladigan grafik tasvirlar yoki modellar hisoblanadi. Ular, odatda, mobil ilovalar, veb-saytlar yoki dasturiy ta’minot interfeyslari uchun foydalanuvchilarning tajribasini oldindan ko‘rib chiqish va tekshirishda qo‘llaniladi.
+Mockup - bu interfeysning vizual ko‘rinishini to‘liq aks ettiruvchi, ranglar, shriftlar, ikonlar va dizayn elementlari qo‘llanilgan statik maketdir. Mockup foydalanuvchiga ilova yoki veb-sahifaning yakuniy dizayni qanday bo‘lishini tasavvur qilish imkonini beradi. U interaktiv emas, ya’ni foydalanuvchi tugmani bosganda hech qanday harakat sodir bo‘lmaydi. Ko‘pincha Figma, Photoshop yoki Sketch dasturlarida yaratiladi.
+Prototip - bu interfeysning interaktiv, ya’ni “jonli” modeli bo‘lib, foydalanuvchi unda tugmalarni bosishi, sahifalar orasida o‘tishi va ilova funksiyalarini sinab ko‘rishi mumkin. Prototip foydalanuvchi tajribasini (UX) tekshirish, dizayndagi qulaylik va muammolarni aniqlash uchun yaratiladi. Bu bosqich yakuniy ishlab chiqishga tayyor dizaynni sinovdan o‘tkazish uchun xizmat qiladi.
+Wireframe, mockup va prototip kabi bosqichlar dizayn jarayonini tizimli tashkil etish va yakuniy natijani sinovdan o‘tkazishga yordam beradi. Umuman olganda, samarali UI/UX dizayn foydalanuvchi mamnunligini oshiradi, mahsulotning raqobatbardoshligini ta’minlaydi va brendga bo‘lgan ishonchni mustahkamlaydi.
+UX dizayn nima va uning asosiy maqsadi nimadan iborat?
+UI dizayn UX dizayndan nimasi bilan farq qiladi?
+UX dizaynning asosiy tamoyillarini sanab bering.
+UI dizaynning 4C tamoyili nimalardan iborat va ularning mazmunini tushuntiring.
+UX va UI dizayn o‘rtasidagi o‘zaro bog‘liqlikni misollar bilan izohlang.
+UI dizaynda maket (layout) tushunchasi nimani anglatadi va uning asosiy vazifasi nima?
+Mobil ilova yoki veb-sahifa maketini yaratishda qaysi asosiy elementlarga e’tibor berish kerak?
+Wireframe, mockup va prototip o‘rtasidagi farq nimada?
+Nazorat savollari
+UX dizayn nima va uning asosiy maqsadi nimadan iborat?
+UI dizayn UX dizayndan nimasi bilan farq qiladi?
+UX dizaynning asosiy tamoyillarini sanab bering.
+UI dizaynning 4C tamoyili nimalardan iborat va ularning mazmunini tushuntiring.
+UX va UI dizayn o‘rtasidagi o‘zaro bog‘liqlikni misollar bilan izohlang.
+UI dizaynda maket (layout) tushunchasi nimani anglatadi va uning asosiy vazifasi nima?
+Mobil ilova yoki veb-sahifa maketini yaratishda qaysi asosiy elementlarga e’tibor berish kerak?
+Wireframe, mockup va prototip o‘rtasidagi farq nimada?
+Nazorat savollari

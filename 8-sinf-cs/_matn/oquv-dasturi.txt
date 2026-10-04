@@ -1,0 +1,743 @@
+OʻZBEKISTON RESPUBLIKASI RAQAMLI TEXNOLOGIYALAR VAZIRLIGI
+RAQAMLI TA’LIMNI RIVOJLANTIRISH MARKAZI
+“MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN
+COMPUTER SCIENCE FOUNDATION YO‘NALISHI BO‘YICHA O‘QUV DASTURI
+(8-SINFLAR UCHUN)
+7772401651000
+Toshkent 2026
+HYPERLINK  \l "_1._DASTURDA_QOʻLLANILGAN" MUNDARIJA
+Kirish..................................................................................................................3
+O‘quv kursi dasturi, maqsad va vazifalari....................................................4
+Dasturda qo‘llanilgan tayanch atamalar......................................................6
+Computer Science Foundation yo‘nalishi o‘quv dasturining tayanch o‘quv rejasi........................................................................................................8
+Computer Science Foundation yo‘nalishi bo‘yicha tayyorlashning muddati...............................................................................................................9
+Computer Science Foundation yo‘nalishi o‘quv mavzu rejasi..................10
+Computer Science Foundation yo‘nalishi o‘quv dasturi............................12
+Computer Science Foundation yo‘nalishi bo‘yicha o‘tiladigan dars soatlari...............................................................................................................17
+O‘quv jarayonini tashkil etishda o‘qitish metodlari, shakllari va vositalari............................................................................................................20
+Baholash mezonlari........................................................................................25
+Computer Science Foundation yo‘nalishining qo‘llanish sohasi................................................................................................................30
+Computer Science Foundation yo‘nalishiga o‘qitish natijalari...............31
+Computer Science Foundation yo‘nalishiga o‘qitish davomida qo‘llaniladigan loyiha ishlari..........................................................................32
+Computer Science Foundation yo‘nalishiga o‘qitish xonasini jihozlashga qo‘yilgan talablar.............................................................................................33
+Computer Science Foundation yo‘nalishiga oʻqitish jarayonida foydalaniladigan dasturiy vositalar ..............................................................34
+Computer Science Foundation yo‘nalishiga o‘rgatuvchi mentor lavozimiga qo‘yiladigan talablar....................................................................35
+Computer Science Foundation yo‘nalishi bo‘yicha 8-sinf o‘quvchilari uchun kurs yakunida qo‘yiladigan umumiy malaka talablari.............................................................................................................38
+Foydalanilgan adabiyotlar va elektron manbalar ro‘yxati........................39
+KIRISH
+Mamlakatimizda raqamli iqtisodiyotni faol rivojlantirish, barcha tarmoqlar va sohalarda, eng avvalo, davlat boshqaruvi, ta’lim, sog‘liqni saqlash va qishloq xo‘jaligida zamonaviy axborot-kommunikatsiya texnologiyalarini keng joriy etish bo‘yicha kompleks chora-tadbirlar amalga oshirilmoqda. Xususan, elektron hukumat tizimini takomillashtirish, dasturiy mahsulotlar va axborot texnologiyalarining mahalliy bozorini yanada rivojlantirish, respublikaning barcha hududlarida IT-parklarni tashkil etish, shuningdek, sohani malakali kadrlar bilan ta’minlashni ko‘zda tutuvchi ko‘plab ustuvor loyihalarni amalga oshirish boshlangan. O‘zbekiston Respublikasi Prezidentining “O‘zbekiston–2030 strategiyasi to‘g‘risida” 2023-yil 11-sentyabrdagi PF-158-son Farmoniga muvofiq 2030-yilgacha raqamli texnologiyalar sohasida erishiladigan maqsadlarning samaradorlik ko‘rsatkichlari belgilangan. Xususan, strategiyaning 57-maqsadiga ko‘ra, raqamli texnologiyalarni rivojlantirgan holda mamlakatni mintaqaviy “IT-HUB”ga aylantirish rejalashtirilgan. Bunda:
+- IT xizmatlar va dasturiy mahsulotlar eksporti hajmini 5 milliard dollarga yetkazish;
+- BMTning Elektron hukumat reytingida top-30 talikka kirishga erishish;
+- IT sohasida 300 ming nafar yoshlarni ish bilan ta’minlash;-IT-park rezidentlari sonini 10 barobar oshirish va ularda yaratilgan ish o‘rinlari sonini 100 mingtaga yetkazish;
+- IT-parkda xorijiy kompaniyalar uchun “Raqamli texnologiyalar xalqaro markazi”ni tashkil qilish orqali xorijiy kompaniyalar vakolatxonalari sonini 1000 taga yetkazish kabilar maqsad qilingan. Mamlakatimizda axborot-kommunikatsiya texnologiyalarini rivojlantirishga ijtimoiy-iqtisodiy taraqqiyot va jahon axborot makoniga integratsiyalashuvni ta’minlashga xizmat qiluvchi strategik yo‘nalishlardan biri sifatida qaralayotganligi hamda yuqoridagi maqsadlarga erishish uchun raqamli ta’limni rivojlantirish, mazkur yo‘nalishda kadrlar salohiyatini oshirish va yoshlarga kengroq imkoniyatlar yaratish hukumatning bugungi ustuvor vazifalaridan bo‘lib qolmoqda. IT xizmatlar sohasida yoshlarga zarur shart-sharoitlar yaratish, ularda zamonaviy kasblar bo‘yicha muhim bilim va ko‘nikmalarni shakllantirish pirovardida mamlakatimizning yuqorida belgilangan maqsadlarga erishishini ta’minlash bilan birga jamiyat farovonligiga ham hissa qo‘shadi. Ushbu maqsadlarga erishish uchun yurtimizda raqamli texnologiyalar sohasida bir qator loyihalar amalga oshirilmoqda. Oʻzbekiston Respublikasi Vazirlar Mahkamasining “Raqamli texnologiyalar sohasida mutaxassislar tayyorlashning yangi tizimini joriy etish hamda yoshlarning ushbu sohadagi bilim va ko‘nikmalarini yanada rivojlantirish chora-tadbirlari to‘g‘risida” 2023-yil 5-sentabrdagi 451-son qaroriga muvofiq, raqamli texnologiyalar o‘quv markazlari va davlat umumiy o‘rta ta’lim muassasalarida o‘quvchilarini raqamli texnologiyalar sohasida kasbga tayyorlashni nazarda tutuvchi “Muhammad al-Xorazmiy vorislari” tizimi asosida maxsus guruhlarni tashkil etish belgilangan. Loyiha doirasida o‘quvchilarga 7-10-sinflarda raqamli texnologiyalar sohasi o‘rgatiladi hamda 11-sinfda IT kompaniyalarida amaliyot o‘tashlari, egallagan zamonaviy bilim va ko‘nikmalari asosida o‘z loyiha va dasturlarini ishlab chiqib, jahon bozoriga eksport qilishni o‘rganishlari uchun shart-sharoitlar yaratiladi. Mazkur dastur o‘quvchilarning raqamli texnologiyalar yo‘nalishida samarali bilim olishlari, shuningdek, o‘rgangan bilim va ko‘nikmalari asosida o‘z loyiha hamda dasturlarini ishlab chiqishlari va ularni eksportga yo‘naltira olishlariga tayyorlashni tashkillashtirish, o‘qituvchi mentorlarga metodik yordam berish hamda o‘quvchilarning kurs bo‘yicha xabardorligini oshirish maqsadida ishlab chiqildi.
+O‘QUV KURSI DASTURI, MAQSAD VA VAZIFALARI
+O‘quv kursi dasturi: Dastur 8-sinf oʻquvchilarida Computer Science Foundation yo‘nalishi boʻyicha boshlangʻich bilimlar, tizimli va mantiqiy ketma-ketlikda quyidagicha shakllantirish mumkin.
+Dastur o‘quvchilarda nafaqat kod yozishni, balki algoritmlash va tizimli fikrlashni shakllantirishga qaratiladi.
+O‘quv kursi maqsadi: 8-sinf bosqichida dastur o‘quvchilarga Computer Science Foundation (Kompyuter fanlari asosi) yo‘nalishi bo‘yicha fundamental bilimlarni berishni ko‘zda tutadi. Xususan, o‘quvchilar kompyuter savodxonligi va qurilmalarning ishlash prinsiplarini o‘zlashtirgan holda, Flowgorithm muhiti orqali mantiqiy masalalarning vizual blok-sxemalarini tuzish va algoritmik tafakkurni shakllantirish ko‘nikmalariga ega bo‘ladilar.
+8-sinf o‘quvchilariga qo‘yiladigan talablar: “Muhammad al-Xorazmiy vorislari” tizimi asosida tashkil etiladigan maxsus guruhlarning 8-sinflar uchun dasturini o‘zlashtirish uchun kompyuter bilan ishlash bo‘yicha boshlang‘ich bilimlar, matematik, mantiqiy va tanqidiy fikrlash kabi ko‘nikmalar talab etiladi.
+O‘quv kursi hajmi: “Muhammad al-Xorazmiy vorislari” tizimi asosida tashkil etiladigan maxsus guruhlarning 8-sinflari uchun Computer Science Foundation yo‘nalishi bo‘yicha darslar haftasiga 3 martadan (o‘quv yili I chorak uchun jami 36 dars) tashkil etiladi.
+DASTURDA QOʻLLANILGAN TAYANCH ATAMALAR
+Markaz (RTRM) – O‘zbekiston Respublikasi Raqamli texnologiyalar vazirligi huzuridagi “Raqamli ta’limni rivojlantirish markazi” DM
+Kasb - maxsus tayyorgarlik va ish tajribasi natijasida maʼlum bir sohada kasbiy faoliyatni amalga oshirish uchun lozim boʻlgan nazariy bilimlar, amaliy koʻnikma va malakalar majmuasini egallagan, jismoniy imkoniyat, aqliy qobiliyat va yuridik huquqlari taʼminlangan mehnat faoliyati (mashgʻuloti)ning turidir.
+Koʻnikma - muayyan vazifani bajarish uchun egallangan qobiliyat.
+Bilim - oʻrganilgan maʼlumotlarni eslab qolish va qayta tushuntirib berish.
+Kompetensiya - mavjud bilim, koʻnikma va malakalarni kundalik faoliyatda qoʻllay olish qobiliyati.
+Kasbiy faoliyat sohasi - ilmiy, ijtimoiy, iqtisodiy, ishlab chiqarishda namoyon boʻladigan kasbiy faoliyat obyektlarining majmui.
+Kasbiy faoliyat obyekti - predmetlar, voqeliklar, jarayonlar va faoliyat doirasida harakatga yoʻnaltirilgan tizimlar.
+Kasbiy faoliyat turi - kasbiy faoliyat obyektiga taʼsir qilishning usullari, uslublari va tavsifi.
+Oʻquv rejasi - oʻquv faoliyati turlari, oʻquv amaliyotlari (modullari) va ishlab chiqarish amaliyotlari tarkibi, ularni oʻrganish izchilligi, soha va tarmoqlarda ish turlarining mavsumiyligini hamda soatlardagi hajmini belgilaydigan hujjat.
+Oʻquv amaliyoti - nazariy bilim va amaliy koʻnikmalarini integratsiyalashga qaratilgan oʻquv jarayonining elementi.
+Kasbga tayyorlash oʻquv kursi - umumiy oʻrta taʼlim tashkilotlarining 8-sinf oʻquvchilari uchun tashkil etilgan kasb-hunarga oʻrgatish darslari majmuasi.
+Taʼlim dasturi - taʼlimning asosiy xususiyatlari (hajmi, mazmuni, rejalashtirilgan natijalar), tashkiliy-pedagogik shart-sharoitlar, umumiy talablar, shuningdek, taʼlimni tashkil etish va amalga oshirish uchun zarur boʻlgan oʻquv-metodik koʻrsatmalar majmui.
+Windows operatsion tizimida ishlash - kompyuterlarning texnik tomondan mukammallashishi hamda grafik imkoniyatlarining rivojlanib borishi dasturchilarda grafik interfeysli qobiq-dasturlar ishlab chiqarish fikrini uygʻotdi.
+Kompyuterni yigʻish tartibi - statsionar kompyuterni oʻzingiz yigʻish uchun siz bir nechta nyuanslarni bilishingiz kerak. Bu bitta butunga ulanadigan qurilmalar toʻplamini toʻgʻri tanlash uchun zarur.
+Kompyuterdagi nosozliklarni bartaraf etish - mobil kompyuterlar bilan ishlashda baʼzida maʼlum bir xato yoki nosozlik sababini topish qiyin. Muayyan muammolarni topish uchun siz maxsus dasturlar va usullardan foydalanishingiz kerak.
+Kompyuterni ishga tushirish - quvvat manbai kompyuterga ulanganda, yuklash jarayoni boshlanadi. BIOS (Basic In-Out System) kompyuterning asosiy qurilmalarini soʻrovdan oʻtkazadigan POST (Power On Self Test) dasturini ishga tushiradi.
+Monitorlar tuzilmalari - kompyuter monitori(monitor) - grafik, matnli maʼlumotlarni ekranga chiqarib berish uchun xizmat qiladigan qurilmadir,
+Noutbuklar turlari - hajmi va diagonal. Ushbu toifani guruhlarga boʻlish mumkin: 7-10 dyuymli diagonali — netbuklar, 11-13 — subnoutbuklar (qurilma standartdan kichikroq, ammo deyarli bir xil funksionallikka ega), 14-16 dyuym — standart va 16 va undan ortiq narsalar almashtirish ish stoli kompyuter.
+Flash xotiraga ega qurilmalari - odatda kompyuterlarda ishlatiladigan oddiy RAM xotira (Random Access Memory) uchuvchi hisoblanadi. Yaʼni, kompyuterni oʻchirib qoʻysangiz, xotira yangilanganda saqlanadigan barcha maʼlumotlar yoʻqoladi. Bunga qaramasdan, flesh xotira doimiy emas, yaʼni bu turdagi xotira texnologiyasida saqlanadigan maʼlumotlar quvvatni kesganda saqlanadi degan maʼnoni anglatadi.
+Kompyuter tarmoqlarga ulash taʼminotini tashkil qilish - aksariyat zamonaviy kompyuterlar qandaydir kompyuter tarmogʻiga ulangan. Bunday tuzilmaning yaratilishi kerakli maʼlumotlarga tezkor kirish imkonini beradi. Bundan tashqari, mahalliy tarmoqlar bir nechta foydalanuvchilarga maʼlum bir vazifa ustida sinxron ishlashga imkon beradi.
+Operatsion tizimga xizmat koʻrsatish - operatsion tizimning taʼrifi va bugungi kunda ishlatiladigan operatsion tizimlarning misollari Odatda OS sifatida qisqartirilgan operatsion tizim kuchli va odatda kompyuterda apparat va boshqa dasturlarni boshqaradigan yirik dastur hisoblanadi.
+Algoritm - qo‘yilgan maqsadga erishish yoki berilgan vazifani hal qilish uchun bajarilishi lozim bo‘lgan amallarning aniq va tartibli ketma-ketligidir.
+Flowgorithm — bu algoritmlarni vizual tarzda loyihalash va tushunish uchun yaratilgan bepul, grafik muhitli dasturiy ta’minotdir. U dasturlashni endi boshlayotgan o‘quvchilarga kod yozishdan oldin mantiqiy fikrlashni o‘rgatish uchun eng yaxshi vositalardan biri hisoblanadi.
+Veb-sayt – internet tarmog‘ida joylashgan, o‘zaro bog‘langan Veb-sahifalar to‘plami bo‘lib, foydalanuvchilarga ma’lumot taqdim etish, xizmat ko‘rsatish yoki aloqa qilish uchun xizmat qiladi.Veb-saytlar maxsus serverlarda saqlanadi va brauzerlar orqali ko‘riladi.Ular matn, rasm, video va boshqa multimedia elementlardan tashkil topgan bo‘lib, turli maqsadlarda (axborot berish, savdo qilish, ta’lim, muloqot) ishlatiladi.
+4. COMPUTER SCIENCE FOUNDATION YO‘NALISHINING TAYANCH O‘QUV REJASI
+T/r
+Tayanch oʻquv reja tarkibi
+Mashg‘ulotlar soni
+Umumiy yuklamaga
+nisbatan foiz hisobida
+I.
+Oʻquv maʼruzasi
+11
+30,5
+II.
+Oʻquv amaliyoti
+24
+66,7
+IV.
+Oraliq nazorat ishi (Test)
+1
+2,8
+Hammasi:
+36
+100
+5. COMPUTER SCIENCE FOUNDATION YO‘NALISHIGA TAYYORLASHNING MUDDATI
+Kasb nomi
+COMPUTER SCIENCE FOUNDATION
+Kasbga tayyorlashning meʼyoriy muddati
+8-sinflarda haftasiga 80 daqiqadan 3 ta dars
+Sinf
+Oʻquv chorak
+Haftalar soni
+Mashg‘ulotlar soni
+8
+I
+12
+36
+Jami
+12 hafta
+36
+Oʻquv jarayonini tashkil etish tartibi:
+1. Loyiha doirasida tashkil etiladigan I chorak o‘quv mashg‘ulotlari yilining 2 – oktyabr sanasidan kelgusi yilning 1-yanvar sanasigacha boʻlgan davrda bir chorakka boʻlingan holda tashkil etiladi;
+2. Oʻquv yilining davomiyligi - 34 hafta, bundan 1-chorak uchun 12 hafta:
+haftasiga 3 marta belgilangan soatlar doirasidan chiqmagan holda oʻqish tashkil etiladi;
+mashgʻulotning davomiyligi  1 soat 20 daqiqani tashkil etadi;
+mashgʻulotlar oraligʻidagi tanaffusning davomiyligi 5 - 10 daqiqa;
+3. Oraliq va Yakuniy nazoratlar nazariy yoki koʻrgazmali amaliy imtihon shaklida tasdiqlangan baholash mezonlari asosida oʻtkaziladi.
+6. COMPUTER SCIENCE FOUNDATION YO‘NALISHI OʻQUV MAVZU REJASI
+T/r
+Mavzu
+Ajratilganmashg‘ulotlar soni
+shundan
+Nazariy
+Amaliy
+Nazorat ishi
+I bob
+Kompyuter savodxonligi va arxitekturasi
+6
+4
+2
+0
+Zamonaviy kompyuterlar va ularning arxitekturasi
+1
+1
+Operatsion tizimlar va Windows muhitida ishlash
+1
+1
+Axborot o‘lchov birliklari va fayl turlari.Windows operatsion tizimida fayl hamda yig‘ma jildlar (papkalar) yaratish. Fayl va yig‘ma jildlar(papkalar) bilan ishlashda tezkor tugmalar (Hot keys)
+1
+1
+Kompyuterning asosiy va qo‘shimcha qurilmalari
+1
+1
+Internet, brauzerlar va elektron pochta bilan ishlash
+1
+1
+Kompyuter xavfsizligi va antivirus dasturlari.
+1
+1
+II  bob
+Zamonaviy IT yo‘nalishlari va raqamli infratuzilma asoslari
+13
+4
+9
+0
+Klaviaturada tez va to‘g‘ri yozish ko‘nikmalari
+1
+1
+Raqamli savodxonlik va raqamli madaniyat
+1
+1
+Raqamli transformatsiya tushunchasi
+1
+1
+Internet qanday ishlaydi? IP, hosting, domen
+DNS, brauzer, HTTP/HTTPS
+1
+1
+Bulutli xizmatlar va onlayn hamkorlikvositalari
+3
+3
+Git va Gitub bilan tanishuv
+4
+4
+Zamonaviy IT yo‘nalishlari: Web, Mobile, Data Science, AI, DevOps, Cybersecurity
+1
+1
+Kiberxavfsizlik va shaxsiy ma’lumotlarni himoya qilish asoslari
+1
+1
+III  bob
+Algoritmlash, Flowalgorithm va dasturlash asoslari
+17
+3
+13
+1
+Algoritm tushunchasi va algoritmik fikrlash
+1
+1
+Flowalgorithm interfeysi va blok-sxema elementlari bilan ishlash
+1
+1
+Flowalgorithm orqali dasturlash tushunchalari: dastur, buyruq, kod va mantiq
+1
+1
+Flowalgorithmda o‘zgaruvchilar va ma’lumot turlari bilan ishlash
+1
+1
+Flowalgorithmda chiziqli algoritmlar yaratish
+1
+1
+Flowalgorithmda tarmoqlanuvchi algoritmlar va shartlar bilan ishlash
+2
+1
+1
+Flowalgorithmda takrorlanuvchi algoritmlar va sikllar bilan ishlash
+2
+1
+1
+Flowalgorithmda “Kalkulyator” loyihasini yaratish
+2
+2
+Flowalgorithmda “Talaba baholash tizimi” loyihasini yaratish
+2
+2
+Flowalgorithmda “Mini bankomat tizimi” loyihasini yaratish
+2
+2
+Flowalgorithmda “Login va parol tekshirish tizimi” loyihasini yaratish
+1
+1
+Yakuniy nazorat ishi
+1
+1
+Jami:
+36
+11
+24
+1
+7. COMPUTER SCIENCE FOUNDATION YO‘NALISHI OʻQUV DASTURI
+I bob. Kompyuter savodxonligi va arxitekturasi.
+1. Zamonaviy kompyuterlar va ularning arxitekturasi.
+Zamonaviy kompyuterlarning turlari va vazifalari. Kompyuter arxitekturasi va asosiy qurilmalari. Protsessor, tezkor xotira va saqlash qurilmalari. Kiritish va chiqarish qurilmalari. Kompyuterning ishlash tamoyili va texnik ko‘rsatkichlari.
+Operatsion tizimlar va Windows muhitida ishlash.
+Operatsion tizim tushunchasi va vazifalari. Operatsion tizimlarning turlari: Windows, Linux, macOS, Android, iOS. Windows ish stoli, Start menyusi va oynalar bilan ishlash .Windows sozlamalari va boshqaruv paneli bilan tanishish. Dasturlarni ishga tushirish, o‘rnatish va o‘chirish.
+3. Axborot o‘lchov birliklari va fayl turlari.Windows operatsion tizimida fayl hamda papkalar yaratish. Fayl va papkalar bilan ishlashda tezkor tugmalar (Hot keys).
+Axborot o‘lchov birliklari: bit, bayt, KB, MB, GB, TB. Fayl tushunchasi, fayl turlari va kengaytmalari. Windowsda fayl va papkalar yaratish, nomlash va tartiblash. Fayl va papkalarni nusxalash, ko‘chirish, o‘chirish va qayta tiklash. Fayl va papkalar bilan ishlashda tezkor tugmalar: Ctrl+C, Ctrl+V, Ctrl+X, Ctrl+Z, Delete, F2.
+4. Kompyuterning asosiy va qo‘shimcha qurilmalari.
+Kompyuterning asosiy qurilmalari: tizim bloki, monitor, klaviatura, sichqoncha. Tizim blokining ichki qismlari: protsessor, RAM, ona plata, HDD/SSD. Qo‘shimcha qurilmalar: printer, skaner, proyektor, veb-kamera, kolonka. Kiritish, chiqarish va saqlash qurilmalarining vazifalari. Qurilmalarni kompyuterga ulash va ulardan xavfsiz foydalanish.
+5. Internet, brauzerlar va elektron pochta bilan ishlash.
+Internet tushunchasi va uning asosiy xizmatlari. Brauzerlar bilan ishlash: Chrome, Edge, Firefox, Safari. Qidiruv tizimlaridan samarali foydalanish. Elektron pochta yaratish, xat yozish va fayl biriktirish. Internet va elektron pochtadan xavfsiz foydalanish.
+6. Kompyuter xavfsizligi va antivirus dasturlari.
+Kompyuter xavfsizligi tushunchasi va asosiy qoidalari. Zararli dasturlar: virus, trojan, spyware, ransomware. Antivirus dasturlari va ularning vazifalari. Parol, 2FA va shaxsiy ma’lumotlarni himoya qilish. Fleshka, internet va elektron pochtadan xavfsiz foydalanish.
+II bob. Zamonaviy IT yo‘nalishlari va raqamli infratuzilma asoslari.
+7. Klaviaturada tez va to‘g‘ri yozish ko‘nikmalari.
+Klaviatura tuzilishi va tugmalar guruhlari. To‘g‘ri o‘tirish holati va barmoqlar joylashuvi. Touch typing usuli va 10 barmoqda yozish texnikasi Yozish tezligi va aniqligini oshirish mashqlari. Matn terishda tezkor tugmalar va xatolarni tuzatish.
+8. Raqamli savodxonlik va raqamli madaniyat.
+Raqamli savodxonlik tushunchasi va asosiy ko‘nikmalar. Raqamli madaniyat va internetda muloqot odobi. Raqamli iz, shaxsiy ma’lumotlar va onlayn mas’uliyat. Ishonchli axborotni aniqlash va feyk ma’lumotlardan saqlanish. Raqamli texnologiyalardan ta’lim, ish va kundalik hayotda samarali foydalanish.
+9. Raqamli transformatsiya tushunchasi.
+Raqamli transformatsiya tushunchasi va uning mohiyati. Raqamli texnologiyalarning ta’lim, biznes va davlat xizmatlaridagi o‘rni. Onlayn xizmatlar, avtomatlashtirish va elektron hujjat aylanishi. Raqamli transformatsiyaning afzalliklari: tezkorlik, qulaylik, samaradorlik. Raqamli transformatsiya jarayonida xavfsizlik va moslashuvchanlik.
+10. Internet qanday ishlaydi? IP, hosting, domen, DNS, brauzer,
+HTTP/HTTPS.
+Internet tushunchasi va ma’lumot almashish jarayoni. IP-manzil, domen nomi va hosting tushunchalari. DNS vazifasi va domenni IP-manzilga bog‘lash jarayoni. Brauzer va veb-sahifani ochish bosqichlari. HTTP va HTTPS protokollari hamda xavfsiz ulanish.
+11. Bulutli xizmatlar va onlayn hamkorlik vositalari.
+Bulutli xizmatlar tushunchasi va ularning afzalliklari. Google Drive, OneDrive, Dropbox kabi bulutli saqlash xizmatlari. Onlayn hujjatlar bilan ishlash: Google Docs, Sheets, Slides va Microsoft 365. Fayllarni yuklash, ulashish va ruxsatlarni boshqarish. Onlayn hamkorlik va vazifalarni boshqarish vositalari: Microsoft To Do, Google Tasks, Trello.
+12. Git va Gitub bilan tanishuv.
+Git va GitHub tushunchasi, Version Control tizimi. Repository, commit, branch va README fayllari bilan ishlash. GitHub akkaunt yaratish va loyihani repositoryga joylash. Git asosiy buyruqlari: init, add, commit, status, log, clone, push, pull.
+Zamonaviy IT yo‘nalishlari: Web, Mobile, Data Science, AI, DevOps, Cybersecurity.
+Web va Mobile dasturlash yo‘nalishlari. Data Science(Ma’lumotlar ilmi) va ma’lumotlar bilan ishlash asoslari. Sun’iy intellekt va Machine Learning (Mashinani o‘rgatish) tushunchalari. DevOps, server va bulutli infratuzilma asoslari. Cybersecurity va axborot xavfsizligi yo‘nalishi.
+Kiberxavfsizlik va shaxsiy ma’lumotlarni himoya qilish asoslari.
+Kiberxavfsizlik tushunchasi va asosiy xavf turlari. Shaxsiy ma’lumotlar, raqamli iz va maxfiylikni himoya qilish. Kuchli parol yaratish, 2FA va akkaunt xavfsizligi. Phishing, zararli havolalar va ijtimoiy muhandislikdan saqlanish. Qurilma, internet va bulutli xizmatlardan xavfsiz foydalanish.
+III bob. Algoritmlash, Flowalgorithm va dasturlash asoslari.
+15. Algoritm tushunchasi va algoritmik fikrlash.
+Algoritm tushunchasi, vazifasi va kundalik hayotdagi misollar. Algoritmning asosiy xossalari: aniqlik, ketma-ketlik, natijaviylik. Algoritmik fikrlash va masalani bosqichlarga ajratish.
+16. Flowalgorithm interfeysi va blok-sxema elementlari bilan ishlash.
+Flowalgorithm dasturi interfeysi va ishchi oynasi bilan tanishish.Blok-sxema elementlari: Start, End, Input, Output, Process, Decision. Bloklarni joylashtirish, ulash va algoritm ketma-ketligini qurish. Oddiy algoritm yaratish, ishga tushirish va natijani tekshirish. Blok-sxemadagi xatolarni aniqlash va tuzatish.
+17. Flowalgorithm orqali dasturlash tushunchalari: dastur, buyruq, kod va mantiq.
+Dastur tushunchasi va uning vazifasi. Buyruq, kod va algoritm o‘rtasidagi bog‘liqlik. Dastur mantiqi: kiritish, qayta ishlash va natija chiqarish. Flowalgorithmda dastur mantigʻini blok-sxema orqali ifodalash. Oddiy dastur namunalarini Flowalgorithmda yaratish va tahlil qilish.
+18. Flowalgorithmda o‘zgaruvchilar va ma’lumot turlari bilan
+ishlash.
+O‘zgaruvchi tushunchasi va uning dasturdagi vazifasi. Ma’lumot turlari: butun son, haqiqiy son, matn va mantiqiy qiymat. Flowalgorithmda o‘zgaruvchi yaratish va unga qiymat berish. Input bloki orqali ma’lumot kiritish va o‘zgaruvchida saqlash. O‘zgaruvchilar bilan oddiy hisoblash amallarini bajarish.
+19. Flowalgorithmda chiziqli algoritmlar yaratish.
+Chiziqli algoritm tushunchasi va uning bajarilish ketma-ketligi. Flowalgorithmda Input, Process va Output bloklari bilan ishlash. Oddiy hisoblash algoritmlarini yaratish: yig‘indi, ayirma, ko‘paytma, bo‘linma. Formula asosida hisoblash algoritmlari: yuza, perimetr, foiz, o‘rtacha qiymat. Chiziqli algoritmni ishga tushirish, natijani tekshirish va xatolarni tuzatish.
+20. Flowalgorithmda tarmoqlanuvchi algoritmlar va shartlar bilan ishlash.
+Tarmoqlanuvchi algoritm tushunchasi va shartli bajarilish jarayoni. Flowalgorithmda Decision bloki bilan ishlash. Taqqoslash operatorlari: &gt;, &lt;, &gt;=, &lt;=, ==, != . If/else mantigʻi asosida masalalar yechish: juft-toq son, musbat-manfiy son, bahoni aniqlash. Murakkab shartlar va mantiqiy operatorlar: AND, OR, NOT.
+21. Flowalgorithmda takrorlanuvchi algoritmlar va sikllarbilan ishlash.
+Takrorlanuvchi algoritm va sikl tushunchasi. Flowalgorithmda sikl bloklari bilan ishlash. For va While sikllari mantiqini tushunish. Takrorlash orqali masalalar yechish: 1 dan N gacha sonlar, yig‘indi, ko‘paytma. Sikllarda shart, hisoblagich va xatolarni tekshirish.
+22. Flowalgorithmda “Kalkulyator” loyihasini yaratish.
+Kalkulyator loyihasi maqsadi va ishlash mantigʻini rejalashtirish. Foydalanuvchidan sonlar va amal turini kiritish. Qo‘shish, ayirish, ko‘paytirish va bo‘lish amallarini bajarish. Decision bloki orqali tanlangan amalni tekshirish. Natijani chiqarish, bo‘lishdagi xatoliklarni tekshirish va loyihani test qilish.
+23. Flowalgorithmda “Talaba baholash tizimi” loyihasini yaratish.
+Talaba baholash tizimi loyihasi maqsadi va baholash mezonlarini aniqlash. Davomat, uyga vazifa, amaliy ish va test ballarini kiritish. Umumiy ball va foiz natijasini hisoblash. Decision bloki orqali bahoni aniqlash: a’lo, yaxshi, qoniqarli, qoniqarsiz. Natijani chiqarish, noto‘g‘ri ball kiritilishini tekshirish va loyihani test qilish.
+24. Flowalgorithmda “Mini bankomat tizimi” loyihasini yaratish.
+Mini bankomat tizimi loyihasi maqsadi va ishlash mantiqini rejalashtirish. Foydalanuvchi menyusini yaratish: balansni ko‘rish, pul yechish, pul kiritish, chiqish. O‘zgaruvchi, Input/Output va Process bloklari orqali balans bilan ishlash. Decision bloki orqali foydalanuvchi tanlovini va yetarli balansni tekshirish. Sikl yordamida menyuni qayta ko‘rsatish, xatoliklarni tekshirish va loyihani test qilish.
+25. Flowalgorithmda “Login va parol tekshirish tizimi” loyihasini yaratish
+Login va parol tekshirish tizimi loyihasi maqsadi va ishlash mantigʻini rejalashtirish. Foydalanuvchidan login va parol ma’lumotlarini kiritish. Oldindan belgilangan login va parol bilan kiritilgan ma’lumotlarni solishtirish. Decision bloki orqali to‘g‘ri yoki noto‘g‘ri kiritilgan ma’lumotlarni tekshirish. Natijani chiqarish, xato urinishlarni hisoblash va loyihani test qilish.
+26. Yakuniy nazoratishi
+8. COMPUTER SCIENCE FOUNDATION YO‘NALISHI BOʻYICHA OʻTILADIGAN DARS SOATLARI
+T/r
+Mavzular
+I-CHORAK
+1-hafta
+2-hafta
+3-hafta
+4-hafta
+5-hafta
+6-hafta
+7-hafta
+8-hafta
+9-hafta
+10-hafta
+11-hafta
+12-hafta
+1.
+Zamonaviy kompyuterlar va ularning arxitekturasi.
+1
+2.
+Operatsion tizimlarva Windows muhitida ishlash.
+1
+3.
+Axborot o‘lchov birliklari va fayl turlari.Windows operatsion tizimida fayl hamda papkalar yaratish. Fayl va papkalar bilan ishlashda tezkor tugmalar (Hot keys).
+1
+4.
+Kompyuterning asosiy va qo‘shimcha qurilmalari.
+1
+5.
+Internet, brauzerlar va elektron pochta bilan ishlash.
+1
+6.
+Kompyuter xavfsizligi va antivirus dasturlari.
+1
+7.
+Klaviaturada tez va to‘g‘ri yozish ko‘nikmalari.
+1
+8.
+Raqamli savodxonlik va raqamli madaniyat.
+1
+9.
+Raqamli transformatsiya tushunchasi.
+1
+10.
+Internet qanday ishlaydi? IP, hosting, domen
+DNS, brauzer,HTTP/HTTPS.
+1
+11.
+Bulutli xizmatlar va onlayn hamkorlik vositalari.
+2
+1
+12.
+Git va Gitub bilan tanishuv.
+2
+2
+13.
+Zamonaviy IT yo‘nalishlari: Web, Mobile, Data Science, AI, DevOps, Cybersecurity.
+1
+14.
+Kiberxavfsizlik va shaxsiy ma’lumotlarni himoya qilish asoslari.
+1
+15.
+Algoritm tushunchasi va algoritmik fikrlash.
+1
+16.
+Flowalgorithm interfeysi va blok-sxema elementlari bilan ishlash.
+1
+17.
+Flowalgorithm orqali dasturlash tushunchalari: dastur, buyruq, kod va mantiq
+1
+18.
+Flowalgorithmda o‘zgaruvchilar va ma’lumot turlari bilan ishlash.
+1
+19.
+Flowalgorithmda chiziqli algoritmlar yaratish.
+1
+20.
+Flowalgorithmda tarmoqlanuvchi algoritmlar va shartlar bilan ishlash.
+2
+21.
+Flowalgorithmda takrorlanuvchi algoritmlar va sikllar bilan ishlash.
+1
+1
+22.
+Flowalgorithmda “Kalkulyator” loyihasini yaratish.
+2
+23.
+Flowalgorithmda “Talaba baholash tizimi” loyihasini yaratish.
+2
+24.
+Flowalgorithmda “Mini bankomat tizimi” loyihasini yaratish.
+1
+1
+25.
+Flowalgorithmda “Login va parol tekshirish tizimi” loyihasini yaratish.
+1
+26.
+Yakuniy nazorat ishi.
+1
+9. OʻQUV JARAYONINI TASHKIL ETISHDA OʻQITISH METODLARI, SHAKLLARI VA VOSITALARI
+Oʻqitish metodlari - Mazkur o‘quv kursida o‘quvchilarning raqamli savodxonligini, algoritmik fikrlashini, muammolarni hal qilish, muloqot va hamkorlikda ishlash ko‘nikmalarini rivojlantirishga qaratilgan quyidagi metodlardan foydalaniladi:
+Interaktiv suhbat - O‘quvchilarni mavzu yuzasidan fikr yuritishga, o‘z qarashlarini bildirishga va muloqot qilishga jalb etuvchi metod. Ushbu metod kompyuter arxitekturasi, raqamli madaniyat, zamonaviy IT yo‘nalishlari va kiberxavfsizlik mavzularini o‘rganishda qo‘llaniladi.
+Tushuntirish va namoyish etish (demonstratsiya) - Nazariy bilimlarni amaliy ko‘rsatmalar bilan bog‘lashga xizmat qiladi. Operatsion tizimlar, fayl va papkalar bilan ishlash, internet va elektron pochta xizmatlaridan foydalanish mavzularida samarali qo‘llaniladi.
+Aqliy hujum (Brainstorming) - Muayyan muammo yoki mavzu bo‘yicha qisqa vaqt ichida ko‘plab g‘oyalarni ilgari surishga asoslangan metod. Raqamli transformatsiya, sun’iy intellekt va zamonaviy IT kasblari mavzularida qo‘llaniladi.
+Muammoli ta’lim (Problem-Based Learning) - O‘quvchilarni real yoki model vaziyatlar asosida muammolarni aniqlash va ularga yechim topishga yo‘naltiradi. Kiberxavfsizlik, shaxsiy ma’lumotlarni himoya qilish va autentifikatsiya tizimlari mavzularida foydalaniladi.
+Loyiha asosida o‘qitish (Project-Based Learning) - O‘quvchilarning amaliy mahsulot yaratishi orqali bilim va ko‘nikmalarni shakllantirishga qaratilgan metod. Flowalgorithm muhitida “Kalkulyator”, “Talaba baholash tizimi”, “Mini bankomat” va “Login-parol tekshirish tizimi” loyihalarini yaratishda qo‘llaniladi.
+Tadqiqot va izlanish metodi (Inquiry-Based Learning) - O‘quvchilarni mustaqil ma’lumot izlash, tahlil qilish va xulosa chiqarishga o‘rgatadi. Internetning ishlash prinsiplari, bulutli texnologiyalar va GitHub platformasi bilan tanishishda qo‘llaniladi.
+Amaliy mashqlar - Nazariy bilimlarni mustahkamlash va ko‘nikmaga aylantirishga xizmat qiluvchi metod. Kursning barcha amaliy mavzularida, xususan, Windows muhiti, GitHub va Flowalgorithm bilan ishlashda qo‘llaniladi.
+Gamifikatsiya (Gamification) - Ta’lim jarayoniga o‘yin elementlarini kiritish orqali o‘quvchilarning motivatsiyasini oshiradi. Klaviaturada tez yozish, algoritmik masalalar va kiberxavfsizlik bo‘yicha viktorinalarda qo‘llaniladi.
+Case Study (Vaziyatli tahlil orqali o‘rganish) - Haqiqiy yoki modellashtirilgan vaziyatlarni tahlil qilish orqali qaror qabul qilish ko‘nikmalarini rivojlantiradi. Internet xavfsizligi, ma’lumotlarni himoya qilish va raqamli madaniyat mavzularida foydalaniladi.
+Peer Learning (Hamkorlikda o‘rganish) - O‘quvchilarning bir-biridan o‘rganishi va tajriba almashishiga asoslanadi. GitHub bilan ishlash, bulutli xizmatlardan foydalanish va guruhli loyihalarda qo‘llaniladi.
+Mustaqil ta’lim - O‘quvchilarning o‘z bilimlarini mustaqil ravishda kengaytirishiga xizmat qiladi. Qo‘shimcha topshiriqlar, mini-loyihalar va amaliy mashqlar orqali amalga oshiriladi.
+Refleksiya - O‘quvchilar tomonidan o‘z faoliyati va erishilgan natijalarni tahlil qilish jarayoni. Har bir bo‘lim yakunida va loyiha himoyalaridan so‘ng qo‘llaniladi.
+№
+O‘qitish metodi
+Qo‘llaniladigan mavzular
+Manba
+1.
+Interaktiv suhbat
+Zamonaviy kompyuterlar va ularning arxitekturasi, Raqamli savodxonlik va raqamli madaniyat, Zamonaviy IT yo‘nalishlari
+106680-1968500
+2.
+Tushuntirish va taqdimot
+Operatsion tizimlar va Windows muhitida ishlash, Fayl va papkalar bilan ishlash, Internet va elektron pochta bilan ishlash
+10604511874500
+3.
+Aqliy hujum (Brainstorming)
+Raqamli transformatsiya, Kiberxavfsizlik, Zamonaviy IT yo‘nalishlari, Sun'iy intellekt haqida tushunchalar
+10668010350500
+4.
+Muammoli ta'lim (Problem-Based Learning)
+Kompyuter xavfsizligi, Kiberxavfsizlik va shaxsiy ma'lumotlarni himoya qilish, Login va parol tekshirish tizimi
+1066808763000
+5.
+Loyiha asosida o‘qitish (Project-Based Learning)
+Kalkulyator loyihasi, Talaba baholash tizimi, Mini bankomat tizimi, Git va GitHub bilan ishlash
+927109525000
+6.
+Tadqiqot va izlanish metodi
+Internet qanday ishlaydi?, Bulutli xizmatlar, IT kasblari va zamonaviy texnologiyalar
+844559334500
+7.
+Amaliy mashqlar
+Klaviaturada tez yozish, Windows muhitida ishlash, GitHub, Flowalgorithm mashg‘ulotlari
+9715511366500
+8.
+Gamifikatsiya elementlari
+Klaviatura trenajyorlari, Algoritmik masalalar, Kiberxavfsizlik viktorinalari
+9842510287000
+9.
+Case-study
+Internet xavfsizligi, Kiberxavfsizlik, Shaxsiy ma'lumotlarni himoya qilish
+984257810500
+10.
+Peer-learning (o‘quvchilararo o‘rganish)
+Git va GitHub, Bulutli xizmatlar, Flowalgorithm loyihalari
+1079509144000
+11.
+Mustaqil ta'lim
+GitHub akkaunti yaratish, Bulutli servislar bilan ishlash, Mini loyihalar
+1079509525000
+12.
+Refleksiya
+Har bir bob yakunida, loyiha himoyasi va oraliq nazoratdan so‘ng
+1174758953500
+Oʻqitish shakllari
+Nazariy
+Amaliy
+Umumiy
+Mini-ma'ruza;
+Interaktiv suhbat;
+Multimedia taqdimotlari; Videodarslar;
+Mustaqil ta'lim; Konsultatsiyalar;
+Kompyuterda amaliy topshiriqlar;
+GitHub laboratoriya ishlari;
+Flowalgorithm mashg‘ulotlari, loyiha ishlari, treninglar, viktorinalar, mustaqil uy ishlari;
+ommaviy;
+jamoaviy;
+guruhli;
+kichik guruhli;
+juftli;
+yakka tartibda.
+Oʻqitish vositalari
+Oʻqitish vositalari
+(oddiy va murakkab)
+Oʻquv qurollari va koʻrgazmali qurollar
+darsliklar, oʻquv qoʻllanmalari;
+metodik qoʻllanmalar;
+maʼlumotnomalar;
+maxsus adabiyotlar;
+metodik tavsiyalar;
+ensiklopediyalar;
+jadval va plakat;
+mulyaj va modellar.
+Axborot materiallari va dasturiy taʼminot
+kompyuter;
+amaliy topshiriqlar;
+kasbiy koʻnikma va malakaviy dastur;
+testlar, nazorat topshiriqlari va boshqalar.
+10. BAHOLASH MEZONLARI
+Oʻquvchilarning Computer Science Foundation yo‘nalishiga oid bilim, koʻnikma, malaka va kompetensiyalarini baholash va nazorat qilish maqsadida quyidagi nazorat turlari amalga oshiriladi:
+joriy nazorat - joriy nazorat chorak davomida o‘quvchining darslardagi faolligi, amaliy topshiriqlarni bajarishi, mini-loyihalar, GitHub va Flowalgorithm topshiriqlari asosida 40 ballik tizimda baholanadi.
+Joriy nazorat chorak davomida bajariladigan amaliy va loyiha faoliyati asosida amalga oshiriladi.
+Har bir o‘quvchi chorak yakunida o‘qituvchi tomonidan berilgan loyiha topshirig‘ini bajarishi va loyiha natijasini maxsus elektron tizimga havola ko‘rinishida yuklashi shart.
+Loyiha quyidagi platformalardan birida joylashtirilishi mumkin:
+GitHub Repository;
+Kaggle Notebook yoki Project;
+Google Play Market;
+Apple App Store;
+Google Drive, Telegram kanal yoki guruhdagi video-taqdimot havolasi;
+o‘qituvchi tomonidan tasdiqlangan boshqa platforma.
+oraliq nazorat – chorak davomida oʻquv dasturining tegishli boʻlimi tugallangandan keyin oʻquvchilarning bilimlari, koʻnikma va malakalarini baholash uchun amalga oshiriladi. U amaliy, ogʻzaki, yozma nazorat ishi yoki testlar shaklida oʻtkaziladi. Ushbu nazoratda foydalaniladigan materiallar Computer Science Foundation yo‘nalishi boʻyicha mentor tomonidan tayyorlanadi. Oraliq nazorat har chorak davomida o‘tkaziladi.
+yakuniy nazorat - har bir chorak yakunida o‘quvchilarning nazariy bilimlari, amaliy ko‘nikmalari va kompetensiyalarini baholash maqsadida o‘tkaziladi. Yakuniy nazorat 30 ta topshiriqdan iborat bo‘lib, ularning 25 tasi yopiq test, 5 tasi esa ochiq savol yoki IT sohasiga oid qisqa amaliy topshiriqlar shaklida tuziladi.
+Yopiq test topshiriqlari o‘quvchilarning kompyuter savodxonligi, raqamli texnologiyalar, internet va boshlangʻich kiberxavfsizlik, algoritmlash hamda dasturlash bo‘yicha nazariy bilimlarini aniqlashga qaratiladi. Ochiq savollar va amaliy topshiriqlar esa o‘quvchilarning algoritmik fikrlashi, muammolarni hal etish qobiliyati va olingan bilimlarni amaliyotda qo‘llash kompetensiyalarini baholashga xizmat qiladi.
+Yakuniy nazorat natijalari 100 ballik tizim asosida 25 ta yopiq test uchun3 balldan jami 75 ball hamda 5 ta ochiq test uchun 5 balldan 25 ball baholanadi. O‘quvchi oraliq nazoratdan kamida 60 ball (60%) to‘plagan taqdirda keyingi chorakdagi o‘quv mashg‘ulotlarida qatnashish imkoniyatiga ega bo‘ladi.
+Yakuniy nazoratga qo‘yish shartlari:
+Joriy nazorat va oraliq nazorat natijalari chorak davomida o‘quvchining nazariy bilimlari, amaliy ko‘nikmalari, loyiha faoliyati va topshiriqlarni bajarish sifati asosida shakllantirib boriladi. Chorak yakunida joriy nazorat (40 ball) va oraliq nazorat (20 ball) natijalari jamlanadi. O‘quvchi jami 60 balldan kamida 36 ball (60%) to‘plagan taqdirda yakuniy nazoratga qo‘yiladi. O‘quvchi jami60 balldan kamida 36 ball to‘plamagan taqdirda yakuniy nazoratga qo‘yilmaydi va avtomatik ravishda choraklik sinovdan o‘tmagan deb topiladi.
+Computer Science Foundation yoʻnalishi boʻyicha yakuniy nazorat imtihonlarni oʻtkazish tartibi.
+Computer Science yoʻnalishi boʻyicha oʻquv reja va dasturning bir chorak davomidagi joriy va oraliq nazoratidan yetarlicha ball to‘plagan taqdirda o‘qituvchi tomonidan yakuniy nazoratni topshirishga ruxsat beriladi.
+Yakuniy nazorat oʻtkazish jadvali, u oʻtkaziladigan kunlar koʻrsatilgan holda, markaz direktori tomonidan tasdiqlanadi va yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin har bir taʼlim muassasasining oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish yoki maxsus electron tizimda xabar berish orqali oʻquvchilar xabardor etiladi.
+Yakuniy nazorat nazariy test va/yoki amaliy topshiriq shaklida oʻtkaziladi.
+Amaliy topshiriqlar oʻqitilgan mutaxassislik oʻquv dasturi asosida tuziladi
+.
+O‘quvchilar bilimini baholash mezonlari
+Baholash usuli
+Topshiriq
+Baholash mezonlari
+Maksimal ball
+Baholash o‘tkazish vaqti
+Joriy nazorat
+Amaliy topshiriqlar, mini-loyihalar, GitHub va Flowalgorithm topshiriqlari, choraklik loyiha ishi
+- o‘quvchining darslardagi faolligi;
+- amaliy topshiriqlarni o‘z vaqtida va sifatli bajarishi;
+- mini-loyiha va loyiha ishlarining belgilangan talablarga javob berishi; - GitHub yoki boshqa platformaga yuklangan ishlarning to‘liqligi; - algoritmik fikrlash va amaliy ko‘nikmalarni qo‘llay olishi; - loyiha natijasini havola ko‘rinishida elektron tizimga yuklashi; - loyiha maqsadi, ishlash prinsipi va foydalanilgan texnologiyalarni tushuntirib bera olishi.
+40 ball
+O‘quv jarayoni davomiyligida o‘tkaziladi
+Oraliq nazorat
+Yozma, og‘zaki, amaliy nazorat ishi yoki test topshiriqlari
+- nazariy savollarga to‘liq va aniq javob berilganligi; - javoblarning faktlarga asoslanganligi;
+- amaliy topshiriqlarda belgilangan vazifalarning to‘g‘ri bajarilganligi; - algoritmlash, dasturlash va kompyuter savodxonligi bo‘yicha bilimlarning namoyon etilishi;
+- tushuntirishlarning aniq va mantiqiyligi; - test savollariga to‘g‘ri javob berilganligi; - bajarilgan ishda xatolarning kamligi.
+20 ball
+Chorak davomida, o‘quv jarayoni davomida
+Jami
+60 ball
+Yakuniy nazorat
+25 ta yopiq test va 5 ta ochiq savol yoki IT sohasiga oid qisqa amaliy topshiriqlar
+- 25 ta yopiq test savollariga to‘g‘ri javob berilganligi (har biri 3 balldan, jami 75 ball); - 5 ta ochiq savol yoki amaliy topshiriqlarning to‘g‘ri va to‘liq bajarilganligi (har biri 5 balldan, jami 25 ball); - kompyuter savodxonligi, raqamli texnologiyalar, internet va boshlang‘ich kiberxavfsizlik bo‘yicha nazariy bilimlarning namoyon etilishi; - algoritmlash va dasturlash bo‘yicha bilimlarni amaliyotda qo‘llay olishi; - algoritmik fikrlashva muammolarni hal etish kompetensiyasining shakllanganligi.
+100 ball
+O‘quv yili oxirida, kurs yakunida
+Jami
+100 ball
+Umumiy
+160 ball
+Eslatma: O‘quvchi keyingi chorakdagi o‘quv mashg‘ulotlarida qatnashishi uchun yakuniy nazoratdan kamida 60 ball (60%) to‘plashi lozim.
+11. COMPUTER SCIENCE FOUNDATION YO‘NALISHINING QO‘LLANISH SOHASI
+Mazkur malaka talabi Computer Science Foundation yo‘nalishi bo‘yicha umumiy o‘rta ta’lim muassasalari o‘quvchilarini axborot texnologiyalari, kompyuter savodxonligi, algoritmlash, dasturlash asoslari, internet texnologiyalari va kiberxavfsizlik bo‘yicha tayyorlash kurslari uchun zarur bo‘lgan bilim, ko‘nikma, malaka va kompetensiyalar mazmunini, shuningdek o‘quv yuklamalari hajmini hamda belgilangan talablarning bajarilishini nazorat qilish tartibini belgilaydi.
+Mazkur malaka talablari o‘quvchilarning Computer Science Foundation yo‘nalishi bo‘yicha tayyorgarlik sifati va darajasini baholashda asosiy mezon hisoblanadi. Ushbu yo‘nalish o‘quvchilarda algoritmik fikrlash, muammolarni tahlil qilish va dasturlashning boshlang‘ich ko‘nikmalarini shakllantirish orqali keyingi bosqichdagi Web Full-Stack Dasturlash yo‘nalishini muvaffaqiyatli o‘zlashtirish uchun zarur tayanch kompetensiyalarni hosil qiladi.
+Mazkur talablarning bajarilishi o‘quvchilarning Web Full-Stack dasturlash va boshqa IT yo‘nalishlarini o‘rganishga tayyor ekanligini tasdiqlaydi
+12. COMPUTER SCIENCE FOUNDATION YO‘NALISHIGA O‘QITISH NATIJALARI
+№
+BOB
+Bilim va ko‘nikma
+I-bob. Kompyuter savodxonligi
+va arxitekturasi
+- Kompyuterning asosiy qismlari, qurilmalari va ularning vazifalarini tushuntira oladi. - Operatsion tizim va Windows muhitida asosiy amallarni bajara oladi. - Fayl, papka va axborot o‘lchov birliklari bilan ishlay oladi. - Internet, brauzer va elektron pochtadan foydalana oladi. - Kompyuter xavfsizligi va antivirus dasturlarining ahamiyatini tushuntira oladi.
+II-bob. Zamonaviy IT yo‘nalishlari va raqamli infratuzilma asoslari
+- Raqamli savodxonlik, raqamli madaniyat va raqamli transformatsiya tushunchalarini izohlay oladi. - Internet infratuzilmasi, IP, domen, hosting, DNS va HTTP/HTTPS tushunchalarini farqlay oladi. - Bulutli xizmatlar va onlayn hamkorlik vositalaridan foydalana oladi. - Git va GitHub bilan ishlashning boshlang‘ich ko‘nikmalariga ega bo‘ladi. - Zamonaviy IT yo‘nalishlari va kiberxavfsizlik asoslarini tushuntira oladi.
+III-bob. Algoritmlash, Flowalgorithm va dasturlash asoslari
+- Algoritm tushunchasi va algoritmik fikrlash asoslarini tushuntira oladi. - Flowalgorithm muhitida blok-sxemalar bilan ishlay oladi. - O‘zgaruvchilar, ma’lumot turlari, shartlar va sikllardan foydalana oladi. - Chiziqli, tarmoqlanuvchi va takrorlanuvchi algoritmlarni yarata oladi. - Flowalgorithm orqali sodda amaliy loyihalarni ishlab chiqa oladi.
+13. COMPUTER SCIENCE FOUNDATION YO‘NALISHIGA O‘QITISH DAVOMIDA QO‘LLANILADIGAN LOYIHA ISHLARI
+№
+Loyiha mavzulari
+1.
+Kompyuterning asosiy qurilmalari haqida interaktiv taqdimot yaratish
+2.
+Elektron pochta yaratish va rasmiy elektron xat yuborish loyihasi
+3.
+Kuchli parol generatori algoritmini ishlab chiqish
+4.
+Kompyuter viruslari va antivirus dasturlari bo‘yicha prezentatsiya tayyorlash
+5.
+Raqamli madaniyat va internet xavfsizligi bo‘yicha infografika yaratish
+6.
+GitHub platformasida shaxsiy portfolio repository yaratish
+7.
+Git va GitHub yordamida loyiha versiyalarini boshqarish
+8.
+Git va GitHub yordamida loyiha versiyalarini boshqarish
+9.
+Flowalgorithm yordamida sonning juft yoki toqligini aniqlash dasturini yaratish
+10.
+Flowalgorithm yordamida baholash tizimini yaratish
+11.
+Flowalgorithm yordamida yoshni hisoblash dasturini yaratish
+12.
+Flowalgorithm yordamida valyuta konvertori algoritmini yaratish
+13.
+Flowalgorithm yordamida o‘quvchilar davomati hisoblagichini yaratish
+14.
+Flowalgorithm yordamida mini bankomat tizimini yaratish
+15.
+Flowalgorithm yordamida login va parol tekshirish tizimini yaratish
+16.
+Flowalgorithm yordamida mini test tizimini yaratish
+17.
+Flowalgorithm yordamida matematik formulalarni hisoblovchi dastur yaratish
+18.
+Flowalgorithm yordamida “Tasodifiy son topish” o‘yini yaratish
+19.
+Flowalgorithm yordamida kundalik xarajatlarni hisoblash tizimini yaratish
+20.
+Yakuniy loyiha: bir nechta algoritmlar va shart operatorlaridan foydalangan holda amaliy dastur yaratish
+Eslatma: COMPUTER SCIENCE FOUNDATION kursi davomida bajariladigan loyihalar o‘tilgan mavzular doirasida beriladi va joriy nazorat ishlarini hamda oraliq baholashda asos bo‘ladi. Kursda tahsil olayotgan har bir o‘quvchiga loyiha topshiriqlari individual tarzda beriladi. Berilgan loyihalarni har bir chorak davomida yakuniy loyiha sifatida bajarish mumkin.
+14. COMPUTER SCIENCE FOUNDATION YO‘NALISHIGA OʻQITISH XONASINI JIHOZLASHGA QOʻYILGAN TALABLAR
+T/r
+Jihoz nomi
+Oʻlchov birligi
+Soni
+Jihoz rasmi
+1.
+O‘qituvchi uchun noutbuk yoki shaxsiy kompyuter (Intel Core i5/Ryzen 5, 8 GB RAM, SSD 256 GB va undan yuqori)
+toʻplam
+1
+2203453556000
+2.
+O‘quvchilar uchun kompyuter yoki noutbuk (kamida Intel Core i3/Ryzen 3, 4 GB RAM, SSD/HDD 128 GB)
+toʻplam
+1
+1803403175000
+3.
+Kompyuter klaviaturasi oʻlchami 445-mm 136-mm
+dona
+1
+222250127000
+4.
+Kompyuter sichqonchasi oʻlchami 101-mm 75-mm
+dona
+1
+2317752794000
+5.
+Internet tarmog‘i uchunWi-Fi router
+dona
+1
+273685-2540000
+15. COMPUTER SCIENCE FOUNDATION YO‘NALISHIGA OʻQITISH JARAYONIDA FOYDALANILADIGAN DASTURIY VOSITALAR
+T/r
+Xom ashyo va materiallar nomi
+Oʻlchov birligi
+Bir oʻquvchi uchun belgilangan miqdor
+1.
+Google Chrome yoki Microsoft Edge
+dastur
+1
+2.
+Microsoft Office yoki LibreOffice.
+dastur
+1
+3.
+Flowgorithm
+dastur
+1
+4.
+Git
+dastur
+1
+5.
+Visual Studio Code
+dastur
+1
+6.
+GitHub akkaunti
+akkaunt
+1
+7.
+Gmail akkaunti
+akkaunt
+1
+8.
+Google Drive
+akkaunt
+1
+9.
+Antivirus dasturi
+dastur
+1
+10.
+Telegram Desktop/Web
+dastur
+1
+11.
+Google Meet yoki Zoom
+dastur
+1
+16. COMPUTER SCIENCE FOUNDATION YO‘NALISHIGA O‘RGATUVCHI MENTOR LAVOZIMIGA QO‘YILADIGAN TALABLAR
+T/r
+Lavozim nomi
+Malakaviy talablar
+Ish tajribasi va shaxsiy sifatlari
+Taʼlimning eng past darajasi
+1
+COMPUTER SCIENCE FOUNDATION yo‘nalishi bo‘yicha mentor
+Mutaxassisligiga
+talab
+qo‘yilmaydi
+raqamli texnologiyalar, dasturlash bo‘yicha chuqur bilim va zamonaviy ko‘nikmalarga ega;
+mazkur yo‘nalish bo‘yicha kamida 2 yil o‘quvchilar bilan ishlash tajribasiga ega (mehnat daftarchasi yoki ma’lumotnoma asosida);
+taqdim etilgan o‘quv reja va dasturlar asosida darslarni tashkillashtirish, shuningdek, ularni o‘quvchilarning darajasi, qiziqishi va talablariga ko‘ra moslashtira olish ko‘nikmasi;
+ijodkorlik, jamoa bilan ishlash, moslashuvchanlik, tashkilotchilik, muloqot ko‘nikmalariga ega.
+O/M, Oʻ/M
+Lavozim vazifalari:
+Biriktirilgan guruhlarda Computer Science Foundation yo‘nalishi bo‘yicha nazariy va amaliy mashg‘ulotlarni o‘tkazish;
+O‘quvchilarga kompyuter savodxonligi, raqamli texnologiyalar, internet xizmatlari, kiberxavfsizlik, Git/GitHub va algoritmlash asoslarini o‘rgatish;
+Kompyuter xonalari, laboratoriyalar va o‘quv jihozlarini mashg‘ulotlarga tayyorlash, ularning soz holatda ishlashini nazorat qilish;
+O‘quv jarayonida foydalaniladigan dasturiy vositalar (Windows, Flowgorithm, Git, GitHub, brauzerlar va boshqa platformalar)ni o‘rnatish va ulardan foydalanishni tashkil etish;
+Amaliy mashg‘ulotlar, mini-loyihalar va yakuniy loyihalarni ishlab chiqish hamda ularning bajarilishini nazorat qilish;
+O‘quvchilarning GitHub repozitoriylari, loyiha ishlari va elektron portfoliolarini yuritish bo‘yicha ko‘rsatmalar berish;
+O‘quvchilarni joriy, oraliq va yakuniy nazoratlarga tayyorlash;
+o‘quvchilarda algoritmik fikrlash, muammolarni tahlil qilish va yechim ishlab chiqish kompetensiyalarini shakllantirish;
+Zamonaviy IT yo‘nalishlari bo‘yicha kasbga yo‘naltirish ishlarini olib borish;
+Ta’lim jarayonida kompyuter texnikalari, tarmoq qurilmalari va boshqa jihozlardan oqilona va ehtiyotkorlik bilan foydalanilishini ta’minlash;
+Axborot xavfsizligi, mehnat muhofazasi, xavfsizlik texnikasi va yong‘in xavfsizligi qoidalariga rioya etilishini ta’minlash;
+O‘quv dasturini zamonaviy IT texnologiyalar, raqamli transformatsiya va innovatsion yondashuvlar asosida takomillashtirib borish.
+Bilishi kerak:
+Pedagogika, psixologiya va zamonaviy ta’lim texnologiyalari asoslarini;
+Kompyuter savodxonligi va kompyuter arxitekturasi asoslarini;
+Operatsion tizimlar, internet texnologiyalari va bulutli xizmatlar bilan ishlashni;
+Git va GitHub platformalarining asosiy imkoniyatlarini;
+Algoritmlash va Flowgorithm dasturida ishlash asoslarini;
+Axborot xavfsizligi va kiberxavfsizlikning asosiy tamoyillarini;
+Mehnat qonunchiligi, mehnat muhofazasi, texnika xavfsizligi va yong‘in xavfsizligi qoidalarini;
+Zamonaviy IT yo‘nalishlari (Web Development, Mobile Development, Data Science, Artificial Intelligence, DevOps, Cybersecurity va boshqalar) haqida umumiy tushunchalarni.
+Malaka talablari:
+Mutaxassisligiga talab qo‘yilmaydi.
+17. COMPUTER SCIENCE FOUNDATION YO‘NALISHIGA BO‘YICHA 8-SINF O‘QUVCHILARI UCHUN KURS YAKUNIDA QO‘YILADIGAN UMUMIY MALAKA TALABLARI
+Ko‘rsatkich
+Talablar
+Bilim
+Kompyuter savodxonligi, kompyuter arxitekturasi, operatsion tizimlar, internet texnologiyalari, raqamli savodxonlik, kiberxavfsizlik, Git va GitHub, algoritmlash hamda dasturlashning boshlang‘ich tushunchalarini bilishi kerak. Shuningdek, zamonaviy IT yo‘nalishlari va ularning qo‘llanilish sohalari haqida umumiy tasavvurga ega bo‘lishi lozim.
+Koʻnikma
+Kompyuter va operatsion tizimlardan samarali foydalanish, fayl va papkalar bilan ishlash, internet va elektron pochta xizmatlaridan foydalanish, bulutli texnologiyalar bilan ishlash, GitHub platformasida loyihalarni joylashtirish, Flowgorithm muhitida algoritmlar yaratish hamda chiziqli, tarmoqlanuvchi va takrorlanuvchi algoritmlarni ishlab chiqish ko‘nikmalariga ega bo‘lishi kerak.
+Kompetensiya
+Kundalik hayot va o‘quv faoliyatida raqamli texnologiyalardan xavfsiz va samarali foydalana olishi, muammolarni algoritmik fikrlash asosida tahlil qilishi va yechim ishlab chiqishi, Flowgorithm yordamida amaliy masalalarni modellashtira olishi, GitHub orqali loyiha ishlarini boshqarishi hamda keyingi bosqichdagi Web Full-Stack Dasturlash va boshqa IT yo‘nalishlarini o‘zlashtirish uchun zarur tayanch kompetensiyalarga ega bo‘lishi kerak.
+18. FOYDALANILGAN ADABIYOTLAR VA ELEKTRON  MANBALAR ROʻYXATI
+Foydalanilgan adabiyotlar roʻyxati.
+O‘zbekiston Respublikasi Maktabgacha va maktab ta’limi vazirligi. Informatika va axborot texnologiyalari (5–11-sinflar uchun darsliklar va o‘quv qo‘llanmalar).
+S.S. G‘ulomov, R.X. Alimov. Axborot texnologiyalari asoslari. – Toshkent.
+A. Abduqodirov. Informatika va hisoblash texnikasi asoslari. – Toshkent.
+Charles Severance. Python for Everybody. – University of Michigan, 2016.
+Al Sweigart. Automate the Boring Stuff with Python. – No Starch Press, 2019.
+Scott Chacon, Ben Straub. Pro Git. – Apress, 2014.
+Brian Kernighan. Understanding the Digital World. – Princeton University Press, 2021.
+Elektron manbalar.
+ZiyoNET ta’lim portali – https://ziyonet.uz
+O‘zbekiston Respublikasi Raqamli texnologiyalar vazirligi – https://digital.uz
+Informatika va axborot texnologiyalari faniga oid elektron resurslar – https://eduportal.uz
+Flowgorithm rasmiy sayti – https://flowgorithm.org
+Git rasmiy hujjatlari – https://git-scm.com/docs
+GitHub Docs – https://docs.github.com
+W3Schools dasturlash va IT asoslari – https://www.w3schools.com
+MDN Web Docs – https://developer.mozilla.org
+Google Workspace Learning Center – https://support.google.com/a/users
+Khan Academy Computing – https://www.khanacademy.org/computing
+Code.org – https://code.org
+freeCodeCamp – https://www.freecodecamp.org
+Cisco Networking Academy Skills for All – https://skillsforall.com
+Google for Education – https://edu.google.com

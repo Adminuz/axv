@@ -1,0 +1,1057 @@
+OʻZBEKISTON RESPUBLIKASI RAQAMLI TEXNOLOGIYALAR VAZIRLIGI
+RAQAMLI TA’LIMNI RIVOJLANTIRISH
+“MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN 
+PROFESSIONAL IT DEVELOPMENT YO‘NALISHI BO‘YICHA O‘QUV DASTURI
+(11-SINFLAR UCHUN)
+Toshkent – 20256929755100152200069297551001522000
+MUNDARIJA
+ TOC \o "1-3" \h \z \u 1. Dasturda qoʻllanilgan tayanch atamalar PAGEREF _Toc207718330 \h 3
+2. Professional IT development kasbining tayanch oʻquv rejasi PAGEREF _Toc207718332 \h 7
+3. Professional IT development kasbiga tayyorlashning muddati PAGEREF _Toc207718333 \h 8
+4. Professional IT development kasbi oʻquv mavzu rejasi PAGEREF _Toc207718334 \h 9
+5. Professional IT development kasbi oʻquv dasturi PAGEREF _Toc207718335 \h 11
+6. Professional IT development yo‘nalishi boʻyicha oʻtiladigan dars soatlari PAGEREF _Toc207718336 \h 18
+7. Oʻquv jarayonini tashkil etishda oʻqitish metodlari, shakllari va vositalari PAGEREF _Toc207718338 \h 20
+8. Baholash mezonlari PAGEREF _Toc207718339 \h 21
+9. Professional IT development kasbi tavsifi PAGEREF _Toc207718340 \h 24
+9.1. Bitiruvchining kasbiy faoliyati sohalari: PAGEREF _Toc207718341 \h 24
+9.2. Bitiruvchining kasbiga muvofiq kasbiy faoliyat obyektlari: PAGEREF _Toc207718342 \h 24
+9.3. Professional IT development kasbiy faoliyat turlari: PAGEREF _Toc207718343 \h 24
+9.4. Professional IT development: PAGEREF _Toc207718344 \h 24
+10. Kasbning qoʻllanish sohasi PAGEREF _Toc207718345 \h 25
+11. Professional IT development kasbiga o‘qitish natijalari PAGEREF _Toc207718346 \h 26
+12. Professional IT development kasbiga oʻqitish xonasini jihozlashga qoʻyilgan talablar PAGEREF _Toc207718347 \h 38
+13. Professional IT development kasbiga oʻrgatish uchun zarur boʻladigan xom ashyolar roʻyxati PAGEREF _Toc207718348 \h 39
+14. Kasbiy taʼlim ustasi lavozimiga qoʻyiladigan talablar PAGEREF _Toc207718349 \h 40
+15. 11-sinf oʻquvchilariga qoʻyilgan umumiy malaka talablari PAGEREF _Toc207718350 \h 41
+16. Foydalanilgan adabiyotlar va elektron  manbalar roʻyxati PAGEREF _Toc207718351 \h 42
+1. DASTURDA QOʻLLANILGAN TAYANCH ATAMALAR           
+Kasb - maxsus tayyorgarlik va ish tajribasi natijasida maʼlum bir sohada kasbiy faoliyatni amalga oshirish uchun lozim boʻlgan nazariy bilimlar, amaliy koʻnikma va malakalar majmuasini egallagan, jismoniy imkoniyat, aqliy qobiliyat va yuridik huquqlari taʼminlangan mehnat faoliyati (mashgʻuloti)ning turidir.
+Koʻnikma - muayyan vazifani bajarish uchun egallangan qobiliyat.
+Bilim - oʻrganilgan maʼlumotlarni eslab qolish va qayta tushuntirib berish.
+Kompetensiya - mavjud bilim, koʻnikma va malakalarni kundalik faoliyatda qoʻllay olish qobiliyati.
+Kasbiy faoliyat sohasi - ilmiy, ijtimoiy, iqtisodiy, ishlab chiqarishda namoyon boʻladigan kasbiy faoliyat obyektlarining majmui.
+Kasbiy faoliyat obyekti - predmetlar, voqeliklar, jarayonlar va faoliyat doirasida harakatga yoʻnaltirilgan tizimlar.
+Kasbiy faoliyat turi - kasbiy faoliyat obyektiga taʼsir qilishning usullari, uslublari va tavsifi.
+Oʻquv rejasi - oʻquv faoliyati turlari, oʻquv amaliyotlari (modullari) va ishlab chiqarish amaliyotlari tarkibi, ularni oʻrganish izchilligi, soha va tarmoqlarda ish turlarining mavsumiyligini hamda soatlardagi hajmini belgilaydigan hujjat.
+Oʻquv amaliyoti - nazariy bilim va amaliy koʻnikmalarini integratsiyalashga qaratilgan oʻquv jarayonining elementi. 
+Kasbga tayyorlash oʻquv kursi - umumiy oʻrta taʼlim tashkilotlarining 11-sinf oʻquvchilari uchun tashkil etilgan kasb-hunarga oʻrgatish darslari majmuasi.
+Taʼlim dasturi - taʼlimning asosiy xususiyatlari (hajmi, mazmuni, rejalashtirilgan natijalar), tashkiliy-pedagogik shart-sharoitlar, umumiy talablar, shuningdek, taʼlimni tashkil etish va amalga oshirish uchun zarur boʻlgan oʻquv-metodik koʻrsatmalar majmui.
+Windows operatsion tizimida ishlash - kompyuterlarning texnik tomondan mukammallashishi hamda grafik imkoniyatlarining rivojlanib borishi dasturchilarda grafik interfeysli qobiq-dasturlar ishlab chiqarish fikrini uygʻotdi. 
+Kompyuterni yigʻish tartibi - statsionar kompyuterni oʻzingiz yigʻish uchun siz bir nechta nyuanslarni bilishingiz kerak. Bu bitta butunga ulanadigan qurilmalar toʻplamini toʻgʻri tanlash uchun zarur. 
+Kompyuterdagi nosozliklarni bartaraf etish - mobil kompyuterlar bilan ishlashda baʼzida maʼlum bir xato yoki nosozlik sababini topish qiyin. Muayyan muammolarni topish uchun siz maxsus dasturlar va usullardan foydalanishingiz kerak.
+Kompyuterni ishga tushirish - quvvat manbai kompyuterga ulanganda, yuklash jarayoni boshlanadi. BIOS (Basic In-Out System) kompyuterning asosiy qurilmalarini soʻrovdan oʻtkazadigan POST (Power On Self Test) dasturini ishga tushiradi.
+Monitorlar tuzilmalari - kompyuter monitori(monitor) - grafik, matnli maʼlumotlarni ekranga chiqarib berish uchun xizmat qiladigan qurilmadir, ekranga chiqarish monitor displeyi orqali amalga oshiriladi.
+Notebooklar turlari - hajmi va diagonal. Ushbu toifani guruhlarga boʻlish mumkin: 7-10 dyuymli diagonali — netbuklar, 11-13 — subnotebooklar (qurilma standartdan kichikroq, ammo deyarli bir xil funksionallikka ega), 14-16 dyuym — standart va 16 va undan ortiq narsalar almashtirish ish stoli kompyuter.
+Flash xotiraga ega qurilmalari - odatda kompyuterlarda ishlatiladigan oddiy RAM xotira (Random Access Memory) uchuvchi hisoblanadi. Yaʼni, kompyuterni oʻchirib qoʻysangiz, xotira yangilanganda saqlanadigan barcha maʼlumotlar yoʻqoladi. Bunga qaramasdan, flesh xotira doimiy emas, yaʼni bu turdagi xotira texnologiyasida saqlanadigan maʼlumotlar quvvatni kesganda saqlanadi degan maʼnoni anglatadi. 
+Kompyuter tarmoqlarga ulash taʼminotini tashkil qilish - aksariyat zamonaviy kompyuterlar qandaydir kompyuter tarmogʻiga ulangan. Bunday tuzilmaning yaratilishi kerakli maʼlumotlarga tezkor kirish imkonini beradi. Bundan tashqari, mahalliy tarmoqlar bir nechta foydalanuvchilarga maʼlum bir vazifa ustida sinxron ishlashga imkon beradi.
+Operatsion tizimga xizmat koʻrsatish - operatsion tizimning taʼrifi va bugungi kunda ishlatiladigan operatsion tizimlarning misollari Odatda OS sifatida qisqartirilgan operatsion tizim kuchli va odatda kompyuterda apparat va boshqa dasturlarni boshqaradigan yirik dastur hisoblanadi.
+IT ekotizimi — foydalanuvchi, ilova, platforma va infratuzilma qatlamlaridan iborat muhit.
+SDLC — talab, dizayn, kod, test, deploy va ekspluatatsiya bosqichlari yig‘indisi.
+Git — versiyalarni boshqarish tizimi: commit/branch/merge orqali tarixni yuritadi.
+GitHub — masofaviy repo va hamkorlik: PR, review, Issues/Projects, Actions.
+Branch — asosiy koddan mustaqil tarmoqlanish bo‘lagi.
+Pull Request (PR) — tarmoqdagi o‘zgarishni muhokama va tekshiruv orqali qo‘shish taklifi.
+Code review — PR dagi kodni sifat, xavfsizlik va uslub bo‘yicha tekshirish jarayoni.
+Conventional commits — commit sarlavhasini standart formatda yozish (feat/fix/docs).
+Clean Code — o‘qiladigan, soddalashtirilgan va izchil uslubdagi kod amaliyoti.
+SOLID — obyektga yo‘naltirilgan dizaynning 5 tamoyili (SRP, OCP, LSP, ISP, DIP).
+Design Pattern — qayta-qayta uchraydigan muammoga standart yechim shabloni.
+Factory — obyekt yaratishni abstraksiyalab, mijozni aniq sinfdan ajratadi.
+Singleton — tizim bo‘yicha bitta nusxa saqlanadigan sinf andozasi.
+Observer — “publish/subscribe” hodisalarini kuzatuvchilarga tarqatish modeli.
+REST API — HTTP orqali resursga yo‘naltirilgan xizmat interfeysi.
+JSON — yengil ma’lumot almashish formati (kalit–qiymat, massiv/obyekt).
+Linux FHS — fayl tizimi iyerarxiyasi (/etc, /var, /usr, /home va b.).
+SSH — masofaviy xavfsiz ulanish protokoli (kalit juftligi bilan).
+Nginx — HTTP server va reverse-proxy, yukni taqsimlash imkoniyati bilan.
+Reverse-proxy — mijoz so‘rovini orqa servis(lar)ga yo‘naltiruvchi oraliq qatlam.
+Docker — konteynerlar orqali izolyatsiya va ko‘chirishni soddalashtiruvchi platforma.
+Image — ilovani ishga tayyor qatlamli shablon (snapshot).
+Container — image asosida ishga tushgan izolyatsiyalangan muhit.
+Volume — konteynerdan tashqarida saqlanadigan doimiy ma’lumot xotirasi.
+Dockerfile — image yig‘ish qadamlarini bayon qiluvchi skript fayl.
+docker-compose — ko‘p servisli stackni YAML faylida tavsiflash vositasi.
+CI (Continuous Integration) — kod o‘zgarishlarini avtomatik build/testdan o‘tkazish amaliyoti.
+GitHub Actions — GitHub ichida CI ish oqimlarini (workflow) avtomatlashtirish xizmati.
+CD (Continuous Delivery/Deployment) — builddan keyingi avtomatik joylashtirish jarayoni.
+Env/Secrets — konfiguratsiya o‘zgaruvchilari va maxfiy kalitlarni alohida boshqarish.
+IaaS/PaaS/FaaS — infratuzilma/platforma/funktsiya sifatida xizmat ko‘rsatish modellar.
+Region/AZ — bulut mintaqalari va ularning mustaqil uzilish zonalari.
+EC2 — AWSdagi virtual server (hisoblash resursi) xizmati.
+S3 — AWSda obyekt saqlash xizmati (fayl/bucket asosida).
+IAM — AWS identifikatsiya va ruxsat boshqaruvi (foydalanuvchi/rol/policy).
+AWS Lambda — serversiz funksiyalarni ishga tushirish xizmati.
+API Gateway — REST/HTTP API’larni yaratish va marshrutlash xizmati.
+DNS — domen nomlarini IP manzillarga bog‘lovchi tizim.
+SSL/TLS — tarmoqli shifrlash protokoli (HTTPS uchun sertifikatlar).
+HSTS — brauzerni doimo HTTPS ishlatishga majbur qiluvchi xavfsizlik siyosati.
+Least privilege — minimal zarur ruxsatlarni berish tamoyili (xavfsizlik).
+CloudWatch/CloudTrail — AWS monitoring (log/metrika) va audit izlari xizmatlari.
+Freelancing platforma — mustaqil mutaxassislar va mijozlarni bog‘lovchi servis (Upwork/Fiverr va b.).
+KYC/ToS — shaxsni tasdiqlash va xizmat shartlarini qabul qilish tartibi.
+Niche (yo‘nalish) — tor ixtisoslashgan xizmat sohasi (masalan, “CI/CD + AWS”).
+Proposal — mijozga yuboriladigan yechim taklifi (narx/reja/vaqt).
+SOW (Scope of Work) — ish qamrovi, deliverable va timeline’ni belgilovchi hujjat.
+Fixed-price/Hourly — loyiha uchun qat’iy narx / soatlik haq modeli.
+Escrow — platformadagi ishonchli depozit orqali to‘lovni kafolatlash mexanizmi.
+Case study — bajarilgan loyiha bo‘yicha “muammo–yechim–natija” hujjati.
+Lean Canvas — startap modelini 1 sahifada ifodalovchi andoza (muammo, UVP, kanallar…).
+MVP — minimal foydali mahsulot, tez validatsiya uchun eng kichik funksional.
+Pitch deck — startapni qisqa taqdim etuvchi slaydlar to‘plami (muammo, yechim, bozor…).
+AARRR metrikalari — acquisition, activation, retention, revenue, referral ko‘rsatkichlari.
+2. Professional IT development KASBINING TAYANCH OʻQUV REJASI
+T/r
+Tayanch oʻquv reja tarkibi
+Mashg‘ulotlar soni
+Umumiy yuklamaga
+nisbatan foiz hisobida
+I.
+Oʻquv maʼruzasi
+16
+29,4
+II.
+Oʻquv amaliyoti
+33
+65,7
+III.
+Oraliq nazorat ishi
+1
+3,9
+IV.
+Yakuniy nazorat ishi
+1
+1,0
+Hammasi:
+51
+100
+3. PROFESSIONAL IT DEVELOPMENT KASBIGA TAYYORLASHNING MUDDATI
+Kasb nomi
+Professional IT development
+Kasbga tayyorlashning meʼyoriy muddati
+11-sinflarda 2 haftada 80 daqiqadan 3 ta dars 
+1 oʻquv yili davomida
+Sinf
+Oʻquv chorak
+Haftalar soni
+Mashg‘ulotlar soni
+11
+I
+9
+15
+II
+7
+12
+III
+10
+13
+IV
+8
+11
+Jami
+34 hafta
+51
+Tushuntirish xati
+1. Umumiy oʻrta taʼlim tashkilotlarida oʻquv yilining 2 - sentabridan kelgusi yilning 25-mayigacha boʻlgan davrda toʻrt chorakka boʻlingan holda tashkil etiladi.
+2. Oʻquv yilining davomiyligi - 34 hafta:
+haftasiga 3 marta belgilangan soatlar doirasidan chiqmagan holda oʻqish tashkil etiladi;
+mashgʻulotning davomiyligi  1 soat 20 daqiqani tashkil etadi;
+mashgʻulotlar oraligʻidagi tanaffusning davomiyligi 5 - 10 daqiqa. 
+3. Oraliq va Yakuniy nazoratlar nazariy yoki koʻrgazmali amaliy imtihon shaklida tasdiqlangan baholash mezonlari asosida oʻtkaziladi.
+4. PROFESSIONAL IT DEVELOPMENT KASBI OʻQUV MAVZU REJASI
+T/r
+Mavzu
+Ajratilgan mashg‘ulotlar soni
+shundan
+Nazariy
+Amaliy
+Nazorat ishi
+I-bob
+Dasturiy ta’minot ishlab chiqish asoslari
+15
+7
+7
+1
+Axborot texnologiyalari ekotizimi, dasturiy ta’minot hayotiy sikli (SDLC) va versiyalarni boshqarish tizimlari (Git/GitHub) ning qo‘llanilishi
+3
+1
+2
+Branching, Pull Request va code review metodologiyasi
+3
+1
+2
+Clean Code va SOLID tamoyillari
+2
+1
+1
+Loyihalash andozalari: Factory, Singleton, Observer
+2
+1
+1
+REST API va JSON asoslari
+2
+1
+1
+Muloqot va jamoada ishlash ko‘nikmalari
+1
+1
+Liderlik, mas’uliyat va vaqtni boshqarish
+1
+1
+Oraliq nazorat
+1
+1
+II-bob
+DevOps va uzluksiz integratsiya (CI) asoslari
+12
+6
+5
+1
+Unix/Linux muhiti va tarmoq xizmati konfiguratsiyasi: SSH hamda Nginx reverse-proxyga kirish
+4
+2
+2
+Konteynerlashtirish nazariyasi va amaliyoti: Docker arxitekturasi, image lifecycle, tarmoq/volume
+4
+2
+2
+Uzluksiz integratsiya (CI) GitHub Actions platformasida: workflow dizayni va avtomatlashtirilgan sinovlar
+3
+2
+1
+Oraliq nazorat
+1
+1
+III-bob
+Bulut va joylashtirish (Cloud &amp; Deployment)
+13
+5
+7
+1
+Uzluksiz joylashtirish (CD) va muhit o‘zgaruvchilari (env/secrets) boshqaruvi
+3
+1
+2
+Bulut platformalariga kirish (AWS/Azure/GCP): xizmat sinflari va arxitektura tamoyillari
+3
+1
+2
+AWS amaliyoti: EC2/S3/IAM yordamida minimal deploy
+2
+1
+1
+Domen, DNS va SSL/TLS integratsiyasi
+2
+1
+1
+Bulut xavfsizligi va kirish nazorati
+2
+1
+1
+Oraliq nazorat
+1
+1
+IV-bob
+Freelance va startap rivojlantirish
+11
+6
+4
+1
+Freelancing ekotizimi va platformalar arxitekturasi (Upwork, Fiverr, Toptal, LinkedIn gig)
+2
+1
+1
+Portfolio, GitHub va case study ishlab chiqish metodikasi
+2
+1
+1
+Mijoz bilan muloqot, narxlash modeli, kontrakt va to‘lov jarayonlari
+1
+1
+Startap yondashuvi: g‘oya → MVP → pitch (Lean Canvas, Value Proposition, backlog)
+1
+1
+Omma oldida nutq so‘zlash va muvaffaqiyatli taqdimotlar o‘tkazish
+1
+1
+Loyiha boshqarish va jamoaviy ishlash
+1
+1
+Agile, Scrum, Kanban metodologiyasi
+1
+1
+Jira, Trello, ClickUp bilan ish jarayoni
+1
+1
+Oraliq nazorat
+1
+1
+Yakuniy nazorat ishi
+Jami:
+51
+17
+30
+4
+5. PROFESSIONAL IT DEVELOPMENT KASBI OʻQUV DASTURI
+I-bob. Dasturiy ta’minot ishlab chiqish asoslari
+Axborot texnologiyalari ekotizimi, dasturiy ta’minot hayotiy sikli (SDLC) va versiyalarni boshqarish tizimlari (Git/GitHub) ning qo‘llanilishi
+IT ekotizimi qatlamlari (ilova–platforma–infratuzilma) va SDLC bosqichlari (talab, dizayn, kod, test, deploy, monitoring) tanishtiriladi. Git’da commit/branch/merge, GitHub’da PR va code review amaliy bajariladi. README va .gitignore yaratiladi, Issues/Projects bilan vazifa boshqaruvi ko‘rsatiladi. Ixtiyoriy: Actions (CI)ga kirish.
+ Branching, Pull Request va code review metodologiyasi
+Feature/release/hotfix tarmoqlari strategiyalari tanishtiriladi. Kichik, maqsadli commitlar va conventional commits qo‘llanadi. PR ochish (shablon, What/Why/How), checklist (funksional, xavfsizlik, test, hujjat) bilan ko‘rsatiladi. Code review etikasi, diff tahlili, konfliktlarni hal etish va merge siyosati amaliy bajariladi.
+Clean Code va SOLID tamoyillari
+Nomlash (aniq va izchil), formatlash, kichik funksiyalar va modulga ajratish prinsiplari ko‘rib chiqiladi. DRY/KISS/YAGNI yondashuvlari, kod hidi (code smells) va soddalashtiruvchi refaktoring usullari amalda qo‘llanadi. SOLID: SRP (bitta mas’uliyat), OCP (kengaytirishga ochiq), LSP (o‘rinbosarlik), ISP (ixcham interfeys), DIP (bog‘liqlikni inversiya) qisqa misollar bilan tushuntiriladi. Unit-test va hujjatlashtirish (README/docstring) orqali sifatni nazorat qilish ko‘rsatiladi.
+ Loyihalash andozalari: Factory, Singleton, Observer
+Factory — obyekt yaratishni abstraksiyalab, mijoz kodini aniq sinflarga bog‘lamaydi (creator method/abstract factory ssenariylari ko‘rsatiladi). Singleton — butun tizim bo‘yicha bitta nusxani kafolatlaydi; init tartibi, thread-safe implementatsiya va testlanishdagi cheklovlar tahlil qilinadi. Observer — “publish/subscribe” modelida hodisa (event)larni kuzatuvchilarga tarqatadi; couplingni kamaytirish, notifikatsiya ketma-ketligi va xotira oqimlari (detach) muhokama etiladi. Oddiy UML sxema va kichik kod misollari bilan qo‘llanish holatlari taqqoslanadi..
+REST API va JSON asoslari
+HTTP metodlari (GET/POST/PUT/PATCH/DELETE) va resursga yo‘naltirilgan URL dizayni tanishtiriladi. JSON tuzilmasi (obyekt, massiv, tiplar), status kodlar (200/201/400/401/404/500), header/Body, pagination va filtrlarning amaliy qo‘llanishi ko‘rsatiladi. Postman orqali endpointlar sinovdan o‘tkaziladi, xatolar formati (error schema), autentifikatsiya (Bearer/JWT) va CORS asoslari qisqa misollar bilan tekshiriladi.
+Muloqot va jamoada ishlash ko‘nikmalari 
+Jamoada rollar va mas’uliyatni aniqlash, maqsad/expectation’larni kelishish, aniq yozma va og‘zaki muloqot yuritish, feedback berish/qabul qilish hamda konstruktiv bahs-munozarani boshqarish o‘rganiladi. PR/issue yozish madaniyati, meeting etikasi, faol tinglash, konfliktni hal etish va umumiy qarorga kelish bo‘yicha amaliy mashqlar bajariladi.
+Liderlik, mas’uliyat va vaqtni boshqarish
+Shaxsiy mas’uliyat va mini-liderlik (task owner) tamoyillari, ustuvorlik belgilash (Eisenhower matritsasi), rejalashtirish va fokus texnikalari (time-boxing, Pomodoro) amalda qo‘llanadi. Delegatsiya, deadline boshqaruvi, OKR/KPI bilan natijani o‘lchash, risklarni erta xabar qilish va post-mortem orqali doimiy takomillashtirish mashq qilinadi.
+II-bob. DevOps va uzluksiz integratsiya(CI) asoslari
+Unix/Linux muhiti va tarmoq xizmati konfiguratsiyasi: SSH hamda Nginx reverse-proxyga kirish
+Fayl tizimi iyerarxiyasi (/etc, /var, /usr), foydalanuvchi/huquqlar (chmod/chown), paket boshqaruvi (apt/yum) va servislar (systemctl) bilan tanishtiriladi. SSH uchun kalit juftligi (ssh-keygen), kalitni serverga joylash (ssh-copy-id), xavfsizlik (parolni o‘chirish, ufw/firewalld, AllowUsers, port sozlash) amaliy bajariladi. Nginx o‘rnatilib, server block va reverse-proxy (proxy_pass http://127.0.0.1:3000) sozlanadi; curl orqali sinov, loglar (/var/log/nginx/*), nginx -t va systemctl reload nginx bilan xatolarni diagnostika qilish ko‘rsatiladi.
+Konteynerlashtirish nazariyasi va amaliyoti: Docker arxitekturasi, image lifecycle, tarmoq/volume
+Docker mijoz–daemon modeli, image–container tushunchalari va qatlamli fayl tizimi tanishtiriladi. Image lifecycle: Dockerfile yozish, build/tag, push/pull, versiyalash va keshdan foydalanish ko‘rsatiladi. Tarmoq (bridge/host/custom subnet, port mapping) hamda volume (persistensiya, bind mount) amaliy qo‘llanadi. Izolyatsiya, resurs cheklovlari va xavfsizlik bo‘yicha tavsiyalar beriladi.
+Uzluksiz integratsiya (CI) GitHub Actions platformasida: workflow dizayni va avtomatlashtirilgan sinovlar
+on: push/pull_request triggerlari bilan YAML workflow tuziladi: jobs va steps, runs-on, strategy.matrix orqali ko‘p versiyada test. Lint/format, unit-test va build bosqichlari qo‘shiladi; actions/checkout, setup-* action’lari ishlatiladi. Kesh (actions/cache) va artefaktlar (upload-artifact) sozlanadi, status tekshiruvi (required checks) va PR bilan integratsiya amaliy ko‘rsatiladi.
+III-bob. Bulut va joylashtirish (Cloud &amp; Deployment)
+Uzluksiz joylashtirish (CD) va muhit o‘zgaruvchilari (env/secrets) boshqaruvi 
+Git push → build → deploy zanjiri avtomatlashtiriladi (Vercel/Netlify/Render yoki GitHub Actions orqali). Staging/production muhitlari ajratilib, versiya/rollback strategiyalari (blue-green/rolling) ko‘rsatiladi. Konfiguratsiya koddan ajratiladi: .env fayllari, GitHub Secrets/Deploy secrets, runtime env’lar bilan ishlash. Maxfiy kalitlar uchun rotatsiya, kirish huquqlari (least privilege), audit loglari va xatoliklarni kuzatish amaliy bajariladi.
+Bulut platformalariga kirish (AWS/Azure/GCP): xizmat sinflari va arxitektura tamoyillari
+IaaS/PaaS/SaaS hamda FaaS (serverless) farqlari, global mintaqa–availability zone tushunchalari va shared responsibility modeli tanishtiriladi. Elastiklik, skalalanuvchanlik, yuqori uzluksizlik (SLA) va narxlash (pay-as-you-go, kvotalar) prinsiplari ko‘rib chiqiladi. VPC/VNet tarmog‘i, identifikatsiya va ruxsat (IAM), resurs teglash va kuzatuv asoslari beriladi; xizmatlar mosligi: EC2/Compute Engine/VM, S3/Blob Storage, RDS/Cloud SQL, Lambda/Functions misollarida ko‘rsatiladi.
+AWS amaliyoti: EC2/S3/IAM yordamida minimal deploy
+EC2 instansiya yaratiladi: AMI tanlash, key pair, security group (HTTP/HTTPS/SSH portlari) va user-data orqali avtomatik nginx/ilova starti. S3’da statik fayllar uchun bucket tashkil etilib, Block Public Access va Bucket policy sozlanadi (yoki CloudFront bilan tarqatish). IAM’da least privilege tamoyili: foydalanuvchi/rol, policy va instance profile bilan S3 ga cheklangan ruxsat beriladi. AWS CLI konfiguratsiyasi (aws configure), tag’lash, CloudWatch log/metrics orqali holatni kuzatish amaliy bajariladi.
+Domen, DNS va SSL/TLS integratsiyasi
+Domen ro‘yxatdan o‘tkaziladi, nameserverlar sozlanadi va asosiy DNS yozuvlari kiritiladi: A/AAAA (IP), CNAME (alias), TXT (tasdiq/ SPF), MX (pochta). Reverse-proxy (Nginx) bilan virtual host va proxy_pass sozlanadi. SSL/TLS uchun sertifikat olinadi (Let’s Encrypt/ACM), HTTP-01/DNS-01 tekshiruvlari bajariladi, avtomatik yangilash va chain to‘liqligi nazorat qilinadi. HTTPS majburiyligi, HSTS/redirect (301), kuchli shifrlash to‘plamlari hamda sertifikat muddati/rotatsiyasi amaliy tekshiriladi.
+Bulut xavfsizligi va kirish nazorati
+Least-privilege IAM (foydalanuvchi/rol/policy), MFA va vaqtinchalik tokenlar (STS) qo‘llanadi. Secrets/KMS bilan kalit va maxfiy ma’lumotlar boshqaruvi, rotatsiya tartibi ko‘rsatiladi. Tarmoq darajasi: Security Group, NACL, WAF/Shield. Audit va monitoring: CloudTrail/Config/GuardDuty. SCP/Policy Boundaries orqali cheklovlar, incident-response playbook hamda compliance talablari (log retention, verifiable trails) amaliy tekshiriladi.
+IV-bob. Freelance va startap rivojlantirish
+Freelancing ekotizimi va platformalar arxitekturasi (Upwork, Fiverr, Toptal, LinkedIn gig)
+Platforma turlari, reyting/“trust” mexanizmlari, KYC/ToS talablari va komissiya modellari tushuntiriladi. Vakansiya qidirish va filtrlash (soha, daraja, byudjet, deadline), xavflarni boshqarish (scope creep, no-show, to‘lov xatari) ko‘rsatiladi. Profil semantikasi (sarlavha, “overview”, skill/tag, portfel havolalari) va platformaga xos algoritmik omillar tahlil qilinadi. Ixtiyoriy: “first 5 jobs” strategiyasi, nish (niche) tanlash va differensial taklif ishlab chiqish.
+Portfolio, GitHub va case study ishlab chiqish metodikasi
+Portfolio mazmuni “Problem → Solution → Result” narrativida tuziladi: kontekst, muammo, yondashuv, texnologiyalar, natija va havolalar keltiriladi. GitHub profili optimallashtiriladi: pin repos (3–6 ta), README.md (demo/skrinshet/GIF), badge’lar (build, test), LICENSE, CONTRIBUTING, CHANGELOG. Har bir loyiha uchun live-demo (Vercel/Render), docs/ papkasi, o‘lchovli metrikalar (tezlik, foydalanuvchi, kechikish) ko‘rsatiladi. Case study bir sahifalik shablon bilan rasmiylashtiriladi: maqsad, arxitektura skemasi, qarorlar asoslanishi, test/CI natijalari, keyingi reja.
+Mijoz bilan muloqot, narxlash modeli, kontrakt va to‘lov jarayonlari
+Brief/discovery orqali talablar aniqlanadi, yozma SOW (scope), deliverable, timeline va acceptance mezonlari kelishiladi. Narxlash strategiyalari taqqoslanadi: soatlik (rate, track) va fixed-price (milestone, risk buffer), change-request va scope-creep boshqaruvi belgilab olinadi. Kontrakt tarkibi: IP huquqlari, NDA, SLA, revisions, kafolat/qo‘llab-quvvatlash; invoicing va to‘lov kanallari (Payoneer/Wise), escrow va refund siyosati ko‘rsatiladi. Nizolarni hal etish tartibi, penalti/late fee hamda hujjatlashtirilgan yozishmalar (evidence) amaliy misollar bilan yoritiladi.
+Startap yondashuvi: g‘oya → MVP → pitch (Lean Canvas, Value Proposition, backlog)
+Muammo–bozor mosligini aniqlash uchun Lean Canvas to‘ldiriladi: muammo, mijoz segmentlari (ICP/persona), qiymat taklifi (UVP), yechim, kanallar, daromad xaritasi va asosiy metrikalar. MVP minimal funksiyalar bilan belgilab, 1-sprint backlog (3–5 vazifa) va validatsiya mezonlari (intervyu, A/B, foydalanish metrikalari) qo‘yiladi. Bozor va raqobatchilar tahlili asosida MVP’ni iterativ takomillashtirish, “must-have vs nice-to-have” ajratilishi ko‘rsatiladi. Pitch tuzilmasi: muammo, yechim, bozor hajmi, texnik yondashuv, traction/metrikalar, biznes modeli va ask (resurs/hamkorlik) — 3–5 daqiqalik taqdimot uchun vizual skema va demo havolasi bilan.
+Omma oldida nutq so‘zlash va muvaffaqiyatli taqdimotlar o‘tkazish.
+Tinglovchini tahlil qilish, maqsad va asosiy xabarni aniqlash, “hook–mantiqiy rivoj–CTA” tuzilmasida hikoyalash (storytelling) orqali kontentni qurish amaliy ko‘rinishda bajariladi. Slayd dizaynida minimalizm, kontrast, ierarxiya va vizual metaforalardan foydalanish, ovoz tembri, pauza, tana tili va sahna makonini boshqarish ko‘nikmalari mustahkamlanadi; trejlash va vaqtni boshqarish bo‘yicha repetitsiya usullari qo‘llanadi. Savol-javobni moderatsiya qilish, stress va sahna hayajonini yengish, texnik xatolar uchun B-reja, yakunda esda qoladigan “call-to-action” va ta’sirni baholash (feedback, recording) orqali uzluksiz yaxshilash yo‘lga qo‘yiladi.
+Loyiha boshqarish va jamoaviy ishlash
+Maqsad–natija iyerarxiyasi (vision → roadmap → sprint reja) asosida loyiha doirasi, vaqt va byudjet cheklovlari boshqariladi; stakeholder tahlili, risk reyestri, RACI/rol va mas’uliyatlar aniqlanadi. Jamoa jarayonlari Agile prinsiplariga tayangan holda rejalashtirish, kundalik sinxronlashuv, demo va retrospektiva orqali iterativ boshqariladi; vazifalar WBS → backlog → prioritetlash (MoSCoW/WSJF) bilan oqimga joylanadi. Hamkorlik Git, task-treker (Jira/Trello/ClickUp), kerakli hujjatlar (DoD/DoR, meeting notes) va kommunikatsiya protokollari orqali yuritiladi; konfliktlarni yechish, feedback madaniyati va “single source of truth” shaffoflikni ta’minlaydi. KPI/OKR va burn-down/burn-up vizuallari bilan monitoring yo‘lga qo‘yilib, o‘lchovlarga tayanib doimiy yaxshilash (continuous improvement) amalga oshiriladi.
+Agile, Scrum, Kanban metodologiyasi
+Agile qadriyatlari asosida iterativ ishlab chiqish yondashuvlari taqqoslanadi: Scrum’da rollar (Product Owner, Scrum Master, Team), artefaktlar (Product/Sprint Backlog, Increment, DoD) va sprint jarayoni (Planning, Daily, Review, Retrospective) amaliy ko‘rinishda qo‘llanadi. Kanban’da vizual oqim, WIP limitlari, cycle/lead time va bottlenecklarni aniqlash orqali uzluksiz yaxshilashga erishiladi; qiymatni tez yetkazish va shaffoflik ta’minlanadi.
+Jira, Trello, ClickUp bilan ish jarayoni 
+Jira/Trello/ClickUp vositalarida backlog yuritish, board sozlash (Scrum yoki Kanban), issue hayotiy sikli (To Do → In Progress → Done)ni boshqarish, label/priority/assignee/due date bilan rejalashtirish ko‘rsatiladi. Sprint boshqaruvi, burndown/velocity, Kanban metrikalari (cycle time, cumulative flow), avtomatlashtirishlar (Butler/Zapier), GitHub–CI/CD integratsiyasi va hisobotlar orqali jamoa samaradorligi o‘lchanadi hamda jarayonlar standartlashtiriladi.
+6. PROFESSIONAL IT DEVELOPMENT YO‘NALISHI BOʻYICHA OʻTILADIGAN DARS SOATLARI
+T/r
+Mavzular
+I-CHORAK
+1-hafta
+2-hafta
+3-hafta
+4-hafta
+5-hafta
+6-hafta
+7-hafta
+8-hafta
+9-hafta
+1.
+Axborot texnologiyalari ekotizimi, dasturiy ta’minot hayotiy sikli (SDLC) va versiyalarni boshqarish tizimlari (Git/GitHub) ning qo‘llanilishi
+1
+2
+2.
+Branching, Pull Request va code review metodologiyasi
+1
+2
+3.
+Clean Code va SOLID tamoyillari
+1
+1
+4.
+Loyihalash andozalari: Factory, Singleton, Observer
+1
+1
+5.
+REST API va JSON asoslari
+1
+1
+6
+Muloqot va jamoada ishlash ko‘nikmalari
+1
+7
+Liderlik, mas’uliyat va vaqtni boshqarish
+1
+Oraliq nazorat
+1
+T/r
+Mavzular
+II-CHORAK
+1-hafta
+2-hafta
+3-hafta
+4-hafta
+5-hafta
+6-hafta
+7-hafta
+1.
+Unix/Linux muhiti va tarmoq xizmati konfiguratsiyasi: SSH hamda Nginx reverse-proxyga kirish
+2
+2
+2.
+Konteynerlashtirish nazariyasi va amaliyoti: Docker arxitekturasi, image lifecycle, tarmoq/volume
+2
+2
+3.
+Uzluksiz integratsiya (CI) GitHub Actions platformasida: workflow dizayni va avtomatlashtirilgan sinovlar
+2
+1
+Oraliq nazorat
+1
+T/r
+Mavzular
+III-CHORAK
+1-hafta
+2-hafta
+3-hafta
+4-hafta
+5-hafta
+6-hafta
+7-hafta
+8-hafta
+9-hafta
+10-hafta
+1.
+Uzluksiz joylashtirish (CD) va muhit o‘zgaruvchilari (env/secrets) boshqaruvi
+1
+1
+1
+2.
+Bulut platformalariga kirish (AWS/Azure/GCP): xizmat sinflari va arxitektura tamoyillari
+1
+1
+1
+3.
+AWS amaliyoti: EC2/S3/IAM yordamida minimal deploy
+1
+1
+4.
+Domen, DNS va SSL/TLS integratsiyasi
+1
+1
+5.
+Bulut xavfsizligi va kirish nazorati
+1
+1
+Oraliq nazorat
+1
+T/r
+Mavzular
+IV-CHORAK
+1-hafta
+2-hafta
+3-hafta
+4-hafta
+5-hafta
+6-hafta
+7-hafta
+8-hafta
+1.
+Freelancing ekotizimi va platformalar arxitekturasi (Upwork, Fiverr, Toptal, LinkedIn gig)
+1
+1
+2.
+Portfolio, GitHub va case study ishlab chiqish metodikasi
+1
+1
+3.
+Mijoz bilan muloqot, narxlash modeli, kontrakt va to‘lov jarayonlari
+1
+4.
+Startap yondashuvi: g‘oya - MVP - pitch (Lean Canvas, Value Proposition, backlog)
+1
+5
+Omma oldida nutq so‘zlash va muvaffaqiyatli taqdimotlar o‘tkazish
+1
+6
+Loyiha boshqarish va jamoaviy ishlash
+1
+7
+Agile, Scrum, Kanban metodologiyasi
+1
+8
+Jira, Trello, ClickUp bilan ish jarayoni
+1
+Oraliq nazorat
+1
+Yakuniy nazorat ishi
+7. OʻQUV JARAYONINI TASHKIL ETISHDA OʻQITISH METODLARI, SHAKLLARI VA VOSITALARI
+Oʻqitish metodlari - ogʻzaki, koʻrgazmali, amaliy, muammoli-izlanish, mustaqil ishlash va shu kabilar.
+Oʻqitish shakllari
+Nazariy
+Amaliy
+Umumiy
+maʼruza;
+ekskursiya (sayohat);
+mustaqil ishlar;
+maslahat olish va shu kabilar.
+amaliy mashgʻulotlar;
+mustaqil uy ishi;
+didaktik, ishchan va rolli oʻyinlar;
+tajriba-konstruktorlik faoliyati, treninglar;
+sayohatlar, olimpiadalar va koʻrik-tanlovlar.
+ommaviy;
+jamoaviy;
+guruhli;
+kichik guruhli;
+juftli;
+yakka tartibda.
+Oʻqitish vositalari
+Oʻqitish vositalari
+(oddiy va murakkab)
+Oʻquv qurollari va koʻrgazmali qurollar
+darsliklar, oʻquv qoʻllanmalari;
+metodik qoʻllanmalar;
+maʼlumotnomalar;
+maxsus adabiyotlar;
+metodik tavsiyalar;
+ensiklopediyalar;
+jadval va plakat;
+mulyaj va modellar.
+Axborot materiallari va dasturiy taʼminot
+kompyuter;
+amaliy topshiriqlar;
+kasbiy koʻnikma va malakaviy dastur;
+testlar, nazorat topshiriqlari va boshqalar.
+8. BAHOLASH MEZONLARI
+Oʻquvchilarning kasbga oid bilim, koʻnikma, malaka va kompetensiyalarini baholash va nazorat qilish maqsadida quyidagi nazorat turlari amalga oshiriladi:
+joriy nazorat - soʻrovlar, bajarilgan loyiha ishlarini izohlash tarzida oʻquvchilarning bilimlari, koʻnikma va malakalari muntazam nazorat qilinadi.
+oraliq nazorat - chorak tamom boʻlganda va oʻquv dasturining tegishli boʻlimi tugallangandan keyin oʻquvchilarning bilimlari, koʻnikma va malakalarini baholash uchun amalga oshiriladi. U amaliy, yozma nazorat ishi yoki testlar shaklida oʻtkaziladi. Ushbu nazoratda foydalaniladigan materiallar Professional IT development kasbi boʻyicha kasbiy taʼlim ustasi tomonidan tayyorlanadi. Oraliq nazorat har chorak yakunida o‘taziladi va nazorat ishlarining miqdori va mavzulari oʻquv dasturiga asoslangan rejada belgilanadi hamda muddati va shakli koʻrsatiladi.
+yakuniy nazorat - oʻquv yili tamom boʻlgandan keyin ogʻzaki va amaliy ish koʻrinishida imtihon shaklida amalga oshiriladi. Uning asosida reyting aniqlanadi va oʻquvchini navbatdagi sinfga oʻtkazish toʻgʻrisida qaror qabul qilinadi. Yakuniy nazorat materiallari kasbiy taʼlim ustasi tomonidan oʻquv dasturi asosida tayyorlanadi va ularni amaliy fanlar uslubiy birlashmasi muhokamasidan oʻtkaziladi. Umumiy oʻrta taʼlim muassasalari bitiruvchilari uchun choraklik baholar asosida yillik baho, shuningdek, yakuniy nazoratda olingan baho va yillik baho asosida yakuniy baho aniqlanadi.
+Kasbiy taʼlim yoʻnalishi boʻyicha yakuniy nazorat imtihonlarni oʻtkazish tartibi.
+Kasbiy taʼlim yoʻnalishi boʻyicha oʻquv reja va dasturning barcha talablarini toʻliq bajargan bitiruvchiga maktab direktorining buyrugʻiga asosan amaliy yakuniy nazoratni topshirishga ruxsat beriladi.
+Yakuniy nazorat oʻtkazish jadvali, u oʻtkaziladigan kunlar koʻrsatilgan holda, maktab direktori tomonidan tasdiqlanadi va yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin taʼlim muassasasining oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar xabardor etiladi.
+Yakuniy nazorat amaliy topshiriq shaklida oʻtkaziladi. Bunda yakuniy nazorat savollari orqali bitta amaliy topshiriq beriladi.
+Amaliy topshiriqlar oʻqitilgan mutaxassislik oʻquv dasturi asosida tuziladi va maktabning pedagogik kengashi tomonidan tasdiqlanadi hamda yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin barcha oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar eʼtiboriga yetkaziladi.
+Oʻquvchilar bilimi quyidagi mezonlar asosida baholanadi:
+Har bir oʻquvchining kasb boʻyicha oʻzlashtirish darajasi ball tizimi orqali ifodalanadi, ya’ni 100 ballik shkalaga o‘tkaziladi.
+0-59 ball – 2 baho;
+60-70 ball – 3 baho;
+71-89 ball – 4 baho;
+90-100 ball – 5 baho.
+Oʻquvchilarning har bir nazorat turi boʻyicha bilimini baholash va koʻrsatkichini aniqlash ularning kasbni oʻquv dasturi mavzusi boʻyicha tasavvurga ega boʻlishi, mavzuning mohiyatini tushunib yetishi va aytib bera olishi, olgan bilimlarini amalda qoʻllay olishi, ijodiy fikrlay olishi va xulosa qabul qila olishi hamda mustaqil ishlarni bajarishi kabi mezonlarga qarab amalga oshiriladi.
+Jumladan:
+bitiruvchi mustaqil xulosa va qaror qabul qiladi, ijodiy fikrlay oladi, mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (mavzu) boʻyicha tasavvurga ega deb topilganda – 90-100 (aʼlo) ball;
+bitiruvchi mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb(mavzu) boʻyicha tasavvurga ega deb topilganda – 71-89 (yaxshi) ball;
+bitiruvchi olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (mavzu) boʻyicha tasavvurga ega deb topilganda – 60-70 (qoniqarli) ball;
+bitiruvchi kasb dasturini oʻzlashtirmagan, kasbning (mavzuning) mohiyatini tushunmaganda- 0-59 (qoniqarsiz) ball.
+Nazorat turlarini oʻtkazish boʻyicha tuzilgan topshiriqlarning mazmuni oʻquvchining oʻzlashtirishini xolis (obyektiv) va aniq baholash imkoniyatini berishi lozim.
+O‘quvchilar bilimini baholash mezonlari
+Baholash usuli
+Topshiriq
+Baholash mezonlari
+Maksimal ball
+Baholash o‘tkazish vaqti
+Joriy nazorat
+Bajarilgan loyiha ishini
+bajarilgan loyihaning belgilangan talablariga javob berishi; 
+ilovaning asosiy funksiyalari to‘liq va xatosiz ishlashi;
+foydalanuvchi kutilgan natijalarni olishi;
+ilova interfeysi qulay, tushunarli va estetik jihatdan yaxshi dizaynlashganligi;
+animatsiyalar va o‘zaro ta’sir elementlarining borligi;
+kod toza, o‘qilishi oson, yaxshi tuzilganligi;
+Professional IT developmentning zamonaviy usullaridan foydalanilganligi;
+loyihaning maqsadi, ishlash printsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi.
+40 ball
+O‘quv jarayoni davomiyligida o‘tkaziladi
+Oraliq nazorat
+Yozma, topshiriqlar 
+nazariy savollarga to‘liq va aniq javob berilganligi;
+javoblar faktlarga asoslanganligi va xato yo‘qligi;
+tushuntirish aniq va misollar bilan boyitilganligi;
+matnda grammatik va imlo xatolarining kamligi;
+muammoni tahlil qilinganligi va fikrlarni ifodalashdarajasi.
+20 ball
+Har chorak yakunida
+Amaliy topshiriqlar
+belgilangan barcha funksiyalar to‘liq ishlashi;
+kod o‘qilishi osonligi, izohlar mavjudligi, keraksiz takrorlanishlar  yo‘qligi;
+zarur texnologiyalar  to‘g‘ri ishlatilganligi;
+ilova barqarorligi va xatolar yo‘qligi.
+Test topshiriqlari
+savollarga to‘g‘ri javob berganligi.
+Yakuniy nazorat
+Loyiha ishlarini yakuni bo‘yicha
+bajarilgan loyihaning belgilangan talablariga javob berishi; 
+ilovaning asosiy funksiyalari to‘liq va xatosiz ishlashi;
+foydalanuvchi kutilgan natijalarni olishi;
+ilova interfeysi qulay, tushunarli va estetik jihatdan yaxshi dizaynlashganligi;
+animatsiyalar va o‘zaro ta’sir elementlarining borligi;
+kod toza, o‘qilishi oson, yaxshi tuzilganligi;
+Professional IT developmentning zamonaviy usullaridan foydalanilganligi;
+loyihaning maqsadi, ishlash printsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi.
+40 ball
+O‘quv yili oxirida, kurs yakunida
+Jami
+100 ball
+Oraliq nazoratda topshiriq turlaring nazorat jarayonida faqat bitta turidan foydalanish mumkin.
+9. PROFESSIONAL IT DEVELOPMENT KASBI TAVSIFI
+9.1. Bitiruvchining kasbiy faoliyati sohalari
+Professional IT development kasbi boʻyicha kasb-hunarga tayyorlash kursini toʻliq oʻzlashtirgan holda chuqur malaka talab etmaydigan ofis jihozlarini oʻrnatuvchi va ularga texnik xizmat koʻrsatuvchi sifatida korxonalarda, tashkilotlar, maktabgacha taʼlim muassasalari va umumiy oʻrta taʼlim maktablarida faoliyat koʻrsatadi. 
+9.2. Bitiruvchining kasbiga muvofiq kasbiy faoliyat obyektlari
+- turli tipdagi jihozlar va asbob-uskunalar;
+- zamonaviy kompyuter dasturlari;
+- zamonaviy drayverlar, simli tarmoq qurilmalari;
+- simsiz tarmoq qurilmalari va sifatli xom ashyolar kiradi.
+9.3. Professional IT development kasbiy faoliyat turlari
+Professional IT development uchun ish oʻrnini toʻgʻri tashkil etish va asbob-uskunalarini toʻgʻri tanlash;
+- jihozlarni foydalanishga tayyorlash, texnika va yongʻin xavfsizligi hamda sanitariya-gigiyena qoidalariga amal qilish;
+- Android dasturchi.
+9.4. Professional IT development 
+Professional IT development kasbini egallagan bitiruvchi keyinchalik kasbiy taʼlimini chuqurlashtirish maqsadida maxsus kurslarda malakasini oshirishi, kollej, texnikum va Oliy taʼlim muassasalarida oʻqishi mumkin.
+10. KASBNING QOʻLLANISH SOHASI
+Mazkur malaka talabi “Professional IT development” kasbi boʻyicha umumiy oʻrta taʼlim muassasalarining 11-sinf oʻquvchilarini kasb-hunarga tayyorlash kurslari (keyingi oʻrinlarda - kasb-hunarga tayyorlash kurslari) boʻyicha ishchilarni tayyorlashning zaruriy bilimlar mazmunini va kasbiy tayyorgarlik darajasiga qoʻyiladigan talablarni shuningdek oʻquv yuklamalari hajmini va belgilangan talablarni bajarilishini nazoratini belgilaydi. 
+Malaka talablari kasbga oʻrgatish tayyorgarligi sifati va darajasini baholashda asosiy mezon hisoblanadi. Mazkur talablarning bajarilishi kasbga tayyorlash bitiruvchilariga kasbning tegishli darajasini olganligi toʻgʻrisida davlat namunasidagi sertifikat berilishi uchun asos hisoblanadi.
+Malaka talablari kasbga tayyorlash oʻquv jarayonini tashkil qilgan taʼlim tashkilotlari tomonidan tatbiq etilishi majburiydir.
+Mazkur talablarni bajargan umumiy oʻrta taʼlim tashkilotlarining 11-sinf oʻquvchilari Oʻzbekiston Respublikasi Milliy malakalar ramkasining 2-darajali sertifikatga ega boʻladi.
+11. PROFESSIONAL IT DEVELOPMENT KASBIGA O‘QITISH NATIJALARI
+11.1. Birinchi chorak uchun
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+Dasturiy ta’minot ishlab chiqish asoslari
+Axborot texnologiyalari ekotizimi, dasturiy ta’minot hayotiy sikli (SDLC) va versiyalarni boshqarish tizimlari (Git/GitHub) ning qo‘llanilishi
+IT ekotizimi qatlamlarini (foydalanuvchi–ilova–platforma–infratuzilma) tushunadi.
+SDLC bosqichlarini (talab, dizayn, ishlab chiqish, test, deploy, ekspluatatsiya) va ularning artefaktlarini biladi.
+Agile/Scrum sikli va sprint yondashuvining maqsadini, tamoyilini tushunadi.
+Git’ning asosiy obyektlari (commit, branch, merge, tag) va tarixni biladi.
+GitHub’da masofaviy repo bilan ishlash, README.md va .gitignore yaratish ko‘nikmasini egallaydi.
+Branching strategiyalarini (feature, release/hotfix) va ularning qo‘llanish holatlarini tushunadi.
+Pull Request ochish, What/Why/How izohlarini kiritish, PR shabloni va checklistdan foydalanishni biladi.
+Code review etikasini, diff tahlili va takliflar orqali sifatni oshirish ko‘nikmasini egallaydi.
+Issues/Projects yordamida vazifalarni rejalash va kuzatish, milestone/label qo‘llashni tushunadi.
+Minimal CI (GitHub Actions) konsepsiyasiga kirishadi: trigger, job va artefakt tushunchalarini biladi.
+Branching, Pull Request va code review metodologiyasi
+Branching strategiyalarini (feature, release, hotfix, trunk-based) farqlaydi va qachon qo‘llashni tushunadi.
+Tarmoqlash oqimini (issue → feature branch → PR → review → merge) bosqichma-bosqich biladi.
+Kichik, maqsadli va mantiqli commitlar yozish, conventional commits formatidan foydalanish ko‘nikmasini egallaydi.
+PR ochishda shablon va What/Why/How izohlarini to‘ldiradi, skrinshot/log/linklar bilan dalillashni tushunadi.
+Review checklist (funksional, xavfsizlik, uslub, test, hujjat) bilan tekshiruvni sistematik olib boradi.
+Code review etikasini (konstruktiv fikr, dalillash, “nitpicking vs blocker” ajratish) va samarali muhokama yuritishni biladi.
+Diffni o‘qish, muhim o‘zgarishlarni ajratish va potentsial regressiyalarni aniqlash ko‘nikmasini egallaydi.
+Merge siyosatlarini (merge commit, squash, rebase) farqlaydi va loyiha konvensiyasiga muvofiq tanlay oladi.
+Required checks/statuslar (CI, lint, test qamrovi) o‘tmaguncha merge qilmaslik intizomini qo‘llaydi.
+Review natijalariga ko‘ra refaktoring, izohlarni yopish (resolve) va yakuniy PR hygiene (changelog/description yangilash) amallarini bajaradi.
+Clean Code va SOLID tamoyillari
+Kod uslubining asosiy qoidalarini (nomlash, izoh, format) farqlaydi.
+Kichik, maqsadli funksiyalar va yuqori uyg‘unlik (high cohesion), past bog‘liqlik (low coupling) printsiplarini tushunadi.
+DRY/KISS/YAGNI yondashuvlarini amaliy qo‘llash, ortiqcha murakkablikni kamaytirish ko‘nikmasiga ega bo‘ladi.
+“Code smell”larni (uzun funksiya, dublikat kod, God object, primitiv obses., shotgun surgery) aniqlaydi.
+Refaktoring texnikalarini (extract method/class, rename, inline, introduce parameter object) qo‘llay oladi.
+SRP: bitta mas’uliyat printsipini tushunadi va sinf/funksiyalarni ajratadi.
+OCP: kengaytirishga ochiq, o‘zgartirishga yopiq dizaynlar yaratishni biladi (interfeys/meros orqali).
+LSP: o‘rinbosarlik tamoyilini tushunadi, meros hierarxiyasida kontraktni buzmaslikni ta’minlaydi.
+ISP: ixcham interfeyslar tuzadi; keraksiz metodlarni biladi.
+DIP: yuqori darajali modullarni past darajalilardan ajratish uchun abstraksiyalardan va DI (constructor injection) dan foydalanadi.
+Statik tahlil va linterni (formatter, linter) sozlaydi; 
+CI’da uslub/quality tekshiruvlarini majburiy qiladi.
+Unit-testlar orqali xulq-atvorni fiksatsiya qiladi, Clean Code mezonlari bo‘yicha code review o‘tkazadi, konstruktiv takliflarni hujjatlashtirib, bosqichma-bosqich tatbiq etadi.
+Loyihalash andozalari: Factory, Singleton, Observer
+GoF andozalari konsepsiyasini va ularning muammo–yechim kontekstini farqlaydi.
+Factory (Simple/Factory Method/Abstract Factory) farqlarini tushunadi; obyekt yaratishni abstraksiyalash orqali bog‘liqlikni kamaytirish ko‘nikmasini egallaydi.
+Factory’dan foydalanish qachon kerak/qachon keraksiz ekanini baholaydi (shartlar: ko‘p implementatsiya, o‘zgaruvchan konstruktor, pluggable modullar).
+Singletonning maqsadi va oqibatlarini (global holat, yashirin coupling) biladi; thread-safe implementatsiyalar (lazy init, double-checked locking)ni qo‘llay oladi.
+Testlanish nuqtayi nazaridan Singleton cheklovlarini tushunadi; DI (dependency injection) yordamida muqobil dizaynlar yaratadi.
+Observer (publish/subscribe) modelini tushunadi; voqea generatori (Subject) va kuzatuvchi (Observer) o‘rtasidagi bo‘sh bog‘liqlikni (loose coupling) ta’minlaydi.
+Observerda xotira oqimlari (unsubscribe/weak reference), notifikatsiya tartibi va backpressure muammolarini boshqaradi.
+Andozalarni UML (Class/Sequence) diagrammalari bilan ifodalay oladi;
+Kichik kod namunalarida Factory/Singleton/Observer’ni implementatsiya qiladi va ularni bir-biridan mustaqil testlaydi (mock/stub).
+Anti-patternlarni (God object, Service locator, overusing Singleton, needless factories) aniqlaydi va refaktoring yo‘llarini qo‘llaydi.
+Andozalarni Clean Code va SOLID bilan uyg‘unlashtiradi 
+REST API va JSON asoslari
+ HTTP metodlarini (GET/POST/PUT/PATCH/DELETE) va ularning semantikasini farqlaydi; idempotentlik va xavfsiz metod tushunchalarini tushunadi.
+Resursga yo‘naltirilgan URL dizayni, plural konvensiya va nested resurslarni to‘g‘ri modellashtiradi.
+JSON tuzilmasi (obyekt, massiv, tiplar) hamda serializatsiya/deserializatsiya jarayonini biladi.
+Status kodlarni (2xx/3xx/4xx/5xx) va ularning tipik holatlarini (200/201/204/400/401/403/404/409/422/500) to‘g‘ri qo‘llaydi.
+So‘rov/ javob headerlari, Content-Type, Accept (content negotiation) va kechiktirish/brauzer keşi bilan ishlashni tushunadi.
+Paginatsiya, saralash va filtrlash uchun query parametrlarini (page/limit/sort/filter) izchil qo‘llaydi.
+Standartlashtirilgan xato javobi (error schema) va validatsiya xabarlarini loyihalaydi.
+Autentifikatsiya/autorizatsiya asoslari: Bearer/JWT, Authorization header, scope/role nazorati.
+CORS mexanizmini va preflight so‘rovlarini tushunadi; ruxsat etilgan origin/method/headerlarni sozlaydi.
+Versiyalash (URL yoki header orqali v1, v2) va moslik (backward compatibility) tamoyillarini biladi.
+Rate limiting, throttling va audit loglari orqali API himoyasini kuchaytiradi.
+OpenAPI/Swagger bilan spetsifikatsiya yaratadi; Postman/Insomnia orqali test ssenariylarini avtomatlashtiradi.
+Muloqot va jamoada ishlash ko‘nikmalari
+Faol tinglash: savol berish, qayta ifodalash (paraphrase) va xulosalash orqali ma’noni aniq tasdiqlash.
+Yozma muloqot standarti: PR/issue/sprint yozuvlarini qisqa, strukturalangan (What/Why/How) va dalil bilan yozish.
+Feedback berish/qabul qilish: SBI (Situation–Behavior–Impact) modeli, “personaga emas, xulqqa” qaratish.
+Konfliktni konstruktiv hal etish: “win–win” yondashuvi, mediatorlik va eskalatsiya qoidalari.
+Meeting etikasi: aniq agenda, vaqt chegarasi, rol (facilitator/time-keeper), action item va protokollar.
+Jamoa roli va mas’uliyati: RACI/DACI orqali kim qaror qiladi/kim bajaradi/kim xabardor — aniq belgilash.
+Kross-funksional hamkorlik: dizayn, backend, DevOps bilan umumiy lug‘at va interfeýslarni kelishish.
+Asinxron aloqa madaniyati: vaqt zonalarida ishlash, messenjerdagi “slow mode”, “noto‘g‘ri kanalda” yozmaslik.
+Vizual muloqot: diagramma, skrin/loom, kanban taxtasi bilan fikrni tez yetkazish.
+Qaror qabul qilish: dalillangan tanlov, risk/benefit jadvali, qarorni yozma rasmiylashtirish.
+Jarayon shaffofligi: status-update (standup), “blocked” holatni erta bildirish, izchillik va deadline intizomi.
+Liderlik, mas’uliyat va vaqtni boshqarish
+Shaxsiy mas’uliyat (ownership): vazifa natijasi uchun javobgarlikni o‘z zimmasiga olish, “ayb tashlash” o‘rniga yechim taklif qilish.
+Ustuvorlik belgilash: Eisenhower matritsasi (tezkor/muhim) 
+Vaqtni rejalash: time-boxing, Pomodoro, calendar blocking bilan fokusni saqlash.
+Maqsadlar boshqaruvi: OKR/KPI qo‘yish, o‘lchovli natija va tekshiruv davriyligini belgilash.
+Delegatsiya: vazifani to‘g‘ri taqsimlash (RACI), resurs/kompetensiya mosligini baholash.
+Baholash va muddat: task’larni estimation qilish (story point/soat), realistik deadline kelishish.
+Risklarni boshqarish: erta signal berish (early warning), “plan B/rollback” va mitigatsiya choralarini yozib borish.
+Muloqot etikasi: qisqa, aniq update; “expectation management”, fikr-mulohazani konstruktiv berish/qabul qilish.
+Yig‘ilish samaradorligi: aniq agenda, “time-keeper”, action item va protokol yuritish.
+Qaror qabul qilish: DACI/RACI yoki 1-pager asosida tezkor va dalillangan tanlov.
+Self-management: kontekstlararo almashish (context switching)ni kamaytirish, chalg‘ituvchilarni boshqarish.
+Retrospektiva/post-mortem: xatolardan o‘rganish, “root cause” tahlili va doimiy yaxshilash rejasi.
+11.2. Ikinchi chorak uchun
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+DevOps va uzluksiz integratsiya(CI) asoslari
+Unix/Linux muhiti va tarmoq xizmati konfiguratsiyasi: SSH hamda Nginx reverse-proxyga kirish
+ Linux fayl tizimi iyerarxiyasini (/etc, /var, /usr, /home) va ruxsatlarni (rwx, chmod/chown/chgrp) tushunadi.
+Paket boshqaruvini (apt, yum/dnf) va xizmatlar boshqaruvini (systemctl enable|start|status) qo‘llay oladi.
+Foydalanuvchi/GRUP boshqaruvi (adduser, usermod, groups) hamda sudoers siyosatini xavfsiz sozlaydi.
+SSH kalit juftligini yaratadi (ssh-keygen) va masofaviy serverga joylaydi (ssh-copy-id), parolsiz kirishni yo‘lga qo‘yadi.
+Tarmoq darajasida xavfsizlikni sozlaydi: ufw/firewalld bilan 22/80/443 portlarini boshqarish, IP cheklovlari.
+Reverse-proxy konfiguratsiyasini yozadi: location / { proxy_set_header Host $host; proxy_pass http://127.0.0.1:3000; }.
+Proksi ortidagi ilovalarda X-Forwarded-For/X-Forwarded-Proto headerlarini to‘g‘ri uzatishni ta’minlaydi.
+Domen/DNS bog‘lanishini tekshiradi (dig, nslookup) va virtual host uchun server_name ni to‘g‘ri sozlaydi.
+Minimal SSL integratsiyasi haqida tasavvurga ega (Let’s Encrypt/ACM), keyinchalik HTTPS’ga o‘tishga tayyorgarlik ko‘radi.
+Masofadan boshqarishning xavfsiz amaliyotiga amal qiladi: bastion host, kalit rotatsiyasi, audit izlari va konfiguratsiyani hujjatlashtiradi.
+Konteynerlashtirish nazariyasi va amaliyoti: Docker arxitekturasi, image lifecycle, tarmoq/volume
+ Docker mijoz–daemon arxitekturasini, image–container tushunchalarini va qatlamli (union FS) modelni tushunadi.
+Image lifecycleni biladi: Dockerfile yozish → build/tag → push/pull → versiyalash (tag).
+Build kesh va qatlamlar optimallashtirilishini qo‘llaydi.
+Container boshqaruvi: run/start/stop/restart, exec, logs, inspect, stats yordamida diagnostika qiladi.
+EntryPoint/CMD, ENV, ARG, WORKDIR, HEALTHCHECK direktivalarini maqsadga muvofiq qo‘llaydi.
+Tarmoqlarni farqlaydi: bridge, host, none, custom subnet; port mapping. MB kabi servislar uchun volumelar bilan amaliyotini bajaradi.
+Resurs cheklovlari: CPU/memory limitlari, restart siyosatlari, ulimit bilan barqaror ishlashni ta’minlaydi.
+Xavfsizlik: rootless rejim, capabilitiesni cheklash, read-only root FS, secret/env’larni himoyalash.
+Uzluksiz integratsiya (CI) GitHub Actions platformasida: workflow dizayni va avtomatlashtirilgan sinovlar
+ CI konsepsiyasini, “early feedback” va “shift-left testing” tamoyillarini tushunadi.
+GitHub Actions arxitekturasi: runner, job, step, action tushunchalarini farqlaydi.
+YAML asosida workflow tuzadi: on: push/pull_request, paths, branches, tags triggerlarini sozlay oladi.
+Standart action’lardan foydalanishni o‘rganadi.
+CI artefaktlarini saqlash va keyingi joblarda ishlatishni biladi.
+Muhit o‘zgaruvchilari va secrets (GitHub Secrets, env) bilan xavfsiz konfiguratsiya qiladi.
+Monorepo yoki ko‘p xizmatli loyihalar uchun conditional ishga tushirish (if:), paths-ignore va concurrency siyosatlarini qo‘llaydi.
+Workflow’larni modullashtiradi: reusable workflows (workflow_call), kompozitsion yondashuv va DRY.
+Kesh strategiyalarini (hash files, lockfiles) optimallashtiradi va build vaqtini qisqartiradi.
+11.3. Uchinchi chorak uchun
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+Bulut va joylashtirish (Cloud &amp; Deployment)
+Uzluksiz joylashtirish (CD) va muhit o‘zgaruvchilari (env/secrets) boshqaruvi
+ CD konsepsiyasini va CI bilan farq/uzviyligini tushunadi.
+Staging/production kabi muhitlarni ajratadi; versiyalash va reliz siklini boshqaradi.
+Deploy strategiyalarini farqlaydi: blue-green, rolling, canary; qachon qaysi usulni tanlashni biladi.
+Konfiguratsiyani koddan ajratish tamoyilini qo‘llaydi.
+Least privilege va kalit/secret rotatsiyasi siyosatini qo‘llaydi.
+Muhitga xos sozlamalarni templating/overlay orqali boshqaradi (dev/stage/prod matritsa).
+Migrations/seed, health/readiness/liveness tekshiruvlarini deploy pipeline’ga kiritadi.
+Rollback/roll-forward ssenariylarini tayyorlaydi; “blast radius”ni cheklashga doir choralarni biladi.
+Approvals (manual gate), audit loglari va change-management hujjatlarini yuritadi.
+Observability: log, metrika, tracing orqali deploydan keyingi holatni verifikatsiya qiladi.
+Bulut platformalariga kirish (AWS/Azure/GCP): xizmat sinflari va arxitektura tamoyillari
+ Xizmat sinflari: IaaS, PaaS, SaaS, FaaS (serverless) farqlarini va qachon qaysi birini tanlashni bilish.
+Shared Responsibility: provayder–mijoz mas’uliyat chegaralarini aniq tushunish.
+VPC/VNet asoslari: subnet, route table, IGW/NAT, Security Group/NACL bilan tarmoq modeli.
+Identifikatsiya va ruxsat: IAM/AD rollar, policy, least-privilege amaliyoti.
+Hisoblash xizmati tanlovi: EC2/VM, App Service/Beanstalk/Cloud Run kabi boshqariladigan platformalar.
+Skaleyuvchanlik va balanslash: Auto Scaling, Load Balancer hamda elastiklik tamoyillari.
+Narxlash va kuzatuv: pay-as-you-go, teglash (cost allocation), billing/kvotalar, log/metrika/tracing.
+Xavfsizlik &amp; SSL/DNS: KMS/Key Vault, secrets boshqaruvi, audit izlari; managed DNS va sertifikat (HTTPS majburiyligi)..
+AWS amaliyoti: EC2/S3/IAM yordamida minimal deploy
+ EC2 yaratish: AMI tanlash, instance type, key pair va security group (80/443/22 portlar) sozlash.
+User-data start skripti: ilk bootda nginx/ilovani o‘rnatish va servisni avtomatik ishga tushirish.
+Elastic IP yoki DNS: barqaror manzil; A yozuvi bilan domenni EC2’ga bog‘lash.
+Bucket policy &amp; ACL: ommaviy o‘qish (faqat zarur bo‘lsa) yoki CloudFront orqali tarqatish.
+IAM foydalanuvchi/rol: least-privilege; S3’ga faqat kerakli ruxsat beruvchi policy yozish.
+Instance profile: EC2’ga IAM rol biriktirish; kalitlarni kodga qo‘shmasdan S3’ga kirish.
+Tegrash va xarajat: Name, Env teglari; reserved/spot tanlovi, to‘xtatish/terminatsiya siyosati va zaxira (snapshot).
+Domen, DNS va SSL/TLS integratsiyasi
+Domen ro‘yxatdan o‘tkazish: registrar tanlash, WHOIS va nameserver (NS) tushunchalarini bilish.
+DNS yozuvlari: A/AAAA, CNAME, MX, TXT (SPF/verification) va CAA maqsadlarini farqlash.
+Zanjirni tushunish: recursive resolver → authoritative NS → TTL, kechikish va keşi ishlashini anglash.
+SSL/TLS sertifikati: turini tanlash (DV/OV/EV), ACME (Let’s Encrypt) yoki managed (AWS ACM) yechimlari.
+Challenge turlari: HTTP-01 va DNS-01 tekshiruvlarini amaliy bajarish (automation uchun DNS-01).
+HTTPS majburiyligi: HSTS, 301 redirect (HTTP → HTTPS), mixed content muammolarini bartaraf etish.
+Cipher/Protocol siyosati: TLS 1.2+/1.3 ni yoqish, zaif shifrlash to‘plamlarini o‘chirish, OCSP stapling.
+Diagnostika: dig/nslookup, openssl s_client, SSL Labs tekshiruvi orqali xatolarni aniqlash.
+Xavfsizlik amaliyotlari: CAA/TXT siyosatlari, minimal huquqlar (DNS API token), zonani zaxiralash va o‘zgarishlarni jurnal qilish.
+Bulut xavfsizligi va kirish nazorati
+ Least-Privilege IAM: foydalanuvchi/rol/policy darajasida minimal ruxsatlarni belgilash, guruhlar bilan boshqarish.
+Ko‘p bosqichli himoya (MFA): admin va muhim rollar uchun MFA majburiyligini joriy etish.
+Vaqtinchalik kirish (STS): doimiy kalit o‘rniga qisqa umrli tokenlardan foydalanish.
+Secrets boshqaruvi: Secrets Manager/Parameter Store/KMS bilan kalit va parollarni shifrlash/rotatsiya qilish.
+Audit va kuzatuv: CloudTrail/Config/GuardDuty orqali harakatlar jurnali, konfiguratsiya driftini aniqlash.
+Shifrlash standartlari: data-at-rest (S3, EBS, RDS) va data-in-transit (TLS 1.2/1.3) ni majburiy qilish.
+Tagging &amp; Billing nazorati: resurslarga tag berish, kim/nima uchun ishlatayotganini audit qilish.
+CI/CD xavfsizligi: branch protection, required checks, signer/artifact tamg‘alash (SBOM, sigstore).
+Compliance va siyosatlar: SCP/Boundary policies bilan hisob/loyihalar chegaralarini belgilash.
+11.4. To`rtinchi  chorak uchun
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+Freelance va startap rivojlantirish
+Freelancing ekotizimi va platformalar arxitekturasi (Upwork, Fiverr, Toptal, LinkedIn gig)
+ Platforma farqlari: Upwork (uzoq muddat/soatlik), Fiverr (gig-paket), Toptal (kuratsiya), LinkedIn gig (tarmoq).
+KYC/ToS &amp; komissiya: shaxsni tasdiqlash, xizmat shartlari, fee tuzilmalari va hisob bloklanishi xavflari.
+Profil semantikasi: sarlavha + “overview”da UVP/nishe, skill/tag, portfel havolalari, ko‘rsatkichlar (top skills, success rate).
+Niche tanlash: tor yo‘nalish (masalan, “CI/CD + AWS deploy”), differensial taklif va kalit so‘zlar.
+Vakansiya filtrlash: byudjet, muddat, tajriba darajasi, “client history”, to‘lovlari tasdiqlangan mijoz.
+Proposal anatomiyasi: muammo→yechim→reja, shaxsiylashtirilgan intro, metrik natija, kichik demo yoki audit taklifi.
+Narxlash modeli: soatlik (rate, tracker) vs fixed-price (milestone, scope), risk buffer va change-request siyosati.
+Muloqot etikasi: savol-javob, status update/standup, vaqt zonasi moslashuvi, yozma kelishuvni saqlash.
+Portfolio &amp; case study: “Problem→Solution→Result” narrativi, live demo/link, o‘lchovli natijalar (metrika, skrin).
+Risk va firibgarlik: off-platform to‘lov, shubhali link/fayllar, haddan tashqari keng scope; xavfsizlik cheklisti.
+Reyting va barqarorlik: vaqtida yetkazish, qayta aloqa, revision boshqaruvi, 5★ feedback va return clients strategiyasi.
+Portfolio, GitHub va case study ishlab chiqish metodikasi
+ Narrativ tuzilma: “Problem → Solution → Result” asosida kontekst, muammo, yondashuv, natijani qisqa va aniq bayon qilish.
+GitHub profil optimallashtirish: pin repos (3–6 ta), bio/linklar, faoliyat grafigi va profil README bilan birinchi taassurotni kuchaytirish.
+Repo README standarti: maqsad, arxitektura sxemasi, o‘rnatish/ishga tushirish, konfiguratsiya, demo link, skrin/GIF, licenziya.
+Badge’lar va sifat ko‘rsatkichlari: build/test status, coverage, last release, downloads — ishonchlilik signalini oshirish.
+Hujjatlash strukturası: docs/, CHANGELOG, CONTRIBUTING, CODE_OF_CONDUCT; versiyalash (semver) va reliz yozuvlari.
+Live-demo: Vercel/Render/Netlify (yoki Docker compose) orqali ko‘rish mumkin bo‘lgan ishchi namuna; .env.example bilan sozlash.
+Kod sifati artefaktlari: linter/formatter, testlar (unit/integratsion), CI (GitHub Actions) va SBOM/skan natijalari.
+Case study shabloni (1 sahifa): maqsad, texnologiyalar, dizayn tanlovi (trade-off), metrik natijalar, muammolar/yechimlar, keyingi reja.
+Vizual va diagrammalar: arxitektura diagrammasi, ma’lumot oqimi, UI skrinlari; bir xil uslub (brand kit, cover images).
+O‘qiluvchanlik va topilish: sarlavha/slug, kalit so‘zlar, repo topics; LinkedIn/portfolio sayti bilan o‘zaro havolalash.
+Huquqiy va etik jihatlar: LICENSE tanlash (MIT/Apache-2.0), shaxsiy ma’lumotlar va API kalitlarini oshkor qilmaslik (secrets).
+Mijoz bilan muloqot, narxlash modeli, kontrakt va to‘lov jarayonlari
+ Brief/Discovery: talablarni aniqlash, savol-jadval (scope, cheklov, deadline, budjet) va risklarni erta yuzaga chiqarish.
+SOW (Scope of Work): deliverable’lar, qamrovdan tashqari ishlar, timeline, acceptance kriteriy va kommunikatsiya chastotasini yozma belgilash.
+Proposal anatomiyasi: shaxsiylashtirilgan intro, muammo→yechim, MVP/roadmap, metrik natija, narx variantlari va “next step”.
+Narxlash modeli: soatlik (rate, time-tracking) vs fixed-price (milestone); change-request va risk buffer siyosati.
+Milestone va rejalash: sprintlarga bo‘lish, demo/QA nuqtalari, deliverable bo‘yicha to‘lov triggerlari.
+Scope creep boshqaruvi: har bir qo‘shimcha talabni CR (change request) bilan narx/vaqtga bog‘lab tasdiqlash.
+Kontrakt bandlari: IP/Ownership, NDA, SLA, revisions limiti, qo‘llab-quvvatlash, warranty, late fee/penalti.
+To‘lov mexanizmi: escrow (Upwork) yoki invoice (Payoneer/Wise); avans % va yakuniy to‘lov shartlari.
+Hujjatlash va izchillik: yozma muloqot (chat/email)ni arxivlash, qarorlar logi, versiyalangan hujjatlar.
+Muloqot etikasi: status update, timezone moslashuvi, aniq “expectation management”, risklarni oldindan xabar qilish.
+Compliance &amp; xavfsizlik: KYC/ToS, PII/secretsni himoya qilish, havfsiz fayl almashish va rasmiy kvitansiyalar.
+Nizo va qayta ko‘rib chiqish: dispute jarayoni, mediatsiya, partial refund ssenariylari va “project closure” cheklisti.
+Startap yondashuvi: g‘oya → MVP → pitch (Lean Canvas, Value Proposition, backlog)
+ Muammo identifikatsiyasi: og‘riq nuqtalarini (pain points) aniqlash, gap-intervyular orqali tasdiqlash.
+ICP/Persona: ideal mijoz profili va segmentlarni aniq ta’riflash, ustuvor segmentni tanlash.
+Lean Canvas: muammo, yechim gipotezasi, UVP, kanallar, daromad oqimi, xarajat tuzilmasi, asosiy metrikalar, raqobat ustunligi.
+Value Proposition (UVP): mijozga beriladigan aniq qiymat, alternativalardan farq va “why now” dalili.
+Raqobat tahlili: substitutlar/bozor xaritasi; differensiasiya va kirish to‘siqlari (barriers).
+MVP skopi: “must-have” funksiyalarni minimal ko‘lamda belgilash; prototip vs ishchi versiya farqi.
+Backlog tuzish: 1-sprint uchun 3–5 vazifa, “definition of done”, qabul (acceptance) mezonlari.
+Validatsiya metrikalari: AARRR (acquisition, activation, retention, revenue, referral) va AB-test/kohorta kuzatuvi.
+Texnik arxitektura tanlovi: monolith vs serverless, tez prototiplash uchun stack; narx–tezlik–xavfsizlik trade-off.
+Go-to-market (GTM): kanallar (SEO, community, paid), ilk foydalanuvchilarni jalb qilish va “landing + waitlist”.
+Pitch deck anatomiyasi: muammo, yechim, bozor (TAM/SAM/SOM), model, traction/metrikalar, roadmap, jamoa, ask.
+Risk va huquqiy jihatlar: IP/licenziya, ma’lumotlar maxfiyligi, MVPdan keyingi shkalalash va monitoring rejasi.
+Omma oldida nutq so‘zlash va muvaffaqiyatli taqdimotlar o‘tkazish
+Auditoriya segmentlari, ehtiyojlari va kutilmalarini tahlil qilish usullarini biladi.
+Slayd dizaynida minimalizm, kontrast, vizual ierarxiya va o‘qiluvchanlik tamoyillarini amalga oshira oladi.
+Grafik/diagrammalar orqali ma’lumotni soddalashtirib, data-storytelling yondashuvini qo‘llay oladi.
+Vaqtni rejalash (timing), repetitsiya va trejlash orqali nutqni mukammallashtira oladi.
+Q&amp;A (savol-javob) sessiyasini moderatsiya qilish, noqulay savollarga javob berish strategiyalarini amalga oshira oladi.
+Texnik tayyorgarlik: proyektor, audio, klikker, shrift va format muammolari uchun B-rejani tayyorlay oladi.
+Masofaviy taqdimotlarda kamera, mikrofon, ekran ulash va chat etiketi qoidalarini bajara oladi.
+Taqdimotni yozib olish, feedback yig‘ish va tahlil qilish orqali doimiy takomillashtirishni yo‘lga qo‘ya oladi.
+Loyiha boshqarish va jamoaviy ishlash
+Loyiha hayotiy sikli (boshlash–rejalash–ijro–monitoring–yopish) va maqsadlarini biladi.
+Scope–vaqt–byudjet uchburchagi va trеyd-offlarni tushunadi va baholay oladi.
+Stakeholderlarni aniqlash, xaritalash va kommunikatsiya rejasini tuza oladi.
+Risklarni aniqlash, ta’sir bo‘yicha baholash rejalarni tayyorlay oladi.
+Jira/Trello/ClickUp hamda Git/GitHub flow’dan jamoaviy hamkorlikda foydalana oladi.
+DoR/DoD, meeting notes va protokollarni standartlarga muvofiq rasmiylashtira oladi.
+Yig‘ilishlarni fasilitatsiya qilish, konstruktiv feedback berish/qabul qilishni amalga oshira oladi.
+Konfliktlarni muzokara va mediatatsiya usullari bilan hal eta oladi.
+Agile, Scrum, Kanban metodologiyasi
+Agile qadriyatlari va tamoyillari.
+Scrum rollari: Product Owner, Scrum Master, Development Team.
+Artefaktlar: Product/Sprint Backlog, Increment, Definition of Done.
+Scrum tadbirlari: Planning, Daily, Review, Retrospective.
+Estimatsiya: story point, velocity, planning poker.
+Kanban taxtasi: ustunlar, WIP limit, lead time/cycle time.
+Flow metrikalari: throughput, bottleneck aniqlash.
+Prioritizatsiya: MoSCoW, WSJF, value vs effort.
+Doimiy yetkazib berish: “small batch”, feedback loop.
+Praktika: jamoada roli, shaffoflik va doimiy takomillashtirish.
+Jira, Trello, ClickUp bilan ish jarayoni
+Board turlari: Scrum (sprint) vs Kanban (continuous).
+Issue turlari: Epic/Story/Task/Bug va ularning lifecycle’i.
+Workflow va statuslar: custom ustunlar, transitions.
+Backlog boshqaruvi: label, priority, assignee, due date.
+Sprint boshqaruvi (Jira): sprint yaratish, start/close, burndown.
+Kanban oqimi (Trello/ClickUp): list/card, checklist, attachment, automation (Butler/Zapier).
+Rejalashtirish: story point/time estimate, capacity planning.
+Integratsiyalar: GitHub/CI/CD linklash, commit/PR ↔ issue.
+Hisobotlar va metrikalar: burndown, velocity, cycle time, cumulative flow.
+PROFESSIONAL IT DEVELOPMENT KURSI BO‘YICHA LOYIHA ISHLARI
+Professional IT development kursi davomida bajariladigan loyihalar o‘tilgan mavzular doirasida beriladi va joriy nazorat ishlarini baholashda asos bo‘ladi. Kursda tahsil olayotgan har bir o‘quvchiga loyiha topshiriqlari individual tarzdab eriladi. Berilgan loyihalarni kurs davomida yoki yakuniy loyiha sifatida bajarish mumkin.
+№
+Loyiha mavzulari
+“Vazifalar boshqaruvi” veb-ilovasi (CRUD Task Tracker) - vazifa qo‘shish, status, filtrlash
+“Shaxsiy portfel va ish namunalari” sayti - case study, kontakt, havolalar
+“Kutubxona boshqaruvi” REST API - kitob/avtor CRUD, JWT autentifikatsiya
+“Ob-havo ma’lumotnomasi” veb-ilovasi - ochiq API, kesh va qidiruv
+“Havola qisqartirish xizmati” - qisqa link, statistik tahlil, QR kod
+“Onlayn test va baholash” platformasi - savol banki, natijalar
+“Maqola va kontent boshqaruvi” (mini CMS) - post/tag, qidiruv, admin panel
+“Elektron do‘kon (mockup)” prototipi - mahsulot, savatcha, buyurtma
+“Real-vaqt chat” xizmati — chat xonalari, onlayn status, WebSocket
+“Eslatmalar va markdown daftarcha” - PWA, offlayn saqlash, sinxronizatsiya
+“Rasm galereyasi va bulut saqlash” - yuklash, S3, kichraytirish
+“Bog‘lanish (kontakt) serverless API” - Lambda + API Gateway + e-pochta yuborish
+“GitHub Actions bilan CI/CD pipeline” - build/test, avtomatik deploy
+“Nginx orqal i ko‘p-komponentli stack” - web + DB + reverse-proxy
+“Monitoring va kuzatuv paneli” - Prometheus + Grafana, ilova metrikalari
+“Foydalanuvchi rollari va ruxsatlar” (RBAC) tizimi - admin/user, himoyalangan sahifalar
+“Bir sahifalik landing + bio havolalar” - analitika, UTM, mos dizayn
+“Xarajatlarni hisobga olish” ilovasi - kategoriyalar, grafiklar, eksport
+“Kanban uslubida vazifa doskasi” - drag-and-drop, ustunlar, filtrlash
+“Fayl yuklash va boshqarish xizmati” (File Uploader) - yuklash, hajm/format tekshirish, progress, preview
+“Serverless rasmni avtomatik kichraytirish” - S3 hodisasi -&gt; Lambda -&gt; CloudFront
+“Domen, DNS va SSL o‘rnatish amaliyoti” - custom domen, HTTPS, HSTS
+“Terraform bilan ‘Hello Cloud’ infratuzilma” - EC2, Security Group
+“Edge/Serverless render asosidagi landing” - Next.js ISR/Edge Functions
+“Bronlash/appointment mini-MVP” - vaqt slotlari, e-mail bildirish, admin panel
+PROFESSIONAL IT DEVELOPMENT XONASI UCHUN QOʻYILADIGAN UMUMIY TALABLAR
+Professional IT development xonasi maktab binosining ikki va undan yuqori qavatda alohida binoda joylashgan boʻlishi;
+Professional IT development xonasining umumiy maydoni 63 m2;
+barcha oʻquv binolarini tabiiy, sunʼiy kombinatsiyalangan yoritishga ega boʻlishi;
+Xona harorati 17-20o C boʻlishi kerak.
+Professional IT development xonasi mashgʻulotlar boshlanishidan oldin va tugagandan soʻng, shamollatiladi. Shamollatishning davomiyligi ob-havo sharoiti, shamolning yoʻnalishi va tezligi, isitish tizimining samaradorligi bilan belgilanadi.
+Professional IT development xonasi uchun ajratilgan xonadagi haroratni meʼyorida saqlab turish uchun sovutish va isitish tizimi (konditsioner) oʻrnatilgan boʻlishi kerak. 
+Professional IT development xonasi uchun ajratilgan xonada birinchi tibbiy yordam koʻrsatish uchun tibbiy toʻplamlar boʻlishi kerak.
+Professional IT development xonasi uchun quyidagi boʻyoq ranglarini qoʻllash tavsiya etiladi: shiftlar uchun moviy rang, devorlar uchun — qaymoq rang, pushti, yashil, koʻk ranglarning ochiq ohanglari, mebel (shkaflar, stollar) uchun — tabiiy yoki och jigarrang, toʻq  jigarrang; eshiklar, deraza romlari uchun — oq ranglar.
+12. PROFESSIONAL IT DEVELOPMENT KASBIGA OʻQITISH XONASINI JIHOZLASHGA QOʻYILGAN TALABLAR
+T/r
+Jihoz nomi
+Oʻlchov birligi
+Soni
+Jihoz rasmi
+1.
+Monitor uzunligi toʻgʻridan — toʻgʻri 1920 pixels 1080 pixels boʻlishi kerak. 
+toʻplam
+1
+2.
+UHD-384x2160-4k,
+QHD-2560X1440
+FHD-1920X1080
+HD-1280X720
+toʻplam
+1
+3.
+Processor boʻyi 22x27
+ATX/EATX
+toʻplam
+1
+4.
+Kompyuter klaviaturasi oʻlchami 445-mm 136-mm
+dona
+1
+5.
+Kompyuter sichqonchasi oʻlchami 101-mm 75-mm
+dona
+1
+13. PROFESSIONAL IT DEVELOPMENT KASBIGA OʻRGATISH UCHUN ZARUR BOʻLADIGAN XOM ASHYOLAR ROʻYXATI
+T/r 
+Xom ashyo va materiallar nomi 
+Oʻlchov birligi
+Bir oʻquvchi uchun belgilangan miqdor 
+1.
+Displey: 14–24″, FHD (1920×1080)
+dona
+1
+2.
+CPU: 4 yadro/8 oqim, ≥8-avlod Intel Core i5 yoki AMD Ryzen 5 3500U (VT-x/AMD-V va AVX2 qo‘llab-quvvatlashi shart)
+dona
+1
+3.
+RAM: 8 GB (kamida); 16 GB tavsiya (Docker/Android Studio uchun qulay)
+dona
+1
+4.
+Xotira: SSD 256 GB (NVMe bo‘lsa yaxshi); bo‘sh joy ≥100 GB
+dona
+1
+5.
+Grafika: Integratsiyalashgan GPU (Intel UHD/Iris yoki Radeon Vega) yetarli
+dona
+1
+6.
+Tarmoq: Gigabit Ethernet va Wi-Fi 5 (802.11ac)
+dona
+1
+7.
+Portlar: 2×USB-A, 1×USB-C (ixtiyoriy), HDMI (proyektorga ulash uchun), audio 3.5 mm
+dona
+1
+8.
+OS: Windows 10/11 Pro (WSL2 yoqilgan) yoki Ubuntu 22.04 LTS
+dona
+1
+9
+Dasturiy ta’minot: Git, VS Code, Docker Desktop/Engine (+Compose), Node.js LTS, Python 3.x, Postman/Insomnia, OpenSSH, Nginx (lab uchun)
+dona
+1
+10
+Periferiyalar: Sichqoncha, klaviatura, kamida 720p web-kamera va mikrofon (onlayn dars/taqdimotlar uchun)
+dona
+1
+11
+Zaxira quvvat uchun UPS 650–1000 VA (desktop bo‘lsa)
+dona
+1
+Izoh: Docker, Android Studio yoki bir vaqtning o‘zida bir nechta xizmatlarni ishga tushirish rejalashtirilsa, 16 GB RAM + 512 GB NVMe sezilarli farq qiladi.
+14. KASBIY TAʼLIM USTASI LAVOZIMIGA QOʻYILADIGAN TALABLAR
+T/r
+Lavozim nomi
+Ta’lim darajasi
+Malakaviy talablar
+Ish tajribasi va shaxsiy sifatlari
+1
+Informatika va axborot
+texnologiyalari,  dasturlash yo‘nalishi bo‘yicha mentor
+o‘rta maxsus yoki oliy ma’lumot
+Mutaxassisligiga
+talab
+qo‘yilmaydi
+raqamli texnologiyalar, dasturlash bo‘yicha chuqur bilim va zamonaviy ko‘nikmalarga ega;
+mazkur yo‘nalish bo‘yicha kamida 2 yil o‘quvchilar bilan ishlash tajribasiga ega (mehnat daftarchasi yoki ma’lumotnoma asosida);
+taqdim etilgan o‘quv reja va dasturlar asosida darslarni tashkillashtirish, shuningdek, ularni o‘quvchilarning darajasi, qiziqishi va talablariga ko‘ra moslashtira olish ko‘nikmasi; 
+ijodkorlik, jamoa bilan ishlash, moslashuvchanlik, tashkilotchilik, muloqot ko‘nikmalariga ega.
+15. 11-SINF OʻQUVCHILARIGA QOʻYILGAN UMUMIY MALAKA TALABLARI
+Bilim
+Professional IT development kursining mazmuni, SDLC bosqichlari va artefaktlari, Git/GitHub (branch, PR, review), REST API va JSON, Unix/Linux asoslari (SSH, Nginx), Docker arxitekturasi (image/container, Dockerfile, compose), CI/CD g‘oyalari (GitHub Actions), bulut (AWS EC2/S3/IAM, serverless), domen–DNS–SSL/TLS, dastur xavfsizligi va jamoaviy ish metodlari (Agile/Scrum/Kanban) bo‘yicha nazariy bilimlarga ega bo‘lishi kerak..
+Koʻnikma
+Git oqimida ishlash (commit, branch, PR), README/API hujjat tayyorlash, REST API yozish va Postman bilan sinash, Linux’da xizmatlarni sozlash (systemctl, loglar, SSH), Nginx reverse-proxy o‘rnatish, Dockerfile yozish va compose bilan ko‘p komponentli muhitni ko‘tarish, GitHub Actions’da build–test–scan bosqichlarini sozlash, EC2’da minimal deploy, S3’dan statik xizmat, IAM ruxsatlarini berish, domen yozuvlarini kiritish va SSL sertifikat o‘rnatish ko‘nikmalariga ega bo‘lishi kerak.
+Kompetensiya
+Loyihani tahlil qilib arxitekturaviy yechim tanlash, jamoada kod standartlari va code-review madaniyatini yuritish, CI/CD orqali barqaror yetkazib berishni boshqarish, xavfsizlik va sifatni jarayonga tikish (secret/sca/sast), monitoring va loglar asosida nosozlikni tez bartaraf etish hamda rollback/release strategiyalarini qo‘llash, mijoz/foydalanuvchi ehtiyojiga mos MVP yaratish, portfolioga joylash va freelancing platformalarida taqdim etish kompetensiyalariga ega bo‘lishi kerak.
+16. FOYDALANILGAN ADABIYOTLAR VA ELEKTRON  MANBALAR ROʻYXATI
+Martin R. Clean Code: A Handbook of Agile Software Craftsmanship. — Boston: Prentice Hall, 2008. — 464 p.
+Freeman E., Freeman E., Robson E., Bates B., Sierra K. Head First Design Patterns. 2nd ed. — Sebastopol: O’Reilly Media, 2021. — 694 p.
+Sommerville I. Software Engineering. 10th ed. — Boston: Pearson, 2015. — 816 p.
+Humble J., Farley D. Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation. — Boston: Addison-Wesley, 2010. — 512 p.
+Newman S. Building Microservices. 2nd ed. — Sebastopol: O’Reilly Media, 2021. — 312 p.
+Hüttermann M. DevOps for Developers. — New York: Apress, 2012. — 188 p.
+Chacon S., Straub B. Pro Git. 2nd ed. — New York: Apress, 2014. — 458 p.
+Git — Pro Git Book [Электронный ресурс]. — Режим доступа: https://git-scm.com/book 
+Atlassian. Git Tutorials [Электронный ресурс]. — Режим доступа: https://www.atlassian.com/git 
+Docker Documentation [Электронный ресурс]. — Режим доступа: https://docs.docker.com/ 
+Dockerfile Best Practices [Электронный ресурс]. — Режим доступа: https://docs.docker.com/develop/develop-images/dockerfile_best_practices/ 
+NGINX Documentation (Admin Guide, Reverse Proxy) [Электронный ресурс]. — Режим доступа: https://nginx.org/en/docs/ 
+GitHub Docs: Actions, Branch protection, CODEOWNERS [Электронный ресурс]. — Режим доступа: https://docs.github.com/ 
+OpenAPI Specification 3.1 [Электронный ресурс]. — Режим доступа: https://spec.openapis.org/oas/latest.html 
+OWASP API Security Top 10 (2023) [Электронный ресурс]. — Режим доступа: https://owasp.org/API-Security/ 
+AWS Documentation: EC2, S3, IAM [Электронный ресурс]. — Режим доступа: https://docs.aws.amazon.com/ 
+AWS Well-Architected Framework [Электронный ресурс]. — Режим доступа: https://docs.aws.amazon.com/wellarchitected/latest/framework/ 
+IETF RFC 9110. HTTP Semantics (2022) [Электронный ресурс]. — Режим доступа: https://www.rfc-editor.org/rfc/rfc9110
+IETF RFC 8446. The Transport Layer Security (TLS) Protocol Version 1.3 (2018) [Электронный ресурс]. — Режим доступа: https://www.rfc-editor.org/rfc/rfc8446
+The Twelve-Factor App [Электронный ресурс]. — Режим доступа: https://12factor.net/ 

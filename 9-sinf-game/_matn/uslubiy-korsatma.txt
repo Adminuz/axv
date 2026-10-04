@@ -1,0 +1,2825 @@
+OʻZBEKISTON RESPUBLIKASI RAQAMLI TEXNOLOGIYALAR VAZIRLIGI HUZURIDAGI “RAQAMLI TA’LIMNI RIVOJLANTIRISH MARKAZI” DM “MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN
+ (10-SINFLAR UCHUN)
+
+
+
+
+
+
+
+
+
+
+
+
+	Toshkent-2026
+
+GAME DESIGN YO’NALISHI BO’YICHA O’QUV QO’LLANMA
+(9-SINFLAR UCHUN)
+
+
+
+
+
+
+Ushbu o’quv qo’llanma zamonaviy o’yin sanoati (Game Industry) uchun fundamental qo’llanma bo’lib, o’yin yaratishning g’oyadan to yakuniy mahsulotgacha bo’lgan to’liq jarayonini qamrab oladi. Kitob shunchaki texnik qo’llanma emas, balki texnologiya, san’at va psixologiya tutashgan nuqtada o’yin dizaynini qanday shakllantirishni o’rgatadi. Unda o’yin mexanikasi, 2D va 3D vizual kontent yaratish, dasturiy dvigatellar bilan ishlash hamda tayyor o’yinni global bozorga (Google Play) chiqarish bosqichlari tizimli bayon etilgan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Muharrir: Usmonov Jonibek Turdiqulovich
+MUNDARIJA
+KIRISH	5
+I-BOB. 2D GRAFIKA ASOSLARI VA PHOTOSHOP
+1.1.	Photoshop interfeysi va vositalari	7
+1.2.	Ranglar nazariyasi va dizayn asoslari	15
+1.3.	O’yin uchun ikonka yaratish	24
+1.4.	UI dizayn: tugmalar, menyular, HUD	45
+1.5.	O’yin interfeysini prototiplash	64
+II-BOB. 3D MODELLASHTIRISH ASOSLARI (BLENDER) 
+2.1.	Blender interfeysi va oddiy obyektlar	82
+2.2.	Poligonal (Mesh) modellashtirish	91
+2.3.	Oddiy obyektlarni yaratish (standart primitivlar yordamida)	97
+2.4.	Animatsiya va effektlar 	105
+2.5.	Loyihani saqlash va eksport qilish	109
+III-BOB. O’YIN MUHITI VA LEVEL DESIGN ASOSLARI
+3.1.	O’yin dunyosi (Game World) dizayni haqida	115
+3.2.	Level Design ahamiyati va roli	129
+3.3.	O’yin muhiti elementlari	135
+3.1.	O’yin darajalari (Levels)	144
+IV-BOB. DASTURLASH VA O’YIN MEXANIKASI
+4.1.	Kodlash asoslari va Godot interfeysi	155
+4.2.	O’yin mexanikasi va  UI elementlari	163
+4.3.	O’yin matematikasi	169
+V-BOB. O’YIN YARATISHDA JAMOAVIY ISH VA GIT
+5.1.	Game production jarayoni	175
+5.2.	Git va asosiy buyruqlar	179
+5.3.	O’yin ishlab chiqishda version controlning afzalliklari	191
+VI-BOB. UNITY O’YIN DIZAYNI
+6.1.	Unityni o’rnatish va  interfeysi bilan tanishish	196
+6.2.	Unity komponentalari 	204
+6.3.	O’yin yaratishda ijodiy yondashuv	211
+VII-BOB. MARKETING VA NOSHIRLIK
+7.1.	Publishing and Monetization modellari	216
+7.2.	Google Play Consoleda o’yin yuklash qoidalari	222
+VIII-BOB. YAKUNIY LOYIHA
+8.1.	GDD (Game Design Document) tuzish	232
+8.2.	Prototip yaratish (2D yoki 3D)	237
+8.3.	Testing	241
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+KIRISH
+Bugungi kunda raqamli texnologiyalar jadal rivojlanib, axborot-kommunikatsiya vositalari hayotimizning barcha jabhalariga chuqur kirib bormoqda. Ayniqsa, kompyuter o’yinlari nafaqat ko’ngilochar vosita, balki ta’lim, dizayn, dasturlash va ijodiy fikrlashni rivojlantiruvchi muhim yo’nalishlardan biriga aylandi. Shu sababli umumta’lim maktablarida o’quvchilarga o’yin yaratish asoslarini o’rgatish, ularning texnologik savodxonligini oshirish dolzarb vazifalardan hisoblanadi.
+Mazkur uslubiy ko’rsatma kompyuter o’yinlarini yaratish jarayonining asosiy bosqichlari bilan tanishtirishga qaratilgan. Qo’llanmada 2D grafika asoslari, Photoshop dasturida ishlash, ranglar nazariyasi, ikonka va foydalanuvchi interfeysi (UI) dizayni, 3D modellashtirish asoslari (Blender), o’yin muhiti va level design, dasturlash va o’yin mexanikasi, shuningdek, jamoaviy ish va versiyalarni boshqarish (Git) masalalari bosqichma-bosqich yoritilgan.
+Shuningdek, qo’llanmada zamonaviy o’yin dvijoklaridan biri bo’lgan Unity muhiti bilan tanishish, o’yin yaratishda ijodiy yondashuv, marketing va nashr qilish (publishing) jarayonlari, yakuniy loyiha sifatida Game Design Document (GDD) tuzish, prototip yaratish va testlash kabi mavzular ham o’z aksini topgan.
+Ushbu uslubiy ko’rsatma o’quvchilarda mantiqiy fikrlash, dizayn madaniyati, muammoli vaziyatlarni tahlil qilish va jamoada ishlash ko’nikmalarini shakllantirishga xizmat qiladi. Materiallar sodda tilda, amaliy mashg’ulotlar asosida bayon qilingan bo’lib, o’qituvchilar uchun darslarni samarali tashkil etishda, o’quvchilar uchun esa mustaqil ijodiy faoliyatni rivojlantirishda muhim manba bo’lib xizmat qiladi.
+
+
+ 
+
+ 
+1-bob haqida umumiy ma’lumot.
+Mazkur bobda Photoshop dasturi va uning interfeysi, ranglar nazariyasi hamda dizayn asoslari haqida ma’lumot beriladi. Bobda Photoshop interfeysi va undagi vositalardan foydalanish, tasvirlarni tahrirlash va grafika elementlarini tayyorlash jarayoni yoritiladi. Shuningdek, ranglar nazariyasi va dizayn asoslari ko’rib chiqilib, ranglarning uyg’unligi va vizual kompozitsiyaning o’yin ko’rinishiga ta’siri tushuntiriladi. Bundan tashqari, UI dizayn elementlari tugmalar, menyular, HUD kabi interfeys qismlarining vazifasi va ularni qulay joylashtirish tamoyillari haqida umumiy ma’lumotlar beriladi. 
+	•	Photoshop interfeysi va vositalari
+Adobe Photoshop dasturi interfeysi bilan tanishish
+Asosiy vositalarni aniqlash va ularning vazifalarini o‘rganish
+Mashg‘ulot
+maqsadi
+Adobe Photoshop dasturi interfeysi bilan tanishish
+Asosiy vositalarni aniqlash va ularning vazifalarini o‘rganish
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter
+	•	Adobe Photoshop dasturi
+	•	Sichqoncha va klaviatura
+
+
+	•	Kompyuter
+	•	Adobe Photoshop dasturi
+	•	Sichqoncha va klaviatura
+
+
+
+Ishning bajarish tartibi
+Adobe Photoshop  bu rasmlar va grafik tasvirlarni yaratish hamda tahrirlash uchun mo’ljallangan professional grafik dastur bo’lib, dastur asosan rasm dizayni, foto tahrirlash, reklama va plakatlar tayyorlash, o’yin va veb-interfeys elementlarini yaratishda keng qo’llaniladi.
+Photoshop dasturi yordamida:
+	•	rasmlarni kesish va o’lchamini o’zgartirish;
+	•	ranglarni tuzatish va bezash;
+	•	matn va turli shakllar qo’shish; 
+	•	fonni almashtirish;
+	•	dizayn va grafika ishlari bajarish mumkin.
+Photoshop dasturi bilan qulay ishlash uchun:
+	•	operatsion tizim: Windows 10 / 11 yoki macOS;
+	•	kamida 8 GB tezkor xotira (RAM) tavsiya etiladi;
+	•	sichqoncha va klaviatura bo’lishi kerak.
+Adobe Photoshop dasturini ishga tushirish:
+Kompyuterda Adobe Photoshop dasturini ishga tushiriladi.
+Dastur yuklangach, asosiy ishchi oyna (interfeys) ochiladi.
+Agar boshlang’ich oynada loyiha bo’lmasa, File → New buyrug’i orqali yangi hujjat yaratiladi.
+Photoshop interfeysi bir nechta asosiy qismlardan iborat: menyular paneli, asboblar paneli, ishchi maydon va qatlamlar (Layers) oynasi.
+	•	
+1.1-rasm. Adobe Photoshop dasturi interfeysi va uning asosiy qismlar
+Adobe Photoshop dasturining asosiy ishchi interfeysi va undagi muhim bo’limlarida (1-rasm) har bir qism rasm bilan ishlash jarayonida muhim vazifani bajaradi. Interfeys elementlari yordamida foydalanuvchi rasmni qulay tahrirlashi, qatlamlar bilan ishlashi va dizayn ishlarini samarali bajarishi mumkin. 
+1. Menu Bar (Menyu paneli). Rasmning yuqori qismida joylashgan. Bu yerda File, Edit, Image, Layer, Select, Filter kabi asosiy buyruqlar mavjud bo’lib, fayl ochish, saqlash, tahrirlash va effektlar qo’llash aynan shu panel orqali amalga oshiriladi.
+2. Tool Options Bar (Asbob sozlamalari paneli). Menu Bar ostida joylashgan. Tanlangan asbobning parametrlari va sozlamalari (o’lcham, rang, qalinlik va boshqalar) shu yerda ko’rsatiladi. 
+3. Toolbar (Asboblar paneli). Rasmning chap tomonida joylashgan. Bu panelda Move Tool, Brush Tool, Eraser Tool, Text Tool, Shape Tool kabi asosiy asboblar mavjud bo’lib, ular yordamida rasm chizish va tahrirlash ishlari bajariladi.
+4. Currently Active Image Tab (Faol rasm yorlig’i). Yuqori qismda joylashgan bo’lib, hozirda qaysi rasm ustida ishlanayotganini ko’rsatadi. Bir nechta rasm ochilganda, ular shu yorliqlar orqali almashtiriladi.
+5. Panel Groups (Panel guruhlari). Rasmning o’ng tomonida joylashgan. 
+Bu bo’limda Layers, Channels, Paths, Adjustments kabi oynalar mavjud bo’lib, qatlamlar va rang sozlamalari bilan ishlash imkonini beradi.
+6. Collapsed Panels Icons (Yig’ilgan panel ikonkalari). O’ng tomonda kichik ikonka ko’rinishida joylashgan. Ular panelni ixcham holatda saqlash va ishchi maydonni kengaytirish uchun xizmat qiladi.
+
+1.2-rasm. Adobe Photoshop dasturining ishchi oynasi va asosiy
+boshqaruv panellari
+1. Menu Bar (Menyu paneli). Bu panel orqali fayllarni ochish va saqlash, rasmni tahrirlash, qatlamlar bilan ishlash va turli effektlarni qo’llash mumkin.
+2. Options Bar / Control Panel (Asbob sozlamalari paneli). Tanlangan asbobga mos sozlamalar va parametrlar (o’lcham, rang, joylashuv, shaffoflik va boshqalar) shu yerda boshqariladi.
+3. Tools Panel (Asboblar paneli). Bu panelda rasmni tanlash, ko’chirish, chizish, matn yozish va o’chirish uchun mo’ljallangan asosiy asboblar mavjud.
+4. Document Window (Hujjat oynasi). Markaziy qismda joylashgan asosiy ishchi maydon. Foydalanuvchi barcha tahrirlash ishlarini aynan shu oynada bajaradi. 
+5. Panels (Panellar).  Layers, Properties, Adjustments, Color kabi panellar mavjud bo’lib, qatlamlar va ranglar bilan ishlash imkonini beradi.
+
+1.3-rasm. Adobe Photoshop dasturida Layers (Qatlamlar) paneli
+Layers paneli rasm elementlarini alohida qatlamlarda boshqarish uchun xizmat qiladi.
+	•	Layer Filter – qatlamlarni turiga qarab tez topish
+	•	Opacity – qatlamning shaffoflik darajasini o’zgartirish
+	•	Blend Modes – qatlamlarning bir-biri bilan aralashish usulini belgilash
+	•	Fill Opacity – qatlam ichki rangining shaffofligini sozlash
+	•	Visibility (ko’z belgisi) – qatlamni ko’rsatish yoki yashirish
+	•	Locked – qatlamni tasodifiy tahrirdan himoyalash
+Pastki boshqaruv tugmalari:
+	•	Link – qatlamlarni bir-biriga bog’lash
+	•	Layer Effects (fx) – soya, nur va boshqa effektlar qo’shish
+	•	Add Layer Mask – qatlamning ayrim qismini yashirish
+	•	Add Adjustment Layer – rang va yorug’likni sozlash
+	•	Layer Groups – qatlamlarni guruhlash
+	•	Create New Layer – yangi qatlam yaratish
+	•	Delete Layer – qatlamni o’chirish
+
+1.4-rasm. Adobe Photoshop dasturidagi asosiy vositalar joylashuvi 
+(Tools Layout)
+Asosiy vositalar va ularning vazifalari:
+	•	Move Tool (V) – obyektni joyidan ko’chirish
+	•	Brush Tool (B) – rasm chizish va bo’yash
+	•	Eraser Tool (E) – rasmning ortiqcha qismlarini o’chirish
+	•	Text Tool (T) – matn yozish
+	•	Shape Tool (U) – geometrik shakllar chizish
+
+1.5-rasm. Asosiy vositalar
+
+1.6-rasm. Rasmga matn qo’shish
+File → Open buyrug’i orqali istalgan rasm ochiladi.
+Text Tool (T) tanlanib, rasm ustiga qisqa matn yoziladi.
+
+1.7-rasm. Shape Tool (Shakllar asbobi) bilan ishlash
+Rectangle Tool – to’rtburchak chizish
+Ellipse Tool – doira va ellips chizish
+Triangle Tool – uchburchak chizish
+Polygon Tool – ko’pburchak chizish
+Line Tool – to’g’ri chiziq chizish
+Custom Shape Tool – tayyor murakkab shakllarni joylashtirish
+Shape Tool yordamida rasm ustiga geometrik shakllar qo’shish, dizayn elementlari yaratish va interfeys obyektlarini chizish mumkin.
+
+1.8-rasm. Layers 
+Qatlamlar palitrasini ekranga chiqarish uchun asosisy menyuning Windows
+bo’limidagi Layers bandini tanlash yoki klaviaturaning F7 funksional tugmachasini bosish lozim. 
+Palitra tugmachalarining vazifalari: 
+1. Layers/Channels/Paths. Bu bo’lim orqali qatlamlar (Layers), rang kanallari (Channels) va chiziqlar (Paths) oynalari o’rtasida almashiladi.
+2. Layer Filter (Qatlam filtri). Qatlamlarni turi yoki nomiga qarab tez topish uchun ishlatiladi.
+3. Opacity. Qatlamning umumiy shaffoflik darajasini o’zgartiradi (0–100%).
+4. Fill. Qatlam ichidagi rang yoki shaklning shaffofligini boshqaradi.
+5. Blend Mode (Normal). Qatlamlarning bir-biri bilan qanday aralashishini belgilaydi.
+6. Lock (Qatlamni qulflash). Qatlamni tasodifiy o’zgartirishdan himoyalaydi.
+7. Qatlamlar ro’yxati (Layerlar). Hozirgi hujjatda mavjud barcha qatlamlar shu yerda ko’rsatiladi.
+8. Panel Options (Qo’shimcha sozlamalar). Layers paneliga tegishli qo’shimcha buyruqlarni ochadi.
+9. Pastki boshqaruv tugmalari: fx – qatlam effektlari qo’shish; Add Layer Mask – qatlamning bir qismini yashirish; New Layer – yangi qatlam yaratish
+Delete Layer – qatlamni o’chirish.
+  
+1.9-rasm. Adobe Photoshop dasturida faylni saqlash jarayoni
+Ishni saqlash tartibi:
+File → Save As buyrug’i tanlanadi.
+Ochilgan Save As oynasida fayl saqlanadigan joy (Desktop, Documents va hokazo) belgilanadi.
+Save as type (Format) bo’limidan kerakli format tanlanadi:
+PSD – rasmni keyinchalik tahrirlash uchun;
+PNG yoki JPG – tayyor rasmni saqlash uchun.
+Fayl nomi yozilib, Save tugmasi bosiladi. PSD format qatlamlarni saqlab qoladi, PNG va JPG formatlar esa tayyor rasmni ko’rish va ulashish uchun qulay hisoblanadi.
+		Adobe Photoshop dasturini o‘rnating
+	•	Dastur oynasi va vositalari bilan tanishib chiqing
+Amaliy topshiriqlar
+
+
+	•	Adobe Photoshop dasturini o‘rnating
+	•	Dastur oynasi va vositalari bilan tanishib chiqing
+Amaliy topshiriqlar
+
+
+
+	•	Ranglar nazariyasi va dizayn asoslari
+Photoshop dasturi yordamida rang tanlash, ranglarni uyg‘unlashtirish va oddiy dizayn elementlarida  ranglardan to‘g‘ri foydalanish ko‘nikmalarini hosil qilish.
+Mashg‘ulot
+maqsadi
+Photoshop dasturi yordamida rang tanlash, ranglarni uyg‘unlashtirish va oddiy dizayn elementlarida  ranglardan to‘g‘ri foydalanish ko‘nikmalarini hosil qilish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter  Photoshop dasturi Sichqoncha 
+
+	•	Kompyuter  Photoshop dasturi Sichqoncha 
+
+Ishning bajarish tartibi
+Ranglar nazariyasi ranglarning qanday hosil bo’lishi va bir-biri bilan qanday mos kelishi bo’lib, dizayn asoslari ranglardan to’g’ri foydalanib, chiroyli va tushunarli rasm yoki dizayn yaratishdir.
+Photoshop dasturi ishga tushiriladi. Dastur oynasining chap qismida joylashgan Create New buyrug’i tanlanadi. Ochilgan oynada yangi loyiha sozlamalari ko’rsatiladi.  Width (kenglik) maydoniga 1920 piksel, Height (balandlik) maydoniga 1080 piksel qiymatlari kiritiladi. O’lchov birligi Pixel (px) holatida qoldiriladi.  Loyiha nomi sifatida “Ranglar” deb belgilanadi.  Sozlamalar tekshirilgandan so’ng, Create tugmasi bosiladi.
+
+1.10-rasm. Photoshop dasturida yangi loyiha yaratish  
+Yangi ish maydoni yaratilgandan so’ng, shakllar, matnlar va boshqa dizayn  obyektlari bilan ishlanadi hamda ularning ranglari o’zgartirilib, ranglar uyg’unligi amalda qo’llaniladi.
+
+1.11-Yangi ish maydoni 
+Ish maydoniga shakl chizish uchun Rectangle Tool vositasidan foydalaniladi. Buning uchun rasmda ko’rsatilgan shakllar asbobi ustiga sichqonchaning o’ng tugmasi bosiladi va ochilgan ro’yxatdan Rectangle Tool tanlanadi. Sichqoncha ko’rsatgichini ish maydoniga olib kelib sichqonchani chap tugmasini bosib turib  kerakli o’lchamda shakl chiziladi (1.12-rasm).
+  
+1.12-rasm. Rectangle tool vositasidan foydalanib shakl chizish
+Ish maydonida shakl chizilgandan so’ng, oynaning o’ng qismida Properties (Xususiyatlar) oynasi ko’rinadi. Ushbu oynada tanlangan shaklning rangini (Fill) o’zgartirish, chegara rangini va qalinligini (Stroke) sozlash, shuningdek shaklning kengligi va balandligini aniq qiymatlar asosida belgilash mumkin. Properties oynasi dizayn elementlarini tahrirlash va ranglar bilan ishlashda muhim vosita hisoblanadi.
+
+1.12-rasm. Photoshopda shakl chizish va Properties oynasi orqali tahrirlash
+Agar Properties oynasi chiqmagan bo’lsa rasmda ko’rsatilgan menyudan uni chiqarib olish mumkin(1.13-rasm).
+
+1.13-rasm. Menu orqali Proprties oynasini chiqarish
+Shakl tanlangan holatda, oynaning o’ng tomonida joylashgan Properties oynasidan Fill (rang) tugmasi bosiladi. Natijada rang tanlash oynasi ochiladi. Ushbu oynadan kerakli rang tanlanadi va OK tugmasi bosish orqali tanlangan rang tasdiqlanadi. Natijada shaklning rangi o’zgartiriladi.
+
+1.14-rasm. Properties oynasi orqali shakl rangini o’zgartirish
+Shakl rangini o’zgartirgandan so’ng, ish maydoniga matn qo’shish uchun chap tomondagi asboblar panelidan Text Tool (T) tanlanadi. So’ng ish maydoni ustiga sichqoncha bilan bir marta bosiladi va kerakli matn kiritiladi. Kiritilgan matnning shrift turi, o’lchami va rangi Properties oynasi orqali sozlanadi  (1.15-rasm). 
+
+1.15-rasm. Text Tool yordamida matn qo’shish
+Text Tool (T) tanlanganidan so’ng, ish maydonida sichqoncha yordamida matn yozish uchun maydon belgilanadi. Belgilangan hudud ichida matn avtomatik tarzda joylashadi. Photoshop dasturi standart (tayyor) matnni ko’rsatadi, foydalanuvchi esa uni o’chirib, o’ziga kerakli matnni kiritishi mumkin. Matn bilan bog’liq sozlamalar Properties oynasi orqali tahrirlanadi(1.16-rasm).
+
+1.16-rasm. Text Tool yordamida matn maydonini belgilash
+
+1.17-rasm. Text o’lchamlarini o’zgartirish
+Matn tanlanganidan so’ng, Properties oynasidan matn rangi o’zgartiriladi. Tanlangan rang tasdiqlanib, matn dizaynga moslashtiriladi(1.18-rasm).
+
+1.18-rasm. Properties oynasi orqali matn rangini o’zgartirish
+Matn oq rangda bo’lgani sababli oq fon ustida ko’rinmaydi, ammo u Layers panelida mavjud. Matn joylashuvini o’zgartirish uchun chap tomondagi Move Tool (V) tanlanadi.
+
+1.19-rasm. Move Tool yordamida matn qatlamini tanlash va joylashtirish
+
+1.20-rasm. Properties panelidan tekst rangini o’zgartirish
+Yuqorida ko’rsatilganidek, xuddi Rectangle tool tanlab shakl chizib olinganidek endi  Ellipse Tool tanlanadi va ish maydonida oval shakl chizib olinadi.
+Ellipse shakli tanlangan holatda, Properties panelidan Gradient bo’limi tanlanadi. Rasmda ko’rsatilgan tugma bosilib, shaklga gradient rang qo’llanadi. Natijada ranglar o’rtasidagi silliq o’tish hosil qilinadi(1.21-rasm).
+Shakl tanlangan holatda Properties panelidan Gradient bo’limi ochiladi. Chiqqan yordamchi oynadan gradient turi va ranglari tanlanadi. Rasmda ko’rsatilgan joy bosilib, Gradient Editor oynasi chaqiriladi. Ushbu oynada gradient ranglari sozlanadi va tanlov tasdiqlanadi. Natijada shaklga tanlangan gradient rang qo’llanadi(1.22-rasm).
+
+1.21-rasm. Ellipse shakliga gradiyent rang berish
+  
+1.22-rasm. Gradiyent tanlash
+
+1.23-yashil gradiyent ranglarga misol
+Shuningdek, rasmda ko’rsatilgan tugmalar yordamida gradient ranglarini o’zgartirish mumkin(1.24-rasm).
+
+1.24-rasm. Ranglarni o’zgartirish
+Gradient Editor oynasida rasmda ko’rsatilgan qismga sichqoncha bilan bosish orqali gradientga yangi rang chegarasi (color stop) qo’shiladi. Qo’shilgan chegaraning rangi o’zgartirilib, gradient ko’rinishi tahrirlanadi(1.25-rasm).
+
+1.25-rasm. Gradientga yangi rang chegarasini qo’shish
+Gradient Editor oynasida ranglar o’zgartirilib, foydalanuvchi xohlagan gradient yaratiladi va OK tugmasi orqali tasdiqlanadi. Shuningdek, Properties panelidan gradientning yo’nalishini (angle) o’zgartirish orqali gradientning joylashuvi va ko’rinishi boshqariladi(1.26-rasm).
+
+1.26-rasm. Gradient ranglarni sozlash va yo’nalishini o’zgartirish
+Ranglar nazariyasi ranglarning qanday hosil bo’lishi, bir-biri bilan uyg’unlashuvi va inson ko’rishida qanday ta’sir uyg’otishini o’rganadi. Dizaynda ranglar axborotni yetkazish, e’tiborni jalb qilish va kayfiyat yaratishda muhim ahamiyatga ega. Asosiy, qo’shimcha va oraliq ranglar, shuningdek kontrast va uyg’unlik tushunchalari ranglar nazariyasining muhim qismi hisoblanadi. Grafik dasturlarda ranglar bilan ishlash dizayn elementlarini yanada tushunarli, jozibali va muvozanatli qilishga yordam beradi.
+		Photoshop dasturida Rectangle yoki Ellipse Tool yordamida shakl chizing va unga gradiyent rang bering.
+	•	Text Tool yordamida qisqa matn yozing va uning rangini fon rangiga moslab o‘zgartiring.
+Amaliy topshiriqlar
+
+
+	•	Photoshop dasturida Rectangle yoki Ellipse Tool yordamida shakl chizing va unga gradiyent rang bering.
+	•	Text Tool yordamida qisqa matn yozing va uning rangini fon rangiga moslab o‘zgartiring.
+Amaliy topshiriqlar
+
+
+
+	•	O’yin uchun ikonka yaratish
+O‘yin uchun sodda ikonka yaratish, dizayn elementlarini qo‘llash hamda ikonkani kerakli formatda eksport qilib, o‘yinda foydalanishga tayyorlashni o‘rganish.
+Mashg‘ulot
+maqsadi
+O‘yin uchun sodda ikonka yaratish, dizayn elementlarini qo‘llash hamda ikonkani kerakli formatda eksport qilib, o‘yinda foydalanishga tayyorlashni o‘rganish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter Photoshop dasturi Sichqoncha 
+
+	•	Kompyuter Photoshop dasturi Sichqoncha 
+
+Ishning bajarish tartibi
+Adobe Photoshop dasturining boshlang’ich oynasi foydalanuvchiga yangi loyiha yaratish, oldingi fayllarni ochish va dastur imkoniyatlariga tezkor kirish imkonini beradi. Amaliy ishlarni bajarish jarayoni aynan shu oynadan boshlanadi. Adobe Photoshop  dasturini ochib yangi fayl yaratib olinadi (1.27-rasm).
+
+1.27-rasm. Adobe Photoshop dasturining boshlang’ich oynasi
+(Yangi fayl yaratish oynasi)
+
+
+1.28-rasm. Yangi fayl yaratish (New Document) oynasi
+New file tugmasi bosilgandan so’ng ekranda New Document oynasi ochiladi. Ushbu oyna orqali yangi yaratiladigan faylning asosiy parametrlari belgilanadi. Mazkur oynada yangi hujjatning eni (Width) va bo’yi (Height), 500px (pixel) o’lchamlarni kiritiladi.
+
+1.29-rasm. Fayl  nomini belgilab ketamiz
+Fayl nomi belgilangandan so’ng quyidagi ish maydoni yaratiladi (1.30-rasm)
+
+1.30-rasm. Photoshop’da yangi hujjat bilan ishlash oynasi
+Adobe Photoshop dasturida yangi hujjat ochilgandan keyingi ish oynasi (1.30-rasm)  markazda oq rangli ishchi maydon (canvas) joylashgan bo’lib, foydalanuvchi aynan shu qismda rasm, dizayn   va boshqa elementlarni yaratish ishlarini bajaradi.
+
+1.31-rasm. Rectangle Tool (to’rtburchak chizish vositasi) tanlash
+Ish maydoniga doira shaklini qo’shish uchun  Rectangle tool ustiga kelib sichqonchani o’ng tugmasini bosamiz va  Ellipse tool ni belgilarmiz  (1.31-rasm).
+
+
+1.32-rasm.Ellipse Tool orqali Width va Height qiymatlarini belgilash
+Ish maydoni ustiga bosib yordamchi oynani chaqiriladi (1.32-rasm). Yordamchi oynadan  kerakli aylana o’lchamlarini bo’yi va eniga 500 px kiritib olinadi. 
+
+1.33-rasm. Doirani markazga tekislash (Move Tool)
+Doira chizib olingandan so’ng     Move Tool tanlanadi. Ushbu vosita yordamida chizilgan doira ishchi maydon bo’ylab erkin ko’chiriladi va sahifaning markaziy qismiga joylashtiriladi. Bu amal obyektni tartibli va simmetrik joylashtirish uchun muhim hisoblanadi.
+
+1.34-rasm. Rang tanlash
+Doira chizib olingandan so’ng, uni tanlangan holatda qoldiriladi. O’ng tomonda joylashgan Properties oynasi orqali doiraning Fill (rang) qismini tanlab, kerakli rangni belgilanadi. Agar Properties oynasi ekranda ko’rinmasa, yuqori menyudan Window → Properties bo’limi tanlanadi va oynani yoqish mumkin.
+3
+3
+1
+1
+2
+2
+1.35-rasm. Rang tanlash oynasi orqali obyekt rangini o’zgartirish
+Chizilgan doira tanlangan holatda turganidan so’ng, Properties oynasidagi Fill (rang) belgisi bosiladi. Ochilgan ranglar panelidan kerakli rang tanlanadi yoki rang kvadratiga bosish orqali Solid Color (rang tanlash) oynasi chaqiriladi. Solid Color oynasida rang turi tanlanib, OK tugmasi bosiladi va doiraning rangi yangilanadi. Rasmda ko’rsatilgan yo’nalish bo’yicha harakatlarni qaytarib rasmni o’zgartirib olinadi (1.35-rasm).
+
+1.36-rasm. Duplikat qilish
+Tanga (doira) tanlangan holatda bo’lishi kerak. Klaviaturadan Ctrl + J tugmalarini bosiladi. Natijada tanlangan shaklning nusxasi yaratiladi va u alohida layer sifatida paydo bo’ladi (1.36-rasm).
+
+1.37-rasm. Shaklni kichraytirish. 	
+Avval  Move Tool tanlanadi va doira ustiga bosib obyekt tanlangan holatga keltiriladi. So’ng klaviaturadan Ctrl + T tugmalari bosilib, Transform rejimi yoqiladi. Doiraning burchak nuqtasidan ushlab, Shift + Alt tugmalarini bosgan holda tortiladi va doira markazdan chiqmagan holda mutanosib kichrayadi (1.37-rasm). 
+
+1.38-rasm. Layers oynasi orqali ikkinchi shakl rangini o’zgartirish
+Shakl dublikat qilingandan so’ng, Layers bo’limida ikkinchi (yuqorida joylashgan) shakl tanlanadi. Tanlangan shaklning yonidagi rang belgisi (Fill) ustiga bosiladi va rang tanlash oynasi ochiladi. Ochilgan ranglar oynasidan kerakli rang tanlanib, OK tugmasi bosiladi va ikkinchi shaklning rangi o’zgartiriladi (1.38-rasm).
+
+1.39-Rasm. Coin uchun doira shaklini yasash.
+Yuqoridagi amallar ketma-ketligini takrorlagan holda, uchinchi doira shakli ham yaratiladi. Buning uchun avvalgi doira dublikat qilinadi va Move Tool hamda Transform (Ctrl + T) yordamida uning o’lchami mos ravishda kichraytiriladi. Shundan so’ng, Shift + Alt tugmalarini bosib turgan holda doira markazdan chiqmagan holda kichraytiriladi. Keyingi bosqichda Layers yoki Properties oynasi orqali uchinchi doiraning rangi o’zgartiriladi. Ranglar bir-biridan biroz farq qiladigan qilib tanlanadi, bu esa tangaga hajm va chuqurlik effekti beradi(1.39-rasm).
+
+1.40-rasm. Tagaga belgi joylashtirish.
+Tangamiz tayyor bo’lgandan so’ng, uning markaziga belgi qo’shish uchun   Text Tool (T) tanlanadi. Oq ish maydoni (canvas) ustiga bir marta bosiladi va klaviaturadan $ belgisi yoziladi. Yozilgan $ belgisi  Move Tool yordamida tanganing markaziga joylashtiriladi, kerak bo’lsa uning o’lchami va rangi dizaynga mos ravishda o’zgartiriladi (1.40-rasm).
+
+1.41-rasm. $ belgisini tasdiqlash va joylashtirish
+  $ belgisi yozib bo’lingandan so’ng, yuqori panelda joylashgan tasdiqlash tugmasi (✔) bosiladi.  Ushbu tugmani bosish orqali kiritilgan matn tasdiqlanadi va alohida Text layer sifatida saqlanadi.  Tasdiqlangandan keyin $ belgisi Move Tool yordamida tangamizning markaziy qismiga aniq joylashtiriladi (1.41-rasm). 
+
+1.42-rasm. Belgini joylashtirish.
+Move tool yordamizda $ belgisini tangani o’rtasiga olib kelinadi va Character yordamchi oynasidan tekst o’lchamlari belgilanadi  (Agar bu oyna ko’rinmasa ekran yuqorisida joylashgan Window bo’limidan Character oynasini chiqarish mumkin  bo’ladi)(1.42-rasm).
+
+1.43-Rasm. Shriftni o’zgartirish.
+
+Rasmda ko’rsatilgan bo’lim yordamida (1.43-rasm) matnning shrift turini tanlash va o’zgartirish mumkin. Bu imkoniyat matn dizaynini yanada chiroyli va o’yin interfeysiga mos qilishga yordam beradi.
+
+1.44-rasm. Matnni yakuniy joylashtirish
+Matnning shrift turi, rangi va o’lchami dizaynga mos qilib o’zgartiriladi. Move Tool yordamida $ belgisi tanganing o’rtasiga aniq joylashtiriladi.  Barcha elementlar tekshirib chiqilib, Coin yasash jarayoni yaunlanadi (1.44-rasm).
+Photoshop dasturini ochib yangi fayl yaratib olamiz. Quyidagi rasm (1.45-rasm) soat belgisi (clock icon) bo’lib, uni yaratish jarayoni ham tanga (coin) obyektini yaratish bosqichlariga o’xshash bo’ladi.  
+Faylni nomini Soat deb nomlanadi va o’lchamlarni bo’yi va eniga 500 piksel qilib belgilanadi.
+
+
+1.45-rasm. Yangi fayl yaratish va nom berish
+
+1.46-rasm. Soat uchun yangi fayl yaratish
+Rasmda Ellipse Tool tanlanganligi ko’rsatilgan. Coin (tanga) yaratishda bo’lgani kabi, chap tomondagi asboblar panelidan Ellipse Tool belgilanadi va ish maydonida Shift tugmasini bosib turgan holda chizish orqali mukammal doira shakli hosil qilinadi. Aynan shu doira keyingi bosqichlarda ki soat ikonkasining asosiy shakli sifatida ishlatiladi (1.47-rasm).
+
+1.47-rasm. Doira shaklini chizishni boshlash
+
+
+1.48-rasm. Doira shakli o’lchamlarini sozlash
+Ellipse toolni belgilab ish maydoni ustiga bir marta bosiladi va doirani o’lchamlarini bo’yiga va eniga 400 piksel deb belgilanadi (1.48-rasm).
+
+1.49-rasm. Doira shaklini siljitish (Move)
+Ushbu bosqichda (1.49-rasm) chap tomondagi asboblar panelida  Move Tool (Ko’chirish asbobi) tanlanadi. So’ng chizilgan doira shakli sichqoncha yordamida ish maydonining markaziy qismiga ko’chirib joylashtiriladi. Bu amal obyektni tartibli va chiroyli joylashtirishga yordam beradi hamda keyingi dizayn ishlari uchun qulaylik yaratadi.
+
+
+1.50-rasm. Doira rangini o’zgartirish (Layer oynasi orqali)
+Ushbu bosqichda avval Layers oynasidan doira joylashgan qatlam tanlanadi. So’ng qatlamdagi rang belgisi ustiga bosilib, Color Picker oynasi ochiladi va kerakli rang tanlanadi. Oxirida OK tugmasi bosilib, tanlangan rang qabul qilinadi va doira rangi o’zgartiriladi (1.50-rasm).
+
+1.51-rasm. Rang berilgan doiraning yakuniy ko’rinishi
+Avval Layers oynasidan mavjud doira shakli joylashgan qatlam tanlanadi. So’ng klaviaturadan Ctrl + J tugmalari bosilib, doiraning nusxasi (dublikat) yaratiladi va u yangi layerda paydo bo’ladi.
+Keyin dublikat qilingan doira qatlamidagi rang belgisi ustiga ikki marta bosilib, Color Picker oynasidan rang oq rangga o’zgartiriladi va OK tugmasi bosilib tasdiqlanadi.
+
+1.52-rasm. Doira shaklini dublikat qilish va rangini o’zgartirish
+
+1.53-rasm. Shaklni o’zgartirish
+Move tool ni belgilab shakning bir uchidan ushlab klaviaturadan Shift+Alt tugmalarini bosib shaklni o’lchamini rasmda ko’rsatilganidek o’zgartiramiz.
+
+1.54-rasm. Rectangle tool orqali soat millarini chizish
+Keyingi bosqichda rasmda (1.54-rasm) ko’rsatilgandek to’rtburchak (Rectangle Tool) yordamida shakl chiziladi.
+
+1.55-rasm. To’rtburchak shakl rangini o’zgartirish (Layer orqali)
+To’rtburchak oq rangda bo’lgani sababli oq fon ustida deyarli ko’rinmaydi. Shu sabab Layers oynasidan to’rtburchak joylashgan qatlam tanlanib, uning rangi o’zgartiriladi va shakl aniq ko’rinishga keltiriladi.
+Avval shaklning rangini qora rangga o’zgartiriladi. So’ng Move Tool (Ko’chirish asbobi) ni tanlab, shaklni sichqoncha yordamida doira shaklining aniq markaziga olib kelib joylashtiriladi.
+Bu amal shakllarning bir-biriga nisbatan to’g’ri joylashishini ta’minlaydi va ikonkaning umumiy ko’rinishini yanada tartibli hamda chiroyli qiladi. (1.56-rasm).
+
+1.56-rasm. Soat strelkasi rangini o’zgartirish
+Properties oynasida rasmda ko’rsatilgan qismidan shaklini chetlarini silliqlab olinadi (1.57-rasm).
+
+1.57-rasm. Soat strelkasi qirralarini o’zgartirish va markazlashtirish
+Avval qora rangdagi shakl (to’g’ri to’rtburchak) tanlab olinadi. Klaviaturadan Ctrl + J tugmalari bosilib, ushbu shaklning nusxasi (dublikat) yaratiladi. Hosil bo’lgan dublikat shakl Move Tool yordamida yon tomonga suriladi. Natijada doira ichida bir xil o’lcham va rangdagi ikki dona parallel shakl hosil bo’ladi.
+Bu bosqich soat ikonkasidagi strelkalar yoki belgi elementlarini yaratish uchun asos bo’lib xizmat qiladi (1.58-rasm).
+
+1.58-rasm. Shaklni dublikat qilish va joylashtirish
+
+Avval aylantiriladigan qora rangdagi shakl tanlab olinadi. Move Tool tanlangan holda, shaklning burchaklarida paydo bo’lgan tutqichlar orqali u aylantiriladi (Rotate). Aylantirilgan shakl sichqoncha yordamida rasmda ko’rsatilgandek to’g’ri holatga joylashtiriladi.   Natijada shakllar soat ko’rinishidagi belgini hosil qilib, dizayn yanada aniq va tushunarli bo’ladi (1.59-rasm).
+
+1.59-rasm. Shaklni aylantirish va joylashtirish
+Belgilanib turgan obyektni (1.60-rasm) klaviaturadan Alt tugmasini bosib turgan holda sichqoncha bilan surish orqali dublikat (nusxa) qilinadi. So’ng hosil bo’lgan nusxa obyektning shakli va rangini rasmda yuqorida ko’rsatilganidek o’zgartiriladi. Bu usul bir xil elementlarni tez va qulay yaratish hamda dizaynning umumiy ko’rinishini yaxshilashga yordam beradi.
+
+1.60-rasm. Soat millarini yasash
+
+1.61-rasm. Soat millarini joylashtirish.
+Soat siferblat (kaltakchalar) o’lchamlar rasmda ko’rsatilgandek o’zgartirilib, joylashtirib olinadi (1.61-rasm).
+Keyingi bosqichda soat doirasi atrofiga sariq rangli kichik kaltakchalar joylashtiriladi. Bu kaltakchalar soatning asosiy vaqt nuqtalarini (12, 3, 6 va 9) ko’rsatish uchun xizmat qiladi. Kaltakchalar avval chizilib, so’ng dublikat qilinadi va Rotate (aylantirish) amali yordamida doira bo’ylab teng masofada joylashtiriladi (1.62-rasm).
+
+1.62-rasm. Soat siferblatini joylashtirish
+
+
+1.63-rasm. Sariq belgilarning qatlam tartibini o’zgartirish
+ Avval Layers oynasidan sariq rangli kaltakchalarga tegishli oxirgi 4 ta layer tanlab olinadi. Belgilangan layerlar sichqoncha yordamida pastga (orqaroq qatlamga) ko’chirib joylashtiriladi. Bu amal sariq belgilar soat doirasining ustida emas, balki ichki qismida tartibli ko’rinishda joylashishini ta’minlaydi.
+ Natijada barcha elementlar bir-birini yopib ketmaydi va soat ikonkasining umumiy ko’rinishi toza va aniq bo’lib chiqadi (1.63-rasm).
+
+1.64-rasm. Soat millarini oldingi planga olib chiqish
+Rasmda ikonka dizaynida soat millarining oldingi planga chiqarilishi ko’rsatilgan. Bu usul asosiy elementni ajratib ko’rsatish va ikonkaning aniq hamda tushunarli ko’rinishini ta’minlash uchun bajariladi.
+
+1.65-rasm. Eksportga tayyorlash
+O’yin uchun soat ikonkasi tayyor bo’lgach uni eksport qilishga tayyorlanadi. Buning uchun avval Layers oynasidan Background (fon) obyektini belgilanib, klaviaturadan Delete tugmasini bosib, fon o’chiiladi. Natijada ikonka shaffof fon bilan qoladi va uni o’yinda qulay ishlatish mumkin bo’ladi.
+
+1.66-rasm. Eksport qilish
+
+Ikonkani eksport qilish uchun klaviaturadan Ctrl + Shift + Alt + W tugmalarini bosiladi. Ochilgan oynadan Format bo’limidan PNG formatini tanlanadi. So’ng Export  tugmasini bosib, ikonkani saqlab olinadi(166-rasm).
+	O‘yin ikonkalari nima uchun kerak va ular o‘yin interfeysida qanday vazifani bajaradi?
+	•	Photoshop dasturida 64×64 px o‘lchamdagi, shaffof fonli oddiy o‘yin ikonkasini yarating va uni PNG formatda saqlang.
+Amaliy topshiriqlar
+
+
+	•	O‘yin ikonkalari nima uchun kerak va ular o‘yin interfeysida qanday vazifani bajaradi?
+	•	Photoshop dasturida 64×64 px o‘lchamdagi, shaffof fonli oddiy o‘yin ikonkasini yarating va uni PNG formatda saqlang.
+Amaliy topshiriqlar
+
+
+
+	•	UI dizayn: tugmalar, menyular, HUD
+O‘yinlar uchun foydalanuvchi interfeysi (UI) elementlarini loyihalash bo‘yicha boshlang‘ich ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi
+O‘yinlar uchun foydalanuvchi interfeysi (UI) elementlarini loyihalash bo‘yicha boshlang‘ich ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter  Photoshop dasturi Sichqoncha
+
+	•	Kompyuter  Photoshop dasturi Sichqoncha
+
+Ishning bajarish tartibi
+UI dizayn bu foydalanuvchi va o’yin yoki dastur o’rtasidagi muloqotni ta’minlaydigan vizual elementlarni yaratish jarayonidir. Tugmalar, menyular va HUD foydalanuvchiga dasturdan qulay va tushunarli foydalanish imkonini beradi.
+	•	Adobe Photoshop dasturini ishga tushiriladi.
+	•	File → New (Ctrl+N) buyrug’i orqali yangi fayl yaratiladi.
+	•	Ochilgan oynada hujjat o’lchamlarini quyidagicha belgilanadi:
+
+Width (eni): 1920 px
+Height (bo’yi): 1080 px
+Resolution: 72 Pixels/Inch
+Color Mode: RGB Color
+Background: White
+	•	Fayl nomini “O’yin menyusi” deb yoziladi.
+	•	Create tugmasini bosib yangi ishchi oynani yaratiladi.
+
+1.67-rasm. O’yin menyusi uchun yangi hujjat  yaratish oynasi
+Natijada o’yin menyusi uchun mos formatdagi yangi hujjat tayyor bo’ladi va keyingi bosqichlarda UI elementlarini (tugma, menyu, HUD) yaratiladi.
+
+1.68-rasm. Rectangle Tool yordamida tugma shaklini chizish
+Ish maydoni yaratilgandan so’ng Rectangle Tool (U) tanlanadi va ishchi oynada to’rtburchak shakl chiziladi. 
+
+
+1.69-rasm. Tugma uchun to’rtburchak shakl yaratish
+Rectangle Tool yordamida taxminiy kerakli o’lchamda to’g’ri to’rtburchak chiziladi. Ushbu shakl o’yin menyusidagi tugma uchun asos bo’lib xizmat qiladi(1.69-rasm).
+	
+1.70-rasm. Tugma rangini o’zgartirish
+Layer  panelidan chizilgan shakl tanlanadi va uning ustiga ikki marta bosiladi. Ochilgan Color Picker oynasi orqali tugma uchun kerakli rang tanlanib, shakl rangi o’zgartiriladi(1.70-rasm).
+
+
+1.71-rasm. Move Tool yordamida tugmani joylashtirish
+Move Tool (V) tanlanadi va chizilgan tugma shakli ish maydonida kerakli joyga, odatda markazga, ko’chiriladi. Bu tugmaning menyuda tartibli va qulay joylashishini ta’minlaydi(1.71-rasm).
+
+1.72-rasm. Tugma burchaklarini yumaloqlash (Rounded Corners)
+Chizilgan tugma shakli tanlanadi. O’ng tomondagi Properties paneliga o’tiladi.  Corners (burchaklar) bo’limi topiladi.  Rasmda o’lchami 30 px qiymati kiritiladi.  
+Natijada tugmaning burchaklari silliqlanadi(1.72-rasm).
+
+
+1.79-rasm. Silliqlangan tugma ko’rinishi
+Tugma shakli tanlanadi (1.80-rasm). O’ng tomondagi Properties paneliga o’tiladi.  Stroke bo’limi faollashtiriladi.  Rasmda ko’rsatilgan tugma orqali Stroke rangi tanlanadi.  Kerakli qalinlik (px) belgilanadi. Natijada tugma atrofiga aniq ko’rinadigan chegara (Stroke) qo’shiladi.
+
+1.80-rasm. Tugmaga Stroke (chegara) qo’shish
+Chegara rangini va qalinligini belgilash orqali tugma aniq ajralib turadi hamda interfeysda yaxshiroq ko’rinishga ega bo’ladi.
+
+1.81-rasm. Stroke qalinligini kiritish
+Tugma shakli tanlanadi. Properties panelidagi Stroke bo’limiga o’tiladi.  Stroke qalinligi uchun kerakli px qiymat kiritiladi.  Natijada birinchi menyu tugmasining chegarasi aniq va tartibli ko’rinishga ega bo’ladi(1.81-rasm).
+Chap asboblar panelidan Text Tool (T) tanlanadi. Tugma shaklining ustiga bir marta bosiladi. Tugma nomini bildiruvchi matn yoziladi (masalan, Start, Play).  Matn tugma ichida qulay va aniq ko’rinishi uchun joylashtiriladi(1.82-rasm).
+
+1.82-rasm. Tekst qo’shish
+
+Text Tool tanlangandan so’ng ish maydonida matn yoziladigan joy belgilanadi. Ushbu belgilangan soha tugma ichiga joylashtiriladigan matnni tartibli va aniq joylashtirish uchun xizmat qiladi (1.83-rasm).
+
+1.83-rasm. Matn joyini belgilash (Text Area yaratish)
+Yozilgan matn qatlami (Text Layer) tanlanadi. O’ng tomondagi Properties paneliga o’tiladi. Character bo’limidan matn o’lchami (Font Size) kichikroq qiymatga o’zgartiriladi. Natijada matn tugma ichiga mos keladigan va o’qilishi qulay bo’lgan holatga keltiriladi (1.84-rasm).
+
+1.84-rasm. Matn o’lchamini o’zgartirish
+Text Tool yordamida “START” so’zi yoziladi. So’ng rasmda ko’rsatilgan tasdiqlash tugmasi (✔) bosilib, kiritilgan matn qabul qilinadi va matn tahrirlash rejimi yakunlanadi (1.85-rasm).
+
+1.85-rasm. Tugma matnini tasdiqlash (START)
+ Move Tool (V) tanlanadi. Yozilgan START matni tugma shaklining markaziga joylashtiriladi. Properties panelidan matnning rangi, o’lchami va shrift turi o’zgartiriladi. Natijada matn tugma bilan moslashgan, aniq va o’qilishi qulay holatga keltiriladi (1.86,1.87-rasm).
+
+1.86-rasm. Matnni tugma markaziga joylashtirish
+
+
+1.87-rasm. Properties paneli orqali tugma matnini sozlash
+Layers (Label) panelidan tugma shakli va unga tegishli matn qatlami tanlanadi. Klaviaturadan Shift tugmasi bosib turiladi va ikkala qatlam birgalikda belgilanadi. Move Tool (V) faollashtiriladi. Klaviaturadan Shift + Alt tugmalari bosib turilgan holda obyekt ish maydonida suriladi. Natijada tanlangan tugma va matn nusxasi (dublikat) yaratiladi va yangi menyu tugmasi hosil bo’ladi (1.88-rasm).
+
+1.88-rasm. Tugma va matnni dublikat qilish
+
+Oldin yaratilgan tugma dublikat qilinadi. Dublikat tugma ish maydonida pastroq joyga ko’chiriladi. Shift + Alt tugmalari bosib turilgan holda tugmaning o’lchami kichiklashtiriladi. Natijada menyu uchun ikkinchi tugma yaratiladi va umumiy dizayn tartibli ko’rinishga keltiriladi (1.89-rasm).
+
+1.89-rasm. Dublikat tugmani joylashtirish va o’lchamini o’zgartirish
+Pastdagi tugmadagi START matni ustiga ikki marta bosiladi. Matn “Sozlamalar” so’ziga almashtiriladi. Rasmda ko’rsatilgan tasdiqlash tugmasi bosiladi. Natijada menyuda START va Sozlamalar tugmalari hosil bo’ladi (1.90-rasm). 
+
+1.90-rasm. Menyu tugmalarini tahrirlash
+Properties panelidan foydalanib matnning o’lchami kichraytiriladi. Shundan so’ng pastdagi shakl tanlanib, Properties paneli orqali uning ranglari o’zgartiriladi. Ushbu amallar interfeys elementlarining o’zaro mos va estetik ko’rinishini ta’minlaydi (1.91–1.92-rasmlar).
+
+1.91-rasm. O’lchamlarni o’zgartirish
+Rasmda Properties paneli yordamida tugma va matn ranglarini o’zgartirish jarayoni ko’rsatilgan. Ranglarni moslashtirish orqali interfeys elementlari bir-biridan aniq ajralib turadi va umumiy dizayn yanada uyg’un holga keltiriladi (1.92-rasm).
+
+1.92-rasm. Rangni o’zgartirish
+
+1.93-rasm. O’yin asosiy menyusini to’liq shakllantirish
+Avval yaratilgan menyu tugmalari (START va Sozlamalar) dublikat qilinadi. Yangi dublikat tugma pastki qismga joylashtiriladi. Text Tool yordamida tugma ichidagi matn “Chiqish” so’ziga o’zgartiriladi. Properties paneli orqali tugmaning rangi va ko’rinishi (masalan, qizil rang) o’zgartiriladi. Tugmalar vertikal tartibda, bir xil masofada joylashtiriladi. Natijada o’yin uchun START, Sozlamalar va Chiqish tugmalaridan iborat asosiy menyu tayyor holatga keltiriladi (1.93-rasm).
+
+1.94-rasm. Solid Color yordamida tugma rangini o’zgartirish
+
+Layers panelidan o’zgartirilishi kerak bo’lgan tugma qatlami tanlanadi. Qatlam ustiga o’ng tugma bosiladi. Ochilgan ro’yxatdan Blending Options tanlanadi. Keyin Color Overlay (yoki Solid Color) bo’limi faollashtiriladi. Rang tanlash oynasidan kerakli rang belgilanadi. OK tugmasi bosilib o’zgarish tasdiqlanadi. Natijada tanlangan tugmaning orqa foni bir xil rangda bo’yaladi va menyu tugmalari bir-biridan aniq farqlanadigan ko’rinishga ega bo’ladi.
+  
+1.95-rasm. Solid Color qatlamini orqa fon sifatida joylashtirish
+Layers panelidan yaratilgan Solid Color qatlami tanlanadi. Ushbu qatlam sichqoncha yordamida eng pastki qismga ko’chiriladi. Color Picker oynasidan orqa fon uchun mos rang tanlanadi. OK tugmasi bosilib rang tasdiqlanadi. Natijada Solid Color qatlami ish maydonining orqa foni sifatida joylashadi va menyu elementlari oldingi planda aniq ko’rinadi (1.95-rasm).
+
+1.96-rasm. START matnini dublikat qilish (Ctrl + J)
+
+Layers panelidan START matni qatlami tanlanadi. Klaviaturadan Ctrl + J tugmalari bosiladi. Tanlangan matnning nusxasi (dublikat) avtomatik ravishda yaratiladi. Zarur bo’lsa, Move Tool (V) yordamida dublikat matn boshqa joyga ko’chiriladi. Natijada START matnining nusxasi hosil bo’ladi. 
+
+1.97-rasm.  Tekstni o’zgartirish va o’lcham berish
+Dublikat qilingan tekstni ish maydoni yuqorisiga joylashtiriladi va tekst ustiga ikki  marta bosib so’z va o’lcham o’zgartiriladi (1.97-rasm). 
+Layers panelidan MENU matni qatlami tanlanadi. Ushbu qatlam Solid Color qatlamidan yuqoriga ko’chiriladi. Natijada MENU sarlavhasi orqa fon ustida aniq va to’liq ko’rinadi. Menyu sarlavhasi boshqa tugmalar bilan vizual uyg’unlikda joylashadi (1.98-rasm).
+
+1.98-rasm. MENU sarlavhasini qatlamlar tartibida joylashtirish
+Shakllar va ularga tegishli matnlar Shift tugmasini bosib turib tanlanadi. So’ng klaviaturadan Ctrl + G tugmalari bosilib, tanlangan obyektlar bitta guruh (Group) ga birlashtiriladi (1.99-rasm).
+
+1.99-rasm. Shakl va matnlarni guruhlash (Group qilish)
+Hosil bo’lgan guruh (Group) ustiga sichqoncha bilan ikki marta bosiladi va unga mos nom beriladi (masalan, Main Menu yoki Buttons). Guruhni nomlash ish jarayonida tartibni saqlash va qatlamlar bilan qulay ishlashga yordam beradi.
+
+1.100-rasm. Move oraqli siljitish
+
+
+Move Tool (V) tanlanadi va guruh holatidagi tugmalar ish maydonida o’rtaroqqa (markazga) joylashtiriladi. Bu menyu elementlarining tartibli, simmetrik va foydalanuvchi uchun qulay ko’rinishda bo’lishini ta’minlaydi (1.100-rasm).
+
+1.101-rasm. Ellipse Tool yordamida doira shaklini chizish
+Chap asboblar panelidan Ellipse Tool (U) tanlanadi. Sichqoncha ish maydoni ustiga olib kelinadi. Shift tugmasi bosib turilgan holda sichqoncha tortiladi.
+Natijada mukammal doira shakli chiziladi. Ushbu usul UI dizaynda dekorativ elementlar yoki qo’shimcha belgilar yaratish uchun qo’llaniladi (1.101-rasm). 
+
+
+1.102-rasm. Move Tool yordamida doirani o’zgartirish
+Move tool yordamida doira shaklini kattaroq qilib rangini o’zgartiriladi (1.102-rasm).
+Chizilgan doira shakli tanlanadi. Move Tool (V) yordamida doira rasmda ko’rsatilgan joyga joylashtiriladi. Klaviaturadan Alt tugmasi bosib turiladi.  Sichqoncha bilan doira suriladi va uning nusxasi (dublikat) yaratiladi. Natijada dekorativ element sifatida bir nechta doira shakllari hosil qilinadi (1.103-rasm).
+
+1.103-rasm. Doira shaklini joylashtirish va dublikat qilish
+	Ikkinchi doira rasmda ko’rsatilganidek (1.104-rasm) ish maydonida mos joyga joylashtiriladi.
+
+1.104-rasm. Ikkinchi doirani joylashtirish
+Bajarilgan ishni saqlash va rasm ko’rinishida chiqarish uchun yuqori menyudan File bo’limi tanlanadi. Ochilgan ro’yxatdan Export bandi bosiladi. So’ng Export As… buyrug’i tanlanadi. Ochilgan oynada kerakli rasm formati (masalan, PNG yoki JPG) belgilanadi. Export tugmasi bosilib, fayl kompyuterga saqlanadi (1.105,1.106-rasm).
+
+1.105-rasm. Tayyor menyuni rasm formatida eksport qilish
+
+1.106-rasm. Export As oynasida o’yin menyusini  JPG formatida saqlash
+JPG format rasm hajmini kichik saqlash va menyuni taqdimot, ko’rsatma yoki namunaviy loyiha sifatida ishlatish uchun qulay hisoblanadi. Eksport qilingan fayl keyinchalik o’yin loyihasini namoyish etish yoki baholash jarayonida foydalaniladi.
+	Menyuda asosiy tugmalar qanday joylashtiriladi?
+	•	Photoshop dasturida oddiy  o‘yin menyusi yarating. Menyuda quyidagi elementlar bo‘lsin: “START” , “Sozlamalar” ,“Chiqish” tugmasi. Menyu uchun mos rang va shrift tanlang. Tayyor ishni PNG formatda saqlang.
+
+Amaliy topshiriqlar
+
+
+	•	Menyuda asosiy tugmalar qanday joylashtiriladi?
+	•	Photoshop dasturida oddiy  o‘yin menyusi yarating. Menyuda quyidagi elementlar bo‘lsin: “START” , “Sozlamalar” ,“Chiqish” tugmasi. Menyu uchun mos rang va shrift tanlang. Tayyor ishni PNG formatda saqlang.
+
+Amaliy topshiriqlar
+
+
+
+	•	O’yin interfeysini prototiplash
+O‘quvchilarga o‘yin interfeysi  nima ekanligini tushuntirish, o‘yinning tashqi ko‘rinishini oldindan rejalashtirish va oddiy prototip (namuna) yaratish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga o‘yin interfeysi  nima ekanligini tushuntirish, o‘yinning tashqi ko‘rinishini oldindan rejalashtirish va oddiy prototip (namuna) yaratish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter Photoshop dasturi Sichqoncha
+
+	•	Kompyuter Photoshop dasturi Sichqoncha
+
+Ishning bajarish tartibi
+Photoshop dasturini ishga tushirib,  Custom bo’limi tanlanadi va fayl o’lchami 1920 × 1080 piksel qilib belgilanadi. Rang rejimi RGB Color, fon rangi esa oq (White) holatda qoldiriladi. Barcha parametrlar to’g’ri sozlangandan so’ng Create tugmasi bosilib, o’yin interfeysi uchun bo’sh ishchi oynasi ochiladi va ish maydoniga o’tgan darslarda yasalgan ikonkalarni tashlab olinadi. Va rasmda ko’rsatilgandek bosib qabul qilib olinadi. Keyingi bosqichda oldingi ishlarda yasalgan soat ikonkasidan foydalaniladi. Tayyor ikonka ishchi oynaga tashlanib, o’yin interfeysiga mos joyga joylashtiriladi(1.107-rasm).
+   
+1.107-rasm. Ishchi oynaga joylashtirish
+
+Rectangle Tool tanlanadi va rasmda ko’rsatilganidek yuqori qismga to’rtburchak shakl chizib olinadi(1.108-rasm). 
+
+1.108-rasm. O’yin interfeysi uchun yuqori panel yaratish
+
+1.109-rasm. Layer panelidan shaklning rangini o’zgartirish
+Layer  panelidan to’rtburchak shakl joylashgan qatlam tanlanadi.  Tanlangan qatlam ustiga sichqonchaning o’ng tugmasi bosiladi. Ochilgan menyudan Blending Options bandi tanlanadi. Ushbu oynada panelning rangi va ko’rinishi o’yin interfeysiga mos ravishda sozlanadi.
+
+ 
+ 
+1.110-rasm. Yuqori panel rangini o’zgartirish (Blending Options)
+Blending Options oynasi ochilgandan so’ng, chap tomondagi ro’yxatdan Drop Shadow bandi tanlanadi.
+Drop Shadow funksiyasi yoqiladi va soya parametrlari kerakli ko’rinishga moslab sozlanadi(1.111-rasm). Sozlamalar orqali soyani yumshoq va aniq ko’rinishda berish mumkin. Natijada panel hajmli ko’rinishga ega bo’lib, o’yin interfeysi yanada chiroyli bo’ladi.
+
+1.111-rasm. Panelga soya (Drop Shadow) berish
+
+
+1.112-rasm. Drop Shadow sozlamalarini berish
+Rasmda ko’rsatilgandek Drop Shadow bo’limidagi qiymatlar belgilanadi. Soya ranggi, masofasi va yumshoqligi o’yin interfeysiga mos ravishda sozlanadi. Barcha parametrlar tanlangandan so’ng OK tugmasi bosiladi va berilgan o’zgarishlar saqlanadi (1.112-rasm).
+Berilgan sozlamalardan so’ng to’rtburchak shaklning orqa qismiga soya tushadi. Natijada panel interfeys fonidan ajralib turadi va hajmli ko’rinishga ega bo’ladi. Bu usul o’yin interfeysining yanada aniq va chiroyli ko’rinishini ta’minlaydi.
+
+1.113-rasm. Panelga soya qo’llanilgan holat
+Ushbu bosqichda Move Tool tanlanadi va o’tgan darslarda yasalgan ikonkalari ishchi maydonga joylashtiriladi. Ikonkalar o’yin interfeysiga mos holda kerakli joyga suriladi. Natijada interfeys elementlari tartibli va qulay ko’rinishda joylashadi.
+ 
+1.114-rasm. Ikonkalarni joylashtirish
+Ikonkalarni joylashtirib chiqqandan so’ng Text Tool tanlanadi. Ushbu asbob yordamida o’yin interfeysiga kerakli matn yoziladi. Matnning o’lchami, rangi va joylashuvi interfeys dizayniga mos ravishda sozlanadi.
+
+1.115-rasm. Matn qo’shish (Text Tool)
+Text Tool yordamida ish maydoni ustiga bir marta bosiladi va kerakli matn yoziladi. Kiritilgan matn vaqtinchalik matn bo’lib, keyinchalik o’yin mazmuniga mos matn bilan almashtiriladi. Ushbu bosqichda matnning o’lchami va joylashuvi tekshiriladi.
+
+
+1.116-rasm. Matn kiritish jarayoni
+Matn yozib bo’lingandan so’ng rasmda ko’rsatilgan yuqori paneldagi tasdiqlash belgisi bosiladi. Shu orqali kiritilgan matn saqlanadi va ish maydoniga qo’llanadi. Natijada matn o’yin interfeysining bir qismi sifatida mustahkamlanadi(1.117-rasm).
+
+1.117-rasm. Kiritilgan matnni tasdiqlash
+Move Tool tanlanadi va Properties paneli orqali matnning rangi, shrift turi hamda o’lchami sozlanadi. Ushbu sozlamalar matnni o’yin interfeysiga mos va o’qilishi qulay holga keltiradi.
+
+1.118-rasm. Matn xususiyatlarini sozlash (Properties paneli)
+Ushbu bosqichda Move Tool yordamida matn belgilanadi. So’ng klaviaturadan Alt tugmasi bosib turilgan holda matn suriladi. Natijada matnning nusxasi (dublikati) yaratiladi va uni interfeysning boshqa qismiga joylashtirish mumkin bo’ladi(1.119-rasm).
+
+1.119-rasm. Matnni dublikat qilish
+Yaratilgan matn nusxasi ustiga ikki marta bosiladi va uning mazmuni o’zgartiriladi. Ushbu bosqichda matn o’yin interfeysiga mos ravishda tahrirlanadi. Natijada interfeysda bir nechta ma’lumotlarni ko’rsatish imkoniyati yaratiladi.
+
+
+1.120-rasm. Duplikat matnni tahrirlash.
+Matn ustiga ikki marta bosilib uning mazmuni o’zgartiriladi. So’ng rasmda ko’rsatilgan yuqori paneldagi tasdiqlash tugmasi bosiladi. Natijada kiritilgan matn saqlanadi va o’yin interfeysiga qo’llanadi(1.121-rasm).
+
+1.121-rasm. Matnni tahrirlash va tasdiqlash
+Asboblar panelidan  Pen Tool tanlanadi. Ish maydonida kerakli joyga bir necha marta bosilib, shakl nuqtalari belgilanadi. Nuqtalar orasida chiziqlar hosil qilinib, kerakli shakl chizib olinadi. Shakl yakunlangach, chizish jarayoni tugatiladi va shakl interfeys elementi sifatida ishlatiladi(1.122-rasm).
+
+1.122-rasm. Pen Tool yordamida shakl chizish
+Pen Tool grafik muharrirlarda aniq va silliq shakllar chizish uchun ishlatiladigan asbobdir. Ushbu asbob yordamida to’g’ri va egri chiziqlar, murakkab shakllar hamda konturlar yaratish mumkin. Pen Tool ko’pincha o’yin interfeysi elementlari, ikonka va maxsus shakllarni chizishda qo’llaniladi
+
+1.123-rasm. Pen Tool uchun Shape rejimini tanlash
+Pen Tool tanlanadi. Yuqori sozlamalar panelidan rasmda ko’rsatilgan Shape rejimi belgilanadi. Shundan so’ng ish maydonida shakl chizish jarayoni boshlanadi.
+Ushbu rejim yordamida chizilgan shakl alohida qatlam sifatida yaratiladi va rang berish osonlashadi.
+ 
+1.124-rasm. Pen Tool yordamida shakl chizish
+Rasmda ko’rsatilgan nuqtalarga ketma-ket bosib chiqiladi va shakl chiziladi. Har bir bosishda yangi tayanch nuqta hosil bo’ladi hamda nuqtalar orasida chiziqlar paydo bo’ladi. Barcha nuqtalar ulanib bo’lingach, yopiq shakl hosil bo’ladi va u o’yin interfeysi elementi sifatida foydalaniladi. Layer panelidan shaklning ustiga ikki marta bosib rang o’zgartiriladi.
+
+1.125-rasm. Rang o’zgartirish
+Ushbu bosqichda Layer panelidan chizilgan shakl tanlanadi. So’ng shakl ustiga sichqonchaning ikki marta bosiladi va ochilgan menyudan Blending Options bo’limiga kiriladi(1.126-rasm).
+
+1.126-rasm. Blending option
+
+1.127-rasm. Shaklga chegara (Stroke) berish
+Blending Options oynasi ochiladi. Chap tomondagi ro’yxatdan Stroke funksiyasi tanlanadi. Chegaraning qalinligi, rangi va joylashuvi rasmda ko’rsatilgandek sozlanadi. Sozlamalar o’yin interfeysiga moslashtirilgach, OK tugmasi bosiladi(1.127-rasm).
+
+1.128-rasm. Rectangle tool orqali xona derazalarini chizish
+Rasmda ko’rsatilganidek to’rtburchak shakl chiziladi. Agar chizilgan shakl oldingi elementlar ustiga chiqib yoki noto’g’ri joylashib qolsa, Layer panelidan ushbu shakl tanlanadi. So’ng uni pastga yoki yuqoriga surish orqali kerakli tartibda joylashtiriladi. Natijada shakl o’yin interfeysida to’g’ri ko’rinishga ega bo’ladi(1.129-rasm).
+
+1.129-rasm. Shakl qatlamini tartiblash (Layer paneli)
+Shakl tanlanadi va Layer panelidan uning ustiga ikki marta bosiladi. Ochilgan oynada shaklning rangi o’zgartiriladi.
+
+1.130-rasm. Shakl rangini o’zgartirish
+Oldingi bajarilgan amallar takrorlanadi va uy devorlari uchun qo’shimcha deraza shakllari chiziladi. Rectangle Tool yordamida eshik shakli chizib olinadi. Chizilgan shakl tanlanadi va Layer panelidan uning ustiga ikki marta bosiladi. Ochilgan oynada shaklning rangi rasmda ko’rsatilgandek o’zgartiriladi(1.131-rasm).
+Natijada uy devorlari, deraza va eshik elementlari o’yin muhiti uchun tayyor holga keltiriladi.
+ 
+1.131-rasm. Deraza va eshik shakllarini yaratish
+Move Tool tanlanadi va eshik shakli belgilanadi. Eshik rasmda ko’rsatilgandek biroz buriladi va kerakli joyga joylashtiriladi.  So’ng klaviaturadan Alt tugmasi bosib turilgan holda shakl suriladi. Natijada shaklning nusxasi yaratiladi va u rasmda ko’rsatilgan joyga joylashtiriladi(1.132-rasm).
+ 
+1.132-rasm. Eshikni joylashtirish va nusxalash
+
+1.133-rasm. Pen Tool rejimini Shape holatiga o’zgartirish
+Asboblar panelidan Pen Tool tanlanadi.  Yuqori sozlamalar panelidan rasmda ko’rsatilgan Shape rejimi belgilanadi.  Ushbu rejimda chizilgan shakllar alohida qatlam sifatida yaratiladi. Natijada o’yin muhiti uchun aniq va tahrirlashga qulay shakllar hosil bo’ladi(1.133-rasm).
+
+1.134-rasm. Divan chizish (top ko’rinish)
+ 
+1.135-rasm. Layers panelidan  rangini o’zgartirish va joylshtirish (Move)
+Ushbu bosqichda Layer panelidan yoki Move Tool yordamida tanga ikonka tanlanadi. Tanlangan ikonka ish maydonida kerakli joyga ko’chiriladi. Natijada tanga o’yin muhiti ichida to’g’ri joylashtiriladi va o’yin elementlari bilan uyg’un ko’rinishga ega bo’ladi(1.136-rasm).
+ 
+1.136-rasm. Tanga ikonkasini tanlash va joylashtirish
+Ikonkaning o’lchami kichraytiriladi. So’ng klaviaturadan Alt tugmasi bosib turilgan holda ikonka surilib, uning nusxalari yaratiladi va ikonka dublikat qilinadi va ish maydoniga mos ravishda joylashtiriladi. Shuningdek, Ellipse tool orqali Robo-changyutkichni yumaloq shaklda chizib olinadi
+
+1.137-rasm. Ikonkalarni joylashtirish
+
+Changyutkichni chizib olgandan so’ng klaviaturadan Shift yoki Ctrl tugmasi bosib turilgan holda Layer panelidan barcha tangalar tanlanadi. So’ng Ctrl + G tugmalari bosilib, tanlangan elementlar bitta guruhga birlashtiriladi. Natijada tangalarni birgalikda ko’chirish va boshqarish qulay bo’ladi(1.138-rasm).
+
+1.138-rasm. Tangalarni guruhlash (Group qilish)
+ 
+1.139-rasm. Grouplangan tangalarni nomini o’zgartirish
+Layer panelidan xonaga tegishli barcha shakllar belgilanadi. Shundan so’ng klaviaturadan Ctrl + G tugmalari bosilib, ushbu shakllar bitta guruhga birlashtiriladi. Guruhlashdan keyin hosil bo’lgan papkaga “Xona” nomi beriladi.
+
+ 
+1.140-rasm. O’yin xonasi prototipidagi elementlarni
+O’yin xonasi yuqoridan (top view) ko’rinishda tasvirlangan. Unda xonaning umumiy tuzilishi, devorlar, to’siqlar va o’yin elementlarining joylashuvi aniq ko’rinadi. Bunday ko’rinish o’yin muhitini rejalashtirish, elementlar joylashuvini tekshirish va level dizaynni qulay tashkil etish uchun ishlatiladi.
+ 	O‘yin interfeysini prototiplash qanday jarayon?
+	•	Photoshop yordamida sodda prototip yarating
+
+Amaliy topshiriqlar
+
+
+	•	O‘yin interfeysini prototiplash qanday jarayon?
+	•	Photoshop yordamida sodda prototip yarating
+
+Amaliy topshiriqlar
+
+ 
+ Ta’lim maqsadlari
+	•	Blender o‘yin dvijogi haqida biladi.
+	•	Blender dastur interfeysi va boshqaruv elementlarini o‘rganib chiqadi.
+	•	Meshlar  va oddiy primitivlar bilan ishlashni o‘rganadi.
+	•	Oddiy o‘yin obyektlarini yaratishni biladi.
+	•	Sahna muhiti bilan ishlashni biladi.
+	•	Blenderda yaratilgan mahsulotlarni saqlash va eksport qilishni o‘rganadi.
+
+
+
+Ta’lim maqsadlari
+	•	Blender o‘yin dvijogi haqida biladi.
+	•	Blender dastur interfeysi va boshqaruv elementlarini o‘rganib chiqadi.
+	•	Meshlar  va oddiy primitivlar bilan ishlashni o‘rganadi.
+	•	Oddiy o‘yin obyektlarini yaratishni biladi.
+	•	Sahna muhiti bilan ishlashni biladi.
+	•	Blenderda yaratilgan mahsulotlarni saqlash va eksport qilishni o‘rganadi.
+
+
+
+
+
+
+
+
+
+
+
+
+
+II-bob haqida umumiy ma’lumot.
+Ushbu bobda Blender dasturida 3D obyektlarni yaratish va ularga ishlov berish bo’yicha asosiy amaliy ko’nikmalar o’rganiladi. Avvalo, dastur interfeysi va undagi boshqaruv elementlari tushuntiriladi. Keyin meshlar bilan ishlash, modellashtirishning asosiy usullari, obyektlarga material va tekstura berish jarayonlari ko’rib chiqiladi. Shuningdek, oddiy o’yin obyektlarini  modellashtirish, ularni animatsiya qilish, yorug’lik va kamera sozlamalarini to’g’ri o’rnatish bo’yicha ko’nikmalar shakllantiriladi. Bob yakunida tayyor obyekt yoki sahnani saqlash tartibi ko’rsatiladi.
+	•	Blender interfeysi va oddiy obyektlar
+O‘quvchilarning Blender dasturi bilan tanishishi va oddiy primitivlardan obyektlar yasashni o‘rgaish
+Mashg‘ulot
+maqsadi
+O‘quvchilarning Blender dasturi bilan tanishishi va oddiy primitivlardan obyektlar yasashni o‘rgaish
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter Blender  dasturi Sichqoncha
+
+	•	Kompyuter Blender  dasturi Sichqoncha
+
+Ishning bajarish tartibi
+Blender interfeysi ish maydoni, asboblar paneli va boshqaruv oynalaridan iborat. Asosiy ish oynasida 3D sahna ko’rinadi, unda obyektlar joylashtiriladi va tahrirlanadi. Yon panel va yuqori menyular orqali modellashtirish, ko’rish va sozlash amallari bajariladi.
+Blender dasturi ishga tushirilganda boshlang’ich oyna (Start Screen) paydo bo’ladi. Ushbu oyna quyidagi vazifalarni bajaradi:
+New File (Yangi loyiha) — yangi loyiha yaratish uchun tayyor shablonlar: General, 2D Animation, Sculpting, VFX, Video Editing.
+Recent Files (So’nggi fayllar) — oldin ishlatilgan .blend loyihalarni tezda ochish imkonini beradi.
+
+2.1-rasm. Blender dasturining asosiy ish oynasi
+Open— kompyuterdan mavjud Blender faylini tanlab ochish.
+Recover Last Session — dastur kutilmagan yopilgan bo’lsa, oxirgi ish holatini tiklash. Oynaning orqa qismida 3D Viewport ko’rinib turadi — bu sahna (kamera, yorug’lik va obyektlar joylashgan asosiy ish maydoni).
+
+2.2-rasm. Blender dasturining asosiy interfeysi va ish oynasi elementlari
+
+2.3-rasmda. Har bir oynadagi muharrirni almashtirish tugmasi 
+Rasmda (2.3-rasm) muharrirni almashtirish tugmasining joylashuvi qizil ellipslar yordamida ko’rsatilgan. Mazkur tugma har bir ish oynasining (area) yuqori qismida joylashgan bo’lib, u orqali oynaning vazifasini o’zgartirish mumkin.
+Masalan, ushbu tugma yordamida bir oynani 3D Viewport, Properties, Outliner, Timeline yoki boshqa muharrirga almashtirish mumkin. Bu Blender’da ish maydonini qulay tashkil qilish, turli vazifalarni tez va samarali bajarish uchun muhim hisoblanadi.
+
+2.4-rasm. Blender 3D sahnasi va oddiy obyekt (Cube)
+Rasmda (2.4-rasm) Blender 4.0 dasturining 3D ish muhiti (3D Viewport) tasvirlangan. Sahnada standart obyektlar joylashgan: Cube (kub) — asosiy oddiy obyekt, Camera — sahnani render qilish uchun, va Light — yoritishni ta’minlash uchun xizmat qiladi. Kub hozirda tanlangan holatda bo’lib, sariq kontur bilan ajratilgan.
+Markazda koordinata o’qlari (X – qizil, Y – yashil, Z – ko’k) obyektlarning fazodagi joylashuvini aniqlashga yordam beradi. O’ng tomonda Outliner oynasida sahnadagi obyektlar ro’yxati, Properties oynasida esa tanlangan obyektning joylashuvi, aylanishi va masshtabi (Transform) parametrlari aks ettirilgan.
+
+2.5-rasm. Standart ob’yektlarni qo’shish
+Yuqorida (2.5-rasm) yangi primitiv (oddiy geometrik) obyektlarni sahnaga qo’shish jarayoni ko’rsatilgan. Sahnada bir nechta oddiy shakllar Plane, Cube, Cylinder va Sphere joylashgan bo’lib, ular 3D modellashtirishning boshlang’ich elementlari hisoblanadi.
+Yangi primitiv obyektlarni qo’shish uchun klaviaturadan Shift + A tugmalari bosiladi yoki yuqori menyudan Add → Mesh bo’limi tanlanadi. Ochilgan menyu orqali Cube, UV Sphere, Ico Sphere, Cylinder, Cone, Torus, Plane kabi oddiy obyektlarni tanlab sahnaga joylashtirish mumkin.
+
+2.6-rasm. Kamera va sahna obyektlarini joylashtirish
+Qo’shilgan obyektlar avtomatik ravishda sahnaning markazida (3D Cursor joylashgan nuqtada) paydo bo’ladi va ularni Move (G), Rotate (R) hamda Scale (S) buyruqlari yordamida joylashuvi, burilishi va o’lchamini o’zgartirish mumkin. Ushbu jarayon Blender’da modellashtirishni o’rganishning asosiy va muhim bosqichi hisoblanadi.
+Yuqoridagi rasmda (2.6-rasm) kamera bilan ishlash jarayoni ko’rsatilgan. 3D sahnada bir nechta oddiy primitiv obyektlar (Plane, Cube, Cylinder, Icosphere va Sphere) joylashtirilgan. Camera obyekti tanlangan holatda bo’lib, u sahnani qaysi burchakdan ko’rinishini belgilaydi. Kamera yordamida obyektlarning joylashuvi va kompozitsiyasi sozlanadi hamda yakuniy render natijasi aniqlanadi.
+
+2.7-rasm. Toggle Camera View rejimi
+Toggle Camera View rejimi sahna kameraning nigohi orqali aks etadi, ya’ni ekranda ko’rinayotgan tasvir render natijasiga mos bo’ladi. Sariq ramka kameraning ko’rish chegarasini bildiradi.
+Toggle Camera View (Numpad 0) quyidagi maqsadlarda ishlatiladi:
+	•	sahnani yakuniy rasm yoki animatsiyada qanday ko’rinishini oldindan ko’rish;
+	•	obyektlarning kameraga nisbatan joylashuvini tekshirish;
+	•	kompozitsiyani to’g’ri sozlash (kadrga sig’dirish);
+	•	ortiqcha yoki keraksiz obyektlarning kadrga tushib qolmasligini nazorat qilish.
+Toggle Camera View rejimi sahnani renderdan oldin tekshirish va to’g’ri kadr yaratish uchun muhim hisoblanadi.
+
+2.8-rasm. Silindrga Move ni qo’llash
+Ushbu rasmda (2.8-rasm) Cylinder (silindr) obyektiga Move (G) buyrug’i qo’llanilgan holat ko’rsatilgan. Silindr tanlangan bo’lib, uning atrofida rangli yo’nalish chiziqlari (gizmo) paydo bo’lgan. Bu belgilar obyekt hozirda harakatlantirish rejimida ekanligini bildiradi.
+Move (G) buyrug’i yordamida silindr:
+	•	X o’qi (qizil) bo’yicha chap yoki o’ng tomonga,
+	•	Y o’qi (yashil) bo’yicha oldinga yoki orqaga,
+	•	Z o’qi (ko’k) bo’yicha yuqoriga yoki pastga siljitiladi.
+
+2.9-rasm. UV-Sphere ga Scale ni qo’llash
+Silindr (Cylinder) obyektiga Scale (S) buyrug’i qo’llanilgan (2.9-rasm). Obyekt tanlangan bo’lib, uning atrofida sariq kontur va rangli yo’nalish belgilari ko’rinib turibdi. Bu belgilar obyektning o’lchami o’zgartirilayotganini bildiradi.
+Scale (S) buyrug’i yordamida silindrning:
+	•	eni (diametri),
+	•	balandligi,
+	•	umumiy hajmi kattalashtiriladi yoki kichlashtiriladi.
+Agar S tugmasi bosilib, so’ng:
+	•	X bosilsa — obyekt faqat X o’qi bo’yicha,
+	•	Y bosilsa — Y o’qi bo’yicha,
+	•	Z bosilsa — Z o’qi bo’yicha o’lchami o’zgartiriladi.
+
+2.10-rasm. Cube ga Rotate ni qo’llash
+ 	Rasmda (2.10-rasm) kub (Cube) tanlangan va unga Rotate (R) buyrug’i  qo’llanilgan holat tasvirlangan. Obyekt atrofidagi gizmo obyektning aylantirish rejimida ekanligini ko’rsatadi. Rotate (R) buyrug’i obyektni X ,Y, Z o’qlari  atrofida aylantirish imkonini beradi. 
+Edit Mode Blenderda obyektning geometrik tuzilmasini bevosita tahrirlash uchun ishlatiladigan rejim bu  rejimda obyektning cho’qqilari (Vertex), qirralari (Edge) va yuzalari (Face) bilan ishlanadi. Edit Mode’ga o’tish uchun Tab tugmasi bosiladi.
+
+
+2.11-rasm. Edit mode rejimiga o’tish
+Edit Mode da quyidagi amallar bajariladi:
+	•	obyektning shakli tahrirlanadi va o’zgartiriladi;
+	•	yuzalar, qirralar va nuqtalar ajratilib tanlanadi;
+	•	Extrude (E), Scale (S) va Move (G) buyruqlari yordamida yangi shakllar hosil qilinadi;
+	•	oddiy obyektlardan foydalanib murakkab modellar yaratiladi.
+
+2.12-rasm. Edit Mode rejimida Extrude orqali obyektni tahrirlash
+Cube obyektining (2.12-rasm) Edit Mode holati tasvirlangan. Kubning yuzalari tanlangan va Extrude (E) amali orqali yuqori, o’ng va chap tomonlarga cho’zilgan bo’lib, natijada obyekt o’zgartirilgan.
+		Blender dasturining asosiy interfeysi bilan tanishish
+	•	3D Viewport oynasida obyektlar bilan ishlashni mashq qiling.
+	•	Standart geometrik primitivlardan foydalanib uy jihozlarining sodda 3D modelini yarating.
+Amaliy topshiriqlar
+
+
+	•	Blender dasturining asosiy interfeysi bilan tanishish
+	•	3D Viewport oynasida obyektlar bilan ishlashni mashq qiling.
+	•	Standart geometrik primitivlardan foydalanib uy jihozlarining sodda 3D modelini yarating.
+Amaliy topshiriqlar
+
+
+
+	•	Poligonal (Mesh) modellashtirish
+O‘quvchilarda oddiy 3D obyekt (stol) yaratish ko‘nikmasini shakllantirish. Standart primitivlar (Cube) va Mesh modellashtirish asoslarini o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarda oddiy 3D obyekt (stol) yaratish ko‘nikmasini shakllantirish. Standart primitivlar (Cube) va Mesh modellashtirish asoslarini o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter Blender dasturi Sichqoncha va klaviatura
+
+	•	Kompyuter Blender dasturi Sichqoncha va klaviatura
+
+Ishning bajarish tartibi
+Poligonal modellashtirish (Mesh) uchlar (fazodagi nuqtalar), qirralar (uchlarni birlashtiruvchi) va poligonlar (ko’pburchaklar, ko’pincha uchburchaklar yoki to’rtburchaklar) to’plamidan 3D obyektlarni yaratish bo’lib, ular kompyuter grafikasining asosiy asosi bo’lgan model yuzasining karkasini hosil qiladi. Bu o’yinlar, animatsiya, 3D bosib chiqarish va muhandislikda 3D grafika uchun asosiy usul bo’lib, obyektlarning shaklini moslashuvchan tarzda boshqarish imkonini beradi.
+Blender dasturini ishga tushirish. Blender dasturini ochib yangi loyiha (New → General) yaratiladi. Sahnadagi standart Cube obyektini qoldiriladi (2.13-rasm). 
+
+2.13-rasm. Dasturni ishga tushirish
+Stol ustki qismini shakllantirish. Cube obyekt tanlanadi. Scale (S) buyrug’i yordamida: X va Y o’qlari bo’yicha kengaytiriladi; Z o’qi bo’yicha yupqalatiladi.
+Natijada stolning ustki qismi hosil qilinadi. Move (G) buyrug’i bilan obyekt pol ustiga ko’tariladi.
+
+2.14-rasm. Stol ustini yaratish va Scale qo’llash
+Stol oyoqlarini yaratish. Stol ustki qismi tanlanib Shift + D buyrug’i orqali nusxa olinadi. Nusxa olingan obyekt Scale (S) yordamida ingichkalashtiriladi va Z o’qi bo’yicha cho’ziladi. Obyekt stolning bir burchagiga joylashtiriladi. Ushbu amal yana uch marta takrorlanib, to’rt dona stol oyog’i hosil qilinadi (2.15-rasm).
+ 
+2.15-rasm. Stol oyoqlarini yasash
+Ushbu bosqichda stol modelining shakli poligonal (Mesh) tahrirlash orqali aniqlashtiriladi. Avvalo stol elementlaridan biri tanlanadi va Tab tugmasi bosilib Edit Mode rejimiga o’tiladi. Edit Mode rejimida obyektning tuzilishini tashkil etuvchi asosiy elementlar: Vertex (nuqta), Edge (qirra) va Face (yuzalar) bilan tanishiladi.
+
+2.16-rasm. Tab orqali belgilash
+Modelni soddalashtirish maqsadida keraksiz yoki ortiqcha qirralar va yuzalar aniqlanib, Delete buyrug’i orqali o’chiriladi. Zarur hollarda stol shakli tekislanadi va o’lchamlari tartibga keltiriladi. (2.16-rasm).
+Edge
+Edge
+Edge select
+Edge select
+Bevel
+Bevel
+Bevel
+Bevel
+2.17-rasm. Bevel qo’llash
+Ushbu bosqichda stol modelining o’tkir qirralariga shakl beriladi. Avvalo stol ustki qismi tanlanadi va Tab tugmasi orqali Edit Mode ga o’tiladi. So’ng yuqorida ko’rsatilganidek Edge Select rejimi tanlanib, stolning kerakli qirralari belgilanadi.
+Qirralar belgilab olingandan so’ng Bevel amali qo’llanadi. Buning uchun B tugmasi bosiladi yoki Bevel vositasidan foydalaniladi. Natijada stol qirralari shaklga ega bo’lib, obyekt yanada real va estetik ko’rinishga ega bo’ladi. (2.17-rasm)
+
+2.18-rasm. Bevel orqali stol qirralariga shakl berish
+Ushbu bosqichda stol modeliga rang va material beriladi. Avvalo stolning ustki qismi tanlanadi. So’ng o’ng tomondagi Material Properties bo’limiga o’tilib, New buyrug’i orqali yangi material yaratiladi. Yaratilgan material uchun yog’och rangiga yaqin (jigarrang) rang tanlanadi.
+Material berilgandan so’ng, aynan shu material stol oyoqlariga ham qo’llanadi. Natijada stol bir xil rang va teksturaga ega bo’lib, real buyum ko’rinishini oladi. (2.19-rasm).
+
+2.19-rasm. Stolga rang va material berish
+Sahnadagi Camera obyekt tanlanadi.  G (Move) tugmasi yordamida kamera sahnadagi stolga qaragan holda joylashtiriladi. R (Rotate) tugmasi orqali kamera stol tomonga buriladi.  Kamera obyektni to’liq qamrab oladigan holatda sozlanadi.
+Kamera ko’rinishini tekshirish. Numpad 0 tugmasi bosiladi. Kamera ko’rinishida stol markazda va to’liq ko’rinayotgani tekshiriladi. Zarur bo’lsa, kamera joylashuvi yana aniqlashtiriladi. 
+
+2.20-rasm. Kamera va chiroqni sozlash
+Chiroq (Light) obyektini tanlash. Sahnadagi chiroq obyekt tanlanadi. Ushbu rasmda Area turidagi chiroq qo’llanilgan.Area chiroq stol ustidan pastga qaragan holda joylashtiriladi. Power (quvvat) parametri o’zgartiriladi. Tavsiya etiladigan qiymat: 1000–1500 W (2.20-rasm).
+
+2.21-rasm. Natija
+
+Render jarayoni quyidagi ketma-ketlikda bajariladi: Model tayyorlash – stolning 3D modeli to’liq shakllantiriladi. Material berish – obyektga rang va sirt xossalari (silliqlik, yorqinlik) qo’shiladi.Yoritish sozlash – yorug’lik manbai joylashtirilib, soya tushishi ta’minlanadi. Kamera joylashtirish – obyekt qulay burchakdan ko’rinadigan qilib tanlanadi. Render Image – sahna yakuniy rasm sifatida hisoblab chiqariladi. Natijada obyekt real ko’rinishga ega bo’ladi.
+
+Cube yoki Cylinder obyektidan foydalanib oddiy 3D buyum (quti, stakan yoki ustun) yarating.
+	•	Edit Mode rejimida obyektga shakl bering.
+
+
+Amaliy topshiriqlar
+
+
+	•	Cube yoki Cylinder obyektidan foydalanib oddiy 3D buyum (quti, stakan yoki ustun) yarating.
+	•	Edit Mode rejimida obyektga shakl bering.
+
+
+Amaliy topshiriqlar
+
+
+
+
+	•	Oddiy obyektlarni yaratish (standart primitivlar yordamida)
+O‘quvchilarga standart primitivlardan foydalangan holda  Blenderda oddiy 3D obyektlar yaratish, sahnada to‘g‘ri joylashtirish,  ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga standart primitivlardan foydalangan holda  Blenderda oddiy 3D obyektlar yaratish, sahnada to‘g‘ri joylashtirish,  ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter Blender Dasturi Sichqoncha
+
+	•	Kompyuter Blender Dasturi Sichqoncha
+
+Ishning bajarish tartibi
+Stul yaratish. Blender dasturi ishgatushiriladi. Blender ochiladi va mavjud sahna saqlab qolinadi yani yuqoridagi ishimizda stol yaratgan edik.  Stul o’rindiq qismini yaratish. Sahnaga Cube obyekti qo’shiladi (Shift + A → Mesh → Cube).
+
+2.22-rasm. Stol o’rindiq qismini yaratish
+Scale (S) buyrug’i bilan: X va Y o’qlari bo’yicha kengaytiriladi, Z o’qi bo’yicha yupqalashtiriladi. Natijada stulning o’rindiq qismi hosil qilinadi.
+      
+2.24-rasm. Dublikat qilish
+Stul oyoqlarini yaratish. O’rindiq tanlanadi va Shift + D orqali nusxa olinadi. Nusxa: Scale(S) bilan X, Y, Z o’qlari bo’yicha o’lchamlari o’zgartiriladi va stul oyog’i stulning bir burchagiga joylashtiriladi. Ushbu amal 4 marta takrorlanib, to’rt oyoq hosil qilinadi(2.24-rasm).
+
+2.25-rasm. Stul suyanchigini Scale orqali moslashtirib joylash
+Stulning har bir qismini birlashtirish uchun Shift bosilgan holda belgilab olinadi va Ctrl+J orqali gruplanadi va Table deb nomlanadi.
+
+2.26-rasm. Stul qismlarini grouplash
+Guruhlangandan so’ng stul obyekti tanlanadi va Shift + D tugmasi yordamida uning nusxasi olinadi. Dublikat qilingan stul sahnada kerakli joyga Move (G) orqali joylashtiriladi. Shundan so’ng Scale (S) va Rotate (R) buyruqlari yordamida stulning o’lchami va burilish burchagi rasmda ko’rsatilgan holatga moslab sozlanadi. Natijada stullar bir xil uslubda, tartibli va muhitga mos joylashtiriladi (2.27-rasm).
+
+2.27-rasm. Dublikat qilish
+
+2.28-rasm. Material qo’lash va render
+Material Properties bo’limida New buyrug’i orqali material yaratiladi. Obyektlarga yog’och rangiga yaqin rang tanlanib qo’llanadi. Kamera stol va stullarni to’liq qamrab oladigan holatda joylashtiriladi. Area turidagi chiroq obyekt ustidan joylashtiriladi. Yorug’lik quvvati oshiriladi va soya hosil qilinadi.  
+Render→Render Image buyrug’i tanlanadi. Sahna yakuniy rasm sifatida render qilinadi.
+Keyingi bosqich gilam yaratish. Gilam uchun Plane obyektini qo’shish Shift + A → Mesh → Plane buyrug’i orqali tekis obyekt yaratiladi. Gilam o’lchamini sozlash. Scale (S) yordamida Plane kengaytiriladi. Gilam xona poliga moslab joylashtiriladi(2.29-rasm). Gilam qalinligini berish (ixtiyoriy) Edit mode Tab ga o’tiladi. Plane yuzasi tanlanadi va Z o’qi bo’yicha juda oz ko’tariladi.
+
+2.29-rasm. Gilam yararish
+Hair qo’shish. O’ng tomondagi Properties panel dan Particle Properties  tanlanadi. + (Plus) tugmasi bosiladi. Type → Hair tanlanadi. 
+
+2.30-rasm. Hair qo’shish
+Yumshoqlikni sozlash. Hair Length→0.05–0.1(gilam tuklari qisqa bo’lishi uchun) Number→500–2500 (qancha katta bo’lsa, gilam shuncha yumshoq ko’rinadi) Segments→3–5 (bukilishlar kam bo’lishi uchun)(2.31-rasm)
+
+2.31-rasm. Hair ni sozlash
+
+         
+2.32-rasm. Gilamga yopishtirish
+Rotation bo’limi ochiladi Orientation Axis → Normal Phase →  Tuklar gilamdan to’g’ri chiqadi (2.32-rasm).
+
+2.33-rasm. Tashqi ko’rinishni sozlash
+Children bo’limi ochiladi. Interpolated tanlanadi. Display Amount → 20 Render Amount → 50. Natijada gilam yanada zich va yumshoq ko’rinadi (2.33-rasm)
+
+2.34-rasm. Oddiy material berish
+Gilam obyekti tanlanadi (chap sichqoncha bilan). O’ng tomondagi Material Properties (doira belgisi) bosiladi. New tugmasi bosiladi.  Base Color dan och rang tanlanadi (masalan, och sariq yoki krem).  Bu material gilamning o’zi uchun (2.34-rasm).
+
+2.35-rasm. Natija
+Kamera sozlanadi. Kamera sahnadagi stol, stullar va gilamni to’liq qamrab oladigan holatda joylashtiriladi. Yoritish tekshiriladi. Area turidagi chiroq sahna ustiga joylashtiriladi va yorug’lik quvvati moslanadi.  Render sozlamalari tekshiriladi. Render Engine sifatida Eevee yoki Cycles tanlangan bo’ladi.  Render Image bajariladi. Render → Render Image buyrug’i tanlanadi yoki F12 tugmasi bosiladi. Sahna yakuniy rasm ko’rinishida hisoblab chiqariladi (2.35-rasm).
+
+Standart primitivlardan foydalangan holda xona uchun devor yaratig
+	•	Yaratilgan obyektga rang bering va move, scale, rotate instrumentlaridan foydalangan holda  joylastiring.
+Amaliy topshiriqlar
+
+
+	•	Standart primitivlardan foydalangan holda xona uchun devor yaratig
+	•	Yaratilgan obyektga rang bering va move, scale, rotate instrumentlaridan foydalangan holda  joylastiring.
+Amaliy topshiriqlar
+
+
+
+	•	Animatsiya va effektlar 
+O‘quvchilarda o‘yin muhiti elementlari asosida kamera animatsiyasi va yorug‘lik (Light) effektlari yaratish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarda o‘yin muhiti elementlari asosida kamera animatsiyasi va yorug‘lik (Light) effektlari yaratish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter Blender dasturi  Sichqoncha
+
+	•	Kompyuter Blender dasturi  Sichqoncha
+
+Ishning bajarish tartibi
+Blender dasturida animatsiya va vizual effektlar o’yin obyektlariga harakat va jonlilik berish uchun qo’llaniladi. Animatsiya yordamida obyektlarning joylashuvi, aylanishi va o’lchami vaqt bo’yicha o’zgartiriladi. Effektlar esa yorug’lik, soya va materiallar orqali sahnaning realistik va jozibador ko’rinishini ta’minlaydi.
+Sahna va vaqtni tayyorlash. Blender dasturi ishga tushiriladi. Stol, stullar va gilam joylashgan sahna ochiladi. Pastki qismdagi Timeline oynasida:  Start: 1 End: 240 qilib belgilanadi. Timeline kursori 1-frame ga o’rnatiladi. 
+
+2.36-rasm. Sahna va vaqtni tayyorlash
+
+Kamerani boshlang’ich holatga qo’yish. Camera obyekti tanlanadi. G (Move) tugmasi yordamida kamera stolga qaragan holda joylashtiriladi. R (Rotate) tugmasi bilan kamera stol markaziga qaratiladi. Numpad 0 bosilib, kamera ko’rinishi tekshiriladi.  Stol va stullar kadrga to’liq tushgan bo’lishi kerak(2.37-rasm).
+
+2.37-rasm. Empty yaratish.
+Kamerani obyekt atrofida aylanishi uchun Empty yaratamiz. Stol (Cube) tanlanadi. Shift + S → Cursor to Selected→ 3D Cursor stolning o’rtasiga keladi. Shift + A → Empty → Plain Axes. Sahnada Empty (xochga o’xshash belgi) paydo bo’ladi
+
+2.38-rasm. Empty 
+
+
+2.39-rasm. Kamerani Empty ga bog’lash 
+Camera tanlanadi. Shift bosib Empty tanlanadi (oxiri Empty sariq bo’lishi shart). Ctrl + P → Object (Keep Transform). Kamera endi Empty ga bog’landi (2.39-rasm).
+Sahnada joylashtirilgan Empty obyekti tanlanadi. Empty stolning markazida joylashgan bo’lishi kerak.  Pastki qismdagi Timeline oynasida vaqt ko’rsatkichi 1-frame ga o’rnatiladi. Bu animatsiyaning boshlanish nuqtasi hisoblanadi.  Klaviaturadan I tugmasi bosiladi va ochilgan menyudan Rotation bandi tanlanadi. Natijada Empty obyektining boshlang’ich aylanish holati saqlanadi. Timeline vaqt ko’rsatkichi 120-frame ga o’tkaziladi. Bu animatsiyaning o’rtacha bosqichi hisoblanadi.  Empty obyekti R → Z buyrug’i yordamida 180 darajaga buriladi va Enter tugmasi bosiladi. Empty obyektining burilishi kameraning stol atrofida yarim aylana bo’ylab harakatlanishini ta’minlaydi.  Yana I tugmasi bosilib, Rotation bandi tanlanadi. Natijada 120-frame uchun aylanish holati saqlanadi.  Timeline vaqt ko’rsatkichi 240-frame ga o’tkaziladi. Bu animatsiyaning yakuniy nuqtasi hisoblanadi.  Empty obyekti yana R → Z buyrug’i yordamida 360 darajaga buriladi va Enter tugmasi bosiladi. Bu kamera stol atrofida to’liq aylanishini ta’minlaydi.  Klaviaturadan I tugmasi bosilib, Rotation bandi tanlanadi. Natijada Empty obyektining yakuniy aylanish holati saqlanadi.  Space tugmasi bosilib animatsiya ijro etiladi va kamera harakati tekshiriladi.
+
+    
+2.40-rasm. Empty ga aylanish animatsiyasi berish.
+
+2.41-rasm. Render animation jarayoni
+Light ga effekt berish uchun ham Blender dasturi ishga tushiriladi va tayyor sahna ochiladi. Sahnadagi Light (Area yoki Point) obyekti tanlanadi. Pastki qismdagi Timeline oynasida vaqt ko’rsatkichi 1-frame ga o’rnatiladi. O’ng tomondagi Light Properties bo’limi ochiladi. Power qiymati kichik qilib belgilanadi (masalan, 300 W). Klaviaturadan I tugmasi bosilib, Power tanlanadi. Chiroqning boshlang’ich yorug’lik holati saqlanadi.  Timeline vaqt ko’rsatkichi 120-frame ga o’tkaziladi.  Power qiymati oshiriladi (masalan, 1200 W).  Yana I → Power buyrug’i beriladi. Yorug’lik kuchaygan holat saqlanadi.  Timeline vaqt ko’rsatkichi 240-frame ga o’tkaziladi. Power qiymati biroz kamaytiriladi (masalan, 700 W).  I → Power buyrug’i beriladi. Space (probel) tugmasi bosilib animatsiya ijro etiladi va yorug’lik o’zgarishi kuzatiladi.
+tullarni stol atrofida aylanish animatsiyasini bajaring.
+	•	Yorug‘lik (Light) effektiga animatsiya bering. Chiroq quvvatini (Power) o‘zgartirish orqali sahnada qanday vizual o‘zgarish yuz beradi? 
+
+Amaliy topshiriqlar
+
+
+	•	tullarni stol atrofida aylanish animatsiyasini bajaring.
+	•	Yorug‘lik (Light) effektiga animatsiya bering. Chiroq quvvatini (Power) o‘zgartirish orqali sahnada qanday vizual o‘zgarish yuz beradi? 
+
+Amaliy topshiriqlar
+
+	•	Loyihani saqlash va eksport qilish
+Blender dasturida yaratilgan loyihani saqlash, eksport qilish hamda tayyor ish natijasini rasm va video ko‘rinishida olish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Blender dasturida yaratilgan loyihani saqlash, eksport qilish hamda tayyor ish natijasini rasm va video ko‘rinishida olish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter Blender dasturi Sichqoncha
+
+	•	Kompyuter Blender dasturi Sichqoncha
+
+Ishning bajarish tartibi
+Loyihani saqlash (Save Project). Blenderda loyiha .blend formatida saqlanadi. Bu format sahnadagi barcha obyektlar, materiallar, teksturalar, animatsiyalar va sozlamalarni o’z ichiga oladi. Loyihani yo’qotib qo’ymaslik uchun ish jarayonida uni muntazam saqlab borish zarur.
+	•	Yuqori menyudan File → Save buyrug’ini tanlanadi.
+	•	Agar loyiha birinchi marta saqlanayotgan bo’lsa, File → Save As tanlanadi.
+	•	Fayl nomini yozib va saqlash joyi belgilanadi.
+	•	Save Blender File tugmasini bosiladi.
+SaveAs (Ctrl+Shift+S) Loyihani yangi nom bilan yoki boshqa joyga saqlash imkonini beradi. Asl loyiha o’zgarmagan holda qoladi.
+
+2.42-rasm. Saqlash Save as
+Ish jarayonida tez-tez Ctrl + S tugmalaridan foydalanish tavsiya etiladi. O’zgartirishlar mavjud fayl ustiga yoziladi. Har bir muhim bosqichdan keyin alohida versiya (masalan: level_v1. blend, level_v2.blend) saqlash maqsadga muvofiq.
+Loyihani eksport qilish (Export)
+Eksport qilish — Blenderda yaratilgan model yoki sahnani boshqa dasturlar yoki platformalarda ishlatish uchun tashqi formatga chiqarish jarayonidir.
+Asosiy eksport formatlari
+	•	FBX (.fbx) – o’yin dvijoklari (Unity, Unreal Engine) uchun eng ko’p ishlatiladi.
+	•	OBJ (.obj) – statik 3D modellar uchun qulay.
+	•	GLTF (.gltf / .glb) – web va real-time ilovalar uchun.
+Eksport qilish tartibi
+	•	File → Export menyusiga kiriladi.
+	•	Kerakli format tanlanadi (masalan, FBX (.fbx)).
+	•	O’ng panelda eksport sozlamalarini tekshiriladi:
+	•	Selected Objects (faqat tanlangan obyektlarni eksport qilish)
+	•	Apply Transform (masshtab va aylanishni to’g’rilash)
+	•	Export tugmasini bosiladi.
+
+2.43-rasm. Export qilish
+Export qilish jarayonida tayyorlangan 3D model yoki sahna Blender dasturidan tashqi formatga chiqariladi. Ushbu bosqichda loyiha boshqa dasturlarda ishlatilishi uchun mos holatga keltiriladi. Eksport vaqtida obyektlarning joylashuvi, o’lchami va aylanishlari tekshiriladi.
+Eksport qilish orqali yaratilgan modellar o’yin dvijoklarida, 3D ko’ruvchi dasturlarda yoki boshqa grafik muharrirlarda ochiladi. Masalan, FBX formati animatsiyali va o’yin loyihalari uchun, OBJ esa statik modellar uchun qulay hisoblanadi.
+Render natijani saqlash (Image/Video Export)
+Agar loyiha render qilingan bo’lsa, tayyor rasm yoki video alohida saqlanadi.
+Rasm (Image)
+	•	Render → Render Image (F12)
+	•	Render oynasida Image → Save As
+	•	Formatni tanlanadi (PNG, JPEG) va saqlanadi.
+Video (Animation)
+	•	Output Properties bo’limida formatni MP4 (H.264) ga sozlanadi.
+	•	Saqlash papkasini belgilanadi.
+	•	Render → Render Animation ni tanlanadi.
+
+2.44-rasm. Render image
+Render image bosqichida sahna bitta statik rasm ko’rinishida hisoblab chiqiladi.
+Render qilish Render → Render Image (F12) buyrug’i orqali amalga oshiriladi. Natijada sahnaning yorug’lik, soya va materiallari hisoblanib, alohida render oynasida ko’rsatiladi. Ushbu jarayon sahnaning yakuniy vizual sifatini baholash imkonini beradi.
+
+2.45-rasm. Render holatini saqlash
+Render yakunlangandan so’ng sahna alohida oynada ko’rsatiladi va foydalanuvchi tayyor tasvirni fayl ko’rinishida saqlashi mumkin bo’ladi. Bu bosqichda yorug’lik, soyalar va materiallarning yakuniy ko’rinishi aniq aks etadi.
+
+2.46-rasm. Video (Animation)
+Video eksport qilishdan oldin Output Properties bo’limida chiqish formati tanlanadi. Odatda animatsiyalar MP4 (H.264) formatida saqlanadi, chunki u sifat va hajm jihatidan qulay hisoblanadi. Shuningdek, kadrlar soni (Frame Rate) va saqlash papkasi belgilanadi.
+Animatsiya tayyor bo’lgach, Render → Render Animation buyrug’i orqali video fayl yaratiladi. Natijada sahnaning harakatli ko’rinishi bitta video fayl sifatida saqlanadi va uni taqdimot yoki o’yin loyihalarida ishlatish mumkin bo’ladi.
+Sahnadagi obyektlar va kamerani joylashtiring, so‘ng Render Image (F12) buyrug‘i orqali rasm oling. Olingan render tasvirni PNG formatida kompyuterga saqlang.
+	•	Sahnadagi bitta obyektni , FBX yoki OBJ formatida eksport qiling.
+	•	Timelineda kamida 50 kadrli animatsiya yarating va Output Properties bo‘limida sozlamalarni tekshirib, animatsiyani MP4 (H.264) formatida video ko‘rinishida render qilib saqlang.
+Amaliy topshiriqlar
+
+
+	•	Sahnadagi obyektlar va kamerani joylashtiring, so‘ng Render Image (F12) buyrug‘i orqali rasm oling. Olingan render tasvirni PNG formatida kompyuterga saqlang.
+	•	Sahnadagi bitta obyektni , FBX yoki OBJ formatida eksport qiling.
+	•	Timelineda kamida 50 kadrli animatsiya yarating va Output Properties bo‘limida sozlamalarni tekshirib, animatsiyani MP4 (H.264) formatida video ko‘rinishida render qilib saqlang.
+Amaliy topshiriqlar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3-bob haqida umumiy ma’lumot.
+Ushbu bob o’yinda muhit yaratish va uni level dizayn asosida tashkil etish masalalariga bag’ishlangan. Bobda o’yin dunyosining tuzilishi, muhit elementlarini yaratish va joylashtirish hamda ularning o’yin jarayoniga ta’siri umumiy tarzda yoritiladi. Shuningdek, level design orqali o’yinchi harakati va o’yin murakkabligini boshqarish tamoyillari tushuntiriladi. Bob mazmuni o’yin muhitini amaliy misollar orqali tushunishga bag’ishlangan.
+	•	O’yin dunyosi (Game World) dizayni haqida
+O‘quvchilarga o‘yin darajasi tushunchasini berish va o‘yin uchun world (pol, devor) yaratish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga o‘yin darajasi tushunchasini berish va o‘yin uchun world (pol, devor) yaratish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter  Blender dasturi Sichqoncha
+
+	•	Kompyuter  Blender dasturi Sichqoncha
+
+Ishning bajarish tartibi
+O’yin dunyosi (Game World) dizayni  o’yin sodir bo’ladigan virtual muhitni yaratish jarayoni bo’lib, shbu bosqichda o’yinning makoni, sahnalari, obyektlari va ularning o’zaro joylashuvi aniqlanadi. O’yin dunyosi dizayni o’yin g’oyasini foydalanuvchiga tushunarli va qiziqarli tarzda yetkazishga xizmat qiladi.
+Blender dasturi ishga tushirilganda sahnada boshlang’ich obyektlar (kub, kamera va yorug’lik manbai) avtomatik tarzda paydo bo’ladi. 
+Boshlang’ich obyektlarni o’chirish uchun klaviaturadagi A tugmasi bosiladi va sahnadagi barcha obyektlar belgilanadi. So’ng X tugmasi bosilib, o’chirish buyrug’i tasdiqlanadi. Shif + A kombinasiya yordamida Plane yaratisb olinadi xonaning poli uchun.
+ 
+3.1-rasm. Pol modelini yaratish
+Blender dasturida obyekt o’lchamini o’zgartirish uchun S (Scale) tugmasidan foydalaniladi. Obyekt tanlangan holatda S tugmasi bosiladi va sichqoncha yordamida shakl kattalashtiriladi yoki kichraytiriladi.
+Agar obyektni aniq miqdorda kattalashtirish kerak bo’lsa, S + 4 tugmalari ketma-ket bosiladi. Natijada obyekt o’z o’lchamidan 4 marta kattalashadi.
+
+3.2-rasm. Xona devorini yaratish (Plane orqali)
+Sahnadagi Plane obyektiga sichqonchaning chap tugmasi bilan bosib uni tanlanadi. Klaviaturadan Tab tugmasi bosilib, Edit Mode ga o’tiladi. Edit Mode ga o’tilganini oynaning yuqori chap burchagida ko’rish mumkin (Object Mode o’rniga Edit Mode yozuvi paydo bo’ladi) (3.2-rasm).
+
+3.3-rasm. Plane qovurg’alarini tanlash (Edge Select)
+Edit Mode holatida oynaning o’ng tomonida joylashgan Select Edge (Edge Select) rejimi tanlanadi. Plane obyektining chap, o’ng va tepa qovurg’alari sichqonchaning chap tugmasi yordamida belgilanadi (3.3-rasm).
+
+3.4-rasm. Devorni hosil qilish (Extrude)
+Belgilangan qovurg’alar tanlangan holatda klaviaturadan E (Exstrude) tugmasi bosiladi. So’ng 4 raqami kiritilib, Enter tugmasi bosiladi. Natijada qovurg’alar tepaga 4 marta ko’tariladi va xona devori hosil bo’ladi(3.4-rasm). 
+Edit Mode holatida turiladi. Oynaning o’ng tomonida joylashgan tanlash rejimlaridan Select Face (Face Select) tanlanadi. Natijada obyektning yuzalari (faces) tanlanadigan holatga o’tiladi.
+
+3.5-rasm. Select Edge rejimidan Select Face rejimiga o’tish
+Edit Mode holatida devor yuzalari tanlanadi. Klaviaturadan P tugmasi bosiladi. Ochilgan menyudan Selection bandi tanlanadi. Natijada tanlangan devorlar alohida obyekt sifatida ajratib olinadi (3.6-rasm).
+
+3.6 -rasm. Devorlarni alohida obyektga ajratish (Separate)
+Tab yordamida Object Mode ga qaytib devorni tanlanadi va hajm berish uchun qayta Edite Mode ga otiladi. Alt + E > Extrude along normal dan foydalanib devorga hajm beriladi (3.7, 3.8, 3.9-rasmlar).
+
+3.7-rasm. Devorlarni alohida obyektga ajratish (Separate)
+
+3.8-rasm. Devorga hajm berish
+
+3.9-rasm. Natija.
+
+ 
+3.10-rasm. Plintus yaratish
+Plintus yaratish uchun Ctrl + R tugmalari bosiladi va obyekt ustida qo’shimcha qirra (Loop Cut) hosil qilinadi. Hosil bo’lgan qirra pastga tushiriladi va sichqonchaning chap tugmasi bosilib, joylashuvi tasdiqlanadi.
+
+  
+3.11-rasm. Plintusga hajm berish
+Plintusga hajm berish devorga hajm berilgan usul bilan amalga oshiriladi. Buning uchun Select Face rejimi tanlanadi va yaratilgan plintus yuzalari belgilanadi. So’ng Alt + E tugmalari bosilib, ochilgan menyudan Extrude Along Normal buyrug’i tanlanadi. Natijada plintusga hajm (qalinlik) beriladi (3.11-rasm).
+
+3.12-rasm. Devor va pol ning tayyor holati
+Deraza yaratish uchun Shift + A > Mesh > Cube shakli tanlanadi (3.13-rasm).
+
+3.13-rasm. Deraza yaratish
+Yuqoridan ko’rish uchun klaviaturadagi NumPad 7 tugmasi bosiladi. Shundan so’ng obyektni X o’qi bo’yicha joylashtirish uchun G + X tugmalari bosilib, shakl kerakli joyga suriladi. Oldi tarafdan korish uchun NumPad 3 ni bosib va Z o’qi tomon kerakli balandlikka kotariladi. S + Y yordamida derazani kengligini kottalashtirilib kerakli o’q bo’yicha joylashtiriladi.(3.14-rasm)
+ 
+3.14-rasm. Yuqoridan ko’rish va obyektni joylashtirish
+Edit Mode ga otib Select Face rejimida derazaning yuzini tanlanadi va G + X yordamida kichiklashtiriladi(3.15-rasm).
+
+ 
+3.15-rasm. Deraza joyini sozlash
+ 
+3.16-rasm. Deraza yuzini tanlash va romni shakllantirish
+Edit Mode holatida Select Face (Face Select) rejimi tanlanadi. Derazaning yuzi belgilanadi. So’ng deraza romlarini yaratish uchun klaviaturadan I tugmasi bosilib, yuz ichkariga tomon kichiklashtiriladi(3.16-rasm).
+Edit Mode holatida Select Face (Face Select) rejimi tanlanadi va derazaning ichki yuzi belgilanadi. So’ng klaviaturadan E tugmasi bosilib, yuz ichkariga tomon suriladi. Natijada deraza devor ichiga kirgizilgan ko’rinishga ega bo’ladi.
+
+3.16-rasm. Deraza ichkariga kiritish (Extrude qilish)
+Deraza romiga shakl berish jarayonida avvalo Edit Mode holatida rom yuzalari bilan ishlanadi. Rom markaziga yangi qirra qo’shish uchun Ctrl + R tugmalari yordamida Loop Cut bajariladi. Bu romni simmetrik va aniq shakllantirish imkonini beradi. Qo’shilgan qirrani ikkiga ajratish uchun Ctrl + B buyrug’i qo’llanadi. 
+ 
+3.17-rasm. Deraza romiga shakl berish jarayoni
+Shaklning yuzi tanlanadi. So’ng klaviaturadan E tugmasi bosilib, yuz oldinga tomon tortiladi. Natijada shaklga hajm beriladi(3.18-rasm).
+
+3.18-rasm. Exstrude yordamida shakl berish
+Ctrl + R yordamida keyingi shakilni ham xuddi yuqorida ko’rsatib o’tilgan usul bilan yaratamiz, yuzalarini tanlab, Exstrude orqali hajm beramiz. Natijada deraza tayyor holatga keladi (3.19,3.20-rasm).
+ 
+3.19.rasm. Gorizontal liniya berish
+
+3.20-rasm. Natija
+Eshik yaratish uchun Shift + A → Mesh → Cube buyrug’idan foydalaniladi va sahnaga Cube qo’shiladi. So’ng NumPad 7 tugmasi bosilib, sahna yuqoridan ko’rish rejimiga o’tkaziladi. G tugmasi yordamida Cube eshik bo’lishi kerak bo’lgan joyga joylashtiriladi (3.21-rasm).
+ 
+3.21-rasm. Eshik yaratish
+
+Eshik obyektini joylashtirish jarayonida avvalo sahna qulay ko’rinishga o’tkaziladi. NumPad 3 tugmasi yordamida sahna oldindan ko’rish (Front View) rejimiga o’tkaziladi va G tugmasi orqali Cube obyekt tepaga ko’tarilib, eshik joylashadigan balandlikka keltiriladi. Keyingi bosqichda Tab tugmasi bosilib, obyekt bilan ishlash uchun Edit Mode ga o’tiladi (3.22-rasm).
+ 
+3.22-rasm. Kub ni joylashtirish
+Edit Mode holatida Cube obyektining tepa yuzi tanlanadi. Eshik balandligini sozlash uchun G + Z tugmalari bosilib, yuz Z o’qi bo’yicha yuqoriga yoki pastga suriladi. So’ng eshik kengligini sozlash uchun G + Y tugmalari bosilib, yuz Y o’qi bo’yicha kerakli holatga keltiriladi, G + Y yordamida kengligini togirlanadi.
+
+3.23-rasm. Eshik o’lchamlarini sozlash
+ 
+3.24-rasm. Eshikni joylashtirish
+Boolean modifikatori yordamida eshik ochish
+	•	Devor obyektini tanlanadi.
+	•	O’ng paneldan Add Modifier → Generate → Boolean modifikatori tanlanadi.
+	•	Object bo’limidagi pipetka belgisi bosiladi va sahnada yaratilgan eshik (Cube) obyekt tanlanadi.
+	•	Modifikatorni qo’llash uchun fotoaparat ikonkasining yonidagi tugma bosilib, Apply buyrug’i tanlanadi.
+	•	Natijada eshik joyi devordan  ajratilgan holatga keladi (3.25,26,27-rasmlar).
+
+ 
+3.25-rasm. Modifikator tanlash
+ 
+3.26-rasm. Pipetka orqali yaratgan eshikni tanlash
+
+3.27-rasm. Natija
+Eshikga shakil berish uchun Edit Mode ga otib yuza tanlanadi. Ctrl + R yordamida qoshimcha qirra qoshiladi. Qirralarning yuzini tanlab, I yordamida eshik yuzlarini kichiklashtiriladi. G + Y ni bosib orqaroq tortiladi va bu amallarni bir necha bor bajarib, istalgan shaklda o’zgartiriladi  (3.28,3.29-rasmlar).  
+ 
+3.28-rasm. Ctrl+R yordamida qirra qo’shish
+ 
+3.29-rasm. Qirralarga shakl berish
+
+3.30-rasm. Natija
+
+Blender dasturini ishga tushiring va yangi loyiha yarating, boshlang‘ich obyektlarni o‘chiring.
+	•	Plane va Cube obyektlaridan foydalanib devor, deraza va eshiklarni yarating hamda ularni joylashtiring.
+Amaliy topshiriqlar
+
+
+	•	Blender dasturini ishga tushiring va yangi loyiha yarating, boshlang‘ich obyektlarni o‘chiring.
+	•	Plane va Cube obyektlaridan foydalanib devor, deraza va eshiklarni yarating hamda ularni joylashtiring.
+Amaliy topshiriqlar
+
+
+
+	•	Level Design ahamiyati va roli
+O‘yin muhitida obyektlarni mantiqiy joylashtirish orqali o‘yinchi harakatini boshqarish, o‘yin jarayonining murakkabligi va qulayligini ta’minlash hamda level designning o‘yindagi ahamiyatini tushuntirish
+Mashg‘ulot
+maqsadi
+O‘yin muhitida obyektlarni mantiqiy joylashtirish orqali o‘yinchi harakatini boshqarish, o‘yin jarayonining murakkabligi va qulayligini ta’minlash hamda level designning o‘yindagi ahamiyatini tushuntirish
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter Blender dasturi Tayyor obyektlar
+
+	•	Kompyuter Blender dasturi Tayyor obyektlar
+
+Ishning bajarish tartibi
+Level Design o’yinning ichki tuzilishini shakllantiruvchi muhim jarayon hisoblanadi. U o’yin muhitidagi obyektlar joylashuvi, harakat yo’nalishlari va to’siqlar orqali o’yinchining tajribasini belgilaydi. To’g’ri ishlab chiqilgan level design o’yinni qiziqarli, tushunarli va muvozanatli bo’lishini ta’minlaydi.
+Xona ichidagi obyektlar keyingi modellashtirish jarayoniga xalaqit bermasligi uchun A tugmasi yordamida barcha obyektlar belgilanadi va M tugmasi bosilib, New Collection ga o’tkaziladi. Yaratilgan kolleksiya o’ng tomondagi Outliner oynasida Hide in Viewport belgisi orqali vaqtincha yashiriladi (3.31,3.32-rasmlar).
+Bu usul yordamida oldin yaratilgan Game World (xona muhiti) ko’rinmaydigan holatga keltirilib, asosiy e’tibor changyutgich modelini yaratish va joylashtirishga qaratiladi. Keyingi bosqichda avvalgi amaliy ishlarda tayyorlangan stol va stul obyektlari xonaga qayta joylashtirilib, o’yin muhiti ichida to’siqlar tashkil etiladi.
+
+
+3.31-rasm. Xona obyektlarini yangi kolleksiyaga ajratish
+
+3.32-rasm. Xona kolleksiyasini vaqtincha yashirish 
+Shift + A kombinatsiyasi yordamida yangi shakllar yaratiladi. Changyutgich modelini yaratish uchun Circle shakli tanlanadi va sahnaga qo’shiladi. Yaraltilgan Circle tanlab Tab yordamida Edit Mode rejimiga o’tiladi.
+
+3.33-rasm. Circle  yaratish
+Shaklning ichki qismini to’ldirish uchun F tugmasi bosiladi. So’ng E + Z buyruqlari yordamida shaklga balandlik berilib, unga hajm hosil qilinadi S yordamida ustini kichraytiriladi (3.34, 3.35-rasmlar).
+ 
+3.34-rasm. Shakl ichini to’ldirish va hajm berish
+
+3.35-rasm. Scale qilish
+Changyutgich tugmasini yaratish uchun I (Inset) buyrug’i yordamida changyutgich ustida yangi Circle hosil qilinadi. NumPad 7 tugmasi orqali yuqoridan ko’rinishga o’tilib, shaklni aniq joylashtirish ta’minlanadi(3.36-rasm).
+ 
+3.36-rasm. Changyutgich tugmasini yaratish (Inset va tepa ko’rinish)
+
+3.37-rasm. Changyutgich tugmasini G (Move) yordamida yonga surish
+Changyutgichga shakl berish uchun Ctrl + R buyrug’i yordamida qo’shimcha qirra (Loop Cut) qo’shiladi. So’ng Ctrl + B orqali ushbu qirra ikkiga ajratilib, shakl yumaloqlashtiriladi. G tugmasini ikki marta bosish orqali qirra tepaga ko’tariladi,  E + S kombinatsiyasi yordamida esa ichki tomonga shakl kiritilib, obyektga aniq shakl beriladi.
+ 
+3.38-rasm. Loop Cut qo’shish, qirralarni ikkiga ajratish
+
+3.39-rasm. G ikki marta bosish va yuqoriga ko’tarish
+
+3.40-rasm. Ichki chiziqlarni shakllantirish
+Changyutgichga silliq va chiroyli ko’rinish berish uchun Object Mode ga o’tiladi. So’ng sichqonchaning o’ng tugmasi bosilib, Shade Auto Smooth buyrug’i tanlanadi.
+
+3.41-rasm. Shade auto smooth
+Edit Mode ga qayta o’tiladi va changyutgich ustidagi tugma shakli tanlanadi. E + Z buyruqlari yordamida tugma yuqoriga ko’tarilib, unga balandlik beriladi. Ushbu bosqichlar natijasida tugma shakli aniq ajralib turadi va yakuniy ko’rinishga ega changyutgich modeli hosil bo’ladi.
+
+
+3.42-rasm. Natija
+
+3.43-rasm. Stol to’siq sifatida joylashtirilgan o’yin muhiti (Level dizayn)
+Natijada o’yin muhiti yaratilgan va u level dizayn elementlari bilan boyitilgan. Xona ichida stol va stullar mantiqiy joylashtirilib, stol xonaning markaziy qismiga to’siq sifatida joylashtirilgan. Bu joylashuv changyutgich harakatini to’g’ridan-to’g’ri emas, balki aylanib o’tishga majbur qiladi. Natijada o’yin muhiti faqat bezak vazifasini emas, balki o’yin jarayonini boshqaruvchi to’liq level sifatida shakllanadi.
+Blenderda bitta xona yarating va uning ichiga stolni joylashtirib, to‘siq bo‘lgan level hosil qiling.
+	•	Stol joylashuvini o‘zgartirib, changyutgich harakati uchun boshqa level yarating.
+
+Amaliy topshiriqlar
+
+
+	•	Blenderda bitta xona yarating va uning ichiga stolni joylashtirib, to‘siq bo‘lgan level hosil qiling.
+	•	Stol joylashuvini o‘zgartirib, changyutgich harakati uchun boshqa level yarating.
+
+Amaliy topshiriqlar
+
+	•	O’yin muhiti elementlari
+O‘yin muhiti elementlariga material berish va ularni o‘yin makonida to‘g‘ri joylashtirish orqali o‘yin jarayonini tashkil etish.
+Mashg‘ulot
+maqsadi
+O‘yin muhiti elementlariga material berish va ularni o‘yin makonida to‘g‘ri joylashtirish orqali o‘yin jarayonini tashkil etish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter 
+	•	Blender dasturi
+
+	•	Kompyuter 
+	•	Blender dasturi
+
+Ishning bajarish tartibi
+O’yin muhiti elementlari o’yinda ishlatiladigan va o’yin jarayoniga ta’sir qiluvchi barcha obyektlar majmuasi. Ular xonalar, mebellar, devorlar, to’siqlar hamda harakatlanuvchi obyektlardan iborat bo’lib, o’yinchining harakati va yo’nalishini belgilaydi. To’g’ri tanlangan va joylashtirilgan muhit elementlari o’yinni tushunarli va qiziqarli qiladi.
+Dastlab barcha obyektlar joylashgan Collection lar Outliner oynasida Hide in Viewport holatidan chiqariladi. Shundan so’ng sahnada ko’rinib turgan obyektlar G tugmasi yordamida xonaning ichki qismi bo’ylab mantiqiy tarzda joylashtiriladi. Stol, stul, javon va divan kabi muhit elementlari o’yin jarayoniga xalaqit bermaydigan, lekin harakatni cheklovchi tarzda joylanadi. Natijada o’yin muhiti elementlari to’liq ko’rinishga ega bo’lib, level dizayn talablariga mos holda shakllantiriladi.
+
+3.44-rasm. O’yin muhiti elementlarini sahnaga joylashtirish
+Xona obyektlarini realistik ko’rinishga keltirish uchun unga material beriladi. Devor obyekti tanlanadi va Material bo’limiga o’tiladi. New tugmasi bosilib, devorga yangi material biriktiriladi hamda uning rangi va ko’rinishi belgilanadi va Base Color dan kerakli rang tanlanadi (3.45-rasm).
+ 
+3.45-rasm. Material qo’llash
+Edit Mode ga otib Select Face rejimida plintusni tanlab Assign bosib yangi material yaratiladi va unga boshqa rang beriladi. Natijada devor va plintus ajiralib turadi(3.46-rasm).
+
+ 
+3.46-rasm. Plintusga material qo’llash
+Avvalo deraza obyekti tanlanadi va Material bo’limida oldindan tayyorlangan plintus materiali derazaga qo’llanadi. Shundan so’ng obyekt Edit Mode ga o’tkazilib, derazaning oyna qismlari alohida tanlanadi. Assign tugmasi yordamida oyna uchun yangi material yaratiladi va biriktiriladi. Natijada deraza romi va oynasi alohida materiallarga ega bo’lib, yanada aniq va realistik ko’rinish hosil qilinadi.
+  
+3.47-rasm. Derazaga material biriktirish va oynani ajratish
+
+3.48-rasm. Natija
+Eshik obyekti tanlanadi va Material bo’limiga o’tiladi. New tugmasi bosilib, eshik uchun qora rang tanlanadi hamda material xususiyatlari moslashtiriladi. Natijada eshik xonadagi boshqa elementlardan ajralib turadi va aniq ko’rinishga ega bo’ladi.
+
+3.49-rasm. Eshikka material qo’llash
+Pol obyekti tanlanadi va unga material o’rniga tekstura biriktirish uchun Shade Editor oynasiga o’tiladi. Ushbu bosqichda polning rang va sirt ko’rinishi sozlanib, o’yin muhiti yanada realistik holatga keltiriladi.
+
+3.50-rasm. Polga tekstura berish uchun Shade Editor’ga o’tish
+Internetdan yuklab olingan parket teksturasi Shade Editor orqali pol obyektiga biriktiriladi. Tekstura rang (Base Color) va boshqa parametrlar bilan bog’lanib, pol yuzasiga tabiiy yog’och ko’rinishi beriladi.
+
+3.51-rasm. Polga parket teksturasini qo’llash
+Dastlab divan obyekti tanlanadi va Material bo’limiga o’tiladi. New tugmasi bosilib, divanning o’tirish qismi (yostiq) uchun alohida material yaratiladi. Material ranglari Base Color orqali sozlanib, sirt ko’rinishi yumshoq va silliq bo’lishi uchun Roughness qiymati moslashtiriladi (3.52-rasm).
+
+3.52-rasm. Divanning asosiy qismiga material berish
+Keyingi bosqichda divanning yon suyanchiq qismlari tanlanadi. Edit Mode ga o’tilib, kerakli yuzalar belgilanadi va Assign tugmasi yordamida yangi material biriktiriladi. Shu orqali divanning asosiy qismi va yon qismlari rang jihatidan ajratiladi(3.53-rasm).
+
+3.53-rasm. Divan qismlariga alohida materiallar biriktirish
+So’ngra divanning oyoqlari alohida tanlanadi va ularga yangi material yaratiladi. Oyoqlar uchun jigarrang (yog’och) rang tanlanib, material xususiyatlari sozlanadi. 
+
+3.54-rasm. Divanning oyoqlariga material berish
+Oddiy kubdan istalgan ko’rinishdagi shkaf yasab olinadi va material berish uchun shkaf obyekti tanlanadi va Material bo’limiga o’tiladi. New tugmasi bosilib, shkaf uchun mos rang tanlanadi hamda Base Color orqali rang qiymatlari sozlanadi. Zarur hollarda Roughness va Specular parametrlar o’zgartirilib, shkaf yuzasiga yog’ochga o’xshash ko’rinish beriladi.
+
+3.55-rasm. Shkafga material berish
+Stol va stul obyektlari tanlanadi. Material bo’limida New tugmasi bosilib, stol uchun yog’och rangiga yaqin material yaratiladi. Base Color va Roughness qiymatlari sozlanib, stol yuzasiga tabiiy ko’rinish beriladi. Shu bosqichda stullar uchun ham mos material tanlanadi.
+Keyingi bosqichda stullar tanlanib, oldin yaratilgan yog’och materiali ularga biriktiriladi. Material parametrlari moslashtirilib, stol va stullar rang jihatidan uyg’un holatga keltiriladi.
+
+3.56-rasm. Stol va stullarga material berish
+Changyutgichning asosiy qismi tanlanadi va Material bo’limida kul rangdagi material biriktiriladi. So’ng Edit Mode ga o’tilib, changyutgich ustidagi tugma yuzasi belgilanadi. Assign tugmasi yordamida tugma uchun yangi material yaratiladi va unga oq rang beriladi.
+
+3.57-rasm. Changyutgichga material berish
+ 
+3.58-rasm. Qo’shimcha dekorlar, kamera joylashtirilgan holat
+Ushbu bosqichda (3.58-rasm) o’yin muhitiga qo’shimcha dekor elementlari joylashtiriladi. Xonaga mebel buyumlari bilan bir qatorda mayda obyektlar (dekorlar) qo’shilib, muhit yanada boyitiladi. Barcha elementlar pol va xona ichida mantiqiy tartibda joylashtiriladi. Shif + A bilan sahnaga kamera qoshiladi va G + R yordamida joylashtiriladi.
+Shader Editor da World  rejimi tanlanadi  Shift + A yordamida Environment Texture qoshib olamga yoruqlik beriladi(3.59-rasm).
+
+
+
+3.59-rasm. World muhitiga Environment Texture qo’shish
+
+3.60-rasm. Yakuniy natija
+O’yin muhiti elementlariga material va teksturalar berilib, ularning ranglari va joylashuvi moslashtiriladi. Mebel va dekor obyektlari mantiqiy tartibda joylashtirilib, level dizayn talablariga javob beradigan yaxlit o’yin muhiti hakllantiriladi. 
+Blenderda yaratilgan xonaga kamida 3 ta o‘yin muhiti elementini joylashtiring va ularga material biriktiring.
+	•	O‘yin muhiti elementlarining joylashuvini o‘zgartirib, harakat uchun qulay va to‘siqli hududlarni shakllantiring.
+Amaliy topshiriqlar
+
+
+	•	Blenderda yaratilgan xonaga kamida 3 ta o‘yin muhiti elementini joylashtiring va ularga material biriktiring.
+	•	O‘yin muhiti elementlarining joylashuvini o‘zgartirib, harakat uchun qulay va to‘siqli hududlarni shakllantiring.
+Amaliy topshiriqlar
+
+
+	•	O’yin darajalari (Levels)
+Oldindan yaratilgan o‘yin muhiti asosida o‘yin darajalarini tashkil etish, obyektlar joylashuvini o‘zgartirish orqali turli darajadagi murakkablikka ega levellarni shakllantirish
+Mashg‘ulot
+maqsadi
+Oldindan yaratilgan o‘yin muhiti asosida o‘yin darajalarini tashkil etish, obyektlar joylashuvini o‘zgartirish orqali turli darajadagi murakkablikka ega levellarni shakllantirish
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter  Blender dasturi  Yaratilgan obyektlar
+
+	•	Kompyuter  Blender dasturi  Yaratilgan obyektlar
+
+Ishning bajarish tartibi
+Oldindan yaratilgan o’yin muhiti asosida bir nechta o’yin darajalari tashkil etiladi. Bir xil xona saqlangan holda obyektlar joylashuvi o’zgartirilib, ikki xil level yaratiladi va taqqoslanadi. Natijada o’yin darajalarida to’siqlar, harakat yo’nalishlari va murakkablik darajasi qanday farq qilishi ko’rsatiladi.
+Xonada joylashgan barcha obyektlar A tugmasi yordamida to’liq belgilanadi. So’ng Shift + D kombinatsiyasi orqali ularning nusxasi olinadi. Nusxa olingan obyektlar Collection orqali alohida guruhlanadi va Hide in Viewport belgilanib, vaqtincha sahnadan yashiriladi. Bu usul oldingi levelni saqlab qolgan holda yangi daraja ustida ishlash imkonini beradi.
+ 
+3.61-rasm. Daraja bilan ishlash
+Edit Mode ga otib xonani kattarashtiriladi va devorlarni ikki qirrasini tanlab F yordamida birlashtiriladi, G yordamida oyna va eshiklarni joylarini ozgartiriladi.
+Object Mode da Shift + A → Mesh → Cube tanlanadi. Cube shkaf old qismiga joylashtiriladi.  S (Scale) tugmasi yordamida Cube eshik o’lchamiga mos ravishda ingichkalashtiriladi va balandligi sozlanadi. G (Move) bilan eshik shkafning old tomoniga aniq joylashtiriladi. Cube tanlanib Tab → Edit Mode ga o’tiladi. Zarur bo’lsa, Edge yoki Face lar bilan ishlanadi. Agar eshik panellarga bo’linadigan  bo’lsa, Ctrl + R (Loop Cut) yordamida kesim qo’shiladi va joyi moslanadi. 
+
+3.62-rasm. Shkaf uchun eshik yasash
+Eshik qismiga hajm berish uchun E (Extrude) dan foydalaniladi yoki mavjud qalinlik sozlanadi.Tutqich (handle) yaratish uchun  Shift + A → Mesh → Cube yoki Cylinder qo’shilib, kichik o’lchamda eshik ustiga joylashtiriladi (3.62-rasm).
+Shkafni Shif + D yordamida dublikat qilib Cube yordamida qoshimcha dekorlar qoshamiz
+ 
+3.63-rasm. Shkaf modelini shakllantirish va eshik qismini tahrirlash
+Edit Mode da shkaf eshigining keraksiz burchak qirralari tanlanadi va K (Knife) asbobi yordamida kesib, ortiqcha qismi o’chiriladi. Natijada eshik shakli silliq va to’g’ri ko’rinishga keltiriladi (3.64-rasm).
+
+3.64-rasm. Shkaf eshigi burchagini kesish
+Yaratilgan shkaf modeli Shift + D yordamida nusxalanadi. So’ng Edit Mode ga o’tilib, keraksiz qismlar tanlanadi va X tugmasi orqali o’chirib tashlanadi(3.65-rasm).
+ 
+3.65-rasm. Umumiy tayyor holati
+
+
+3.66-rasm. Cube yordamida tumba uchun  eshik yasash
+
+3.67-rasm. Sahnaga joylashtirish
+Divan yonidagi kichik stolchani asosini yasash uchun sahnaga Cube qo’shiladi va Edit Mode ga o’tiladi. Kubning yuqori qismi Scale (S) yordamida kichiklashtirilib, ikkinchi kichik stol uchun asos hosil qilinadi va usti  Plane yordamida yaratilib o’lchamlari sozlanadi.
+
+3.68-rasm. Xonaning yuqoridan ko’rinishi
+Ushbu bosqichda deraza yaratish usulidan foydalanib televizor modeli hosil qilinadi. Tekis shakl Cube asosida yaratiladi, Edit Mode da o’lchamlari moslashtiriladi va tekis ekran ko’rinishiga keltiriladi (3.69-rasm).
+
+3.69-rasm. Televizor ni joylashtirish
+Ushbu bosqichda xonadagi gilam modeli yaratiladi. Shift + A yordamida Plane qo’shiladi va u gilam o’lchamiga moslab Scale orqali kattalashtiriladi. Shundan so’ng Shader Editor oynasiga o’tilib, material berish jarayoni amalga oshiriladi. Shift + A → Texture → Image Texture buyrug’i orqali gilam uchun rasm (tekstura) tanlanadi va u Principled BSDF tuguniga ulanadi (3.70, 3.71-rasmlar).
+
+3.70-rasm. Gilam uchun Plane obyektini yaratish
+
+3.71-rasm. Gilam uchun Plane obyektini yaratish
+
+3.72-rasm. Gilam obyektiga Image Texture orqali material berish
+Shader Editor oynasida (3.72-rasm) Image Texture tuguni qo’shilib, undan tanlangan tekstura Principled BSDF tugunining Base Color kirishiga ulanadi. Principled BSDF esa Material Output tuguniga bog’langan.
+
+3.73-rasm. Image Texture ni Base Color ga ulash va Viewport Shading
+Yaratilgan Node ni Color qismini Prinsipled BSDF dagi Base Colorga ulanadi va Viewport Shading rejimiga otiladi  va Image Textur da Open tugmasini bosib kerakli gilam rasmini tanlanadi (3.73, 3.74-rasmlar).
+
+3.74-rasm. Image Texturedan rasm chaqirib olish
+Edit Mode ga o’tilib gilam obyekti tanlanadi. U tugmasi bosilib Smart UV Project tanlanadi. Natijada tekstura gilam yuzasiga to’g’ri va bir tekis joylashtiriladi (3.75-rasm).
+
+3.75-rasm. Gilam uchun Smart UV Project qo’llash
+Chap burchakda yangi oyna yaratiladi va UV Editor tanlanadi. Yaralgan oynada gilamning burchaklarini kerak olchamga G yordamida keltirib olinadi.
+ 
+3.76-rasm. Gilam teksturasini Smart UV Project orqali to’g’ri joylashtirish
+
+3.77-rasm. Natija
+
+3.78-rasm. G yordamida gilamni xonaga joylashtirish
+Hide in Viewport ni ochiriladi va natijada shunday ikki xona yaratiladi
+
+3.79-rasm. 1-2 level muhitlari
+
+3.80-rasm. Render holati
+O’yin darajalari (Levels) o’yin jarayonining asosiy tarkibiy qismi bo’lib, o’yinchi harakat qiladigan muhit va sharoitlarni belgilaydi. Har bir levelda obyektlar joylashuvi, to’siqlar va makon tuzilishi o’zgartirilishi orqali o’yinning qiziqarliligi va murakkabligi boshqariladi. O’yin darajalari orqali o’yin bosqichma-bosqich rivojlanadi va o’yinchi yangi vazifalar hamda sharoitlarga moslashib boradi.
+Blenderda dasturida  kichik va katta xona yarating. Yaratilgan katta xonaga kamroq obyektlar joylashtiring. Kichik xonaga ko’proq obyektlarni joylashtiring va levellar qiyinchiligini shakllantiring
+Amaliy topshiriqlar
+
+
+	•	Blenderda dasturida  kichik va katta xona yarating. Yaratilgan katta xonaga kamroq obyektlar joylashtiring. Kichik xonaga ko’proq obyektlarni joylashtiring va levellar qiyinchiligini shakllantiring
+Amaliy topshiriqlar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4-bob haqida umumiy ma’lumot.
+Ushbu bobda Godot Engine muharriri interfeysi bilan tanishiladi. O’yin loyihasi yaratilib, sahna tuzilmasi shakllantiriladi, Player obyekti qo’shiladi va GDScript orqali uning harakati tashkil etiladi. O’yin maydoni chegaralanadi hamda to’qnashuv mexanikasi sozlanadi, o’yin obyektini klaviatura tugmalari orqali harakatlantirishni o’rgatish. Shuningdek, tezlik parametrini o’zgartirish orqali o’yin matematikasining asosiy tushunchalari tezlik, vaqt va masofa o’rtasidagi bog’lanish amalda ko’rsatiladi. 
+	•	Kodlash asoslari va Godot interfeysi
+O‘quvchilar Godot dasturi interfeysi bilan tanishib, 2D sahna yaratish, Sprite2D va CollisionShape2D qo‘shish hamda oddiy GDScript yordamida o‘yin obyektini klaviatura tugmalari orqali harakatlantirishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilar Godot dasturi interfeysi bilan tanishib, 2D sahna yaratish, Sprite2D va CollisionShape2D qo‘shish hamda oddiy GDScript yordamida o‘yin obyektini klaviatura tugmalari orqali harakatlantirishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter 
+	•	Godot 
+
+	•	Kompyuter 
+	•	Godot 
+
+Ishning bajarish tartibi
+Godot Engine dasturi ishga tushiriladi. Dastur ochilganda Project Manager oynasi paydo bo’ladi.
+ Yangi loyiha yaratish:
+	•	New Project tugmasi bosiladi
+	•	Project Name maydoniga loyiha nomi yoziladi (masalan: kodlash va Godot)
+	•	Project Path avtomatik qoldiriladi
+	•	Create & Edit tugmasi bosiladi va natijada yangi loyiha ochiladi.
+  
+4.1-rasm. Godot dasturida yangi o’yin loyihasini yaratish oynasi
+2D sahna (Scene) yaratish:
+	•	Godot muharriri ochilgach, markazda Create Root Node oynasi chiqadi
+	•	2D Scene tugmasi bosiladi
+Sahnaning asosiy nodi Node2D bo’ladi.
+  
+4.2-rasm. 2D sahna (Scene) yaratish
+
+4.3-rasm. FileSystem’da rasm fayllari uchun papka yaratish
+
+4.4.-rasm Godot loyihasida rasm faylini FileSystem orqali qo’shish
+Keyingi bosqich Sprite2D ni qo’shish(4.5-rasm):
+	•	Scene oynasida Node2D ni tanlanadi
+	•	Tepada + (Add Child Node) tugmasini bosiladi
+	•	Qidiruvga Sprite2D yoziladi 
+	•	Sprite2D → Create ni bosiladi 
+
+4.5.-rasm. Sprite2D nodini sahnaga joylashtirish
+Rasmni biriktirish(4.6-rasm):
+	•	Scene oynasida Sprite2D ni bosiladi
+	•	O’ng tomondagi Inspector ----Texture---- Load tugmasini bosiladi
+	•	res://Images/changyutgich.jpg ni tanlanadi va Open bosiladi va tanlangan rasm sahnada chiqadi.
+
+4.6-rasm. Godot 2D sahnasida o’yin obyektini (Sprite2D) yaratish
+Keyingi bosqichda  Sprite 2D nomini Playerga o’zgartiramiz(4.7-rasm):
+Sprite2D nomini Player qilinadi, CollisionShape2D qo’shiladi, Script biriktiriladi va  harakat kodi yoziladi.
+ 
+4.7-rasm. Playerga o’zgartirish
+Keyingi bosqich CollisionShape2D qo’shish(4.8-rasm): Player (Sprite2D) ni tanlanadi,  + (Add Child Node) tugmasini bosiladi va qidiruvga: CollisionShape2D yoziladi va Create bosiladi. Scene tuzilmasi  shunday bo’ladi (4.9-rasm):
+
+4.8-rasm.  CollisionShape2D qo’shish
+
+4.9-rasm. Scene tuzilmasi  
+CollisionShape2D ni tanlanadi  O’ng tomonda Inspector oyda: Shape → New RectangleShape2D.  Sahnadagi to’rtburchakni: rasmga moslab kattalashtiriladi. Endi Player obyektida to’qnashuv bor.
+
+4.10-rasm. To’qnashuv shaklini berish
+Script qo’shish(4.11-rasm): Player (Sprite2D) ni tanlanadi, 📄 Attach Script tugmasini bosib Language: GDScript va Create bosiladi.
+
+4.11-rasm. Harakat uchun Script biriktirish 
+Harakat kodi:
+extends Sprite2D
+@export var speed := 200
+func _process(delta):
+	var direction := Vector2.ZERO
+	if Input.is_action_pressed("ui_right"):
+		direction.x += 1
+	if Input.is_action_pressed("ui_left"):
+		direction.x -= 1
+	if Input.is_action_pressed("ui_down"):
+		direction.y += 1
+	if Input.is_action_pressed("ui_up"):
+		direction.y -= 1
+	if direction != Vector2.ZERO:
+		direction = direction.normalized()
+	position += direction * speed * delta
+
+4.12-rasm. Harakat kodini yozish
+Keyingi bosqich: O’yinni ishga tushirish(4.13-rasm)
+ Sahna saqlash
+	•	Ctrl + S
+	•	Nom: MainScene.tscn
+Play bosish
+	•	Yuqoridagi ▶ Play tugmasini bosish
+	•	Agar so’rasa → Select Current
+
+4.13-rasm. Saqlash
+Sprite2D yordamida o’yin qahramoni yaratiladi, CollisionShape2D bilan to’qnashuv belgilanadi va script orqali obyekt harakatlantiriladi.
+  
+4.14-rasm. ↑ ↓ ← → tugmalar bilan Harakatlantirish 
+Player (changyutgich) obyekti va unga Sprite2D hamda CollisionShape2D komponentlari biriktiriladi. GDScript dasturlash tili yordamida klaviatura tugmalari orqali obyekt harakati tashkil etiladi. Natijada foydalanuvchi tomonidan boshqariladigan 2D o’yin elementi yaratildi.
+	Scene oynasida Player tugunini qo‘shib, unga Sprite2D va CollisionShape2D biriktiring.
+	•	GDScript yordamida Player obyektining harakatini dasturlang.
+
+Amaliy topshiriqlar
+
+
+	•	Scene oynasida Player tugunini qo‘shib, unga Sprite2D va CollisionShape2D biriktiring.
+	•	GDScript yordamida Player obyektining harakatini dasturlang.
+
+Amaliy topshiriqlar
+
+
+	•	O’yin mexanikasi va  UI elementlari 
+O‘yin mexanikasi va UI elementlari asosida pol, devor va Player harakatini tashkil etishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘yin mexanikasi va UI elementlari asosida pol, devor va Player harakatini tashkil etishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter Godot dasturi Klaviatura
+
+
+	•	Kompyuter Godot dasturi Klaviatura
+
+
+	Ishning bajarish tartibi
+Godot muharriri yordamida 2D o’yin mexanikasini yaratish, o’yin qahramonini joylashtirish hamda o’yin maydonini chegaralovchi devorlarni hosil qilish ketma-ketligi o’rganiladi.
+Pol (floor) yaratish
+Scene oynasida eng yuqoridagi Node2D ni tanlanadi, + (Add Child Node) tugmasini bosiladi(4.15-rasm). 
+  Qidiruvga yoziladi:  StaticBody2D
+ Create ni bosib yangi obyekt nomini o’zgartiriladi: Floor
+
+4.15-rasm. Pol uchun asosiy obyekt yaratish
+ColorRect qo’shish(4.16-rasm). Floor ni tanlanadi. + → Add Child Node. Qidiruvga: ColorRect va Create bosiladi.
+
+4.16-rasm. Polni ko’rinadigan qilish (ColorRect)
+ColorRect ni tanlab, Inspector (o’ng tomonda): Color → masalan:  och kulrang, sariq, och ko’k ranglarni tanlashimiz mumkin. O’lchamlari ham moslashtirib sozlanadi. 
+ 
+4.17-rasm. Pol rangini berish
+Devor uchun asosiy Node yaratish: Scene oynasida Node2D ni tanlanadi, + (Add Child Node) tugmasini bosib, Qidiruvga: Node2D yoziladi, Node2D ni tanlab Create bosib Node nomini Wall deb o’zgartiriladi (4.18-rasm).
+
+4.18-rasm. Devor uchun Node yaratish
+Scene oynasining chap qismidan devor joylashtiriladigan obyekt tanlanadi. Yuqori qismdagi + (Add Child Node) tugmasi bosilib, ColorRect qo’shiladi. Inspector oynasidan ColorRect ga rang beriladi.  Sichqoncha yordamida ColorRect cho’zilib, uzun to’rtburchak shakliga keltiriladi. ColorRect o’yin maydonining yuqori qismiga joylashtiriladi va yuqori devor hosil qilinadi (4.19-rasm).  
+
+4.19-rasm. Devor yaratish
+Scene oynasining chap qismidan devor obyektini tanlanadi. Tanlangan obyekt ustida + (Add Child Node) tugmasi bosiladi. Ochilgan oynadagi qidiruv maydoniga CollisionShape2D deb yoziladi. Ro’yxatdan CollisionShape2D tanlanib, Create tugmasi bosiladi. Yaratilgan CollisionShape2D obyektiga o’tiladi. Inspector oynasidagi Shape bo’limidan New RectangleShape2D tanlanadi. Sahnada paydo bo’lgan to’rtburchak shakl devor o’lchamiga moslab joylashtiriladi.
+
+4.20-rasm. Collision 2D
+   
+4.21-rasm. RectangleShape2D yordamida devorga to’qnashuv berish
+Scene oynasida Wall obyektining ichida CollisionShape2D tuguni paydo bo’ladi.  Yaratilgan CollisionShape2D tuguni tanlanadi.  O’ng tomondagi Inspector oynasida:
+	•	Shape bo’limi ochiladi;
+	•	RectangleShape2D tanlanadi.
+Sahna oynasida qizil rangli to’rtburchak (Rectangle Shape) paydo bo’ladi. Ushbu to’rtburchak devor (ColorRect) o’lchamiga moslab tortiladi va joylashtiriladi(4.21-rasm).
+
+4.22-rasm. Devorni ranglash va joylashuvini moslashtirish
+O’ng tomondagi Inspector oynasida Color bo’limi ochiladi. Devorni ko’rinadigan qilish uchun unga mos rang (masalan, ko’k yoki qizil) beriladi. Sahna oynasida devor Move (siljitish) va Scale (kattalashtirish/kichraytirish) vositalari yordamida joyiga keltiriladi. Devor o’yin maydonining yuqori qismiga tekis joylashtiriladi(4.22-rasm).
+ 
+4.23-rasm. Dublikat qilish
+Scene (chap panel) oynasidan Wall ichidagi ColorRect tanlanadi. Klaviaturadan Ctrl + D tugmalari bosiladi. Tanlangan devorning nusxasi (dublikat) yaratiladi. Dublikat qilingan ColorRect tanlangan holda:
+O’ng tomondagi Inspector oynasida Transform bo’limi ochiladi va Scale qiymatlarini o’zgartiriladi:
+	•	Scale X → 1.0 (yupqa qilish uchun)
+	•	Scale Y → 1.0 yoki 2.0 (uzun qilish uchun) va natijada devor vertikal (tik) holatga keladi(4.23-rasm).
+
+4.24-rasm. Tayyor holati
+Level Design o’yinning umumiy tuzilishini shakllantirishda muhim ahamiyatga ega. U o’yin maydonining chegaralarini belgilaydi, pol va devorlar orqali o’yinchining harakat yo’nalishlarini tartibga soladi. Level Design’ning roli esa o’yin jarayonini boshqarish, o’yinchini belgilangan hudud ichida ushlab turish va o’yin muhitini tushunarli hamda qulay holga keltirishdan iborat. Natijada o’yin jarayoni izchil, nazoratli va o’yinchi uchun qulay bo’ladi.
+
+	Player obyektining harakatlanishi yoki to‘siqqa teganda to‘xtashi mexanikasini tashkil eting.
+	•	O‘yinga Label yoki Button UI elementini joylashtirib, unda matn kiriting.
+
+Amaliy topshiriqlar
+
+
+	•	Player obyektining harakatlanishi yoki to‘siqqa teganda to‘xtashi mexanikasini tashkil eting.
+	•	O‘yinga Label yoki Button UI elementini joylashtirib, unda matn kiriting.
+
+Amaliy topshiriqlar
+
+
+
+
+
+	•	O’yin matematikasi 
+O‘quvchilarning o‘yin matematikasi asoslarini  koordinata, tezlik, vektor va masofa tushunchalarini o‘yin muhiti misolida o‘zlashtirishi.
+
+O‘quvchilarning o‘yin matematikasi asoslarini  koordinata, tezlik, vektor va masofa tushunchalarini o‘yin muhiti misolida o‘zlashtirishi.
+Mashg‘ulot
+maqsadi
+
+
+maqsadi
+O‘quvchilarning o‘yin matematikasi asoslarini  koordinata, tezlik, vektor va masofa tushunchalarini o‘yin muhiti misolida o‘zlashtirishi.
+
+O‘quvchilarning o‘yin matematikasi asoslarini  koordinata, tezlik, vektor va masofa tushunchalarini o‘yin muhiti misolida o‘zlashtirishi.
+Mashg‘ulot
+maqsadi
+
+
+maqsadi
+Kerakli vositalar
+
+Kerakli vositalar
+Kerakli vositalar
+
+Kerakli vositalar
+	•	Kompyuter Godot dasturi Sichqoncha
+
+
+	•	V-BOB. O‘YIN YARATISHDA JAMOAVIY ISH VA GITKompyuter 
+	•	Godot 
+
+	•	Kompyuter Godot dasturi Sichqoncha
+
+
+	•	V-BOB. O‘YIN YARATISHDA JAMOAVIY ISH VA GITKompyuter 
+	•	Godot 
+
+Ishning bajarish tartibi
+O’yin matematikasi o’yinda obyektlarning harakati, tezligi, masofasi va vaqt bilan bog’liq jarayonlarni boshqarishga xizmat qiladi. O’yin matematikasi yordamida obyektlarning bir tekis harakatlanishi, to’qnashuvlarga to’g’ri munosabat bildirilishi va o’yin jarayonining mantiqiy ishlashi ta’minlanadi.
+Godot → New Project → loyiha nomi: GameMath. 
+Renderer: Forward+ (o’zgartirilmaydi). Create. GameMath bu butun o’yin papkasi
+GameMath da barcha fayllar bo’ladi:
+sahnalar (scene)
+rasmlar
+skriptlar
+GameMath — bitta o’yin (proyekt)
+
+  
+4.25-rasm. Yangi sahna ochish va saqlash
+Asosiy sahna yaratish. Scene → New Scene → 2D Scene ni tanlanadi va sahna nomi: Main. Ctrl + S → main.tscn qilib saqlanadi(4.26-rasm).
+
+4.26. Asosiy sahna yaratish
+ 
+4.27-rasm. Player yaratish
+Sahna ichida + tugmasini bosib CharacterBody2D tanlanadi. Nomini → Player ga o’zgartiriladi. CharacterBody2D   harakat uchun eng qulay obyekt(4.27).
+Player ustida + → Sprite2D.  Inspector → Texture → istalgan rasm tanlanadi (yoki oddiy kvadrat bo’lsa ham bo’ladi) (4.28).
+
+4.28-rasm. Sprite qo’shish
+
+4.29-rasm. Script yozish
+Player obyektini tanlanadi. Attach Script tugmasini bosiladi. Til: GDScript. Create tugmasini bosiladi (4.29).
+
+
+4.1-jadval.Script
+extends CharacterBody2D
+@export var speed = 200
+func _physics_process(delta):
+	var direction = Vector2.ZERO
+	if Input.is_action_pressed("ui_right"):
+		direction.x += 1
+	if Input.is_action_pressed("ui_left"):
+		direction.x -= 1
+
+if Input.is_action_pressed("ui_down"):
+		direction.y += 1
+	if Input.is_action_pressed("ui_up"):
+		direction.y -= 1
+	velocity = direction.normalized() * speed
+	move_and_slide()
+
+4.30-rasm. Script qo’shish
+Ushbu bosqichda Player obyektining harakat tezligi speed o’zgaruvchisi orqali boshqariladi. Tezlik qiymati o’zgartirilganda, Player’ning bir soniyada bosib o’tadigan masofasi ham o’zgaradi. Bu o’yin matematikasida tezlik, vaqt va masofa o’rtasidagi bog’lanishni amalda ko’rsatadi.
+ 
+4.31-Rasm. Tezlikni 500 ga o’zgartirish
+
+4.32. Tezlik 100 ga o’gartirish.
+Player harakat tezligini o’zgartirish orqali o’quvchilar o’yinda matematik tushunchalar  tezlik va masofa qanday ishlashini amaliy tarzda o’rganadilar. Bu o’yin matematikasining asosiy elementlaridan biri hisoblanadi.
+	Player obyektining harakat tezligini hisoblang. Harakat masofasi va vaqt asosida obyekt tezligini aniqlang va o‘yinda qo‘llang
+	•	Yo‘nalish va koordinatalar bilan ishlang.
+
+Amaliy topshiriqlar
+
+
+	•	Player obyektining harakat tezligini hisoblang. Harakat masofasi va vaqt asosida obyekt tezligini aniqlang va o‘yinda qo‘llang
+	•	Yo‘nalish va koordinatalar bilan ishlang.
+
+Amaliy topshiriqlar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5-bob haqida umumiy ma’lumot.
+Ushbu bobda game production jarayonlari haqida ma’lumotga ega bo’ladi. Git Bash o’rnatish va Git Bash muhiti orqali asosiy  buyruqlarni bajarish. Papkalar yaratish va ularni nazorat qilish, buyruqlarni yozish, o’yin ishlab chiqishda versiyalarni nazorat qilish haqida amaliy tushunchaga ega bo’ladi.
+	•	Game production jarayoni
+O‘quvchilar o‘yinni yaratish jarayoni qanday bosqichlardan iborat ekanini amaliy tarzda  tushunishi va o‘yin loyihasi uchun to‘g‘ri papkalar tuzilmasini yaratish.
+Mashg‘ulot
+maqsadi
+O‘quvchilar o‘yinni yaratish jarayoni qanday bosqichlardan iborat ekanini amaliy tarzda  tushunishi va o‘yin loyihasi uchun to‘g‘ri papkalar tuzilmasini yaratish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Windows operatsion tizimi
+	•	 Fayl menejeri
+	•	 Oldindan o‘rnatilgan Git 
+
+
+
+	•	Windows operatsion tizimi
+	•	 Fayl menejeri
+	•	 Oldindan o‘rnatilgan Git 
+
+
+
+Ishning bajarish tartibi 
+Game production bu o’yinni yaratish jarayoni bo’lib, u bir nechta bosqichlardan iborat. Ushbu jarayonda o’yin g’oyasi ishlab chiqiladi, rejalashtirish amalga oshiriladi, kerakli resurslar tayyorlanadi, o’yin yig’iladi va sinovdan o’tkaziladi. Har bir bosqich ketma-ket bajarilib, yakunda tayyor o’yin mahsuloti yaratiladi. Game production jarayoni o’yinni tizimli va jamoaviy tarzda yaratish tushunchasini beradi.
+1-bosqich. Yangi loyiha papkasini yaratish
+	•	Ish stolida (Desktop) sichqonchaning o’ng tugmasini bosib
+	•	New → Folder tanlanadi
+	•	Papka nomini quyidagicha yoziladi: Vacuum_Cleaner_Game. 
+ Bu papka – butun o’yin loyihasining asosiy joyi bo’ladi.
+
+5.1-rasm. Papka yaratish
+2-bosqich. Game production bosqichlari uchun ichki papkalar yaratish
+Yangi yaratilgan papkani ochib va ichida quyidagi papkalarni yaratiladi:
+	•	01_Planning
+	•	02_Assets
+	•	03_Development
+	•	04_Testing
+	•	05_Release
+ Raqam bilan boshlanishi bosqichlar ketma-ketligini ko’rsatadi.
+
+5.2-rasm. Ichki papkalar yaratish
+3-bosqich. Har bir bosqichning vazifasini tushuntirish (amaliy bog’lash)
+01_Planning (Rejalashtirish)
+	•	O’yin g’oyasi
+	•	Qahramon: aqlli changyutgich
+	•	Maqsad: xonadagi changlarni tozalab ball yig’ish
+ Bu papkada idea.txt nomli fayl yaratiladi va 2–3 gap yani g’oya yoziladi
+
+5.3-rasm. Papka ichiga fayl yaratish
+02_Assets (Resurslar). Blenderda yaratilgan modellar (uy, pol, mebel, devor, eshik changyutgich). Photoshopda yaratilgan UI elementlar (coin, soat, menyu). Vaqtinchalik bo’sh qoldiriladi yoki “placeholder.txt” qo’yiladi.
+03_Development (Dasturlash va yig’ish)
+	•	Unity muhiti
+	•	Harakat, ball tizimi
+	•	O’yin mexanikasi
+ Bu papka keyingi boblarda to’ldiriladi.
+04_Testing (Sinov)
+	•	O’yin ishlayaptimi?
+	•	Ball to’g’ri qo’shilyaptimi?
+	•	Xatoliklar bormi?
+ Bu bosqichni keyinchalik bajarish rejalashtiriladi.
+05_Release (Tayyor holat)
+	•	O’yinning yakuniy versiyasi
+	•	Ishga tayyor holat
+Yani oxirgi natija bo’ladi.
+Game production jarayonida o’quvchilar o’yin yaratish faqat kod yozish bilan cheklanmasligini, balki g’oyani rejalashtirish, vazifalarni taqsimlash, resurslarni tayyorlash, sinovdan o’tkazish hamda yakuniy natijani baholash kabi muhim bosqichlarni o’z ichiga olishini amalda ko’rishadi. Natijada o’quvchilarda o’yinni jamoaviy va tizimli ravishda ishlab chiqish bo’yicha umumiy tushuncha shakllanadi.
+		O‘yin loyihasi uchun yangi papka yarating va Game production bosqichlariga mos papkalar tuzing.
+	•	Tanlangan o‘yin g‘oyasi asosida Game production bosqichlarini ketma-ketlikda yozing va har bir bosqichda bajariladigan ishlarni qisqacha ko‘rsating.
+Amaliy topshiriqlar
+
+
+	•	O‘yin loyihasi uchun yangi papka yarating va Game production bosqichlariga mos papkalar tuzing.
+	•	Tanlangan o‘yin g‘oyasi asosida Game production bosqichlarini ketma-ketlikda yozing va har bir bosqichda bajariladigan ishlarni qisqacha ko‘rsating.
+Amaliy topshiriqlar
+
+
+
+	•	Git va asosiy buyruqlar
+Git Bash o‘rnatish va Git Bash muhiti orqali asosiy  buyruqlarni bajarish
+Mashg‘ulot
+maqsadi
+Git Bash o‘rnatish va Git Bash muhiti orqali asosiy  buyruqlarni bajarish
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Git Bash dasturi
+	•	Kompyuter
+
+
+	•	Git Bash dasturi
+	•	Kompyuter
+
+
+Ishning bajarish tartibi
+Gitdan foydalanish jamoaviy ishlarda ayniqsa muhim bo’lib, u bir nechta foydalanuvchining bitta loyiha ustida samarali ishlashini ta’minlaydi. Shu sababli Git bilan ishlash zamonaviy dasturiy loyihalarning ajralmas qismi hisoblanadi. Git  bu fayllardagi o’zgarishlarni kuzatish va boshqarish uchun mo’ljallangan versiyalarni boshqarish tizimi hisoblanadi. U dasturiy loyihalarda bajarilgan ishlarni saqlash, tahrirlarni nazorat qilish va oldingi holatlarga qaytish imkonini beradi.
+Internet brauzeri orqali Git rasmiy sayti ochiladi va operatsion tizimga mos o’rnatish fayli yuklab olinadi. Yuklab olingan Git installer ishga tushiriladi. Git dasturidan foydalanish uchun mo’ljallangan GNU General Public License (GPL) litsenziya shartlari oynada ko’rsatiladi. Litsenziya shartlari bilan tanishib chiqiladi va o’rnatishni davom ettirish uchun Next tugmasi bosiladi (5.4-rasm).
+
+5.4-rasm. Git dasturining litsenziya shartlari oynasi
+Mazkur oynada (5.5-rasm) Git dasturining kompyuterga o’rnatiladigan joyi ko’rsatiladi. Standart o’rnatish manzili o’zgartirilmasdan qoldiriladi Next tugmasi orqali keyingi bosqichga o’tadi.
+
+5.5-rasm. Git dasturini o’rnatish manzilini tanlash oynasi
+Oynada (5.6-rasm) Git dasturini o’rnatish jarayonida foydalaniladigan komponentlar ro’yxati ko’rsatilgan. Barcha standart komponentlar belgilangan holda qoldirilib, o’rnatish jarayoni Next tugmasi orqali davom ettiriladi.
+
+5.6-rasm. Git dasturi komponentlarini tanlash oynasi
+
+
+5.7-rasm. Git dasturi uchun Start menyu papkasini tanlash
+Ushbu oynada (5.7-rasm) Git dasturi uchun Start menyuda yaratiladigan papka nomi ko’rsatiladi. Standart papka nomi o’zgartirilmasdan qoldiriladi va Next tugmasi bosiladi.
+
+5.8-rasm. Git uchun standart matn muharririni tanlash oynasi
+
+Mazkur oynada (5.8-rasm) Git bilan ishlashda foydalaniladigan standart matn muharriri tanlanadi. Matn muharriri sifatida Sublime Text (yoki Notepad) tanlanib, o’rnatish jarayoni Next tugmasi orqali davom ettiriladi.
+
+5.9-rasm. Git repository uchun boshlang’ich branch nomini  sozlash oynasi
+ Git repository yaratilganda foydalaniladigan boshlang’ich branch nomi tanlanadi. Standart holat o’zgartirilmaydi va asosiy branch nomi sifatida main belgilanadi. Sozlama tasdiqlanib, Next tugmasi orqali o’rnatish jarayoni davom ettiriladi (5.9-rasm).
+Git buyruqlaridan qaysi buyruq satri muhitida foydalanish tanlanadi. Git buyruqlarini Git Bash, Command Prompt va boshqa dasturlarda ishlatish imkonini beruvchi standart variant tanlangan holda qoldiriladi va o’rnatish jarayoni Next tugmasi orqali davom ettiriladi(5.10-rasm).
+
+5.10-rasm. Git dasturi uchun PATH muhitini sozlash oynasi
+Git dasturi uchun SSH executable (xavfsiz ulanish moduli) tanlanmoqda. Standart holatda “Use bundled OpenSSH” varianti belgilangan bo’lib, bu Git bilan birga o’rnatiladigan OpenSSH modulidan foydalanishni anglatadi. Ushbu tanlov boshlang’ich foydalanuvchilar uchun tavsiya etiladi va qo’shimcha sozlamalarsiz GitHub kabi masofaviy repozitoriyalar bilan ishlash imkonini beradi. Tanlovdan so’ng Next tugmasi bosilib, o’rnatish jarayoni davom ettiriladi (5.11-rasm).
+
+5.11-rasm. SSH executable moduli
+Git dasturi HTTPS orqali ulanayotganda qaysi SSL/TLS kutubxonadan foydalanishi tanlanadi. “Use the native Windows Secure Channel library” varianti tanlanganda Git Windows sertifikatlar omboridan foydalanadi va HTTPS ulanishlari xavfsiz tarzda amalga oshiriladi. Bu sozlama Windows muhitida ishlash uchun tavsiya etiladi va odatda standart holatda qoldiriladi(5.12-rasm).
+
+5.12-rasm. HTTPS transport backendini tanlash oynasi
+Git Bash bilan ishlash uchun qaysi terminal emulyatoridan foydalanish tanlanadi. “Use MinTTY (the default terminal of MSYS2)” varianti tanlanganda Git Bash maxsus MinTTY terminalida ochiladi, u qulay interfeys va kengaytiriladigan oyna imkoniyatlarini ta’minlaydi. Bu variant Git bilan ishlash uchun tavsiya etiladi va odatda standart holatda qoldiriladi.
+
+5.13-rasm. Git Bash uchun terminal emulyatorini tanlash oynasi
+Ushbu oynada git pull buyrug’i bajarilganda qaysi usul qo’llanishi tanlanadi. “Fast-forward or merge” varianti tanlanganda masofaviy o’zgarishlar mahalliy tarmoqqa avtomatik birlashtiriladi.
+
+5.14-rasm. Git pull buyrug’i uchun standart xatti-harakatni  tanlash oynasi
+Git uchun autentifikatsiya ma’lumotlarini saqlovchi yordamchi tanlanadi. “Git Credential Manager” varianti tanlanganda Git foydalanuvchi login va parollarini xavfsiz tarzda saqlaydi va keyingi ulanishlarda avtomatik ishlatadi (5.14-rasm).
+  
+5.15-rasm. Git Credential Manager yordamchisini tanlash va sozlash
+  
+5.16-rasm. o’rnatish jarayonining yakuniy bosqichlari
+Git dasturini o’rnatish jarayonining yakuniy bosqichi ko’rsatilgan. Birinchi oynada o’rnatish muvaffaqiyatli yakunlangani va “Finish” tugmasi orqali yopish mumkinligi aks etgan. Git for Windows dasturining joriy versiyasi bo’yicha chiqarilgan yangiliklar (Release Notes) ko’rsatiladi. Bu ma’lumotlar foydalanuvchiga dastur imkoniyatlari va yangilanishlari bilan tanishish imkonini beradi (5.17-rasm).
+      
+5.17-rasm. Git dasturini o’rnatishni yakunlash va chiqarilgan versiya ma’lumotlari oynasi
+Git dasturini o’rnatish jarayoni yakunlangach, o’rnatish muvaffaqiyatli tugallangani haqida xabar oynasi ko’rsatiladi. Ushbu bosqichda Finish tugmasi bosilib, o’rnatish yakunlanadi.
+Shundan so’ng kompyuterda Git Bash dasturini ishga tushirish imkoniyati paydo bo’ladi. Git Bash ishga tushirilganda ekranda qora rangli buyruqlar oynasi ochiladi. Ushbu oyna Git buyruqlarini kiritish va dastur bilan ishlash uchun mo’ljallangan asosiy ish muhiti hisoblanadi.
+1-bosqich. Kompyuterda Start menyusi orqali Git Bash dasturini ishga tushiriladi. Ekranda qora rangli buyruqlar oynasi ochiladi. Ushbu oyna buyruqlar kiritish uchun mo’ljallangan muhit hisoblanadi (5.18-rasm).
+
+5.18-rasm. Git Bash dasturini ishga tushirish.
+2-bosqich. Git Bash oynasiga quyidagi buyruqni kiritiladi: git version
+
+5.19-rasm. Git o’rnatilganligini tekshirish
+Natijada Git versiyasi ekranda aks etsa, Git dasturi muvaffaqiyatli o’rnatilganligi aniqlanadi (5.19-rasm).
+
+5.20-rasm. Yangi loyiha papkasini yaratish
+3-bosqich. Yangi loyiha uchun papka yaratiladi. Buning uchun quyidagi buyruqlar ketma-ket bajariladi: mkdir my_project  cd my_project
+
+5.21-rasm. Git repository yaratish.
+4-bosqich. Loyiha (5.21-rasm) papkasida Git’ni ishga tushirish uchun quyidagi buyruqni kiritiladi: git init 
+Natijada loyiha uchun bo’sh Git repository yaratiladi.
+
+5.22-rasm. Loyiha holatini tekshirish
+5-bosqich. Git repository holatini tekshirish uchun quyidagi (5.22-rasm) buyruqdan foydalanadi: git status. Bu buyruq loyiha ichidagi fayllar holatini 
+ko’rsatadi. 
+
+5.23-rasm. Matnli fayl yaratish.
+6-bosqich. O’quvchi loyiha papkasida oddiy matnli fayl yaratadi(5.23-rasm). Masalan: touch readme.txt
+Yaratilgan fayl Sublime Text yoki Notepad dasturida ochilib, unga qisqa matn yoziladi va saqlanadi.
+7-bosqich. Faylni Git kuzatuviga qo’shish(5.24-rasm). Faylni Git nazoratiga qo’shish uchun quyidagi buyruqni bajariladi:
+
+5.24-rasm. Faylni Git kuzatuviga qo’shish
+8-bosqich. Bajarilgan o’zgarishlarni saqlash uchun quyidagi buyruqni kiritadi: git commit -m ""
+
+5.25-rasm. O’zgarishlarni saqlash (commit)
+
+Rasmda (5.25-rasm) my_project papkasi ko’rsatilgan bo’lib, loyiha uchun Git versiyalarni boshqarish tizimi muvaffaqiyatli ishga tushirilgan. Mazkur papka Git repository sifatida yaratilgan va loyiha fayllari Git nazorati ostiga olingan. Repository to’liq ish holatida bo’lib, barcha keyingi o’zgarishlar saqlab borilishi mumkin. Loyiha uchun asosiy ishchi tarmoq (branch) sifatida main branch belgilangan bo’lib, barcha asosiy o’zgarishlar aynan ushbu branch orqali boshqariladi.
+
+		Kompyuteringizga Git dasturini o‘rnating va Git Bashni ishga tushiring
+	•	Git Bash oynasida yangi loyiha papkasini yarating, ushbu papkaga o‘ting va Git repository ishga tushiring (git init). Repository yaratilganligini git status buyrug‘i orqali tekshiring.
+Amaliy topshiriqlar
+
+
+	•	Kompyuteringizga Git dasturini o‘rnating va Git Bashni ishga tushiring
+	•	Git Bash oynasida yangi loyiha papkasini yarating, ushbu papkaga o‘ting va Git repository ishga tushiring (git init). Repository yaratilganligini git status buyrug‘i orqali tekshiring.
+Amaliy topshiriqlar
+
+
+
+	•	O’yin ishlab chiqishda version controlning afzalliklari
+
+O‘yin loyihasida Git version control tizimidan foydalanish imkoniyatlarini ko‘rsatish hamda loyiha holatini saqlash, o‘zgarishlarni nazorat qilish va ularning tarixini boshqarish.
+Mashg‘ulot
+maqsadi
+O‘yin loyihasida Git version control tizimidan foydalanish imkoniyatlarini ko‘rsatish hamda loyiha holatini saqlash, o‘zgarishlarni nazorat qilish va ularning tarixini boshqarish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter
+	•	 Git dasturi,  Git Bash 
+	•	 Oldindan yaratilgan o‘yin loyihasi papkasi 
+
+	•	Kompyuter
+	•	 Git dasturi,  Git Bash 
+	•	 Oldindan yaratilgan o‘yin loyihasi papkasi 
+
+Ishning bajarish tartibi
+Zamonaviy o’yin ishlab chiqish jarayonida loyihani tartibli boshqarish va o’zgarishlarni nazorat qilish muhim ahamiyatga ega. Shu maqsadda version control tizimlaridan foydalaniladi.
+1-bosqich. Loyiha papkasini Git Bashda ochish. Desktopda joylashgan Vacuum_Cleaner_Game papkasi Git Bash Here orqali ochiladi. Bu bosqichda o’yin loyihasi joylashgan ishchi papkaga kiriladi.
+      
+5.26-rasm. Loyiha papkasini ochish
+
+
+5.27-rasm. Git repository mavjudligini tekshirish
+2-bosqich. Git repository mavjudligini tekshirish. Buyruq (ls -a) yordamida loyiha papkasida .git papkasi mavjudligi aniqlanadi. .git papkasi Git repository mavjud ekanligini bildiradi. Loyiha Git orqali nazorat ostida saqlanadi(5.27-rasm).
+
+5.28-rasm. Holatni tekshirish
+3-bosqich. Loyiha holatini tekshirish. Ushbu buyruq (git status) loyiha holatini ko’rsatadi. Barcha o’zgarishlar saqlangan bo’lsa, loyiha toza holatda ekanligi aniqlanadi. O’zgarishlar yo’qolib ketmaydi, loyiha doim nazoratda bo’ladi (5.28-rasm).
+
+
+5.29-rasm. Ozgarishlar tarixi
+4-bosqich. O’zgarishlar tarixini ko’rish. Buyruq orqali loyiha bo’yicha bajarilgan commitlar tarixi ko’rsatiladi. Har bir commit loyiha rivojlanish bosqichini ifodalaydi.O’yin loyihasining qachon va qanday o’zgarganini ko’rish mumkin.
+5-bosqich. Version control afzalliklarini tahlil qilish. Git version control tizimi yordamida:
+	•	loyiha holati saqlanadi;
+	•	o’zgarishlar tarixda qoladi;
+	•	xatolik yuz bersa, oldingi holatga qaytish mumkin;
+	•	jamoaviy o’yin loyihalarida ishlash osonlashadi.
+Git Bash muhitida o’yin loyihasi bilan ishlash jarayoni ko’rsatilgan. Loyiha papkasidagi fayllar Git kuzatuviga qo’shilib, foydalanuvchi ma’lumotlari (ism va elektron pochta) sozlangan. Shundan so’ng loyiha holati git commit buyrug’i yordamida saqlanib, barcha o’zgarishlar muvaffaqiyatli qayd etigan. Oxirida loyiha holati tekshirilib, ishchi muhit toza holatda ekanligi aniqlangan(5.30-rasm).
+
+5.30-rasm. Git Bash oynasida o’yin loyihasini Git version control 
+tizimi orqali boshqarish jarayoni
+
+5.1-jadval. Git Bash buyruqlari va ularning vazifalari
+№
+Buyruq
+Izoh
+1
+git config --global user.name "Ism Familiya"
+Git tizimida foydalanuvchi ismini sozlash uchun ishlatiladi. Commitlarni kim bajarganini aniqlashga xizmat qiladi.
+2
+git config --global user.email "email@example.com"
+Git foydalanuvchining elektron pochta manzilini sozlaydi. Commitlar muallifini aniqlash uchun zarur.
+3
+git init
+Loyiha papkasida Git repository yaratadi va loyihani version control tizimiga bog’laydi.
+4
+ls -a
+Papkadagi barcha fayllar, jumladan yashirin .git papkasini ko’rsatadi. Git repository mavjudligini tekshirish uchun ishlatiladi.
+5
+git status
+Loyiha holatini tekshiradi va fayllar Git kuzatuvida ekanligini ko’rsatadi.
+6
+git add .
+Loyiha ichidagi barcha fayl va papkalarni Git kuzatuviga qo’shadi.
+7
+git commit -m "Vacuum Cleaner o’yin loyihasi boshlandi"
+Loyiha holatini saqlaydi va birinchi commitni yaratadi.
+8
+git log --oneline
+Bajarilgan commitlar tarixini qisqa ko’rinishda chiqaradi.
+9
+git status
+Commitdan keyin loyiha holatini qayta tekshiradi. Agar o’zgarish bo’lmasa, ishchi muhit toza ekanligini ko’rsatadi.
+
+O’yin loyihalarida Git version control tizimi loyihani boshqarish va rivojlantirish jarayonini tartibga solishda muhim ahamiyatga ega. Git yordamida loyiha o’zgarishlarini saqlash, nazorat qilish hamda jamoaviy ishlashni samarali tashkil etish imkoniyati yaratiladi. 
+
+	Git Bash yordamida o‘yin loyihasi  joylashgan papkada Git repository mavjudligini tekshiring va loyiha holatini aniqlang.
+	•	Git orqali loyiha o‘zgarishlari  tarixini  ko‘ring va commitlar ro‘yxatini  aniqlang.
+
+Amaliy topshiriqlar
+
+
+	•	Git Bash yordamida o‘yin loyihasi  joylashgan papkada Git repository mavjudligini tekshiring va loyiha holatini aniqlang.
+	•	Git orqali loyiha o‘zgarishlari  tarixini  ko‘ring va commitlar ro‘yxatini  aniqlang.
+
+Amaliy topshiriqlar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6-bob haqida umumiy ma’lumot.
+Ushbu bobda Unity muharriri bilan ishlashning asosiy bosqichlari yoritiladi. Unda Unityni o’rnatish, interfeysi bilan tanishish, sahna yaratish va asosiy oynalar (Hierarchy, Scene, Inspector, Console) vazifalari tushuntiriladi. Shuningdek, UI/HUD elementlari yordamida o’yin menyusi va interfeys yaratish, tugmalar va panellarni sozlash jarayoni ko’rib chiqiladi. Bobning yakuniy qismida esa ijodiy yondashuv asosida Blenderda tayyorlangan modellarni Unityga yuklash, materiallar berish, obyektlarni joylashtirish. O’quvchilarda Unityda amaliy ishlash va o’yin sahnasini mustaqil yaratish ko’nikmalarini rivojlantiradi.
+	•	Unityni o’rnatish va  interfeysi bilan tanishish
+Unity dasturini rasmiy veb-sayt orqali yuklab olish, o‘rnatish va o‘yin yaratish uchun zarur bo‘lgan dasturiy muhitni tayyorlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi
+Unity dasturini rasmiy veb-sayt orqali yuklab olish, o‘rnatish va o‘yin yaratish uchun zarur bo‘lgan dasturiy muhitni tayyorlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter
+	•	Unity Hub dasturi
+	•	Internet tarmog‘i
+
+
+
+	•	Kompyuter
+	•	Unity Hub dasturi
+	•	Internet tarmog‘i
+
+
+
+
+Ishning bajarish tartibi
+Unity 2D va 3D o’yinlar hamda interaktiv ilovalar yaratish uchun mo’ljallangan zamonaviy o’yin dvijogidir. Unity yordamida turli platformalar uchun o’yinlar ishlab chiqish mumkin bo’lib, u qulay interfeysi va keng imkoniyatlari bilan ajralib turadi. Unity dasturi orqali o’yin muhiti yaratish, obyektlarga harakat berish, oddiy o’yin mexanikalarini sozlash va tayyor loyihani ishga tushirish mumkin. 
+
+
+6.1-rasm. Unity dasturining rasmiy veb-sahifasi
+Yuqorida (6.1-rasm) Unity dasturining rasmiy veb-sayti (https://unity.com) bosh sahifasi ko’rsatilgan. Mazkur sahifa orqali foydalanuvchilar Unity dasturi haqida umumiy ma’lumot olishi, Unity Hubni yuklab olishi hamda o’yin yaratish uchun zarur resurslardan foydalanishi mumkin. Unity’ni o’rnatish jarayoni aynan shu rasmiy sayt orqali boshlanadi.
+
+6.2-rasm. Unity dasturini yuklab olish oynasi
+Rasmda (6.2-rasm) Unity dasturini yuklab olish oynasi ko’rsatilgan. Unda Unity Hub ni yuklab olish tugmasi, o’rnatish bosqichlari hamda tizim talablari haqida ma’lumotlar berilgan. Ushbu oyna orqali foydalanuvchi Unity dasturini kompyuterga yuklab olish jarayonini boshlaydi.
+
+6.3-rasm. Unity Hub yuklab olinishi tasdiqlash oynasi
+
+6.4-rasm. Unity litsenziya shartlarini tasdiqlash oynasi
+Mazkur oynada (6.4-rasm) foydalanuvchi Unityning bepul foydalanish shartlari va qoidalari bilan tanishadi hamda o’rnatishni davom ettirish uchun ularni tasdiqlaydi. Ushbu bosqich Unity Hub’ni to’liq o’rnatish va undan foydalanishni boshlash uchun majburiy hisoblanadi.
+
+6.5-rasm. Unity Hub o’rnatish faylini saqlash oynasi
+Unity Hub dasturini o’rnatish jarayonini boshlash uchun chiqadigan “Установить (Install)” oynasi ko’rsatilgan. Mazkur oynada o’rnatish joyi va asosiy sozlamalar tasdiqlanadi hamda Install tugmasi bosilgandan so’ng Unity Hubni kompyuterga o’rnatish jarayoni boshlanadi.
+
+6.6-rasm. Unity Hub dasturini o’rnatish jarayoni
+Unity Hub dasturini o’rnatish jarayoni ko’rsatilgan bo’lib, oynada fayllarni kompyuterga nusxalash jarayoni amalga oshirilayotgani va o’rnatish holati yuklanish paneli orqali aks ettirilgan. Ushbu bosqichda foydalanuvchi o’rnatish tugaguncha kutadi va jarayon avtomatik tarzda davom etadi (6.6-rasm).
+
+6.7-rasm. Unity Hub o’rnatilishini yakunlash oynasi
+Rasmda (6.7-rasm) Unity Hub dasturini o’rnatish jarayonining yakuniy bosqichi ko’rsatilgan. Oynada Unity Hub kompyuterga muvaffaqiyatli o’rnatilgani haqida xabar beriladi. “Готово” tugmasini bosish orqali o’rnatish ustasi yopiladi va belgilangan holatda Unity Hub dasturi avtomatik ravishda ishga tushiriladi. Ushbu bosqichdan so’ng foydalanuvchi Unity Hub muhiti orqali Unity Editor’ni yuklab olish va yangi o’yin loyihalarini yaratishni boshlashi mumkin.
+
+6.8-rasm. Unity Hub’ga kirish (Sign in) oynasi
+Rasmda (6.8-rasm) Unity Hub dasturini ishga tushirgandan so’ng ochiladigan foydalanuvchi hisobiga kirish oynasi ko’rsatilgan. Unity Hub’dan foydalanish uchun foydalanuvchi shaxsiy hisob (akkaunt) orqali tizimga kirishi talab etiladi.
+Mazkur oynada foydalanuvchi pochta (email) manzili orqali Unity akkauntiga kirishi mumkin. Buning uchun Sign in tugmasi bosiladi va brauzer orqali Unity hisobiga bog’langan elektron pochta va parol kiritiladi. Agar foydalanuvchida hali akkaunt mavjud bo’lmasa, Create account tugmasi orqali yangi akkaunt yaratish imkoniyati mavjud. 
+Elektron pochta orqali kirish Unity’ning litsenziyani aniqlashi, Unity Editor’dan foydalanish va loyihalarni boshqarish uchun zarur hisoblanadi. Hisobga muvaffaqiyatli kirilgandan so’ng foydalanuvchi Unity Hub muhiti orqali Unity Editor’ni o’rnatish, loyihalar yaratish va boshqarish imkoniyatiga ega bo’ladi.
+Unity Hub dasturining asosiy bosh oynasi ko’rsatilgan (6.9-rasm). Bu oynada Unity Editorni o’rnatish holati, loyiha yaratishni boshlash hamda asosiy bo’limlarga (Projects, Installs, Learn) o’tish imkoniyatlari mavjud.
+
+6.9-rasm. Unity Hub bosh oynasi
+
+
+6.10-rasm. Unity Hub’da o’rnatish yakunlangan holat
+Unity Hub dasturida Unity Editor muvaffaqiyatli o’rnatilgani ko’rsatilgan (6.10-rasm). Oynada o’rnatish bosqichi bajarilgani tasdiqlanadi va Start project tugmasi orqali yangi loyiha yaratishni boshlash mumkinligi aks etadi.
+
+6.11-rasm. Unity standart oynasi
+Unity ishga tushirilgandan keyin boshlang’ich oyna Unity Editor ochilganda ekranda bo’sh sahnaga ega standart muharrir oynasi paydo bo’ladi (6.11-rasm).
+Ushbu sahnada odatda: Katakli (grid) fon; Asosiy kamera (Main Camera); Yoritish manbai (Directional Light) mavjud bo’ladi. Bu holat o’yin sahnasini yaratish uchun boshlang’ich muhit hisoblanadi.
+
+6.12-rasm. 3D sahna yaratish
+
+6.13-rasm. Hierarchy, Scene, Inspector va Console oynalari
+Unity muharriri interfeysi o’yin yaratish jarayonini qulay va tartibli tashkil etish uchun mo’ljallangan. Interfeys bir nechta asosiy oynalardan iborat bo’lib, har bir oyna ma’lum vazifani bajaradi. Scene oynasi sahnani yaratish va tahrirlash uchun, Inspector oynasi obyektlarning xossalarini sozlash uchun, Console oynasi esa dastur ish jarayonidagi xatolik va xabarlarni nazorat qilish uchun xizmat qiladi. 
+	Unity rasmiy sayti orqali Unity Hub dasturini yuklab oling va kompyuterga o‘rnating.
+	•	Unity Hub dasturini ishga tushiring va email (pochta) orqali akkauntga kiring.
+Amaliy topshiriqlar
+
+
+	•	Unity rasmiy sayti orqali Unity Hub dasturini yuklab oling va kompyuterga o‘rnating.
+	•	Unity Hub dasturini ishga tushiring va email (pochta) orqali akkauntga kiring.
+Amaliy topshiriqlar
+
+
+	•	Unity komponentalari UI/HUD
+Unity muharririda UI/HUD komponentalari bilan tanishish hamda o‘yinda matn, tugma va ko‘rsatkichlar orqali foydalanuvchi interfeysini yaratish bo‘yicha boshlang‘ich ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi
+Unity muharririda UI/HUD komponentalari bilan tanishish hamda o‘yinda matn, tugma va ko‘rsatkichlar orqali foydalanuvchi interfeysini yaratish bo‘yicha boshlang‘ich ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Unity Editor
+	•	Canvas
+	•	Button
+	•	Text / TextMeshPro
+
+	•	Unity Editor
+	•	Canvas
+	•	Button
+	•	Text / TextMeshPro
+
+Ishning bajarish tartibi
+UI (User Interface) va HUD (Heads-Up Display) o’yinda foydalanuvchiga ma’lumot berish va o’yinni boshqarish uchun xizmat qiladi. UI/HUD elementlari o’yin jarayonida ochko, vaqt, tugmalar va boshqa muhim ma’lumotlarni ekranda ko’rsatadi. Unity muharririda UI/HUD elementlari maxsus komponentalar orqali yaratiladi va boshqariladi.
+1-qadam. Canvas yaratish
+	•	Hierarchy oynasida bo’sh joyga Right Click
+	•	UI → Canvas
+	•	Canvas avtomatik yaratiladi
+
+6.14-rasm. Canvas yaratish
+2-qadam. Canvas sozlash (6.15-rasm)
+	•	Canvas ni tanlanadi
+	•	Inspector → Canvas: Render Mode: Screen Space - Overlay
+	•	Canvas Scaler bo’limida: UI Scale Mode: Scale With Screen Size
+Reference Resolution: 1920 x 1080, 
+Match: 0.5
+
+6.15-rasm. Canvas sozlash
+3-qadam. Panel yaratish(6.16-rasm)
+	•	Canvas ustida Right Click
+	•	UI → Panel
+	•	Nomini o’zgartiriladi: MainPanel
+Rect Transform: Width: 600, Height: 700, Pos X: 0, Pos Y: 0
+	•	Image komponentida:
+Color → Alpha (A) ni 120–150 atrofida tanlanadi (yarim shaffof bo’ladi)
+
+6.16-rasm. Panel yaratish (Fon)
+1-qadam. Button (TMP) qo’shish(6.17-rasm)
+	•	Hierarchy → Canvas ustida Right Click
+	•	UI → Button – TextMeshPro
+Avtomatik yaratiladi: Button - Text (TMP) bo’ladi
+
+6.17-rasm. Button (TMP) qo’shish
+2-qadam. Matnni sozlash Text o’zgartirish(6.18-rasm)
+	•	Hierarchy → Button  → Text (TMP) ni tanlanadi
+	•	Inspector → TextMeshPro:
+Text: Start (yoki Sozlamalar, Chiqish)
+Font Size: 28–40
+Alignment: Center
+Color: oq yoki och rang
+
+6.18-rasm. Matnni sozlash
+3-qadam. Tugma fon rangini o’zgartirish (6.19-rasm). Image → Color
+	•	Hierarchy → Button (TMP) ni tanlanadi (Text emas!)
+	•	Inspector → Image:
+Color: och ko’k / ko’kimtir
+A (Alpha): 180–255 (ko’rinib turishi uchun)
+
+6.19-rasm. Button rangini o’zgartirish
+4-qadam. Transition sozlash. Bosilganda rang o’zgarishi (Transition)
+	•	Inspector → Button (Script)
+	•	Transition → Color Tint
+	•	Ranglarni belgilanadi:
+Normal Color – oddiy holat
+Highlighted Color – ustiga borganda
+Pressed Color – bosilganda
+
+6.20-rasm. Transition sozlash
+5-qadam. Rect Transform. Joylashtirish va o’lcham(6.21-rasm)
+	•	Width: 300
+	•	Height: 60
+	•	Pos X: 0
+	•	Pos Y: kerakli joyga (100, 0, -100)
+
+6.21-rasm. Joylashtirish va o’lchamni sozlash
+6-qadam. Yana 2 ta tugma qilish(6.22-rasm)
+	•	Button (TMP) ni tanlanadi
+	•	Ctrl + D (2 marta) dublikat qilinadi
+	•	Har birining Text (TMP) ini o’zgartiriladi:
+Sozlamalar
+Chiqish
+	•	Pos Y bilan pastga tushiriladi
+
+6.22-rasm. Dublikat qilish va joylashtirish
+
+6.23-rasm. O’yin menyusi prototip 
+   
+6.24-rasm. Unity uchun Photoshop’da yaratilgan HUD dizayni
+Photoshop grafik muharririda yaratilgan HUD interfeysi shaffof fon (transparent background) bilan saqlanib, Unity muharririga Sprite sifatida import qilinib, Import jarayonida UI elementlari Canvas ichida joylashtiriladi, Rect Transform va Canvas Renderer sozlamalari orqali ekran o’lchamiga moslashtiriladi. Natijada HUD interfeysi sahna fonidan mustaqil holda to’g’ri aks ettiriladi va o’yin interfeysida foydalanishga tayyor holatga keltiriladi (6.24-rasm).                   
+
+6.25-rasm. HUD Unity eksporti 
+O’yin menyusining vizual ko’rinishini yaxshilash maqsadida UI elementlariga chiziqli ramka (border) qo’llaniladi. Ramka menyu chegaralarini aniq belgilash, foydalanuvchi e’tiborini asosiy boshqaruv elementlariga qaratish hamda interfeysga zamonaviy ko’rinish berish uchun xizmat qiladi. Unity muharririda bunday ramkalar Image komponentasi orqali amalga oshirilib, rang va shaffoflik sozlamalari yordamida umumiy dizayn bilan uyg’unlashtiriladi.
+	Unity muharririda Canvas yaratib, unga TextMeshPro yordamida o‘yin nomini joylash
+	•	Yaratilgan tugmalarning fon ranglarini o‘zgartiring va UI menyu dizaynini bezating.
+
+Amaliy topshiriqlar
+
+
+	•	Unity muharririda Canvas yaratib, unga TextMeshPro yordamida o‘yin nomini joylash
+	•	Yaratilgan tugmalarning fon ranglarini o‘zgartiring va UI menyu dizaynini bezating.
+
+Amaliy topshiriqlar
+
+
+	•	O’yin yaratishda ijodiy yondashuv
+Kerakli vositalar
+Kerakli vositalar
+Unity muharririda tayyor 3D modellardan foydalanib, o‘yin sahnasini mustaqil yaratish va ijodiy yondashuv asosida obyektlarni joylashtirish ko‘nikmasini shakllantirish.
+Unity muharririda tayyor 3D modellardan foydalanib, o‘yin sahnasini mustaqil yaratish va ijodiy yondashuv asosida obyektlarni joylashtirish ko‘nikmasini shakllantirish.
+Kerakli vositalar
+Kerakli vositalar
+	•	Unity Editor
+	•	Blenderda yaratilgan 3D model 
+	•	Scene, Hierarchy va Inspector oynalari
+
+
+	•	Unity Editor
+	•	Blenderda yaratilgan 3D model 
+	•	Scene, Hierarchy va Inspector oynalari
+
+
+Ishning bajarish tartibi
+O’yin yaratishda ijodiy yondashuv sahna va obyektlarni maqsadga muvofiq tanlash, ularni to’g’ri joylashtirish hamda rang va yoritish orqali uyg’un muhit yaratishni nazarda tutadi. Unity muharriri yordamida tayyor 3D modellar bilan ishlash, obyektlarni dublikat qilish, materiallar qo’llash va yorug’likni sozlash orqali o’yin muhiti shakllantirish imkonini beradi.
+Yuqori menyudan File → New Scene buyrug’i tanlandi. Bo’sh sahna ochiladi va File → New Scene  → Create orqali sahna saqlandi.
+
+1-rasm. Yangi sahna ochish
+FBX modelni Unityga yuklash. Blenderda tayyorlangan stol va stul modeli FBX formatida saqlanib, Unity loyihasining Assets → Models papkasiga yuklandi. Model Project oynasida ko’rinadi va Drag Drop orqali sahnaga joylashtiriladi(2—rasm).
+
+2-rasm. FBX modelni Unityga yuklash
+Model kichik bo’lib tushgani sababli model tanlandi va Inspector → Transform → Scale qiymatlari o’zgartirildi (masalan: 5, 5, 5). Model sahnaga mos hajmga keltiriladi. Inspector oynasi orqali Position qiymatlari sozlanadi, stol va stul sahnada to’g’ri joylashtirildi.
+
+3-rasm. Model o’lchamini o’zgartirish
+Project oynasida sichqonchaning o’ng tugmasi bosilib, Create → Material buyrug’i tanlandi. Yangi material yaratiladi.
+
+4-rasm. Material yaratish
+
+4-rasm. Materialni tortib ulash 
+Materiallarni sahnadagi obyektlarga qo’llash tartibi
+	•	Pastdagi Project oynasidan yaratilgan materiallar topiladi:
+Table_Mat – stol uchun, Chair_Mat – stullar uchun, Carpet_Mat – gilam uchun, Floor_Mat – pol uchun
+	•	Har bir material sichqoncha yordamida alohida-alohida tanlandi.
+	•	Tanlangan materiallar drag & drop usulida sahnadagi mos obyektlarga qo’llaniladi:
+	•	Materiallar ota obyektga emas, balki Hierarchy oynasidagi ichki mesh obyektlarga biriktiriladi.
+Natijada sahnadagi obyektlar o’ziga mos rang va materiallarga ega bo’lib, sahnaning umumiy ko’rinishi yaxshilandi.
+
+5-rasm. Joylarni o’zgartirish
+
+6-rasm. Unityda ijodiy o’yin sahnasi
+Sahnada Unity muharririda o’yin muhiti ijodiy yondashuv asosida yaratiladi. Blenderda tayyorlangan stol va stul modellari sahnaga joylashtiriladi, obyektlar dublikat qilinib stol atrofiga mos holda joylashtiriladi. Gilam qo’shilib, unga qalinlik berildi va ranglar uyg’unligi ta’minlanadi. Sahna yoritilishi Directional Light va Point Light yordamida sozlanib, obyektlarning real ko’rinishi hosil qilinadi. 
+	Unity muharririda oddiy o‘yin sahnasini yarating. Obyektlarni joylashtirib, sahnadagi obyektlarga mos ranglar bering.
+	•	Sahna yoritilishini sozlab, obyektlarning ko‘rinishini yaxshilang.
+Amaliy topshiriqlar
+
+
+	•	Unity muharririda oddiy o‘yin sahnasini yarating. Obyektlarni joylashtirib, sahnadagi obyektlarga mos ranglar bering.
+	•	Sahna yoritilishini sozlab, obyektlarning ko‘rinishini yaxshilang.
+Amaliy topshiriqlar
+
+
+
+
+
+
+
+
+
+
+
+
+
+7-bob haqida umumiy ma’lumot.
+Ushbu bobda o’yin loyihasini foydalanuvchilarga yetkazish, nashr qilish va undan daromad olish jarayonlari ko’rib chiqiladi. O’yin uchun mos monetizatsiya modellari o’rganilib, loyiha xususiyatlariga qarab eng maqbul model tanlanadi va asoslanadi. Shuningdek, o’yinni nashr etish uchun publishing platformalar tahlil qilinadi hamda Steam platformasi tanlash sabablari ko’rsatiladi. Bobning yakuniy qismida esa Google Play Console orqali o’yinlarni nashr qilish qoidalari, dasturchi akkaunti talablari va ilovani bosqichma-bosqich tayyorlash jarayoni bilan tanishtiriladi. 
+	•	Publishing and Monetization modellari
+O‘yin loyihasi uchun publishing va monetizatsiya modellarini amaliy ravishda tanlash, tahlil qilish va asoslash.
+Mashg‘ulot
+maqsadi
+O‘yin loyihasi uchun publishing va monetizatsiya modellarini amaliy ravishda tanlash, tahlil qilish va asoslash.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter
+	•	Internet brauzer
+	•	O‘yin loyihasi  tavsifi
+
+
+	•	Kompyuter
+	•	Internet brauzer
+	•	O‘yin loyihasi  tavsifi
+
+
+Ishning bajarish tartibi
+O’yin ishlab chiqish jarayonida mahsulotni yaratish bilan birga uni foydalanuvchilarga yetkazish, tarqatish va daromad olish masalalari ham muhim hisoblanadi. Marketing va noshirlik jarayonlari o’yinning ommalashuvi, foydalanuvchilar sonining oshishi hamda loyiha barqaror rivojlanishini ta’minlaydi.
+O’yinlarda nashr etish - bu o’yinni moliyalashtirish, marketing, tarqatish va nashr etishni boshqarish jarayoni, Monetizatsiya esa ushbu o’yindan daromad olish strategiyalari va usullari bo’lib, ular reklama, ilova ichidagi xaridlar, obunalar yoki pullik versiyalarni o’z ichiga olishi mumkin. Noshir (nashriyot) ishlab chiquvchiga o’yinni o’yinchilarga yetkazishga va turli monetizatsiya modellaridan foydalangan holda pul ishlashga yordam beradi.
+1-bosqich. O’yin loyihasi tavsifini tayyorlash
+Matn muharririda (Word yoki Notepad) loyiha haqida qisqa tavsif yoziladi:
+	•	o’yin nomi;
+	•	janri;
+	•	platformasi;
+	•	maqsadli auditoriya.
+ 
+7.1-rasm. O’yin loyihasi tavsifi va loyiha papkasiga saqlash jarayoni
+2-bosqich. Monetizatsiya modellarini o’rganish
+Brauzerda quyidagi so’rov bilan qidiruv amalga oshiriladi: game monetization models
+Monetizatsiya modellari haqida veb-sahifa ochiladi va o’yinlarda qo’llaniladigan asosiy monetizatsiya modellari bilan tanishiladi. Ushbu bosqichda o’yinlarda qo’llaniladigan asosiy monetizatsiya modellari bo’yicha ma’lumotlar o’rganiladi va loyiha uchun mos modelni tanlashga asos yaratiladi.
+
+7.2-rasm. O’yinlar uchun monetizatsiya modellari haqida qidiruv natijalari
+
+3-bosqich. Asosiy monetizatsiya modellarini aniqlash.
+	•	Oldingi bosqichda topilgan ma’lumotlar tahlil qilinadi.
+	•	O’yin loyihalarida eng ko’p qo’llaniladigan monetizatsiya modellaridan ro’yxat tuziladi.
+	•	Ro’yxat matn muharririda (Word yoki Notepad) yoki jadval ko’rinishida rasmiylashtiriladi.
+
+7.3-rasm. O’yinlar uchun asosiy monetizatsiya modellari ro’yxati
+Ushbu modellar o’yin loyihalari uchun eng ko’p qo’llaniladigan monetizatsiya usullari hisoblanadi va loyiha xususiyatlariga qarab tanlanadi.
+4-bosqich. Loyiha uchun mos monetizatsiya modelini tanlash
+	•	Oldingi bosqichlarda o’rganilgan monetizatsiya modellariga asoslanib, loyiha xususiyatlari tahlil qilinadi.
+	•	O’yin janri, platformasi va maqsadli auditoriyasi inobatga olinadi.
+	•	(Loyiha nomi yoziladi) loyihasi uchun eng mos monetizatsiya modeli tanlanadi.
+	•	Tanlangan model matn muharririda (Notepad yoki Word) hujjat ko’rinishida rasmiylashtiriladi.
+
+7.4-rasm. monetizatsiya modeli hujjatini yaratish va saqlash jaayoni
+Rasmda (7.4-rasm) Vacuum Game Cleaner loyihasi uchun tanlangan monetizatsiya modeli hujjat ko’rinishida tayyorlanib, loyiha papkasiga saqlangani aks etgan.
+5-bosqich. Publishing platformasini aniqlash
+	•	Brauzer ishga tushiriladi.
+	•	O’yinlarni nashr qilish uchun mo’ljallangan platformalar ko’rib chiqiladi.
+	•	Loyiha platformasi, auditoriyasi va texnik imkoniyatlari inobatga olinadi.
+	•	Vacuum Cleaner Game loyihasi uchun mos publishing platformasi tanlanadi.
+Ko’rib chiqilgan publishing platformalari
+	•	Microsoft Store - Windows ilovalari va o’yinlarini rasmiy tarzda tarqatish platformasi.
+	•	Steam - kompyuter (PC) o’yinlari uchun mo’ljallangan platforma.
+	•	itch.io  - mustaqil (indie) o’yinlar uchun qulay platforma.
+Tanlangan publishing platformasi: Steam
+
+7.5-rasm. Steam platformasining bosh sahifasi
+Tanlash sabablari:
+	•	O’yin Windows (.exe) platformasi uchun mo’ljallangan;
+	•	Steam PC foydalanuvchilari orasida juda keng tarqalgan;
+	•	O’yinni .exe formatda yuklash, yangilash va tarqatish imkoniyati mavjud;
+	•	Pullik yoki bepul tarzda, shuningdek aksiyalar orqali tarqatish imkonini beradi;
+	•	Yutuqlar (Achievements), reytinglar va foydalanuvchi fikrlari orqali o’yinni rivojlantirish qulay.
+6-bosqich. Tanlovni asoslash
+	•	Matn muharriri (Notepad yoki Word) ochiladi.
+	•	Tanlangan publishing platformasi va monetizatsiya modeli bo’yicha qisqa asos yoziladi.
+	•	Hujjat loyiha papkasiga saqlanadi.
+	•	Tayyor hujjatdan skrinshot olinadi.
+
+7.6-rasm. Tanlangan publishing va monetizatsiya asoslari
+
+
+7.7-rasm. O’yin loyihasi fayllarini Git orqali saqlash jarayoni
+O’yin loyihasi uchun publishing va monetizatsiya modellari amaliy tarzda tanlanadi va asoslanadi. O’yin loyihalarida to’g’ri tanlangan publishing platformasi va monetizatsiya modeli o’yinning ommalashuvi hamda daromadliligini ta’minlaydi.
+	Loyiha uchun mos monetizatsiya modelini tanlang, uni .txt faylga yozib saqlang va Git orqali commit qiling.
+	•	Publishing platformasini tanlang, tanlash sabablarini yozing va faylni Git orqali commit qiling.
+Amaliy topshiriqlar
+
+
+	•	Loyiha uchun mos monetizatsiya modelini tanlang, uni .txt faylga yozib saqlang va Git orqali commit qiling.
+	•	Publishing platformasini tanlang, tanlash sabablarini yozing va faylni Git orqali commit qiling.
+Amaliy topshiriqlar
+
+
+	•	Google Play Consoleda o’yin yuklash qoidalari
+O‘quvchilarga Google Play Console platformasi orqali Android ilova va o‘yinlarni nashr qilish jarayoni haqida umumiy va amaliy tushuncha berishdan iborat.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga Google Play Console platformasi orqali Android ilova va o‘yinlarni nashr qilish jarayoni haqida umumiy va amaliy tushuncha berishdan iborat.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Internet brauzer 
+	•	Google akkaunt
+	•	Google Play Console rasmiy sayti
+	•	Matn muharriri (Notepad yoki Word)
+
+	•	Internet brauzer 
+	•	Google akkaunt
+	•	Google Play Console rasmiy sayti
+	•	Matn muharriri (Notepad yoki Word)
+
+Ishning bajarish tartibi
+Google Play Console Android ilovalar va o’yinlarni yuklash hamda boshqarish uchun mo’ljallangan rasmiy platforma hisoblanadi.
+1-bosqich. Google Play Console bilan tanishish
+	•	Brauzer ochiladi.
+	•	Qidiruv satriga quyidagi manzil kiritiladi:
+	•	play.google.com/console
+	•	Google Play Console bosh sahifasi ochiladi.
+
+7.8-rasm. Google Play Console bosh sahifasi
+Google Play Console bosh sahifasi. Ushbu sahifada dasturchining ilovalari ro’yxati, ularning holati (Draft, Production) hamda yangi ilova yaratish imkoniyati ko’rsatiladi. O’yinlarni yuklash va boshqarish jarayoni aynan shu sahifadan boshlanadi.
+2-bosqich. Dasturchi akkauntiga qo’yiladigan talablar bilan tanishish
+	•	Akkaunt turi (individual / tashkilot)
+	•	Ikki bosqichli autentifikatsiya (2FA) talabi
+
+7.9-rasm. Google Play Consoleda dasturchi akkaunt
+ turini tanlash qoidalari
+
+7.10-rasm. Ikki bosqichli autnfikatsiya
+	•	Dasturchi akkaunt turini tanlash sahifasi
+	•	Ikki bosqichli autentifikatsiya talabi
+Google Play Consoleda o’yin nashr qilishdan oldin dasturchi akkaunti va xavfsizlik talablari bajarilishi lozim.
+3-bosqich. O’yin yuklash uchun asosiy talablarni o’rganish
+	•	Brauzer orqali Google Play Consolening yordam (Help) bo’limi ochiladi.
+	•	Android o’yinlarini yuklash uchun qo’yiladigan asosiy talablar bilan tanishiladi.
+	•	Talablar ro’yxati tahlil qilinadi.
+Asosiy talablar:
+	•	Google Developer akkaunti mavjud bo’lishi;
+	•	O’yin APK yoki AAB formatda bo’lishi;
+	•	O’yin nomi va qisqacha tavsifi tayyorlangan bo’lishi;
+	•	Ilova belgisi (icon) va skrinshotlar mavjud bo’lishi;
+	•	Xavfsizlik va siyosat talablariga mos kelishi.
+
+7.11-rasm. Google Play Console tizimiga kirish sahifasi
+Ushbu sahifa Google Play Console platformasiga kirish uchun xizmat qiladi. Ilovalarni nashr qilish faqat Google akkaunt orqali amalga oshiriladi, bu xavfsizlik va nazoratni ta’minlaydi.
+
+7.12-rasm. Google Play Console boshqaruv paneli
+  
+7.13-rasm. Yangi ilova yaratish bo’limi
+Mazkur bo’lim orqali yangi ilova yoki loyiha qo’shish jarayoni boshlanadi. Bu bosqich nashr jarayonining boshlang’ich qismi hisoblanadi. Bu yerda ilovaning rasmiy nomi kiritiladi. Ilova nomi foydalanuvchilar uchun tushunarli va esda qoladigan bo’lishi muhim (7.13-rasm).
+Ushbu sahifada ilova uchun maxfiylik siyosati havolasi kiritiladi. Maxfiylik siyosati foydalanuvchilarning shaxsiy ma’lumotlari qanday yig’ilishi, saqlanishi va ishlatilishini tushuntirib beradi. Bu bo’lim Google Play Consolening majburiy talablaridan biri bo’lib, ilovani nashr qilishdan oldin to’ldirilishi shart (7.14-rasm).
+
+
+7.14-rasm. Maxfiylik siyosati (Privacy Policy) bo’limi
+ 
+7.15-rasm. App Content  sozlamalari sahifasi
+Ushbu sahifada ilovaning kontenti haqida ma’lumotlar kiritiladi. Bu yerda maxfiylik siyosati, reklama mavjudligi, yoshga moslik (content rating), maqsadli auditoriya va ma’lumotlar xavfsizligi kabi muhim talablar belgilanadi. Mazkur bo’lim Google Play qoidalariga moslikni ta’minlash va ilovani nashrga tayyorlash uchun zarur hisoblanadi(7.15-rasm).
+
+7.16-rasm. Content Rating (kontent reytingi) sozlamalari sahifasi
+Ushbu sahifada ilovaning kontent darajasi aniqlanadi. Bu yerda ilova turi (o’yin, ijtimoiy aloqa yoki boshqa ilovalar) tanlanib, foydalanuvchilarning yosh toifasiga mosligi belgilanadi. Kontent reytingi Google Playda ilovani nashr qilish uchun majburiy bo’lib, foydalanuvchilar xavfsizligini ta’minlashga xizmat qiladi.
+  
+7.16-rasmTarget Audience (maqsadli auditoriya) sozlamalari sahifasi
+Ushbu bo’limda ilovaning qaysi yoshdagi foydalanuvchilar uchun mo’ljallangani belgilanadi. Target Audience sozlamalari orqali ilovaning bolalar, o’smirlar yoki kattalar uchun mosligi aniqlanadi. Bu bosqich Google Play qoidalariga rioya qilish va ilovani to’g’ri auditoriyaga taqdim etish uchun muhim hisoblanadi (7.17, 7.18-rasmlar).
+
+7.17-rasm. Yosh kategoriyasini tanlash
+
+7.18-rasm. Saqlash Target Audience and Content (xulosa) sahifasi
+Ushbu sahifada ilovaning maqsadli auditoriyasi va kontent bo’yicha kiritilgan ma’lumotlar umumlashtirilgan holda ko’rsatiladi. Bu yerda ilovaning qaysi yosh toifasiga mo’ljallangani yakuniy tarzda tasdiqlanadi. Mazkur bosqich Google Play Consoleda ilovani tekshiruvga yuborishdan oldingi muhim yakuniy qadam hisoblanadi(7.18-rasm).
+
+7.19-rasm. Financial Features (moliyaviy funksiyalar) bo’limi
+
+7.20-rasm. Store Settings (ilova do’koni sozlamalari) bo’limi
+Ushbu sahifada ilovaning Google Playdagi do’kon sozlamalari belgilanadi. Bu yerda ilovaning turi (ilova yoki o’yin) hamda asosiy kategoriyasi tanlanadi. Store Settings bo’limi ilovani to’g’ri tasniflash va foydalanuvchilarga uni qulay tarzda topish imkonini berish uchun muhim hisoblanadi(7.20-rasm).
+
+7.21-rasm. Store Listing (kontakt ma’lumotlari va tavsif) bo’limi
+Ushbu sahifada ilovaning Google Play’dagi sahifasi uchun zarur bo’lgan asosiy ma’lumotlar kiritiladi. Chap tomonda ishlab chiquvchi bilan bog’lanish uchun elektron pochta, telefon raqami va veb-sayt manzili ko’rsatiladi. O’ng tomonda esa ilova nomi, qisqa va to’liq tavsifi hamda grafik materiallarni joylash bo’limi mavjud. Mazkur malumotlar ilovani foydalanuvchilarga tushunarli tarzda taqdim etish va Google Play qoidalariga moslikni ta’minlash uchun muhim hisoblanadi.
+
+7.22-rasm. Users and Permissions bo’limi
+Ushbu sahifada Google Play Console hisobiga ulangan foydalanuvchilar va ularning ruxsat darajalari boshqariladi. Bu yerda jamoa a’zolariga turli huquqlar (masalan, ko’rish, tahrirlash yoki nashr qilish) berish mumkin. Mazkur bo’lim bir nechta foydalanuvchi bilan ishlashda xavfsizlikni ta’minlash va vazifalarni to’g’ri taqsimlash uchun muhim hisoblanadi(7.22-rasm).
+Google Play Console o’yinni bosqichma-bosqich nashr qilish imkonini beradi. Har bir bosqich o’yinning sifatli va xavfsiz tarzda foydalanuvchilarga yetkazilishini ta’minlaydi.
+	Google Play Consoleda akkaunt ochish sahifasini ko‘rib chiqing va akkaunt yaratish bosqichlarini ketma-ket yozib chiqing.
+
+Amaliy topshiriqlar
+
+
+	•	Google Play Consoleda akkaunt ochish sahifasini ko‘rib chiqing va akkaunt yaratish bosqichlarini ketma-ket yozib chiqing.
+
+Amaliy topshiriqlar
+
+
+
+
+
+
+
+
+
+
+
+
+
+8-bob haqida umumiy ma’lumot.
+Ushbu bobda o’yin loyihasini rejalashtirishdan tortib, prototip yaratish va testing bosqichigacha bo’lgan jarayonlar amalga oshiriladi. Avval Game Design Document (GDD) tuzilib, o’yinning g’oyasi, interfeysi, modellar va mexanikalar rejalashtiriladi. Keyingi bosqichda prototip yordamida, o’yin muhitining umumiy ko’rinishi va obyektlar joylashuvi baholanadi. Yakuniy bosqichda esa o’yinning asosiy menyusi, sozlamalari va to’qnashuv mexanikasi testdan o’tkazilib, aniqlangan xatoliklar bartaraf etiladi. Natijada o’yin loyihasining barqaror va foydalanishga tayyor holati shakllantiriladi.
+	•	GDD (Game Design Document) tuzish
+O‘quvchilarga o‘yin loyihasini rejalashtirish, uning asosiy g‘oyasi, mexanikasi va tuzilishini hujjat shaklida ifodalashni o‘rgatishdan iborat.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga o‘yin loyihasini rejalashtirish, uning asosiy g‘oyasi, mexanikasi va tuzilishini hujjat shaklida ifodalashni o‘rgatishdan iborat.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter (Windows operatsion tizimi)
+	•	Matn muharriri 
+	•	Internet (misollar va ma’lumotlar uchun)
+	•	Daftar va ruchka (dastlabki reja uchun).
+
+
+	•	Kompyuter (Windows operatsion tizimi)
+	•	Matn muharriri 
+	•	Internet (misollar va ma’lumotlar uchun)
+	•	Daftar va ruchka (dastlabki reja uchun).
+
+
+Ishning bajarish tartibi
+Game Design Document (GDD) o’yin loyihasining asosiy reja-hujjati bo’lib, unda o’yinning g’oyasi, tuzilishi va qanday ishlashi batafsil bayon etiladi. GDD o’yin yaratish jarayonida yo’l xaritasi vazifasini bajaradi va loyihani tartibli hamda reja asosida olib borishga yordam beradi. 
+GDD hujjatida o’yinning maqsadi, asosiy mexanikasi, qahramonlar, darajalar va boshqaruv elementlari ko’rsatiladi. Ushbu hujjat yordamida o’yin qanday bo’lishi oldindan rejalashtiriladi va keyingi bosqichlarda xatolarning oldi olinadi.
+1-bosqich. Notepad faylini tayyorlash. Notepadni ochiladi. Faylni quyidagicha saqlanadi: GDD_oyin_loyihasi.txt
+
+         
+8.1-rasm. GGD hujjat yaratish bosqichi
+2-bosqich. O’yin g’oyasini yozish
+
+
+8.2-rasm. O’yin g’oyasini aniqlash bosqichi
+3-bosqich. Interfeys elementlari. 
+Ushbu bosqichda o’yinning foydalanuvchi interfeysi (UI) elementlari aniqlanadi va rejalashtiriladi. Interfeys elementlari o’yin jarayonida foydalanuvchiga zarur ma’lumotlarni aniq va tushunarli ko’rinishda taqdim etishga xizmat qiladi. Asosiy menyu o’yinni boshlash va boshqarish uchun mo’ljallangan, coin (tanga) belgisi to’plangan ochkolarni ko’rsatadi, vaqtni ko’rsatuvchi soat esa o’yin davomiyligini nazorat qilish imkonini beradi.
+
+8.3-rasm. Interfeys elementlarini tayyorlash bosqichi.
+4-bosqich. 3D modellar (Blender). Ushbu bosqichda o’yin muhiti uchun zarur bo’lgan 3D modellar Blender dasturida tayyorlanganligi haqida muharrirga yoziladi va papkaga saqlanadi.
+
+8.4-rasm Xona muhiti elementlari 
+5-Bosqich. O’yin mexanikasi (Godot). Ushbu bosqichda o’yinning asosiy ishlash mexanizmlari va matematik hisob-kitoblari rejalashtiriladi. O’yin qahramonining harakati, tezligi va o’yin muhitidagi obyektlar bilan o’zaro ta’siri aniqlanadi.
+O’yin matematikasi esa tezlik, masofa va vaqt o’rtasidagi bog’lanish asosida quriladi. Tezlik qiymatlarini o’zgartirish orqali o’yin qahramonining harakat dinamikasi boshqariladi. Ushbu bosqich o’yinning mantiqiy va texnik jihatdan to’g’ri ishlashini ta’minlaydi.
+
+
+8.5-rasm. O’yin mexanikasi va matematikasi bosqichi
+6-bosqich. Asosiy o’yin (Unity). Ushbu bosqichda o’yin loyihasining asosiy qismi Unity muharririda amalga oshiriladi. Blenderda tayyorlangan 3D modellar Unity sahnasiga import qilinadi va o’yin muhiti shakllantiriladi. Sahna (Scene) yaratiladi, xonaga pol, devorlar va mebel obyektlari joylashtiriladi.
+
+8.6-rasm. Unity’da asosiy o’yinni yaratish bosqichi
+
+
+O’yin loyihasi uchun Game Design Document (GDD) hujjati tayyorlashda GDD orqali o’yinning g’oyasi, janri, platformasi, interfeys elementlari, 3D modellar hamda o’yin mexanikasi bosqichma-bosqich rejalashtiriladi. Hujjat Notepad (word) matn muharririda tuzilib, bajarilish jarayoni skrinshotlar orqali tasdiqlanadi. Bunday yondashuv o’yin loyihasini rejalashtirish va keyingi bosqichlarda uni samarali amalga oshirish uchun asos bo’lib xizmat qiladi.
+
+	O’yin uchun GDD tuzing va har bir bosqichlarini matn muharirida yozing va GitBash repositorisiga nom berib qo’shing.
+
+Amaliy topshiriqlar
+
+
+	•	O’yin uchun GDD tuzing va har bir bosqichlarini matn muharirida yozing va GitBash repositorisiga nom berib qo’shing.
+
+Amaliy topshiriqlar
+
+
+
+	•	Prototip yaratish (2D yoki 3D)
+Unity muharrida 3D prototipini yaratish, o‘yin muhitini ko‘rinishi hamda asosiy obyektlar joylashuvi va umumiy dizaynini baholash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi
+Unity muharrida 3D prototipini yaratish, o‘yin muhitini ko‘rinishi hamda asosiy obyektlar joylashuvi va umumiy dizaynini baholash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Unity Editor
+	•	Tayyor 3D modellar
+	•	Yoritishlar
+
+
+	•	Unity Editor
+	•	Tayyor 3D modellar
+	•	Yoritishlar
+
+
+Ishning bajarish tartibi
+Prototiplash o’yin yaratish jarayonining muhim bosqichi bo’lib, unda o’yinning dastlabki ko’rinishi va tuzilishi shakllantiriladi. Ushbu bosqichda o’yin muhiti soddalashtirilgan holda yaratiladi, obyektlar joylashtiriladi va umumiy dizayn baholanadi. Prototiplash o’yinning g’oyasini tekshirish va keyingi rivojlantirish bosqichlariga tayyorlashga xizmat qiladi.
+
+
+8.1-rasm. Xona 3D prototipi
+
+Unity muharririda o’yinning xona uchun soddalashtirilgan 3D prototip yaratildi. Xona umumiy joylashuvni aniqlash maqsadida bo’sh holda modellashtirilib, pol va devorlar joylashtirildi. Ushbu daraja o’yin muhitiga kirish bosqichi sifatida xizmat qiladi.
+
+8.2-rasm. Xonaning boshqa rakursdan ko’rinishi
+Xonaga asosiy mebel va predmetlar joylashtirilib, o’yin muhitining umumiy ko’rinishi shakllantiriladi.
+
+8.3-rasm. Xonaning jihozlari bilan ko’rinishi
+
+Unity muharririda xona uchun 3D prototip kengaytirildi. Xonaga qo’shimcha mebel va predmetlar joylashtirilib, o’yin muhitining funksional va vizual ko’rinishi yaxshilandi.
+
+8.4-rasm. Xonaning boyitilgan 3D prototipi
+Unity muharririda xona uchun yakuniy 3D prototip shakllantiriladi. Xonaga mebel va boshqa obyektlar joylashtirilib, rang va yoritish sozlamalari orqali o’yin muhitining yakuniy ko’rinishi hosil qilinadi(8.5-rasm).
+
+8.5-rasm. Xonaning yakuniy 3D prototipi
+Unity muharririda yaratilgan xona boshqa rakursdan ko’rsatilgan. Ushbu ko’rinishda mebel va predmetlarning joylashuvi hamda sahnaning umumiy tuzilishi aniq namoyon bo’ladi.
+
+8.6-rasm. Xonaning boshqa rakursdan ko’rinishi
+
+8.7-rasm. Xonaning boshqa rakursdan ko’rinishi
+Prototiplash orqali o’yinning umumiy ko’rinishi, obyektlar joylashuvi va dizayn g’oyasi baholanadi. Ushbu bosqich keyingi ishlab chiqish va testlash jarayonlari uchun mustahkam asos yaratadi.
+	Unity muharririda o‘yin xonasi uchun soddalashtirilgan 3D prototip yarating. Xonaga pol va devorlarni joylashtirib, sahnaning umumiy ko‘rinishini shakllantiring.
+	•	Xonaga stol, stul, gilam kabi obyektlarni joylashtirib, rang va yoritishni sozlang hamda sahnaning ko‘rinishini yaxshilang.
+
+Amaliy topshiriqlar
+
+
+	•	Unity muharririda o‘yin xonasi uchun soddalashtirilgan 3D prototip yarating. Xonaga pol va devorlarni joylashtirib, sahnaning umumiy ko‘rinishini shakllantiring.
+	•	Xonaga stol, stul, gilam kabi obyektlarni joylashtirib, rang va yoritishni sozlang hamda sahnaning ko‘rinishini yaxshilang.
+
+Amaliy topshiriqlar
+
+
+	•	Testing
+Yaratilgan 3D prototipni Unity muharririda tekshirish va sahnaning umumiy ko‘rinishi hamda obyektlar joylashuvini baholash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi
+Yaratilgan 3D prototipni Unity muharririda tekshirish va sahnaning umumiy ko‘rinishi hamda obyektlar joylashuvini baholash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Unity Editor
+	•	Game oynasi
+	•	Play rejimi
+	•	Yaratilgan 3D sahnalar
+
+
+	•	Unity Editor
+	•	Game oynasi
+	•	Play rejimi
+	•	Yaratilgan 3D sahnalar
+
+
+Ishning bajarish tartibi
+Testing bosqichi o’yin loyihasini ishga tushirishdan oldingi muhim bosqich hisoblanadi. Ushbu bosqichda yaratilgan o’yinning barcha funksiyalari to’g’ri va barqaror ishlashi tekshiriladi. Testing jarayonining asosiy maqsadi xatoliklarni aniqlash, ularni bartaraf etish hamda o’yin foydalanuvchi uchun qulay holatga keltirishdan iborat.
+
+8.8-rasm. Cleaner Game o’yinining asosiy menyusini testlash jarayoni
+Bajarilgan ish yuzasidan kelich chiqqan holda testing jarayonida dastlab o’yinning asosiy menyusi tekshiriladi. Asosiy menyuda quyidagi mavjud elementlar sinovdan o’tkaziladi:
+	•	Start tugmasi — o’yinni boshlash funksiyasi tekshiriladi;
+	•	Sozlamalar bo’limi — sozlamalar oynasiga o’tish va undan qaytish tekshiriladi;
+	•	Chiqish tugmasi — o’yindan to’liq chiqish funksiyasi tekshiriladi.
+Sinov natijalariga ko’ra, barcha tugmalar belgilangan vazifalarni to’g’ri bajarayotgani aniqlanadi.
+ 
+8.9-rasm. Sozlamalar oynasini testlash
+Ushbu bosqichda o’yinning sozlamalar oynasi va undagi parametrlar testdan o’tkaziladi. Sozlamalar foydalanuvchiga o’yin jarayonini shaxsiylashtirish imkonini beradi.
+Ovoz slayderi yordamida o’yindagi umumiy ovoz balandligi boshqariladi. Slayderni o’zgartirish orqali ovoz darajasi real vaqt rejimida kamaytiriladi yoki oshiriladi. Test natijasida ovoz sozlamasi to’g’ri ishlayotgani aniqlangan.
+Tanga maydoni o’yin boshlanishidagi boshlang’ich tangalar sonini belgilash uchun xizmat qiladi. Kiritilgan qiymat o’yin jarayonida to’g’ri qo’llanilgan va tizim tomonidan to’g’ri qabul qilingan.
+Vaqt parametri o’yinga ajratilgan vaqt miqdorini belgilaydi. Kiritilgan qiymat asosida o’yin davomiyligi sozlanadi va vaqt hisoblash mexanizmi to’g’ri ishlaydi.
+Sozlamalar oynasidagi barcha elementlar testing jarayonida tekshiriladi va ularning barchasi belgilangan vazifalarni to’liq va barqaror bajarishi tasdiqlanadi.
+
+
+8.10-Rasm. To’qnashuv yo’q
+To’qnashuv (Collision) muammosini aniqlash va tuzatish. Ushbu rasmda o’yin jarayonida changyutgich obyektining mebel (shkaf) bilan to’qnashuvi noto’g’ri ishlayotgani kuzatilgan. Ya’ni, obyekt devor yoki mebelga yaqinlashganda u bilan to’liq to’qnashuv sodir bo’lmayapti va changyutgich qisman ichiga kirib ketmoqda.
+Collider Unityda obyektlar o’rtasidagi to’qnashuvni aniqlash uchun ishlatiladigan komponent. Collider obyektga ko’rinmas chegarani beradi va boshqa obyektlar bilan urilishni (collision) tekshiradi.
+
+8.11-Rasm. Shkafga Collider qo’llash
+To’qnashuv sozlamalari to’g’rilangandan so’ng, changyutgich obyektining mebel va devorlar bilan o’zaro ta’siri to’g’ri ishlay boshlaydi. O’yin jarayonida obyektlar bir-birining ichiga kirib ketish holatlari bartaraf etiladi va harakat mexanizmi barqaror holatga keltiriladi(8.11-rasm).
+
+8.12-rasm. Level 1 barcha Collidorlari 8.12-rasm. Level 2 barcha Collidorlari
+
+8.12-rasm. To’qnashuv sozlanganligi
+
+8.13-rasm. Tayyor Level 1 xonasi
+
+8.14-rasm. Tayyor Level 2 xonasi
+Agar sozlamalarda belgilangan vaqt ichida belgilangan miqdordagi tangalar yig’ilsa, ekranda “Siz yutdingiz!” xabari chiqadi. Belgilangan vaqt ichida tangalarni yig’ib ulgurilmasa, “Siz yutqazdingiz!” xabari ko’rsatiladi.
+
+8.15-rasm. G’alaba va mag’lubiyat holatlari oynasi
+O’yin jarayonini testlash
+O’yin jarayonida quyidagi jihatlar alohida tekshiriladi:
+	•	Changyutgich (robot) obyektining harakati;
+	•	Obyektlar bilan to’qnashuv (collision) holatlari;
+	•	Ball (ochko) hisoblash mexanizmi;
+	•	O’yin sahnasidan menyuga qaytish imkoniyati;
+	•	Klaviatura orqali boshqaruv 
+	•	Barcha mexanizmlar test davomida barqaror ishlagan va xatoliklar aniqlanmamagan.
+Testing bosqichi natijasida o’yin loyihasida changyutgich obyektining harakati to’g’ri ishlashi, mebel va devorlar bilan to’qnashuvlarning to’liq va aniq sozlangani tasdiqlangan. O’yinda vaqt hisoblash mexanizmi, ovoz sozlamalari hamda klaviatura orqali boshqaruv barqaror ishlayotgani sinovdan o’tkazilgan. Barcha asosiy funksiyalar muvaffaqiyatli tekshirilib, o’yin foydalanishga tayyor holatga keltirilgan.
+	Unityda yaratilgan sahnani Play rejimida ishga tushiring va obyektlar joylashuvini tekshiring.
+	•	Yoritish va rang sozlamalarini tekshirib, sahnaning umumiy ko‘rinishini baholang.
+
+Amaliy topshiriqlar
+
+
+	•	Unityda yaratilgan sahnani Play rejimida ishga tushiring va obyektlar joylashuvini tekshiring.
+	•	Yoritish va rang sozlamalarini tekshirib, sahnaning umumiy ko‘rinishini baholang.
+
+Amaliy topshiriqlar
+
+
+GAME DESIGN YO’NALISHI BO’YICHA USLUBIY KO’RSATMA
+(9-SINFLAR UCHUN)
+
+Muharrir:
+USMONOV JONIBEK TURDIQULOVICH
+
+Dizayner:
+JOLDASOV SHAXISLAM BATIROVICH
+MIRZAYEVA GULMIRA RUSTAMOVNA
+
+Rassom:
+JOLDASOV SHAXISLAM BATIROVICH
+QODIROV ALISHER XUSAN O’G’LI
+
+Texnik muharrir:
+QODIROV ALISHER XUSAN O’G’LI
+
+Sahifalovchi:
+MIRZAIROVA IRODA KAXAROVNA
+
+
+Toshkent-2026
+FOYDALANILGAN ADABIYOTLAR
+	•	Adobe Photoshop CC. Официальный учебный курс - М.: Эксмо, 2021. - 456 c.
+	•	Мария Серова, Учебник-самоучитель по трехмерной графике в Blender 3D. Моделирование, дизайн, анимация, спецэффекты, 2021, 270 стр.
+	•	Game Design Workshop: A Playcentric Approach to Creating Innovative Games — Tracy Fullerton, 2004.
+	•	Unity Game Development Cookbook. Paris Buttfield-Addison va boshqalar. 2019yil.
+	•	Создание игр в Unity.Денис Ширяев 2020 год
+ 
+Elektron manbalar.
+	1. https://godotengine.org/asset-library/asset   
+2. https://www.youtube.com/watch?v=U2eOc18gOOg 
+3.https://www.youtube.com/@Brackeys
+4. https://book.leveldesignbook.com/introduction  
+5. https://www.qollanmalar.uz 
+6. https://www.cgboost.com/courses/free-blender-beginners-course 
+
+
+

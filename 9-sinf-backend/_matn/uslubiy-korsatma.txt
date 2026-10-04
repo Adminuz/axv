@@ -1,0 +1,3594 @@
+OʻZBEKISTON RESPUBLIKASI  RAQAMLI TEXNOLOGIYALAR VAZIRLIGI
+RAQAMLI TA’LIMNI RIVOJLANTIRISH
+“MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN 
+ADVANCED BACK-END VA DEVOPS YO‘NALISHI BO‘YICHA USLUBIY QO‘LLANMA
+(9-SINFLAR UCHUN)
+
+
+
+
+
+
+
+
+
+
+
+
+TOSHKENT – 2026
+ADVANCED BACK-END VA DEVOPS (PYTHON BACK-END) YO’NALISHI 
+BO‘YICHA O‘QUV QO‘LLANMA 
+(9-SINFLAR UCHUN) 
+
+
+
+
+
+Bugungi shiddatli raqamli ekotizimda shunchaki ishlaydigan kod yozish yetarli emas. Millionlab foydalanuvchilarga ega xizmatlarni boshqarish, mikroxizmatlar arxitekturasini qurish va ularning xavfsizligini ta’minlash back-end muhandisidan chuqur texnik tayyorgarlik va DevOps amaliyotlarini mukammal bilishni talab qiladi. Ushbu o‘quv qo‘llanma sizni Python ekotizimining eng ilg‘or vositalari yordamida to‘liq siklli (full-cycle) dasturchi darajasiga olib chiqishni maqsad qilgan. Kitob shunchaki nazariya emas, balki kod yozishdan tortib, tizimni real serverga joylashtirish (deployment) va uni uzluksiz ekspluatatsiya qilishgacha bo‘lgan professional yondashuvlarni qamrab oladi. 
+
+
+
+
+
+
+
+
+
+
+
+Muharrir: Jiyanov S. Dizayner: Aliqulov A.
+MUNDARIJA
+KIRISH	6
+1.1.	Python: o‘rnatish, ilk dasturni yozish.	8
+1.1.	Operatorlar va ifodalar. Tarmoqlanuvchi algoritm (if/else).	18
+1.2.	Takrorlanuvchi algoritm, takrorlanish operatorlari.	28
+1.3.	Pythonda ma’lumotlar tuzilmalari: string, list, tuple, set	38
+1.4.	DRY prinsipi. Pythonda funksiyalar	52
+1.5.	Istisnoli holatlarni dasturlash (try/except). Fayllar bilan ishlash	58
+2.1.	Klass va uning atributlari. Obyektlar. Konstruktor	67
+2.2.	Inkapsulyatsiya	81
+2.3.	Merosxo‘rlik va Polimorfizm	87
+2.4.	Abstraksiya	92
+2.5.	Aiogram kutubxonasi yordamida telegram bot dasturini tuzish	96
+2.6.	Linuxda ishlash	114
+3.1.	PostgreSQL: o‘rnatish, MB va jadvallar yaratish..	121
+3.2.	CRUD amallarni (create, read, update, delete) bajarish.	132
+3.3.	Jadvallarni boshqarish (ALTER TABLE).	140
+4.1.	Asinxron dasturlash asoslari. FastAPI: HTTP so‘rovlar, routing	149
+4.2.	Ma’lumotlar turlari (Pydantic models)	157
+4.3.	CRUD amallarni bajarish (SQLAlchemy).	165
+4.4.	Fayllar bilan ishlash (upload/download)	174
+4.5.	Autentifikatsiya va avtorizatsiya. JWT, OAuth2	180
+4.6.	Swagger UI. Redoc	185
+5.1.	Git va GitHub bilan ishlash	192
+5.2.	Docker. Docker Compose	197
+5.3.	Nginx asoslari va Reverse Proxy	206
+5.4.	Github actions (CI/CD pipeline)	214
+5.5.	Monitoring va logging. Xavfsizlik va backup	220
+5.6. Deploy	225
+
+
+KIRISH
+Zamonaviy axborot texnologiyalari rivoji natijasida yuqori yuklamaga bardoshli, xavfsiz va kengaytiriladigan server ilovalarini yaratish hamda ularni uzluksiz ishlashini ta’minlash bugungi IT mutaxassislar oldidagi eng muhim vazifalardan biriga aylandi. Shu sababli backend dasturlash va DevOps yondashuvlarini chuqur o‘rganish raqamli mahsulotlar ishlab chiqishda muhim ahamiyat kasb etadi. Mazkur uslubiy qo‘llanma “Advanced Back-end va DevOps” fanini o‘rganish jarayonida o‘quvchilarda mustahkam nazariy bilimlar bilan bir qatorda amaliy ko‘nikmalarni shakllantirishga yo‘naltirilgan bo‘lib, real loyihalar asosida bilimlarni mustahkamlashni maqsad qiladi.
+Uslubiy qo‘llanmaning dastlabki bo‘limlarida Python dasturlash tilining asoslari bosqichma-bosqich o‘rgatiladi. Shundan so‘ng, obyektga yo‘naltirilgan dasturlash tamoyillari keng yoritilib, kodni qayta ishlatish va kengaytirish imkoniyatlari amaliy mashg‘ulotlar orqali mustahkamlanadi.
+Keyingi bo‘limda PostgreSQL MBBT ko‘rib chiqilib, MB tuzilmasini loyihalash, SQL so‘rovlar yozish,  MB ustida amallar bajarish amaliy misollar orqali tushuntiriladi.
+FastAPI bo‘limida zamonaviy asinxron backend ilovalarini yaratish, RESTful API ishlab chiqish o‘rgatiladi. Oxirgi bo‘limda DevOps konsepsiyasi asoslari bayon etilib, ilovalarni konteynerlash (Docker), muhitlarni sozlash, CI/CD jarayonlari, serverga joylash (deploy) va monitoring masalalari amaliy mashg‘ulotlar orqali tushuntiriladi. Bu bo‘lim o‘quvchilarga backend loyihani ishlab chiqishdan tortib, deploy qilish va ishlatishgacha bo‘lgan to‘liq jarayonni anglash imkonini beradi.
+Mazkur uslubiy qo‘llanma o‘quvchilarning mustaqil fikrlash, real backend tizimlarini yaratish, ularni boshqarish va avtomatlashtirish ko‘nikmalarini rivojlantirishga xizmat qiladi. Natijada o‘quvchilar zamonaviy, barqaror va kengaytiriladigan server tomon yechimlarini ishlab chiqish hamda DevOps yondashuvlari asosida ularni samarali boshqarishga tayyor mutaxassis sifatida shakllanadilar.
+
+
+ 
+ 
+1-bob haqida umumiy ma’lumot
+Mazkur bobda Python dasturlash tilining asosiy tushunchalari va dastur yozish bosqichma-bosqich o‘rgatiladi. Bob Python muhitini o‘rnatish va ilk dastur yozishdan boshlanib, o‘zgaruvchilar hamda sodda ma’lumotlar toifalari bilan ishlash asoslarini shakllantirishga yo‘naltirilgan. Operatorlar va ifodalar yordamida hisoblash jarayonlari, shuningdek, tarmoqlanuvchi algoritmlar (if/else) orqali qaror qabul qilish mexanizmlari yoritiladi.
+Shuningdek, takrorlanuvchi algoritmlar for va while operatorlari asosida tushuntirilib, match/case operatori yordamida tanlash mexanizmlaridan foydalanish ko‘nikmalari hosil qilinadi. Pythonda keng qo‘llaniladigan ma’lumotlar tuzilmalari — string, list, tuple, set va dictionary bilan ishlash, ularning xususiyatlari va qo‘llanilish sohalari amaliy misollar orqali o‘rgatiladi.
+Bobda kodni toza va takrorlanmas holda yozish tamoyillarini ifodalovchi DRY prinsipi hamda funksiyalar yordamida dastur tuzilmasini mantiqiy qismlarga ajratish masalalariga alohida e’tibor qaratiladi. Bundan tashqari, istisnoli holatlarni boshqarish (try/except), fayllar bilan ishlash asoslari ko‘rib chiqilib, o‘quvchilarning real dasturlash jarayonida uchraydigan muammolarni to‘g‘ri hal etish ko‘nikmalari shakllantiriladi. Bob yakunida o‘rganilgan bilimlarni mustahkamlash va baholash maqsadida oraliq nazorat topshiriqlari nazarda tutiladi.
+	•	Python: o‘rnatish, ilk dasturni yozish, o‘zgaruvchilar va ma’lumotlarning sodda toifalari.
+O’quvchilarga Python interpretatorini o’rnatish va sozlashni, ilk dasturni yozishni o’rgatish. O’zgaruvchilar va sodda ma’lumotlar toifalari bilan tanishtirish.
+Mashg‘ulot
+maqsadi
+O’quvchilarga Python interpretatorini o’rnatish va sozlashni, ilk dasturni yozishni o’rgatish. O’zgaruvchilar va sodda ma’lumotlar toifalari bilan tanishtirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kompyuter yoki noutbuk (ixtiyoriy)
+Visual Studio Code yoki PyCharm kod muharriri
+Kompyuter yoki noutbuk (ixtiyoriy)
+Visual Studio Code yoki PyCharm kod muharriri
+Ishni bajarish tartibi
+Python dasturlash tilida ishlash uchun avvalo uni kompyuterga o‘rnatish zarur. Python bepul va ochiq kodli dasturlash tili hisoblanadi.
+Dastlab www.python.org saytiga kiramiz. Saytga kirganimizdan so‘ng Downloads tugmasini bosamiz.
+
+1.1-rasm: python.org saytiga kirish
+Downloads bo‘limiga kirib, Download Python Install Manager tugmasi orqali Pythonni kompyuterimizga ko‘chirib olamiz.
+
+1.2-rasm: Python interpretatorini ko‘chirib olish.
+Yuklab bo‘lganimizdan so‘ng, ekranning yuqori, o‘ng burchagidagi ko‘ringan, yuklab olingan Python papkani ustiga bosib, ochamiz.
+
+1.3-rasm: Python interpretatorini o’rnatishni boshlash, dastlabki sozlamalar
+Ishga tushirganimizdan so‘ng, bizga yuqoridagi kabi oyna ochiladi. U oynadan, 2ta yozuv:
+	•	Use admin privilegas when installing py.exe
+	•	Add python.exe to PATH
+Shu yozuvlar oldiga tasdiqlash belgisi ✅(галочка)ni bosib, qo‘yamiz va Customize installation tugmasini bosib, keyingi qadamga o‘tamiz.
+
+1.4-rasm: Qo‘shimcha imkoniyatlarni belgilash
+Ushbu oynada Python dasturlash tilini o‘rnatish jarayonidagi qo‘shimcha imkoniyatlar (Optional Features) ko‘rsatilgan. Bu yerda barcha belgilangan bandlarni o‘zgartirmasdan qoldirish tavsiya etiladi, chunki ular Python bilan qulay va to‘liq ishlash uchun zarur. Xususan, pip kutubxonalar o‘rnatish uchun, IDLE dasturlash muhiti bilan ishlash uchun, py launcher esa Python’ni tez ishga tushirish uchun xizmat qiladi. Belgilangan sozlamalarni tasdiqlash uchun Next tugmasi bosiladi.
+
+1.5-rasm: Sozlamalarni tanlab, Install (o’rnatish) buyrug’ini berish.
+ Ushbu oynada Python dasturlash tilini o‘rnatish jarayonidagi Advanced Options (kengaytirilgan sozlamalar) ko‘rsatilgan. Bu yerda Install Python for all users bandi belgilanishi tavsiya etiladi, bu Python’ni kompyuterning barcha foydalanuvchilari uchun o‘rnatadi. Add Python to environment variables bandi Python buyruqlarini buyruqlar satrida ishlatish imkonini beradi. Precompile standard library bandi esa Python’ning standart kutubxonalarini oldindan tayyorlab qo‘yiladi va dasturlarning tezroq ishga tushishini ta’minlaydi. O‘rnatish manzili esa standard holatda qoldiriladi va o‘rnatishni boshlash uchun Install tugmasi bosiladi.
+
+1.6-rasm: O‘rnatish jarayoni.
+Ushbu oynada Python interpretatorini o‘rnatish jarayoni davom etayotgani ko‘rsatilgan. Yashil rangli indikator o‘rnatish jarayonining bajarilish holatini bildiradi. Bu bosqichda foydalanuvchi hech qanday amal bajarmaydi va jarayon tugaguncha kutish lozim.
+
+1.7-rasm: O‘rnatish yakunlandi.
+Ushbu oynada Python dasturlash tili kompyuterga muvaffaqiyatli o‘rnatilgani haqida xabar beriladi. Bu bosqichda Python ishlashga tayyor holatga keladi. O‘rnatishni yakunlash uchun Close tugmasi bosiladi. Agar Disable path length limit bandi ko‘rsatilgan bo‘lsa, uni bosish tavsiya etiladi, chunki bu Python bilan ishlashda kelajakda yuzaga kelishi mumkin bo‘lgan xatoliklarning oldini oladi. Demak, Python interpretatori muvaffaqiyatli o‘rnatildi. Close tugmasini bosamiz.
+Python interpretatorini kompyuterimizga o‘rnatib ham oldik, endi uni tekshirish uchun quyidagi amallarni bajarish kerak. 
+
+1.8-rasm: CMD oynasini ochish.
+Win + R tugmasini bosiladi va ochilgan oynaga cmd buyrug’ini berib, OK tugmasini bosamiz. Bizga buyruqlar oynasi (Command prompt) ochiladi.
+
+1.9-rasm: Python versiyasini tekshirish
+Ochilgan oynaga python --version buyrug’ini terib, Enterni bossak, agar, to‘g’ri o‘rnatilgan bo‘lsa, o‘rnatilgan Python versiyasi ko‘rinadi.
+Pythonda ilk dasturni yozish
+Python dasturlash tilida dastur yozish uchun avvalo Python muhiti ishga tushiriladi. Buyruqlar satrida python buyrug‘i yozilgandan so‘ng,  >>>  belgisi paydo bo‘ladi. Bu belgi Python buyruqlarini kiritish mumkinligini bildiradi.
+
+1.10-rasm: Pythonni ishga tushirish.
+Birinchi kiritadigan buyrug’imiz  - print(). 
+
+1.11-rasm: Birinchi dasturni yozish.
+Bu yerda Python ishga tushirildi va print("Hello, World!") buyrug‘i yozildi. Natijada, ekranda Hello, World! yozuvi chiqdi. Bu birinchi dasturdir.
+>>> belgisidan so‘ng, biz o‘zimiz xohlagan amallarni bajarishimiz ham mumkin. Masalan, matematik amallarni(qo‘shish, ayirish, bo‘lish va ko‘paytirish).
+
+1.12-rasm: Matematik amallar bajarish.
+print() va qavs ichiga amallarni yozsak, shuni o‘zi yetarli. Python kerakli javobni o‘zi avomatik hisoblab, bizga qaytaradi. Yana bir e’tiborga molik joyi:
+	•	Agar, bo‘lish amallarini bajarish vaqtida “ / “ belgisidan bir marotaba foydalansak va javob kasrli son ko‘rinishida chiqadigan bo‘lsa, verguldan so‘ng, javobning kasr qismini ham yozib beradi. Masalan, 91/8 = 11.375.
+	•	Agar, bo‘lish belgisini 2 marotaba ishlatilsa, natija, butun son ko‘rinishida qayatariladi. Masalan, 91//2 = 11.	
+
+O‘zgaruvchi — bu ma’lumotni saqlash uchun berilgan nomdir. O‘zgaruvchini oddiy qilib quti 📦 deb tasavvur qilish mumkin. Qutining ichiga ma’lumot joylaymiz va kerak bo‘lganda undan foydalanamiz.
+
+1.13-rasm: O‘zgaruvchi uchun misol
+Bu yerda:
+	•	Ism – O‘zgaruvchi nomi
+	•	“Ali” – matnli ma’lumot
+	•	Yosh – sonli o‘zgaruvchi
+	•	= belgisi o‘zgaruvchiga qiymat berish uchun ishlatiladi
+O‘zgaruvchilar bilan ishlash
+O‘zgaruvchidagi ma’lumotni ekranga chiqarish uchun print() funksiyasidan foydalaniladi:
+
+1.14-rasm: O‘zgaruvchini chop etish (qiymatini konsol-qora ekranga chiqarish)
+print() funksiyasining qavsi ichiga o‘zgaruvchi nomi beriladi. Shu yo‘l orqali o‘zgaruvchiga yuklangan ma’lumotni qo‘lga kiritishimiz mumkin. 
+	•	print(ism) uchun natija: Ali
+	•	print(yosh) uchun natija: 15
+Python dasturlash tilida eng ko‘p ishlatiladigan sodda ma’lumot toifalari quyidagilardan iborat:
+
+1.1-jadval: Ma’lumotlarning sodda toifalari
+Ma’lumot turi
+Belgilanishi
+Misol
+Matn
+str	
+“Salom”
+Butun son
+int
+10
+Kasr son
+float	
+2.5
+Mantiqiy
+bool
+True, False
+
+1.15-rasm: O‘zgaruvchi yaratish, va uning natijasini chop etish (PyCharm kod muharriri)
+Muhim eslatma: Pythonda o‘zgaruvchi yaratishdan avval, uni e’lon qilish, uning turini avvaldan ko‘rsatish shart emas, Python avtomatik berilgan qiymatga qarab o‘zgaruvchining turini aniqlab ketadi.
+Ma’lumotlar toifalari (data types) haqida qisqacha
+
+
+
+
+
+
+
+	Darsda ko’rsatilgan amallarni takroran, mustaqil bajaring.
+	•	"Tanishuv kartochkasi":
+	•	ism degan o‘zgaruvchi yarating va unga ismingizni yuklang.
+	•	yosh degan o‘zgaruvchi yarating va unga yoshingizni (butun son ko‘rinishida) yuklang.
+	•	kasb degan o‘zgaruvchi yarating va kelajakdagi kasbingizni yozing (masalan: "Dasturchi").
+	•	Ushbu barcha ma’lumotlarni bitta print ichida ekranga chiqaring.
+	•	"Do‘kon kassasi":
+	•	non_narxi o‘zgaruvchisini yarating va unga 3000 (so'm) qiymatini bering.
+	•	sut_narxi o‘zgaruvchisini yarating va unga 12500.5 (so'm) qiymatini bering.
+	•	Ikkala mahsulotdan bittadan olganda jami qancha bo‘lishini hisoblab, jami o‘zgaruvchisiga yuklang.
+	•	Natijani ekranga chiqaring.
+Amaliy topshiriqlar
+
+	•	Darsda ko’rsatilgan amallarni takroran, mustaqil bajaring.
+	•	"Tanishuv kartochkasi":
+	•	ism degan o‘zgaruvchi yarating va unga ismingizni yuklang.
+	•	yosh degan o‘zgaruvchi yarating va unga yoshingizni (butun son ko‘rinishida) yuklang.
+	•	kasb degan o‘zgaruvchi yarating va kelajakdagi kasbingizni yozing (masalan: "Dasturchi").
+	•	Ushbu barcha ma’lumotlarni bitta print ichida ekranga chiqaring.
+	•	"Do‘kon kassasi":
+	•	non_narxi o‘zgaruvchisini yarating va unga 3000 (so'm) qiymatini bering.
+	•	sut_narxi o‘zgaruvchisini yarating va unga 12500.5 (so'm) qiymatini bering.
+	•	Ikkala mahsulotdan bittadan olganda jami qancha bo‘lishini hisoblab, jami o‘zgaruvchisiga yuklang.
+	•	Natijani ekranga chiqaring.
+Amaliy topshiriqlar
+
+
+	•	Operatorlar va ifodalar. Tarmoqlanuvchi algoritm (if/else).
+O‘quvchilarda Python dasturlash tili operatorlari, ifodalar bilan ishlash, tarmoqlanuvchi algoritmni qo’llay  olish ko’nikmasini hosil qilish
+Mashg‘ulot
+maqsadi
+O‘quvchilarda Python dasturlash tili operatorlari, ifodalar bilan ishlash, tarmoqlanuvchi algoritmni qo’llay  olish ko’nikmasini hosil qilish
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kompyuter yoki noutbuk (ixtiyoriy)
+Visual Studio Code yoki PyCharm kod muharriri
+
+Kompyuter yoki noutbuk (ixtiyoriy)
+Visual Studio Code yoki PyCharm kod muharriri
+
+Ishni bajarish tartibi
+Operator — bu dasturlash tilida ma’lumotlar ustida ma’lum bir amalni bajarish uchun ishlatiladigan maxsus belgi yoki kalit so‘zdir.
+Ifoda — operator va operandlar yordamida tuzilgan va ma’lum bir natija qaytaruvchi buyruqdir.
+Operatorlar yordamida hisoblash, taqqoslash, mantiqiy tekshiruv va qiymatlarni o‘zgaruvchiga biriktirish amallari bajariladi.
+👉 Misol:
+
+1.16-rasm: Operatordan foydalanishga misol
+a – o‘zgaruvchi
+10 va 5 – operandlar
++ qo‘shish operatori
+Python dasturlash tilidagi operatorlar turlari:
+
+
+1.2-jadval: Arifmetik operatorlar 
+🔹 Operator
+📝 Amal (izoh)
+📌 Namuna
++
+Qo‘shish
+5 + 3 = 8
+-
+Ayirish
+7 - 2 = 5
+*
+Ko‘paytirish
+4 * 3 = 12
+/
+Bo‘lish
+8 / 2 = 4
+//
+Butun bo‘lish
+7 // 3 = 2
+**
+Darajaga oshirish
+2 ** 3 = 8
+%
+Qoldiqni topish
+7 % 2 = 1
+Arifmetik operatorlar ichidagi ko‘pgina operatorlar bizga matematika fani orqali tanish, ammo, butun bo‘lish (//) va qoldiqli bo‘lish (%) haqida ham ma’lumotga ega emasmiz. 
+Butun bo‘lish( // ) – biz ikki raqamni bir – biriga bo‘lsak, ammo, kasr son ko‘rinishida natija qaytsa (masalan, 2.36 yoki 3.74 kabi), butun bo‘lish orqali natijani yaxlitlab olamiz, ya’ni butun son ko‘rinishda natijani qo‘lga kiritamiz.
+Qoldiqni topish( % ) – bu usul orqali biz, ikki raqamni bir-biriga bo‘lganda, hosil bo‘ladigan qoldiq natijani, osongina topamiz. 
+Masalan, 8 % 3 = 2 yoki 15 % 4 = 3
+ Taqqoslash operatorlari qiymatlarni solishtiradi va mantiqiy natijani beradi.
+1.3-jadval: Taqqoslash operatorlari
+Operator
+Ma’nosi
+==
+Teng (teng bo‘lsa)
+!=
+Teng emas
+>
+Katta
+<
+Kichik
+>=
+Katta yoki teng
+<=
+Kichik yoki teng
+Ifodalar(Expression) – bu Pythonda hisoblanadigan (natija beradigan) yozuv. Ifoda bajarilganda albatta biror qiymat (natija) hosil bo‘ladi.
+Misollar:
+5 + 3 → natija: 8
+10 > 7 → natija: True
+"salom" + "!" → natija: "salom!"
+len("python") → natija: 6
+Ifoda nimalardan tuziladi:
+	•	Operand (qiymatlar): 5, 10, “abc”, x, True
+	•	Operatorlar: +, -, ==, and, or…
+	•	Qavs va funksiyalar: ( ), len(), int()…
+
+1.17-rasm: Ifodani tuzilmasi
+Operandlar: x, 5, 2
+Operatorlar: +, *
+Qavs: ( )
+Ifoda natijasining turi (data type)
+Ifoda natijasini turli toifada bo‘lishi mumkin:
+	•	Arifmetik ifoda: int yoki float
+
+1.18-rasm: Arimetik ifoda
+Taqqoslash ifodasi: bool
+Maqsad: solishtirish → True/False
+
+1.19-rasm: Taqqoslash ifodasi
+X 5 dan katta bo‘lsa, True. X 5 bilan teng bo‘lsa, False
+
+1.20-rasm: Taqqoslash uchun yana bir misol
+Ball 60 dan katta yoki teng bo‘lsa, natija: True
+Mantiqiy ifoda: bool
+Bir nechta shartni bog‘laydi:
+
+1.21-rasm: Mantiqiy ifoda
+Agar yosh 7 dan katta yoki teng bo‘lsa va 18 dan kichik yoki teng bo‘lsa, natija: True (haqiqat) bo‘ladi.
+
+1.22-rasm: Mantiqiy ifoda uchun misol
+Agar, harorat 10 dan katta bo‘lsa va yomg’ir yog’ishi False (yolg’on) bo‘lmasa, natija: True (haqiqat) bo‘ladi
+A’zolik ifodalari: (in, not in)
+Biror narsa ichida bormi-yo‘qmi?
+
+1.23-rasm: A’zolik ifodalari
+Agar “ a ” harfi matn (salom so‘zi)ni ichida bo‘lsa, True (haqiqat)
+Agar “ z ” harfi matn (salom so‘zi)ni ichida bo‘lsa, False (yolg’on)
+Identifikatsiya (is, is not)
+
+1.24-rasm: Identifikatsiya
+a nomli ro‘yxat, b bilan bir xil obyekt bo‘lsa, natija: True (haqiqat)
+a nomli ro‘yxat, c bilan bir xil bo‘lsa, ya’ni, bitta obyekt bo‘lsa, natija: False (yolg’on)
+
+Tarmoqlanuvchi algoritm. if / else operatori
+Tarmoqlanuvchi algoritm — dastur bajarilishi jarayonida shart tekshiriladi, natijaga qarab:
+	•	shart rost (True) bo‘lsa — bir amal bajariladi
+	•	shart yolg‘on (False) bo‘lsa — boshqa amal bajariladi
+Hayotiy misol:
+	•	Agar bugun yomg‘ir yog‘sa → soyabon olamiz
+	•	Aks holda → soyabonsiz chiqamiz
+if / else operatorining sintaksisi 
+
+1.25-rasm: Umumiy ko‘rinish
+	•	if qismi uchun shart beriladi, agar u shart qanoatlantirilsa, amal_1 ishga tushadi.
+	•	U shartdan tashqari qolgan har qanday vaziyatda amal_2 bajariladi.
+Eng ko‘p ishlatiladigan holatlar:
+Taqqoslash operatori bilan:
+
+1.26-rasm: Taqqoslash operatori if/else
+	•	if /else operator qaytadigan javob Tue / False bo‘lishiga qarab ishlaydi.
+	•	1.27 rasmda, agar ball 60 dan katta yoki teng bo‘lsa, foydalanuvchiga O‘tdi degan xabar chiqadi. Qolgan har qanday holatda O‘tmadi degan xabar chiqadi.
+Qoldiq (%) amali bilan sonni juft/toqlikka tekshirish:
+
+1.27-rasm Qoldiq (%) bilan if/else
+Agar, sonni 2 ga bo‘lganda qoldiq 0 ga teng bo‘lsa, foydalanuvchiga Juft degan xabar chiqadi. Qolgan har qanday holatda, Toq deb xabar chiqadi.
+Mantiqiy operatorlar bilan (and, or, not):
+
+1.28-rasm: Mantiqiy operator bilan
+Agar, yosh 7 dan katta yoki teng bo‘lsa, 18dan kichik yoki teng bo‘lsa va ta’til bo‘lmasa, foydalanuvchiga Maktabga boradi deb xabar chiqadi. Qolgan har qanday vaziyatda Uyda qoladi deb xabar chiqariladi
+elif bir nechta holatni tekshirish uchun ishlatiladi.
+
+1.29-rasm: if, elif bilan birga
+Agar, ball 86 dan katta yoki teng bo‘lsa, foydalanuvchi uchun baho 5. Agar, 71 dan katta yoki teng bo‘lsa, baho 4.  Agar, 56 dan katta yoki teng bo‘lsa, baho 3. Qolgan har qanday vaziyatda baho 2.
+elif — “aks holda agar…” degani.
+Keng tarqalgan xatolar:
+1-xato. “=”  va  “==” (ikkita tenglik) ni adashtirish
+
+1.30-rasm: 1-xatolik
+“=” bu o’zlashtirish amali (assign), “==” esa taqqoslash amali
+
+1.31-rasm: 1-xato to‘g’rilangan holatda
+2-xato. “:” ni unutish
+❌ if a > 0 ✅ if a > 0:
+
+3-xato. tabulyatsiyani xato qo’yish yoki umuman qo’ymaslik:
+
+1.32-rasm: 3-xatolik
+Pythonda operatorga tegishli kod (if, elif, else, for, …) undan chapga bitta tabulyatsiya (odatda to’rtta bo’sh joy, space) ichkarida yoziladi (boshqa tillarda odatda {} ichida yoziladi):
+
+1.33-rasm: 3-xato to‘g’rilangan holatda
+		Son musbat, manfiy yoki nol ekanligini aniqlash. Foydalanuvchidan bitta butun son kiritilishini so‘rang.
+Agar son:
+	•	0 dan katta bo‘lsa — "Musbat son"
+	•	0 dan kichik bo‘lsa — "Manfiy son"
+	•	0 ga teng bo‘lsa — "Nolga teng"
+degаn natijani chiqaring.
+	•	Ikki sondan kattasini aniqlash. Foydalanuvchidan ikkita son kiritilishini so‘rang. Qaysi son katta ekanligini ekranga chiqaring. Agar ikkala son teng bo‘lsa, "Sonlar teng" deb chiqaring.
+	•	Yoshga qarab toifa aniqlash. Foydalanuvchidan yoshini kiriting:
+	•	Agar yosh 0–6 bo‘lsa → "Bog‘cha yoshi"
+	•	7–17 bo‘lsa → "Maktab o‘quvchisi"
+	•	18 va undan katta bo‘lsa → "Voyaga yetgan"
+	•	Haroratga qarab tavsiya berish. Foydalanuvchidan havo haroratini kiriting (butun son):
+	•	Agar harorat 0 dan past bo‘lsa → "Sovuq, qalin kiyining"
+	•	0 dan 20 gacha bo‘lsa → "Salqin"
+	•	20 dan yuqori bo‘lsa → "Issiq"
+Amaliy topshiriqlar
+
+
+	•	Son musbat, manfiy yoki nol ekanligini aniqlash. Foydalanuvchidan bitta butun son kiritilishini so‘rang.
+Agar son:
+	•	0 dan katta bo‘lsa — "Musbat son"
+	•	0 dan kichik bo‘lsa — "Manfiy son"
+	•	0 ga teng bo‘lsa — "Nolga teng"
+degаn natijani chiqaring.
+	•	Ikki sondan kattasini aniqlash. Foydalanuvchidan ikkita son kiritilishini so‘rang. Qaysi son katta ekanligini ekranga chiqaring. Agar ikkala son teng bo‘lsa, "Sonlar teng" deb chiqaring.
+	•	Yoshga qarab toifa aniqlash. Foydalanuvchidan yoshini kiriting:
+	•	Agar yosh 0–6 bo‘lsa → "Bog‘cha yoshi"
+	•	7–17 bo‘lsa → "Maktab o‘quvchisi"
+	•	18 va undan katta bo‘lsa → "Voyaga yetgan"
+	•	Haroratga qarab tavsiya berish. Foydalanuvchidan havo haroratini kiriting (butun son):
+	•	Agar harorat 0 dan past bo‘lsa → "Sovuq, qalin kiyining"
+	•	0 dan 20 gacha bo‘lsa → "Salqin"
+	•	20 dan yuqori bo‘lsa → "Issiq"
+Amaliy topshiriqlar
+
+	•	Takrorlanuvchi algoritm, takrorlanish operatorlari (for, while). Tanlash operatori (match/case).
+O‘quvchilarda takrorlanuvchi algoritm va takrorlanish operatorlari – for, while bilan ishlash ko’nikmasini hosil qilish. match/case tanlash operatorini o’rganish
+Mashg‘ulot
+maqsadi
+O‘quvchilarda takrorlanuvchi algoritm va takrorlanish operatorlari – for, while bilan ishlash ko’nikmasini hosil qilish. match/case tanlash operatorini o’rganish
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kompyuter yoki noutbuk (ixtiyoriy)
+Kod muharriri (VS Code, PyCharm, …)
+Kompyuter yoki noutbuk (ixtiyoriy)
+Kod muharriri (VS Code, PyCharm, …)
+Ishni bajarish tartibi
+Takrorlanuvchi algoritm — bir xil amalni bir necha marta bajaradigan algoritm.
+Nega kerak?
+Bir xil ishni 50 marta yozib o‘tirish (print, hisoblash, tekshirish) noqulay. Sikl yordamida 2–3 qator kod bilan ko‘p marta bajarish mumkin.
+Hayotiy misollar
+	•	10 ta raqamni ekranga chiqarish 10 marta print() yozish o‘rniga sikl ishlatamiz.
+	•	20 ta o‘quvchining bahosini yig‘ish Har bir bahoni alohida o‘zgaruvchi qilib yozish juda uzun bo‘ladi.
+	•	Biror sonning ko‘paytirish jadvali 5×1, 5×2, …, 5×10 — buni siklsiz yozish ko‘p vaqt oladi.
+Siklning asosiy qismlari
+Sikl (takrorlanish) odatda 3 narsadan iborat bo‘ladi:
+	•	Boshlanish (start) — qayerdan boshlaydi?
+	•	Takrorlanish soni yoki shart — nechta marta yoki qachongacha?
+	•	O‘zgarish — har aylanishda nima o‘zgaradi? (hisoblagich ortadi)
+for sikli operatori
+Agar takrorlanish soni oldindan ma’lum bo‘lsa, ko‘pincha for ishlatiladi.
+Masalan:
+	•	10 marta chiqarish
+	•	1 dan n gacha aylanish
+	•	0 dan 20 gacha juft sonlar
+for operatorining umumiy ko‘rinishi
+
+1.34-rasm: for operatorining yozilishi
+Bu yerda:
+	•	i — hisoblagich (har aylanishda o‘zgarib boradi)
+	•	range(...) — qaysi sonlar bo‘yicha aylanishni beradi
+	•	ichki qism (print, s += i va hokazo) — takrorlanadigan amal
+range() funksiyasi (aniqrog’i generator) – range() sonlar ketma-ketligini beradi (Python buni “oraliq” deb oladi).
+
+1.35-rasm: for operatorini ishlatish namunasi
+Dasturlashda index (to’plam elementlari tartib raqami) 1 dan emas, 0 dan boshlanadi. Shu sabab for i in range(5): ko‘rinishdagi takrorlanuvchi operator 0 dan 4 gacha bo‘lgan 5 ta sonni qaytardi. 
+
+1.36-rasm: 1 dan 6 gacha sonlarni for yordamida chiqarish
+Juda muhim! range() funksiyaga berilgan sonni o‘zi hisobga olinmaydi (agar bitta son berilsa). Agar 1 dan 6 gacha bo‘lgan raqamni bersak, 1, 2, 3, 4, 5 ko‘rinishdagi natijani olamiz. 6 hisobga kirmaydi.
+
+1.37-rasm: range(start, stop, step)
+Yuqorida range() boshlang’ich qiymat (start), to’xtash qiymati (stop) va qadam (step) berilgan holda qanday yozilishi ko’rsatilgan. Quyida esa, ushbu kod natijasini ko’rishimiz mumkin.
+
+1.38-rasm: range(a, b, qadam) natija
+Agar range() funksiyaga, boshlanish nuqta (0) va tugash nuqta (11) berilsa, 0 dan 11 gacha(11 kirmaydi) bo‘lgan sonlarni chop etadi, lekin, 1.37-rasmdagi kabi tugash nuqtasidan keyin, qadamni ham bersak, nechchi son kiritilgan bo‘lsa, shuncha sonlarni qoldirib, navbatdagisini olib beradi 1.37-rasm kabi.
+
+1.39-rasm: Bir qiymatni qayta-qayt chop etish
+range(n) uchun qiymat berib, ichki qismiga matn yozsak, masalan, Salom matnini n marotaba chop etadi.
+N sonini foydalanuvchidan qabul qilib, [1, N] intervaldagi sonlar yig’indisini topish eng sodda holatda quyidagicha yoziladi:
+
+1.40-rasm: [1, N] intervaldagi sonlar yig’indisini hisoblash dasturi
+	Dastur quyidagicha ishlaydi:
+	•	n uchun butun son kiritiladi;
+	•	s – bu, yig’indini hisoblab boruvchi;
+	•	for siklida 1 dan, n+1 gacha (n ham hisobga olinishi uchun) aylanib chiqadi;
+	•	s o‘zgaruvchi esa orada hosil bo‘lgan har bir raqami biri biriga qo‘shib boradi va o‘ziga saqlaydi;
+	•	print() orqali hosil bo‘lgan yig’indi chop etiladi.
+while takrorlanish operatori
+Takrorlanuvchi operatorlarning yana bir turi mavjud. 
+while – bu, agarm berilgan shart rost (True) bo‘lib turgan vaqtda ishlaydi, qachonki shart natijasi, yolg’on bo‘lsa, shundan keyin ishlashdan to‘xtaydi.
+Hayotiy misol:
+	•	“Parol to‘g‘ri bo‘lmaguncha yana kirit”
+	•	“0 kiritilmaguncha sonlarni yig‘”
+	•	“Pul yetmaguncha ishlashni davom ettir”
+
+1.41-rasm: while sikl operatori
+Tarmoqlanuvchi operator (if / else) berilgan shart rost bo‘lsagina, unga berilgan amallar ishlagani kabi, while ham shunday. Unga berilgan shart – rost(True) bo‘lsa, ishlaydi. Qachonki shart natijasi o‘zgarib, yolg’on (False) bo‘lsa, undan so‘ng ishlashdan to‘xtaydi. if / else va while ning farqi shuki, if natijani bir marotaba chop etsa, while takror-takror chop etadi, shart natijasi o‘zgarmagunicha. while uchun shart berish jarayonida, natijasi qachondir o‘zgaradigan shart berish kerak.
+
+1.42-rasm: while uchun shart
+Yuqoridagi dastur quyidagi tartibda ishlaydi:
+	•	i ning qiymati 1 ga teng;
+	•	while uchun shart berildi, qachonki i ning qiymati 5 dan kichik yok teng bo‘lsa, ana usha vaqt davomida ishlagin deb;
+	•	Har bitta while takrorlanganda, i uchun qiymat qo‘shilib boradi, i+1;
+	•	Qachondir qiymatlar qo‘shilib, natija 5 dan oshishi bilan, while ishlashdan to‘xtaydi.
+
+1.43-rasm: while uchun masala
+Dastur ishlash tartibi:
+	•	parol = “ 1234 ”;
+	•	userdan parol kiritishini so‘raymiz, kelgan javobni kirit degan o‘zgaruvchiga yuklaymiz;
+	•	while uchun shart beramiz: kirit degan o‘zgaruvchi qiymati parolga teng bo‘lmaguncha ishlashi kerak;
+	•	Bajarilishi kerak bo‘lgan amal sifatida, quyidagilar belgilangan:
+print("Xato! Qayta urinib ko‘ring.")
+kirit = input("Parol: ")
+shu ikki amal qachon user to‘g’ri parol kiritmaguncha ishlayveradi.
+
+1.44-rasm: while if operatori bilan birgalikda
+User(foydalanuvchi)dan parolni kiritish so‘raladi, agar, noto‘g’ri parol kiritilishlar soni 3 taga teng bo‘lsa, Urinishlar soni tugadi degan xabar chiqadi. Agar 3 tadan kam urunishda to‘g’ri parol kiritsa, Kirish muvaffaqiyatli ! degan xabar chiqishi kerak. Parol to‘g’ri yoki noto‘g’ri ekanligini tarmoqlanuvchi operator (if / else) yordamida taqqoslab aniqlanadi. Break – nima? Kod kerakli natijaga erishganidan so‘ng break kalit so‘zidan foydalaniladi. Maqsad: if orqali parol solishtirilganida mos keladigan bo‘lsa va urinishlar soni uchtadan kam bo‘ladi bo‘lsa, kod shu zahoti to‘xtaydi yana qaytib while operator bajarilmaydi.
+
+Tanlash operatori – berilgan javobga qarab, bir nechta variantlardan birini tanlab, bajaradigan operator.
+Nega tanlash operatori (match / case) kerak?
+Vaziyatga qarab dastur turli ish bajarishi uchun if / else operatordan foydalanilar edi. 
+
+1.45-rasm: x qiymatiga ko’ra tegishli hafta kunini chiqarish dasturi
+👆bu usul uzun, variantlar ko‘paysa, o‘qish qiyinlashadi va chalkashadi. match / case esa qisqaroq, tushunarliroq va menu va tanlov uchun juda qulay
+match / case qachon ishlatiladi? – aniq qiymatlar bo‘yicha tanlash kerak bo‘lsa:
+	•	menyu (1, 2, 3…)
+	•	kunlar, oylar
+	•	amal belgisi (+, -, *, /)
+unda match / case juda qulay.
+
+1.46-rasm: match / case sintaksisi
+match qiymat:
+    case 1:
+        # 1-holat
+    case 2:
+        # 2-holat
+    case _:
+        # boshqa holatlar
+qiymat – tekshiriladigan narsa
+case – variantlar
+_ - aks holda, (elsega o‘xshaydi)
+
+1.47-rasm: match / case uchun soda misol
+Foydalanuvchidan butun son kiritilishi kutiladi, kiritilgan butun son (int()) tanlov degan o‘zgaruvchiga yuklanadi.
+match tanlov – tanlov degan o‘zgaruvchi tekshiriladi.
+	•	case 1 – agar kiritilgan butun son 1 ga teng bo‘lsa, print(“Dastur boshlandi”) kodi ishga tushadi va user uchun “Dastur boshlandi” degan xabar chiqadi;
+	•	case 2 – agar, kiritilgan son 2 ga teng bo‘lsa, “ Sozlamalar ochildi ” xabari chiqadi;
+	•	case 3 – agar, kiritlgan son 3 ga teng bo‘lsa, “ Dastur yopildi ” xabari chiqadi;
+	•	case _ - qolgan barcha kiritilgan natijalar uchun “ Noto‘g’ri tanlov ” xabari chiqadi.
+case kalit so‘zidan keyin qiymatlar yoziladi, agar kiritilgan qiymat shu narsaga teng bo‘lsa degani. case uchun faqat print() emas, o‘zingiz xoxlagan amalni bajarishingiz mumkin.
+
+1.48-rasm: Kiritilgan songa qarab hafta kunini tanlash
+Foydalanuvchi 1 dan 7 gacha bo‘lgan raqam tanlaydi, kiritilgan butun son ( int() )ga qarab user uchun belgilangan xabar chiqadi. Agar, 1 dan 7 gacha bo‘lgan raqamlar orasidan boshqa raqam kiritilsa, "Xato! 1–7 oralig'ida kiriting" xabari chiqadi.
+		Darsda ko’rsatilgan ishlarni mustaqil takrorlang.
+	•	[1, n] intervaldan faqat 3 ga karrali sonlarni chiqarish dasturini for va while bilan yozing.
+	•	[1, 12] intervalda kiritilgan songa qarab tegishli oy nomini chiqarish dasturini tuzing.
+Amaliy topshiriqlar
+
+
+	•	Darsda ko’rsatilgan ishlarni mustaqil takrorlang.
+	•	[1, n] intervaldan faqat 3 ga karrali sonlarni chiqarish dasturini for va while bilan yozing.
+	•	[1, 12] intervalda kiritilgan songa qarab tegishli oy nomini chiqarish dasturini tuzing.
+Amaliy topshiriqlar
+
+	•	Pythonda ma’lumotlar tuzilmalari: string, list, tuple, set va dictionary.
+O‘quvchilarga Python dasturlash tilidagi asosiy ma’lumotlar tuzilmalari — string, list, tuple, set va dictionary ning vazifasi, farqi hamda amaliy qo‘llanilishini tushuntirish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga Python dasturlash tilidagi asosiy ma’lumotlar tuzilmalari — string, list, tuple, set va dictionary ning vazifasi, farqi hamda amaliy qo‘llanilishini tushuntirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kompyuter yoki noutbuk (Internetga ulangan)
+Kod muharriri (masalan, PyCharm)
+Kompyuter yoki noutbuk (Internetga ulangan)
+Kod muharriri (masalan, PyCharm)
+Ishni bajarish tartibi
+Ma’lumotlar tuzilmasi (Data Structure) — bu kompyuter xotirasida ma’lumotlarni qanday ko‘rinishda saqlash, qanday tartibda joylashtirish va ular ustida qanday tez va qulay amallar bajarish usulidir.
+Nega ma’lumotlar tuzilmasi kerak?
+Tasavvur qilamiz bizda 10 000 ta ma’lumot bor:
+	•	Bizga qidirish kerak (masalan: “Ali bormi?”)
+	•	Bizga qo‘shish/o‘chirish kerak
+	•	Bizga takrorlarni olib tashlash kerak
+	•	Bizga kalit bo‘yicha tez topish kerak (“telefon raqam - ism”)
+Agar noto‘g‘ri tuzilma tanlansa:
+	•	kod murakkablashadi
+	•	dastur sekinlashadi
+	•	xato ko‘payadi
+Ma’lumotlar xotirada qanday saqlanadi?
+	•	"Ali" (string) — belgilar ketma-ketligi
+	•	[1,2,3] (list) — ketma-ket elementlar
+	•	{"name": "Ali"} (dict) — kalit-qiymat
+String — bu belgilar ketma-ketligi (harflar, raqamlar, belgi, bo‘sh joy va h.k.). Python’da stringlar str turida bo‘ladi.
+
+1.49-rasm: String
+String ichida:
+	•	Harf:  A, b
+	•	Raqam:  1, 9
+	•	Belgi:  !, @, #
+	•	Bo‘sh joy:  “   ”
+String yaratish usullar:
+
+1.50-rasm: Stirng yaratish
+String yaratish uchun shunchaki qo‘shtirnoq yoki bir tirnoq kerak.
+
+1.51-rasm: Ko‘p qatorli string
+Ko‘p qatorli string yaratish uchun matnni boshiga va oxiriga 3 ta qo‘shtirnoq qo‘yish yetarli.
+
+1.52-rasm: Immutable string
+String o‘zgarmas (Immutable), str ichidagi belgilarni o‘zgartirib bo‘lmaydi.
+1.54 rasmda Stringni 0 – indexdagi belgisini, ya’ni, “ P ” harfini o‘rniga “ J ” harfini almashtirilmoqchi. Natijada, TypeError xatosi yuzaga keldi.
+Stringni o‘zgartirilmaydi, shuning uchun o‘rniha yangi yaratish kerak.
+
+1.53-rasm: Yangi string
+s = “Python” ko‘rinishdagi strni o‘zgartirishdan ko‘ra yangisi yaratildi. s2 nomli o‘zgaruvchi yaratildi, 0 chi index uchun “ J ” harfi tanlandi, qolgan qismi uchun, s nomli o‘zgaruvchini qiymatini 1 chi indexdan boshlab qolgan qismi yuklandi.
+
+1.54-rasm: String slicing va indeks
+Real hayotta sanoq 1 raqamida boshlansa, Pythonda 0 raqamidan boshlanadi, ya’ni 0 = 1.  String — ketma-ketlik, shuning uchun unda indeks bor.
+1.55 rasmda word = “Python” matnini indekslarga orqali ajratib olinyapti. O‘zgaruvchiga to‘rtburchak qavs [ ] orqali indeks bersak, unga biriktirilgan stringni ichidan indeks raqamiga mos belgini olib beradi.
+Agar, indekslash word[-1] ko‘rinishda minus orqali olinsa, matnni eng oxiridan olib, beradi. Agar matnni eng oxiridan indekslamoqchi bo‘lsak, unda -1 dan boshlanadi.
+
+1.55-rasm: String slicing
+[boshlanish : tugash : qadam]
+Slicing – bu, kesish, ya’ni, string orasidan kerakli qismin kesib olish degani.
+O‘zgaruvchiga word[ ] qavs ichida berilgan indekslarimiz, matnni qayerdan boshlab, qayerigacha va nechta qadam qoldirib kesib olishimizni bildiradi.
+Masalan:
+	•	[ 1:4 ] : Matnni birinchi indeksidan boshlab, to‘rtinchi indeksgacha oraliqda bo‘lgan belgilarini olib beradi.
+	•	[ :3 ] : Matnni boshidan, 0 – indeksdan boshlab, 3-indeksgacha bo‘lgan belgilarni olib beradi. Agar boshlanish uchun indeks berilmasa, 0 chi indeksdan boshlanadi
+	•	[ 3: ] : Matnni 3 chi indeksidan boshlab, oxirigacha bo‘lgan qismini kesib, beradi. Tugash indeks berilmasa, oxirigacha olib, beradi.
+	•	[ ::2 ] : Matnni boshidan oxirigacha, faqat har ikkinchini olib beradi
+	•	[ ::-1 ] : Manttni oxiridan boshigacha, teskari tartibda olib beradi.
+Stringni yana boshqa metodlari ham mavjud:
+
+1.56-rasm: stirng metodlar
+List — bu tartibli (ordered) elementlar to‘plami. Unda:
+	•	elementlar ketma-ket saqlanadi (indeks bor)
+	•	bir xil yoki turli tipdagi qiymatlar bo‘lishi mumkin
+	•	o‘zgaruvchan (mutable): ichidagi elementlarni o‘zgartirish, qo‘shish, o‘chirish mumkin
+
+1.57-rasm: List sintaksis
+List yaratish usullari
+To‘g‘ridan-to‘g‘ri [ ]
+
+1.58-rasm: List yaratish
+List yaratish uchun o‘zgaruvchiga [  ] to‘rtburchak qavsni yuklab qo‘yishni o‘zi kifoya. Yoki, qavs ichiga elementni qo‘shib qo‘ysa ham list yaratiladi
+Indeks va slicing (bo‘laklash)
+
+1.59-rasm: List indekslash
+List ham ketma-ketlik: indeks 0 dan boshlanadi.
+List ham string kabi indeksga ega, list nomi yonida [ ] qavs ichiga indesk raqamini bersak, kerakli joylashuvdagi elementni bizga olib beradi.
+
+1.60-rasm: List slicing
+Listda ham slicing mavjud, boshlanish, tugash va qadamni bersak yetarli.
+
+1.61-rasm: Mutable list
+List – o‘zgaruvchan. List elementini indeks orqali aniqlab, unga yangi qiymat berish mumkin.
+
+1.62-rasm: Append
+Listda append() nomli metod mavjud, bu orqali listga yangi element qo‘sha olamiz. Qo‘shilgan element listni eng oxiridan joy oladi.
+
+1.63-rasm: Insert
+insert() – listga belgilangan indeks bo‘yicha yangi element qo‘shadi.
+Uning uchun list.insert(index, value) ko‘rinishida yozish yetarli.
+
+1.64-rasm: remove()
+remove(value) – bu metod list ichidagi elementni olib, tashlaydi. Agar belgilangan element ikkita (dublikat) bo‘lsa, birinchi uchraganini olib tashlaydi.
+
+1.65-rasm: pop()
+pop() – bu metod ham listdan elementni olib tashlaydi, qavs ichiga indeks kiritilsa, kiritilgan indeksdagi elementni, agar, kiritilmasa, eng oxiridagisini olib tashlaydi.
+
+1.66-rasm: clear()
+clear() metod – listni ichidagi barcha elementni olib tashlaydi
+Tuple — bu tartibli (ordered) elementlar to‘plami. Listga o‘xshaydi, lekin eng katta farqi: 
+	•	Tuple o‘zgarmas (immutable) - ichidagi elementlarni keyin o‘zgartirib bo‘lmaydi.
+
+1.67-rasm: tuple()
+Qachon tuple ishlatiladi?
+	•	Ma’lumot o‘zgarmas bo‘lishi kerak bo‘lganda (koordinata, ranglar, config)
+	•	Funksiya bir nechta qiymat qaytarganda
+	•	“Record” (kichik struktura) ko‘rinishida saqlashda
+Tuple yaratish usullar:
+
+1.68-rasm: oddiy tuple()
+tuple() – yaratilishi listga oxshaydi faqat tupleda qavslar ( ) ko‘rinishda bo‘ladi va har bir element orasida vergul bo‘lishi kerak.
+
+1.69-rasm: Bitta elementli tuple()
+tuple() ichida agar bir dona element bo‘lsa, oxirida vergul bo‘lishi shart, aks holda u tuple emas, integer ( int() ) bo‘lib qoladi.
+
+1.70-rasm: tuple index
+Tuple ham ketma ketlik shuning uchun inda ham indeks mavjud, kerakli elementga indeks orqali murojaat qilish mumkin va kerakli joyda slicing amaliyotini bajarish mumkin.
+
+1.71-rasm: immutable tuple
+Tuple – o‘zgarmas. Agar unga o‘zgartirish kerak bo‘lsa, avval uni listga aylantiramiz va kerakli o‘zgartirishni amalga oshirib yana tuple() ko‘rinishiga o‘tkazib qo‘yamiz.
+Tupleda metodlar kam, ammo, foydali:
+
+1.72-rasm: count()
+count() metod – qavs ichiga berilgan elementni tuple() ichida nechta borligini sanab beradi.
+
+1.73-rasm: index()
+index() – berilgan qiymatni tuple() ichidagi indeks raqamini aniqlab beradi.
+Set — bu takrorlanmaydigan (unique) elementlar to‘plami.
+Set xususiyatlari:
+	•	takror element bo‘lmaydi
+	•	in bilan tekshirish juda tez
+	•	indeks yo‘q (s[0] bo‘lmaydi)
+	•	tartib kafolatlanmaydi (ko‘p hollarda sizga baribir tartib kerak bo‘lmaydi)
+	•	mutable: qo‘shish/o‘chirish mumkin.
+
+1.74-rasm: set sintaksis
+Set yaratish:
+	•	{ } bilan (bo‘sh set bundan mustasno)
+Bo‘sh set:
+
+1.75-rasm: Bo‘sh set
+Bo‘sh set yaratish uchun o‘zgaruvchiga barobar bilan set() deb biriktirib qo‘yish kerak.
+
+1.76-rasm: Element qo‘shish / o‘chirish
+Faraz qilaylik, bizda ikkita set() mavjud. Biz ularni birlashtirishimiz kerak.  
+1.77-rasm: Ikkita set, birlashtirish uchun
+
+1.78-rasm: Setni birlashtirish
+set() ni muhim xususiyatlaridan biri – qiymat sifatida dublikat element qabul qilmaydi. Shu sababli, ikkita setni birlashtirganda, agar, ikkita setda ham bir xil elementlar bo‘lsa, set ulardan birini saqlab qoladi, dublikat elementni olib tashlaydi.
+Amaliy misollar :
+1) Dublikatlarni olib tashlash
+
+1.79-rasm: Dublikatni olib tashlash
+nums – bu, list. unique degan o‘zgaruvchigan set(nums)ni yuklaymiz. unique o‘zgaruvchini print(uniqeu) chop etsak, list ichidagi dublikat elementlar olib tashlangan variant chiqadi.
+
+1.79-rasm: Setni tartiblash
+set() – tartiblanmagan ma’lumot turi. Agar bizga tartiblangan ko‘rinishda set() kerak bo‘lsa 👆
+	           DICTIONARY (dict) — kalit-qiymat (lug‘at)
+Dictionary - bu key: value juftliklarda saqlanadigan tuzilma.
+Xususiyatlari:
+	•	✅ kalit orqali tez topiladi
+	•	✅ mutable (yangilash, qo‘shish, o‘chirish mumkin)
+	•	✅ kalit (key) unikal bo‘ladi
+	•	✅ Python 3.7+ da kiritilgan tartib saqlanadi (amaliyotda foydali)
+
+1.80-rasm: Dictionary sintaksis
+Dictionary ma’lumot turida, key: value ko‘rinishda saqlangan ma’lumotlarni orasidan, bizga value qismi kerak bo‘lsa, dict[“key”] – key qismiga murojaat qilsak, valueni olob beradi. Agarda key bo‘lmasa, xatolik beradi.
+
+1.81-rasm: keyni olish
+Dictionaryda keyga murojaat qilinsa, agar key mavjud bo‘lsa, natijani olamiz. Agar key bo‘lmasa xatolik olishni xohlamasak, dict.get(“phone”, “yo‘q”) deb murojaat qilsak, bizga xatolik emas, shunchaki yo‘q deb xabar chiqaradi, kod ishni to‘xtatmaydi.
+
+1.82-rasm: add-update
+	•	user[“age”] = 23 usuli bilan mavjud qiymat yangilanadi. Ya’ni keyga murojaat qilinadi va barobar orqali yangi qiymat beriladi.
+	•	user[“phone”] = “+99890” – yangi key va u uchun value berib, yangi element (key: value) qo‘shiladi.
+Tanlangan mavzu asosida (string, list, tuple, set va dictionary) Python dasturida kichik amaliy loyiha yarating. Masalan, “Talabalar ma’lumotlari” nomli dastur tuzing va unda:
+	•	talabaning ismi va familiyasini string yordamida saqlang;
+	•	fanlar ro‘yxatini list ko‘rinishida yarating;
+	•	o‘zgarmas shaxsiy ma’lumotlarni tuple da saqlang;
+	•	takrorlanuvchi baholarni set orqali tartibga soling;
+	•	talaba haqidagi umumiy ma’lumotlarni dictionary da jamlang.
+
+Amaliy topshiriqlar
+
+
+Tanlangan mavzu asosida (string, list, tuple, set va dictionary) Python dasturida kichik amaliy loyiha yarating. Masalan, “Talabalar ma’lumotlari” nomli dastur tuzing va unda:
+	•	talabaning ismi va familiyasini string yordamida saqlang;
+	•	fanlar ro‘yxatini list ko‘rinishida yarating;
+	•	o‘zgarmas shaxsiy ma’lumotlarni tuple da saqlang;
+	•	takrorlanuvchi baholarni set orqali tartibga soling;
+	•	talaba haqidagi umumiy ma’lumotlarni dictionary da jamlang.
+
+Amaliy topshiriqlar
+
+
+	•	DRY prinsipi. Pythonda funksiyalar
+DRY (Don’t Repeat Yourself) prinsipining mazmunini tushuntirish hamda Python’da funksiyalar yaratish va ulardan kodni takrorlanishsiz samarali foydalanishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+DRY (Don’t Repeat Yourself) prinsipining mazmunini tushuntirish hamda Python’da funksiyalar yaratish va ulardan kodni takrorlanishsiz samarali foydalanishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kompyuter (internetga ulangan)
+Kod muharriri (masalan, VS Code yoki PyCharm)
+
+Kompyuter (internetga ulangan)
+Kod muharriri (masalan, VS Code yoki PyCharm)
+
+Ishni bajarish tartibi
+DRY (Don’t Repeat Yourself) — dasturlashdagi eng muhim prinsiplardan biri. Mazmuni: bir xil mantiq (kod)ni bir necha joyda takror yozma; uni bitta joyga jamla (funksiya, klass, modul, konfiguratsiya), keyin hamma joyda shu “bitta manba”dan foydalan.
+Agar bir xil kod 5 joyda tursa:
+	•	xato chiqsa — 5 joyni ham tuzatishga to‘g‘ri keladi
+	•	bir joy tuzatilsa, boshqasi unutilsa — bug paydo bo‘ladi
+	•	kod uzayadi, o‘qish qiyinlashadi
+	•	testlash va qo‘llab-quvvatlash qimmatlashadi
+DRY qilinganda esa:
+	•	o‘zgartirish bitta joyda
+	•	kod ixcham va tushunarli
+	•	qayta ishlatish (reusability) oson
+	•	testlash oson
+Oddiy misol: takrorlangan kod (DRY emas)
+
+1.83-rasm: Not DRY code
+Tasavvur qilamiz, bizda chegirma hisoblash bor:
+Bir xil kod 3 martta qayta yozilgan. 
+
+1.84-rasm: DRY code
+Bitta kodni qayta – qayta yozishni oldini olish maqsadida funksiyadan foydalanildi. Funksiya – bu ma’lum bir vazifani bajaruvchi va qayta ishlatilishi mumkin bo‘lgan kod bloki. Funksiya o‘zi mustaqil ishlay oladi va istalgan joyda chaqirib ishlatish mumkin. Funksiya argument qabul qiluvchi va qaytara oladi(return). Endi qachon chegirma kerak bo‘lsa, kodni qayta – qayta yozmasdan, fuksiyani chaqirib, unga qiymatni bersak, bizga natijani qaytaradi. Kod toza va ixcham ko‘rinadi. 
+
+1.85-rasm: Not DRY code
+Kimnidir ismi va yoshini chop etish uchun nechta odam bo‘lsa, hamma uchun bitta kod qayta va qayta yoziladi.
+
+1.86-rasm: DRY code
+format_user nomli funksiyaga kerakli insonni ismi va yoshini argument sifatida bersak, funksiyani uni chiroyli, tushunarli ko‘rinishda chop etadi. 10 ta odam uchun 10 ta bir xil kod yozish oldi olinadi.
+
+1.87-rasm: Not DRY code
+Kerakli til kiritilganda, usha tilga mos salomlashuvni chop etish. if / else orqali bajarildi, variant ko‘p bo‘lsa, kod tushunarsiz bo‘ladi va chalkash.
+
+1.88-rasm: DRY code
+	texts nomli o‘zgaruvchiga tillar key va value ko‘rinishida saqlangan dictionary yuklandi. Dictionaryda valueni olish uchun keyga murojaat qilish kerak edi. Bu yerda key = “uzl”, key = “rus”, key = “en”.  print() qismida dictionaryga key orqali murojaat qilib, kerakli tilni olamiz. Qachon kerakli tildagi matn kerak bo‘lsa, dictni key qismiga murojaat qilib olaveramiz. if / else qilish shart emas.
+Pythonda funksiyalar
+	Funksiya – bu ma’lum bir vazifani bajaruvchi va qayta ishlatilishi mumkin bo‘lgan kod bloki. Funksiya o‘zi mustaqil ishlay oladi va istalgan joyda chaqirib ishlatish mumkin. Funksiya argument qabul qiluvchi va qaytara oladi(return)
+
+1.89-rasm: Funksiyani ko‘rinishi
+   	Funksiya har doim def kalit so‘zi bilan boshlanadi va o‘zini ketida funksiya nomi keladi. Uni davomidan esa qavs ichida yo argument beriladi, yo berilmaydi, qavsdan keyn 2 nuqta (:) qo‘yiladi va funksiyani body qismi yoziladi. Eng so‘ngida esa, return bilan funksiya javobi qaytariladi.
+Oddiy funksiya:
+
+1.90-rasm: Oddiy funksiya
+Natija:
+
+1.91-rasm: Natija
+Funksiya nomi: salom_ber() – vazifasi qachonki funksiya chaqirilganida userga Salom, Python deb xabar chiqarish.
+Yana bir funksiya:
+
+1.92-rasm: salom_ber(ism)
+Userdan ism kiritishini so‘raydi, ism kiritilsa, user bilan salomalashadi👇
+
+1.93-rasm: Natija
+
+1.94-rasm: yig’indi
+Natija:
+
+1.95-rasm: yigindi_natija
+def yigindi(a, b): funksiyasi 2 ta son qabul qiladi, nechi son kiritsa ham, ikkalasini yeg’indisini qaytaradi.
+1.Bir xil amal (masalan, ikki sonni qo‘shish yoki chegirma hisoblash) bir necha marta takrorlanadigan dastur yozing.
+2.Ushbu takrorlanuvchi kodni funksiya ko‘rinishiga keltiring va DRY prinsipiga muvofiq qayta tuzing.
+3.Funksiyani kamida 3 marta chaqirib, kodning qisqargani va o‘qilishi osonlashganini ko‘rsating.
+
+Amaliy topshiriqlar
+
+
+1.Bir xil amal (masalan, ikki sonni qo‘shish yoki chegirma hisoblash) bir necha marta takrorlanadigan dastur yozing.
+2.Ushbu takrorlanuvchi kodni funksiya ko‘rinishiga keltiring va DRY prinsipiga muvofiq qayta tuzing.
+3.Funksiyani kamida 3 marta chaqirib, kodning qisqargani va o‘qilishi osonlashganini ko‘rsating.
+
+Amaliy topshiriqlar
+
+
+	•	Istisnoli holatlarni dasturlash (try/except). Fayllar bilan ishlash
+Python dasturlash tilida istisnoli holatlarni try/except orqali boshqarish hamda fayllar bilan ishlash (o‘qish va yozish) ko‘nikmalarini shakllantirish
+Mashg‘ulot
+maqsadi
+Python dasturlash tilida istisnoli holatlarni try/except orqali boshqarish hamda fayllar bilan ishlash (o‘qish va yozish) ko‘nikmalarini shakllantirish
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kompyuter yoki noutbuk (Internetga ulangan)
+Kod muharriri (VS Code yoki PyCharm)
+Kompyuter yoki noutbuk (Internetga ulangan)
+Kod muharriri (VS Code yoki PyCharm)
+Ishni bajarish tartibi
+Istisno — dastur ishlayotgan paytda kutilmagan holat yuz berib, odatdagi oqim buzilishi. Masalan:
+	•	foydalanuvchi raqam o‘rniga harf kiritsa (ValueError)
+	•	0 ga bo‘lish (ZeroDivisionError)
+	•	fayl topilmasa (FileNotFoundError)
+	•	ro‘yxatda yo‘q indeksga murojaat qilinsa (IndexError)
+	•	lug‘atda yo‘q kalit chaqirilsa (KeyError)
+Agar bunday xatolar ushlanmasa, dastur to‘xtab qoladi.
+try/except yordamida:
+	•	xatoni oldini olish emas, balki xato bo‘lsa ham dasturni to‘xtatmasdan davom ettirish
+	•	foydalanuvchiga tushunarli xabar berish
+	•	muhim resurslarni (fayl, tarmoq, DB) to‘g‘ri yopish (bu finally bilan ham bo‘ladi)
+try/except sintaksisi (eng oddiy ko‘rinish)
+
+1.96-rasm: try/except sintaksis
+Lekin bu usul yaxshi emas, chunki “qaysi xato?” noma’lum. Eng to‘g‘ri usul — aniq exceptionni ushlash.	
+
+1.97-rasm: ValueError
+Dasturga aytilyapti, userdan butun son so‘ragin, kelgan natijani o‘ziga “Siz kiritdingiz: x” deb qaytargin. Agar, noto‘g’ri qiymat kiritsa, ValueError xatoligi yuzaga kelsa, "Xato: Siz butun son emas, boshqa narsa kiritdingiz." deb javob ber,ammo, dasturni ishlashdan to‘xtatma.
+
+1.98-rasm: ZeroDivisionError
+Userdan ikkita butun son so‘raydi, agar, xatolikka sabab bo‘luvchi qiymat yuborilmagan bo‘lsa, natijani qaytar. 0 ga bo‘lib, bo‘lmaydigan qiymat kiritilsa, ZeroDivisionError xatolik yuzaga kelsa, "Xato: 0 ga bo‘lib bo‘lmaydi!" deb javob ber.
+Bir nechta xatolikni ushlash:
+
+1.99-rasm: Alohida exceptlar bilan
+
+1.100-rasm: Bir qatorda tuple bilan
+Ikkita exception (xatolik) bir qatorda ushlanyapti.
+
+1.101-rasm: else
+try – vazifa yuklanadi, agar xatolik chiqsa, chiqqan xatolikka qarab, except ishlaydi. Agar umuman xatolik chiqmasa, else qismi ishlaydi va natijani qaytaradi.
+
+1.102-rasm: finally
+finally – doim ishlaydi, xatolik chiqsa ham, chiqamasa ham, dastur to‘xtasa ham.
+Fayl — kompyuter xotirasida saqlanadigan ma’lumotlar (matn, rasm, audio, jadval...). Dastur fayl orqali:
+	•	ma’lumotni saqlaydi
+	•	keyinroq qayta o‘qiydi
+	•	hisobot, log, natijalarni yozib boradi
+Faylni ochish:
+Asosiy ko‘rinish
+
+1.103-rasm: Faylni ochish
+Lekin eng to‘g‘ri usul — with yordamida (fayl avtomatik yopiladi).
+Tavsiya etiladigan usul: with open(...) as f 
+
+1.104-rasm: with open()
+with open() bilan ochilganda, ichiga ma’lumot yozilganda, o‘qilganda yoki o‘chirilgandan keyin faylni avtomatik yopadi.
+1.4 jadval:File modes
+Mode
+Ma’nosi
+Eslatma
+R
+O‘qish
+Fayl yo‘q bo‘lsa xató
+w
+Yozish
+Eski faylni tozalab, qayta yozadi
+a
+Qo‘shib yozadi
+Oxiridan qo‘shadi, o‘chirmaydi
+x
+Yangi yaratadi
+Bor bo‘lsa, xató beradi
+b
+Binar rejim
+Rasm/Audio/pfd  kabi
+t
+Matn rejim
+Default
++
+O‘qish+Yozish
+r+, w+, a+
+Faylga yozish:
+	•	Oddiy yozish (w)
+
+1.105-rasm: w – yozish
+w ishlatilsa, eski matnlar o‘chib ketadi.
+	•	Qo‘shib yozish (a)
+
+1.106-rasm: a – qo‘shib yozish
+Davomidan yozadi, eskisini o‘chirmaydi
+	•	Bir nechta qatordan yozish (writelines)
+
+1.107-rasm: writelines
+Fayldan o‘qish (read):
+	•	Hammasin o‘qish: read()
+
+1.108-rasm: read()
+	•	Qator-qator o‘qish: readline()
+
+1.109-rasm: readline()
+	•	Barcha qatorlarni list qilish: readlines()
+
+1.110-rasm: readlines()      
+Foydalanuvchidan son kiritishni so‘raydigan dastur yozing va noto‘g‘ri kiritilgan qiymatlar uchun try/except dan foydalaning.
+	•	Matnli fayl yarating, unga ma’lumot yozing va fayldan o‘qib ekranga chiqaring.
+	•	Fayl mavjud bo‘lmagan holatda yuzaga keladigan xatolikni try/except yordamida boshqaring.
+Amaliy topshiriqlar
+
+
+	•	Foydalanuvchidan son kiritishni so‘raydigan dastur yozing va noto‘g‘ri kiritilgan qiymatlar uchun try/except dan foydalaning.
+	•	Matnli fayl yarating, unga ma’lumot yozing va fayldan o‘qib ekranga chiqaring.
+	•	Fayl mavjud bo‘lmagan holatda yuzaga keladigan xatolikni try/except yordamida boshqaring.
+Amaliy topshiriqlar
+
+
+
+
+ 
+ 
+2-bob haqida umumiy ma’lumot
+Mazkur bobda Python dasturlash tilida obyektga yo‘naltirilgan dasturlash (OOP) asoslari bosqichma-bosqich o‘rgatiladi. Bob OOP’ga kirish, uning asosiy tushunchalari va prinsiplari bilan tanishtirishdan boshlanadi. Klass va obyekt tushunchalari, atributlar hamda konstruktor (__init__) metodi yordamida obyekt yaratish jarayoni amaliy misollar asosida tushuntiriladi.
+Shuningdek, metodlarning turlari — instance, static, class va maxsus metodlar bilan ishlash ko‘nikmalari shakllantiriladi. OOP’ning muhim tamoyillari hisoblangan inkapsulyatsiya, merosxo‘rlik, polimorfizm va abstraksiya tushunchalari nazariy va amaliy jihatdan yoritilib, kodni modulli, kengaytiriladigan va qayta foydalanishga qulay tarzda tuzish ko‘nikmalari rivojlantiriladi.
+Bob davomida nazariy bilimlar amaliy mashg‘ulotlar bilan mustahkamlanadi. Aiogram kutubxonasi yordamida Telegram bot dasturini tuzish hamda Linux muhitida ishlash asoslari o‘rgatiladi. Bu orqali o‘quvchilar real loyiha muhitiga yaqin sharoitda ishlash tajribasiga ega bo‘ladilar.
+Bob yakunida o‘quvchilarda obyektga yo‘naltirilgan dasturlash uslubida dastur tuzish, klasslar bilan samarali ishlash, kichik loyihalarni yaratish hamda server muhitida ishlash bo‘yicha mustahkam bilim va amaliy ko‘nikmalar shakllantiriladi.
+
+	•	Klass va uning atributlari. Obyektlar. Konstruktor (__init__() metodi)
+Python’da klass tushunchasi, uning atributlari, obyektlar va konstruktor (__init__() metodi) yordamida obyektlarni yaratish tamoyillarini o‘rgatish.
+Mashg‘ulot
+maqsadi
+Python’da klass tushunchasi, uning atributlari, obyektlar va konstruktor (__init__() metodi) yordamida obyektlarni yaratish tamoyillarini o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kompyuter yoki noutbuk (Internetga ulangan)
+Kod muharriri (VS Code yoki PyCharm)
+Kompyuter yoki noutbuk (Internetga ulangan)
+Kod muharriri (VS Code yoki PyCharm)
+Ishni bajarish tartibi
+
+Klass (class) — bu “shablon” (qolip). U orqali bir xil turdagi obyektlar yaratiladi.
+Masalan, “Talaba” degan klass bo‘lsa, undan:
+	•	Ali degan talaba obyekt,
+	•	Vali degan talaba obyekt yaratish mumkin.
+Klass odatda:
+	•	atributlar (xususiyatlar/ma’lumotlar)
+	•	metodlar (xatti-harakatlar/funksiyalar) ni o‘z ichiga oladi.
+Obyekt (object/instance) — klassdan yaratilgan aniq nusxa (real “buyum”).
+	•	Klass: “Talaba” shabloni
+	•	Obyekt: “Ali” — Talaba klassining aniq bir nusxasi
+Atribut — obyekt yoki klassga tegishli bo‘lgan xususiyat (o‘zgaruvchi).
+A) Instance atribut (obyekt atributi)
+Har bir obyektning o‘ziga alohida tegishli bo‘ladi.
+Masalan:
+	•	Ali: yosh=20
+	•	Vali: yosh=22
+B) Class atribut (klass atributi)
+Klassning o‘ziga tegishli umumiy atribut. Barcha obyektlar uchun “umumiy” bo‘ladi.
+Masalan, hamma talabalarga bir xil:
+	•	universitet = "TATU"
+__init__() — bu konstruktor (boshlang‘ich sozlovchi metod). Obyekt yaratilayotgan paytda avtomatik ishga tushadi.
+Uning vazifasi:
+	•	obyektga kerakli boshlang‘ich qiymatlarni berish
+	•	instance atributlarni yaratib olish
+__init__() obyektni “yaratmaydi”, obyekt __new__ bilan yaratiladi, __init__() esa yaratilib bo‘lgandan keyin uni sozlaydi. (Boshlang‘ich darajada shuni bilish kifoya.)
+Eng oddiy misol: klass + obyekt + __init__
+
+2.1-rasm: Object+class+init
+	•	self — hozir yaratilayotgan obyektning o‘zi.
+	•	self.ism — obyekt ichidagi atribut.
+	•	ism — __init__ ga kelgan parametr.
+Instance atribut vs Class atribut: farqi
+
+2.2-rasm: instance and class atribut
+Demak:
+	•	class atribut o‘zgarsa, barcha obyektlarda ko‘rinadi.
+	•	instance atribut faqat bitta obyektga ta’sir qiladi.
+__init__() ga default qiymat berish
+Ba’zan hamma parametrni berish shart bo‘lmasin:
+
+2.3-rasm: default case berish
+self — obyektning o‘zini bildiradi.
+Tasavvur qiling:
+	•	t1.ism degani: t1 obyektining ism atributi
+	•	t2.ism degani: t2 obyektining ism atributi
+Shuning uchun bitta klassdan yaratilgan obyektlar bir-biridan mustaqil
+Atributni keyin qo‘shish mumkinmi?
+Ha, lekin tavsiya: atributlar odatda __init__() da yaratiladi.
+
+2.4-rasm: atribut qo‘sh.
+⚠️  : boshqa obyektlarda color bo‘lmasligi mumkin va xatoga olib keladi.
+
+2.5-rasm: Bank hisob raqami imitatsiyasi
+Bu misolda:
+	•	owner, balance — atributlar
+	•	deposit, withdraw — metodlar
+	•	__init__ — boshlang‘ich balansni o‘rnatdi.
+
+Metodlar: instance, static, class va maxsus metodlar
+Python’da metodlarning turlari — instance, static, class va maxsus metodlarning vazifasi hamda ulardan to‘g‘ri foydalanish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Python’da metodlarning turlari — instance, static, class va maxsus metodlarning vazifasi hamda ulardan to‘g‘ri foydalanish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kompyuter yoki noutbuk (ixtiyoriy)
+Kod muharriri (VS Code yoki PyCharm)
+Kompyuter yoki noutbuk (ixtiyoriy)
+Kod muharriri (VS Code yoki PyCharm)
+Ishni bajarish tartibi
+
+Instance metod (obyekt metodi)
+Instance metod — bu klass ichida yoziladigan va obyekt (instance) orqali chaqiriladigan metod. Uning birinchi parametri odatda self bo‘ladi.
+	•	self — metod chaqirilayotgan obyektning o‘zi
+	•	Instance metod obyektning atributlari bilan ishlaydi (self.ism, self.balance, self.items …)
+
+2.6-rasm: Sintaksis
+
+2.7-rasm: Chaqirish
+self bo‘lmasa, metod obyektning ichidagi ma’lumotlarga kira olmaydi.
+	•	t1.ism — t1 obyektiga tegishli ism
+	•	t2.ism — t2 obyektiga tegishli ism
+Demak, metod ham xuddi shunday:
+	•	t1.salomlash() — t1 o‘ziga tegishli ma’lumot bilan ishlaydi
+	•	t2.salomlash() — t2 o‘ziga tegishli ma’lumot bilan ishlaydi
+Eng sodda misol: obyekt atributidan foydalanish
+
+2.8-rasm: Obyekt atributdan foydalanish
+Bu yerda tanishtir() — instance metod, chunki self bor va self.ism, self.yosh bilan ishlayapti.
+self bilan atribut yaratish va yangilash
+self bilan siz istalgan atributni o‘rnatishingiz mumkin:
+
+2.9-rasm: Atribut yaratish va yangilash
+Instance metodga tashqi parametr berish:
+
+2.10-rasm: Tashqi parametr berish
+	•	Obyekt yaratildi (r), qiymat berildi (3, 4).
+	•	r.area() – berilgan ikki qiymanti bir-birini ko‘paytmasini qaytaradi (12)
+	•	r.scale() -  berilgan qiymatlarni 2 martta kattalashtirdi va r.area() natijasi = 24
+Instance metodlar bir-birini chaqirishi (method chaining)
+Metod ichida boshqa metodni ham chaqirish mumkin:
+
+2.11-rasm: Bir birini chaqirish
+Obyekt yaratildi, qiymat = “  salom  ”
+t.strip_spaces().to_upper() – birinchi bo‘lib, bo‘sh joylar olindi va navbatda barcha belgilar katta harflar ko‘rinishiga o‘tkazildi.
+Bu usul “chain” (zanjir) deyiladi.
+Static method (@staticmethod)
+Static method — bu klass ichida yoziladigan, lekin:
+	•	self ham olmaydi
+	•	cls ham olmaydi
+	•	obyekt holati (instance atributlar) yoki klass holati (class atributlar) bilan bevosita bog‘liq bo‘lishi shart emas.
+U ko‘proq:
+	•	yordamchi (utility) funksiyalar
+	•	validatsiya (tekshirish)
+	•	hisob-kitob
+	•	formatlash/konvertatsiya kabi vazifalar uchun ishlatiladi.
+
+2.12-rasm: Sintaksis
+
+2.13-rasm: Chaqirish
+Static method – bu obyektga emas, classga tegishli bo‘ladi. U keladigan ma’lumotga obyektga tegishli bo‘lmasa va umumiy holatlarda ishlatish uchun kerak bo‘ladi. Misol uchun, obyektga ma’lumot yubormaymiz, Class.methodname(n) ko‘rinishda qiymat berganimizda ishlaydi. U o‘ziga self va cls qabul qilmaydi.
+Eng oddiy misol: matematik yordamchi metod
+
+2.14-rasm: Statik uchun misol
+u yerda is_even():
+	•	obyekt ham talab qilmaydi
+	•	klass atributlariga ham muhtoj emas
+	•	shunchaki “class ichida tartibli saqlab qo‘yilgan funksiya”
+Nega oddiy funksiya emas, static method?
+	•	Biz “Buni oddiy funksiya qilib qo‘ysak bo‘lmaydimi?” deyishimiz mumkin. Bo‘ladi.
+	•	Lekin static methodning foydasi:
+	•	mavzuga oid funksiyalar bitta joyda, bitta klass ichida tartibli turadi
+	•	kod “arxitekturasi” chiroyli bo‘ladi
+	•	Masalan, UserValidator.validate_phone() degan nom juda tushunarli.
+Real misol: validatsiya (telefon raqam tekshirish)
+
+2.15-rasm: validatsiya
+Bu metod:
+	•	self kerak emas
+	•	cls kerak emas
+	•	faqat kiritilgan qiymatni tekshiradi
+Class method (@classmethod)
+Class method — bu klass ichida yoziladigan metod bo‘lib, uning birinchi parametri cls bo‘ladi.
+	•	cls — metod chaqirilayotgan klassning o‘zi (Talaba, Account, Product…)
+	•	Class method klass atributlari bilan ishlaydi
+	•	Ko‘pincha obyekt yaratishning alternativ yo‘llari (factory method) yoki umumiy klass holatini boshqarish uchun ishlatiladi.
+
+2.16-rasm: Sintaksis
+
+2.17-rasm: Chaqirish
+Obyekt orqali ham chaqirsa bo‘ladi, lekin cls baribir klass bo‘ladi:
+
+2.18-rasm: Via Object
+Eng sodda misol: klass atributi bilan ishlash
+
+2.19-rasm: Sodda misol
+Bu yerda set_university() — class method. U cls.universitet ni o‘zgartirdi.
+Factory method: obyekt yaratishning alternativ yo‘li
+Class method juda ko‘p ishlatiladigan joy: obyekt yaratib berish.
+Misol: tug‘ilgan yil orqali yoshni hisoblab obyekt yaratish
+
+2.20-rasm: Misol 2
+
+from_birth_year() obyekt yaratishning “qulay yo‘li” bo‘ldi.
+Obyektga ism va tug’ilgan yilni berishni o‘zi kifoya, yoshni o‘zi hisoblab beradi
+cls — qaysi klass chaqirgan bo‘lsa, o‘sha klass.
+Bu merosxo‘rlikda juda foydali: ChildClass.from_birth_year() chaqirilsa, cls child bo‘ladi.
+Merosxo‘rlikda class method kuchi
+
+2.21-rasm: Merosxo‘rlik
+Meros olganda ota classni vazifasini oladi. Agar bu oddiy funksiya bo‘lganida yoki Base(...) deb yozilganida, Child obyektini qaytara olmas edi.                                     
+Klass ichida instance metod yaratib, obyekt atributlari bilan ishlashni ko‘rsating.
+	•	@staticmethod va @classmethod yordamida klassga tegishli metodlar yozing.
+	•	__str__() yoki __len__() kabi maxsus metodlardan birini qo‘llab, obyekt haqida ma’lumotni qulay ko‘rinishda chiqaring.
+Amaliy topshiriqlar
+
+
+	•	Klass ichida instance metod yaratib, obyekt atributlari bilan ishlashni ko‘rsating.
+	•	@staticmethod va @classmethod yordamida klassga tegishli metodlar yozing.
+	•	__str__() yoki __len__() kabi maxsus metodlardan birini qo‘llab, obyekt haqida ma’lumotni qulay ko‘rinishda chiqaring.
+Amaliy topshiriqlar
+
+	•	Inkapsulyatsiya
+Python’da inkapsulyatsiya tushunchasini o‘rgatish, atribut va metodlarni yashirish hamda ularga xavfsiz murojaat qilish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Python’da inkapsulyatsiya tushunchasini o‘rgatish, atribut va metodlarni yashirish hamda ularga xavfsiz murojaat qilish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter yoki noutbuk (ixtiyoriy)
+	•	Kod muharriri (VS Code yoki PyCharm)
+	•	Kompyuter yoki noutbuk (ixtiyoriy)
+	•	Kod muharriri (VS Code yoki PyCharm)
+Ishni bajarish tartibi
+OOP (Object-Oriented Programming) 
+OOP – bu dasturlash uslubi hisoblanadi. Unda kod obyektga tayangan holda yoziladi. Obyekt – bu class asosida yaratilgan, real hayotda mavjud narsalar(masalan, kitob, talaba, mashina… va h.k). Uning 4 ta tamoyili mavjud:?
+Inkapsulyatsiya — bu:
+	•	obyekt ichidagi ma’lumotlarni (atributlarni) tartibli saqlash
+	•	ularga kirishni nazorat qilish
+	•	noto‘g‘ri qiymatlar kiritilishidan himoyalash
+	•	o‘zgarishlarni faqat metodlar orqali (yoki property orqali) boshqarish
+Oddiy qilib:
+“Atributga to‘g‘ridan-to‘g‘ri tegma, men (klass) uni qanday o‘zgartirishni bilaman.”
+Python’da “public / protected / private” qanday ishlaydi?
+Python’da Java/C# dagidek qat’iy private yo‘q. Lekin nomlash kelishuvi (convention) bor:
+
+2.22-rasm: Public (ochiq)
+Hamma joydan bemalol o‘qiladi/yoziladi.
+
+2.23-rasm: Protected(yarim yopiq)
+Ma’nosi: “Bu ichki narsa, tashqaridan tegmang.” Lekin baribir ishlasa bo‘ladi — shunchaki odob qoidasi.
+
+2.24-rasm: Private (name mangling)
+Bu “haqiqiyroq yopiq”: Python ichkarida nomini o‘zgartirib yuboradi: _ClassName__balance ko‘rinishiga o‘tadi.
+Bu ham 100% “berkitib qo‘yish” emas, lekin tasodifiy ishlatishni ancha cheklaydi.
+Nega inkapsulyatsiya kerak?
+Misol: bank hisob.
+Agar balance ochiq bo‘lsa:
+
+2.25-rasm: Ochiq balance
+Bu muammo:
+	•	balans manfiy bo‘lib qoladi
+	•	tizim buziladi
+Inkapsulyatsiya yechimi: balansni nazorat bilan o‘zgartirish (deposit/withdraw yoki property setter).
+Protected usuli: _balance + metodlar orqali boshqarish
+
+2.26-rasm: Potected: _balance
+Bu yerda:
+	•	balance to‘g‘ridan-to‘g‘ri o‘zgartirilmayapti
+	•	faqat “qoidali” metodlar orqali
+Private usuli: __balance (name mangling)
+
+2.27-rasm: __balance
+
+2.28-rasm: Tavsiya qilinmaydigan usul
+Eng yaxshi amaliy usul:
+ @property (Python’da inkapsulyatsiya “standarti”)
+Python’da ko‘p hollarda eng chiroyli yechim — property.
+Faqat o‘qiladigan (read-only) property
+
+2.29-rasm: @property
+Bu juda qulay:
+	•	tashqaridan acc.balance deb o‘qiydi (oddiy atributdek)
+	•	lekin o‘zgartira olmaydi!
+Setter bilan nazoratli o‘zgartirish
+
+2.30-rasm: Setter
+Bu inkapsulyatsiyaning eng chiroyli ko‘rinishi:
+	•	tashqaridan oddiy atributdek ko‘rinadi
+	•	ichkarida qattiq nazorat bor
+@property decorator bizga class ichidagi methodlarni oddiy attribute sifatida ishlatishga yordam beradi, @property decorator bilan biz ( ) qavsdan foydalanmasdan methodni chaqirishimiz mumkin.
+Yashirin (__) va himoyalangan (_) atributlarga ega bo‘lgan klass yarating.
+	•	Ushbu atributlarga murojaat qilish uchun getter va setter metodlarini yozing.
+	•	Inkapsulyatsiya ma’lumotlarni himoyalashda qanday rol o‘ynashini amalda ko‘rsating.
+Amaliy topshiriqlar
+
+
+	•	Yashirin (__) va himoyalangan (_) atributlarga ega bo‘lgan klass yarating.
+	•	Ushbu atributlarga murojaat qilish uchun getter va setter metodlarini yozing.
+	•	Inkapsulyatsiya ma’lumotlarni himoyalashda qanday rol o‘ynashini amalda ko‘rsating.
+Amaliy topshiriqlar
+
+	•	Merosxo‘rlik va Polimorfizm
+Python’da merosxo‘rlik (inheritance) va polimorfizm tushunchalarini o‘rgatish hamda ularni klasslar o‘rtasida kodni qayta ishlatish va moslashuvchanlikni ta’minlashda qo‘llashni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Python’da merosxo‘rlik (inheritance) va polimorfizm tushunchalarini o‘rgatish hamda ularni klasslar o‘rtasida kodni qayta ishlatish va moslashuvchanlikni ta’minlashda qo‘llashni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter yoki noutbuk (ixtiyoriy)
+	•	Kod muharriri (VS Code yoki PyCharm)
+	•	Kompyuter yoki noutbuk (ixtiyoriy)
+	•	Kod muharriri (VS Code yoki PyCharm)
+Ishni bajarish tartibi
+Merosxo‘rlik — bu bitta klass (ota/parent/base) dagi xususiyat va metodlarni boshqa klass (bola/child/derived) meros qilib olishi.
+	•	Kod takrorlanishini kamaytiradi (DRY)
+	•	Umumiy funksiyalarni “base class”da yozib, bolalarda kengaytirasiz
+	•	Loyihani tartibli qiladi
+
+2.31-rasm: Inhertance
+Dog va Cat klasslari Animaldagi __init__ va eat()ni meros oldi.
+Animal nomli class-ga hayvon nomi atribut sifatida beriladi. Class ichidagi eat() nomli metod atribut sifatida kelgan hayvon nomidan foydalanib, matn tayyorlaydi. Masalan, hayvon nomi = “ Rex ”, natija quyidagicha: Rex ovqatlanyapti.
+Demak, Animal class vazifasi kelgan hayvon nomi ostida matn tayyorlash.
+Dog nomli class Animal classdan voris, meros oldi. Class Dog(Animal): Animal class – ota class,  Dog class – bola class. Animal class uchun kelgan hayvon nomida Dog class endi foydalana oladi, chunki, uni ota classni xususiyatini meros sifatida o‘ziga oldi. Cat nomli class ham huddi shu tarzda bola class bo‘lib, Animal classga kelgan hayvon nomi ostida matn yaratadi.
+Method overriding (ustidan yozish)
+Bola klass ota klass metodini o‘zgartirib (override) yuborishi mumkin.
+
+2.32-rasm: Overriding
+Method overriding
+def kalit so‘zi bilan boshlanuvchi, natijani return kalit so‘zi bilan qaytaruvchi kod bloki – bu, funksiya deyiladi. Class ichida yozilgan funksiya – method deyiladi.
+Method overriding – bu, ota class bola classga meros qilib bergan methodni, bola class ichida qayta yozish. Ota classdagi methodlar o‘zgarmaydi, ammo, bola classga meros qilingan xuddi usha methodni, bola classni vazifasiga qarab o‘zgartirish, qayta yozish.
+super() nima va qachon ishlatiladi?
+super() — ota klassdagi metodlarni chaqirish uchun ishlatiladi. Ko‘pincha bola klassda __init__() yozilganda ota __init__()ni ham ishga tushirish kerak bo‘ladi.
+
+2.33-rasm: super()
+super().__init__() bo‘lmasa, name va salary to‘g‘ri o‘rnatilmay qoladi.
+Polimorphisim(Ko‘p shakillik) – bu biror nomdagi metod har xil classlarda, har xil vazifada kelishi mumkinligi degani. Bir xil metod chaqiriladi, lekin natija obyekt turiga qarab o‘zgaradi.
+
+2.34-rasm: Polimophisim
+area() hamma joyda bir xil chaqirilyapti, lekin har klass o‘zicha hisoblayapti.
+Ota classdan meros qilib, area() method olingan, classlar vazifasi turlicha bo‘lgani uchun, meros turli class-da turlicha ishlaydi, turlicha override qilinadi
+“Duck typing” polimorfizmi (Python uslubi)
+Python’da ko‘pincha “klassini tekshirma, metod bor-yo‘qligini nazarda tut” degan yondashuv ishlatiladi.
+
+2.35-rasm: Duck typing
+start() funksiyasiga kim kelsa ham, move() bo‘lsa bo‘ldi. 
+	•	start() funksiyaga berilgan obyetkda move() method bo‘lsa bas, usha methodni ishga tushiradi.
+Asosiy (ota) klass va undan meros oluvchi (bola) klass yarating.
+	•	Bola klassda ota klass metodini qayta aniqlab (override) polimorfizmni ko‘rsating.
+	•	Bir xil nomli metodni turli klass obyektlarida chaqirib, natijalarni solishtiring.
+Amaliy topshiriqlar
+
+
+	•	Asosiy (ota) klass va undan meros oluvchi (bola) klass yarating.
+	•	Bola klassda ota klass metodini qayta aniqlab (override) polimorfizmni ko‘rsating.
+	•	Bir xil nomli metodni turli klass obyektlarida chaqirib, natijalarni solishtiring.
+Amaliy topshiriqlar
+
+	•	Abstraksiya
+Pythonda abstraksiya tushunchasini o‘rgatish, abstrakt klass va metodlar orqali faqat muhim xususiyatlarni ajratib ko‘rsatish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Pythonda abstraksiya tushunchasini o‘rgatish, abstrakt klass va metodlar orqali faqat muhim xususiyatlarni ajratib ko‘rsatish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kompyuter yoki noutbuk (Internetga ulangan)
+Kod muharriri (VS Code yoki PyCharm)
+Kompyuter yoki noutbuk (Internetga ulangan)
+Kod muharriri (VS Code yoki PyCharm)
+Ishni bajarish tartibi
+Abstraksiya — bu obyektning:
+	•	muhim xususiyatlari va funksiyalarini ajratib ko‘rsatish,
+	•	keraksiz detallarni yashirish.
+Oddiy qilib:
+“Nimani qiladi?” muhim. “Qanday qiladi?” ichkarida qoladi.
+Hayotiy misol
+Mashina haydash:
+	•	Sizga kerak: rul, gaz, tormoz
+	•	Sizga kerak emas: dvigatel ichidagi detonatsiya, yonilg‘i tizimi, sensorlar qanday ishlashi
+Abstraksiya va inkapsulyatsiya farqi
+Ko‘pchilik chalkashadi:
+	•	Inkapsulyatsiya: ma’lumotga kirishni nazorat qilish (private, property, setter)
+	•	Abstraksiya: umumiy interfeys berib, ichki detallarni yashirish (abstract class, abstract method)
+Qisqa eslab qolish:
+	•	Inkapsulyatsiya: “himoya”
+	•	Abstraksiya: “soddalashtirish / interfeys”
+Python’da abstraksiyani qanday qilamiz?
+2 ta asosiy yo‘l:
+	•	Abstract Base Class (ABC) — abc moduli orqali (eng to‘g‘ri)
+	•	“Shartli” abstraksiya — raise NotImplementedError bilan (oddiyroq, lekin kamroq rasmiy)
+abc moduli bilan Abstract Class va Abstract Method
+Asosiy tushunchalar
+	•	Abstract class: to‘liq obyekt qilib bo‘lmaydi (instantiate qilinmaydi)
+	•	Abstract method: voris (child) klasslar majbur implement qilishi kerak bo‘lgan metod
+
+2.36-rasm: abstractmethod
+Shape — shablon. “Hamma shakllarda area bo‘lishi shart” degan qoida.
+Voris klasslar abstrakt metodni amalga oshiradi
+
+2.37-rasm: Misol abstractmethod
+Bu yerda abstraksiya nimani berdi?
+	•	Biz Shape orqali “umumiy interfeys” (area) belgiladik
+	•	Har bir shakl ichkarida o‘zicha hisoblaydi (detallar yashirin)
+Abstraksiyaning foydasi (katta loyihalarda)
+Abstraksiya bizga:
+	•	“hamma sinflar shu metodga ega bo‘lsin” degan standart beradi
+	•	yangi klass qo‘shishda xatoni erta ushlaydi (abstract methodni yozmasak darhol TypeError bo‘ladi)
+	•	polimorfizmni kuchaytiradi (bitta listda turli obyektlar)
+Real misol: To‘lov tizimi (Payment)
+
+2.38-rasm: Payment
+Bu yerda:
+	•	checkout() funksiyasi ichki detallarni bilmaydi
+	•	faqat “pay(amount) bo‘lsa bo‘ldi” — bu abstraksiya
+Qachon abstraksiyadan foydalaniladi?
+Foydalanish kerak:
+	•	“barcha voris klasslarda shu metod bo‘lishi shart” desangiz
+	•	“standart interfeys” kerak bo‘lsa (pay(), area(), send(), save()…)
+	•	polimorfizm bilan ko‘p ishlasangiz
+Kerak emas agar:
+	•	bitta-ikkita oddiy klass bo‘lsa, ortiqcha murakkablik kiritadi.
+abc modulidan foydalanib abstrakt klass yarating.
+	•	Abstrakt metod aniqlab, uni voris (bola) klasslarda majburiy amalga oshiring.
+	•	Abstraksiya kodni soddalashtirish va kengaytirishda qanday yordam berishini amalda ko‘rsating.
+Amaliy topshiriqlar
+
+
+	•	abc modulidan foydalanib abstrakt klass yarating.
+	•	Abstrakt metod aniqlab, uni voris (bola) klasslarda majburiy amalga oshiring.
+	•	Abstraksiya kodni soddalashtirish va kengaytirishda qanday yordam berishini amalda ko‘rsating.
+Amaliy topshiriqlar
+
+	•	Aiogram kutubxonasi yordamida telegram bot dasturini tuzish
+Aiogram kutubxonasi yordamida Telegram bot yaratish, asosiy sozlashlar (token, bot/dispatcher), handlerlar va oddiy buyruqlar orqali bot funksiyalarini ishga tushirishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Aiogram kutubxonasi yordamida Telegram bot yaratish, asosiy sozlashlar (token, bot/dispatcher), handlerlar va oddiy buyruqlar orqali bot funksiyalarini ishga tushirishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kompyuter (internetga ulangan)
+Telegram va BotFather orqali olingan token
+Kod muharriri (VS Code yoki PyCharm)
+
+Kompyuter (internetga ulangan)
+Telegram va BotFather orqali olingan token
+Kod muharriri (VS Code yoki PyCharm)
+
+Ishni bajarish tartibi
+Aiogram — bu Python dasturlash tilida Telegram botlar yaratish uchun mo‘ljallangan zamonaviy va tezkor asinxron (async) kutubxona.
+U Telegram Bot API bilan ishlaydi va async / await tamoyiliga asoslangan.
+Aiogram nimasi bilan qulay? 
+	•	Tez ishlaydi (asinxron arxitektura)
+	•	Katta botlar uchun mos (modulli tuzilma)
+	•	FSM (holatlar) bilan ishlash imkoniyati bor
+	•	Inline va Reply keyboard to‘liq qo‘llab-quvvatlanadi
+	•	Webhook va Long Polling qo‘llab-quvvatlanadi
+Aiogram qayerlarda ishlatiladi?
+	•	Chat-botlar
+	•	 Valyuta kursi botlari
+	•	 Savdo (shop) botlar
+	•	 Hisobot va monitoring botlari
+	•	 Ta’limiy botlar
+	•	 Xabarnoma (notification) botlar
+Aiogram asosiy tushunchalari
+Telegram bilan bog‘lanish uchun ishlatiladi.
+
+2.39-rasm: Bot
+Kelgan xabarlarni qaysi handler ushlashini boshqaradi.
+
+2.40-rasm: Dispatcher()
+Handler (xabar tutuvchi)
+Foydalanuvchidan kelgan:
+	•	/start
+	•	matn
+	•	tugma
+	•	callback
+kabilarni ushlab oladi.
+
+2.41-rasm: Handler
+Router (Aiogram 3.x)
+Kodlarni tartibli va modulli qilish uchun ishlatiladi.
+
+2.42-rasm: router
+FSM (Finite State Machine)
+Foydalanuvchi bilan bosqichma-bosqich dialog qilish uchun.
+Masalan:
+	•	Ism so‘rash
+	•	Telefon so‘rash
+	•	Tasdiqlash
+
+2.43-rasm: State
+State – ingliz tilidan olinganda holat degan ma’noni beradi, ya’ni, bot hozir qaysi holatda, navbatda qaysi holat keladi ka’bi amallarni bajarish uchun kerak bo‘ladi.
+Bizga qachon kerak bo‘ladi? Misol uchun, biror-bir Fast Food markaziga telegram bot orqali uyimizda buyurtma qilmoqchi bo‘lsak, bot bizdan ma’lumotlarni ketma ketlikda so‘raydi. Masalan, qaysi taomni xush ko‘rasiz, nechta buyurtma qilasiz, qo‘shimcha yana nimadir kerakmi va so‘ngida manzilni kiriting deydi. Shu vaziyatda State() kerak bo‘ladi. Chunki, bot bilishi kerak user hozir qaysi holatda, taom buyurtma qilish holatidami, yoki, manzilni kirityaptimi. Boshqa tarafdan nazar solganda, user nechta buyurtma qilganidan keyin, bot – “endi nimani so‘ray” deb to‘xtab qolmaydi
+Endi kichik bir telegram bot tayyorlab ko‘ramiz.
+Bot nima vazifani bajaradi?
+Markaziy bankdan valyutalar kursi to‘g’risidagi ma’lumotni oladi va user istagan vaqtda, istalgan ko‘rinishda taqdim etadi.
+ 					BotFather
+Telegram bot yaratishda birinchi navbatda bizga telegramdagi BotFather nomli bot kerak bo‘ladi. Uning vazifasi - telegram botni yaratib berish, boshlang’ich sozlamalarini kiritish. Biz esa, u yaratib bergan telegram botni dasturlab ishlaydigan holatga olib kelamiz.
+1. Bot Fatherni topamiz:
+
+2.44-rasm: BotFather
+
+2.45-rasm: BotFather commands
+Botning username matni - @BotFather
+	•	Botni topib, unga kirgach, /start tugmasini bosib, botni ishga tushiramiz
+	•	BotFather commands orasidan /newbot buyrug’ini beramiz
+
+2.46-rasm: /newbot
+Alright, a new bot. How are we going to call it? Please choose a name for your bot – deb, bot uchun nom tanlashimizni so‘raydi.
+Endi username tanlashimiz kerak, oxirida …bot deb tugashi kerak.
+	
+2.47-rasm: Token
+Bot bizga Bot Token beradi, endi PyCharm ilovasini ochamiz va bot uchun yangi loyiha yaratamiz.
+
+2.48-rasm: New project | virtual env
+Teminalni ochib, python -m venv env deb yozamiz. Loyihamiz ishlashi uchun muhit yaratiladi va yuqorida env degan papka paydo bo‘ladi. Navbtda env\Scripts\activate deb yozamiz va virtual muhit ishga tushadi. Uning belgisi, terminalda qator boshida ( env ) degan yozuv paydo bo‘lgani. 
+PyCharm ishlashga tayyor. Endi terminalga  pip install aiogram  buyrug’ini beramiz. Bu orqali aiogram kutubxonasini virtual muhitga o‘rnatib olamiz. Enter tugmasi bosilishi bilan kutubxona o‘rnatish jarayoni boshlanadi.
+
+2.49-rasm: Successfully installed
+Aiogram va uning modullari muvaffaqiyatli o‘rnatildi. O‘rnatilgan packagelarni requirements.txt fayliga saqlab olamiz, bu bizga kelajakda loyihamiz bilan ishlash jarayonida kerak boladi. Terminalga  pip freeze > requirements.txt  deb buyruq beramiz:
+
+2.50-rasm: requirements.txt
+Loyiha fayllari orasiga yangi requirements.txt degan fayl avtomatik qo‘shiladi va o‘rnatilga aiogram va unga tegishli package-lar saqlanadi.
+Endi yangi python fayl ( .py ) yaratamiz, nomi config.py bo‘ladi.
+
+2.51-rasm: BOT_TOKEN | CBU_URL
+BotFather bizga bergan tokenni BOT_TOKEN ostiga config.py fayliga saqlab olamiz. BOT_TOKEN har doim maxfiy bo‘lsin!!!
+Markaziy bankning valyuta kursi ma’lumotlarini json formatdagi ma’lumotni olish uchun 2.49 rasmdagi kabi CBU_URL o‘zgaruvchisi urlni biriktirib qo‘yamiz. Shu yo‘l orqali bank taqdim etgan ma’lumotlarni olsa bo‘ladi
+Currencies dictionary – bankdan olingan ma’lumotlarni olish jarayonida qaysi valyuta kursini filterlab olish, kerakligini aniqlab beradi User valyuta kursi haqida ma’lumot olish uchun qayta command beradigan bo‘sa, har doim json ma’lumotdan olinmaydi, dictionary o‘ziga kesh sifatida saqlab oladi va qaytaradi. Kamroq vaqt ketadi
+Navbatda bot uchun berilagan command(buyruq)larni ushlab olish uchun handler yozamiz. Uning uchun bizga alohida command_handler.py fayli kerak. Fayl yaratib, ishni boshlaymiz
+
+2.52-rasm: import packages
+Kerak bo‘ladigan packagelarni import qilib olamiz, foydalanish uchun
+router – bizga modullarni (.py fayllarni) birlashtirish uchun, kodnni bo‘limlarga ajratib, tartibli qilish uchun kerak.
+
+2.53-rasm: handler start
+
+2.54-rasm: command start
+User botga kirib, START tugmasini bosganda ( @command_router.message(CommandStart())
+ ), u buyruqni ushlab oluvchi handler: start_handler. Handlerda yozilgan vazifani bot userga qaytaradi. Bu handler User bilan salomlashib, vazifasi bilan tanishtiryapti. Handler doim asinxron tarzda yoziladi, ( ) qavs ichiga userdan qanday ma’lumot kelishi belgilangan. s nomli o‘zgaruvchiga yuborilishi kerak bo‘lgan matn yozilgan. Handler yakunida await message.answer(text = s) ko‘rinishida javobni qaytaryapmiz. reply_markup – biror tugma chiqshi kerak bo‘lsa, shu yerga yoziladi. Hozir tugma chiqishi kerak emas, shu sabab, tugmalarni olib tashlovchi funksiya ReplyKeyboarRemove() yozib qo‘yilgan.
+
+2.55-rasm: handler help
+                                                                                                
+2.56-rasm: /help   
+          /help – command bosilganda ishlashi kerak bo‘lgan handler.
+@command_router.message(Command('help', prefix='!/#')) – bu filter. Command sifatida help yozilganda ishlagin deb filterlab beruvchi. prefix = “ !/# ”  nima? Bot uchun odatda command berish uchun “ / “ slashdan foydalaniladi. Prefix bo‘lsa, bu istisno, ya’ni command berish uchun “ !/# ”   shulardan foydalanish ham mumkin degani. 
+User /help command berganida, botdagi qaysi command nima vazifa qilishi haqida qisqa ma’lumot berish ekan, shu uchun matn tayyorlab, userga yuboriladi. await message.reply(text = s) – message.reply() user yozgan xabarga reply, sifatida yuborish uchun ishlatiladi.
+
+2.57-rasm: command courses
+/courses buyrug’i berilganida user uchun 3 xil valyuta kursi: rubl, dollar va so‘m ma’lumotlari chiqishi kerak. 
+
+2.58-rasm: ChatAction
+ChatAction – bot userga javob yuborayotganini bildirish uchun yuqorida: typing…, sending photo kabi yozuvlarni chiqazadi. Agar bot uzoq vaqt o‘ylab qolsa, hech qanday harakat qilmasa, user bot ishlamayapti deb o‘ylab qolishini oldini olish uchun kerak
+
+2.59-rasm: ChatAction
+requests yordamida CBU_URL manziliga so‘rov yuboramiz, ma’lumotlarni olib kelish uchun.  Qaytadigan javob (json) dictionary ko‘rishida bo‘ladi. Valyuta kursi ma’lumotni olish jarayonida filterlash uchun currencies dictionarydan foydalanamiz. Valyuta kurs ma’lumotlarini usha dictionary uchun qiymat qib belgilaymiz, kesh ma’lumot bo‘lishi uchun. Ma’lumotlardan matn tayyorlab, uni s o‘zgaruvcha saqlab, userga taqdim etamiz
+Natija:
+
+2.60-rasm: /courses
+CBU_URL manzildan olingan ma’lumot, filterlandi, matn xolatiga olib kelindi va taqdim etildi.
+
+2.61-rasm: handler euro
+CBU_URL uchun EUR/ kalit so‘zini qo‘shib, euro kursi haqida ma’lumot olish uchun so‘rov yuborildi. Qaytgan javobdan f.string() yordamida matn tayyorlab, userga yubordik kurs haqida ma’lumotni.
+Natija:
+
+2.62-rasm: /eur
+rubl va dollar kursi ma’lumoti ham xuddi shu ko‘rishda olinadi, filterlanadi va yuboriladi
+
+2.63-rasm: handler ruble
+
+
+2.64-rasm: handle /usd
+Natija:
+                                                                                               2.65-rasm: /rub | /usd
+
+2.66-rasm: exchange handle
+message_handler.py fayl yaratamiz. CBU_URL manziliga so‘rov yuboramiz. Qaytgan javoblarni filterlab, USD, RUB va EUR ni alohida o‘zgaruvchilarga yuklaymiz. User kiritgan son bo‘yicha 3 xil valyutani qiymatini hisoblaymiz. Userga tushunarli tarzda ko‘rinishi uchun matn ko‘rinishiga o‘tkazib, userga yuboramiz. 
+User uchun yana qo‘shimcha qilib, InlineKeyboard() dan foydalanib, botni egasi va markaziy bankni url manzilini qo‘shib qo‘yilgan. 
+ Natija: 
+
+2.67-rasm: Valyuta almashinuvi
+Kichik bir botning dasturi yozildi, navbat endi botning yurak qismiga. 
+main.py faylini yaratamiz.
+
+2.68-rasm: main.py
+Kerak bo‘ladigan packagelar import qilindi.
+
+2.69-rasm: main()
+Botni ishga tushiruvchi bot shu bo‘ladi, unga kerakli qiymatlarni berib ishga tushirish kerak:
+bot – o‘z ichiga config.py faylidan import qilingan BOT_TOKEN ni oladi. 
+Qo‘shimchasiga, xabar yuborish vaqtida HTML taglardan foydalanilgan va url manzillardan foydalanilgan. Ularning qisqa sozlamasini default o‘zgaruvchiga yuklandi
+
+2.70-rasm: Bot settings
+
+2.71-rasm: MENU
+2.64 rasmda    await bot.set_my_commands() orqali botning menu qismidagi command-lar ro‘yxatini yaratamiz.
+dp=Dispatcher() – kelgan xabarlarni handlerga yo‘naltiradi
+await dp.start_polling(bot)	- bot ishga tushiriladi.
+
+2.72-rasm: Botni ishga tushirish
+Botning ishga tushiruvchi barcha kodlar main.py faylida bo‘lgani uchun, Terminalga   python main.py   buyrug’ini beramiz.
+Ostidan xabar paydo bo‘ladi: Start polling. Bot ishga tushdi
+
+2.73-rasm: Start Bot
+
+2.74-rasm: Bot foydalanishga tayyor
+Kichik, valyutalar kursini hisoblab ma’lumot beruvchi bot tayyor bo‘ldi.
+Kerakli kutubxonalar:
+	•	aiogram ( pip install aiogram )
+	•	requests ( pip install requests )
+Botni to‘liq kodi: https://github.com/Javohir0411/Aiogram_Currency_Bot.git
+BotFather orqali bot yarating va token oling.
+	•	Aiogram yordamida bot skeletonini yozing va botni ishga tushiring.
+	•	Quyidagi handlerlarni qo‘shing: /start, /help, oddiy matn xabariga javob.
+	•	Foydalanuvchi yuborgan matnni qaytarib beradigan (echo) funksiyasini qo‘shing.
+Amaliy topshiriqlar
+
+
+	•	BotFather orqali bot yarating va token oling.
+	•	Aiogram yordamida bot skeletonini yozing va botni ishga tushiring.
+	•	Quyidagi handlerlarni qo‘shing: /start, /help, oddiy matn xabariga javob.
+	•	Foydalanuvchi yuborgan matnni qaytarib beradigan (echo) funksiyasini qo‘shing.
+Amaliy topshiriqlar
+
+	•	Linuxda ishlash
+Linux operatsion tizimida asosiy buyruqlar bilan ishlash, fayl va papkalarni boshqarish hamda terminal muhitida dastur ishga tushirish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Linux operatsion tizimida asosiy buyruqlar bilan ishlash, fayl va papkalarni boshqarish hamda terminal muhitida dastur ishga tushirish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter (Linux o‘rnatilgan yoki VPS)
+	•	Internetga ulanish
+	•	Terminal (CLI) muhiti
+
+	•	Kompyuter (Linux o‘rnatilgan yoki VPS)
+	•	Internetga ulanish
+	•	Terminal (CLI) muhiti
+
+Ishni bajarish tartibi
+Linux — ochiq kodli (open-source) operatsion tizim. Serverlarda, dasturchilar ishida, DevOps va kiberxavfsizlikda juda ko‘p ishlatiladi.
+Linuxda ishlashning asosiy afzalliklari:
+	•	Serverlar (hosting) ko‘pi Linuxda.
+	•	Terminal orqali tez boshqarish.
+	•	Paket o‘rnatish (apt/yum/pacman) qulay.
+	•	Dasturlash, Git, Docker, Nginx, PostgreSQL kabi vositalar Linuxda “native”.
+Linux muhiti bilan tanishuv 
+GUI va CLI
+	•	GUI: oynali interfeys (Ubuntu Desktop, Mint, KDE…)
+	•	CLI: terminal buyruqlari (Bash, Zsh…)
+Linuxda ko‘p ishlar terminal orqali tez va aniq bajariladi.
+Terminalni ochish
+	•	Ubuntu/Mint: Ctrl + Alt + T
+Asosiy tushunchalar 
+Fayl tizimi: “hammasi fayl”
+Linuxda ko‘p narsa fayl sifatida ko‘riladi.
+Muhim papkalar:
+	•	/home/username — foydalanuvchi papkasi
+	•	/etc — sozlamalar (config) fayllari
+	•	/var — loglar, kesh, server ma’lumotlari
+	•	/usr — dasturlar, kutubxonalar
+	•	/tmp — vaqtinchalik fayllar
+	•	/root — root foydalanuvchi home papkasi
+Absolute vs relative path
+	•	Absolute: /home/user/Documents/file.txt
+	•	Relative: Documents/file.txt (hozir turgan joyga nisbatan)
+Terminal buyruqlari: navigatsiya va ko‘rish:
+
+2.69-rasm: pwd
+pwd — qayerda turganingizni ko‘rsatadi
+
+2.70-rasm: ls
+ls — ro‘yxatni ko‘rsatadi.
+
+2.71-rasm: cd
+cd — papkaga kirish
+
+2.72-rasm: clear
+clear — terminalni tozalash
+
+2.73-rasm: tree
+tree — papka daraxti (o‘rnatilgan bo‘lmasligi mumkin)
+Fayl/papka yaratish va boshqarish:
+
+2.74-rasm: mkdir
+mkdir — papka yaratish
+
+2.75-rasm: touch
+touch — bo‘sh fayl yaratish
+
+2.76-rasm: cp
+cp — nusxa ko‘chirish
+
+2.77-rasm: mv
+mv - ko‘chirish yoki nomini o‘zgartirish
+
+2.78-rasm: rm
+rm — o‘chirish (ehtiyot bo‘lamiz!)
+⚠️ Linuxda “Recycle Bin” har doim ishlamaydi. rm qaytmaydi.
+
+2.79-rasm: cat, less, head, tail — faylni ko‘rish
+
+2.80-rasm: nano
+Matn yozish: nano (eng sodda editor)
+
+2.81-rasm: find
+find — fayl topish
+
+2.82-rasm: grep
+grep — matn ichidan qidirish
+
+2.83-rasm: | (pipe) va filtrlar
+sudo nima?
+Ba’zi amallar admin huquq talab qiladi:
+
+2.84-rasm: sudo
+Paketlar o‘rnatish (Ubuntu/Debian misolida)
+
+2.85-rasm: Yangilash
+
+2.86-rasm: Paket o‘rnatish/olib tashlash
+Terminal orqali yangi papka yarating va ichiga fayl hosil qiling.
+	•	ls, cd, mkdir, rm, cp, mv kabi asosiy buyruqlardan foydalaning.
+	•	Python faylini terminal orqali ishga tushiring.
+	•	Oddiy foydalanuvchi va ruxsatlar (chmod) bilan ishlashni sinab ko‘ring.
+Amaliy topshiriqlar
+
+
+	•	Terminal orqali yangi papka yarating va ichiga fayl hosil qiling.
+	•	ls, cd, mkdir, rm, cp, mv kabi asosiy buyruqlardan foydalaning.
+	•	Python faylini terminal orqali ishga tushiring.
+	•	Oddiy foydalanuvchi va ruxsatlar (chmod) bilan ishlashni sinab ko‘ring.
+Amaliy topshiriqlar
+
+
+
+
+	
+ 
+ 
+3-bob haqida umumiy ma’lumot
+Mazkur bobda PostgreSQL ma’lumotlar bazasini boshqarish tizimi va uning amaliy qo‘llanilishi bosqichma-bosqich o‘rgatiladi. Bob ma’lumotlar bazasi tushunchasi, uning turlari hamda MBBT (Ma’lumotlar bazasini boshqarish tizimi) haqida umumiy nazariy ma’lumot berishdan boshlanadi. SQL — strukturallangan so‘rovlar tili yordamida ma’lumotlarni boshqarish asoslari yoritiladi.
+Shuningdek, PostgreSQL’ni o‘rnatish, yangi ma’lumotlar bazasi va jadvallar yaratish, asosiy ma’lumot turlari (data types) bilan ishlash ko‘nikmalari shakllantiriladi. CRUD amallarini (create, read, update, delete) bajarish, shuningdek, jadvalda cheklovlar va shartlar (constraints) qo‘llash orqali ma’lumotlar yaxlitligini ta’minlash masalalari amaliy misollar asosida tushuntiriladi.
+Bob davomida jadvallar tuzilmasini o‘zgartirish (ALTER TABLE), so‘rovlarda filtrlar (WHERE) dan foydalanish, agregat funksiyalar (COUNT, SUM, AVG va boshqalar) hamda GROUP BY orqali guruhlash usullari o‘rganiladi. Bundan tashqari, bir nechta jadvallarni o‘zaro bog‘lash (JOIN) orqali murakkab so‘rovlar tuzish ko‘nikmalari rivojlantiriladi.
+Bob yakunida o‘quvchilarda PostgreSQL muhitida mustaqil ishlash, ma’lumotlar bazasini loyihalash va SQL so‘rovlar yordamida ma’lumotlarni samarali boshqarish bo‘yicha mustahkam nazariy va amaliy bilimlar shakllantiriladi.
+
+	•	PostgreSQL: o‘rnatish, MB va jadvallar yaratish, ma’lumotlarning asosiy toifalari (data types).
+PostgreSQL’ni o‘rnatish, ma’lumotlar bazasi (MB) va jadvallar yaratish hamda asosiy ma’lumot turlari (data types) bilan ishlash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+PostgreSQL’ni o‘rnatish, ma’lumotlar bazasi (MB) va jadvallar yaratish hamda asosiy ma’lumot turlari (data types) bilan ishlash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter (internetga ulangan)
+	•	PostgreSQL o‘rnatilgan muhit
+	•	pgAdmin yoki terminal (psql)
+	•	Kod muharriri (ixtiyoriy)
+	•	Kompyuter (internetga ulangan)
+	•	PostgreSQL o‘rnatilgan muhit
+	•	pgAdmin yoki terminal (psql)
+	•	Kod muharriri (ixtiyoriy)
+Ishni bajarish tartibi
+PostgreSQL — juda kuchli, bepul, ishonchli va keng ishlatiladigan ma’lumotlar bazasini boshqarish tizimi (DBMS). U katta ma’lumotlarni tartibli saqlash, tez qidirish va boshqarish uchun ishlatiladi.
+Real misol:
+	•	Maktab bazasi: o‘quvchilar, sinflar, baholar.
+	•	Telegram bot: foydalanuvchilar, buyurtmalar, to‘lovlar.
+O‘rnatish (Windows uchun)
+
+3.1-rasm: PostgreSQL qidirish
+Googlega  PostgreSQL Download deb qidiruv beramiz. Natijalar orasidan www.postgresql.org sahifasini tanlaymiz.
+
+3.2-rasm Windows uchun o‘rnatish tugmasini bosish
+
+
+3.3-rasm: Installerni o‘rnatish tugmasi
+PostgreSQLni o‘rnatuvchi bilan birga ko‘chirib olamiz. Sahifani yuqori qismida joylashgan.
+
+3.4-rasm: Windows x86-64
+Protsessorga ko‘ra tanlanadi installer. 
+
+3.5-rasm: Downloaded
+Yuqorida fayl ko‘rinadi, ko‘chirib bo‘lgandan so‘ng. Ustiga ikki marotaba bosib, ochib olamiz.
+
+3.6-rasm: PostgreSQL
+Next tugmasini bosamiz
+
+3.7-rasm: Installation directory
+O‘rnatish manzilini tanlab, Next tugmasini bosamiz.
+
+3.8-rasm: Select Components
+Barchasini tanlab, Next tugmasi bosiladi
+
+3.9-rasm: Ma’lumot saqlanish joylashuvi
+Manzil tanlanib, Next tugmasi bosiladi.
+
+3.10-rasm: Password
+PostgreSQL uchun password qo‘yiladi va Next tugmasi bosiladi
+
+3.11-rasm: Port
+Port tanlanadi, odatda 5432 qoladi
+
+3.12-rasm: Next bosiladi
+
+3.13-rasm: Next bosiladi
+
+3.14-rasm: Next bosiladi
+
+3.15-rasm: Finish
+O‘rnatish yakunlagandan so‘ng Finish bosiladi
+
+3.16-rasm: x64 on port 5432
+Ko‘rsatilgan variantni tanlab, Next tugmasini bosamiz
+
+3.17-rasm: Exit
+X tugmasini bosib, chiqib ketamiz. PostgreSQL o‘rnatildi.
+
+3.18-rasm: Ilovasi ochamiz
+
+3.19-rasm: Ilovaga kirganda, boshida kiritilgan password kiritiladi. Ilova ishga tushadi.
+PostgreSQL o‘rnating va yangi ma’lumotlar bazasi yarating.
+	•	MB ichida kamida bitta jadval yarating (masalan, talabalar).
+	•	Jadvalda INTEGER, VARCHAR, DATE, BOOLEAN kabi asosiy data type’lardan foydalaning.
+	•	Jadvalga ma’lumot qo‘shing va SELECT orqali chiqarib ko‘ring.
+Amaliy topshiriqlar
+
+
+	•	PostgreSQL o‘rnating va yangi ma’lumotlar bazasi yarating.
+	•	MB ichida kamida bitta jadval yarating (masalan, talabalar).
+	•	Jadvalda INTEGER, VARCHAR, DATE, BOOLEAN kabi asosiy data type’lardan foydalaning.
+	•	Jadvalga ma’lumot qo‘shing va SELECT orqali chiqarib ko‘ring.
+Amaliy topshiriqlar
+
+
+	•	CRUD amallarni (create, read, update, delete) bajarish. Cheklovlar va shartlar (constraints)
+PostgreSQL’da CRUD amallarini (Create, Read, Update, Delete) bajarish hamda jadvalda cheklovlar va shartlar (constraints) qo‘llash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+PostgreSQL’da CRUD amallarini (Create, Read, Update, Delete) bajarish hamda jadvalda cheklovlar va shartlar (constraints) qo‘llash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	  Kompyuter (internetga ulangan)
+	•	  PostgreSQL o‘rnatilgan muhit
+	•	  pgAdmin yoki terminal (psql)
+	•	  Kompyuter (internetga ulangan)
+	•	  PostgreSQL o‘rnatilgan muhit
+	•	  pgAdmin yoki terminal (psql)
+Ishni bajarish tartibi
+PostgreSQL ga kirish, SQL Shell orqali:
+Windowsda “SQL Shell (psql)” ochiladi va ketma-ket:
+	•	Server: Enter
+	•	Database: Enter
+	•	Port: Enter
+	•	Username: postgres
+	•	Password: (o‘rnatishda bergan parol)
+Birinchi Database yaratish
+SQL orqali DB yaratish
+
+3.20-rasm: Database yaratish
+CREATE DATABASE maktab_db; yozish orqali maktab_db nomli ma’lumotlar bazasi yaratiladi
+Yaratilgandan so‘ng, pastdan CREATE DATABASE degan xabar chiqadi
+Databasega ulanish:
+
+3.21-rasm: maktab_db nomli databasega ulanish
+Jadval — ustunlar va qatorlardan iborat.
+Misol: o‘quvchilar jadvali
+1.5 jadval: O’quvchilar jadvali
+id
+ism
+yosh
+sinf
+Telefon
+1
+Ali
+15
+9-A
++99890…
+Jadval yaratish (CREATE TABLE)
+Eng kerakli jadval: o‘quvchilar
+
+3.22-rasm: Create Table
+Bu yerda:
+	•	SERIAL – avtomatik 1,2,3… bo‘lib ketadigan raqam (id)
+	•	PRIMARY KEY – jadvaldagi eng muhim ustun, takrorlanmaydi
+	•	VARCHAR(50) – 50 belgigacha matn
+	•	INT – butun son
+	•	DATE – sana
+CRUD — bazadagi ma’lumot bilan ishlashning 4 ta asosiy amali:
+	•	C — Create (yaratish/kiritish) → INSERT
+	•	R — Read (o‘qish/ko‘rish) → SELECT
+	•	U — Update (yangilash) → UPDATE
+	•	D — Delete (o‘chirish) → DELETE
+Ishlaydigan misol jadval (o‘quvchilar)
+Avval bitta jadval yaratib olaylik:
+
+3.23-rasm: Create table
+O‘quvchilar degan jadval yaratiladi. id, ism, yosh, sinf, telefon, tugilgan_sana, active degan ustunlari bo‘ladi
+
+3.24-rasm: Insert data
+	•	INSERT INTO oquvchilar- qaysi jadvalga ma’lumot qo‘shilishi yoziladi.
+	•	(ism, yosh, sinf, telefon, tugilgan_sana) – qaysi maydonlarga ma’lumot qo‘shiladi.
+	•	VALUES ('Ali', 15, '9-A', '+998901112233', '2010-05-12'); - qiymatlar qavs ichida yoziladi, kiritilgan ketma-ketlik bo‘yicha ma’lumotlar saqlanadi
+
+3.25-rasm: Bir nechta ma’lumot qo’shish
+VALUES kalit so‘zidan keyin, 2 ta qavs bilan ikkita qator uchun ma’lumot bir vaqtni o‘zida saqlanadi.
+ID ni o‘zi qo‘yadi (SERIAL)
+id ustunini yozmasak ham bo‘ladi — PostgreSQL o‘zi 1,2,3… qilib beradi
+READ — ma’lumotni ko‘rish (SELECT)
+1) Hammasini ko‘rish
+
+3.26-rasm: read
+	•	SELECT kalit so‘zi orqali tanlanadi ma’lumotlar
+	•	 ( * ) qo‘yilsa, barcha ustunlarni olib beradi
+	•	FROM oquvchilar; - qaysi jadvaldan ma’lumot olish kerak
+2) Faqat kerakli ustunlar
+
+3.27-rasm: read selected
+SELECT dan keyin, o‘zimiz ko‘rmoqchi bo‘lgan ustun nomi yozsak, aynan usha ustundagi barcha ma’lumotni olib beradi.
+3) Shart bilan ko‘rish (filter)
+
+3.28-rasm: WHERE
+Oxirida shart berish orqali ham ma’lumot o‘qish mumkin. Command ma’nosi –  o‘quvchilar jadvaldagi barcha ma’lumotni ol, faqat sinfi 9-A bo‘lganlarni
+4) Tartiblash (ORDER BY)
+
+3.29-rasm: ORDER BY
+Barcha o‘quvchilarni tanlaydi, faqat yoshi kattasidan, kichigiga qarab, teskari tartibda, tartiblab beradi
+5) Eng ko‘p ishlatiladigan: bitta o‘quvchini ID bo‘yicha topish
+
+3.30-rasm: ID
+ID raqami 1 ga teng bo‘lgan barcha o‘quvchilarni tanlaydi              
+UPDATE — ma’lumotni yangilash
+Bitta qatorni yangilash (ID bo‘yicha)
+
+3.31-rasm: Update
+UPDATE oquvchilar – qaysi jadval yangilanish kerak
+SET yosh = 16 – qaysi ustunga, qaysi ma’lumot yangilanib yozilsin
+WHERE id = 1 – qaysi-ki id raqami 1 ga teng bo‘lganni
+Bir nechta ustunni birga yangilash
+
+3.32-rasm: Bir nechta ustun
+O‘quvchilar jadvalidagi sinf va telefon ustuni yangilansin, agar, id raqami 2 ga teng bo‘lsa.
+Shart bilan ko‘p qatorni yangilash
+Masalan, 9-A sinfdagilarni “aktiv = false” qilish:
+
+3.33-rasm: aktiv = false
+O‘quvchilar jadvalidagi, 9-A sinfdagi barcha o‘quvchilarni aktiv = False holatiga yangilash
+Muhim: WHERE yozilmasa — hamma qatorlar o‘zgarib ketadi! Shuning uchun UPDATEda WHERE juda muhim.
+DELETE — ma’lumotni o‘chirish
+1) ID bo‘yicha o‘chirish
+
+3.34-rasm: Delete
+	•	DELETE FROM oquvchilar – o‘quvchilar jadvalidan o‘chirsin
+	•	WHERE id = 3; - ID raqami 3 ga teng bo‘lganni
+2) Shart bilan o‘chirish
+
+3.35-rasm: Shart bilan o’chirish
+Active = False bo‘lgan barchasini o‘chirsin, oquvchilar jadvalidan
+Juda muhim: WHERE yozilmasa — jadvaldagi hamma qatorlar o‘chadi:
+
+3.36-rasm: oquvchilarning barcha ma’lumotini o‘chirish
+“O‘chirgandek qilish” (tavsiya)
+Real loyihalarda ko‘pincha butunlay o‘chirmay, aktiv = false qilib qo‘yishadi:
+
+3.37-rasm: as delete
+Aktive = False qilinadi, xuddi bu oquvchi ortiq faol emas degandek
+Constraints (cheklovlar/shartlar
+Constraint — jadvalga “qoida” qo‘yish. Maqsad: bazaga noto‘g‘ri yoki takror ma’lumot kirib ketmasin.
+Eng asosiy constraints turlari:
+	•	NOT NULL – bo‘sh bo‘lishi mumkin emas
+	•	UNIQUE – takrorlanmasin (telefon, login)
+	•	PRIMARY KEY – asosiy kalit (takrorlanmaydi, null bo‘lmaydi)
+	•	FOREIGN KEY – boshqa jadvalga bog‘lanish
+	•	CHECK – shart tekshirish (yosh 7–100 oralig‘ida)
+	•	DEFAULT – qiymat berilmasa, avtomatik qiymat
+Jadval yarating va INSERT yordamida ma’lumot qo‘shing.
+	•	SELECT orqali ma’lumotlarni ko‘ring (Read).
+	•	UPDATE yordamida mavjud yozuvni o‘zgartiring (Update).
+	•	DELETE orqali ma’lumotni o‘chiring (Delete).
+	•	Jadvalga PRIMARY KEY, NOT NULL, UNIQUE, CHECK kabi constraints qo‘shib, ularning ishlashini sinab ko‘ring.
+Amaliy topshiriqlar
+
+
+	•	Jadval yarating va INSERT yordamida ma’lumot qo‘shing.
+	•	SELECT orqali ma’lumotlarni ko‘ring (Read).
+	•	UPDATE yordamida mavjud yozuvni o‘zgartiring (Update).
+	•	DELETE orqali ma’lumotni o‘chiring (Delete).
+	•	Jadvalga PRIMARY KEY, NOT NULL, UNIQUE, CHECK kabi constraints qo‘shib, ularning ishlashini sinab ko‘ring.
+Amaliy topshiriqlar
+
+	•	Jadvallarni boshqarish (ALTER TABLE). So‘rovlarda filtrlardan foydalanish. Agregat funksiyalar. Guruhlash. Jadvallarni bog‘lash
+ALTER TABLE orqali jadvallar tuzilmasini o‘zgartirish, so‘rovlarda filtrlar (WHERE) qo‘llash, agregat funksiyalar va GROUP BY yordamida guruhlash hamda jadvallarni JOIN orqali bog‘lash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+ALTER TABLE orqali jadvallar tuzilmasini o‘zgartirish, so‘rovlarda filtrlar (WHERE) qo‘llash, agregat funksiyalar va GROUP BY yordamida guruhlash hamda jadvallarni JOIN orqali bog‘lash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	  Kompyuter (internetga ulangan)
+	•	  PostgreSQL o‘rnatilgan muhit
+	•	 pgAdmin yoki terminal (psql)
+	•	  Kompyuter (internetga ulangan)
+	•	  PostgreSQL o‘rnatilgan muhit
+	•	 pgAdmin yoki terminal (psql)
+Ishni bajarish tartibi
+Jadvallarni boshqarish (ALTER TABLE).
+So‘rovlarda filtrlardan foydalanish.
+Agregat funksiyalar. Guruhlash.
+Jadvallarni bog‘lash.
+Jadvallarni boshqarish (ALTER TABLE)
+ALTER TABLE — bu mavjud jadvalning tuzilmasini o‘zgartirish uchun ishlatiladi.
+ALTER TABLE orqali:
+	•	yangi ustun qo‘shish
+	•	ustunni o‘chirish
+	•	ustun nomini o‘zgartirish
+	•	ustun turini (data type) o‘zgartirish
+	•	constraint (cheklov) qo‘shish yoki olib tashlash mumkin
+Bu jadval ichidagi ma’lumotlarni emas, balki jadvalning tuzilishini o‘zgartiradi.
+Boshlang‘ich jadval (misollar uchun)
+
+3.38-rasm: create table
+ O‘quvchilar jadvali yaratildi, id, ism va yosh degan ustun bilan
+Jadvalga yangi ustun qo‘shish (ADD COLUMN)
+Agar jadvalga keyinroq yangi ma’lumot qo’shish kerak bo‘lib qolsa, ALTER TABLE ishlatiladi.
+
+3.39-rasm: ADD column
+Jadvalga yangi ustun qo‘shildi.
+Endi jadvalda:
+	•	id
+	•	ism
+	•	yosh
+	•	sinf ustunlari bor.
+Ustunni o‘chirish (DROP COLUMN)
+Agar ustun endi kerak bo‘lmasa:
+
+3.40-rasm: DROP COLUMN
+⚠️ Eslatma: bu ustundagi barcha ma’lumotlar butunlay yo‘qoladi.
+ Ustun nomini o‘zgartirish:
+
+3.41-rasm: ALTER COLUMN
+Ustun turini o‘zgartirish
+Masalan, yosh ustunini SMALLINT ga o‘zgartirish:
+
+3.42-rasm: Column Type
+So‘rovlarda filtrlardan foydalanish (WHERE). Filtr — bu faqat kerakli ma’lumotlarni ajratib olish.
+Agar jadvalda 100 ta yozuv bo‘lsa, filtr yordamida:
+	•	faqat 9-A sinfdagilar
+	•	faqat yoshi 15 bo‘lganlar
+	•	faqat faol o‘quvchilar
+ko‘rsatiladi.
+
+3.43-rasm: Where
+AND, OR, NOT
+
+3.44-rasm: AND
+O‘quvchilar jadvalidan sinfi 9-A bo‘lgan va yosh 15 bo‘lganlarni tanlaydi
+
+3.45-rasm: OR
+Sinfi 9-A yoki 9-B bo‘lganlarni tanlaydi
+
+3.46-rasm: NOT
+Sinfi 9-A bo‘lmaganlarni tanlaydi
+LIKE (matn bo‘yicha qidirish)
+
+3.47-rasm: LIKE
+Ismi A harfi bilan boshlanadiganlarni tanlaydi
+IN operatori
+
+3.48-rasm: IN
+9-a, 9-b da bo‘lganlarni tanlab oladi
+Agregat funksiya — ko‘p qatorli ma’lumotdan bitta natija chiqaruvchi funksiya.
+Masalan:
+	•	nechta o‘quvchi bor?
+	•	o‘rtacha yosh nechaga teng?
+	•	eng katta baho qaysi?
+Misol: COUNT
+
+3.49-rasm: COUNT
+Izoh:
+	•	COUNT(*) — jadvaldagi barcha yozuvlar sonini sanaydi
+	•	Natija: o‘quvchilar soni
+Misol: AVG
+
+3.50-rasm: AVG
+Izoh:
+	•	AVG — o‘rtacha qiymat
+	•	Barcha o‘quvchilarning o‘rtacha yoshi hisoblanadi
+Misol: MAX va MIN
+
+3.51-rasm: MAX
+
+3.52-rasm: MIN
+Izoh:
+	•	MAX — eng katta qiymat
+	•	MIN — eng kichik qiymat
+
+GROUP BY — ma’lumotlarni bir xil belgi bo‘yicha guruhlash uchun ishlatiladi.
+Masalan:
+	•	har bir sinfda nechta o‘quvchi bor
+	•	har bir sinfning o‘rtacha Yoshi
+Misol: sinf bo‘yicha guruhlash
+
+3.53-rasm: GROUP BY
+Izoh:
+	•	GROUP BY sinf — o‘quvchilar sinflarga bo‘linadi
+	•	Har bir sinf uchun alohida hisob chiqadi
+Misol: HAVING
+
+3.54-rasm: HAVING
+Izoh:
+	•	HAVING — guruhga shart qo‘yadi
+	•	Faqat 5 tadan ko‘p o‘quvchisi bor sinflar chiqadi
+
+JOIN — bir nechta jadvaldagi ma’lumotlarni bog‘lab chiqarish uchun ishlatiladi.
+Bu real hayotga o‘xshaydi:
+	•	o‘quvchi → sinf
+	•	baho → fan
+	•	buyurtma → mijoz
+Misol jadvallar
+
+3.55-rasm: CREATE TABLE
+Misol: INNER JOIN
+
+3.56-rasm: INNER JOIN
+Izoh:
+	•	JOIN — jadvalni bog‘laydi
+	•	ON — qaysi ustunlar orqali bog‘lanishini ko‘rsatadi
+	•	Natija: o‘quvchi ismi + sinfi
+Mavjud jadvalga ALTER TABLE yordamida yangi ustun qo‘shing yoki ustun turini o‘zgartiring.
+	•	WHERE sharti bilan ma’lumotlarni filtrlang.
+	•	COUNT, SUM, AVG kabi agregat funksiyalarni qo‘llang va GROUP BY yordamida natijalarni guruhlang.
+	•	Ikki jadval yarating va ularni INNER JOIN orqali bog‘lab, umumiy ma’lumotni chiqaring
+Amaliy topshiriqlar
+
+
+	•	Mavjud jadvalga ALTER TABLE yordamida yangi ustun qo‘shing yoki ustun turini o‘zgartiring.
+	•	WHERE sharti bilan ma’lumotlarni filtrlang.
+	•	COUNT, SUM, AVG kabi agregat funksiyalarni qo‘llang va GROUP BY yordamida natijalarni guruhlang.
+	•	Ikki jadval yarating va ularni INNER JOIN orqali bog‘lab, umumiy ma’lumotni chiqaring
+Amaliy topshiriqlar
+
+
+
+	
+ 	
+ 
+50
+50
+50
+50
+50
+50
+Mazkur bobda asinxron dasturlash asoslari hamda FastAPI freymvorki yordamida zamonaviy veb-ilovalar yaratish jarayoni bosqichma-bosqich o‘rgatiladi. Bob asinxron dasturlash tushunchalari, async/await mexanizmi va HTTP so‘rovlar bilan ishlash asoslarini o‘rganishdan boshlanadi. FastAPI’da routing, endpointlar yaratish va so‘rov-javob jarayonlarini boshqarish ko‘nikmalari shakllantiriladi.
+Shuningdek, Pydantic modellar yordamida ma’lumotlarni validatsiya qilish va API’da ma’lumotlar turlarini aniqlash usullari ko‘rib chiqiladi. SQLAlchemy ORM orqali CRUD amallarni bajarish, ma’lumotlar bazasi bilan integratsiya qilish hamda Alembic yordamida migratsiyalarni boshqarish jarayoni amaliy misollar asosida tushuntiriladi.
+Bob davomida fayllar bilan ishlash (upload/download), autentifikatsiya va avtorizatsiya mexanizmlari (JWT, OAuth2) hamda API hujjatlarini yaratish va test qilish uchun Swagger UI va ReDoc vositalaridan foydalanish o‘rgatiladi.
+Bob yakunida o‘quvchilarda FastAPI asosida to‘liq funksional REST API yaratish, ma’lumotlar bazasi bilan ishlash, xavfsiz autentifikatsiya tizimini tashkil etish va API hujjatlashtirish bo‘yicha mustahkam nazariy va amaliy ko‘nikmalar shakllantiriladi.
+	•	Asinxron dasturlash asoslari. FastAPI: HTTP so‘rovlar, routing
+Asinxron dasturlash 
+Oddiy dasturlashda (sinxron) kod ketma-ket ishlaydi: 1-ish tugamasdan 2-ish boshlanmaydi. Asinxronda esa ba’zi ishlar (ayniqsa internetdan ma’lumot olish, fayl o‘qish, baza bilan ishlash) kutish talab qiladi. Asinxron dasturlashda shu “kutish” vaqtida dastur bo‘sh turmaydi, boshqa vazifalarni bajarib turishi mumkin.
+Oddiy misol (hayotiy):
+	•	Sinxron: do‘konda 1 ta kassada 1 odam to‘lab bo‘lmaguncha keyingisi kutadi.
+	•	Asinxron: bir nechta odam buyurtma beradi, kimnidir buyurtmasi tayyor bo‘lguncha boshqalarniki qabul qilinadi.
+Nega kerak?
+Web dasturlarda (API serverlarda) ko‘p foydalanuvchi bir vaqtda so‘rov yuboradi. Server har so‘rovda internet/baza javobini kutishi mumkin. Asinxron yondashuv:
+	•	ko‘proq foydalanuvchiga xizmat qiladi,
+	•	server “qotib qolmaydi”,
+	•	tezroq va samaraliroq bo‘ladi.
+Asinxron tushunchalar: async, await, event loop
+	•	async def bilan yozilgan funksiya “asinxron funksiya” bo‘ladi.
+	•	await — “shu ish tugaguncha kut, lekin boshqalarni bloklama” degani.
+	•	event loop — vazifalarni navbat bilan boshqaradigan “dispatcher” kabi. Qaysi vazifa kutyapti, qaysi vazifa tayyor — shularni yuritadi.
+Sinxron va asinxron farqini ko‘rsatish
+Sinxron kutish (time.sleep)
+
+	•	-rasm: time.sleep
+Bu yerda time.sleep(2) dastur oqimini to‘liq to‘xtatadi. 2 soniya ichida boshqa hech narsa bajarilmaydi. Bu — bloklovchi (blocking) kutish.
+Asinxron kutish (asyncio.sleep)
+
+	•	-rasm: asynio.sleep
+await asyncio.sleep(2) — bloklamaydigan kutish. Bu vaqt ichida event loop boshqa asinxron vazifalarni ishlatishi mumkin. asyncio.run(main()) asinxron dastur “dvigatelini” ishga tushiradi.
+Bir vaqtning o‘zida bir nechta vazifa (concurrency)
+2 ta vazifani birga bajarish (gather)
+
+4.3-rasm: gather
+asyncio.gather(...) bir nechta asinxron vazifani bir vaqtning o‘zida (navbat bilan, ammo kutish paytida almashib) bajaradi. Natijada umumiy vaqt 2+3=5 emas, taxminan 3 soniya atrofida bo‘ladi (eng uzun vazifa tugaguncha). 
+HTTP — brauzer, telefon yoki boshqa dastur serverga so‘rov yuboradigan tarmoq protokoli.
+HTTP metodlar (asosiylari)
+	•	GET — ma’lumot olish
+	•	POST — yangi ma’lumot yaratish
+	•	PUT — ma’lumotni to‘liq yangilash
+	•	PATCH — ma’lumotning bir qismini yangilash
+	•	DELETE — o‘chirish
+Status code (javob kodi)
+	•	200 OK — hammasi yaxshi
+	•	201 Created — yangi narsa yaratildi
+	•	400 Bad Request — xatolik, noto‘g‘ri so‘rov
+	•	401 Unauthorized — login/token yo‘q yoki noto‘g‘ri
+	•	404 Not Found — topilmadi
+	•	500 Server Error — serverda muammo
+Routing — foydalanuvchi qaysi manzilga kirsa (/users, /products/5), server qaysi funksiyani ishlatishini belgilash.
+	•	"/" — asosiy manzil
+	•	"/hello" — hello sahifasi
+	•	"/items/5" — 5-raqamli item
+FastAPI’ni ishga tushirish
+Eng sodda FastAPI ilova
+
+4.4-rasm: FastAPI
+	•	app = FastAPI() — server ilovasini yaratadi.
+	•	@app.get("/") — agar foydalanuvchi GET bilan / ga kirsa, home() ishlaydi.
+	•	return {...} — javob JSON bo‘lib qaytadi.
+Ishga tushirish (terminalda): uvicorn main:app –reload. Bu yerda main — fayl nomi (main.py), app — FastAPI obyekt nomi.
+GET so‘rovi va oddiy route
+Bir nechta route
+
+4.5-rasm: Get
+Har bir @app.get("...") — alohida route. /hello ga kirilsa hello() ishlaydi, /about ga kirilsa about() ishlaydi.
+Path parameter (URL ichidan qiymat olish)
+Masalan: /users/7 — bu yerda 7 soni URL ichida.
+Path parametrlari
+
+4.6-rasm: Path
+	•	{user_id} — URL ichidagi o‘zgaruvchi joy.
+	•	user_id: int — keladigan qiymat butun son bo‘lishini xohlayapmiz. Agar /users/abc deb yuborilsa, FastAPI xatolik beradi (to‘g‘ri, chunki int emas).
+Query parameter (URL oxirida ?key=value).
+Masalan: /search?q=python&page=2
+Query parametrlari
+
+4.7-rasm: Query_param
+	•	q majburiy parametr. /search?q=fastapi bo‘lishi kerak.
+	•	page: int = 1 — ixtiyoriy, berilmasa 1 bo‘ladi. So‘rov: /search?q=fastapi&page=3
+POST so‘rovi: ma’lumot yuborish (body)
+POST odatda serverga ma’lumot yuboradi. FastAPI’da body ni qabul qilish uchun Pydantic model ishlatiladi.
+POST orqali oddiy dict qabul qilish (kam tavsiya qilinadi)
+
+4.8-rasm: POST
+Bu usul ishlaydi, lekin model ishlatmasak tekshirish (validation) kuchsiz bo‘ladi. Shuning uchun odatda Pydantic model ishlatiladi 
+Asinxron route: async def bilan
+FastAPI’da handler funksiyalarni async yozish mumkin.
+
+4.9-rasm: async_def
+Bu endpoint /wait chaqirilganda 2 soniya kutadi, lekin server boshqa so‘rovlarni bloklamasligi mumkin. Real loyihalarda bu “kutish” odatda DB, API, fayl ishlari bo‘ladi.
+Routingni tartibli qilish (APIRouter tushunchasi)
+Katta loyihada hamma route bitta faylda bo‘lsa chalkashib ketadi. APIRouter route’larni bo‘lib yozishga yordam beradi.
+Router’ga kirish (bitta faylda ko‘rsatamiz)
+
+4.10-rasm: router
+ prefix="/items" — router ichidagi hamma route oldiga /items qo‘shiladi.
+	•	@router.get("/") → /items/
+	•	@router.get("/{item_id}") → /items/5
+app.include_router(router) — routerni app’ga ulaydi.
+
+	•	Ma’lumotlar turlari (Pydantic models)
+FastAPI’da Pydantic modellar yordamida ma’lumotlar turlarini aniqlash, validatsiya qilish va API so‘rov-javoblarida ulardan samarali foydalanish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+FastAPI’da Pydantic modellar yordamida ma’lumotlar turlarini aniqlash, validatsiya qilish va API so‘rov-javoblarida ulardan samarali foydalanish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter (internetga ulangan)
+	•	FastAPI va Uvicorn o‘rnatilgan
+	•	Kod muharriri (VS Code yoki PyCharm)
+	•	Kompyuter (internetga ulangan)
+	•	FastAPI va Uvicorn o‘rnatilgan
+	•	Kod muharriri (VS Code yoki PyCharm)
+Ishni bajarish tartibi
+Pydantic — Python’da ma’lumotlarni (data) tekshiradigan va tartibga soladigan kutubxona.
+FastAPI’da Pydantic model ko‘pincha:
+	•	foydalanuvchi yuborgan JSON’ni tekshirish (validation),
+	•	noto‘g‘ri bo‘lsa xatoni tushunarli chiqarish,
+	•	to‘g‘ri bo‘lsa, ma’lumotni avtomatik to‘g‘ri turga o‘tkazish (type conversion),
+	•	API dokumentatsiyada (Swagger) fieldlarni ko‘rsatish uchun ishlatiladi.
+Oddiy qilib aytsak:  “Menga keladigan ma’lumot qanday bo‘lishi kerak?” — shuni Pydantic model belgilaydi.
+Agar model ishlatmasak, foydalanuvchi nimani yuborsa shuni qabul qilib ketaveramiz. Bu xatolarga olib keladi:
+	•	yosh o‘rniga “salom” yuborishi,
+	•	narx o‘rniga manzil yuborishi,
+	•	majburiy maydonlarni yubormasligi…
+Pydantic buni nazorat qiladi.
+Eng sodda Pydantic model
+Oddiy User modeli
+
+4.11-rasm: Pydantic user
+	•	BaseModel — Pydantic’ning asosiy modeli.
+	•	name: str — name matn bo‘lishi shart.
+	•	age: int — age butun son bo‘lishi shart.
+Agar age ga “o‘n besh” yuborilsa, Pydantic xato qaytaradi.
+FastAPI’da Pydantic modelni POST’da ishlatish
+User modelini endpoint’da qabul qilish
+
+4.12-rasm Post user
+	•	users endpoint POST orqali JSON oladi.
+	•	user: User degani: “kelyotgan JSON User modeliga mos bo‘lishi kerak”.
+	•	Agar mos bo‘lmasa FastAPI 422 xato qaytaradi (Validation error).
+	•	user obyekt bo‘lib keladi, user.name, user.age deb ishlatsa bo‘ladi.
+
+4.13-rasm: True format
+Post endpoint uchun shu ko‘rinishda ma’lumot yuborilishi kerak.
+Default qiymatlar (ixtiyoriy maydonlar)
+Default qiymat berish
+
+4.14-rasm: Default
+	•	in_stock maydoni yuborilmasa ham bo‘ladi, chunki default True.
+	•	price: float — narx kasr son bo‘lishi mumkin (masalan 12.5).
+Yuborilsa ham, yuborilmasa ham bo‘ladi:
+
+4.15-rasm: Default: True
+Bu holda in_stock avtomatik True bo‘ladi.
+Optional (majburiy bo‘lmagan) maydonlar
+Ba’zan maydon bo‘lishi ham mumkin, bo‘lmasligi ham mumkin.
+
+4.16-rasm: Optional
+	•	phone bo‘lishi ham mumkin, bo‘lmasligi ham mumkin.
+	•	Agar berilmasa, None (bo‘sh) bo‘ladi.
+Ma’lumot turi o‘zgarishi (type conversion)
+Pydantic ba’zan kelgan qiymatni to‘g‘ri turga aylantiradi.
+"15" ni int ga aylantirish:
+
+4.17-rasm: type_conversion
+Bu yerda age="15" matn bo‘lsa ham, Pydantic uni int qilib beradi. Natija 15 va turi int.
+	•	Lekin juda noto‘g‘ri qiymat bo‘lsa (masalan "salom") — xato beradi.
+Field’ga cheklov qo‘yish (validation rules)
+Masalan: yosh 7 dan katta bo‘lsin, nom uzunligi kamida 3 bo‘lsin.
+Cheklovlar (Field)
+
+4.18-rasm: Field
+	•	min_length=3 — ism kamida 3 ta harf.
+	•	max_length=20 — 20 tadan oshmasin.
+	•	ge=7 — age 7 dan katta yoki teng bo‘lsin.
+	•	le=100 — age 100 dan kichik yoki teng bo‘lsin. 
+Shu qoidaga mos bo‘lmasa, FastAPI xato qaytaradi.
+Email, URL kabi maxsus turlar
+Pydantic ba’zi maxsus turlarni ham tekshiradi.
+Email tekshirish:
+
+4.19-rasm: EmailValidator
+EmailStr email formatini tekshiradi.
+	•	Masalan "ali@gmail.com" to‘g‘ri, "ali@@@.com" noto‘g‘ri.
+Nested model (ichma-ich model)
+Masalan: foydalanuvchining manzili ham alohida model bo‘lsin.
+
+4.20-rasm: Nested model
+Bu yerda User ichida Address model ishlatilyapti. JSON ham ichma-ich bo‘ladi:
+
+4.21-rasm: Nested model json
+List (ro‘yxat) bilan ishlash
+Masalan: foydalanuvchining sevimli fanlari ro‘yxat bo‘lsin.
+
+4.22-rasm: List Field
+subjects — matnlar ro‘yxati. Masalan:
+
+4.23-rasm: List json
+Response model (javobni ham model bilan tartibga solish)
+FastAPI’da faqat request emas, response ham model bilan chiqsa chiroyli bo‘ladi.
+
+4.24-rasm: Response
+	response_model = UserOut degani: javobda faqat id va name ko‘rsatiladi. return’da age bo‘lsa ham, u chiqmaydi (yashiriladi). Bu xavfsizlik va tartib uchun yaxshi. 
+JSON’ni dictga aylantirish
+Pydantic modeldan oddiy dict olish mumkin.
+
+4.25-rasm: model_dump
+.model_dump() modelni oddiy dict qiladi. FastAPI ham ichkarida shu kabi ishlaydi.
+Pydantic yordamida User yoki Product modeli yarating.
+	•	Modelda int, str, float, bool kabi ma’lumot turlaridan foydalaning.
+	•	POST so‘rov orqali model asosida ma’lumot qabul qiluvchi endpoint yozing.
+	•	Noto‘g‘ri turdagi ma’lumot yuborilganda validatsiya qanday ishlashini tekshiring.
+Amaliy topshiriqlar
+
+
+	•	Pydantic yordamida User yoki Product modeli yarating.
+	•	Modelda int, str, float, bool kabi ma’lumot turlaridan foydalaning.
+	•	POST so‘rov orqali model asosida ma’lumot qabul qiluvchi endpoint yozing.
+	•	Noto‘g‘ri turdagi ma’lumot yuborilganda validatsiya qanday ishlashini tekshiring.
+Amaliy topshiriqlar
+
+
+	•	CRUD amallarni bajarish (SQLAlchemy). ORM, Alembic va migratsiyalar
+SQLAlchemy ORM yordamida CRUD amallarni bajarish, ma’lumotlar bazasi modellari bilan ishlash hamda Alembic orqali migratsiyalarni boshqarish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+SQLAlchemy ORM yordamida CRUD amallarni bajarish, ma’lumotlar bazasi modellari bilan ishlash hamda Alembic orqali migratsiyalarni boshqarish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter (internetga ulangan)
+	•	FastAPI, SQLAlchemy, Alembic o‘rnatilgan
+	•	PostgreSQL MBBT
+	•	Kod muharriri (VS Code yoki PyCharm)
+	•	Kompyuter (internetga ulangan)
+	•	FastAPI, SQLAlchemy, Alembic o‘rnatilgan
+	•	PostgreSQL MBBT
+	•	Kod muharriri (VS Code yoki PyCharm)
+Ishni bajarish tartibi
+CRUD — ma’lumot bilan ishlashdagi 4 ta asosiy amal:
+	•	C — Create: yangi ma’lumot qo‘shish
+	•	R — Read: ma’lumotni o‘qish (ko‘rish)
+	•	U — Update: ma’lumotni o‘zgartirish
+	•	D — Delete: ma’lumotni o‘chirish
+Masalan “O‘quvchilar ro‘yxati”:
+	•	Create: yangi o‘quvchi qo‘shish
+	•	Read: o‘quvchilarni ko‘rish
+	•	Update: o‘quvchi telefonini o‘zgartirish
+	•	Delete: o‘quvchini o‘chirish
+ORM (Object-Relational Mapping) — “jadval” bilan “Python class”ni bog‘laydigan usul.
+	•	Bazada jadval: students
+	•	Python’da klass: Student
+ORM bizga SQL yozmasdan ham ishlash imkonini beradi:
+	•	SQL: SELECT * FROM students;
+	•	ORM: session.query(Student).all()
+Izoh: ORM — bazani “obyektlar” bilan boshqarish.
+SQLAlchemy — Python’da bazalar bilan ishlash uchun eng mashhur kutubxonalardan biri.
+Uning 2 yo‘li bor:
+	•	Core (ko‘proq SQLga o‘xshash)
+	•	ORM (klasslar orqali)
+Biz bu mavzuda asosan ORM ishlatamiz.
+Migratsiya (migration) nima?
+Migratsiya — bu bazadagi jadval tuzilmasini (schema) o‘zgartirish jarayoni.
+Masalan:
+	•	students jadvaliga phone ustun qo‘shish
+	•	age ustunini birth_year ga almashtirish
+	•	yangi jadval yaratish
+Alembic — SQLAlchemy uchun migratsiya boshqaruvchisi. U “o‘zgarishlar tarixini” saqlaydi va bazaga qo‘llaydi.
+Database ulash (SQLAlchemy engine va session)
+database.py:
+
+4.26-rasm: database
+	•	DATABASE_URL — qaysi bazaga ulanishni ko‘rsatadi.
+	•	engine — bazaga “motor” kabi ulanish yaratadi.
+	•	SessionLocal — bazaga so‘rov yuborish uchun “sessiya” generatori.
+	•	Base — ORM klasslar shu Base’dan meros oladi (jadval xaritasi bo‘ladi).
+ORM model yaratish(jadval) | models.py
+
+4.27-rasm: orm model
+	•	__tablename__ — bazadagi jadval nomi.
+	•	id — primary key (har bir student’ni noyob aniqlaydi).
+	•	nullable=False — bo‘sh bo‘lishi mumkin emas.
+	•	Bu klass bazada students jadvalini ifodalaydi.
+Pydantic schema (request/response modeli)
+FastAPI JSON qabul qilish va qaytarishda Pydantic ishlatadi.
+schemas.py
+
+4.28-rasm: schemas.py moduli
+	•	StudentCreate — Create paytida keladigan JSON.
+	•	StudentOut — javobda qaytadigan model.
+	•	from_attributes=True — SQLAlchemy obyektini Pydantic o‘qiy olishi uchun.
+FastAPI’da session’ni dependency orqali berish
+main.py — DB sessiya berish
+
+4.29-rasm: db.session
+	•	get_db() — har bir so‘rov uchun sessiya ochadi va ish tugagach yopadi.
+	•	Hozircha create_all bilan jadval yaratdik, lekin real loyihada migratsiya (Alembic) to‘g‘riroq.
+CRUD endpointlar (Create, Read, Update, Delete)
+CREATE — yangi student qo‘shish
+POST /students
+
+
+4.30-rasm: create
+	•	student: StudentCreate — kelgan JSON tekshiriladi.
+	•	new_student = Student(...) — ORM obyekt yaratildi (hali bazaga yozilmadi).
+	•	db.add() — “bazaga yozishga tayyorla”.
+	•	db.commit() — real bazaga saqlab qo‘yadi.
+	•	db.refresh() — bazadan qayta o‘qib, id kabi qiymatlarni to‘ldiradi.
+	•	Natijada yangi student JSON ko‘rinishida qaytadi.
+READ — hamma studentlarni ko‘rish
+GET /students
+
+4.31-rasm: read
+	•	db.query(Student).all() — jadvaldagi barcha yozuvlarni olib keladi.
+	•	response_model=List[StudentOut] — ro‘yxat qaytishini aniq ko‘rsatadi.
+READ — bitta studentni ID bo‘yicha olish
+GET /students/{student_id}
+
+4.32-rasm: read/id
+	•	filter(Student.id == student_id) — shu ID dagi studentni qidiradi.
+	•	first() — birinchi mos yozuvni oladi (topilmasa None).
+	•	Topilmasa 404 qaytaramiz — bu API’da juda muhim odat.
+UPDATE — studentni yangilash
+Update’ni 2 xil usulda qilishadi:
+	•	to‘liq yangilash (PUT)
+	•	qisman yangilash (PATCH)
+Bu yerda oddiy PUT ko‘rsatamiz.
+PUT /students/{student_id}
+
+4.33-rasm: Update
+	•	Avval studentni topamiz.
+	•	So‘ng obyektning qiymatlarini o‘zgartiramiz.
+	•	commit() bilan bazaga saqlaymiz.
+	•	refresh() bilan bazadan yangisini olib qaytaramiz.
+DELETE — studentni o‘chirish
+DELETE /students/{student_id}
+
+4.34-rasm: Delete
+	•	Topiladi → db.delete() bilan o‘chirishga belgilanadi.
+	•	commit() bilan o‘chirish real bazaga qo‘llanadi.
+	•	JSON javob qaytariladi.
+ORM bo‘yicha muhim tushunchalar 
+	•	Model — jadval xaritasi (class).
+	•	Session — bazaga so‘rov yuborish “muhiti”.
+	•	commit — o‘zgarishlarni saqlash.
+	•	refresh — obyektni bazadan qayta o‘qish.
+	•	query/filter — ma’lumot izlash.
+Alembic va migratsiyalar 
+Migratsiya
+Base.metadata.create_all() faqat “borini yaratadi”, lekin:
+	•	ustun qo‘shish,
+	•	ustun o‘chirish,
+	•	ustun turini o‘zgartirish kabi ishlarni to‘g‘ri boshqara olmaydi.
+Alembic esa:
+	•	“qachon nima o‘zgardi”ni tarix qilib saqlaydi,
+	•	jamoada ishlashda hamma bir xil schema’da bo‘lishini ta’minlaydi.
+Alembic o‘rnatish va sozlash (amaliy)
+
+4.35-rasm: alembic
+	•	alembic init — alembic/ papka va alembic.ini faylini yaratadi.
+	•	Shu joyda migratsiyalar saqlanadi.
+alembic.ini ga DB url yozish
+alembic.ini ichida
+
+4.36-rasm: db url
+Alembic qaysi bazaga migratsiya qo‘llashini biladi.
+env.py ni modelga ulash (autogenerate uchun)
+alembic/env.py ichida odatda target_metadata bo‘ladi. Uni Base.metadata ga bog‘lash kerak.
+env.py da target_metadata
+
+4.37-rasm: target_metadata
+	•	Alembic “nima o‘zgarganini” bilishi uchun modellaringizni ko‘rishi shart.
+	•	Student import qilinmasa, bazaga qanday jadval kerakligini bilmay qolishi mumkin.
+Birinchi migratsiyani yaratish:
+
+4.38-rasm: migratsiya
+	•	--autogenerate — SQLAlchemy modellarga qarab “qanday jadval kerak”ligini tahlil qiladi.
+	•	-m — izoh (nom) beradi.
+	•	Natijada alembic/versions/ ichida yangi fayl paydo bo‘ladi.
+Migratsiyani bazaga qo‘llash (upgrade)
+
+4.39-rasm: Upgrade
+	•	head — eng oxirgi migratsiyagacha hammasini qo‘llaydi.
+Shu paytda jadval bazada yaratiladi. 
+SQLAlchemy yordamida model (masalan, User yoki Product) yarating.
+	•	ORM orqali Create, Read, Update, Delete amallarini bajaring.
+	•	Alembic o‘rnating, boshlang‘ich migratsiya yarating va bazaga qo‘llang.
+	•	Modelga yangi ustun qo‘shib, yangi migratsiya yarating va yangilanishni bazaga tatbiq qiling.
+Amaliy topshiriqlar
+
+
+	•	SQLAlchemy yordamida model (masalan, User yoki Product) yarating.
+	•	ORM orqali Create, Read, Update, Delete amallarini bajaring.
+	•	Alembic o‘rnating, boshlang‘ich migratsiya yarating va bazaga qo‘llang.
+	•	Modelga yangi ustun qo‘shib, yangi migratsiya yarating va yangilanishni bazaga tatbiq qiling.
+Amaliy topshiriqlar
+
+	•	Fayllar bilan ishlash (upload/download)
+FastAPI’da fayllarni serverga yuklash (upload) va foydalanuvchiga qaytarib berish (download) funksiyalarini yaratish, fayllarni saqlash va xavfsiz ishlash ko‘nikmalarini shakllantirish
+Mashg‘ulot
+maqsadi
+FastAPI’da fayllarni serverga yuklash (upload) va foydalanuvchiga qaytarib berish (download) funksiyalarini yaratish, fayllarni saqlash va xavfsiz ishlash ko‘nikmalarini shakllantirish
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter (internetga ulangan)
+	•	Python o‘rnatilgan muhit
+	•	FastAPI va Uvicorn o‘rnatilgan
+	•	Kod muharriri (VS Code yoki PyCharm)
+	•	Postman yoki brauzer (test qilish uchun)
+	•	Kompyuter (internetga ulangan)
+	•	Python o‘rnatilgan muhit
+	•	FastAPI va Uvicorn o‘rnatilgan
+	•	Kod muharriri (VS Code yoki PyCharm)
+	•	Postman yoki brauzer (test qilish uchun)
+Upload (yuklash)
+Upload — foydalanuvchi (telefon/kompyuter) serverga fayl yuboradi. Masalan: rasm yuklash, hujjat yuklash, profil rasmi qo‘yish.
+Download (yuklab olish)
+Download — serverdagi faylni foydalanuvchi o‘z kompyuteriga yuklab oladi. Masalan: pdf faylni olish, hisobotni yuklab olish, rasmni ko‘rish.
+FastAPI’da fayl bilan ishlashda asosiy tushunchalar
+FastAPI’da upload uchun ko‘p ishlatiladiganlar:
+	•	UploadFile — yuklangan faylni “obyekt” sifatida beradi (streaming, tezroq)
+	•	File(...) — fayl kelishini majburiy belgilaydi
+	•	Form(...) — fayl bilan birga matn, ism, id kabi form-data yuborishda kerak
+Download uchun:
+	•	FileResponse — diskdagi faylni to‘g‘ridan-to‘g‘ri qaytaradi
+	•	StreamingResponse — oqim (stream) orqali qaytaradi (katta fayllarga mos)
+Eslatma: Fayl upload qilishda mijoz odatda multipart/form-data formatda yuboradi.
+Kerakli kutubxona: python-multipart
+FastAPI fayl upload qilish uchun bu paket kerak bo‘ladi.
+Terminal:
+
+4.40-rasm: python-multipart
+Fayl va form-data (multipart) yuborish/olish uchun yordamchi kutubxona. O‘rnatilmasa, upload endpoint ishlamaydi.
+UPLOAD (serverga fayl yuborish)
+Eng sodda upload: bitta fayl qabul qilish va ma’lumotini ko‘rsatish
+Faylni qabul qilish:
+
+4.41-rasm: upload
+	•	UploadFile — yuklangan fayl haqidagi ma’lumotlarni beradi.
+	•	File(...) — “file majburiy” degani (... bo‘lsa majburiy).
+	•	Bu endpoint faylni diskka saqlamaydi, faqat nomi va turini qaytaradi.
+Faylni serverda diskka saqlash (eng ko‘p ishlatiladigan)
+uploads/ papkaga saqlash
+
+4.42-rasm: uploads/
+	•	UPLOAD_DIR — fayllar saqlanadigan papka.
+	•	os.makedirs(..., exist_ok=True) — papka bo‘lmasa yaratadi.
+	•	open(..., "wb") — faylni “binary write” rejimida yozadi (rasm, pdf ham yoziladi).
+	•	shutil.copyfileobj(file.file, buffer) — yuklangan fayl oqimini diskka ko‘chiradi.
+	•	Natijada fayl serverda saqlanadi.
+Nega UploadFile yaxshi? (bytes emas)
+FastAPI’da faylni bytes qilib olish ham mumkin, lekin katta fayllarda bu RAMni to‘ldirib yuboradi. UploadFile esa oqim bilan ishlaydi.
+Faylni bytes sifatida olish (faqat kichik faylga)
+
+4.43-rasm: Bytes
+	•	Bu yerda fayl to‘liq xotiraga (RAM) yuklanadi.
+	•	Katta fayl yuborilsa server sekinlashishi yoki xotira yetmasligi mumkin.
+	•	Shuning uchun real loyihada UploadFile afzal.
+Fayl + matn (form-data) birga yuborish
+Masalan: rasm yuklayapmiz va yonida “username” ham yuboramiz.
+Form bilan ishlash
+
+4.44-rasm: Form
+	•	Form(...) — form-data ichidagi oddiy matn maydonini oladi.
+	•	Bir endpointda file + text ishlashi ko‘p uchraydi (masalan “title”, “description”, “file”).
+Fayl turini tekshirish (faqat rasm qabul qilish)
+Bu xavfsizlik uchun muhim: hamma narsani qabul qilmaslik.
+content_type bo‘yicha tekshirish
+
+4.45-rasm: Content type
+	•	file.content_type — fayl turi (MIME type).
+	•	Agar rasm bo‘lmasa, 400 xato qaytaradi.
+	•	Bu “virus/skript” yuborishni kamaytiradi (lekin 100% himoya emas).
+DOWNLOAD (serverdan fayl qaytarish)
+Diskdagi faylni download qilish: FileResponse
+Faylni yuklab berish:
+
+4.46-rasm: Download
+	•	FileResponse diskdagi faylni foydalanuvchiga yuboradi.
+	•	filename=... — brauzerda yuklab olish nomini belgilaydi.
+	•	Agar fayl yo‘q bo‘lsa, 404 qaytaradi.
+POST /upload endpoint yarating va faylni qabul qilib serverga saqlang.
+	•	Saqlangan fayllar ro‘yxatini qaytaradigan GET /files endpoint yozing.
+	•	GET /download/{filename} endpoint orqali faylni yuklab olish imkonini yarating.
+	•	Fayl nomi noto‘g‘ri bo‘lsa yoki fayl topilmasa, mos xatolik qaytarilishini tekshiring.
+Amaliy topshiriqlar
+
+
+	•	POST /upload endpoint yarating va faylni qabul qilib serverga saqlang.
+	•	Saqlangan fayllar ro‘yxatini qaytaradigan GET /files endpoint yozing.
+	•	GET /download/{filename} endpoint orqali faylni yuklab olish imkonini yarating.
+	•	Fayl nomi noto‘g‘ri bo‘lsa yoki fayl topilmasa, mos xatolik qaytarilishini tekshiring.
+Amaliy topshiriqlar
+
+
+	•	Autentifikatsiya va avtorizatsiya. JWT, OAuth2
+FastAPI’da autentifikatsiya va avtorizatsiya tushunchalarini o‘rgatish hamda JWT va OAuth2 orqali foydalanuvchini ro‘yxatdan o‘tkazish, login va himoyalangan endpointlar bilan ishlash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+FastAPI’da autentifikatsiya va avtorizatsiya tushunchalarini o‘rgatish hamda JWT va OAuth2 orqali foydalanuvchini ro‘yxatdan o‘tkazish, login va himoyalangan endpointlar bilan ishlash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter (internetga ulangan)
+	•	FastAPI va Uvicorn o‘rnatilgan
+	•	SQLAlchemy (ixtiyoriy: DB uchun)
+	•	Postman yoki brauzer (test qilish uchun)
+	•	Kod muharriri (VS Code yoki PyCharm)
+	•	Kompyuter (internetga ulangan)
+	•	FastAPI va Uvicorn o‘rnatilgan
+	•	SQLAlchemy (ixtiyoriy: DB uchun)
+	•	Postman yoki brauzer (test qilish uchun)
+	•	Kod muharriri (VS Code yoki PyCharm)
+Ishni bajarish tartibi
+Autentifikatsiya va avtorizatsiya farqi
+Autentifikatsiya (Authentication) — “Sen kimsan?”
+Bu foydalanuvchi haqiqatan ham o‘zi ekanini tekshirish:
+	•	login + parol
+	•	SMS kod
+	•	token
+	•	biometrik
+Avtorizatsiya (Authorization) — “Senga nima mumkin?”
+Foydalanuvchi kimligi tasdiqlangandan keyin, unga qaysi ruxsatlar berilishini aniqlash:
+	•	oddiy user faqat o‘z profilini ko‘ra oladi
+	•	admin hammani o‘chira oladi
+Qisqa misol:
+	•	Autentifikatsiya: “Ali” parol bilan kirdi 
+	•	Avtorizatsiya: “Ali admin emas, demak o‘chira olmaydi”
+Token — server bergan “ruxsatnoma”ga o‘xshash raqamli kalit.
+HTTP so‘rovlar mustaqil (stateless). Har so‘rovda server “bu kim edi?” deb bilishi kerak. Token bo‘lsa:
+	•	user bir marta login qiladi
+	•	server token beradi
+	•	keyingi so‘rovlarda user tokenni yuboradi
+	•	server tokenni tekshiradi va ruxsat beradi
+JWT (JSON Web Token) — ichida ma’lumot saqlaydigan token formati.
+JWT odatda 3 qismdan iborat:
+	•	Header
+	•	Payload (ichidagi data: user_id, username, role, exp va h.k.)
+	•	Signature (imzo) — token o‘zgarmaganini tekshirish uchun
+JWTning asosiy foydasi:
+	•	token ichidagi ma’lumotni server tekshiradi
+	•	bazaga har safar “session” izlab yurmaydi (ko‘pincha)
+Muhim: JWT ichidagi payload odatda shifrlanmagan, faqat imzolangan bo‘ladi. Shuning uchun token ichiga maxfiy parol yozilmaydi!
+OAuth2 — autentifikatsiya/avtorizatsiya uchun standart (qoidalar to‘plami).
+FastAPI’da ko‘p ishlatiladigan usul:
+	•	OAuth2 Password Flow (username + password bilan token olish)
+Bu “Google bilan kirish” (OAuth2 authorization code)dan farq qiladi. 
+Kerakli kutubxonalar:
+
+4.47-rasm: Libraries
+	•	python-multipart — login form-data (username/password) qabul qilish uchun
+	•	python-jose — JWT yaratish/tekshirish
+	•	passlib[bcrypt] — parolni xavfsiz “hash” qilish (oddiy saqlamaslik uchun)
+Parolni nima uchun “hash” qilamiz?
+Parolni bazada oddiy matn ko‘rinishida saqlash juda xavfli. Shuning uchun:
+	•	user parol kiritadi
+	•	server parolni hash qilib saqlaydi
+	•	login paytida ham hash qilib solishtiradi
+Parolni hash qilish va tekshirish:
+
+4.48-rasm: Hash password
+	•	hash_password() — parolni qaytarib bo‘lmaydigan ko‘rinishga o‘tkazadi (hash).
+	•	verify_password() — kiritilgan parolni hash bilan solishtiradi.
+	•	Bazada 12345 emas, hash saqlanadi.
+JWT yaratish va tekshirish asoslari
+JWT token yaratish va decode qilish (oddiy):
+
+4.49-rasm: JWT
+	•	reate_access_token() — payload’ga exp (muddati) qo‘shib token yaratadi.
+	•	sub — odatda user identifikatori (username yoki user_id).
+	•	jwt.decode() — tokenni tekshiradi: imzo to‘g‘rimi, muddati tugamaganmi.
+FastAPI’da OAuth2 Password Flow (login -> token)
+Hozircha dictionary ko‘rinishda, haqiqiy loyihada database bo‘ladi
+
+4.50-rasm: JWT
+
+4.51-rasm: JWT davomi	
+
+4.52-rasm: JWT yakuni
+Kodlar barchasi github repoga saqlanib boriladi 👇:
+https://github.com/Javohir0411/asynchronous_programming.git
+	•	Swagger UI. Redoc
+FastAPI’da avtomatik yaratiladigan API hujjatlari — Swagger UI va ReDoc bilan ishlash, endpointlarni test qilish va API tuzilmasini tushunish ko‘nikmalarini shakllantirish
+Mashg‘ulot
+maqsadi
+FastAPI’da avtomatik yaratiladigan API hujjatlari — Swagger UI va ReDoc bilan ishlash, endpointlarni test qilish va API tuzilmasini tushunish ko‘nikmalarini shakllantirish
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter (internetga ulangan)
+	•	FastAPI va Uvicorn o‘rnatilgan
+	•	Kod muharriri (VS Code yoki PyCharm)
+	•	Brauzer
+	•	Kompyuter (internetga ulangan)
+	•	FastAPI va Uvicorn o‘rnatilgan
+	•	Kod muharriri (VS Code yoki PyCharm)
+	•	Brauzer
+Ishni bajarish tartibi
+API hujjat (documentation)
+Tasavvur qilamiz biz “server” yozdik va u bilan boshqa odamlar ham ishlashi kerak (mobil ilova, sayt, boshqa dasturchi). Ular bilishi kerak:
+	•	qaysi manzilga (/students, /login) murojaat qilish kerak?
+	•	qaysi HTTP metod (GET/POST/PUT/DELETE) ishlatiladi?
+	•	nimalarni yuborish kerak (JSON, query, header)?
+	•	qanday javob qaytadi?
+	•	xatolar qanday ko‘rinishda bo‘ladi?
+Mana shu ma’lumotlar to‘plami — API documentation.
+FastAPI avtomatik ravishda OpenAPI deb ataladigan standart bo‘yicha API tavsifini tuzadi. Shu tavsifdan ikki xil ko‘rinishdagi hujjat chiqaradi:
+Swagger UI (/docs)
+	•	Interaktiv: tugmalar bor, “Try it out” bilan so‘rov yuborasiz
+	•	Endpointlarni sinash juda oson
+Redoc (/redoc)
+	•	Chiroyli, tartibli, uzun hujjat ko‘rinishida
+	•	Ko‘proq “o‘qish” va “tushunish” uchun
+	•	Katta loyiha hujjati sifatida zo‘r
+OpenAPI — API’ni tasvirlash uchun standart format (json/yaml). FastAPI biz yozgan:
+	•	endpointlar
+	•	parametrlar
+	•	Pydantic modellari
+	•	response modellari asosida OpenAPI schema yaratadi.
+OpenAPI schema manzili: http://127.0.0.1:8000/openapi.json
+Swagger UI va Redoc’ni ko‘rish (default holatda)
+Eng sodda FastAPI va docs
+
+4.54-rasm: FastAPI va docs
+Serverni ishga tushirsak (uvicorn main:app --reload), avtomatik:
+	•	Swagger UI: /docs
+	•	Redoc: /redoc
+	•	OpenAPI JSON: /openapi.json
+	•	Biz hech qanday qo‘shimcha kod yozmasimizdan hujjat tayyor bo‘ladi.
+Swagger’da endpointlar “chiroyli” ko‘rinishi uchun metadata
+FastAPI’da endpointga:
+	•	summary
+	•	description
+	•	tags
+	•	response_model kabi ma’lumotlar qo‘shish docs’ni juda yaxshilaydi.
+Tag, summary, description:
+
+4.55-rasm: Tag, summary, description
+	•	title, description, version — Swagger/Redoc tepasida chiqadi.
+	•	tags=["Asosiy"] — endpointlarni bo‘limlarga ajratadi.
+	•	summary — Swagger’da endpoint yonida qisqa sarlavha.
+	•	description — endpoint haqida batafsil tushuntirish.
+Pydantic model docs’da qanday ko‘rinadi?
+Swagger va Redoc Pydantic modelni ko‘rib, JSON formatini “schema” qilib chizib beradi.
+Pydantic model va response_model:
+
+4.56-rasm: Pydantic va response model
+Field(..., example=...) — Swagger’da “Example Value” ko‘rsatadi.
+response_model=StudentOut — qaytadigan javob strukturasi aniq bo‘ladi.
+Swagger’da endi:
+	•	Request body qanday bo‘lishi
+	•	Response qanday qaytishi ko‘rinib turadi.
+FastAPI loyihasini ishga tushiring va /docs (Swagger UI) sahifasini oching.
+	•	Swagger UI orqali GET va POST endpointlarni test qiling.
+	•	/redoc sahifasini ochib, API hujjat tuzilmasini tahlil qiling.
+	•	Endpointlarga description, summary va response_model qo‘shib, hujjatda qanday aks etishini kuzating.
+Amaliy topshiriqlar
+
+
+	•	FastAPI loyihasini ishga tushiring va /docs (Swagger UI) sahifasini oching.
+	•	Swagger UI orqali GET va POST endpointlarni test qiling.
+	•	/redoc sahifasini ochib, API hujjat tuzilmasini tahlil qiling.
+	•	Endpointlarga description, summary va response_model qo‘shib, hujjatda qanday aks etishini kuzating.
+Amaliy topshiriqlar
+
+
+	
+ 	
+ 
+5-bob haqida umumiy ma’lumot
+Mazkur bobda DevOps tushunchasi hamda zamonaviy dasturiy mahsulotlarni ishlab chiqish va joylashtirish jarayonlari bosqichma-bosqich o‘rgatiladi. Bob DevOps’ning asosiy tamoyillari, dastur ishlab chiqish va ekspluatatsiya jarayonlarini integratsiyalash g‘oyasi bilan tanishtirishdan boshlanadi.
+Shuningdek, Git va GitHub yordamida versiyalarni boshqarish, jamoa bilan ishlash hamda Docker va Docker Compose orqali ilovalarni konteynerlashtirish ko‘nikmalari shakllantiriladi. Nginx yordamida reverse proxy va load balancer sozlash, GitHub Actions orqali CI/CD pipeline yaratish jarayonlari amaliy misollar asosida tushuntiriladi.
+Bob davomida monitoring va logging tizimlari, server xavfsizligini ta’minlash choralarini qo‘llash hamda ma’lumotlarni zaxiralash (backup) masalalari yoritiladi. Loyihani serverga deploy qilish, ishlab chiqilgan ilovani ishlab chiqarish (production) muhitiga joylashtirish va uni barqaror ishlashini ta’minlash ko‘nikmalari shakllantiriladi.
+Bob yakunida o‘quvchilarda to‘liq backend loyihani ishlab chiqishdan tortib, uni serverga joylashtirish, monitoring qilish va boshqarishgacha bo‘lgan jarayonlarni mustaqil amalga oshirish bo‘yicha mustahkam nazariy va amaliy ko‘nikmalar hosil bo‘ladi. Yakunda yakuniy nazorat ishi orqali o‘zlashtirilgan bilimlar baholanadi.
+
+	•	Git va GitHub bilan ishlash
+Git yordamida versiyalarni boshqarish asoslarini o‘rgatish hamda GitHub orqali masofaviy repozitoriy bilan ishlash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Git yordamida versiyalarni boshqarish asoslarini o‘rgatish hamda GitHub orqali masofaviy repozitoriy bilan ishlash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter (internetga ulangan)
+	•	Git o‘rnatilgan muhit
+	•	GitHub akkaunti
+	•	Kod muharriri (VS Code yoki PyCharm)
+	•	Kompyuter (internetga ulangan)
+	•	Git o‘rnatilgan muhit
+	•	GitHub akkaunti
+	•	Kod muharriri (VS Code yoki PyCharm)
+Ishni bajarish tartibi
+Git — versiyalar nazorati tizimi (Version Control System)
+Git — loyiha fayllaridagi o‘zgarishlarni tarix sifatida saqlab boradigan tizim. U orqali:
+	•	kim qachon nima o‘zgartirganini ko‘rish mumkin;
+	•	xatolik bo‘lsa oldingi holatga qaytarish mumkin;
+	•	bir nechta odam bir loyiha ustida parallel ishlay oladi;
+	•	tajriba (experiment) uchun alohida yo‘nalishda (branch) ishlash imkoniyati mavjud.
+Oddiy misol: Word faylni “kurs ishi 1”, “kurs ishi 2”, “kurs ishi yakuniy”, “kurs ishi yakuniy(1)” deb saqlab yurish o‘rniga Git hammasini tartibli tarix qilib saqlab boradi.
+GitHub — Git repozitoriyalarni internetda saqlash uchun platforma.
+GitHub — Git bilan ishlanadigan loyihalarni serverda saqlash, ulashish va jamoa bilan ishlash uchun platforma. Unda:
+	•	repository (repo) saqlanadi;
+	•	pull request, issue, review, actions (CI/CD) ishlatiladi;
+	•	jamoaviy ishlab chiqish qulaylashadi.
+Git o‘rnatish va sozlash
+Git o‘rnatish
+	•	Windows: git-scm saytidan o‘rnatiladi
+	•	Linux: sudo apt install git (Ubuntu/Debian), sudo dnf install git (Fedora) va h.k.
+Dastlabki sozlamalar: ism va email
+Git commitlarda “kim yozdi” degan ma’lumot saqlaydi. Shuning uchun bir marta sozlab qo‘yiladi.
+Buyruqlar:
+
+5.1-rasm: Git commands
+	•	--global — bu sozlamalar kompyuterdagi barcha loyihalar uchun amal qiladi.
+	•	user.name va user.email — commit avtori sifatida ko‘rinadi.
+	•	init.defaultBranch main — yangi repo boshlanganda default branch main bo‘ladi.
+Gitning asosiy tushunchalari
+Gitni yaxshi tushunish uchun 3ta “zona”ni bilish juda muhim:
+	•	Working Directory — kompyuterdagi oddiy papka, fayllar shu yerda.
+	•	Staging Area (Index) — commitga ketadigan o‘zgarishlar “tayyorlanadigan” joy.
+	•	Repository (.git) — commitlar tarixi saqlanadigan ichki baza.
+Gitda faylni o‘zgartirib qo‘yishning o‘zi commit bo‘lib ketmaydi. Avval “staging”ga qo‘shamiz, keyin commit qilamiz.
+Yangi loyiha: git init, add, commit
+Lokal repo yaratish (git init)
+Misol: yangi papka ochganmiz: my_project
+
+5.2-rasm: Local repo
+	•	git init papka ichida .git katalogini yaratadi.
+	•	Shu paytdan boshlab papka Git nazoratidagi loyiha bo‘ladi.
+Fayl qo‘shish va commit qilish
+Faraz qilamiz README.md yaratganmiz.
+
+5.3-rasm: ADD | COMMIT
+	•	git status — qaysi fayllar o‘zgargan, stagingda bormi, yo‘qmi ko‘rsatadi.
+	•	git add README.md — faylni staging area ga qo‘shadi (commitga tayyorlaydi).
+	•	git commit -m "..." — stagingdagi o‘zgarishlarni tarixga yozadi.
+Hammisini birdan stagingga qo‘shish:
+
+5.4-rasm: add .
+Nuqta ( . ) — shu papkadagi o‘zgarishlarning barchasini stagingga qo‘shadi.
+Commitlar tarixini ko‘rish: log
+
+5.5-rasm: log
+Qisqaroq ko‘rinish:
+
+5.6-rasm: Misol
+	•	--oneline — har commitni bitta qatorda ko‘rsatadi.
+	•	--graph — branchlar bo‘lsa shoxlanishni chiziqlar bilan ko‘rsatadi.
+	•	--decorate — HEAD, main, taglar qayerda turganini ko‘rsatadi.
+Branch: parallel ishlashning asosi
+Branch — loyiha tarixining alohida yo‘nalishi. Masalan:
+	•	main — barqaror asosiy kod
+	•	feature/login — login funksiyasi ustida ishlash
+	•	fix/payment-bug — xatoni tuzatish yo‘nalishi
+Branch yaratish va o‘tish:
+
+5.7-rasm: branch | switch
+Yoki bitta buyruqda:
+
+5.8-rasm: branch | switch inline
+	•	git branch — branch yaratadi.
+	•	git switch — branchga o‘tkazadi.
+	•	-c — yaratib turib o‘tadi.
+Branchlarni ko‘rish: git branch. 
+yulduzcha * turgani — hozirgi faol branch.
+Merge: branchdagi ishni main bilan birlashtirish
+Faraz qilamiz feature/login branchda ishladik va commit qildik. Endi main ga qo‘shamiz:
+
+5.9-rasm: feature/login
+	•	avval main ga o‘tamiz, chunki qaysi branchga qo‘shmoqchi bo‘lsak, o‘sha branchda turib merge qilinadi.
+	•	git merge feature/login — feature branchdagi commitlarni mainga olib keladi.
+Konflikt (merge conflict)
+Ikki branch bir xil qatorda bir xil joyni o‘zgartirsa Git avtomatik hal qila olmaydi.
+
+5.10-rasm: Marge conflict
+	•	faylni ochib, to‘g‘ri variantni qoldiramiz;
+	•	konflikt belgilarini o‘chirib tashlaymiz;
+	•	stagingga qo‘shamiz:
+
+5.11-rasm: Solve conflict
+merge commit yakunlanadi: git commit
+Konflikt — “Git ikkala o‘zgarishni qaysi biri to‘g‘ri ekanini bilmaydi” degani. Uni odam hal qiladi.
+GitHub bilan ishlash: remote, push, pull, clone
+GitHub’da repo yaratish
+GitHub’da:
+	•	New repository → nom beramiz(masalan: my_project)
+	•	Public/Private tanlang
+	•	README yaratish ixtiyoriy
+So‘ng GitHub bizga URL beradi:
+	•	HTTPS: https://github.com/user/my_project.git
+	•	SSH: git@github.com:user/my_project.git
+Lokal loyihani GitHub’ga ulash (remote add)
+
+5.12-rasm: remote add
+	•	origin — remote’ga berilgan odatiy nom (istalgan nom berish mumkin).
+	•	remote -v — ulangan manzillarni ko‘rsatadi.
+Birinchi push: git push -u origin main
+	•	push — lokal commitlarni GitHub’ga yuboradi.
+	•	-u (upstream) — keyingi safar shunchaki git push desangiz ham bo‘ladi, chunki main ning remote’i “eslab qoladi”.
+Clone: GitHub’dagi loyihani kompyuterga tushirish
+
+5.13-rasm: Git clone
+clone — repozitoriyani to‘liq tarixi bilan birga yuklab oladi.
+	•	Docker. Docker Compose
+Docker asoslari (konteyner tushunchasi va eng kerakli buyruqlar)
+Docker — dastur va uning bog‘liqliklarini (dependencies) bir joyga jamlab, konteyner ichida bir xil ishlashini kafolatlaydigan platforma.
+Ko‘p holatda dastur:
+	•	bir kompyuterda ishlaydi,
+	•	boshqa kompyuterda ishlamaydi (Python versiya, kutubxona, OS farqi, path muammo, va h.k.)
+Docker bu muammoni kamaytiradi: Dastur + kutubxonalar + sozlamalar = container.
+Virtual Machine (VM) va Container farqi:
+	•	VM: har bir VM ichida to‘liq OS bo‘ladi → og‘irroq, sekinroq, ko‘proq resurs yeydi.
+	•	Container: host OS kernelidan foydalanadi → yengilroq, tezroq, ko‘p konteynerni bir serverda ko‘tarish oson.
+Docker’dagi asosiy tushunchalar
+	•	Image — “shablon” (tayyor muhit). Masalan python:3.12, nginx:alpine.
+	•	Container — image’dan ishga tushgan “jonli” jarayon.
+	•	Dockerfile — image qanday qurilishini yozib beradigan fayl.
+	•	Registry — image saqlanadigan joy (Docker Hub, GitHub Container Registry).
+	•	Volume — konteyner ichidagi ma’lumotni doimiy saqlash.
+	•	Network — konteynerlar o‘zaro bog‘lanishi uchun tarmoq.
+Sodda qilib aytganda: Image — retsept, Container — retsept bo‘yicha pishirilgan taom.
+Docker o‘rnatish (qisqacha)
+	•	Windows: Docker Desktop
+	•	Linux: Docker Engine
+	•	Mac: Docker Desktop
+Tekshirish:
+
+5.14-rasm: Docker install result
+Birinchi konteyner: hello-world
+
+5.15-rasm: hello-world
+	•	docker run — image’ni topadi (yo‘q bo‘lsa yuklaydi), konteyner yaratadi va ishga tushiradi.
+	•	hello-world — Docker ishlayotganini sinovdan o‘tkazadigan demo image.
+Eng ko‘p ishlatiladigan buyruqlar
+Image’larni ko‘rish:
+
+5.16-rasm: Images
+	•	Kompyuterda qaysi image’lar borligini ko‘rsatadi.
+	•	Ishlayotgan konteynerlar: docker p
+	•	Hammasi (to‘xtaganlari ham): docker ps -a
+	•	ps konteynerlar ro‘yxatini beradi. -a bilan tarix ham ko‘rinadi.
+	•	Konteynerni to‘xtatish va o‘chirish:
+
+5.17-rasm: stop | rm
+	•	stop — jarayonni to‘xtatadi.
+	•	rm — konteyner “qobig‘i”ni o‘chiradi (image o‘chmaydi).
+Log ko‘rish:
+
+5.18-rasm: Log
+-f — real vaqt (follow) rejimida log oqimini ko‘rsatadi.
+Konteyner ichiga kirish:
+
+5.19-rasm: exec
+Yoki bash bo‘lsa:
+
+5.20-rasm: Bash
+	•	exec — ishlayotgan konteyner ichida buyruq bajaradi.
+	•	-it — interaktiv terminal ochadi.
+Port mapping: tashqi port → konteyner port
+Misol: Nginx ishga tushiramiz.
+
+5.21-rasm: run nginx
+	•	-d — konteynerni fon rejimida (background) ishlatadi.
+	•	-p 8080:80 — kompyuterdagi 8080 portni konteynerdagi 80 portga ulaydi.
+	•	Brauzer: http://localhost:8080 orqali nginx ko‘ramiz.
+Dockerfile va image build (o‘z image’ni yaratish)
+Dockerfile — image’ni qanday qurish kerakligini qatorma-qator yozib beradi.
+Eng ko‘p ishlatiladigan direktivalar:
+	•	FROM — asosiy image
+	•	WORKDIR — ishchi katalog
+	•	COPY — fayl ko‘chirish
+	•	RUN — build vaqtida buyruq bajarish (pip install kabi)
+	•	CMD — konteyner ishga tushganda bajariladigan asosiy buyruq
+	•	EXPOSE — konteyner portini hujjatlashtirish (majburiy emas)
+	•	ENV — environment o‘zgaruvchi
+Minimal Python web app (Flask misol)
+Papka tuzilishi:
+
+5.22-rasm: DIR
+app.py:
+
+5.23-rasm: app.py
+requirements.txt
+
+5.24-rasm: requirements.txt
+Dockerfile:
+
+5.25-rasm: dockerfile
+Image build qilish:
+
+5.26-rasm: build
+Ishga tushirish:
+
+5.27-rasm: run
+	•	FROM python:3.12-slim — python o‘rnatilgan minimal image asos qilib olindi.
+	•	WORKDIR /app — konteyner ichida /app papkada ishlaymiz.
+	•	COPY requirements.txt . — requirements konteynerga ko‘chirildi.
+	•	RUN pip install ... — build vaqtida flask o‘rnatildi.
+	•	COPY . . — qolgan kodlar ko‘chirildi.
+	•	CMD ... — konteyner start bo‘lganda python app.py ishlaydi.
+	•	-p 5000:5000 — port bog‘landi, brauzerdan localhost:5000 ochiladi.
+Layer (qatlam) tushunchasi va optimizatsiya
+Docker image qatlamlardan iborat. RUN, COPY kabi qatorlar layer yaratadi.
+Tavsiya:
+	•	requirements.txtni alohida COPY qilib, pip installni oldinroq bajaramiz → kod o‘zgarsa ham pip qayta o‘rnatilmaydi (cache ishlaydi).
+Yuqoridagi Dockerfile aynan shuni hisobga olgan.
+.dockerignore (keraksiz fayllarni buildga kiritmaslik)
+.dockerignore misol:
+
+5.28-rasm: .dockerignore
+Build tezlashadi, image kichrayadi, maxfiy .env tasodifan ketib qolmaydi.
+Volume, Environment, Network
+Volume: ma’lumotni yo‘qotmaslik
+Agar DB konteynerini o‘chirsak, ichidagi ma’lumot ham o‘chib ketishi mumkin. Volume bu muammoni hal qiladi.
+
+5.29-rasm: volume
+	•	-e POSTGRES_PASSWORD=12345 — postgres paroli.
+	•	-v pgdata:/var/lib/postgresql/data — DB fayllari pgdata volume’da saqlanadi.
+	•	Konteyner o‘chsa ham pgdata qoladi.
+Volume’larni ko‘rish:
+
+5.30-rasm: volume ls
+Environment variables (ENV)
+Ko‘p dasturlarda sozlamalar .env yoki environment orqali beriladi:
+	•	DB host
+	•	DB password
+	•	secret key
+	•	mode (dev/prod)
+Docker’da:
+	•	-e KEY=VALUE bilan beriladi,
+	•	yoki compose’da environment: bo‘ladi.
+Network: konteynerlar bir-birini ko‘rishi
+Agar 2ta konteyner bo‘lsa (web va db), ular bir tarmoqda bo‘lsa, bir-birini nomi orqali topa oladi.
+Network yaratish:
+
+5.31-rasm: network yaratish
+Konteynerlarni shu network’da ishga tushirish:
+
+5.32-rasm: Ishga tushirish
+	•	--network mynet — konteynerlar bitta virtual tarmoqqa tushadi.
+	•	db konteyner nomi sifatida ishlaydi: web konteyner ichidan db:5432 deyish mumkin.
+Yangi lokal repository yarating va fayl qo‘shib commit qiling.
+	•	GitHub’da yangi repository oching va loyihani push qiling.
+	•	branch yarating, o‘zgarish kiriting va merge qiling.
+	•	git log va git status yordamida o‘zgarishlarni tekshiring.
+Amaliy topshiriqlar
+
+
+	•	Yangi lokal repository yarating va fayl qo‘shib commit qiling.
+	•	GitHub’da yangi repository oching va loyihani push qiling.
+	•	branch yarating, o‘zgarish kiriting va merge qiling.
+	•	git log va git status yordamida o‘zgarishlarni tekshiring.
+Amaliy topshiriqlar
+
+	•	Nginx asoslari va Reverse Proxy
+Nginx veb-serverining asosiy tushunchalarini o‘rgatish hamda Reverse Proxy orqali backend ilovani tashqi so‘rovlarga ulash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Nginx veb-serverining asosiy tushunchalarini o‘rgatish hamda Reverse Proxy orqali backend ilovani tashqi so‘rovlarga ulash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter yoki VPS (Linux)
+	•	Internetga ulanish
+	•	Nginx o‘rnatilgan muhit
+	•	Backend ilova (masalan, FastAPI)
+	•	Kompyuter yoki VPS (Linux)
+	•	Internetga ulanish
+	•	Nginx o‘rnatilgan muhit
+	•	Backend ilova (masalan, FastAPI)
+Ishni bajarish tartibi
+Nginx — bu serverga o‘xshagan dastur. Uning asosiy vazifasi:
+	•	internetdan kelgan so‘rovlarni qabul qilish,
+	•	kerakli joyga yo‘naltirish,
+	•	ba’zi fayllarni (rasm, html, css) o‘zi tezda berib yuborish
+Hayotiy taqqoslash: Nginx — binodagi qorovul. Odam keladi, qorovul qabul qiladi va ichkaridagi kerakli xonaga yo‘llaydi.
+Reverse Proxy — Nginx foydalanuvchi bilan backend o‘rtasida turadi.
+
+5.33-rasm: To‘g’ri sxema
+
+5.34-rasm: Noto‘gri sxema
+Nega backendni to‘g‘ridan-to‘g‘ri chiqarish yomon?
+Chunki:
+	•	xavfsizlik past bo‘ladi (backend ochiq turadi),
+	•	HTTPS, domen, log, limit kabilarni boshqarish qiyin,
+	•	bir nechta backend bo‘lsa umuman chalkashib ketadi.
+Restoran misoli: Biz oshxonaga kirib ovqat buyurtma bermaymiz. Biz ofitsiantga aytamiz. Ofitsiant oshxonaga yetkazadi. Nginx — ofitsiant.
+Nginx ishlashi qanday? (qismlarga bo‘lib)
+Nginx konfiguratsiya (sozlama) yoziladigan joy:
+	•	Linuxda ko‘pincha: /etc/nginx/
+	•	Config tekshirish: nginx -t
+Nginx config ichida eng ko‘p uchraydigan 2 narsa:
+	•	server — bu domen/port uchun “qoidalar”
+	•	location — qaysi URL kelganda nima qilish
+Eng sodda reverse proxy (hamma narsani backendga uzatish)
+Faraz qilaylik backend serverimiz shunday ishlayapti:
+	•	127.0.0.1:8000
+
+5.35-rasm: Nginx sozlama
+	•	listen 80 — Nginx 80-portda so‘rovlarni qabul qiladi (oddiy HTTP).
+	•	location / — foydalanuvchi qaysi sahifani so‘rasa ham (/, /login, /users…), shu qoidaga tushadi.
+	•	proxy_pass ... — kelgan so‘rovni backendga uzatadi.
+Foydalanuvchi Nginx’ga keladi, Nginx backendga uzatadi, backend javobini qaytaradi.
+Domen qo‘shish (server_name):
+
+5.36-rasm: Domen qo‘shish
+	•	server_name — qaysi domen kelganda shu qoidalar ishlashini aytadi.
+	•	Bu domenlar kelganda Nginx backendga uzatadi.
+Backend ba’zan foydalanuvchi haqida ma’lumot bilishi kerak bo‘ladi:
+	•	foydalanuvchining IP manzili
+	•	qaysi domen orqali keldi
+	•	HTTPmi yoki HTTPSmi
+Shuning uchun Nginx “ma’lumotlarni ham qo‘shib yuboradi”.
+
+5.37-rasm: Nginx orqali ma’lumot qo‘shish
+	•	Host — backend “qaysi domen” orqali kelganini biladi.
+	•	X-Real-IP — backend foydalanuvchining real IP’sini ko‘radi.
+	•	X-Forwarded-For — agar orada yana proksi bo‘lsa ham IP lar ketma-ket saqlanadi.
+	•	X-Forwarded-Proto — HTTP/HTTPS ekanini bildiradi.
+Oddiy misol: Ofitsiant oshxonaga faqat “osh” deb aytmaydi. “2 porsiya osh, 5-stol, achchiq bo‘lsin” deb to‘liq aytadi. Headerlar ham shunga o‘xshaydi.
+Statik fayllarni Nginx o‘zi berishi
+Sayt ichida rasm, css, js ko‘p bo‘ladi. Bularni backendga yuborib o‘tirmasdan, Nginx tezda o‘zi bera oladi.
+
+5.38-rasm: Fayl yuborish
+	•	Agar URL /static/ bilan boshlangan bo‘lsa — Nginx faylni /var/www/myapp/static/ ichidan topib beradi.
+	•	Qolgan hamma so‘rovlar backendga ketadi.
+Natijada: Rasm, css, js tezroq ochiladi, backend kamroq yuklanadi.
+Katta fayl upload bo‘lsa “sig‘may qolishi”
+Ba’zida fayl upload qilganda “413” xato chiqadi. Shunda Nginx’da limitni oshiriladi:
+
+5.39-rasm: Max body
+	•	client_max_body_size 50m — 50 MB gacha fayl yuborishga ruxsat beradi.
+	•	Bu bo‘lmasa Nginx “katta fayl”ni o‘tkazmay qo‘yadi.
+Load balancer — bu serverga kelayotgan ko‘p sonli so‘rovlarni bir nechta backend serverlar orasida taqsimlab beradigan mexanizm.
+Oddiy qilib aytganda, load balancer:
+	•	bitta serverga hamma yukni tashlamaydi,
+	•	kelgan so‘rovlarni navbat bilan yoki holatga qarab bo‘lib yuboradi,
+	•	serverlar haddan tashqari yuklanib qolishining oldini oladi.
+Load balancer nima uchun kerak?
+Agar saytga:
+	•	foydalanuvchilar soni ko‘paysa,
+	•	bitta backend server ishlamay qolsa,
+	•	so‘rovlar og‘ir (hisob-kitob, fayl yuklash) bo‘lsa,
+bitta server yetarli bo‘lmaydi. Shu sababli bir xil backenddan bir nechta nusxa ishlatiladi va yuk bo‘linadi.
+Hayotiy misol :
+Supermarketni tasavvur qilamiz:
+	•	bitta kassa → navbat uzun → odamlar norozi 
+	•	2–3 ta kassa → navbat qisqa → hamma tez chiqib ketadi 
+Bu yerda:
+	•	xaridorlar — foydalanuvchilar
+	•	kassalar — backend serverlar
+	•	navbatni bo‘lib beruvchi — load balancer
+Internetda load balancer qanday ishlaydi?
+Internetda jarayon shunday:
+	•	Foydalanuvchi saytga so‘rov yuboradi
+	•	So‘rov avval Nginx ga keladi
+	•	Nginx load balancer sifatida qaror qiladi:
+	•	bu so‘rov qaysi backendga boradi
+	•	Backend javob beradi
+	•	Javob foydalanuvchiga qaytadi
+Foydalanuvchi qaysi backend ishlaganini bilmaydi ham, bilishi shart ham emas.
+Nginx’da load balancer qanday amalga oshiriladi?
+Nginx’da load balancing qilish uchun upstream degan tushuncha ishlatiladi.
+Eng sodda misol
+Faraz qilamiz, 2 ta backend server bor:
+	•	biri 8001-portda
+	•	ikkinchisi 8002-portda ishlayapti
+
+5.40-rasm: upstream
+	•	upstream backend_servers — backend serverlar guruhi yaratildi
+	•	server 127.0.0.1:8001; va 8002 — bitta servisning ikki nusxasi
+	•	proxy_pass http://backend_servers; — so‘rovlar shu guruhga yuboriladi
+	•	Nginx so‘rovlarni navbat bilan backendlarga uzatadi
+Bu usul round-robin deb ataladi.
+Load balancing usullari 
+1) Round-robin (eng oddiy)
+	•	So‘rovlar navbat bilan serverlarga beriladi
+	•	1-so‘rov → 1-server
+	•	2-so‘rov → 2-server
+Ko‘pchilik holatda yetarli.
+Kuchiga qarab taqsimlash (weight)
+Agar serverlardan biri kuchliroq bo‘lsa:
+
+5.41-rasm: weight
+	•	8001-server ko‘proq yuk oladi
+	•	8002-server kamroq yuk oladi
+Eng bo‘sh serverga berish (least connections)
+Agar so‘rovlar uzoq vaqt ishlasa:
+
+5.42-rasm: leat connestions
+Nginx qaysi server bo‘shroq ekanini ko‘rib, o‘shanga so‘rov yuboradi
+Agar backendlardan biri vaqtincha ishlamay qolsa:
+	•	Nginx uni vaqtincha chetga chiqaradi
+	•	qolgan serverlarga yukni yo‘naltiradi
+Bu orqali:
+	•	sayt to‘xtab qolmaydi
+	•	foydalanuvchi muammoni sezmaydi
+Load balancer va reverse proxy farqi
+Ular ko‘pincha birga ishlaydi, lekin vazifasi boshqacha:
+	•	Reverse proxy — foydalanuvchi bilan backend orasida turadi
+	•	Load balancer — qaysi backendga yuborishni tanlaydi
+Nginx esa:
+	•	ham reverse proxy,
+	•	ham load balancer bo‘la oladi.
+Nginx’ni o‘rnating va servis holatini tekshiring.
+	•	Oddiy server blok (configuration file) yarating.
+	•	Nginx’ni backend ilovaga (masalan, localhost:8000) Reverse Proxy sifatida ulang.
+	•	Konfiguratsiyani tekshiring (nginx -t) va servisni qayta ishga tushiring.
+Amaliy topshiriqlar
+
+
+	•	Nginx’ni o‘rnating va servis holatini tekshiring.
+	•	Oddiy server blok (configuration file) yarating.
+	•	Nginx’ni backend ilovaga (masalan, localhost:8000) Reverse Proxy sifatida ulang.
+	•	Konfiguratsiyani tekshiring (nginx -t) va servisni qayta ishga tushiring.
+Amaliy topshiriqlar
+
+
+	•	Github actions (CI/CD pipeline)
+GitHub Actions yordamida CI/CD pipeline yaratish, loyiha uchun avtomatik test, build va deploy jarayonlarini sozlash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+GitHub Actions yordamida CI/CD pipeline yaratish, loyiha uchun avtomatik test, build va deploy jarayonlarini sozlash ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter (internetga ulangan)
+	•	Git va GitHub akkaunti
+	•	GitHub repository
+	•	Backend loyiha (masalan, FastAPI)
+	•	Kompyuter (internetga ulangan)
+	•	Git va GitHub akkaunti
+	•	GitHub repository
+	•	Backend loyiha (masalan, FastAPI)
+Ishni bajarish tartibi
+GitHub Actions (CI/CD pipeline)
+CI/CD:
+Dastur yozilganda odatda 3 ta muammo tez-tez uchraydi:
+	•	Kod ishlamay qolishi: yangi o‘zgartirish eski joyni buzib qo‘yadi.
+	•	Tekshirish unutib ketiladi: “test ishlatmadim, lekin push qildim”.
+	•	Deploy qiyin: serverga chiqarish qo‘lda qilinadi, xato ketadi.
+Shu muammolarni kamaytirish uchun CI/CD ishlatiladi.
+CI (Continuous Integration) — doimiy tekshiruv
+	•	Har safar GitHub’ga push/PR bo‘lsa
+	•	test, lint, build avtomatik ishlaydi
+	•	xato bo‘lsa darrov ko‘rinadi
+CD (Continuous Delivery/Deployment) — doimiy chiqarish
+	•	Tekshiruvdan o‘tgan kod
+	•	avtomatik tarzda serverga chiqariladi yoki chiqarishga tayyorlanadi
+GitHub Actions — GitHub ichida ishlaydigan avtomatlashtirish tizimi. Biz .yml fayl yozamiz, GitHub esa:
+	•	kerak bo‘lsa virtual kompyuter (runner) beradi
+	•	biz yozgan qadamlarni bajaradi
+	•	natijani (success/fail) ko‘rsatadi
+Workflow fayllari joyi:
+
+5.43-rasm: Workflow
+	•	Workflow — umumiy avtomatik jarayon (masalan: “Test + Lint”)
+	•	Event/Trigger — qachon ishlashi (push, pull_request, schedule)
+	•	Job — katta vazifa (masalan: “test”)
+	•	Step — job ichidagi qadam (pip install, pytest)
+	•	Runner — job bajariladigan kompyuter (GitHub beradi)
+Eng sodda workflow (push bo‘lsa ishlasin)
+“Hello” deb chiqarish
+.github/workflows/hello.yml
+
+4.44-rasm: Push Workflow
+	•	on: push — repo’ga push bo‘lsa ishga tushadi
+	•	jobs: hello — hello nomli job bor
+	•	runs-on — Ubuntu kompyuterda ishlaydi
+	•	run: echo ... — shunchaki terminalga matn chiqaradi
+Kodni yuklab olish (checkout)
+GitHub runner — bo‘sh kompyuter. Sizning kod avtomatik tushmaydi. Shuning uchun ko‘p workflow’larda birinchi qadam:
+
+4.45-rasm: checkout
+
+4.46-rasm: Repo fayllarini ko‘rsatish
+	•	checkout repo’ni runnerga ko‘chiradi
+	•	ls -la — repo ichidagi fayllar ko‘rinadi
+Agar checkout bo‘lmasa, ls bo‘sh papkani ko‘rsatadi.
+Python loyihasi uchun CI 
+Quyida klassik CI: push/PR bo‘lsa test ishlaydi.
+Pytest bilan test
+.github/workflows/tests.yml
+
+4.47-rasm: Pytest
+	•	push/pull_request — main’ga bog‘langan: PR ochilsa ham tekshiradi
+	•	setup-python — runnerga Python 3.12 o‘rnatadi
+	•	pip install — kutubxonalarni o‘rnatadi
+	•	pytest — testlarni ishga tushiradi
+Natijada xato bo‘lsa PR ustida qizil “X” ko‘rinadi.
+Lint + test (kod sifati + test)
+Ruff + Pytest
+
+4.48-rasm: Ruff+Pytest
+	•	ruff check . — kodda uslubiy xatolarni topadi
+	•	Ruff yiqilsa — testga o‘tmasdan workflow to‘xtaydi
+Bu “birinchi tozalab yoz, keyin test qil” degan tartibni beradi.
+Repository ichida .github/workflows/ papkasini yarating.
+	•	Oddiy CI workflow yozing (masalan, push bo‘lganda test ishga tushsin).
+	•	Pipeline’da Python versiyasini o‘rnating va requirements.txt ni yuklang.
+	•	(Ixtiyoriy) Deploy bosqichini qo‘shing (masalan, serverga avtomatik yuklash).
+
+Amaliy topshiriqlar
+
+
+	•	Repository ichida .github/workflows/ papkasini yarating.
+	•	Oddiy CI workflow yozing (masalan, push bo‘lganda test ishga tushsin).
+	•	Pipeline’da Python versiyasini o‘rnating va requirements.txt ni yuklang.
+	•	(Ixtiyoriy) Deploy bosqichini qo‘shing (masalan, serverga avtomatik yuklash).
+
+Amaliy topshiriqlar
+
+
+	•	Monitoring va logging. Xavfsizlik va backup
+Server va ilovalarda monitoring hamda logging tizimlarini tashkil etish, xavfsizlik choralarini qo‘llash va ma’lumotlarni zaxiralash (backup) ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Server va ilovalarda monitoring hamda logging tizimlarini tashkil etish, xavfsizlik choralarini qo‘llash va ma’lumotlarni zaxiralash (backup) ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter yoki VPS (Linux)
+	•	Internetga ulanish
+	•	Backend ilova (masalan, FastAPI)
+	•	PostgreSQL
+	•	Log va monitoring vositalari (masalan, system logs)
+	•	Kompyuter yoki VPS (Linux)
+	•	Internetga ulanish
+	•	Backend ilova (masalan, FastAPI)
+	•	PostgreSQL
+	•	Log va monitoring vositalari (masalan, system logs)
+Ishni bajarish tartibi
+Monitoring — server va dastur holatini doimiy kuzatish:
+	•	server “tirikmi?”
+	•	CPU/RAM necha foiz?
+	•	Disk to‘lib qolmadimi?
+	•	Dastur 200 javob beryaptimi yoki 500 xatomi?
+	•	Requests soni, response time qancha?
+Monitoring bo‘lmasa nima bo‘ladi?
+Muammo bo‘lib, biz bilmay qolishimiz mumkin:
+	•	sayt 2 soat ishlamay turadi
+	•	siz esa faqat kimdir aytgandan keyin bilasiz 
+Monitoring bo‘lsa:
+	•	muammo chiqqan zahoti xabar keladi 
+Monitoring nimani o‘lchaydi? 
+Server darajasi (infrastructure)
+	•	CPU load
+	•	RAM usage
+	•	Disk usage
+	•	Network traffic
+Dastur darajasi (application)
+	•	requests count (nechta so‘rov kelyapti)
+	•	error rate (xato foizi)
+	•	response time (javob tezligi)
+	•	endpointlar bo‘yicha statistika
+Oddiy monitoring misoli (ping/health-check)
+FastAPI misol:
+
+4.48-rasm: /health
+	•	Bu endpoint faqat bitta vazifa qiladi: “men ishlayapman” deb javob qaytaradi.
+	•	Monitoring tizimi (yoki Nginx) shu endpointni tekshirib turadi.
+	•	Javob ok bo‘lsa — servis tirik.
+Uptime monitoring – sayt ochilyaptimi yo’qmi tekshiradi
+Misol: har 1 daqiqada so‘rov yuborib ko‘rish:
+200 qaytsa — ishlayapti, 500 yoki time-out — muammo
+Prometheus + Grafana 
+	•	Prometheus — metrikalarni yig‘adi (raqamlar)
+	•	Grafana — grafik qilib ko‘rsatadi
+
+4.50-rasm: docker-compose.yml
+	•	Prometheus 9090 portda ishlaydi.
+	•	Grafana 3000 portda ishlaydi.
+	•	Grafana Prometheusdan ma’lumot olib grafik qiladi.
+Logging — dastur ichida bo‘layotgan voqealarni yozib borish:
+	•	kim kiryapti?
+	•	qaysi endpointga so‘rov kelyapti?
+	•	xato bo‘ldimi?
+	•	DB ulanish uzildimi?
+Logning turlari:
+	•	Access log – kim qayerga kirdi
+	•	Error log – xatolar
+	•	App log – dastur ichidagi log
+	•	Audit log – xavfsizlik uchun: kim nima qildi?
+
+4.51-rasm: logning turlari
+	•	INFO — oddiy ma’lumot
+	•	WARNING — e’tibor kerak bo‘lgan holat
+	•	ERROR — xatolik
+Agar servis docker’da ishlasa:
+
+4.52-rasm: Dockers log
+	•	dockers logs – konteynerning chiqaradigan loglarini ko’rsatish
+	•	-f – real vaqt (live) kuzatish
+Nginx loglari qayerda bo‘ladi?
+Ko‘p Linuxlarda:
+	•	/var/log/nginx/access.log
+	•	/var/log/nginx/error.log
+Ko‘rish:
+
+4.53-rasm: Nginx loglar
+	•	access.log — so‘rovlar tarixi
+	•	error.log — muammo, upstream xato, 502/504 sabablari
+Firewall — serverga kirish yo‘llarini nazorat qiladi.
+	•	22 (SSH) ochiq
+	•	80/443 (web) ochiq
+	•	qolgan portlar yopiq
+SSH xavfsizligi (amaliy tavsiyalar)
+	•	parol bilan emas, SSH key bilan kirish
+	•	root user bilan emas, oddiy user bilan kirish
+	•	SSH portni default 22 emas, o‘zgartirish (har doim shart emas, lekin yordam beradi)
+Ilovada logging sozlang va log faylga yozilishini tekshiring.
+	•	Server resurslarini (htop, top) orqali monitoring qiling.
+	•	PostgreSQL bazasidan backup oling va uni qayta tiklab ko‘ring.
+	•	.env fayl, kuchli parol va firewall orqali asosiy xavfsizlik choralarini qo‘llang.
+Amaliy topshiriqlar
+
+	•	Ilovada logging sozlang va log faylga yozilishini tekshiring.
+	•	Server resurslarini (htop, top) orqali monitoring qiling.
+	•	PostgreSQL bazasidan backup oling va uni qayta tiklab ko‘ring.
+	•	.env fayl, kuchli parol va firewall orqali asosiy xavfsizlik choralarini qo‘llang.
+Amaliy topshiriqlar
+
+5.6. Deploy
+Loyihani serverga deploy qilish jarayonini o‘rgatish: ilovani ishga tushirish, sozlash (environment), servisga ulash va tashqi so‘rovlarga ochish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Loyihani serverga deploy qilish jarayonini o‘rgatish: ilovani ishga tushirish, sozlash (environment), servisga ulash va tashqi so‘rovlarga ochish ko‘nikmalarini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter (internetga ulangan)
+	•	VPS/Linux server (SSH kirish bilan)
+	•	Git/GitHub repository
+	•	Nginx (ixtiyoriy)
+	•	PostgreSQL (agar kerak bo‘lsa)
+	•	Kompyuter (internetga ulangan)
+	•	VPS/Linux server (SSH kirish bilan)
+	•	Git/GitHub repository
+	•	Nginx (ixtiyoriy)
+	•	PostgreSQL (agar kerak bo‘lsa)
+Ishni bajarish tartibi
+Deploy — bu biz yozgan dasturni (sayt, bot, API) oddiy kompyuterdan olib, serverga joylab, odamlar internet orqali foydalana oladigan holatga keltirish jarayoni.
+Oddiy qilib:
+	•	bizda kod bor (GitHub’da yoki lokal)
+	•	serverda ishlashi kerak
+	•	deploy — “kodni serverga olib borib, ishga tushirish va nazorat qilish”
+Deploy bo’lmasa:
+	•	dastur faqat noutbukda ishlaydi
+Deploy bo’lsa:
+	•	dastur 24/7 ishlaydi
+	•	foydalanuvchi istalgan vaqtda kiradi
+Deploy qilishda deyarli hamma joyda shu ketma-ketlik uchraydi:
+	•	Server tayyorlash (Linux, user, firewall)
+	•	Kerakli dasturlarni o‘rnatish (Docker/Nginx/Postgres yoki Python)
+	•	Loyihani serverga olib kelish (git clone/pull yoki image pull)
+	•	Konfiguratsiya (env, secret, domen, port)
+	•	Ishga tushirish (systemd, docker compose, pm2)
+	•	Tekshirish (health check, logs)
+	•	Yangilash strategiyasi (rollback, zero-downtime bo‘lsa yaxshi)
+Deployning eng ko‘p uchraydigan turlari
+1) “Manual deploy” 
+Biz SSH bilan serverga kirib, hamma narsani o‘zimiz buyruq bilan qilamiz.
+2) “CI/CD deploy” (avtomatik)
+GitHub Actions kabi pipeline:
+	•	main’ga push bo‘lsa
+	•	test o‘tadi
+	•	server yangilanadi
+3) Docker-based deploy
+Loyiha Docker image ko‘rinishida bo‘ladi, server faqat Docker bilan ishlaydi.
+Eng sodda deploy: serverga git clone qilib ishga tushirish
+Serverga kodni olib kelish
+
+4.54-rasm: git clone
+	•	ssh — serverga kirish
+	•	git clone — repo’ni serverga tushirish
+	•	/var/www — ko‘p serverlarda saytlar turadigan joy (ixtiyoriy)
+
+4.55-rasm: Python venv bilan ishga tushirish
+	•	venv — loyihaga alohida python muhit (kutubxonalar aralashib ketmaydi)
+	•	pip install — dependencies o‘rnatiladi
+	•	python main.py — dastur ishga tushadi
+	•	Kamchiligi: terminal yopilsa, dastur ham to‘xtab qolishi mumkin
+Production uchun to‘g‘riroq usul: systemd service
+Agar API/server doim ishlashi kerak bo‘lsa, uni service qilib qo‘yish kerak.
+systemd service yaratish (FastAPI misol)
+Faraz qilamiz:
+	•	loyiha: /var/www/myapp
+	•	venv: /var/www/myapp/venv
+/etc/systemd/system/myapp.service fayl:
+
+4.56-rasm: uvicorn bilan ishlaydi
+
+4.57-rasm: sudo systemctl
+	•	systemd — Linux’da servislarni boshqaradi
+	•	Restart=always — yiqilsa qayta ishga tushiradi
+	•	enable — server qayta yonsa ham avtomatik ishga tushadi
+	•	status — holatini ko‘rsatadi
+Nginx bilan deploy (reverse proxy)
+
+4.58-rasm: Nginx reverse proxy
+
+4.59-rasm: Ulanish
+	•	Backend ichkarida 8000 da ishlaydi
+	•	Nginx 80 da turib, so‘rovni 8000 ga uzatadi
+	•	nginx -t xatoni oldindan ko‘rsatadi
+	•	reload saytni to‘xtatmasdan yangilaydi
+Serverga SSH orqali ulanib, loyihani GitHub’dan clone qiling.
+	•	Virtual muhit yarating, kutubxonalarni o‘rnating va .env sozlang.
+	•	Ilovani ishga tushiring (Uvicorn/Gunicorn) va ishlashini tekshiring.
+	•	Nginx orqali domen/portni ulab, tashqi kirishni yoqing.
+	•	(Ixtiyoriy) Systemd servis qilib qo‘ying: server qayta ishga tushsa ham ilova avtomatik ishga tushsin.
+Amaliy topshiriqlar
+
+
+	•	Serverga SSH orqali ulanib, loyihani GitHub’dan clone qiling.
+	•	Virtual muhit yarating, kutubxonalarni o‘rnating va .env sozlang.
+	•	Ilovani ishga tushiring (Uvicorn/Gunicorn) va ishlashini tekshiring.
+	•	Nginx orqali domen/portni ulab, tashqi kirishni yoqing.
+	•	(Ixtiyoriy) Systemd servis qilib qo‘ying: server qayta ishga tushsa ham ilova avtomatik ishga tushsin.
+Amaliy topshiriqlar
+
+
+
+
+
+
+
+
+
+
+
+
+ADVANCED BACK-END VA DEVOPS YO‘NALISHI BO‘YICHA O‘QUV
+QO‘LLANMA
+(9-SINFLAR UCHUN)
+
+Muharrir:
+Jiyanov S.
+Dizayner:
+Aliqulov A.
+Rassom:
+Nosirov K.
+Texnik muharrir:
+Saidov S.
+Sahifalovchi:
+Akbarov N.
+
+
+
+
+
+
+Mazkur o‘quv qo‘llanma Muhammad al-Xorazmiy nomidagi
+Toshkent axborot texnologiyalari universitetida yaratilgan
+
+
+
+
+
+
+Toshkent – 2026

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>{{TITLE}}</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="{{UP}}reveal/dist/reveal.css">
+  <link rel="stylesheet" href="{{UP}}reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="{{UP}}reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="{{UP}}reveal/dars.css">
+  <link rel="icon" href="{{UP}}reveal/logo.png">
+  <script src="{{UP}}reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="{{UP}}reveal/logo.png" alt="">
+    <div class="slides">
+{{SLIDES}}
+    </div>
+  </div>
+
+  <script src="{{UP}}reveal/ikonlar.js"></script>
+  <script src="{{UP}}reveal/dist/reveal.js"></script>
+  <script src="{{UP}}reveal/interaktiv.js"></script>
+  <script src="{{UP}}reveal/dist/plugin/highlight.js"></script>
+  <script src="{{UP}}reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>

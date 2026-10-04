@@ -1,0 +1,2450 @@
+OʻZBEKISTON RESPUBLIKASI  RAQAMLI TEXNOLOGIYALAR VAZIRLIGI HUZURIDAGI
+“RAQAMLI TA’LIMNI RIVOJLANTIRISH MARKAZI” DM
+“MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN 
+KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) YO‘NALISHI BO‘YICHA USLUBIY KO‘RSATMA
+(10-SINFLAR UCHUN)
+2-QISM
+
+
+
+
+
+
+
+
+Toshkent-2026
+MUNDARIJA
+VI bob.	Simsiz tarmoqda suqilib kirish testlarini o‘tkazish .......................	5
+6.1.	WI-FI xavfsizlik protokollari .......................................................................	5
+6.2.	Simsiz tarmoqlarga qaratilgan hujumlar ...................................................	13
+6.3.	Tarmoqni skanerlash usullari ....................................................................	24
+6.4.	Zaifliklarni baholash ..................................................................................	32
+6.5.	Parolga qaratilgan hujumlar ......................................................................	41
+6.6.	Wi-Fi parollarini sinash (Wifite) .................................................................	45
+VII bob.	Ijtimoiy muhandislik va inson omili ..............................................	51
+7.1.	Ijtimoiy muhandislikka kirish .....................................................................	51
+7.2.	Keng tarqalgan ijtimoiy muhandislik hujumlari ..........................................	56
+7.3.	Internetda shaxsiylik va raqamli iz ............................................................	61
+7.4.	Ijtimoiy media xavfsizlik sozlamalari .........................................................	69
+7.5.	Shaxsiy internet xavfsizlik rejasi ...............................................................	74
+VIII bob.	 Zararli dasturlar tahlili va undan himoyalanish ..........................	84
+8.1.	Zararli dastur turlari ...................................................................................	84
+8.2.	Antivirus va anti-malware vositalari ..........................................................	90
+8.3.	ESET NOD32 antivirus: oʼrnatish va sozlash ...........................................	97
+8.4.	Sandboxing va ajratish .............................................................................	106
+8.5.	Maʼlumotlarni zaxiralash (Google Drive) ...................................................	122
+8.6.	Tizim obrazini yaratish va qayta tiklash ....................................................	127
+8.7.	Shubhali jarayonlarni tahlil qilish ...............................................................	132
+IX bob.	Raqamli kriminalistika va insidentlarga javob berish ...................	138
+9.1.	Raqamli dalillarni saqlash zanjiri ...............................................................	138
+9.2.	Oʼchirilgan fayllarni tiklash ........................................................................	146
+9.3.	Hodisalarni qayta qurish ...........................................................................	153
+9.4.	Xotira kriminalistikasi ................................................................................	162
+9.5.	Xotirada ichki tahdidlarni aniqlash ............................................................	168
+X bob.	Individual va ethical loyihalar ..........................................................	181
+10.1.	Tarmoq xavfsizligi asoslari ......................................................................	181
+10.2.	Penetration testing: Metasploitable 2 ......................................................	192
+10.3.	CTF musobaqasi asoslari .......................................................................	198
+10.4.	Web CTF (PicoCTF) ...............................................................................	207
+10.5.	Parolga qaratilgan CTF (Crack the Gate) ...............................................	214
+Foydalanilgan adabiyotlar ro‘yxati .................................................................	219
+ 
+
+
+
+
+6-bob haqida umumiy ma’lumot
+Mazkur bobda WI-FI tarmog‘ida foydalaniluvchi xavfsizlik protokollari, simsiz tarmoqlarga qaratilgan hujumlar, Wi-Fi trafikni tahlil qilish, qalbaki (soxta) boshqaruv nuqtasini yaratish orqali foydalanuvchi xatti-harakatlarini kuzatish, tarmoqni skanerlash usullari va vositalari, zaifliklarni baholash, ularning bosqichlari, zarur vositalar, parolga qaratilgan hujumlar haqida nazariy va amaliy ma’lumotlar tushuntiriladi.
+6.1. WI-FI xavfsizlik protokollari
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda WI-FI trafigini tahlil qilish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda WI-FI trafigini tahlil qilish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Kali Linux;
+	•	Wireshark dasturi;
+	•	Kismet dasturi.
+	•	Kali Linux;
+	•	Wireshark dasturi;
+	•	Kismet dasturi.
+Ishning bajarish tartibi
+WI-FI trafik tahlili – tarmoq paketlarini tutib olish va tekshirish orqali Wi-Fi aloqasini o‘rganishdir. Ushbu laboratoriya ishida Wireshark orqali Wi-Fi paketlarini tutib olish, filtrlash va tahlil qilish masalasi ko‘rib chiqiladi.
+Ishni bajarish ketma-ketligi quyidagicha:
+1. Wireshark dasturini yuklab oling va o‘rnating (Windows/Linux uchun versiyalari mavjud) (6.1-rasm). Bu jarayon oldingi laboratoriya ishlarida batafsil yoritib berilgan.
+
+6.1-rasm. Wireshark ishchi oynasi
+2. Wiresharkni ishga tushirish. Dastur ishchi oynasidan mon0 yoki Wi-Fi interfeysini tanlang va Start tugmasini bosing (6.2-rasm).
+3. Trafikni tutib olish. Paketlar yig‘ilguncha bir necha daqiqa kuting va Stop tugmasini bosing (6.3-rasm).
+4. Filtrlar orqali tahlil qilish. Wireshark dasturining yuqori qismidagi Filter maydoniga quyidagilarni yozamiz:
+	•	faqat HTTP trafik: http
+	•	faqat DNS so‘rovlar: dns
+	•	faqat HTTPS: tls
+Natijada keraksiz paketlar yashiriladi va faqat tanlangan trafik ko‘rinadi.
+
+6.2-rasm. Wireshark dasturida trafikni tutib olishni boshlash
+
+6.3-rasm. Paketlarni tutib olish
+
+6.4-rasm. DNS paketlari
+
+6.5-rasm. TLS paketlari
+Kismet orqali Wi-Fi trafik tahlili
+Kismet - bu Wi-Fi (simsiz) tarmoqlarni aniqlash, kuzatish va tahlil qilish uchun mo‘ljallangan ochiq kodli (open-source) tarmoq monitoring vositasidir.
+Quyida dasturdan foydalanish qadamlari keltirilgan:
+1-qadam. Kismet o‘rnatilganini tekshirish. Kali linux terminalni oching va quyidagi buyruqni yozing:
+kismet
+Agar dastur o‘rnatilgan bo‘lsa, dasturdan foydalanish bo‘yicha ko‘rsatmalar taqdim etiladi. Agar dastur o‘rnatilmagan bo‘lsa quyidagi buyruqlardan foydalanib, dasturni o‘rnating:
+sudo apt update
+sudo apt install kismet
+2-qadam. Kismetni ishga tushirish. Terminalga quyidagi buyruqni kiriting va Enter tugmasini bosing:
+sudo kismet
+bu yerda sudo majburiy, chunki Wi-Fi trafigini ushlash uchun root huquqi talab qiladi.
+
+6.6-rasm. Kismet dasturini ishga tushurish
+3-qadam. Brauzer orqali Kismet dasturiga kirish. Kismet ishga tushgach, terminalda quyidagi yozuv chiqadi:
+http://localhost:2501
+Brauzerni ochamiz (masalan, Firefox) va manzil satriga http://localhost:2501 manzilini kiritamiz. Shundan so‘ng Kismetning web interfeysi ochiladi. Birinchi marta kirganda login sifatida “admin”, parolni esa o‘rnatish talab etiladi.
+
+6.7-rasm. Kismet dasturidan foydalanish uchun parol qo‘yish
+4-qadam. Wi-Fi adapterni tanlash. Kismet dasturini “Data Sources” bo‘limiga kiring va wlan0 adapterini (yoki mavjud Wi-Fi adapter) tanlab, Enable tugmasini bosing.
+
+6.8-rasm. Data Sources bo‘limi
+
+6.9-rasm. Wi-Fi adapterni tanlash
+So‘ngra Kismet Wi-Fi trafikni kuzatishni boshlaydi va Monitor mode avtomatik yoqiladi.
+5-qadam. Wi-Fi tarmoqlarini ko‘rish. Dastur kuzatishni boshlagach, asosiy oynada mavjud Wi-Fi tarmoqlari ro‘yxati va quyidagi ma’lumotlari aks etadi:
+	•	SSID (tarmoq nomi);
+	•	Channel (kanal);
+	•	Encryption (WPA2/WPA3/Open);
+	•	Signal darajasi;
+	•	Paketlar soni.
+Bu real Wi-Fi trafikning statistic ma’lumotlari hisoblanadi.
+6-qadam. Bitta tarmoqni tahlil qilish. Ro‘yxatdan o‘z Wi-Fi tarmog‘imizni tanlaymiz (6.10-rasm) va tarmoq haqida quyidagi batafsil ma’lumotlarga ega bo‘lamiz:
+	•	Xavfsizlik turi (WPA2/WPA3);
+	•	Channel (kanal);
+	•	Paketlar soni;
+	•	Ulangan qurilmalar.
+Shu yerda xavfsizlik baholanadi.
+
+6.10-rasm. Wi-Fi tarmoqlarini ko‘rish
+
+6.11-rasm. Bitta tarmoqni tahlil qilish
+7-qadam. Ulangan qurilmalarni ko‘rish (Clients). Tanlangan tarmoqning Clients bo‘limida quyidagi ma’lumotlarni ko‘rish mumkin:
+	•	Telefonlar;
+	•	Kompyuterlar;
+	•	Router;
+	•	MAC manzillar.
+Bu Wi-Fi trafikni kimlar hosil qilayotganini ko‘rsatadi.
+
+6.12-rasm. Ulangan qurilmalarni ko‘rish (Clients)
+		Laboratoriya muhitida Wireshark dasturini o‘rnating, Wi-Fi adapterni monitor mode qilib sozlang va Wi-Fi trafigini tutib olish jarayonini amalga oshiring.
+	•	Kismet orqali Wi-Fi trafikni tahlil qiling va ulangan qurilmalarni aniqlang. 
+	•	Natijalarni (o‘rganilgan Wi-Fi tarmoqning xavfsizlik turi, ulangan qurilmalari) skrinshotga oling va hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Wireshark dasturini o‘rnating, Wi-Fi adapterni monitor mode qilib sozlang va Wi-Fi trafigini tutib olish jarayonini amalga oshiring.
+	•	Kismet orqali Wi-Fi trafikni tahlil qiling va ulangan qurilmalarni aniqlang. 
+	•	Natijalarni (o‘rganilgan Wi-Fi tarmoqning xavfsizlik turi, ulangan qurilmalari) skrinshotga oling va hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+6.2. Simsiz tarmoqlarga qaratilgan hujumlar
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda o‘rganish uchun qalbaki boshqaruv nuqtasini simulyatsiyalash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda o‘rganish uchun qalbaki boshqaruv nuqtasini simulyatsiyalash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Virtual mashina;
+	•	Kali Linux OT;
+	•	Fluxion dasturiy vositasi.
+	•	Virtual mashina;
+	•	Kali Linux OT;
+	•	Fluxion dasturiy vositasi.
+Ishning bajarish tartibi
+Qalbaki boshqaruv nuqtasi – tarmoqqa ulangan, lekin administrator tomonidan tasdiqlanmagan Wi-Fi tarmog‘i bo‘lib, u real tarmoqqa o‘xshab ko‘rinishi mumkin (Evil twin attack, yovuz egizak hujumi). U korxona, jamoat Wi-Fi tarmog‘i yoki uy tarmoqlarida paydo bo‘lishi mumkin va hujumchiga foydalanuvchilarning trafigini kuzatish, parollarni o‘g‘irlash yoki o‘rtada turgan odam (Man-in-the-middle, MITM) hujumlarini amalga oshirish imkonini beradi. Masalan, hujumchi real Wi-Fi nomi va parolini nusxalab, foydalanuvchilarni soxta nuqtaga yo‘naltirib, ma’lumotlarni o‘g‘irlaydi.
+MITM – ikki tomon o‘rtasidagi aloqani ushlab turadi va ma’lumotlarni o‘zgartiradi yoki o‘qiydi. 
+Fluxion – yovuz egizak hujumi uchun avtomatlashtirilgan vosita bo‘lib, handshake bosqichini yozib olishni va parolni tekshirishni amalga oshiradi. Bundan tashqari, simsiz tarmoqlarni testlash imkonini ham beradi. Ushbu dasturdan foydalanib qurilmadan handshake bosqichini yozib olish, deautentifikatsiyalash hujumini amalga oshirish va qalbaki boshqaruv nuqtasini yaratish kabi jarayonlarni amalga oshirish mumkin.
+Ushbu laboratoriya ishida Kali Linux OTda Fluxion vositasi orqali qalbaki boshqaruv nuqtasi (rogue access point) yaratish jarayoni simulyatsiya qilinadi. Bunda quyidagi vazifalar amalga oshiriladi: Wi-Fi adapterlarni monitor mode rejimida sozlash, tarmoqni skanerlash, deautentifikatsiyalash hujumi orqali handshake paketlarini yozib olish, soxta AP yaratish va fishing sahifasi orqali foydalanuvchi ma’lumotlarini olishdan iborat.
+Quyida laboratoriyani bajarish ketma-ketligi keltirilgan:
+1. Kali Linux OTga Fluxion dasturiy vositasini o‘rnatish. Buning uchun quyidagi buyruqlarni Kali linux terminaliga yozamiz va github saytidan dasturiy vositani yuklab olamiz (6.13-rasm): 
+sudo apt update
+git clone https://www.github.com/FluxionNetwork/fluxion.git
+Yuqoridagi buyruq orqali dasturiy vosita o‘rnatiladi va cd fluxion buyrug‘i orqali dastur turgan papkaga kiriladi.
+
+6.13-rasm. Fluxion dasturiy vositaini o‘rnatish jarayoni
+2. Fluxion dasturiy vositasiga kerakli kutubxonalarni o‘rnatish. sudo (root) orqali dasturiy vositaga kerakli kutubxonalarni o‘rnatib olamiz (6.14-rasm):
+sudo ./fluxion.sh -i
+
+6.14-rasm. Dasturga kerakli kutubxonalarni o‘rnatish
+
+6.15-rasm. O‘rnatilish jarayonida barcha kutubxonalar “OK” deb chiqishi lozim
+Barcha kutubxonalar o‘rnatilgan so‘ng, bizdan dastur tilini tanlash so‘raladi. Shundan so‘ng, tegishli dastur tili tanlanadi. Masalan 15 ni kiritib, rus tilini tanlash mumkin.
+
+6.16-rasm. Kerakli bo‘lgan tilni tanlash
+3. Foydalanuvchini tarmoqdan chiqarish va handshake qiymatini olish jarayoni. Buning uchun 6.17-rasmdagi ekrandan dastlab “[2] Handshake Snooper” bo‘limini tanlash lozim.
+
+6.17-rasm. Dastlab deautentifikatsiya hujumini amalga oshirish jarayoning boshlang‘ich qismi
+
+6.18-rasm. wlan0 interfeysini tanlash
+Keyingi qadamda ekranda ikkita Wi-Fi adapter ko‘rinadi (ushbu ishni bajarish uchun kamida ikkita Wi-Fi adapter talab etiladi). Bizlar wlan0 interfeysni atrofimizda qanday qurilmalar mavjud ekanligini aniqlab olish uchun tanlab olamiz (6.18-rasm). Topilgan qurilmalardan o‘zimiga kerakli bo‘lgan “MSK” Wi-Fi tarmog‘ini tanlab olamiz.
+
+6.19-rasm. “MSK” Wi-Fi tarmog‘ini tanlash
+Aniqlangan Wi-Fi taqmoqni tanlash uchun uning raqamini kiritamiz. Bizdagi topilgan Wi-Fi tarmog‘imizning raqami 008 ekan, terminalga 8 raqamini kiritamiz (6.20-rasm).
+
+6.20-rasm. Aniqlangan Wi-Fi tarmoqni tanlash (8 raqamini kiritamiz)
+
+6.21-rasm. Simsiz tarmoqni nazorat qilish uchun wlan1 interfeysini tanlash
+
+6.22-rasm. Handshake olish uchun “aireplay-ng” usulidan foydalanish
+
+6.23-rasm. Simsiz tarmoqqa ulangan qurilmalarni tarmoqdan uzish jarayoni (2-bo‘limni tanlaymiz)
+Olingan handshake qiymatni tekshirish uchun “CowPatty” usulidan foydalanamiz (2-bo‘limni tanlang).
+
+6.24-rasm. Olingan handshake qiymatni tekshirish (“CowPatty” usulida)
+
+6.25-rasm. Jarayonni har 30 soniyada tekshirib turish
+
+6.26-rasm. Jarayon asinxron ravishda ishlashini ta’minlash (1-bo‘lim)
+Kerakli sozlamalarni amalga oshirganimizdan so‘ng ekranda 3 ta qo‘shimcha oyna paydo bo‘ladi (6.27-rasm).
+Hujum muvaffaqiyatli amalga oshgan bo‘lsa ekranda bitta oyna qoladi va “Успех” yozuvi chiqadi, bu handshake olinganligini bildiradi, bu jarayondan keyin “Handshake Snooper Arbiter Log” oynasini yopib (yoki Ctrl+C), “Выбор другой атаки” bo‘limini tanlaymiz.
+
+6.27-rasm. Handshake tutish jarayoni
+
+6.28-rasm. Handshake muvaffaqiyatli olinganligini ko‘rish
+4. Handshake olingandan so‘ng parolni aniqlab olish uchun fishing hujumi yordamida qalbaki boshqaruv nuqtasini yaratish va parolni aniqlab olish. 6.28-rasmdagi jarayongacha ishlar amalga oshgan bo‘lsa, endi “[1] Captive Portal” bo‘limni tanlaymiz.
+
+6.29-rasm. Hujumni boshlash
+
+6.30-rasm. Hujumni davom ettirish uchun Y harfini kiriting
+
+6.31-rasm. Holatni monitoring qilish uchun Wi-Fi adapterni tanlash (2-bo‘limdagi adapter tanlanadi)
+
+6.32-rasm. Hujumni davom ettirish uchun 1-bo‘lim tanlanadi
+Sozlamalar to‘g‘ri amalga oshirilgan bo‘lsa, ekranda 6 ta oyna paydo bo‘lishi lozim (6.33-rasm).
+
+6.33-rasm. Hujumning muvaffaqiyatli boshlanishi va soxta Wi-Fi yaratilishi
+
+6.34-rasm. Soxta MSK Wi-Fi tarmog‘i paydo bo‘lganini ko‘rish va o‘sha tarmoqqa ulanish
+
+6.35-rasm. Tarmoqqa ulanganda 6 ta oynada ya’ni monitoring jarayonida o‘zgarishlar paydo bo‘lishi
+
+6.36-rasm. Web sahifani ko‘rinishi
+
+6.37-rasm. Xato parol kiritilsa, parol xato degan xabarni chiqishi
+
+6.38-rasm. Parol to‘g‘ri bo‘lsa, keyingi web sahifa paydo bo‘lishi
+
+6.39-rasm. Kiritilgan parolni log fayli
+
+6.40-rasm. Kiritilgan har bir ma’lumot log faylda saqlanishi
+		Shaxsiy kompyuterizga Fluxion dasturiy vositasini o‘rnating.
+	•	O‘zingizga tegishli Wi-Fi tarmog‘ini testlab handshake ma’lumotini oling.
+	•	Evil Twin attack usulidan foydalanib hujumni simulyatsiya qiling.
+Amaliy topshiriqlar
+
+
+	•	Shaxsiy kompyuterizga Fluxion dasturiy vositasini o‘rnating.
+	•	O‘zingizga tegishli Wi-Fi tarmog‘ini testlab handshake ma’lumotini oling.
+	•	Evil Twin attack usulidan foydalanib hujumni simulyatsiya qiling.
+Amaliy topshiriqlar
+
+
+6.3. Tarmoqni skanerlash usullari
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda Nmap vositasidan foydalanish bo‘yicha ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda Nmap vositasidan foydalanish bo‘yicha ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Kali Linux OT;
+	•	Nmap dasturiy vositasi.
+	•	Shaxsiy kompyuter;
+	•	Kali Linux OT;
+	•	Nmap dasturiy vositasi.
+Ishning bajarish tartibi
+Nmap (Network Mapper) — tarmoqdagi faol xostlarni aniqlash, ochiq portlarni topish, ishlayotgan servislar va ularning versiyalarini aniqlash, operatsion tizimni taxmin qilish hamda tarmoq xavfsizligini tahlil qilish uchun mo‘ljallangan ochiq manbali vosita.
+Nmap asosan quyidagi vazifalar uchun ishlatiladi:
+	•	Tarmoq inventarizatsiyasini amalga oshirish;
+	•	Xavfsizlik auditi va zaifliklarni aniqlash;
+	•	Firewall va IDS/IPS konfiguratsiyalarini tekshirish;
+	•	Pentest jarayonining boshlang‘ich bosqichini bajarish.
+Nmap dasturini Linux OTga o‘rnatish uchun (agar o‘rnatilmagan bo‘lsa) quyidagi buyruqlardan foydalaniladi va versiyasi tekshiriladi:
+sudo apt update
+sudo apt install nmap
+
+6.41-rasm. Nmap versiyasini tekshirish
+Belgilangan IP-manzil tarmoqda faol ekanligini aniqlash uchun quyidagi buyruqdan foydalaniladi:
+nmap -sn 192.168.1.1
+
+6.42-rasm. Xostning faol ekanligini tekshirish (Ping Scan)
+
+6.43-rasm. Portlarni oddiy skanerlash
+Izoh: Eng ko‘p ishlatiladigan 1000 ta TCP port tekshiriladi.
+
+6.44-rasm. Muayyan portni tekshirish
+
+6.45-rasm. Portlar oralig‘ini skanerlash
+
+6.46-rasm. Servis va versiyalarni aniqlash
+
+6.47-rasm. Aggressiv skanerlash
+6.46-rasmda ochiq portlarda ishlayotgan servislar va ularning versiyalari aniqlanadi.
+6.47-rasmda operatsion tizimni aniqlash, servis versiyasi, traceroute va skriptlar birgalikda bajariladi.
+Nmap vositasida Ubuntu serverni ochiq portlarini aniqlash. Buning uchun Kalida terminal ochilib quyidagi buyruq kiritiladi (6.48-rasm):
+sudo nmap -sV -p- --open 172.16.4.65
+Ushbu buyruq 172.16.4.65 IP manzilida joylashgan tizimning barcha ochiq portlarini qidiradi. Bunda IP manzil o‘rniga domen nomini ham kiritish mumkin.
+
+6.48-rasm. Skanerlash natijasi
+Ushbu jarayonni Windows operatsion tizimida amalga oshirish uchun https://nmap.org/download.html#windows manzilidan Nmap dasturini yuklab olib, o‘rnatish talab etiladi. Dastlab brauzer orqali tekshirmoqchi bo‘lgan saytimiz manzili aniqlab olamiz. Misol uchun https://tuit.uz/ manzili tanlangan bo‘lsin.
+
+6.49-rasm. Skanerlash profillari
+Aniqlangan manzil Nmap dasturiga kiritiladi. Buning uchun dasturda “Nishon (Цель - Target)” qismi mavjud bo‘lib, u tekshirilishi lozim bo‘lgan sayt manzilini qabul qiladi. So‘ngra “Skanerlash” tugmasi bosiladi. Bundan oldin “Profil” qismidan bizga kerakli bo‘lgan skanerlash turi tanlanadi.
+
+6.50-rasm. Skanerlash jarayoni
+“Skanerlash” tugmasi bosilganidan so‘ng, dastur biz kiritgan manzilni tekshirishni boshlaydi. Tekshirish “Nmap Done” xabari chiqmagunigacha davom etadi.
+
+6.51-rasm. Skanerlash yakunlangan holati
+Dasturning asosiy oynasida skanerlash jarayoni tugaguniga qadar barcha xabarlar ketma-ketligi berib boriladi.
+Dasturning “Portlar (Ports - Порты)” bo‘limida biz skanerlagan sayt o‘rnatilgan hostdagi ochiq yoki firewall yordamida bloklangan portlar ro‘yhati, ulardan foydalanuvchi xizmatlar, portlar holati, protokoli va versiyasi haqida ma’lumot olishimiz mumkin.
+6.52-rasm. Aniqlangan portlar ro‘yxati
+Dasturning “Topologiya” bo‘limida bizning tarmoq qurilmamizdan sayt faoliyat olib boruvchi hostgacha asosiy yo‘nalishni ko‘rishimiz mumkin.
+
+6.53-rasm. Topologiya oynasi
+“Uzel parametrlari (Getaway detail – Детали узла)” bo‘limida hostda o‘rnatilgan OT va skanerlashning umumiy natijalarini ko‘rish mumkin.
+
+6.54-rasm. Uzel parametrlari bo‘limi
+Dasturning asosiy oynasida saytdagi xavfsizlik parametrlari haqida to‘liqroq ma’lumot olish mumkin. Masalan, SSL sertifikati, kalitlar haqida ma’lumot, SSH protokoli va hokazo.
+
+6.55-rasm. SSL sertifikati haqida ma’lumot
+
+6.56-rasm. FTP va SSH protokollari haqida ma’lumot
+		Laboratoriya muhitida nmap -sn buyrug‘i yordamida lokal tarmoqni (masalan, 192.168.1.0/24) skanerlab, faol hostlar sonini aniqlang.
+	•	Aniqlangan hostlardan bittasida oddiy port skanerlashni amalga oshiring va ochiq portlarni aniqlang. 
+	•	Aggressiv skanerlash (-A) rejimi tanlab, aniqlangan servislar, portlar va operatsion tizim bo‘yicha umumiy hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida nmap -sn buyrug‘i yordamida lokal tarmoqni (masalan, 192.168.1.0/24) skanerlab, faol hostlar sonini aniqlang.
+	•	Aniqlangan hostlardan bittasida oddiy port skanerlashni amalga oshiring va ochiq portlarni aniqlang. 
+	•	Aggressiv skanerlash (-A) rejimi tanlab, aniqlangan servislar, portlar va operatsion tizim bo‘yicha umumiy hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+6.4. Zaifliklarni baholash
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda OpenVAS yordamida zaifliklarni baholash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda OpenVAS yordamida zaifliklarni baholash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Kali Linux OT;
+	•	OpenVAS dasturiy vositasi.
+	•	Shaxsiy kompyuter;
+	•	Kali Linux OT;
+	•	OpenVAS dasturiy vositasi.
+Ishning bajarish tartibi
+Zaifliklarni skanerlash – tizim va tarmoqlardagi xavfsizlik zaifliklarini aniqlash jarayoni. Ushbu laboratoriya ishida OpenVAS (ochiq kodli zaiflik skaneri) orqali test tizimini skanerlaymiz va natijalarni baholaymiz. OpenVAS NVT (Network Vulnerability Tests) orqali zaifliklarni topadi va CVSS (Common Vulnerability Scoring System) tizimidagi ball bilan baholaydi.
+Laboratoriya ishini bajarish uchun Kali Linux (chunki OpenVAS Linux OTga o‘rnatiladi) va Metasploitable 2 OTlar talab etiladi. So‘ngra ular VirtualBoxga o‘rnatiladi va sozlanadi.
+Metasploitable 2 OT – bu qasddan zaif qilingan Ubuntu OT asosidagi virtual mashina (VM) bo‘lib, xavfsizlik vositalarini sinash, zaifliklarni ko‘rsatish va penetration test uchun mo‘ljallangan. U 2012-yilda Metasploit loyihasi (Rapid7 kompaniyasi) tomonidan yaratilgan va Ubuntu 8.04 versiyasiga asoslanadi. Metasploitable 2 OT ochiq manbali va bepul bo‘lib, SourceForge saytidan yuklab olish mumkin. Asosiy maqsadi etik xakerlar va kiberxavfsizlik mutaxassislariga real zaifliklarni aniqlashni va ishga tushirishni o‘rgatish bo‘lib, faqat qonuniy va o‘quv maqsadida foydalanish tavsiya etiladi. U Metasploitable seriyasining ikkinchi versiyasi bo‘lib, birinchisidan farqli o‘laroq, unda ko‘proq zaifliklar va xizmatlar qo‘shilgan.
+Metasploitable 2 OT vositasini o‘rnatish jarayoni. Metasploitable 2 OT vositasini VirtualBoxga o‘rnatish juda oddiy, u tayyor VM fayli sifatida ZIP formatida yuklanadi va import qilinadi. Dasturni o‘rnatish qadamlari quyida batafsil keltirilgan:
+	•	Faylni yuklab olish. SourceForge saytiga kiring (https://sourceforge.net/projects/metasploitable/files/Metasploitable2/)) va metasploitable-linux-2.0.0.zip faylini yuklab oling (hajmi ~825 MB). Yuklab olingandan keyin ZIP faylni oching, papkada metasploitable-linux-2.0.0.vmdk fayli mavjud.
+	•	VirtualBox dasturini tayyorlash. VirtualBox dasturini o‘rnating (rasmiy sayt: https://www.virtualbox.org/). Agar allaqachon o‘rnatilgan bo‘lsa, yangilashni unutmang.
+	•	Yangi VM yaratish. VirtualBox dasturini ochib, “New” tugmasini bosing va quyidagi ma’lumotlarni kiriting:
+	•	Name: Metasploitable 2;
+	•	Type: Linux, Version: Ubuntu (32-bit);
+	•	Memory: 512 MB (yoki ko‘proq);
+	•	Hard disk: “Do not add a virtual hard disk now” bandini tanlang (keyin qo‘shasiz).  So‘ngida “Create” tugmasini bosing.
+
+6.57-rasm. Metasploitable 2 vositasini o‘rnatish
+	•	VM sozlamalarini o‘zgartirish. Virtual mashinani tanlang va “Settings” bo‘limiga kiring. Mavjud sozlamalarni quyidagicha o‘zgartiring:
+	•	System: Processor – 1 CPU, Enable PAE/NX.
+	•	Network: Adapter 1 – NAT yoki Bridged Adapter.
+	•	Storage: Controller: IDE → Add Hard Disk → Existing disk bandini tanlang va yuklab olingan .vmdk faylini qo‘shing (6.57-rasm).
+	•	Virtual mashinani ishga tushirish. Start tugmasini bosing va VM yuklanadi. Dastur ishga tushgach login sifatida “msfadmin”, password sifatida ham “msfadmin” kiritiladi (6.58-rasm). 
+IP manzilni aniqlash uchun esa, “ifconfig” buyrug‘ini kiriting (6.59-rasm).
+
+6.58-rasm. Metasploitable 2 vositasini ishga tushirish
+
+6.59-rasm. IP manzilni aniqlash
+Kali va Metasploit o‘rtasidagi aloqani tekshirish uchun ping 10.0.1.15 buyrug‘idan foydalanamiz (6.60-rasm). IP manzildan javob qaytdi demak aloqa mavjud.
+
+6.60-rasm. Tizimlar o‘rtasida aloqani tekshirish
+OpenVAS dasturini Kali Linux OTga o‘rnatish bosqichlari:
+1. Kali Linux OTni ishga tushiring va OpenVAS dasturini quyidagi buyruq orqali o‘rnating (6.61-rasm):
+sudo apt update
+sudo apt install openvas
+
+6.61-rasm. OpenVAS dasturini o‘rnatish
+2. OpenVAS dasturini sozlash uchun sudo gvm-setup (yoki openvas-setup) buyrug‘ini kiriting. Bu jarayon imzolarni yuklaydi va admin parolini yaratadi (6.62-rasm).
+
+6.62-rasm. gvm-setup jarayoni
+6.62-rasmda ko‘rishimiz mumkinki, PortgreSQL xatolik berdi, bizlarda eski 17 versiyasi ekan, tizim esa 18 versiyasini talab qilyabdi. Versiyani yangilash uchun quyidagi amallar bajariladi:
+1-qadam. PostgreSQL 18 versiyasini o‘rnatamiz:
+sudo apt update
+sudo apt install postgresql-18 postgresql-client-18
+2-qadam. PostgreSQL 17 versiyani, 18 versiyaga yangilaymiz:
+sudo pg_upgradecluster 17 main
+Bu jarayon:
+	•	eski ma’lumotlarni o‘chirib yubormaydi;
+	•	yangi 18-versiyaga ko‘chiradi;
+	•	OpenVAS talabiga moslab beradi.
+3-qadam. PostgreSQL 18 versiyani ishlayotganini tekshiramiz:
+sudo systemctl status postgresql
+yoki:
+psql --version
+Natija 18.x bo‘lishi kerak.
+4-qadam. Eski PostgreSQL 17 versiyani o‘chiramiz (tavsiya etiladi):
+sudo apt remove postgresql-17
+5-qadam. GVM vositasini o‘rnatish buyrug‘ini qayta ishga tushiramiz:
+sudo gvm-setup
+Bu safar:
+	•	xatolar chiqmaydi;
+	•	gvmd bazasi to‘g‘ri yaratiladi.
+
+6.63-rasm. GVM vositasini o‘rnatish jarayoni
+3. OpenVAS dasturini ishga tushirish uchun sudo gvm-start (6.65-rasm) buyrug‘ini kiriting. Brauzerda https://127.0.0.1:9392 manzilini oching (login: admin, parol: gvm-setup buyrug‘i bajarilganda berilgan password) (6.64-6.65-rasmlar).
+
+6.64-rasm. Login va parol
+
+6.65-rasm. OpenVAS dasturini ishga tushirish
+Agar parol bilan kirishda muammo bo‘lsa, yangi parol qo‘yib kirish kerak bo‘ladi.  Buning uchun quyidagi buyruqdan foydalaniladi (6.66-rasm):
+sudo runuser -u _gvm – gvmd –create-user=admin2 –new-password=password
+
+6.66-rasm. Yangi login va parol yaratish
+
+6.67-rasm. Yangi login va parol yaratish
+4. OpenVAS dasturida yangi nishon (target) yaratish uchun quyidagi ketma-ketlikni bajaring: Dashboard > Configuration > Targets > New Target (6.68-rasm).
+
+6.68-rasm. Target (nishon) yaratish
+5. OpenVAS dasturida yangi scan yaratish uchun quyidagi ketma-ketlikni bajaring: Dashboard > Scans > Tasks > New Task (6.69-rasm). Keyin 4-qadamda yaratilgan targetni qo‘shing (Metasploitable IP), Scan konfiguratsiyasini tanlang va “Start” tugmasini bosing (6.71-rasm).
+
+6.69-rasm. OpenVAS ishchi oynasi va New Task yaratish
+
+6.70-rasm. Taskga targetni joyini ko‘rsatish
+
+6.71-rasm. Yangi scanni ishga tushurish
+6. Scan qilish jarayoni tugagach, “Reports” va “Results” bo‘limlaridagi natijalarni ko‘ring. Zaifliklar CVSS tizimida mos ball bilan baholanadi (6.72-rasm).
+
+6.72-rasm. Topilgan zaifliklar
+		Laboratoriya muhitida Kali Linux OTga OpenVAS dasturiy vositasini o‘rnating va ishga tushuring.
+	•	OpenVAS dasturiga kirish uchun yangi foydalanuvchi akkauntini yarating (masalan: user=admin2). 
+	•	O‘z tarmog‘ingizni skaner qiling va natijalarni tahlil qiling.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Kali Linux OTga OpenVAS dasturiy vositasini o‘rnating va ishga tushuring.
+	•	OpenVAS dasturiga kirish uchun yangi foydalanuvchi akkauntini yarating (masalan: user=admin2). 
+	•	O‘z tarmog‘ingizni skaner qiling va natijalarni tahlil qiling.
+Amaliy topshiriqlar
+
+
+6.5. Parolga qaratilgan hujumlar
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda John Ripper vositasi yordamida parollarni aniqlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda John Ripper vositasi yordamida parollarni aniqlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Kali Linux OT;
+	•	John the Ripper dasturiy vositasi.
+	•	Shaxsiy kompyuter;
+	•	Kali Linux OT;
+	•	John the Ripper dasturiy vositasi.
+Ishning bajarish tartibi
+Parol - bu tizimga kirish uchun ishlatiladigan maxfiy belgilar to‘plami. Parolning kuchliligi uning uzunligi, ishlatilgan belgilar to‘plami (alfavit) va murakkabligiga bog‘liq. Parolni aniqlash (password cracking) - bu xesh qiymatni sinab ko‘rish orqali parolni topish usuli hisoblanadi. Ushbu laboratoriya ishida John the Ripper vositasi yordamida xesh qiymatni buzishga (crack) harakat qilamiz.
+John the Ripper - ochiq kodli parol “cracking (buzish)” vositasi bo‘lib, qo‘pol kuch, lug‘atga asoslangan va gibrid hujumlarini qo‘llab-quvvatlaydi. Jarayon qadamlari quyidagicha:
+1. Kali Linux tizimini ishga tushiring va John the Ripper dasturini o‘rnatish uchun terminalda quyidagi buyruqni bajaring:
+sudo apt update && sudo apt install john
+John the Ripper dasturi ko‘p hollarda Kalida o‘rnatilgan bo‘ladi. Lekin yangilash va o‘rnatish tizimni to‘liq ishchi holatga keltiradi va “zip2john” kabi qo‘shimcha vositalarni qo‘shadi (6.73-rasm).
+2. Test uchun ZIP faylini yaratish (parol qo‘yib). Avval test matn fayli quyidagi buyruq orqali yaratiladi:
+echo “Bu maxfiy ma’lumot” > secret.txt
+Keyin ZIP fayl quyidagi buyruq orqali parollangan holatda yaratiladi:
+zip -e test.zip secret.txt
+Parol so‘ralganda masalan “test123” yoki “secret” deb kiriting va tasdiqlang.
+
+6.73-rasm. John the Ripper ni o‘rnatish jarayoni
+Mazkur holda “cracking” (parolni topish) uchun parolli ZIP fayl talab etiladi. Bu fayl ichidagi ma’lumot shifrlangan bo‘ladi va parolni bilmasdan uni ochib bo‘lmaydi. O‘quv sharoiti uchun oddiy parol tanlang, chunki murakkab parol uzoq vaqt oladi (6.74-rasm).
+
+6.74-rasm. ZIP faylini parol bilan yaratish
+3. ZIP fayldan xesh qiymatni chiqarish uchun quyidagi buyruqni kiriting:
+zip2john test.zip > test_hash.john
+Mazkur holda ZIP fayllar ichida to‘g‘ridan-to‘g‘ri xesh saqlanmaydi. “zip2john” vositasi ZIP faylni tahlil qilib, parolni “cracking” qilish uchun maxsus xesh qiymatini chiqaradi. Bu xesh qiymat John the Ripper dasturi uchun mo‘ljallangan bo‘ladi (6.75-rasm).
+
+6.75-rasm. zip2john orqali hash chiqarish natijasi
+4. Lug‘atga asoslangan usul orqali parolni buzish. Kalida “rockyou.txt wordlist” parollar ro‘yxati (/usr/share/wordlists/rockyou.txt) mavjud bo‘lib, undan foydalanish uchun quyidagi buyruqdan foydalaniladi:
+john --wordlist=/usr/share/wordlists/rockyou.txt test_hash.john
+Lug‘atga asoslangan usul – mashhur parollar ro‘yxati (wordlist) orqali sinash usuli bo‘lib, bu parolni aniqlashning eng tez usuli hisobalanadi. Buning sababi ko‘p odamlar oddiy parollardan (masalan, “password”, “123456”) foydalanadi (6.76-rasm).
+
+6.76-rasm. Lug‘atga asoslangan hujum jarayoni va natijasi
+5. Qo‘pol kuch usuli orqali parolni buzish (agar lug‘atga asoslangan usul ishlamasa) uchun quyidagi buyruqdan foydalaniladi:
+john --incremental test_hash.john
+Qo‘pol kuch usuli – barcha mumkin bo‘lgan kombinatsiyalarni (harflar, raqamlar) sinab ko‘rish usuli hisoblanadi. Bu lug‘atga asoslangan usul samarali bo‘lmaganda ishlatiladi  va jarayon yetarlicha ko‘p vaqt oladi (masalan, 8 belgili parol uchun kunlar yoki haftalar). O‘quv jarayonlari uchun kichik parollar bilan sinash tavsiya etiladi (6.77-rasm).
+
+6.77-rasm. Qo‘pol kuch hujumi jarayoni
+6. Natijalarni ko‘rish uchun quyidagi buyruqdan foydalaniladi:
+john --show test_hash.john
+John the Ripper dasturi topilgan parolni maxsus faylda saqlaydi. Bu buyruq topilgan parolni chiqaradi va muvaffaqiyatni tasdiqlaydi (6.78-rasm).
+
+6.78-rasm. Topilgan parolni ko‘rish
+		Laboratoriya muhitida oddiy parol o‘rnatilgan test ZIP faylini yarating (masalan, “abc123”).
+	•	“zip2john” vositasi orqali xesh qiymatni aniqlang va lug‘atga asoslangan usuldan foydalanib parolni aniqlang. 
+	•	Qo‘pol kuch hujumini sinab ko‘ring (kichik parol bilan). Olingan natijalarni o‘z ichiga olgan hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida oddiy parol o‘rnatilgan test ZIP faylini yarating (masalan, “abc123”).
+	•	“zip2john” vositasi orqali xesh qiymatni aniqlang va lug‘atga asoslangan usuldan foydalanib parolni aniqlang. 
+	•	Qo‘pol kuch hujumini sinab ko‘ring (kichik parol bilan). Olingan natijalarni o‘z ichiga olgan hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+6.6. Wi-Fi parollarini sinash (Wifite)
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda Wi-Fi parollarini bardoshligini tekshirish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda Wi-Fi parollarini bardoshligini tekshirish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Kali Linux OT;
+	•	Wifite vositasi.
+	•	Shaxsiy kompyuter;
+	•	Kali Linux OT;
+	•	Wifite vositasi.
+Ishning bajarish tartibi
+Wi-Fi parollarini testlash – handshake paketlarini tutib olish va lug‘atga asoslangan usul orqali parolni buzishni amalga oshirishdir. Ushbu laboratoriya ishida Wi-Fi nuqtasi yaratilib, zaif parol sinab ko‘riladi.
+Wifite – WiFi hujumini avtomatlashtiradi, skaner jarayonini amalga oshiradi, handshake paketlarini yozib oladi va parolni lug‘atga asoslangan usuli orqali buzadi. Ushbu dasturni test WiFi tarmoqda sinab ko‘ramiz. Jarayon qadamlari quyidagicha:
+1-qadam. Kali Linux OTi ishga tushirish va yangilash.
+Kalini OTni ishga tushiring (VirtualBox dasturidan foydalanayotgan bo‘lsangiz, WiFi adapterni USB orqali ulang). Wifite dasturini o‘rnatish uchun terminalni oching va quyidagilarni bajaring (6.79-rasm):
+sudo apt update && sudo apt upgrade
+sudo apt install wifite
+
+6.79-rasm. wifite dasturini o‘rnatish
+2-qadam. Wifite dasturini ishga tushirish va skaner qilish uchun terminalga quyidagi buyruqni kiriting:
+sudo wifite
+Wifite avtomatik WiFi tarmoqlarni skaner qiladi, jarayon oxirida mavjud Wi-Fi tarmoqlar ro‘yxati chiqadi (SSID, kanal, shifrlash turi va hk.). Bunda faqat Wi-Fi tarmog‘iga birorta qurilma ulangan bo‘lishi kerak va shundagina handshake paketini tutish mumkin bo‘ladi.
+Skanerlash jarayonida WPA/WPA2 protokoli o‘rnatilgan tarmoq topiladi va test uchun o‘z routeringizni tanlash kerak bo‘ladi (6.80-rasm).
+
+6.80-rasm. Wifite dasturining skanerlash natijasi
+3-qadam. Tarmoqni tanlash va handshake paketini yozib olish.
+Wifite menyusida tarmoq raqamini yozing (masalan, 1). Wifite dasturi “avto deauth” hujumini amalga oshiradi va handshake (parol almashish) paketlarini yozib oladi (.cap fayl). Jarayon 1-5 daqiqa davom etishi mumkin.
+Handshake paketlarini tutib olib, tahlil qilish parolni buzish uchun, WPA/WPA2 shifrlarini ochish uchun ishlatiladi (6.81-rasm).
+
+6.81-rasm. Handshake paketlarini yozib olish
+4-qadam. Parolni buzishni boshlash.
+Wifite avtomatik handshake paketlari qiymatini buzishni taklif qiladi. Buning uchun “Y” tugmasini bosiladi va lug‘atga asoslangan hujum boshlanadi. Jarayon tugaguncha kutiladi va parol topilgan taqdirda u namoyish etiladi (6.82-rasm).
+
+6.82-rasm. Parolni buzish natijasi
+Agar lug‘at jadvalini (bo‘lishi mumkin bo‘lgan parollar ro‘yxati) o‘zgartirmoqchi bo‘lsak, wordlists buyrug‘ini yozamiz va mavjud lug‘at jadvallari ko‘rinadi (6.83-rasm). Shuningdek, “Y” tugmasini bosib arxivdan chiqarish mumkin.
+
+6.83-rasm. Lug‘at jadvallari
+Masalan, “rockyou.txt” lug‘at faylidan ham parolni ochishda foydalanish mumkin. Bilish mumkinki, “rockyou.txt” lug‘at faylida 14 milliondan ortiq so‘z mavjud.
+
+6.84-rasm. rockyou.txt faylini joylashuvini aniqlash
+
+6.85-rasm. Wifite dasturini “rockyou.txt” lug‘at fayli orqali ishlatish
+5-qadam. Natijani tahlil qilish.
+Topilgan parol “1234567890” ga teng bo‘lib, u juda ham zaif hisoblanadi. Shuning uchun dastur uni aniqlashga ko‘p vaqt sarflamadi. Wi-Fi qurilmalariga bunaqa parol qo‘yish tavsiya etilmaydi.
+		Laboratoriya muhitida Wifite dasturini o‘rnating va skanerlash jarayonini amalga oshiring.
+	•	Handshake paketini yozib oling va parolni aniqlang. 
+	•	Natijalarni skrinshotga olib, hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Wifite dasturini o‘rnating va skanerlash jarayonini amalga oshiring.
+	•	Handshake paketini yozib oling va parolni aniqlang. 
+	•	Natijalarni skrinshotga olib, hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+
+
+
+
+
+
+
+
+7-bob haqida umumiy ma’lumot
+Mazkur bobda axborot xavfsizligida inson omilining o‘rni va ijtimoiy muhandislik hujumlarining ishlash mexanizmlari nazariy hamda amaliy jihatdan o‘rganiladi. Bob doirasida fishing elektron pochta xabarlarini tahlil qilish, kiberxavfsizlik bo‘yicha ogohlantiruvchi materiallar yaratish, raqamli izni kuzatish, ijtimoiy tarmoqlarda shaxsiy ma’lumotlarni xavfsiz boshqarish hamda internetdan foydalanishda shaxsiy xavfsizlik rejasini ishlab chiqish masalalari ko‘rib chiqiladi.
+7.1. Ijtimoiy muhandislikka kirish
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda haqiqiy va yolg‘on elektron pochta xabarlarini aniqlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda haqiqiy va yolg‘on elektron pochta xabarlarini aniqlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar
+Kerakli vositalar
+	•	Shaxsiy kompyuter;
+	•	Gmail pochta hisobi;
+	•	Phishing quiz onlayn platformasi.
+	•	Shaxsiy kompyuter;
+	•	Gmail pochta hisobi;
+	•	Phishing quiz onlayn platformasi.
+
+Ishning bajarish tartibi
+Fishing (Phishing) – foydalanuvchini aldab, maxfiy ma’lumotlarini (parol, karta raqami) olish uchun yolg‘on elektron pochta yuborish hujumidir. Ushbu laboratoriya ishida haqiqiy va fishing xabarlarni solishtirib, shubhali belgilarni aniqlaymiz. Ishni bajarish ketma-ketligi quyida keltirilgan:
+1. Haqiqiy elektron pochta xabarini olish va tahlil qilish. Biror haqiqiy xabar tanlang (masalan, bank yoki gmail pochtadan kelgan rasmiy xabar). Xabarni oching va sarlavha (header) qismini ko‘ring (gmail pochtasida sarlavha qismini ko‘rish uchun xabarni ochib, uch nuqtani bosing va “Show original” bo‘limiga o‘ting).
+Haqiqiy xabar jo‘natuvchi manzili (From), Qabul qiluvchi (Received) va SPF/DKIM imzo bilan tasdiqlangan bo‘ladi. Buni fishing xabar bilan solishtirishda asos sifatida qarash mumkin (7.1-rasm).
+
+7.1-rasm. Haqiqiy xabar sarlavhasini ko‘rish
+2. Fishing xabarga misol. O‘quv uchun yaratilgan saytlardan fishing misollarini yuklab oling yoki o‘zingiz simulyatsiya qiling (masalan, bankdan kelgan yolg‘on xabar). “PhishTank” saytidan esa haqiqiy fishing xabar sarlavha qismini ko‘rish mumkin. Misol sifatida o‘zingizga ma’lum biror elektron pochtadan asosiy elektron pochta manzilingizga yolg‘on xabar yuboring (7.2-rasm).
+Fishing xabarlar odatda shoshilinch bajarilishni talab qiladi (Masalan, “Parolingizni yangilang!”), yolg‘on havola beriladi va jo‘natuvchi manzili soxta bo‘ladi.
+
+7.2-rasm. Yolg‘on xabar yuborish jarayoni
+3. Xabarni olish va sarlavha qismini ko‘rish. Xabarni ochib, sarlavha qismini ko‘ring va unda nusxa oling.
+Sarlavha – xabar yo‘li va jo‘natuvchi haqida ma’lumot beradi. Fishingda sarlavha buzilgan bo‘ladi (masalan, “Received” yo‘li noto‘g‘ri) (7.4-rasm).
+
+7.3-rasm. Asosiy pochta manzilimizga kelib tushgan xabar
+Fishing ikki turda bo‘ladi:
+Texnik fishing (spoofing): Jo‘natuvchi manzili soxta (masalan, bank@gmail.com) bo‘ladi. Ushbu turdagi fishing xabarlarni “MX Toolbox” vositasi orqali aniqlash mumkin.
+
+7.4-rasm. Sarlavha qismini ko‘rish
+Kontent fishingi (social engineering): Jo‘natuvchi haqiqiy bo‘lsa ham, matn aldovchi bo‘ladi (bankdan kelgandek ko‘rsatib, havola berish).
+Bizning xabarimiz ikkinchi turdagi “kontent fishingi” xabarlariga misol bo‘ladi:
+	•	Jo‘natuvchi haqiqiy gmail pochta manzili.
+	•	Lekin mavzu va matn “Bankingizdan muhim xabar – parolni yangilang!” – bu aldov.
+	•	Haqiqiy bank hech qachon shaxsiy gmail pochta manzilidan bunday xabar yubormaydi.
+	•	Agar havola qo‘shilsa (masalan, yolg‘on sayt manzili), foydalanuvchi aldanishi mumkin.
+4. Xabar sarlavha qismini tahlil qilish. “PhishTank” saytidan misol tariqasida berilgan xabarning sarlavha qismidan nusxa oling va “MX Toolbox Email Header Analyzer” vositasiga joylashtiring. Tekshirish jarayonini boshlang va SPF, DKIM, DMARC natijalarini ko‘ring.
+
+7.5-rasm. Sarlavhani tahlil natijasi
+Haqiqiy xabarlarda ushbu imzo tasdiqlangan bo‘lsa, fishing xabarlarda esa “failed” tasdiqlanmagan bo‘ladi va bu eng ishonchli aniqlash usuli hisoblanadi (7.5-rasm).
+5. Havolani tekshiring. Fishing xabardagi havoladan nusxa oling va VirusTotal saytida tekshirib, “Detection” qatorini ko‘ring.
+Fishing havolalar odatda zararli yoki yolg‘on domen bo‘ladi. Buni VirusTotal 70 dan ziyod antivirus bilan tekshirish natijasida osonlik bilan aniqlaydi (7.6-rasm).
+
+7.6-rasm. Havolani VirusTotal saytida tekshirish
+6. Onlayn “phishing quiz” o‘ynash. https://phishingquiz.withgoogle.com/ yoki https://www.sonicwall.com/phishing-iq-test/ saytiga kiring va berilgan topshiriqlarni bajaring (10-20 savol).
+Bu saytlar qiziqarli va amaliy tarzda haqiqiy va fishing xabarlarni farqlashni o‘yin orqali osonlik bilan o‘rgatishga mo‘ljallangan (7.8-rasm).
+
+7.7-rasm. “Phishing quiz” o‘yinini boshlash
+
+7.8-rasm. “Phishing quiz” topshiriqlarini bajarish
+
+7.9-rasm. “Sonicwall” saytidagi savollar
+		PhishTank yoki boshqa tizimlardan 3 ta fishing xabar misolini toping va sarlavha qismini tahlil qiling.
+	•	Soxta havolalarni “VirusTotal” va “MX Toolbox” vositalarida tekshiring va natijalarni tahlil qiling. 
+	•	“Phishing quiz” va “Sonicwall” saytlarida berilgan topshiriqlarni bajaring va natijalar asosida hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	PhishTank yoki boshqa tizimlardan 3 ta fishing xabar misolini toping va sarlavha qismini tahlil qiling.
+	•	Soxta havolalarni “VirusTotal” va “MX Toolbox” vositalarida tekshiring va natijalarni tahlil qiling. 
+	•	“Phishing quiz” va “Sonicwall” saytlarida berilgan topshiriqlarni bajaring va natijalar asosida hisobot tayyorlang.
+Amaliy topshiriqlar
+
+7.2. Keng tarqalgan ijtimoiy muhandislik hujumlari
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda kiberxavfsizlik bo‘yicha ogohlantiruvchi plakatlarni yaratish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda kiberxavfsizlik bo‘yicha ogohlantiruvchi plakatlarni yaratish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Grafik muharrirlash dasturlari (Canva, Microsoft PowerPoint, Google Slides).
+
+	•	Shaxsiy kompyuter;
+	•	Grafik muharrirlash dasturlari (Canva, Microsoft PowerPoint, Google Slides).
+
+Ishning bajarish tartibi
+Ogohlantirish plakatlari – kiberxavfsizlik qoidalarini oddiy, rangli va e’tiborni tortadigan tarzda ko‘rsatish uchun ishlatiladi. Plakatda katta harflar, rasmlar, qisqa matn va ogohlantirish belgilari bo‘lishi kerak. Quyida ogohlantiruvchi plakatlarni tayyorlashni har bir qadami batafsil tushuntirilgan:
+1. Mavzuni tanlash. Kiberxavfsizlikning bir mavzusini tanlang (masalan, “Fishingdan himoyalaning!”, “Kuchli parol yarating!”, “Yolg‘on havolaga bosmang!” yoki “Virusli fayllarni yuklamang!”).
+Bitta aniq mavzu plakatni qisqa va tushunarli qiladi, agarda ko‘p ma’lumot bo‘lsa, odamlar o‘qimaydi (7.10-rasm).
+2. “Canva” yoki “PowerPoint” dasturlaridan foydalanish. Canva saytiga kiring (bepul akkaunt yarating) va “Poster” shablonini tanlang (A4 yoki A3 o‘lcham). Rangli fon va katta sarlavha qo‘shing.
+Professional dasturlar plakatni chiroyli va e’tiborni tortadigan tarzda tayyorlashda yordam beradi (7.11-rasm).
+3. Katta sarlavha va ogohlantirish matnini qo‘shish. Sarlavha quyidagi katta va yorqin rangda: “DIQQAT! FISHING XAVFI!”. Pastda quyidagi qisqa qoidalar berilgan: “Yolg‘on xabarga ishonmang!”, “Havolaga bosmang!”, “Parolni bermang!”.
+Nima uchun bu muhim? Katta matn uzoqdan ko‘rinadi va asosiy xabarni tez yetkazadi (7.12-rasm).
+
+7.10-rasm. Mavzu tanlash uchun misollar
+
+7.11-rasm. Canva dasturida shablon tanlash
+4. Rasmlar va belgilarni qo‘shish. Canva dasturidagi rasmlardan ogohlantirish belgisi (!), qulf, email va h.k. qo‘shing. Yoki internetdan “phishing icon” deb qidirib yuklab oling (7.13-rasm).
+Rasmlar plakatni qiziqarli va esda qolarli qilib, faqat matndan iborat plakatlarga odamlar e’tibor bermaydi (7.14-rasm).
+
+7.12-rasm. Sarlavha va matn qo‘shish
+
+7.13-rasm. Rasmlarni qidirish va tanlash
+
+7.14-rasm. Rasmlar qo‘shish
+
+7.15-rasm. Maslahatlar qo‘shish
+5. Qisqa maslahatlarni qo‘shish. Plakatni bir qismiga quyidagi maslahatlarni ham qo‘shing: “Himoya qoidalari: 1. Havolani tekshiring. 2. Rasmiy saytga o‘ting. 3. 2 faktorli autentifikatsiyani yoqing”.
+Ogohlantirishdan tashqari, foydali maslahat berish plakatni yanada tushunarliroq qiladi (7.15-rasm).
+6. Plakatni saqlash va chop etish. Canva dasturida “Download” tugmasini bosib, PDF yoki PNG formatida saqlang. Shundan so‘ng, printerda chop eting va sinf devoriga osib qo‘ying.
+
+		Laboratoriya muhitida Canva dasturida kiberxavfsizlik mavzusida plakat yarating (masalan, fishing yoki zaif parol haqida).
+	•	Plakatga katta sarlavha, rasmlar va 3 ta maslahat qo‘shing. 
+	•	Tayyor plakatni PDF yoki PNG formatida saqlang, skrinshotini va qisqa tushuntirishlarni yozib hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Canva dasturida kiberxavfsizlik mavzusida plakat yarating (masalan, fishing yoki zaif parol haqida).
+	•	Plakatga katta sarlavha, rasmlar va 3 ta maslahat qo‘shing. 
+	•	Tayyor plakatni PDF yoki PNG formatida saqlang, skrinshotini va qisqa tushuntirishlarni yozib hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+
+7.3. Internetda shaxsiylik va raqamli iz
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda ochiq ma’lumotlarni tarqalishini kuzatish bo‘yicha ko‘nikmalarni shakllantirishdan iborat.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda ochiq ma’lumotlarni tarqalishini kuzatish bo‘yicha ko‘nikmalarni shakllantirishdan iborat.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	SpiderFoot dasturi;
+	•	Maltego dasturi;
+	•	Osintframework onlayn vositasi.
+
+	•	Shaxsiy kompyuter;
+	•	SpiderFoot dasturi;
+	•	Maltego dasturi;
+	•	Osintframework onlayn vositasi.
+
+Ishning bajarish tartibi
+Raqamli iz (Digital Footprint) — bu foydalanuvchining internetda amalga oshirgan faoliyati natijasida qoldirilgan ma’lumotlar majmui.
+Raqamli iz turlari:
+	•	Faol raqamli iz — foydalanuvchi ataylab joylashtirgan ma’lumotlar (ijtimoiy tarmoqlar, izohlar, postlar);
+	•	Passiv raqamli iz — foydalanuvchi bilmasdan qoldirgan ma’lumotlar (IP manzil, kuki ma’lumotlari, lokatsiya, metadata).
+Ushbu laboratoriya ishida “SpiderFoot” (ochiq kodli OSINT framework) dasturi orqali ochiq ma’lumotlarni kuzatib, ular qanday tarqalganini tahlil qilamiz. “SpiderFoot” dasturi 200 dan ziyod manbalardan ma’lumot to‘playdi va grafik interfeys bilan ishlaydi. Har bir qadam quyida batafsil tushuntirilgan:
+1. Kali Linux OTni ishga tushiring va “SpiderFoot” dasturini o‘rnatish uchun terminalga quyidagi buyruqlarni kiriting:
+sudo apt update
+sudo apt install spiderfoot
+SpiderFoot – OSINT vositasi bo‘lib, ma’lumotlarni avtomatik to‘playdi (7.16-rasm).
+
+7.16-rasm. “SpiderFoot” dasturini o‘rnatish
+2. SpiderFoot dasturini ishga tushirish uchun terminalga quyidagi buyruqni kiriting:
+spiderfoot -l 127.0.0.1:5001
+Brauzerda http://127.0.0.1:5001 manzilini oching. Bu buyruq “SpiderFoot” dasturini web interfeysini ishga tushuradi. Keyin dastur grafik bilan ishlaydi va oson tahlil qilish imkonini beradi (7.17-rasm).
+
+
+7.17-rasm. SpiderFoot dasturini ishga tushirish
+3. Yangi loyiha yaratish uchun dastur interfeysida “New Scan” tugmasini bosing. Loyiha nomi va nishonni (target) kiriting (masalan, o‘z emailingiz yoki domen “example.com”). Modullarni tanlang (masalan, “sfp_google”, “sfp_twitter”) va “Run Scan Now” tugmasini bosing.
+Nishon – izni kuzatish uchun boshlanish nuqtasi. Modullar – ma’lumot manbalarini belgilaydi, masalan, Google qidiruv tizimi orqali iz topish (7.18-rasm).
+
+7.18-rasm. Yangi loyiha yaratish
+4. Skanerlash jarayonini kuzatish va natijalarni ko‘rish. Skanerlash tugagach, har bir bo‘limda hosil bo‘lgan natijalarni ko‘rish mumkin (7.19-rasm).
+
+7.19-rasm. Natijalar diagrammasi
+Endi Maltego dasturidan foydalanishni ko‘rib o‘tamiz:
+1. Maltego dasturini rasmiy saytdan yuklab oling va o‘rnating. Keyin “Community Edition” bandini tanlang va ro‘yxatdan o‘ting.
+Maltego – OSINT vositasi bo‘lib, ma’lumotlarni grafik ko‘rinishida bog‘laydi va tarqalishini ko‘rsatadi.
+
+7.20-rasm. Ro‘yxatdan o‘tish
+Ro‘yxatdan o‘tish jarayoni quyidagi ketma-ketlikda amalga oshiriladi:
+1-qadam. Ro‘yxatdan o‘tish va “Maltego ID” yaratish. Saytda ro‘yxatdan o‘tish shaklini to‘ldiring (email, ism, parol kiriting) (7.20-rasm). Emailingizga tasdiqlash xati keladi va uni tasdiqlang. Ro‘yxatdan o‘tgach, login va parol bilan tizimga kiring.
+
+7.21-rasm. Profil ma’lumotlarini to‘ldirish
+2-qadam. Dastur o‘rnatuvchisini ishga tushirish va o‘rnatish. Yuklab olingan .exe faylini ustiga ikki marta bosib, ishga tushiring (Administrator sifatida ishlatish tavsiya etiladi).
+O‘rnatish jarayoni boshlanganda quyidagi ketma-ketlikni bajaring:
+	•	“Next” tugmasini bosing;
+	•	“License Agreement” shartlarini qabul qiling;
+	•	O‘rnatish papkasini tanlang (default yetarli);
+	•	“Install” tugmasini bosing va jarayon tugashini kuting;
+	•	O‘rnatish jarayoni tugagach, “Finish” tugmasini bosing.
+
+7.22-rasm. “Maltego ID” bilan kirish
+3-qadam. Asosiy sozlamalarni amalga oshirish va sinab ko‘rish. Maltego dasturi ishga tushgach, “New Graph” tugmasini bosing va quyidagi oddiy misolni sinab ko‘ring: “Email Address” vositasini qo‘shing (buning uchun chap tomondagi qidiruv maydoniga “email” deb qidiring, topilgan vositani ustiga sichqonchani chap tomonini bosib turib, “Graph” maydoniga olib qo‘ying) (7.23-rasm).
+Graph – ma’lumotlar xaritasini yaratadi, izni kuzatish uchun asos bo‘ladi.
+
+7.23-rasm. “Email” vositasini qo‘shish
+Transformlarni ishlatib izni kuzatish uchun birinchi navbatda email belgisini ustiga sichqonchani chap tugmasini ikki marta bosib, pochta manzilimizni kiritib (7.24-rasm), keyin email belgisini ustiga o‘ng tugmani bosib, quyidagi ketma-ketlikni bajaring: Run Transform > Search Web > All Run (7.25-rasm).
+Transformlar – ma’lumot manbalaridan (social media, whois) avtomatik ma’lumot to‘playdi va bog‘lanishlarni ko‘rsatadi.
+
+7.24-rasm. Kerakli pochta manzili kiritish
+
+7.25-rasm. Transformlarni ishlatish
+Ushbu dastur raqamli izni tarqalishini vizual ko‘rsatadi, masalan, email pochta manzili qanday tarqalgani aks etadi.
+Endi “OSINT Framework” sayti orqali ochiq ma’lumotlarni kuzatib, ular qanday tarqalganini tahlil qilamiz. Ushbu sayt OSINT vositalarining katta daraxti bo‘lib, har bir kategoriya bo‘yicha bepul onlayn vositalar ro‘yxati mavjud.
+OSINT vositalarining to‘liq katalogi – kategoriyalar bo‘yicha daraxt ko‘rinishida joylashgan. Ularni o‘‘rnatish shart emas, brauzerda onlayn tarzda ishlaydi (7.26-rasm).
+
+7.26-rasm. OSINT Framework bosh sahifasi
+Bu platformada turli xil vositalar mavjud, o‘zimizga keraklisini tanlab bemalol foydalanish mumkin.
+Masalan, “Username Search” kategoriyasini oching. Daraxtda “Username Search” bo‘limini tanlang. “WhatsMyName” yoki “Namechk” vositalarini tanlang (7.27-rasm). Ismingiz yoki “username” nomini kiriting va sinab ko‘ring. Bu vositalar ijtimoiy tarmoqlar (Twitter, Instagram) orqali tarqalgan izlarni aniqlaydi (7.28-rasm).
+
+7.27-rasm. “WhatsMyName” vositasini tanlash
+
+7.28-rasm. “Username search” vositasi natijasi
+Boshqa vositalardan ham shunday foydalanish mumkin.
+		Laboratoriya muhitida “SpiderFoot” dasturini o‘rnating va o‘z elektron pochta manzilingiz bo‘yicha skaner qiling.
+	•	Laboratoriya muhitida “Maltego” dasturini o‘rnating va elektron pochta manzilingiz yoki ism-familiyangiz bilan “graph” yarating. 
+	•	“OSINT Framework” saytini oching va elektron pochta manzilingiz yoki ismingiz bilan “Email Addresses” va “Username Search” kategoriyalarini sinab ko‘ring.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida “SpiderFoot” dasturini o‘rnating va o‘z elektron pochta manzilingiz bo‘yicha skaner qiling.
+	•	Laboratoriya muhitida “Maltego” dasturini o‘rnating va elektron pochta manzilingiz yoki ism-familiyangiz bilan “graph” yarating. 
+	•	“OSINT Framework” saytini oching va elektron pochta manzilingiz yoki ismingiz bilan “Email Addresses” va “Username Search” kategoriyalarini sinab ko‘ring.
+Amaliy topshiriqlar
+
+
+7.4. Ijtimoiy media xavfsizlik sozlamalari
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda ijtimoiy platformalarda shaxsiy ma’lumotlarni boshqarishni xavfsiz sozlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda ijtimoiy platformalarda shaxsiy ma’lumotlarni boshqarishni xavfsiz sozlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Ikki ijtimoiy media uchun akkaunt;
+	•	Internet ulanishi.
+
+	•	Shaxsiy kompyuter;
+	•	Ikki ijtimoiy media uchun akkaunt;
+	•	Internet ulanishi.
+
+Ishning bajarish tartibi
+Ijtimoiy media sozlamalari zaif bo‘lsa, begona odamlar shaxsiy ma’lumotlarni (telefon, fotosuratlar, do‘stlar ro‘yxati) ko‘rishi mumkin. Ushbu laboratoriya ishida o‘quvchilar akkauntlarini zaif sozlab, tekshiruvchi akkuntidan sinab ko‘radilar, keyin xavfsiz sozlamalarni qo‘llab, qayta sinaydilar. Har bir qadam quyida batafsil tushuntiriladi:
+1. Ikkita “Facebook” akkauntini tayyorlang va asosiy akkauntni zaif qilib sozlang. Buning uchun asosiy akkauntda brauzerni oching va facebook.com saytiga kiring. Facebook akkauntingizga kiring va quyidagi sozlamalarni amalga oshiring: “Sozlamalar va Maxfiylik” → “Maxfiylikni Tekshirish” → “Postlar” va “Profil ma’lumotlari” bandini qolgan foydalanuvchilarga ham ko‘rinadigan qilish uchun “Hamma” (Public) qilib o‘zgartiring.
+
+7.29-rasm. Facebook platformasida postlarni “Public” qilish
+Zaif holatni yaratib, keyin tuzatish orqali farqlarni ko‘rish mumkin (7.29-rasm).
+2. Tekshiruvchi akkauntdan zaif qilib sozlangan akkauntni tekshirish. Tekshiruvchi akkauntdan asosiy akkauntni nomini qidiring. Profilni oching va postlar, fotosuratlar, do‘stlar ro‘yxati ko‘rinadimi? Skrinshot oling.
+
+7.30-rasm. Tekshiruvchi akkauntdan zaif profilni ko‘rinishi
+Bu sozlamalar zaifligini real ko‘rsatib, “begona” odam nimalarni ko‘ra olishini tushunishga yordam beradi (7.30-rasm).
+3. Asosiy akkauntda xavfsiz sozlamalarini qo‘llash. Buning uchun asosiy Facebook akkauntda quyidagi sozlamalarni amalga oshiring: “Sozlamalar va Maxfiylik” → “Maxfiylikni Tekshirish” → “Postlar” va “Profil ma’lumotlari” bandini qolgan foydalanuvchilarga ko‘rinmaydigan qilish uchun “Faqat o‘zim” qilib o‘zgartiring.
+
+7.31-rasm. Facebook akkauntini xavfsiz sozlamalarga o‘zgartirish
+Bu sozlamalar ma’lumotlarni yashiradi va uni keyingi qadamda ko‘rish mumkin (7.31-rasm).
+
+7.32-rasm. Profilni yashirish
+4. Tekshiruvchi akkauntdan qayta sinab ko‘rish (xavfsiz holat). Tekshiruvchi akkauntdan asosiy akkauntni oching va postlar, fotosuratlar, do‘stlar ro‘yxati ko‘rinmasligini tekshiring. Faqat cheklangan ma’lumot chiqishi kerak.
+
+7.33-rasm. Tekshiruvchi akkauntdan xavfsiz profil ko‘rinishi
+Oldin va keyin farqni ko‘rish – sozlamalar samarasini isbotlaydi (7.33-rasm).
+
+7.34-rasm. Cheklov qo‘yilgan ma’lumotlarni ko‘rinmasligi
+5. Qo‘shimcha himoya choralarini qo‘llash. Asosiy hisobda “Sozlamalar” → “Xavfsizlik va Kirish” → “Ikki bosqichli tasdiqlash (2FA)” konfiguratsiyasini yoqing va kuchli parol qo‘ying. 2FA akkunt o‘g‘irlanishidan himoya qiladi, fishing hujumlariga qarshi eng samarali himoya usuli (7.35-rasm).
+
+7.35-rasm. Facebook akkauntida 2FAni yoqish
+		Ikkita Instagram akkauntidan foydalanib, asosiy akkauntni zaif qilib sozlab, tekshiruvchi akkauntdan sinab ko‘ring.
+	•	Xavfsiz sozlamalarni amalga oshirib, qayta sinab ko‘ring. 
+	•	2FA ni yoqing va kuchli parol qo‘ying. Oldin va keyin holatni skrinshotga oling, farqlarni tahlil qiling.
+Amaliy topshiriqlar
+
+
+	•	Ikkita Instagram akkauntidan foydalanib, asosiy akkauntni zaif qilib sozlab, tekshiruvchi akkauntdan sinab ko‘ring.
+	•	Xavfsiz sozlamalarni amalga oshirib, qayta sinab ko‘ring. 
+	•	2FA ni yoqing va kuchli parol qo‘ying. Oldin va keyin holatni skrinshotga oling, farqlarni tahlil qiling.
+Amaliy topshiriqlar
+
+
+7.5. Shaxsiy internet xavfsizlik rejasi
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda internet tarmog‘ida xavfsiz xatti-harakatlarni amalga oshirish bo‘yicha ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda internet tarmog‘ida xavfsiz xatti-harakatlarni amalga oshirish bo‘yicha ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Brauzer (Google Chrome yoki Mozilla Firefox);
+	•	LastPass parol menejeri;
+	•	VPN ilovasi.
+
+	•	Shaxsiy kompyuter;
+	•	Brauzer (Google Chrome yoki Mozilla Firefox);
+	•	LastPass parol menejeri;
+	•	VPN ilovasi.
+
+Ishning bajarish tartibi
+Internetda foydalanish bo‘yicha shaxsiy xavfsizlik rejasi - bu shaxsiy maʼlumotlaringizni himoya qilish uchun amal qilinadigan oddiy va muntazam odatlar to‘plamidir. Masalan: VPN ishlatish, kuchli parollar qoʻllash, shubhali linklarga bosmaslik.
+Shuning uchun har bir inson quyidagi 4 ta asosiy qoidani esda tutushi shart:
+	•	VPN dasturlaridan foydalanish.
+	•	Har bir sayt uchun alohida kuchli parol va parol menejeridan foydalanish.
+	•	2 bosqichli autentifikatsiya (2FA) usullaridan foydalanish.
+	•	Shubhali saytlarga kirishda ehtiyotkor bo‘lish.
+Xavfsiz rejani tayyorlash (Google Chrome yoki Firefox) uchun brauzerni ochamiz va quyidagi 4 ta jarayonni amalga oshiramiz:
+1. VPN dasturini o‘rnatish va ishlatish. “VPN Proxy VeePN” dasturini Google Chrome brauzeriga o‘rnatish uchun “Chrome web store” bo‘limiga kirib “extension” holatda yuklab olib o‘rnating va bepul akkaunt yarating (7.36-rasm).
+VPN dasturi IP manzilingizni yashiradi va trafigingizni shifrlaydi va siz ochiq Wi-Fi tarmog‘ida xavfsiz bo‘lasiz.
+
+7.36-rasm. VPN dasturini o‘rnatish
+O‘rnatilgan dasturni brauzerni “Расширения” bo‘limidan toping va ulanishni amalga oshiring (7.37-rasm).
+
+7.37-rasm. VPN dasturiga ulanish
+VPN dasturini sinab ko‘rish uchun VPN ulanmagan holda IP manzilni tekshiring (whatismyipaddress.com sayti orqali) (7.38-rasm) va keyin VPN dasturini yoqib qaytadan IP manzilni tekshiring (7.39-rasm).
+
+7.38-rasm. VPN ulanmagan holdagi IP manzil
+
+7.39-rasm. VPN ulangan holdagi IP manzil
+ 2. Parol menejerini o‘rnatish. LastPass dasturini yuklab oling, akkaunt yarating va unga kuchli parol qo‘ying (masalan, 16 belgi, raqam+harf+belgili) (7.41-rasm).
+Parol menejeri barcha parollarni xavfsiz saqlaydi va har bir sayt uchun alohida parol yaratadi, undan foydalanish uchun talab etiladigan yagona parolni esa eslab qolish oson bo‘ladi.
+LastPass - bu dunyoning istalgan nuqtasidan istalgan kompyuterdan kirishingiz va kerakli vaqtda akkaunt ma’lumotlaridan saytlarga kirish uchun foydalanish mumkin bo‘lgan parolni boshqarish vositasi. LastPass dasturi yangi parollarni yaratadi, shuning uchun siz har bir sayt uchun parol yaratishingiz shart emas.
+LastPass dasturining yana bir afzalligi Windows, Linux OTda ishlaydigan qurilmalar, shuningdek, Android, BlackBerry, WindowsMobile, Symbian, WebOS mobil qurilmalari bilan ham ishlash imkoniyatidir. U parollarni avtomatik ravishda to‘ldirish imkoniyatini, shuningdek, avtomatik ravishda “Enter” tugmasini bosishni o‘z ichiga oladi. Siz ushbu dastur bilan istalgan brauzerda osonlik bilan ishlashingiz mumkin.
+Quyida LastPass dasturida ro‘yxatdan o‘tish va kompyuter uchun dasturiy ta’minotni yuklab olish jarayonlari keltirilgan:
+	•	Yuklab olingan faylni ishga tushiring va o‘rnatish tilini tanlang, pastdagi “Дополнительные параметры” tugmasini bosing yoki hamma narsani standart sifatida qoldiring. Kerakli parametrlarni qo‘shing va o‘rnatish manzilini tanlang.
+
+7.40-rasm. Kengaytirilgan parametrlarni sozlash
+	•	Keyingi bosqichda mavjud akkauntga kiring yoki yangisini yarating. Yangi akkaunt yaratishda siz asosiy parolni o‘rnatishingiz kerak va u kuchli bo‘lishi lozim hamda uni unutmaslik zarur. Parolni yaratishda tizim uning qanchalik ishonchli ekanligini ko‘rsatib turadi (7.41-rasm). 
+
+7.41-rasm. LastPass dasturi qayd yozuvini yaratish
+	•	Tizimga kirganinigizdan so‘ng, brauzerlardan parollarni import qilish taklif qilinadi, agar qarshi bo‘lmasangiz, “Import” tugmasini bosing (7.42-rasm). 
+
+7.42-rasm. Brauzer va ilovalardan parollarni import qilish
+	•	Pochta va parolingizni kiriting, agar siz ushbu brauzerda va ushbu kompyuterda tizimga kirish avtomatik ravishda amalga oshirilishini istasangiz, tegishli katakchalarni belgilang (7.43-rasm).
+
+7.43-rasm. Tizimga kirish
+	•	Endi har bir brauzerda (siz o‘rnatishning boshida tanlagan) LastPass dasturining qo‘shimchasi paydo bo‘ladi. Sichqonchaning o‘ng tugmasi bilan belgini bosish va parametrlarni tanlash mumkin (7.44-rasm). 
+
+7.44-rasm. LastPassni dasturini kontekst menyuga qo‘shish
+	•	Bu yerda siz o‘zingizning xohishingiz uchun parol menejerini sozlashingiz, brauzer yopilganda yoki bir muncha vaqt o‘tgach avtomatik chiqish, maydonlarni avtomatik to‘ldirish, turli xil ogohlantirish va maslahatlar sozlamalarini amalga oshirishingiz mumkin (7.45-rasm).
+Ixtiyoriy ravishda hech qaysi sozlamalarni o‘zgartirmaslik va hamma narsani joriy holat bo‘yicha qoldirish mumkin. 
+
+7.45-rasm. Ogohlantirishlarni sozlash
+Xavfsiz parollarni yaratish va saqlash uchun LastPass dasturidan foydalanish:
+	•	Har qanday resursda ro‘yxatdan o‘tish paytida LastPass dasturi xavfsiz akkaunt yaratishni taklif qiladi. Misol uchun, pochta qutisini “mail.ru” saytidan ro‘yxatdan o‘tkazing va maydonlarni to‘ldiring, parol yaratish kerak bo‘lgan maydonga sichqonchaning o‘ng tugmachasini bosing hamda LastPass dasturining yordamchi menyusidan xavfsiz parol generatorini tanlang (7.46-rasm).
+
+7.46-rasm. LastPass parol generatoridan foydalanish
+	•	Ochilgan oynada sizdan parol uzunligini va parolning o‘zini tanlash taklif qilinadi (7.47-rasm). Agar parol sizga mos bo‘lsa, “Принять” tugmasini bosing va u avtomatik ravishda “parol” va “parolni tasdiqlash” maydonlarida paydo bo‘ladi. Ro‘yxatdan o‘tgandan so‘ng LastPass ushbu akkaunt uchun parolni eslab qoladi.
+
+7.47-rasm. Parollar generatsiyasi
+	•	Agar siz saytga o‘z akkauntingiz bilan kirsangiz, LastPass parolni saqlashni yoki uni hech qachon saqlamaslikni taklif qiladi. Agar siz saqlasangiz, parol menejeri har safar saytga kirganingizda avtomatik to‘ldirishni, ya’ni avtomatik kirishni taklif qiladi (7.48-rasm).
+
+7.48-rasm. Menejerda parollarni saqlashni taklif qilinishi
+Ikki faktorli autentifikatsiyani yoqish. Gmail yoki Facebook platformalarida quyidagi ketma-ketlik orqali: “Sozlamalar” > “Xavfsizlik” > 2 bosqichli autentifikatsiyani yoqing (7.49-rasm).
+2FA parol buzilgan taqdirda ham akkauntga kirishni qiyinlashtiradi, ya’ni qo‘shimcha kod talab qiladi.
+
+7.49-rasm. Ikki faktorli autentifikatsiyani yoqish
+		Laboratoriya muhitida VPN dasturini o‘rnating va sinab ko‘ring.
+	•	Parol menejerini o‘rnating va kuchli parol yarating. 
+	•	Ikki faktorli autentifikatsiyani yoqing va shaxsiy xavfsizlik rejasini yozing, sinab ko‘ring va hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida VPN dasturini o‘rnating va sinab ko‘ring.
+	•	Parol menejerini o‘rnating va kuchli parol yarating. 
+	•	Ikki faktorli autentifikatsiyani yoqing va shaxsiy xavfsizlik rejasini yozing, sinab ko‘ring va hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+
+
+8.1. Zararli dastur turlari
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda zararli dasturlarni aniqlash bo‘yicha ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda zararli dasturlarni aniqlash bo‘yicha ko‘nikmalarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	VirusTotal onlayn platformasi;
+	•	Testlash uchun zararli fayllar;
+	•	Hybrid Analysis vositasi.
+
+	•	Shaxsiy kompyuter;
+	•	VirusTotal onlayn platformasi;
+	•	Testlash uchun zararli fayllar;
+	•	Hybrid Analysis vositasi.
+
+
+Ishning bajarish tartibi
+Zararli dasturlar (malware) – kompyuterda zararli xatti-harakatlar (fayllarni o‘chirish, ma’lumotlarni o‘g‘irlash) qiladigan dasturlardir. Ushbu laboratoriya ishida onlayn vositalar orqali malware xatti-harakatini kuzatamiz.
+Zararli dasturni tayyorlash (Google Chrome yoki Firefox). Buning uchun brauzerni ochamiz va quyidagi amalyotlarni bajaramiz:
+1. EICAR test faylini yuklab olish. https://www.eicar.org/ saytiga kiring, “EICAR.COM.ZIP” test faylini yuklab oling va saqlang (8.1-rasm).
+EICAR – xavfsiz test fayl bo‘lib, zararli dastur kabi ishlaydi (lekin zararsiz).
+
+8.1-rasm. EICAR faylini yuklash
+2. VirusTotal saytida faylni tekshirish. https://www.virustotal.com/ saytiga kiring, “Upload file” tugmasini bosing va EICAR faylini yuklang va natijani kuting (8.2-rasm).
+VirusTotal 67 ta antivirus bazasi doirasida faylni skanerlaydi, zararli ekanligini aniqlaydi va belgilarni ko‘rsatadi.
+
+8.2-rasm. VirusTotal saytiga zararli faylni yuklash va natija olish
+
+8.3-rasm. “Hybrid Analysis” saytiga faylni yuklash
+3. Hybrid Analysis saytida fayl xatti-harakatini kuzatish. https://www.hybrid-analysis.com/ saytiga kiring va bepul akkaunt yarating. “Drag” tugmasini bosing (8.3-rasm), faylni yuklang va “Analyze” tugmasini bosing (8.4-rasm). 
+
+8.4-rasm. Tekshiruv natijalari
+
+8.5-rasm. Tekshiruv natijalari
+“Hybrid Analysis” faylni virtual mashinada ishga tushirib, xatti-harakatini (process, network, file changes) ko‘rsatadi.
+Hybrid-Analysis saytida EICAR test fayli tahlil qilinganda, “malicious” (zararli) deb baholangan.
+
+8.6-rasm. Tekshiruv natijalari
+Umumiy natijalar:
+	•	Submission Name: eicar.com – bu EICAR faylining nomi (standard test fayl).
+	•	Size: 184B – juda kichik fayl (chunki test uchun).
+	•	Type/Mime: data/compressed/zip, application/zip – fayl ZIP arxiv sifatida baholangan (EICAR odatda .com yoki .zip ichida bo‘ladi).
+	•	SHA256 Hash: 2546dcfc5ad854a4ddc64fb056871cd5a00f2471cb7a5bfd4ac23b6e9eedad – fayl identifikatori, barcha antiviruslar shu xesh orqali aniqlaydi.
+	•	Submitted At: 2018-03-23 – fayl oldin yuklangan (sayt arxivi).
+	•	Last Anti-Virus Scan: 2025-12-17 – oxirgi skaner vaqti (hozirgi sana).
+	•	Threat Score: 100/100 – maksimal xavf darajasi (chunki antiviruslar uni “malware” deb ko‘radi).
+	•	Labeled As: EICAR – fayl EICAR test virus deb belgilangan (zararsiz, lekin test uchun).
+	•	Anti-Virus Results: MetaDefender (multi-scan) – 1 ta antivirus aniqlagan (boshqalar topmagan yoki test fayl deb bilgan).
+
+8.7-rasm. Natijalar
+
+8.8-rasm. Natijalar
+
+8.9-rasm. Natijalar
+“Hybrid-Analysis” sayti faylni turli OT (Windows 7/10/11, Linux, Mac, Android) da “sandbox” ichida ishga tushirgan. Natijalar:
+	•	Process Changes (Jarayon o‘zgarishlari): Topilmagan yoki minimal. EICAR fayli oddiy text matnni (“EICAR-STANDARD-ANTIVIRUS-TEST-FILE!”) o‘z ichiga oladi va u hech qanday jarayon yaratmaydi, registrlarni o‘zgartirmaydi va faylni buzmaydi.
+	•	Network Activity (Tarmoq ulanishi): Topilmagan. EICAR fayli internetga ulanmaydi, C2 serverga ma’lumot yubormaydi yoki yuklamaydi. Aloqador URLlar faqat rasmiy EICAR saytlaridan (secure.eicar.org, virusanalyst.com) yuklangan, lekin fayl o‘zi tarmoq hujumini amalga oshirmagan.
+	•	File Changes (Fayl o‘zgarishlari): Topilmagan. ZIP/RAR arxivlarda ichidagi “eicar.com” fayli chiqarilganda antiviruslar uni aniqlagan (lekin real zarar yo‘q).
+	•	MITRE ATT&CK Techniques: 6 ta hisobotda 27 ta ko‘rsatkichlar topilgan, asosan “Evasive” (“sandbox” ni aniqlashga urinish).
+	•	Tags va Labeled As: Virus_DOS_EICAR_Test_File, Trojan.U.EICAR Test_File – antiviruslar uni eski DOS virusiga o‘xshatgan.
+	•	Success Reportlar (masalan, Linux Ubuntu): Fayl muvaffaqiyatli ishga tushirilgan, lekin hech qanday zararli xatti-harakat ko‘rsatmagan (chunki EICAR faqat antiviruslarni sinash uchun).
+		Laboratoriya muhitida “EICAR” test faylini yuklab oling va VirusTotal saytida tekshiring.
+	•	“Hybrid-Analysis” saytida fayl xatti-harakatini kuzating. 
+	•	Natijalarni tahlil qiling va oddiy fayl bilan solishtiring.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida “EICAR” test faylini yuklab oling va VirusTotal saytida tekshiring.
+	•	“Hybrid-Analysis” saytida fayl xatti-harakatini kuzating. 
+	•	Natijalarni tahlil qiling va oddiy fayl bilan solishtiring.
+Amaliy topshiriqlar
+
+
+8.2. Antivirus va anti-malware vositalari
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda Windows Defender ilovasidan foyalanish bo‘yicha ko‘nikmani shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda Windows Defender ilovasidan foyalanish bo‘yicha ko‘nikmani shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Windows Defender dasturi;
+	•	Zararli test fayllar.
+
+	•	Shaxsiy kompyuter;
+	•	Windows Defender dasturi;
+	•	Zararli test fayllar.
+
+Ishning bajarish tartibi
+Zararli dasturlar kompyuterni sekinlashtiradi, ma’lumot o‘g‘irlaydi yoki buzadi. “Windows Defender” real vaqt himoyasi, skanerlash va yangilanishlar orqali himoya qiladi. Ushbu laboratoriya ishida “Defender” ilovasini sozlab, test faylni tekshirishni amalga oshiramiz.
+Windows operatsion tizimida eng so‘nggi antivirus himoyasini ta’minlovchi “Windows Security” ilovasi mavjud. Windows operatsion tizimini ishga tushirganingizdan boshlab faol himoyalanadi. “Windows Defender” doimiy ravishda zararli dasturlar (zararli dasturiy ta’minot), viruslar va xavfsizlik tahdidlarini tekshiradi. Ushbu real vaqtda himoyaga qo‘shimcha ravishda, yangilanishlar qurilmangizni xavfsiz saqlashga va uni tahdidlardan himoya qilishga yordam berish uchun avtomatik ravishda yuklab olinadi.
+
+8.10-rasm. “Windows Defender” ilovasining ishchi oynasi
+Windows Defender bu qurilma va maʼlumotlarni himoya qiluvchi vositalarni boshqarish majmuasidir va u quyidagi imkoniyatlarga ega:
+	•	Virus va tahdidlardan himoyalanish;
+	•	Akkauntni himoya qilish;
+	•	Tarmoq himoyasi;
+	•	Ilova va brauzer boshqaruvi;
+	•	Qurilma xavfsizligi;
+	•	Qurilma unumdorligi va salomatligi.
+Qurilmangiz “Windows Xavfsizlik” xususiyatlari bilan qanday himoyalanganligini tekshirish uchun “Пуск > Настройки > Обновление и безопасность> Безопасность Windows” qismiga o‘ting yoki qidiruv paneliga “Windows Defender” jumlasini yozish orqali kirishingiz mumkin (8.11-rasm).
+Holat piktogrammalari sizning xavfsizlik darajangizni bildiradi:
+	•	Yashil - hozirda tavsiya etilgan amallar yo‘qligini bildiradi.
+	•	Sariq - siz uchun xavfsizlik tavsiyasi borligini bildiradi.
+	•	Qizil rang - biror narsaga zudlik bilan e’tibor berishingiz kerakligi haqida ogohlantirish.
+
+8.11-rasm. “Windows Defender” vositasiga kirish
+
+8.12-rasm. Viruslar va tahdidlardan himoyalash oynasi
+“Windows Defender” ilovasida virus va tahdidlardan himoyalanish qurilmangizdagi tahdidlarni qidirishga yordam beradi. Shuningdek, siz turli xil skanerlash turlarini amalga oshirishingiz, oldingi virus va tahdidlarni skanerlash natijalarini ko‘rishingiz va “Microsoft Defender Antivirus” tomonidan taqdim etilgan so‘nggi himoyani olishingiz mumkin (8.12-rasm).
+Garchi “Windows Security” yoqilgan va qurilmangizni avtomatik skanerlansa ham, siz istalgan vaqtda qo‘shimcha skanerlashni amalga oshirishingiz mumkin. Kengaytirilgan skanerlash tanlovlaridan birini tanlash orqali turli darajadagi imkoniyatga ega skanerlashlarni amalga oshirish imkoniyati mavjud.
+
+8.13-rasm. Skanerlash sozlamalari oynasi
+Himoya darajasini moslashtirish, ishonchli fayl va papkalarni takroriy skanerlashni istisno qilmoqchi bo‘lsangiz yoki himoyangizni vaqtincha o‘chirib qo‘ymoqchi bo‘lsangiz, “Параметры защиты от вирусов и угроз” bo‘limidan foydalanish mumkin (8.14-rasm).
+“Microsoft Windows Update” so‘nggi viruslar va razvedka ma’lumotlarini qurilmangizga avtomatik ravishda yuklaydi (lekin siz uni qo‘lda tekshirishingiz ham mumkin). Virus va tahdidlardan himoyalanish sahifasida “Обновления защиты от вирусов и угроз” tarkibidagi xavfsizlik maʼlumotlarini tekshirish uchun “Проверить наличие обновлений” sahifasini tanlash orqali bajariladi.
+
+8.14-rasm. Viruslar va tahdidlardan himoyalash sozlanmalari oynasi
+“Defender” ilovasini yangilash uchun “Защита от вирусов и угроз” sahifasini oching va “Обновления защиты от вирусов и угроз” bo‘limini tanlab, “Проверить наличие обновлений” tugmasini bosing.
+Yangilanishlar “Defender” ilovasining ishlash samaradorligini oshiradi va yangi zararli viruslarni aniqlash imkonini yaratadi (8.15-rasm).
+
+8.15-rasm. Yangilanishlarni tekshirish
+“EICAR” zararli test faylini tekshirish. “Быстрая проверка” sahifasini ishga tushiring va “Защита от вирусов и угроз” bo‘limiga o‘tib, “Быстрая проверка” tugmasini bosing.
+“Быстрая проверка” (Tez skanerlash) asosiy joylarni tekshiradi. “EICAR” fayli topilsa, “Defender” uni karantinga oladi (8.16-rasm).
+
+8.16-rasm. Tekshiruv yakunlanganligi va natija
+“Полная проверка” (To‘liq skanerlash) sahifasini ishga tushirish. Buning uchun “Защита от вирусов и угроз” sahifasini oching va “Параметры сканирования” bo‘limini tanlab, “Полная проверка” tugmasini bosing.
+To‘liq skanerlash butun diskni tekshiradi, yashirin zararlarni topadi (vaqt oladi) (8.17-rasm).
+
+8.17-rasm. Topilgan shubhali fayllar
+		Laboratoriya muhitida “Windows Defender” sozlamalarini tekshiring va yangilang.
+	•	“EICAR” test faylini yuklab, “Быстрая проверка” va “Полная проверка” sahifalari orqali tekshiring. 
+	•	Natijalarni tahlil qiling va hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida “Windows Defender” sozlamalarini tekshiring va yangilang.
+	•	“EICAR” test faylini yuklab, “Быстрая проверка” va “Полная проверка” sahifalari orqali tekshiring. 
+	•	Natijalarni tahlil qiling va hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+8.3. ESET NOD32 antivirus: o'rnatish va sozlash
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda antivirus dasturiy vositalaridan foydalanish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda antivirus dasturiy vositalaridan foydalanish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	“ESET NOT32” antivirus dasturi;
+	•	Zararli test fayl.
+
+	•	Shaxsiy kompyuter;
+	•	“ESET NOT32” antivirus dasturi;
+	•	Zararli test fayl.
+
+Ishning bajarish tartibi
+Antivirus dasturi – zararli dasturlarni (virus, trojan, spyware) aniqlash va o‘chirish uchun mo‘ljallangan vosita. “Windows Defender” yaxshi himoyani ta’minlasada, qo‘shimcha antivirus kuchliroq himoyani qurish imkonini beradi. Ushbu laboratoriya ishida antivirus dasturini o‘rnatish, sozlash va sinab ko‘rish jarayonlarini amalga oshiramiz.
+“ESET NOD32 Antivirus” dasturi. “ESET NOD32 Antivirus” dasturi haqiqiy integratsiyalangan kompyuter xavfsizligiga yangi yondashuvni ifodalaydi. ESET NOD32 Antivirus - bu maksimal himoya va minimal tizimni birlashtirgan to‘liq xavfsizlik yechimi hisoblanadi. Ilg‘or texnologiyalar tizimning ishlashiga to‘sqinlik qilmasdan yoki kompyuteringizni buzmasdan viruslar, josuslik dasturlari, troyan otlari, qurtlar, reklama dasturlari, rootkitlar va boshqa tahdidlarning kirib kelishining oldini olish uchun sun’iy intellektdan foydalanadi.
+“ESET” kuchli va tezkor antivirus yechimidan tortib, minimal xavfsizlik yechimiga ega boʻlgan bilan bir nechta xavfsizlik choralaridan iborat bo‘lgan quyidagi mahsulotlarini taklif etadi:
+	•	ESET NOD32 Antivirus;
+	•	ESET Internet Security;
+	•	ESET Smart Security Premium.
+O‘rnatish va sozlash. “ESET NODE32 Antivirus” dasturini o‘rnatish, undan foydalanish va sozlanmalarni amalga oshirish jarayonlari quyida keltirilgan:
+
+8.18-rasm. Ochiladigan menyudan tegishli tilni tanlang va davom etish tugmasini bosing
+
+8.19-rasm. Dasturiy mahsulotni aktivlashtirish (bu qadamni o‘tkazib yuborish ham mumkin)
+
+8.20-rasm. Dasturni o‘rnatish jarayoni
+
+8.21-rasm. O‘rnatish jarayonining yakunlanganligi
+Dasturni rasmiy saytdan yuklash tavsiya etiladi (chunki uchinchi tomon saytlari xavfli bo‘lishi mumkin). O‘rnatish jarayoni antivirusni tizimga joylashtiradi va real vaqt himoyasini yoqadi.
+
+8.22-rasm. Antivirus dasturini faollashtirish uchun litsenziya kalitini kiritish
+
+8.23-rasm. Faollashtirish jarayoni
+“ESET NOD32 Antivirus” dasturini o‘rnatgandan so‘ng, zararli kodni tekshirish uchun birinchi muvaffaqiyatli yangilanishdan so‘ng kompyuterni tekshirish avtomatik ravishda boshlanadi.
+
+8.24-rasm. “ESET NOD32 Antivirus” dasturining ishchi oynasi
+Kompyuterni skanerlashni asosiy dastur oynasidan “Kompyuterni skanerlash” qismini bosish orqali qo‘lda boshlashingiz mumkin. 
+
+8.25-rasm. Shaxsiy kompyuterni antivirus orqali skaner qilish
+
+8.26-rasm. Skaner qilish usulini tanlash
+
+8.27-rasm. Antivirus dasturini yangilash qismi
+Dasturni yangilash jarayonida yangi virus bazalari yuklanadi va antivirus yangi zararlarni aniqlay oladi (8.27-rasm).
+
+8.28-rasm. Antivirus ko‘rsatadigan ba’zi xizmatalar
+
+8.29-rasm. Kompyuter ulangan tarmoqdagi qurilmalar to‘g‘risidagi ma’lumotlarni ko‘rish
+
+8.30-rasm. Antivirus sozlamalarini amalga oshirish
+
+8.31-rasm. Shaxsiy kompyuter himoyasini taminlashni amalga oshirish
+
+8.32-rasm. Internet himoyasini ta’minlash sozlamalarini amalga oshirish
+
+8.33-rasm. Tarmoq himoyasi sozlamalari bajarish
+
+8.34-rasm. Qo‘shimcha xavsizlik uskunalarini sozlash
+		Laboratoriya muhitida bepul antivirus (Kaspersky yoki Avast) dasturlarini o‘rnating.
+	•	Antivirusni yangilang va to‘liq tekshiruvni amalga oshiring. 
+	•	Real vaqt himoyasini “EICAR” fayli bilan sinab ko‘ring, skrinshotlar va antivirus natijalaridan foydalanib, hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida bepul antivirus (Kaspersky yoki Avast) dasturlarini o‘rnating.
+	•	Antivirusni yangilang va to‘liq tekshiruvni amalga oshiring. 
+	•	Real vaqt himoyasini “EICAR” fayli bilan sinab ko‘ring, skrinshotlar va antivirus natijalaridan foydalanib, hisobot tayyorlang.
+Amaliy topshiriqlar
+
+8.4. Sandboxing va ajratish
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda zararli dasturlarni testlash uchun xavfsiz muhitni yaratish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda zararli dasturlarni testlash uchun xavfsiz muhitni yaratish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	VirtualBox dasturi.
+
+	•	Shaxsiy kompyuter;
+	•	VirtualBox dasturi.
+
+Ishning bajarish tartibi
+VirtualBox – bepul virtualizatsiya dasturi bo‘lib, asosiy tizimdan ajratilgan “virtual kompyuter” yaratadi. Zararli dasturni virtual mashinada sinaganda, real kompyuter xavfsiz bo‘ladi. Ushbu laboratoriya ishida VirtualBox dasturini o‘rnatib, virtual mashina yaratishni ko‘rib o‘tamiz.
+Virtual mashina (VM, Virtual machine) - bu fizik qurilmadan mustaqil bo‘lgan, izolyatsiyalangan hisoblash muhitini yaratadigan dasturiy ta’minotdir. U operatsion tizimlar yoki ilovalarni emulyatsiya qilingan muhitda ishga tushirish imkonini beradi, masalan, virtualizatsiya texnologiyasi yordamida Android tizimini boshqa muhitda ishga tushirish.
+Virtual mashinalar ko‘pincha turli arxitekturalar bilan mos keladigan bayt-kod yoki mashina kodidan foydalanadi, bu esa dasturlarni ko‘chirish imkoniyatini (portativlikni) va xavfsizlikni ta’minlaydi. Bundan tashqari, virtualizatsiya pentesting qilish imkonini yaratadi.
+VirtualBoxni o‘rnatish jarayoni. VirtualBox dasturini “virtualbox.org” rasmiy saytidan yuklab olishingiz mumkin. Ushbu sahifada “Windows hosts” elementi toping va ustiga bosing (shundan so‘ng o‘rnatish faylini yuklab olish boshlanadi) (8.35-rasm).
+Yuklab olish tugagandan so‘ng, o‘rnatuvchini xavfsiz ishga tushirish va VirtualBox dasturini o‘rnatish jarayoniga o‘tish mumkin. Aslida, butun jarayon “Next” tugmachasini cheksiz bosishga o‘xshaydi (chunki barcha maqbul sozlamalar allaqachon joriy holat bo‘yicha o‘rnatilgan). Shunday bo‘lsada, bu jarayonni bosqichma-bosqich ko‘rib chiqamiz.
+
+8.35-rasm. VirtualBox dasturini yuklab olish
+1. VirtualBox dasturini sozlash oynasi. Keyingi bosqichga o‘tish uchun “Next” tugmasi bosiladi (8.36-rasm).
+
+8.36-rasm. VirtualBoxni sozlashning boshlang‘ich oynasi
+2. Keyingi oynada “VirtualBox” dasturini o‘rnatishni batafsil sozlashingiz mumkin. Masalan, siz o‘rnatish uchun kerakli “VirtualBox” komponentlarini tanlashingiz mumkin  yoki dasturni o‘rnatish uchun katalogni o‘zgartirishingiz mumkin (buning uchun “Browse” tugmasi javobgar bo‘ladi). O‘rnatishni sozlaganingizdan so‘ng, “Next” tugmasini bosishingiz kerak (8.37-rasm).
+3. Keyingi oynada “VirtualBox” dasturini o‘rnatish uchun qo‘shimcha sozlamalarni tanlashingiz mumkin, ya’ni rasmdagi kabi (8.38-rasm):
+	•	Create start menu entries – Пуск menyusida “VirtualBox” yorliqlarini yaratish;
+	•	Create a shortcut on the desktop – ish stolida “VirtualBox” yorliqlarini yaratish;
+
+8.37-rasm. VirtualBoxda o‘rnatishni sozlash oynasi
+	•	Create a shortcut in the Quick Launch Bar - tez ishga tushirish panelida “VirtualBox” yorliqlarini yaratish;
+	•	Register file association - dastur bilan ishlash uchun “VirtualBox” fayllarini ro‘yxatdan o‘tkazish.
+Siz ushbu sozlanmalarni o‘zingiz uchun moslashtirib, “Next” tugmasini bosing.
+
+8.38-rasm. VirtualBox dasturini o‘rnatish uchun qo‘shimcha sozlamalar
+4. Keyingi oyna o‘rnatish paytida tarmoq ulanishlarida mumkin bo‘lgan uzilishlar haqida sizni ogohlantiradi va davom etish uchun “Yes” tugmasini bosing (8.39-rasm).
+
+8.39-rasm. VirtualBox dasturida ogohlantirish oynasi
+5. O‘rnatishdan oldingi oxirgi oyna, agar ilgari tanlangan sozlamalarni ko‘rish yoki o‘zgartirish istagi bo‘lsa, “Back” tugmasini bosishni yoki o‘rnatishni bekor qilish uchun “Cancel” tugmasini bosishni so‘raydi. Agar hammasi to‘g‘ri bo‘lsa, o‘rnatishni boshlash uchun “Install” tugmasini bosing (8.40-rasm).
+
+8.40-rasm. VirtualBox dasturini o‘rnatishda sozlashning oxirgi oynasi
+6. Shundan so‘ng, “Oracle VirtualBox” dasturini o‘rnatish jarayoni boshlanadi (8.41-rasm).
+
+8.41-rasm. VirtualBox dasturini o‘rnatish jarayoni
+O‘rnatish paytida USB qurilmalari uchun drayverlarni o‘rnatish oynasi paydo bo‘lishi mumkin. Bu holda “Установить” tugmasini bosish kerak bo‘ladi  (8.42-rasm).
+
+8.42-rasm. USB qurilmalar uchun drayverlarni o‘rnatish oynasi
+7. O‘rnatish tugagandan keyin, o‘rnatish dasturidan chiqqandan so‘ng VirtualBox dasturini ishga tushirish imkoniyati mavjud bo‘lgan tegishli xabar paydo bo‘ladi (“Start Oracle VM VirtualBox after installation”). O‘rnatish jarayonini yakunlash uchun “Finish” tugmasini bosish kifoya (8.43-rasm).
+
+8.43-rasm. VirtualBox dasturini o‘rnatish jarayoni tugaganligini ko‘rsatuvchi oyna
+Bu jarayon Windows OTda “Oracle VirtualBox” dasturini o‘rnatishni yakunlaydi.
+VirtualBox platformasida virtual OT yaratish:
+1. Dasturni ishga tushirgandan so‘ng “VirtualBox” dasturining asosiy oynasi ochiladi. Virtual mashinani yaratish uchun “Создать” tugmasi bosiladi (“Добавить” tugmasi bilan adashtirmaslik kerak!) (8.44.-rasm).
+2. Ochilgan oynada siz virtual mashinaning nomini kiritishingiz, uni saqlash joyini tanlashingiz va operatsion tizimning turini va versiyasini ko‘rsatishingiz kerak bo‘ladi. Masalan, “Windows 8” nomini kiritamiz va operatsion tizimning mos turini va versiyasini tanlaymiz (8.45-rasm).
+
+8.44-rasm. VirtualBox dasturining asosiy oynasi
+
+8.45-rasm. VirtualBox dasturida virtual mashinaning nomini va turini tanlash
+3. Shundan so‘ng, virtual mashina uchun kerakli operativ xotira hajmi ajratiladi. Standart qiymatlardan pastroq qiymatlarni o‘rnatmaslik tavsiya etiladi (8.46-rasm).
+
+8.46-rasm. Virtual mashinaga operativ xotira ajratish
+
+8.47-rasm. Virtual qattiq disk yaratish
+4. Keyin yangi virtual mashina uchun virtual qattiq disk yaratish kerak (xuddi haqiqiy kompyuter kabi) va uning uchun ma’lumotlarni saqlaydigan qattiq disk kerak (8.47-rasm). VirtualBox virtual disklarning har xil formatlarini qo‘llab-quvvatlaydi (8.48-rasm).
+
+8.48-rasm. VirtualBox dasturida virtual disklarning formatlari
+Virtual qattiq disk uchun ajratilgan xotirada ma’lumotlarni saqlashni dinamik yoki ajratilgan formatda amalga oshirish mumkin (8.49-rasm).
+
+8.49-rasm. Virtual qattiq disk xotirasida ma’lumotlarni saqlashning formatlari (dinamik yoki ajratilgan)
+5. Virtual qattiq diskni yaratishda, boshlang‘ich foydalanuvchi uchun eng yaxshi yechim barcha standart qiymatlarni qoldirish bo‘ladi. “Создать” tugmachasini bosish bilan virtual mashina yaratiladi (8.50-rasm), u asosiy oynaning chap tarafidagi dasturlar panelida paydo bo‘ladi (8.51-rasm).
+
+8.50-rasm. Virtual qattiq disk sozlamalari
+
+8.51-rasm. Yaratilgan virtual mashinalarni boshqarish oynasi
+Virtual mashinani ishga tushirish uchun siz yangi yaratilgan virtual mashinani tanlashingiz va “Запустить” tugmasini bosishingiz kerak.
+Virtual mashinaning asosiy parametrlarini sozlash. Endi yaratilgan virtual mashinani o‘ng tugmasini bosib, sozlamalarni oching. “Общие” menyusida “Дополнительно” yorlig‘iga o‘ting va almashish buferi va “Drag‘nDrop” funksiyasidan foydalanishni o‘chiring (8.52-rasm).
+“Система” menyusida “Процессор” yorlig‘iga o‘ting va virtual mashina uchun protsessorlar sonini o‘rnating. Xuddi shu menyuda “Ускорение” yorlig‘iga o‘ting va barcha katakchalarni belgilang (8.53-rasm).
+“Сеть” menyusida tarmoq adapterini o‘chiring. Ammo, ba’zi hollarda, viruslar bilan ishlashda, adapterni yoqish kerak bo‘lishi mumkin. Agar siz uni yoqsangiz, ochiladigan menyuda “Не подключен” ulanish turini tanlab, Internetni o‘chiring. Agar Internet kerak bo‘ls, NAT ulanishidan foydalaning yoki alohida tarmoqni o‘rnating (8.54-rasm).
+
+8.52-rasm. Virtual mashinaning umumiy sozlamalari
+
+8.53-rasm. Virtual mashinaning tizimli sozlamalari
+
+8.54-rasm. Virtual mashinaning tarmoq sozlamalari
+
+8.55-rasm. Virtual mashinaning USB port sozlamalari
+“USB” menyusida “Включить контролер USB” katagiga belgi qo‘ying. Bu virtual mashinaning fizik qurilma USB portlariga ulanish imkonini beradi  (8.55-rasm).
+
+8.56-rasm. Virtual mashinaning umumiy papka sozlamalari
+“Общие папки” menyusiga papkani qo‘shing, u yerda biz virtual mashina uchun kerakli dasturlarni tashlaymiz. O‘ngdagi “+” belgisini bosing va paydo bo‘lgan oynada umumiy papkani o‘rnating. Umumiy papka joylashgan yo‘lni tanlang va rasmda ko‘rsatilgandek katakchalarni belgilang (8.56-rasm).
+Agar siz virtual mashinani boshqa maqsadda ishlatsangiz, masalan, operatsion tizimlarni sinab ko‘rish uchun, bu holda siz bu katakchani o‘tkazib yuborishingiz mumkin. Ammo, agar siz shubhali dasturlar va viruslarni skanerlash uchun virtual mashina yaratayotgan bo‘lsangiz, albatta “Только для чтения” funksiyasini yoqishingiz kerak.
+Virtual mashinaga operatsion tizim o‘rnatish. “Windows 8” operatsion tizimini o‘rnatish uchun, “VirtualBox” virtual mashinasida tizim distributiviga ega ISO obrazi kerak bo‘ladi. Keyingi qadamlar quyidagicha bo‘ladi:
+
+8.57-rasm. Virtual mashinada ma’lumot tashuvchilarni sozlash
+1. ISO obrazini virtual kompyuterga joylashtirish uchun chapdagi ro‘yxatdan virtual mashinani tanlang, “Настроить” tugmasini bosing  va “Носители” bandiga o‘ting, diskni tanlab, disk tugmasini bosing va “Выбрать образ оптического диска” menyusini tanlang. ISO obrazi joylashgan yo‘lni ko‘rsating. Keyin “Порядок загрузки” bo‘limidagi “Система” sozlamasida “Оптический диск” menyusini ro‘yxatning birinchi qatoriga qo‘ying va “ОК” tugmasini bosing (8.57-rasm).
+2. Asosiy oynada “Запустить” tugmasini bosing. Oldindan yaratilgan virtual mashina ishga tushadi, yuklash diskdan (ISO obrazidan) amalga oshiriladi. Siz Windows OTni oddiy fizik kompyuterda bo‘lgani kabi o‘rnatishingiz mumkin. Dastlabki o‘rnatishning barcha bosqichlari oddiy kompyuterda bo‘lgani kabi amalga oshiriladi (8.58-rasm).
+
+8.58-rasm. Virtual mashinaga Windows OTni yuklash
+3. Windows o‘rnatilib, ishga tushirilgandan so‘ng, mehmon tizimiga virtual mashinada to‘g‘ri ishlashiga ruxsat beradigan ba’zi drayverlarni o‘rnatish kerak. Buning uchun menyudan “Устройства” sahifasidan “Подключить образ диска дополнений VirtualBox” menyusini tanlang, virtual mashina ichidagi diskni oching va ushbu drayverlarni o‘rnatish uchun “VBoxWindowsAdditions.exe” faylini ishga tushiring. Agar obrazni o‘rnatish muvaffaqiyatsiz bo‘lsa, virtual mashinani o‘chiring va obrazni tashuvchi sozlamalarida “C:\Program Files\Oracle\VirtualBox\VBoxGuestAdditions.iso” manzilidan o‘rnating va virtual mashinani qayta ishga tushiring, so‘ngra diskdan o‘rnating.
+O‘rnatish tugallangach virtual mashina qayta ishga tushirilsa, u to‘liq ishlay boshlaydi.
+		Laboratoriya muhitida “VirtualBox” dasturini o‘rnating va virtual mashina yarating.
+	•	Virtual mashinaga “Windows 10” operatsion tizimini o‘rnating. 
+	•	Xavfsiz sozlamalarni qo‘llab (tarmoqni ajratish, snapshot), “EICAR” test faylini tekshirib ko‘ring.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida “VirtualBox” dasturini o‘rnating va virtual mashina yarating.
+	•	Virtual mashinaga “Windows 10” operatsion tizimini o‘rnating. 
+	•	Xavfsiz sozlamalarni qo‘llab (tarmoqni ajratish, snapshot), “EICAR” test faylini tekshirib ko‘ring.
+Amaliy topshiriqlar
+
+
+8.5. Ma'lumotlarni zaxiralash (Google Drive)
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda ma’lumotlarni zaxiralash va qayta tiklash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda ma’lumotlarni zaxiralash va qayta tiklash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Brauzer (Google Chrome yoki Mozilla Firefox);
+	•	Google akkaunti (Gmail);
+	•	Test papka va fayllar (rasmlar, hujjatlar).
+
+	•	Shaxsiy kompyuter;
+	•	Brauzer (Google Chrome yoki Mozilla Firefox);
+	•	Google akkaunti (Gmail);
+	•	Test papka va fayllar (rasmlar, hujjatlar).
+
+Ishning bajarish tartibi
+Ma’lumotlarni yo‘qolishi (virus, disk buzilishi yoki tasodifan o‘chirish) keng tarqalgan muammo bo‘lib, buni oldini olish uchun zaxira nusxalashni doimiy amalga oshirish muhim hisoblanadi. “Google Drive” bulutli saqlash tizimi 15 GB bepul joy beradi. Ushbu laboratoriya ishida “Google Drive” ilovasidan brauzer orqali foydalanish masalasi bilan tanishib chiqiladi (desktop ilova ixtiyoriy).
+1. Brauzerni oching va https://accounts.google.com/ manziliga kiring. Agar akkaunt yo‘q bo‘lsa, “Akkaunt yaratish” menyusini bosing, email (masalan, ismingiz@gmail.com), parol va telefon raqamini kiriting va tasdiqlang. Keyin https://drive.google.com/ manziliga o‘ting va yaratgan akkauntingiz bilan ulaning.
+Google Drive – bulutli ma’lumotlarni saqlash joyi bo‘lib, kompyuterdan mustaqil ishlaydi (8.59-rasm).
+2. Test o‘tkazish uchun papka va fayllarni tayyorlash. Kompyuteringizda yangi papka yarating (masalan, Desktopda “TestZaxira” nomi bilan). Ichiga 3 yoki 4 ta oddiy fayl qo‘shing, masalan, telefoningizdan 2 ta rasm, matn yozilgan fayl va bitta hujjat. Fayllarni papkaga ko‘chiring (8.60-rasm).
+
+8.59-rasm. Google akkaunt yaratish va “Drive” ilovasiga kirish
+3. “Google Drive Desktop” ilovasini o‘rnatish (ixtiyoriy, lekin osonroq). https://www.google.com/drive/download/ manziliga kiring va “Drive for desktop” faylini yuklab olib, kompyuterga o‘rnating. O‘rnatish jarayoni yakunlangach, “TestZaxira” papkani “Drive” papkasiga ko‘chiring (yoki papkani ustiga sichqonchani o‘ng tugmasini bosib, “Синхронизация или резервное копирование этой папки” menyusini tanlang va “Готова” tugmasini bosing), avtomatik sinxronlash jarayoni boshlanadi (8.61-rasm).
+
+8.60-rasm. Test papka va fayllar yaratish
+Ilova avtomatik tarzda zaxiralashni amalga oshiradi, endi papkaga boshqa fayllar tashlansa yoki fayllar o‘zgarsa, “Drive” ilovasiga ham yangi ma’lumotlar avtomatik yuklanadi.
+
+8.61-rasm. “Drive Desktop” ilovasini o‘rnatish va papkani sinxronlash
+4. “Google Drive” ilovasiga papkani brauzer orqali yuklash. “Drive” sahifasida “Yangi” tugmasini bosing va “Papka yuklash” (Загрузить папку) menyusini tanlang (8.62-rasm). Kompyuteringizdan “TestZaxira” papkasi joylashgan joyni belgilang va “Yuklash” tugmasini bosing. Yuklash jarayoni tugashini kuting (fayllar hajmiga qarab 1-5 daqiqa). Yuklash tugagach, “Drive” ilovasida papka ko‘rinadi.
+
+8.62-rasm. Papkani yuklash
+5. Ma’lumotlarni tasodifan o‘chirish (simulyatsiya). Kompyuteringizda “TestZaxira” papkasini oching va fayllarni o‘chiring (Shift + Delete bilan doimiy o‘chirish). Yoki butun papkani o‘chiring.
+Bu real holat zaxiralashning samarasini ko‘rish uchun holatini simulyatsiya qiladi. O‘chirishdan oldin papka bo‘sh emasligini tekshiring (8.64-rasm).
+6. “Drive” ilovasidan ma’lumotlarni qayta yuklab tiklash. Brauzerda “Drive” ilovasini oching va “TestZaxira” papkasini toping, papkani yoki alohida fayllarni ustiga sichqonchani o‘ng tugmasini bosing va “Yuklab olish” tugmasini bosing. Yuklab olingan fayllarni kompyuteringizda yangi papkaga joylashtiring.
+
+
+8.63-rasm. Papkani “Drive” ilovasiga yuklash va fayllarni ko‘rish
+
+8.64-rasm. Papka va fayllarni o‘chirish
+Bu zaxira samarasini ko‘rsatadi, o‘chirilgan fayllar “Drive” ilovasida saqlanib qolgan, shuning uchun tez tiklanadi (8.65-rasm).
+
+8.65-rasm. “Drive” ilovasidan papkani yuklab olish va tiklash
+Qayta tiklangan ma’lumotlarni tekshiring, hamma fayllar joyidami? Ochib ko‘ring (rasmlar ko‘rinadimi, matn fayllari o‘qiladimi?). Xulosa o‘rnida, zaxiralash amalga oshirilmaganda fayllarni qayta tiklash imkoni bo‘lmasdi, ma’lumotlar yo‘qolgan bo‘lardi (8.66-rasm).
+
+8.66-rasm. Tiklangan fayllarni tekshirish
+		Laboratoriya muhitida “Google Drive” ilovasiga test papka yuklang.
+	•	Test papkani o‘chirib, qayta tiklash jarayonlarini amalga oshiring. 
+	•	Jarayonni skrinshotga oling va natijalarni hisobot shaklida yozing.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida “Google Drive” ilovasiga test papka yuklang.
+	•	Test papkani o‘chirib, qayta tiklash jarayonlarini amalga oshiring. 
+	•	Jarayonni skrinshotga oling va natijalarni hisobot shaklida yozing.
+Amaliy topshiriqlar
+
+8.6. Tizim obrazini yaratish va qayta tiklash
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda operatsion tizimni zaxiralash va qayta tiklash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda operatsion tizimni zaxiralash va qayta tiklash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Windows 10 yoki 11 operatsion tizimi;
+	•	Tashqi qattiq disk yoki SSD;
+	•	USB fleshka.
+	•	Windows 10 yoki 11 operatsion tizimi;
+	•	Tashqi qattiq disk yoki SSD;
+	•	USB fleshka.
+Ishning bajarish tartibi
+Operatsion tizim buzilishi (virus, drayver xatosi yoki yangilanish xatoligi) katta muammoga sabab bo‘lishi mumkin. Mazkur holda tizim obrazini yaratish butun operatsion tizimni zaxiralashning eng ishonchli usuli hisoblanadi.
+Zaxiralash (Backup) – bu operatsion tizim va uning sozlanmalari hamda muhim fayllarning oldindan nusxasini yaratish jarayoni hisoblanadi.
+Oddiy qilib aytganda, zaxiralash - tizim buzilsa “orqaga qaytish” imkoniyatini beradi. Qayta tiklash (Restore) – bu oldin yaratilgan zaxira nusxa yordamida tizimni avvalgi sog‘lom holatiga qaytarishdir.
+Qayta tiklash quyidagi holatlarda kerak bo‘ladi:
+	•	tizim yuklanmay qolsa;
+	•	noto‘g‘ri dastur o‘rnatilsa;
+	•	virus zarar yetkazsa.
+Ushbu laboratoriya ishini bajarish ketma-ketligi:
+1-qadam. Tashqi diskni tayyorlang va uni kompyuterga USB orqali ulang. Diskni oching va bo‘sh joy borligini tekshiring (masalan, 200 GB+). Disk NTFS formatida bo‘lishi lozim (agar FAT32 bo‘lsa, formatlang).
+Odatda operatsion tizim “C: disk”da saqlanadi, zaxira nusxasini esa “C: disk”da saqlab bo‘lmaydi, zaxiralash uchun tashqi disk kerak (chunki “C: disk” buzilsa zaxira ham yo‘qoladi) (8.67-rasm).
+
+8.67-rasm. Tashqi disk ulash va bo‘sh joyni tekshirish
+2-qadam. “Панель управления” bo‘limidan “Rезервное копирование и восстановление” sahifasini oching yoki qidiruv maydoniga “Резервное копирование и восстановление” deb yozing. Bu OT ning imkoniyati bo‘lib, qo‘shimcha dasturni o‘rnatish talab etilmaydi (8.68-rasm).
+
+8.68-rasm. Zaxiralash bandini ochish
+3-qadam. Tizim obrazini yaratish. Chap tarafdan “Создать образ системы” sahifasiga kiring va zaxira joyi sifatida tashqi diskni belgilang. “Далее” tugmasini bosib jarayonni davom ettiring va “Архивировать” tugmasini bosing. Kuting! Jarayon yetarlicha uzoq vaqt davom etadi. Bunda butun OT (dasturlar, sozlamalar) zaxiralanadi (8.69-rasm).
+
+8.69-rasm. OT obrazini yaratish jarayoni
+4-qadam. Zaxira yaratilganini tekshirish. Tashqi diskda kompyuter nomi bilan papka papka hosil bo‘lib, ichida “WindowsImageBackup” papkasi paydo bo‘ladi. Bu zaxira obrazi muvaffaqiyatli yaratilganligini tasdiqlaydi (8.70-rasm).
+
+8.70-rasm. Zaxira nusxa saqlangan papka
+5-qadam. Diskni tiklash uchun USB xotirani hosil qilish. Windows OT ichida “Создать диск восстановления” sahifasini oching. USB fleshni tanlang (4 GB+). “Выполнить резервное копирование системных файлов на диск восстановления” so‘rovini o‘chiring (tezroq bo‘lishi uchun). “Далее” tugmasini bosing. USB qurilmasi OT zararlanganda tiklash muhitini ishga tushiradi (8.71-rasm).
+
+8.71-rasm. Tizimni qayta tiklash muhitini yaratish
+6-qadam. Qayta tiklash jarayoni. USB fleshka va tashqi diskni kompyuterga ulang va kompyuter yonayotganda F2 yoki F9 (kompyuter turiga bog‘liq) bosing, keyin “BIOS” oynasiga o‘tib, “Boot” sahifasiga kiring. USB fleshkani tanlab kompyuterni qayta ishga tushuring. 
+
+8.72-rasm. Tiklovchi USB fleshkani tanlash
+
+8.73-rasm. Tizimni qayta tiklash qismiga kirish
+Yana bir usuli kompyuterni yoqib, “Windows” logotipi chiqqan vaqtda quvvat tugmasini bosib o‘chiramiz. Shu amalni 2–3 marta takrorlaymiz. Ekranda quyidagilar chiqadi:
+	•	Подготовка автоматического восстановления;
+	•	Диагностика компьютера.
+Bu “Windows” avtomatik tiklash muhitiga kirganini bildiradi. Keyin chiqqan oynadan “Поиск и устранение неисправностей” bo‘limiga kiramiz. U yerdan “Восстановление образа системы” qismini tanlab, “Windows” tugmasini bosamiz. Oxirida zaxira saqlangan diskni tanlab, tashqi diskdan obraz faylini tanlab, tiklash jarayonini boshlash mumkin.
+
+8.74-rasm. Tiklash jarayonini boshlash
+Operatsion tizimni qayta tiklashni bilish muammolarni tez hal qilish, ma’lumotlarni saqlab qolish va tizim xavfsizligini ta’minlash uchun muhimdir.
+		Kompyuteringizga tashqi diskni ulab, tizim obrazini yarating.
+	•	USB fleshkaga tizimni qayta tiklash muhitini hosil qiling. 
+	•	Jarayonni skrinshotga oling va natijalarni hisobotda aks ettiring.
+Amaliy topshiriqlar
+
+
+	•	Kompyuteringizga tashqi diskni ulab, tizim obrazini yarating.
+	•	USB fleshkaga tizimni qayta tiklash muhitini hosil qiling. 
+	•	Jarayonni skrinshotga oling va natijalarni hisobotda aks ettiring.
+Amaliy topshiriqlar
+
+
+8.7. Shubhali jarayonlarni tahlil qilish
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda operatsion tizimda amalga oshirilayotgan shubhali jarayonlarni aniqlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda operatsion tizimda amalga oshirilayotgan shubhali jarayonlarni aniqlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Windows Task Manager;
+	•	“Process Explorer” va “Process Hacker” dasturlari.
+	•	Shaxsiy kompyuter;
+	•	Windows Task Manager;
+	•	“Process Explorer” va “Process Hacker” dasturlari.
+Ishning bajarish tartibi
+Shubhali jarayonlar – CPU/RAM ko‘p ishlatadigan, noma’lum fayllardan ishga tushadigan yoki yashirin bo‘lgan jarayonlardir. Ushbu laboratoriya ishida Windows operatsion tizimi vositalari orqali shubhali jarayonlarni tahlil qilamiz. Har bir qadam quyida batafsil tushuntirilgan:
+1. “Task Manager” (Диспетчер задач) oynasini oching. Buning uchun klaviaturadan “Ctrl + Shift + Esc” tugmalarini bosing yoki “Пуск” menyusi ustiga sichqonchani o‘ng tugmasini bosing va “Диспетчер задач” sahifasiga kiring. “Процессы” tabidagi jarayonlarni kuzating (CPU, Memory (RAM), Disk xotiralardan foydalanish) (8.75-rasm).
+2. “Process Explorer” dasturini https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer manzildan yuklab oling va ishga tushiring.
+Process Explorer – bu “Microsoft Sysinternals” tomonidan ishlab chiqilgan bepul va professional darajadagi diagnostika vositasi bo‘lib, Windows operatsion tizimida ishlayotgan barcha jarayonlarni chuqur tahlil qilish imkonini beradi. U klassik “Task Manager” vositasining kengaytirilgan va ancha kuchli alternativi hisoblanadi. Shubhali jarayonlarni (masalan, malware yoki rootkit) topish uchun ideal vosita bo‘lib, yashirin jarayonlar va ularning bog‘lanishlarini ko‘rsatadi (8.76-rasm). Dasturdan foydalanish qadamlari quyidagicha:
+
+8.75-rasm. Task Manager ochish va jarayonlar
+1-qadam. Arxiv faylni ochish. Yuklab olingan ZIP formatdagi arxiv faylni oching. Fayl tarkibida “procexp.exe” va “procexp64.exe” o‘rnatuvchi fayllari mavjud. 64-bitli Windows operatsion tizimlarida dasturdan to‘liq va barqaror foydalanish uchun “procexp64.exe” faylini ishga tushirish tavsiya etiladi.
+2-qadam. Dasturni ishga tushirish. “procexp64.exe” faylini ustiga sichqonchaning o‘ng tugmasini bosib, “Run as administrator” buyrug‘ini tanlang. Administrator huquqi bilan ishga tushirish yashirin va tizim jarayonlarini to‘liq aniqlash imkonini beradi. Natijada “Process Explorer” dasturining asosiy oynasi ochiladi.
+3-qadam. Jarayonlar daraxtini kuzatish. Dastur oynasida Windows operatsion tizimida faol ishlayotgan barcha jarayonlar daraxtsimon (parent–child) tuzilma ko‘rinishida aks etadi. Markaziy protsessor (CPU) va tezkor xotira (RAM) resurslaridan yuqori darajada foydalanayotgan jarayonlarni aniqlash uchun tegishli ustunlar sarlavhasiga bosish orqali saralash (sorting) amalga oshiriladi.
+4-qadam. Shubhali jarayonni tahlil qilish. Resurslardan g‘ayrioddiy darajada foydalanayotgan yoki noma’lum bo‘lgan jarayon ustiga sichqonchaning o‘ng tugmasi bosib, “Properties” bandini tanlang.
+“Image” bo‘limida jarayonning fayl joylashuvi va raqamli imzosi ko‘rib chiqiladi hamda VirusTotal xizmati orqali onlayn skanerlash amalga oshiriladi. Bu jarayon faylning zararli yoki xavfsiz ekanligini aniqlash imkonini beradi.
+“Threads” bo‘limida esa jarayon ichida bajarilayotgan oqimlar (threads) tahlil qilinib, yashirin yoki shubhali kod fragmentlarining mavjudligi tekshiriladi.
+
+8.76-rasm. “Process Explorer” dasturi interfeysi
+3. “Process Hacker” dasturini yuklab olish va ishga tushirish. 
+Process Hacker - ochiq manbali (open-source) va bepul kompyuter dasturi bo‘lib, u jarayonlarni boshqarish va monitoring qilish uchun mo‘ljallangan. Dastur funksionalligi jihatidan “Process Explorer” dasturiga o‘xshash bo‘lishiga qaramay, qo‘shimcha imkoniyatlarni taqdim etadi.
+Avval https://processhacker.sourceforge.io/downloads.php  manziliga o‘ting va dasturni yuklab oling. Yuklab olingan faylni o‘rnatib, dastur muhitini ishga tushiring.
+Process Hacker quyidagi asosiy vazifalarni bajaradi:
+	•	Jarayonlar (process) haqida batafsil axborot beradi.
+	•	Rootkit kabi yashirin yoki zararli komponentlarni aniqlash imkonini beradi.
+	•	“Terminate” funksiyasi orqali shubhali jarayonlarni majburan to‘xtatadi.
+Dastur Microsoft Windows operatsion tizimi uchun ishlab chiqilgan. Linux operatsion tizimida shunga o‘xshash vazifalarni bajaruvchi alternativ vositalar mavjud, masalan htop.
+Dasturdan foydalanish qadamlari:
+1-qadam. Dasturni o‘rnatish. Yuklab olingan .exe fayl ustiga ikki marta bosing. O‘rnatish oynasi ishga tushadi. “Next” tugmasini bosib jarayonni davom ettiring va litsenziya shartlarini qabul qilib, o‘rnatish katalogini tanlang. O‘rnatish uchun joriy (default) papka yetarli hisoblanadi. “Install” tugmasini bosing va jarayon yakunlangach, “Finish” tugmasini bosing.
+2-qadam. Dasturni ishga tushirish. Desktop muhitida “Process Hacker” yorlig‘ini toping. Sichqonchaning o‘ng tugmasini bosing va “Run as administrator” bandini tanlang. Dastur administrator huquqlari bilan ishga tushadi.
+3-qadam. Jarayonlar ro‘yxatini tahlil qilish. Asosiy oynada “Processes” yorlig‘iga o‘ting. Faol jarayonlar ro‘yxati ko‘rsatiladi. CPU va RAM ustunlari bo‘yicha saralashni bajaring va yuqori resurs iste’mol qilayotgan jarayonlarni aniqlang. Buning uchun ustun sarlavhasini bosing.
+4-qadam. Shubhali jarayonni to‘xtatish. Aniqlangan shubhali jarayon ustiga sichqonchani o‘ng tugmasini bosing va “Terminate” buyrug‘ini tanlang. Ochilgan oynada amalni tasdiqlang va “Properties” bo‘limi orqali fayl joylashuvini tekshiring. VirusTotal xizmati yordamida jarayonni tahlil qiling.
+Process Hacker dasturi yashirin va rootkit turidagi jarayonlarni aniqlash imkonini beradi. Ularni majburan to‘xtatish tizim xavfsizligini ta’minlashda muhim hisoblanadi (8.77-rasm).
+
+8.77-rasm. “Process Hacker” dasturida jarayonlar tahlili
+		Laboratoriya muhitida “Task Manager” va “Process Explorer” bilan jarayonlarni kuzating.
+	•	“Process Hacker” dasturi orqali shubhali jarayonlarni aniqlang. 
+	•	Test “malware” fayli bilan jarayonlarni sinab ko‘ring va olingan natijalarni tahlil qiling.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida “Task Manager” va “Process Explorer” bilan jarayonlarni kuzating.
+	•	“Process Hacker” dasturi orqali shubhali jarayonlarni aniqlang. 
+	•	Test “malware” fayli bilan jarayonlarni sinab ko‘ring va olingan natijalarni tahlil qiling.
+Amaliy topshiriqlar
+
+
+
+
+
+
+
+ 
+
+9-bob haqida umumiy ma’lumot
+Mazkur bobda raqamli kriminalistika asoslari, uning muhimligi, asosiy bosqichlari, raqamli dalillarni saqlash zanjiri, qayd jurnali va vaqt jadvalini tahlillash, disklarni kriminalistik nusxalash (forensic imaging), o‘chirilgan fayllarni tiklash, tizimdagi voqealarni vaqt jadvali asosida tahlil qilish, operativ xotira (memory dump) ni kriminalistik usullar bilan o‘rganish hamda xotira orqali amalga oshiriladigan ichki tahdidlarni aniqlashga oid nazariy va amaliy ma’lumotlar keltirilgan.
+9.1. Raqamli dalillarni saqlash zanjiri
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda disklarni tahlil qilish, klonlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda disklarni tahlil qilish, klonlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	FTK Imager vositasi;
+	•	USB fleshka.
+	•	Shaxsiy kompyuter;
+	•	FTK Imager vositasi;
+	•	USB fleshka.
+Ishning bajarish tartibi
+Kriminalistik obraz (forensic image) — bu kompyuter diski, flesh-xotira yoki boshqa saqlash qurilmasidagi barcha ma’lumotlarning bitma-bit (bit-by-bit) nusxasi bo‘lib, u asl qurilmadagi ma’lumotlarni o‘zgartirmasdan, ularning to‘liq holatini va butunligini saqlagan holda tahlil qilish uchun yaratiladi.
+Kiberxavfsizlikda asl ma’lumot saqlovchi qurilma (disk) bilan ishlanmaydi. Har qanday tahlil faqat kriminalistik obraz (image) ustida olib boriladi. Sababi dalil buzilmasligi kerak, sudda isbot bo‘lishi kerak va tahlil qayta tiklanadigan bo‘lishi talab etiladi.
+FTK Imager – bepul kriminalistik vosita bo‘lib, disk obrazini yaratadi, fayllarni tahlil qiladi va xesh qiymatni hisoblaydi.
+
+9.1-rasm. Dasturni yuklab olish
+1-qadam. FTK Imager dasturini yuklab olish va ishga tushirish. Brauzer orqali 
+https://accessdata-ftk-imager.software.informer.com/download/#downloading
+manziliga kiring va FTK Imager dasturi yuklab oling (9.1-rasm). Yuklab olingan .exe fayl ustiga ikki marta bosing va dasturni standart tartibda o‘rnating.
+FTK Imager - disk obrazlarini yaratish uchun mo‘ljallangan bepul va professional dasturiy vosita bo‘lib, raqamli kriminalistika amaliyotida keng qo‘llaniladi (9.2-rasm).
+
+9.2-rasm. FTK Imager ishchi oynasi
+2-qadam. Sinov ma’lumotlari mavjud bo‘lgan diskni ulash va tayyorlash. USB flesh-xotirani kompyuterga ulang. Tashqi xotiraga bir nechta test fayllar joylashtiring, masalan, rasm va hujjat fayllari. Disk hajmi va tarkibi “Properties” bo‘limi orqali tekshiriladi.
+Obraz yaratish jarayonini sinash uchun ma’lumotlar mavjud bo‘lgan diskdan foydalanish xavfsiz hisoblanadi (9.3-rasm).
+3-qadam. Disk obrazini yaratishni boshlash. FTK Imager dasturida “File” menyusi orqali “Create Disk Image” buyrug‘i tanlanadi. Manba sifatida “Physical Drive” belgilanadi va sinov ma’lumotlari mavjud bo‘lgan disk ko‘rsatiladi. Diskni to‘g‘ri tanlash muhimdir (chunki noto‘g‘ri qurilma tanlansa, ma’lumotlarning yo‘qolish xavfi mavjud, 9.4-rasm). Tanlov tasdiqlangach, “Add” buyrug‘i orqali obraz yaratish jarayoni boshlanadi.
+
+
+9.3-rasm. Test disk tayyorlash
+Fizik disk (Physical drive) – bitma-bit obraz yaratadi va butun diskni nusxalaydi.
+
+9.4-rasm. USB diskni tanlash
+4-qadam. Disk obrazining formatini va saqlash joyini sozlash. “FTK Imager” dasturida disk obrazini yaratish oynasida “Image Type” sifatida Raw (dd) formati tanlanadi, bu raqamli kriminalistika standartlariga mos keladi.
+“Evidence Number”, “Case Number” va “Examiner” maydonlariga test maqsadida oddiy qiymatlar kiritiladi (9.5-rasm).
+“Image Destination” bo‘limida obraz saqlanadigan papka tanlanadi. Tavsiya etilganidek, uni tashqi diskga emas, boshqa xavfsiz joyga saqlash maqsadga muvofiqdir (9.6-rasm).
+Sozlamalar tasdiqlangach, “Finish” tugmasi bosiladi. Keyinchalik “Start” tugmasi yordamida disk obrazini yaratish jarayoni boshlanadi (9.7-rasm).
+
+9.5-rasm. Ma’lumotlarni kiritish
+
+9.6-rasm. Papkani ko‘rsatish va nom berish
+
+9.7-rasm. Obraz olishni boshlash
+5-qadam. Obraz yaratish jarayonini yakunlash va xesh qiymatini tekshirish. Disk obrazini yaratish jarayoni uning hajmiga qarab odatda 5–30 daqiqa davom etadi. Jarayon yakunlangach, “FTK Imager” dasturi disk obrazining xesh qiymatini (MD5 yoki SHA1) ko‘rsatadi. Ushbu qiymat yozib olinadi.
+Xesh qiymati disk obrazining original ma’lumotlarga mosligini va uning yaxlitligini tasdiqlash uchun ishlatiladi (9.10-rasm).
+
+9.8-rasm. Obraz olish jarayoni
+
+9.9-rasm. Olingan natija
+
+9.10-rasm. Xesh qiymat natijasi
+6-qadam. Disk obrazini tahlil qilish va xulosa chiqarish. “FTK Imager” dasturida disk obrazini tahlil qilish uchun “File” menyusidan “Add Evidence Item” → “Image File” tanlanadi va oldin yaratilgan .001 fayl ko‘rsatiladi. Obraz ichidagi fayllar ko‘rib chiqiladi va zarur hollarda tiklanadi.
+Ushbu tahlil disk obrazidagi ma’lumotlar yaxlitligi va saqlanish darajasini baholash imkonini beradi. Bu esa raqamli kriminalistika amaliyotida asosiy bosqich hisoblanadi (9.11-rasm).
+
+9.11-rasm. Olingan disk obrazi tahlili
+		Laboratoriya muhitida “FTK Imager” dasturini yuklab, test diskdan obraz yarating.
+	•	Xesh qiymatni tekshiring va obrazni tahlil qiling. 
+	•	Olingan natijalar bo‘yicha xulosalarni faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida “FTK Imager” dasturini yuklab, test diskdan obraz yarating.
+	•	Xesh qiymatni tekshiring va obrazni tahlil qiling. 
+	•	Olingan natijalar bo‘yicha xulosalarni faylga saqlab, skrinshotlar bilan birga hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+9.2. O'chirilgan fayllarni tiklash
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda o‘chib ketgan fayllarni tiklash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda o‘chib ketgan fayllarni tiklash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Recuva dasturi;
+	•	Test uchun oddiy fayllar (rasmlar, hujjatlar) va USB fleshka yoki tashqi disk.
+	•	Shaxsiy kompyuter;
+	•	Recuva dasturi;
+	•	Test uchun oddiy fayllar (rasmlar, hujjatlar) va USB fleshka yoki tashqi disk.
+Ishning bajarish tartibi
+O‘chirilgan fayllar diskdan to‘liq o‘chmaydi, faqat indekslari yo‘qoladi, ma’lumotlari esa qoladi (lekin yangi fayllar bilan ustiga yozilishi mumkin).
+Faylni tiklash jarayonini qisqacha ildiz papkasida (FAT tizimida) yoki asosiy fayl jadvalidagi (NTFS tizimida) o‘chirilgan yozuvlarni topish uchun disk yoki papkani skanerlash, so‘ngra ma’lum bir o‘chirilgan yozuv uchun qayta tiklanadigan klasterlar zanjirini aniqlash va bu klasterlarning mazmunini yangi yaratilgan faylga nusxalash deya tavsiflash mumkin.
+Faylda kerakli yozuvni topib, faylni tashkil etuvchi klasterlar to‘plamini to‘plaganidan so‘ng, ushbu klasterlarni o‘qish va boshqa joyga ko‘chirish mumkin.
+Qayta tiklash jarayoni quyidagi ketma-ketlikda amalga oshiriladi:
+	•	Disklarni skanerlash;
+	•	Klaster zanjirini topish;
+	•	O‘chirilgan fayllarni klaster zanjiridan qayta tiklash.
+Amaliy tavsiyalar:
+	•	Muhim ma’lumotlar tasodifan o‘chirilganda, qayta tiklash jarayoni amalga oshirilmaguncha diskga yangi ma’lumot yozilmasligi lozim;
+	•	Qayta tiklanayotgan ma’lumotlarni ular o‘chirilgan diskka bevosita yozmaslik tavsiya etiladi.
+Ko‘pgina ma’lumotlarni tiklash dasturlari pullik hisoblanadi. Shu jumladan, “Recuva” dasturi narxi va imkoniyatlari bilan boshqalardan ajralib turadi. Amaliy mashg‘ulotlarda aynan “Recuva” dasturidan foydalaniladi. 
+
+9.12-rasm. Ma’lumotni tanlash va uning kontetini tekshirish
+
+9.13-rasm. Tanlangan ma’lumotni o‘chirish
+Dastlab diskdagi mavjud ma’lumotlar tekshiriladi va qayta tiklash jarayonini sinash maqsadida ayrim fayllar vaqtincha o‘chiriladi.
+Ma’lumotlarni tiklash jarayoni uchun “Recuva” dasturi ishga tushiriladi va skanerlanuvchi qurilma aniqlanadi.
+
+9.14-rasm. Recuva dasturini ishga tushirish va asosiy oynasi
+Qayta tiklash uchun skanerlanuvchi qurilma va fayllar turlari belgilanadi va skanerlash boshlanadi.
+
+9.15-rasm. Skanerlash uchun vositani va fayl turlarini tanlash
+Skanerlash tugagach tiklash uchun fayllarni tanlashimiz va ular haqida tiklashdan oldin ham batafsil ma’lumot olish mumkin. Fayllar tiklashdan oldin dastur bergan yashil va qizil ogohlantirishlar faylni muvaffaqiyatli tiklash imkonini beradi (9.17-rasm).
+
+9.16-rasm. Skanerlashni boshlash
+
+9.17-rasm. Skanerlash natijalari
+
+9.16-rasm. Qayta tiklash uchun tanlangan fayl xususiyatlari
+
+9.17-rasm. Qayta tiklashga ruxsat berish
+Qayta tiklash jarayonida tiklanayotgan fayl o‘zi o‘chirilgan qurilma maydonida emas, balki boshqa bir joyga saqlash maqsadga muvofiq.
+
+9.18-rasm. Qayta tiklash jarayoni
+
+9.19-rasm. Qayta tiklangan ma’lumotlar
+
+9.20-rasm. Qayta tilangan ma’lumot va uning kontenti
+
+9.21-rasm. Qayta tiklash imkoniyati past bo‘lgan faylni tiklash yoki uni xavfsiz o‘chirish holati
+Dasturda qizil ogohlatirish bilan berilgan fayllarni tiklash imkoniyati past hisoblanadi va ular tiklanganda ham foydalanish uchun yaroqli bo‘lmasligi mumkin. Shu bilan birga dastur ma’lumotlarni xavfsiz o‘chirish imkonini ham beradi. Bu usul bilan o‘chirilgan ma’lumotlarning qayta tiklash ehtimolligi deyarli mavjud bo‘lmaydi.
+
+9.22-rasm. Qayta tiklash imkoniyati past bo‘lgan faylni tiklagandan so‘ng undan foydalanish imkoni
+		Laboratoriya muhitida test fayllarni o‘chirib, “Recuva” dasturi yordamida tiklash jarayonini amalga oshiring.
+	•	Boshqa dasturlar yordamida fayllarni tiklash amaliyotlarini amalga oshiring (masalan: PhotoRec, TestDisk). 
+	•	Jarayonni skrinshotga oling va natijalarini hisobotda keltiring.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida test fayllarni o‘chirib, “Recuva” dasturi yordamida tiklash jarayonini amalga oshiring.
+	•	Boshqa dasturlar yordamida fayllarni tiklash amaliyotlarini amalga oshiring (masalan: PhotoRec, TestDisk). 
+	•	Jarayonni skrinshotga oling va natijalarini hisobotda keltiring.
+Amaliy topshiriqlar
+
+
+9.3. Hodisalarni qayta qurish
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda suqilib kirishlarni kuzatish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda suqilib kirishlarni kuzatish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar
+Kerakli vositalar
+	•	Shaxsiy kompyuter;
+	•	Kali linux va Ubuntu operatsion tizimlari;
+	•	Ubuntu server.
+	•	Shaxsiy kompyuter;
+	•	Kali linux va Ubuntu operatsion tizimlari;
+	•	Ubuntu server.
+Ishning bajarish tartibi
+Axborot tizimlarida sodir bo‘ladigan hujumlar doimo log yozuvlarida o‘z izlarini qoldiradi. Ushbu yozuvlar asosida hujumni aniqlash uchun vaqt jadvali (timeline) tuziladi. Vaqt jadvali tahlili yordamida quyidagilar aniqlanadi:
+	•	hujum qachon boshlanganligi;
+	•	hujum qanday ketma-ketlikda amalga oshirilganligi;
+	•	hujum qaysi bosqichda muvaffaqiyatli bo‘lganligi;
+	•	hujum qaysi IP manzildan amalga oshirilganligi.
+Linux tizimlarida autentifikatsiya bilan bog‘liq hodisalar asosan /var/log/auth.log faylida saqlanadi.
+9.1-jadval
+Ubuntu Serverda mavjud bo‘lgan asosiy loglar
+Log fayl
+Vazifasi
+/var/log/auth.log
+SSH va autentifikatsiya urinishlari
+/var/log/syslog
+Tizim hodisalari
+journalctl
+Tizim vaqt jadvali
+/var/log/kern.log
+Kernel hodisalari
+Laboratoriya ishini bajarish ketma-ketligi:
+1-qadam. Terminal oynasini ochish. Ubuntu operatsion tizimida terminal oynasini ochish uchun, Ctrl + Alt + T tugmalarini bir vaqtda bosing yoki ilovalar menyusidan Terminal dasturini ishga tushiring.
+
+9.23-rasm. Ubuntu OT terminal oynasi
+2-qadam. Autentifikatsiya log faylini ko‘rish. Quyidagi buyruq yordamida autentifikatsiya loglarini ko‘ramiz:
+sudo cat /var/log/auth.log
+Bu buyruq tizimga:
+	•	muvaffaqiyatli kirishlar;
+	•	muvaffaqiyatsiz kirishlar;
+	•	noto‘g‘ri parol urinishlari haqidagi ma’lumotlarni chiqaradi.
+
+9.24-rasm. auth.log faylining ko‘rinishi
+3-qadam. Shubhali yozuvlarni aniqlash. Log faylda quyidagi kabi yozuvlarga e’tibor bering (berilgan yozuvlar misol tariqasida keltirildi):
+
+Dec 16 09:12:01 server sshd[1012]: Failed password for root from 192.168.1.50 port 51422
+Dec 16 09:12:05 server sshd[1012]: Failed password for root from 192.168.1.50 port 51422
+Dec 16 09:12:09 server sshd[1012]: Failed password for root from 192.168.1.50 port 51422
+Dec 16 09:12:15 server sshd[1015]: Accepted password for root from 192.168.1.50 port 51423
+Bu yozuvlardan ko‘rinadiki:
+	•	bitta IP manzil bir necha marta urinish qilgan;
+	•	urinishlar orasidagi vaqt juda qisqa;
+	•	oxirida tizimga muvaffaqiyatli kirilgan.
+4-qadam. Vaqt jadvali (timeline) tuzish. Aniqlangan yozuvlar asosida vaqt jadvali tuziladi:
+9.2-jadval
+Hujumning vaqt jadvali
+Vaqt
+Hodisa
+Tavsif
+09:12:01
+Failed login
+Noto‘g‘ri parol
+09:12:05
+Failed login
+Takror urinish
+09:12:09
+Failed login
+Avtomatlashtirilgan urinish
+09:12:15
+Successful login
+Tizimga kirish
+5-qadam. Hujum turini aniqlash. Vaqt jadvali tahliliga asoslanib quyidagi belgilar aniqlanadi:
+	•	qisqa vaqt ichida ko‘p urinish;
+	•	bitta IP manzil;
+	•	“root” foydalanuvchisi nishonga olingan.
+Demak, ushbu holat “brute-force” hujumi ekanligini ko‘rsatadi.
+6-qadam. Suqilib kirish (unauthorized access) jarayonlarini tahlil qilish. Suqilib kirish hujumlari odatda quyidagi bosqichlardan iborat bo‘ladi:
+	•	parollarni taxmin qilish;
+	•	muvaffaqiyatsiz kirish urinishlar;
+	•	to‘g‘ri parol topilishi;
+	•	tizimga ruxsatsiz kirish amalga oshirilishi.
+Ushbu bosqichlar IDS/IPS (Intrusion Detection/Prevention System) tizimlari yordamida oldindan aniqlanishi va tegishli choralar ko‘rilishi mumkin.
+7-qadam. Himoyalanish choralarini belgilash. Aniqlangan hujumlarni oldini olish maqsadida quyidagi himoya choralarini qo‘llash tavsiya etiladi:
+	•	SSH xizmatida root foydalanuvchi orqali kirishni o‘chirish;
+	•	Parolga asoslangan autentifikatsiya o‘rniga SSH kalitlari asosida autentifikatsiyani joriy etish;
+	•	Fail2ban vositasi yordamida takroriy muvaffaqiyatsiz urinishlar qayd etilgan IP manzillarni avtomatik bloklash;
+	•	Kuchli parol siyosatini joriy etish.
+Keyingi bosqichda hujumlarni aniqlash jarayoni “bash script” yordamida amalga oshiriladi. Bunda Ubuntu Server operatsion tizimida SSH xizmati ishga tushiriladi va boshqa Linux qurilmadan SSH orqali ulanish amalga oshiriladi. Parol ataylab noto‘g‘ri kiritilib, autentifikatsiya jarayoni modellashtiriladi.
+So‘ngra server tizimidagi “auth.log” fayli tekshiriladi va log yozuvlari asosida tahlil bajariladi:
+1-bosqich. SSH xizmati holatini tekshirish:
+systemctl status ssh
+Agar Active: active (running) ko‘rsangiz, demak hammasi joyida.
+
+9.24-rasm. SSH xizmati holatini tekshirish
+Agar ishlamayotgan bo‘lsa, quyidagi buyruq orqali ishga tushuriladi:
+sudo systemctl start ssh
+
+9.25-rasm. SSH xizmatini yoqish
+2-bosqich. SSH portini tekshirish (standart: 22):
+sudo ss -tulpn | grep ssh
+
+9.26-rasm. SSH portini tekshirish
+Demak, SSH 22-portda ishlayapti.
+3-bosqich. Boshqa Linux operatsion tizimiga ega kompyuterda terminal oynasi ochiladi va serverga SSH xizmati orqali ulanishga urinish amalga oshiriladi. Buning uchun quyidagi buyruqdan foydalaniladi:
+ssh foydalanuvchi_nomi@ip_manzil
+Masalan, bizning holatda:
+ssh server@192.168.0.103
+Agar serverga birinchi marta ulanilayotgan bo‘lsa, tizim tomonidan ulanishni tasdiqlash so‘rovi chiqariladi. Ushbu holatda “yes” qiymati kiritilib, “Enter” tugmasi bosiladi.
+Shundan so‘ng, Ubuntu Server tizimidagi foydalanuvchi parolini kiritish talab etiladi va autentifikatsiya jarayoni amalga oshiriladi.
+
+9.27-rasm. SSH xizmati orqali ulanishni amalga oshirib, xato parol kiritish
+
+9.28-rasm. To‘g‘ri parol kiritib serverga ulanish
+4-bosqich. Serverda “Log” fayl mavjudligini tekshirish. Server tizimida autentifikatsiya jarayonlariga oid log faylining mavjudligi tekshiriladi. Buning uchun terminal oynasi ochilib, quyidagi buyruq bajariladi:
+ls /var/log/auth.log
+Agar fayl mavjud bo‘lsa va ro‘yxatda ko‘rinsa, keyingi bosqichga o‘tiladi.
+5-bosqich. Log faylini qo‘lda tahlil qilish (tayanch bosqich). Dastlab log yozuvlari oddiy usulda qo‘lda tekshiriladi. Buning uchun quyidagi buyruqdan foydalaniladi:
+sudo grep «Failed password» /var/log/auth.log
+Ushbu buyruq autentifikatsiya jarayonida yuzaga kelgan barcha noto‘g‘ri parol kiritish holatlarini ajratib ko‘rsatadi.
+
+9.29-rasm. Serverda Log fayl mavjudligini tekshirish
+6-bosqich. Shubhali IP manzilni aniqlash. Autentifikatsiya jarayonida yuzaga kelgan muvaffaqiyatsiz kirish urinishlari asosida shubhali IP manzillar aniqlanadi. Buning uchun log fayli quyidagi buyruq yordamida tahlil qilinadi:
+grep “Failed password” /var/log/auth.log | grep -oE ‘[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+’ | sort | uniq -c
+
+9.30-rasm. Shubhali IP manzilni aniqlash
+Ushbu buyruq noto‘g‘ri parol kiritilgan holatlarni IP manzillar bo‘yicha guruhlaydi va har bir IP manzil uchun urinishlar sonini ko‘rsatadi.
+Tahlil natijasiga ko‘ra, “192.168.0.108” IP manzili eng ko‘p kirish urinishlarini amalga oshirganligi aniqlanadi.
+Qo‘shimcha ravishda, SSH xizmatiga oid muvaffaqiyatsiz urinishlarni “journalctl” tizimi orqali ham ko‘rish mumkin:
+sudo journalctl | grep «Failed password»
+Mazkur tahlil usuli tizim loglari asosida ruxsatsiz kirish urinishlarini aniqlash va ularning manbasini belgilash imkonini beradi.
+
+9.31-rasm. SSH xizmati bo‘yicha muvaffaqiyatsiz autentifikatsiya urinishlarini “journalctl” loglari orqali ko‘rish
+7-bosqich. “Time-based” hujumini aniqlash. Takroriy autentifikatsiya urinishlari orasidagi vaqt oralig‘ini aniqlash orqali “time-based” hujumini aniqlash mumkin. Buning uchun log fayldan vaqtga oid ma’lumotlar quyidagi buyruq yordamida ajratib olinadi:
+sudo grep «Failed password» /var/log/auth.log | awk ‘{print $1,$2,$3}’
+
+9.32-rasm. Takroriy urinishlar orasidagi vaqt
+Agar muvaffaqiyatsiz kirish urinishlari:
+	•	har 5–10 daqiqa oralig‘ida;
+	•	bir xil IP manzildan;
+	•	uzoq vaqt davomida kuzatilsa, ushbu holat “time-based brute force” hujumi belgisi hisoblanadi.
+8-bosqich. “Journal” orqali aniq vaqt oralig‘ida tahlil qilish. SSH xizmati bilan bog‘liq hodisalarni aniq vaqt oralig‘ida tahlil qilish uchun quyidagi buyruqdan foydalaniladi:
+sudo journalctl -u ssh --since «2025-09-18 01:00» --until «2025-09-18 04:00»
+
+9.33-rasm. “Journal” orqali aniq vaqt tahlili
+Mazkur buyruq:
+	•	belgilangan vaqt oralig‘ida;
+	•	SSH xizmati bilan bog‘liq barcha hodisalarni;
+	•	sekund aniqligida ko‘rsatadi.
+9-bosqich. Vaqt jadvalini shakllantirish. SSH xizmatiga oid muvaffaqiyatsiz autentifikatsiya urinishlari asosida vaqt jadvalini tuzish uchun quyidagi buyruqdan foydalaniladi:
+sudo journalctl -u ssh | grep «Failed password» | awk ‘{print $1,$2,$3}’
+
+9.34-rasm. Timeline (vaqt jadvali) tuzish
+Ushbu buyruq log yozuvlaridan vaqt ma’lumotlarini ajratib chiqaradi. Natijada hujumning qachon boshlanganligi, qachon yakunlanganligi hamda qaysi vaqt oralig‘ida intensivlashganligi aniq ko‘rinadi.
+Bu vaqt jadvali hujum dinamikasini tahlil qilish va keyingi himoya choralarini belgilashda asos bo‘lib xizmat qiladi.
+
+		Laboratoriya muhitida “auth.log” faylidan shubhali IP manzilni aniqlang.
+	•	Hujum boshlangan vaqti va tugagan vaqtni belgilang. 
+	•	Hujum uchun vaqt jadvali (timeline) tuzing.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida “auth.log” faylidan shubhali IP manzilni aniqlang.
+	•	Hujum boshlangan vaqti va tugagan vaqtni belgilang. 
+	•	Hujum uchun vaqt jadvali (timeline) tuzing.
+Amaliy topshiriqlar
+
+
+9.4. Xotira kriminalistikasi
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda kriminalistik nuqtai nazaridan xotirani tahlil qilish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda kriminalistik nuqtai nazaridan xotirani tahlil qilish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Task Manager;
+	•	DumpIt dasturini.
+	•	Shaxsiy kompyuter;
+	•	Task Manager;
+	•	DumpIt dasturini.
+Ishning bajarish tartibi
+Bo‘shliq xotira (Memory dump) - bu kompyuterning operativ xotirasi (RAM) holatidan olingan to‘liq nusxa (snapshot) hisoblanadi.
+“Memory dump” tahlili raqamli kriminalistikaning muhim yo‘nalishlaridan biri bo‘lib, operativ xotirada faol jarayonlar, ochiq fayllar hamda hujum izlarini aniqlash imkonini beradi.
+Ushbu laboratoriya ishida memory dump faylini “Volatility” vositasi yordamida tahlil qilish amalga oshiriladi.
+Ishning bajarish tartibi:
+1-qadam. Xotira holatini kuzatish (hodisadan oldingi holat). Dastlab operativ xotiraning joriy holati hodisadan oldingi boshlang‘ich dalil (baseline) sifatida qayd etiladi. Buning uchun “Ctrl + Shift + Esc” tugmalari orqali “Task Manager” ishga tushiriladi va “Performance → Memory” bo‘limiga o‘tiladi.
+
+9.35-rasm. Operativ xotira (RAM) holatining boshlang‘ich holati
+Ushbu bosqichda quyidagi ko‘rsatkichlarga e’tibor qaratiladi:
+	•	umumiy RAM hajmi;
+	•	band bo‘lgan xotira miqdori;
+	•	bo‘sh xotira miqdori.
+Bu holat keyingi tahlillar uchun solishtirma asos vazifasini bajaradi.
+2-qadam. Faol jarayonlarni aniqlash (tirik tizim tahlili). Operativ xotirada faol bo‘lgan jarayonlarni aniqlash uchun “Task Manager → Processes” bo‘limiga o‘tiladi. Jarayonlar “Memory” ustuni bo‘yicha saralanadi va quyidagi ma’lumotlar qayd etiladi:
+	•	RAM iste’moli bo‘yicha eng yuqori 5 ta jarayon nomi;
+	•	ushbu jarayonlarning xotira sarfi.
+Mazkur jarayonlar xotira dump tahlilida asosiy daliliy obyektlar sifatida qaraladi.
+
+9.36-rasm. Operativ xotira (RAM) bo‘yicha tartiblangan jarayonlar
+3-qadam. Xotira dump faylini olish (tayyor vosita bilan). Xotira dump faylini yaratish uchun o‘quv maqsadlarida qulay bo‘lgan “DumpIt” dasturidan foydalaniladi:
+	•	DumpIt dasturi yuklab olinadi (portable format);
+	•	dastur administrator huquqlari bilan ishga tushiriladi;
+	•	xotirani olish so‘rovi tasdiqlanadi.
+Natijada .raw yoki .dmp kengaytmali fayl hosil bo‘ladi. Ushbu fayl operativ xotiraning to‘liq nusxasini o‘z ichiga oladi va asosiy dalil (evidence) sifatida xizmat qiladi.
+Tizim o‘chirilgan taqdirda ham, xotira dump fayli keyingi tahlil uchun saqlanib qoladi.
+
+9.37-rasm. Dumplt dasturini ishga tushurish
+
+9.38-rasm. Dump fayl yaratilgan joy
+4-qadam. Xotira dump faylini ochish va dastlabki tahlil qilish (sodda usul). Olingan xotira dump faylining asosiy xususiyatlari qayd etiladi. Bunda quyidagi ma’lumotlar yozib olinadi:
+	•	fayl hajmi (GB);
+	•	yaratilgan vaqti.
+Shundan so‘ng, hisobot yuritish maqsadida oddiy matn muharririda dastlabki qaydlar amalga oshiriladi:
+	•	xotira dump qachon olinganligi;
+	•	qaysi operatsion tizimdan olinganligi;
+	•	xotira dumpni kim tomonidan olinganligi.
+
+9.39-rasm. Memory faylini ochish
+
+9.40-rasm. Matn muharirini tanlash
+
+9.41-rasm. Fayldagi ma’lumotlar
+5-qadam. Shubhali holatlarni baholash (tahliliy qism). Xotira holati bo‘yicha dastlabki tahlilni amalga oshiring. Quyidagi savollarga asoslangan holda baho bering:
+	•	Operativ xotiradan eng katta hajmda qaysi jarayon foydalanmoqda?
+	•	Tizim uchun odatiy bo‘lmagan yoki noma’lum jarayonlar aniqlandimi?
+	•	Brauzerlar yoki fon rejimida ishlayotgan xizmatlar RAM xotiradan me’yoridan ortiq foydalanayaptimi?
+	•	Agar hodisa jinoyat sifatida ko‘rilsa, qaysi jarayon asosiy gumonlanuvchi sifatida ajralib chiqadi?
+Aniqlangan ma’lumotlarni jadval ko‘rinishida rasmiylashtiring va ularning xavfsizlik nuqtai nazaridan ahamiyatini tahlil qiling.
+		Laboratoriya muhitida “memory dump” faylini yarating.
+	•	“Volatility” vositasi orqali “pslist” va “netscan” jarayonlarini amalga oshiring. 
+	•	Natijalarni tahlil qiling, skrinshotlar bilan hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida “memory dump” faylini yarating.
+	•	“Volatility” vositasi orqali “pslist” va “netscan” jarayonlarini amalga oshiring. 
+	•	Natijalarni tahlil qiling, skrinshotlar bilan hisobot tayyorlang.
+Amaliy topshiriqlar
+
+
+9.5. Xotirada ichki tahdidlarni aniqlash
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda xotira bilan bog‘liq ichki tahdidlar haqida bilimlarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda xotira bilan bog‘liq ichki tahdidlar haqida bilimlarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Ubuntu OT;
+	•	Windows OT;
+	•	Shaxsiy kompyuter;
+	•	Ubuntu OT;
+	•	Windows OT;
+Ishning bajarish tartibi
+Xotirada ichki tahdidlarni aniqlash — bu kompyuterning operativ xotirasida faol ishlayotgan dastur va jarayonlar orasidan quyidagi holatlarni aniqlash va tahlil qilish jarayonidir:
+	•	operativ xotirani me’yoridan ortiq darajada band qilayotgan jarayonlar;
+	•	xotirani bo‘shatmayotgan yoki uzoq vaqt egallab turgan jarayonlar;
+	•	foydalanuvchi tomonidan ishga tushirilmagan, yashirin yoki noma’lum jarayonlar;
+	•	tizim ishlash tezligiga salbiy ta’sir ko‘rsatayotgan jarayonlar.
+Mazkur tahlil ichki tahdidlarni erta bosqichda aniqlash va ularning tizim barqarorligiga ta’sirini baholash imkonini beradi.
+Ishning bajarish tartibi (Windows 10/11 uchun)
+1-qadam. Operativ xotiraning dastlabki bandlik holatini aniqlang uchun klaviaturadan “Ctrl + Shift + Esc” tugmalarini bosing va “Task Manager” (Диспетчер задач) oynasi ochiladi. Agar soddalashtirilgan ko‘rinish chiqsa, “More details” (Более подробная информация) tugmasini bosing. “Performance” (Производительность) bo‘limiga o‘ting va “Memory” bandini tanlang.
+Quyidagi ko‘rsatkichlarni yozib oling:
+	•	RAM umumiy hajmi (masalan, 16 GB);
+	•	joriy vaqtda ishlatilayotgan xotira hajmi (masalan, 7.2 / 16 GB);
+	•	“Cached” va “Available” xotira miqdori.
+Ushbu ma’lumotlar keyingi bosqichlarda xotira yuklanishidagi o‘zgarishlarni aniqlash va hodisadan oldingi holat bilan solishtirish uchun boshlang‘ich mezon (baseline) sifatida ishlatiladi.
+
+9.42-rasm. “Производительность” ekranidan skrinshot
+2-qadam. Tezkor xotira resurslarini yuqori darajada iste’mol qilayotgan jarayonlarni aniqlash (asosiy “ichki tahdid” belgisi). Ushbu bosqichda operatsion tizimda faol ishlayotgan dastur va jarayonlar orasidan RAM xotiradan eng ko‘p foydalanayotganlari aniqlanadi. Bunday holat ichki tahdidlarning muhim ko‘rsatkichlaridan biri hisoblanadi. Aniqlash uchun “Диспетчер задач” dasturining “Процессы” bo‘limi ochiladi va jarayonlar “Память” ustuni bo‘yicha saralanadi. Saralash natijasida tezkor xotirani eng katta hajmda band qilayotgan dasturlar yuqori qismda aks etadi.
+
+9.43-rasm. “Процессы” bo‘limida jarayonlarning tezkor xotira (Memory) iste’moli bo‘yicha saralangan ro‘yxati
+Natijada quyidagi ko‘rsatkichlar kuzatilishi mumkin:
+	•	Google Chrome - taxminan 1200 MB tezkor xotira iste’moli;
+	•	Telegram - taxminan 400 MB tezkor xotira iste’moli;
+	•	Noma’lum.exe - taxminan 900 MB tezkor xotira iste’moli, funksional jihatdan aniqlanmagan jarayon.
+Ichki tahdidning dastlabki va eng sodda belgilaridan biri - tizim faoliyati uchun zarur bo‘lmagan yoki kelib chiqishi noma’lum jarayonlarning tezkor xotirani nomutanosib darajada band qilishi hisoblanadi. Bunday holat keyingi chuqurlashtirilgan tahlilni talab qiladi.
+3-qadam. Shubhali jarayon manbasini aniqlash. Noma’lum yoki funksional jihatdan asossiz jarayonning qayerdan ishga tushirilganini aniqlash zarur. Buning uchun mos jarayon ustida o‘ng tugmani bosib, “Open file location” (Открыть расположение файла) bandi tanlanadi. Natijada bajarilayotgan dastur faylining joylashuvi ko‘rsatiladi. 
+Kuzatuv natijalari quyidagicha baholanadi:
+	•	Agar fayl C:\Program Files yoki C:\Program Files (x86) kataloglarida joylashgan bo‘lsa, u odatda tizim yoki ishonchli dastur komponenti hisoblanadi;
+	•	Agar fayl C:\Users...\AppData\Roaming yoki shunga o‘xshash yashirin kataloglarda joylashgan bo‘lsa, ehtiyot choralarini ko‘rish talab etiladi;
+	•	Noma’lum nomdagi papkalar yoki mantiqan tushunarsiz fayl nomlari mavjud bo‘lsa, jarayon shubhali sifatida baholanadi.
+Ichki tahdidlarning katta qismi aynan tizim uchun noaniq va kam nazorat qilinadigan kataloglardan ishga tushiriladi. Shu sababli bajariluvchi faylning joylashuvi ichki tahdidlarni aniqlashda eng tezkor va samarali ko‘rsatkichlardan biri hisoblanadi.
+
+9.44-rasm. “Открыть расположение файла” jarayon natijasi
+4-qadam. “Resource Monitor” (Монитор ресурсов) orqali xotira holatini chuqurroq tahlil qilish. RAM resurslari qayerga ketayotganini aniqlash uchun “Диспетчер задач” dasturini oching, Performance bo‘limiga o‘ting va pastdagi Open Resource Monitor (Открыть монитор ресурсов) bandini tanlang yoki Win + R tugmalarini bosib, “resmon” deb yozib, Enter tugmasini bosing hamda “Память” bo‘limiga o‘ting.
+Natijada har bir jarayon qancha xotira ishlatayotgani batafsil ko‘rinadi. “Диспетчер задач” umumiy xotira iste’molini ko‘rsatadi, “Монитор ресурсов” esa jarayonlarning xotira bosimi va haqiqiy sarfini chuqurroq tushuntiradi. Shu orqali xotira yetishmovchiligi yoki ba’zi jarayonlarning me’yordan ortiq xotira iste’mol qilishi aniqlanadi.
+
+9.45-rasm. Resource Monitor dasturining Memory (Память) bo‘limi
+5-qadam. Xotirani sizib chiqishi (Memory leak)ga o‘xshash holatni sodda usulda tekshirish (10 daqiqalik kuzatuv). Bu holat xotira boshqaruvidagi xato bo‘lib, foydalanilmayotgan xotira bloklarining bo‘shatilmasligi bilan tavsiflanadi.
+Dastur vaqt o‘tishi bilan RAM resurslarini tobora ko‘proq iste’mol qilayotganini aniqlash uchun kuzatuv o‘tkaziladi. Buning uchun “Task Manager” (Диспетчер задач) dasturida “Processes” (Процессы) bo‘limi ochiladi va jarayonlar “Memory” (Память) ustuni bo‘yicha saralangan holatda qoldiriladi. Eng ko‘p RAM iste’mol qilayotgan bitta dastur, masalan brauzer yoki boshqa faol ilova tanlanadi. Ushbu jarayonning xotira iste’moli 10 daqiqa davomida har 2 daqiqada qayd etib boriladi.
+Agar tanlangan jarayonning RAM iste’moli vaqt o‘tishi bilan muntazam oshib borsa va kamaymasa, bu holat xotirani sizib chiqish yoki resurslardan nazoratsiz foydalanish belgilariga mos kelishi mumkin.
+
+
+
+9.46-rasm. Google Chrome dasturining xotira iste’moli holatini aks ettiruvchi ikkita skrinshot (taqqoslash uchun)
+6-qadam. Windows Security yordamida tezkor tekshiruvni amalga oshirish (tahdid mavjudligini aniqlash). Xotirada kuzatilgan shubhali holatlarning zararli dastur bilan bog‘liqligini aniqlash uchun antivirus tekshiruvi o‘tkaziladi. Buning uchun “Start → Windows Security” (Безопасность Windows) bo‘limi ochiladi, so‘ng “Virus & threat protection” (Защита от вирусов и угроз) bandi tanlanadi va “Quick scan” (Быстрая проверка) tugmasi bosiladi.
+Tekshiruv yakunida tizimda aniqlangan holatga qarab “No current threats” (Угроз не обнаружено) xabari yoki topilgan tahdidlar ro‘yxati ko‘rsatiladi. Tezkor tekshiruv minimal darajadagi nazoratni ta’minlaydi, biroq RAM xotirasida yuzaga kelayotgan shubhali faolliklarning zararli dastur bilan bog‘liq bo‘lish ehtimolini dastlabki bosqichda baholash imkonini beradi.
+
+9.47-rasm. “Quick scan” natijasi
+Ishni bajarish tartibi (Linux uchun):
+1-qadam. Tizim xotirasining boshlang‘ich holatini aniqlash. Operativ xotira (RAM)ning joriy bandlik darajasi boshlang‘ich ko‘rsatkich sifatida qayd etiladi. Buning uchun “Activities” menyusi yoki asosiy menyu orqali qidiruv maydoniga “System Monitor” deb yoziladi va dastur ishga tushiriladi. Dastur oynasida “Resources” bo‘limiga o‘tiladi hamda “Memory and Swap” grafigi kuzatiladi.
+Natijada RAM bandligi grafigi aniq ko‘rinadi, agar tizimda swap xotiradan foydalanilayotgan bo‘lsa, uning holati ham alohida aks etadi.
+
+9.48-rasm. “System Monitor” dasturining “Resources” bo‘limidagi “Memory and Swap” grafigi
+2-qadam. RAM resurslarini ko‘p sarflayotgan jarayonlarni aniqlash. Tizimda operativ xotirani eng ko‘p iste’mol qilayotgan dasturlarni aniqlash uchun “System Monitor” dasturida “Processes” bo‘limiga o‘tiladi. Jarayonlar jadvalida “Memory” ustuni tanlanib, saralash amalga oshiriladi. Natijada RAM resurslarini eng ko‘p ishlatayotgan jarayonlar jadvalning yuqori qismida aks etadi.
+Masalan, kuzatuv jarayonida quyidagi holatlar aniqlanishi mumkin:
+	•	Firefox ilovasi taxminan 216 MB xotira iste’mol qilmoqda;
+	•	Chrome ilovasi 1200 MB gacha RAM ishlatayapti;
+	•	Snapd jarayoni 200 MB atrofida xotira band qilgan.
+	•	Noma’lum jarayon esa 600 MB xotira iste’mol qilmoqda va shubhali sifatida baholanadi.
+Ichki tahdidning muhim belgilaridan biri sifatida funksional jihatdan asossiz yoki noma’lum jarayonlarning operativ xotirani me’yordan ortiq darajada band qilishi qaraladi.
+
+9.49-rasm. “Processes” ro‘yxati (Memory bo‘yicha sort qilingan)
+3-qadam. Shubhali jarayon haqida ma’lumot olish. Jarayon nomi (process name) bo‘yicha uning ishga tushgan manbaini aniqlash uchun avval “Process ID” (PID) topiladi.
+“System Monitor” dasturida shubhali jarayon qatori tanlanadi va odatda PID ko‘rsatiladi. Agar PID ko‘rinmasa, terminal ochib quyidagi buyruq bajariladi:
+ps aux --sort=-%mem | head -n 10
+Natijada tizimda RAM xotirani eng ko‘p ishlatayotgan jarayonlar aniqlanadi.
+
+9.50-rasm. Terminaldagi Top-5 jarayon natijasi
+Top-5 jarayon va ularning PID raqamlari keyingi tahlil uchun asosiy ma’lumot hisoblanadi.
+Jarayon qaysi bajariluvchi fayldan ishga tushirilganini aniqlash uchun aniqlangan PID qiymatidan foydalaniladi. Masalan, agar jarayonning PID = 2450 bo‘lsa, terminalda quyidagi buyruq bajariladi:
+readlink -f /proc/2450/exe
+Natijada jarayon ishga tushgan faylning to‘liq yo‘li ko‘rsatiladi. Ushbu yo‘l quyidagi ko‘rinishlarda bo‘lishi mumkin:
+	•	/usr/bin/firefox;
+	•	/snap/bin/...;
+	•	yoki /home/user/.local/… kabi noan’anaviy kataloglar (shubhali bo‘lishi mumkin).
+Olingan natijalar quyidagicha talqin qilinadi:
+	•	agar bajariluvchi fayl “/usr/bin/” katalogida joylashgan bo‘lsa, u odatda tizim yoki ishonchli dastur komponenti hisoblanadi;
+	•	agar fayl “/home/” katalogi ichidagi “.local” yoki boshqa noma’lum papkalarda joylashgan bo‘lsa, jarayon ehtiyotkorlik bilan baholanishi lozim.
+
+9.51-rasm. “readlink” buyrug‘i natijasi
+4-qadam. Avtomatik ishga tushadigan shubhali servislarni aniqlash. Tizim yuklanishi bilan birga avtomatik ishga tushadigan xizmatlar ichidan ichki tahdid manbai bo‘lishi mumkin bo‘lgan servislar aniqlanadi. Buning uchun terminal ochilib quyidagi buyruq bajariladi:
+systemctl list-unit-files --type=service --state=enabled | head -n 30
+Ushbu buyruq natijasida Enabled holatidagi, ya’ni tizim ishga tushganda avtomatik faollashadigan servislar ro‘yxati hosil bo‘ladi. Agar ro‘yxatda vazifasi noma’lum, tizim funksiyalariga bevosita aloqasi bo‘lmagan yoki g‘ayrioddiy nomga ega xizmatlar aniqlansa, ular shubhali sifatida baholanadi va keyingi bosqichlarda qo‘shimcha tekshiruv uchun hisobotda qayd etiladi.
+
+9.52-rasm. “Enabled” holatdagi servislar ro‘yxatini tekshirish natijasi
+5-qadam. Diskdagi loglar orqali xotira bilan bog‘liq xatolarni tekshirish (sodda tahlil). Ushbu bosqichda tizimda operativ xotira yetishmovchiligi bilan bog‘liq hodisalar mavjud yoki yo‘qligi aniqlanadi. Xususan, loglarda “out of memory”, “killed process” kabi xabarlar qidiriladi. Buning uchun terminalda quyidagi buyruq bajariladi:
+sudo dmesg | grep -i -E “out of memory|oom|killed process” | tail -n 20
+Natijalar quyidagicha talqin qilinadi:
+	•	agar buyruq natijasida hech qanday chiqish bo‘lmasa, tizimda OOM (Out Of Memory) holati qayd etilmagan deb baholanadi;
+	•	agar tegishli yozuvlar mavjud bo‘lsa, xotira yetishmovchiligi sababli qaysi jarayon majburan to‘xtatilgani aniqlanadi.
+OOM Killer (Out Of Memory Killer) - Linux operatsion tizimida mavjud bo‘lgan himoya mexanizmi bo‘lib, RAM yetarli bo‘lmagan holatlarda tizimni to‘liq ishdan chiqishdan saqlash maqsadida ayrim jarayonlarni majburan yakunlaydi. Ushbu mexanizm faollashuvi tizimda xotira resurslaridan noto‘g‘ri yoki nazoratsiz foydalanilayotganini ko‘rsatishi mumkin.
+
+9.53-rasm. “dmesg” buyrug‘i natijasi (xotira bilan bog‘liq xabarlar aniqlangan holat)
+sudo dmesg | grep -i -E “out of memory|oom|killed process” buyrug‘i yordamida tizim jurnalida OOM (Out Of Memory) holatlari tekshirildi. Tahlil natijasida “systemd-oomd” xizmati faol ekani va xotira yetishmovchiligi holatlarini kuzatish rejimida ishlayotgani aniqlandi. Shu bilan birga, joriy vaqtda operativ xotira yetishmasligi sababli hech bir jarayon majburiy to‘xtatilmagan. Mazkur holat tizimda hozircha xotira yetishmovchiligi yoki ichki tahdid belgilarining mavjud emasligini ko‘rsatadi.
+
+		Laboratoriya muhitida “Processes” bo‘limida jarayonlarni “Memory” ko‘rsatkichi bo‘yicha saralab, tezkor xotirani eng ko‘p iste’mol qilayotgan TOP-5 jarayonni aniqlang va kuzating.
+	•	“Resource Monitor → Memory” bo‘limida jarayonlarning xotira iste’molini tahlil qiling va olingan natijani skrinshot ko‘rinishida qayd eting. 
+	•	Aniqlangan eng yuqori jarayonlardan bittasining PID qiymatini aniqlab, “readlink -f /proc/PID/exe” buyrug‘i yordamida uning bajariluvchi fayli joylashuvini toping.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida “Processes” bo‘limida jarayonlarni “Memory” ko‘rsatkichi bo‘yicha saralab, tezkor xotirani eng ko‘p iste’mol qilayotgan TOP-5 jarayonni aniqlang va kuzating.
+	•	“Resource Monitor → Memory” bo‘limida jarayonlarning xotira iste’molini tahlil qiling va olingan natijani skrinshot ko‘rinishida qayd eting. 
+	•	Aniqlangan eng yuqori jarayonlardan bittasining PID qiymatini aniqlab, “readlink -f /proc/PID/exe” buyrug‘i yordamida uning bajariluvchi fayli joylashuvini toping.
+Amaliy topshiriqlar
+
+
+
+
+
+10-bob haqida umumiy ma’lumot
+Mazkur bobda kiberxavfsizlik sohasida oid faoliyat sohalari, mustaqil va jamoaviy tarzda bajariladigan amaliy loyihalar orqali axborot xavfsizligi bo‘yicha bilim va ko‘nikmalarni mustahkamlash, xavfsiz tarmoqni loyihalash va himoyalash, ruxsat etilgan muhitda penetration testing o‘tkazish, Capture the Flag (CTF) musobaqalarining mazmuni va qoidalari bilan tanishish, shuningdek, Web va parolga yo‘naltirilgan CTF masalalarini yechish, muammoli vaziyatlarni tahlil qilish, xavfsizlik yechimlarini loyihalashga oid bilimlar, tartib va qoidalar haqida ma’lumotlar berilgan.
+10.1. Tarmoq xavfsizligi asoslari
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda tarmoqni qurish va unda xavfsizlikni ta’minlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda tarmoqni qurish va unda xavfsizlikni ta’minlash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Wi-Fi router (yoki virtual router);
+	•	Terminal yoki Command Prompt.
+	•	Shaxsiy kompyuter;
+	•	Wi-Fi router (yoki virtual router);
+	•	Terminal yoki Command Prompt.
+Ishning bajarish tartibi
+Kompyuter tarmog‘i - bu bir nechta qurilmalarning (kompyuter, telefon, printer) o‘zaro bog‘lanib, ma’lumot almashishi.
+Xavfsiz tarmoq — bu:
+	•	ruxsatsiz kirishdan himoyalangan;
+	•	ma’lumotlar nazorat ostida uzatiladigan;
+	•	faqat ishonchli foydalanuvchilar ulanadigan tarmoq.
+Ushbu laboratoriya ishini bajarish jarayonida avvalo kompyuter tarmog‘ining sozlamalari tekshirilib, IP manzil va standart shlyuz (gateway) aniqlanadi. Bu orqali kompyuterning qaysi tarmoqqa ulanganligi va tarmoqdagi o‘rni belgilab olinadi.
+Keyingi bosqichda router sozlamalariga kirilib, simsiz tarmoqning xavfsizlik holati ko‘rib chiqiladi. Wi-Fi tarmog‘ida parol mavjudligi, shifrlash turi (WPA2/WPA3) va router boshqaruv parolining holati tekshiriladi. Shuningdek, tarmoqqa ulangan qurilmalar aniqlanib, begona yoki noma’lum qurilmalar mavjud emasligi tekshiriladi.
+Wi-Fi qurilmasiga ulanish (mazkur laboratoriya ishida Tenda rusumli Wi-Fi qurilmasi tanlab olingan). Buning uchun qurilmani kompyuterga tarmoq kabeli yordamida ulanadi yoki qurilmaga simsiz ulanib brauzer orqali 192.168.0.1 manzilga kiritiladi. 10.1-rasmda Wi-Fi qurilmasiga brauzer orqali ulanish jarayoni ko‘rsatilgan.
+
+10.1-rasm. Wi-Fi qurilmasiga brauzer orqali kirish
+
+10.2-rasm. Wi-Fi qurilmasining ishchi oynasi
+10.2-rasmda qurilmani sozlashning umumiy ishchi oynasi keltirilgan. Bu oyna orqali qurilmadagi turli sozlamalarni amalga oshirish mumkin. Dastlabki sozlashlarni amalga oshirish uchun “Wirelesss Router” bo‘limidagi “Wlan Setting” sahifasiga o‘tiladi.
+10.3-rasmda “Basing Setting” sozlanmasiga kirib dastlabki xavfsizlik sozlanmalarini amalga oshirish jarayoni keltirilgan. Bunda qurilmaning “Network Mode” qismidan tarmoq turini tanlash mumkin. Tarmoq turi sifatida “11b/g/n mixed mode” turini tanlash tavsiya etiladi. “SSID” sozlamasi orqali WI-FI tarmog‘iga nom beriladi. 10.3-rasmdan ko‘rish mumkin, tarmoqqa “AX” deb nom berilgan. “Broadcast (SSID)” sozlamasi orqali qurilma nomini Wi-Fi tarmog‘i foydalanuvchilari uchun yashirish imkoniyati mavjud. Bunda “Enable” buyrug‘i tanlanganda foydalanuvchilar Wi-Fi tarmog‘ini qidirganda avtomatik tarzda ko‘rinadi, “Disable” buyrug‘i tanlanganda yashiriladi, ya’ni faqatgina tarmoq nomini bilgan foydalanuvchilargina tarmoqqa ulanishi mumkin.
+
+10.3-rasm. Asosiy sozlamalarni amalga oshirish oynasi
+10.4-rasmda Wi-Fi tarmog‘ini begona foydalanuvchilar ulanishidan himoyalash uchun parol qo‘yish jarayoni ko‘rsatilgan. Parol qo‘yish uchun “Security setting” bo‘limiga kiriladi. Bu bo‘limdagi “Security Mode” bandiga yuqoridagi nazariy qismda keltirilgan protokollardan “WPA2” usulini tanlash tavsiya etiladi. WPA algoritmida turli shifrlash usullari qo‘llaniladi. Shifrlash turida AES algoritmi tanlanadi. “Pass Phrase” qismiga parol kiritiladi. Parol sifatida “parol” so‘zi kiritilgan. Xavfsizlik nuqtai nazaridan bu paroldan foydalanish mumkin emas.
+
+10.4-rasm. Wi-Fi simsiz tarmog‘iga parol qo‘yish oynasi
+10.5-rasmda “Access Control” bo‘limiga o‘tish va “Wireless Access Control” oynasini sozlash jarayoni aks ettirilgan. Ushbu oyna orqali simsiz tarmoq uchun “MAC-Address” asosida kirishni boshqarish va filtrlash amalga oshiriladi. Standart sozlamalarda mazkur funksional imkoniyat o‘chirilgan holatda bo‘ladi va uni faollashtirish orqali tarmoqqa ruxsat etilgan yoki cheklangan qurilmalarni aniqlash mumkin.
+
+10.5-rasm. MAC manzillarni filtrlash oynasi
+MAC-manzillarni filtrlash bo‘limida qurilmalar uchun ruxsat berish yoki cheklov qo‘yish imkoniyati mavjud. 10.6-rasmda ko‘rsatilgan “Allow” buyrug‘i yordamida kiritilgan MAC-manzilga ega qurilmalarga tarmoqqa ulanishga ruxsat beriladi. 10.7-rasmda aks ettirilgan “Block” buyrug‘i orqali esa ko‘rsatilgan MAC-manzilli qurilmalarning tarmoqqa ulanishi cheklanadi.
+
+10.6-rasm. MAC manzillarga ruxsat berish oynasi
+
+10.7-rasm. MAC manzillarni bloklash oynasi
+10.8-rasmda ko‘rsatilgan “Wireless Connection Status” oynasi orqali joriy vaqtdagi tarmoq foydalanuvchilar soni va MAC manzillarini ko‘rish mumkin. Joriy vaqtda 8 ta foydalanuvchi Wi-Fi simsiz tarmog‘iga ulangan.
+
+10.8-rasm. Joriy vaqtdagi foydalanuvchilar
+
+10.9-rasm. Trafik tezligini sozlash
+10.9-rasmda keltirilgan “Traffic Control Settings” oynasi orqali internet tezligini boshqarish mumkin. Ushbu oynada trafik tezligi tarmoqqa yuklash va tarmoqdan yuklab olish yo‘nalishlari bo‘yicha alohida sozlanadi.
+10.10-rasmdagi oyna orqali tarmoqqa ulangan har bir foydalanuvchining trafikdan foydalanish statistikasi kuzatiladi. 10.11-rasmda aks ettirilgan oyna yordamida foydalanuvchilarning internetdan foydalanish imkoniyatlari va cheklovlari belgilanadi.
+
+10.10-rasm. Trafikdan foydalanish statistikasi
+
+10.11-rasm. Foydalanuvchilarni filtrlash oynasi
+10.12-rasmda URL manzillarni filtrlash oynasi ko‘rsatilgan. 10.13-rasmda esa MAC-manzillarni filtrlash jarayoni tasvirlangan.
+Ushbu sozlamalar orqali:
+	•	belgilangan IP manzillar doirasida internetga kirishni yoqish yoki o‘chirish;
+	•	haftaning kunlari bo‘yicha kirish vaqtiga cheklovlar o‘rnatish;
+	•	alohida qurilmalar uchun tarmoqdan foydalanish qoidalarini belgilash mumkin.
+Bu imkoniyatlar tarmoq xavfsizligi va nazoratini ta’minlashga xizmat qiladi.
+
+10.12-rasm. URL manzillarni filtrlash oynasi
+
+10.13-rasm. MAC manzillarni filtrlash oynasi
+10.14-rasmda hujumlardan himoya qilish funksiyasini yoqish jarayoni ko‘rsatilgan. 10.15-rasmda routerni masofadan boshqarish imkoniyatini faollashtirish sozlamalari aks ettirilgan. 10.16-rasmda esa ping so‘rovlarini cheklash buyruqlarini amalga oshirish holati keltirilgan.
+
+10.14-rasm. Hujumlardan himoyani yoqish
+
+10.15-rasm. Masofadan routerni boshqarish
+
+10.16-rasm. Ping yuborishni cheklash
+		Laboratoriya muhitida “ipconfig” yoki “ifconfig” buyruqlari natijasini oling.
+	•	Wi-Fi routerga brauzer orqali ulanib, Wi-Fi xavfsizligini tekshiring. 
+	•	Routerni xavfsizligini ta’minlash jarayonlarini amalga oshiring.
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida “ipconfig” yoki “ifconfig” buyruqlari natijasini oling.
+	•	Wi-Fi routerga brauzer orqali ulanib, Wi-Fi xavfsizligini tekshiring. 
+	•	Routerni xavfsizligini ta’minlash jarayonlarini amalga oshiring.
+Amaliy topshiriqlar
+
+
+10.2. Penetration testing: Metasploitable 2
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda suqilib kirish testini amalga oshirishi ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda suqilib kirish testini amalga oshirishi ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Kali Linux OT;
+	•	Metaploitable 2 OT.
+	•	Shaxsiy kompyuter;
+	•	Kali Linux OT;
+	•	Metaploitable 2 OT.
+Ishning bajarish tartibi
+Suqilib kirish testi (penetration testing) — bu axborot tizimi yoki tarmoqni ruxsat asosida, hujumchi nuqtai nazaridan tekshirish jarayonidir. Ushbu testning asosiy maqsadi tizimdagi zaifliklarni aniqlash, ularning qanchalik xavfli ekanligini baholash va himoya choralarini kuchaytirish bo‘yicha tavsiyalar ishlab chiqishdan iborat. Suqilib kirish testi tizimni buzish uchun emas, balki uni yanada xavfsiz qilish uchun amalga oshiriladi.
+Ushbu laboratoriya ishini bajarish jarayonida Kali Linux OT hujumchi tizim sifatida, Metasploitable 2 OT esa test qilinayotgan zaif tizim sifatida tanlandi. Dastlab tarmoq sozlamalari tekshirilib, hujumchi va nishon tizimlarning IP manzillari aniqlanadi. So‘ngra “Nmap” vositasi yordamida nishon tizim skanerlanib, ochiq portlar va faol xizmatlar mavjudligi tekshiriladi.
+Ishning bajarish tartibi:
+1-qadam. Laboratoriya muhitini tayyorlash. Bu laboratoriyada ikki xil tizim ishlatiladi:
+	•	Kali Linux OT — hujumni bajaruvchi tizim;
+	•	Metasploitable 2 OT — atayin zaif qilib yaratilgan test tizimi.
+Ikkala tizim ham bir xil tarmoqda (Bridged Adapter yoki NAT Network) va bir-birini ko‘ra olishi kerak. Bu sharoit bo‘lmasa, test ishlamaydi.
+2-qadam. Kali Linux OT IP manzilini aniqlash. Kali Linux OTda terminal ochib, ip a buyrug‘ini yozing. Natijada Kali Linux OTning IP manzili ko‘rinadi, masalan:
+192.168.0.113
+Demak Kali Linux OT hozir shu IP manzil orqali tarmoqqa ulangan.
+3-qadam. Metasploitable 2 OT IP manzilini aniqlash. Metasploitable 2 OTga kirib (login: msfadmin, parol: msfadmin), terminalga ifconfig buyrug‘i yozing. Natijada IP manzili ko‘rinadi, masalan:
+192.168.0.112
+Bu suqilib kirish testining eng muhim bosqichi. Shuning uchun aloqa bor yoki yo‘qligini “ping” orqali tekshirib ko‘rish tavsiya etiladi (10.17-rasm va 10.18-rasm).
+
+10.17-rasm. Kali Linux OTni IP manzilini aniqlash va Metasploitable 2 OT bilan aloqa bor yoki yo‘qligini tekshirish
+
+10.18-rasm. Metasploitable 2 OTning IP manzilini aniqlash va Kali Linux OT bilan aloqa bor yoki yo‘qligini tekshirish
+4-qadam. Nishon tizimni skanerlash (zaiflikni qidirish). Kali Linuxda quyidagi buyruq yoziladi:
+nmap -sV 192.168.0.112
+Bu yerda, Nmap - tarmoqlarni tahlil qilish va xavfsizlik auditi uchun mo‘ljallangan dasturiy vosita hisoblanadi. “-sV” parametri nishon tizimdagi ochiq portlarda ishlayotgan xizmatlar va ularning versiyalarini aniqlash uchun xizmat qiladi. 192.168.0.112 esa skanerlash amalga oshirilayotgan nishon tizimning IP manzilini ifodalaydi.
+Buyruq bajarilgandan so‘ng, tizimda ochiq bo‘lgan portlar va ularga mos xizmatlar ro‘yxati shakllantiriladi. Natijada, masalan, quyidagi ma’lumotlar olinishi mumkin: 21-port orqali FTP xizmati (vsftpd 2.3.4), 22-port orqali SSH xizmati hamda 80-port orqali HTTP xizmati faol ekani aniqlanadi.
+
+10.19-rasm. Ochiq portlarni aniqlash
+Natijalar shuni ko‘rsatadiki, 21-port orqali FTP xizmati ochiq bo‘lib, uning versiyasi vsftpd 2.3.4 ekanligi aniqlangan. Ushbu versiya ma’lum zaifliklarga ega bo‘lgani sababli tizimga ruxsatsiz kirish imkoniyati mavjud bo‘lishi ehtimoli bor.
+5-qadam. Metasploit dasturini ishga tushirish. Kali Linux operatsion tizimida zaifliklarni tahlil qilish jarayonining keyingi bosqichida Metasploit dasturi ishga tushiriladi. Buning uchun terminal muhitida quyidagi buyruq bajariladi:
+msfconsole
+
+10.20-rasm. Metasploit dasturini ishga tushirish
+Buyruq ishga tushirilgach, tizim bir necha soniya davomida Metasploit muhitining asosiy modullarini yuklaydi. Yuklash jarayoni muvaffaqiyatli yakunlangandan so‘ng, terminal oynasida “msf6 >” ko‘rinishidagi buyruq satri paydo bo‘ladi. Ushbu holat Metasploit muhiti to‘liq ishga tushganini va zaifliklarni izlash, ekspluatatsiya qilish hamda xavfsizlikni tahlil qilish amallarini bajarishga tayyor ekanligini anglatadi.
+6-qadam. Mos exploitni tanlash. Zaiflik aniqlangandan so‘ng keyingi bosqichda unga mos ekspluatatsiya usuli tanlanadi. Buning uchun Metasploit muhitida mavjud eksploitlar bazasidan foydalaniladi va FTP xizmatiga tegishli zaiflikni aniqlash maqsadida quyidagi so‘rov bajariladi:
+search vsftpd
+
+10.21-rasm. FTP zaifligini qidirish
+Qidiruv natijasida “exploit/unix/ftp/vsftpd_234_backdoor” nomli eksploit aniqlanadi. Mazkur eksploit vsftpd 2.3.4 versiyasida mavjud bo‘lgan orqa eshik zaifligiga asoslangan bo‘lib, hujumchiga tizimga masofadan ruxsatsiz kirish imkonini beradi. Aniqlangan eksploitni faollashtirish uchun u quyidagi buyruq orqali tanlanadi yoki ro‘yxatdagi tartib raqami orqali chaqiriladi:
+use exploit/unix/ftp/vsftpd_234_backdoor (yoki use 1)
+
+10.22-rasm. Exploitni tanlash
+Eksploit tushunchasi aniqlangan zaiflikdan amaliy foydalanish mexanizmini anglatadi va u axborot tizimlarining real xavfsizlik darajasini baholashda muhim ahamiyatga ega.
+7-qadam. Nishon IP manzilini kiritish. Eksploit tanlangandan so‘ng nishon tizimning IP manzilini aniqlab, uni Metasploit muhitiga kiritish talab etiladi. Buning uchun “set RHOSTS 192.168.0.112” buyrug‘i bajariladi, bunda RHOSTS parametri hujum amalga oshiriladigan masofaviy tizim manzilini bildiradi. Sozlamalar to‘g‘ri kiritilganini tekshirish maqsadida “show options” buyrug‘i qo‘llaniladi. Ushbu buyruq eksploit uchun zarur bo‘lgan barcha parametrlarni va ularning joriy holatini ko‘rsatadi. Agar RHOSTS maydonida nishon IP manzili to‘g‘ri aks etgan bo‘lsa, eksploitni ishga tushirish uchun keyingi bosqichga o‘tish mumkin bo‘ladi. Bu bosqich ekspluatatsiya jarayonining muhim qismi bo‘lib, noto‘g‘ri IP manzil kiritilishi hujumning muvaffaqiyatsiz yakunlanishiga olib keladi.
+
+10.23-rasm. Nishon IP manzilini kiritish
+8-qadam. Suqilib kirish testini amalga oshirish. Ekspluatatsiya jarayonini boshlash uchun tanlangan eksploit ishga tushiriladi. Buning uchun Metasploit muhitida “run” yoki “exploit” buyrug‘i bajariladi. Ushbu buyruq aniqlangan zaiflik asosida nishon tizimga faol ta’sir ko‘rsatishni boshlaydi. Agar oldingi bosqichlarda barcha parametrlar to‘g‘ri sozlangan bo‘lsa va nishon tizim haqiqatan ham mazkur zaiflikka ega bo‘lsa, Metasploit tomonidan “Command shell session opened” degan xabar qaytariladi. Bu holat nishon tizimda buyruqlarni masofadan bajarish imkoniyati ochilganini va suqilib kirish testi muvaffaqiyatli yakunlanganini bildiradi.
+
+10.24-rasm. Suqilib kirish testini ishga tushirish
+9-qadam. Tizimga kirish muvaffaqiyatli amalga oshirilganini tekshirish. Ekspluatatsiya jarayoni natijasida ochilgan buyruqlar muhiti orqali tizimga haqiqiy kirish holati tekshiriladi. Buning uchun “whoami” buyrug‘i bajariladi. Agar natijada “root” qiymati qaytarsa, bu hujumchi tizimda eng yuqori imtiyoz darajasiga ega bo‘lgan foydalanuvchi huquqlarini qo‘lga kiritganini anglatadi. Mazkur holat aniqlangan zaiflikning jiddiyligini va tizim to‘liq nazorat ostiga olinganini ko‘rsatadi.
+Tizimning texnik xususiyatlarini aniqlash maqsadida “uname -a” buyrug‘i bajariladi. Ushbu buyruq orqali operatsion tizim yadrosi, versiyasi, arxitekturasi hamda boshqa muhim tizim parametrlari haqida umumiy ma’lumot olinadi.
+
+10.25-rasm. Tizimga kirish muvaffaqiyatli amalga oshirilganini tekshirish
+		Laboratoriya muhitida Kali Linux va Metasploitable 2 tizimlarini o‘rnating va IP manzillarini aniqlang.
+	•	Nmap vositasi orqali nishonni ochiq portlarini toping. 
+	•	Metasploit orqali zaiflikdan foydalaning va suqilib kirish testini amalga oshiring
+Amaliy topshiriqlar
+
+
+	•	Laboratoriya muhitida Kali Linux va Metasploitable 2 tizimlarini o‘rnating va IP manzillarini aniqlang.
+	•	Nmap vositasi orqali nishonni ochiq portlarini toping. 
+	•	Metasploit orqali zaiflikdan foydalaning va suqilib kirish testini amalga oshiring
+Amaliy topshiriqlar
+
+10.3. CTF musobaqasi asoslari
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda Capture the Flag (CTF) musobaqasi haqida bilimlarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda Capture the Flag (CTF) musobaqasi haqida bilimlarni shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Web brauzer;
+	•	PicoCTF platformasi.
+	•	Shaxsiy kompyuter;
+	•	Web brauzer;
+	•	PicoCTF platformasi.
+Ishning bajarish tartibi
+Capture the Flag (CTF) - kiberxavfsizlik yo‘nalishida tashkil etiladigan o‘quv-musobaqa shakli bo‘lib, unda ishtirokchilar axborot tizimlaridagi turli xavfsizlik muammolarini yechish orqali “flag” deb ataluvchi maxfiy matnni aniqlashlari talab etiladi. Flag odatda oldindan belgilangan formatda bo‘ladi, masalan: FLAG{example_text}. Musobaqa jarayonida eng ko‘p “flag” aniqlagan ishtirokchi yoki jamoa g‘olib sifatida e’tirof etiladi.
+CTF musobaqasining asosiy maqsadi:
+	•	Kiberxavfsizlik bilimlarini amaliy tarzda mustahkamlash;
+	•	Mantiqiy fikrlashni rivojlantirish;
+	•	Axborot tizimlaridagi zaifliklarni aniqlashni o‘rganish;
+	•	Talabalarni real xavfsizlik vaziyatlariga tayyorlash.
+CTF musobaqalarining turlari:
+1. Jeopardy CTF. CTF musobaqalarining eng keng tarqalgan turi Jeopardy CTF hisoblanadi. Ushbu formatda topshiriqlar mavzular bo‘yicha bo‘limlarga ajratiladi. Jumladan, web-ilovalar xavfsizligi, kriptografiya, raqamli kriminalistika, teskari muhandislik, tarmoq xavfsizligi va ochiq manbalar asosida razvedka kabi yo‘nalishlar mavjud bo‘ladi. Har bir topshiriqni muvaffaqiyatli bajarish natijasida ishtirokchi flagni qo‘lga kiritadi, bu esa uning topshiriqni to‘g‘ri bajarganini tasdiqlaydi.
+Web yo‘nalishi web-ilovalardagi xavfsizlik xatolarini aniqlashga qaratilgan. Ushbu topshiriqlarda login sahifalari, forma maydonlari, URL manzillar va server javoblari tahlil qilinadi. Maqsad - noto‘g‘ri sozlangan yoki himoyasiz web-ilovalar orqali yashirilgan flagni topish.
+Crypto yo‘nalishi ma’lumotlarni shifrlash va shifrlarni tahlil qilish bilan bog‘liq. Bu yerda turli kodlash va shifrlash usullari (masalan, oddiy almashtirish, Base64, Caesar) qo‘llaniladi. Ishtirokchi kodlangan matnni ochib, asl ma’lumotni topishi kerak.
+Kriminalistika yo‘nalishi raqamli dalillarni tahlil qilishga asoslanadi. Topshiriqlarda fayllar, rasm, audio, tarmoq trafiki yoki xotira dumplari tekshiriladi. Maqsad — yashirilgan ma’lumot yoki flagni aniqlash va voqea haqida xulosa chiqarish.
+Teskari muhandislik yo‘nalishida dastur yoki faylning qanday ishlashi tahlil qilinadi. Ishtirokchi tayyor dastur yoki binar faylni o‘rganib, uning ichki mantiqini tushunishga harakat qiladi. Natijada dasturda yashirilgan flag yoki tekshiruv mexanizmi aniqlanadi.
+Tarmoq yo‘nalishi kompyuter tarmoqlari va protokollar bilan bog‘liq. Bu topshiriqlarda IP manzillar, portlar, paketlar va tarmoq aloqalari tahlil qilinadi. Maqsad — tarmoq orqali uzatilgan ma’lumotlar ichidan flagni topish yoki noto‘g‘ri sozlamani aniqlash.
+OSINT (Open Source Intelligence) - ochiq manbalardan axborot to‘plashga asoslangan yo‘nalish. Ishtirokchilar internet, ijtimoiy tarmoqlar, ochiq hujjatlar va metama’lumotlar orqali kerakli ma’lumotni izlaydi. Bu yerda texnik hujum emas, balki tahlil va qidiruv ko‘nikmalari muhim hisoblanadi.
+2. Hujum-himoya (Attack–Defense) CTF. CTF musobaqalarining murakkab va amaliy yo‘naltirilgan turi hisoblanadi. Ushbu formatda jamoalar bir vaqtning o‘zida ikki vazifani bajaradi. Bir tomondan, ular o‘zlariga ajratilgan tizim yoki xizmatlarni himoyalash orqali mavjud zaifliklarni bartaraf etishga harakat qiladi. Ikkinchi tomondan esa, raqib jamoalarning tizimlarida mavjud zaifliklarni aniqlab, ularga hujum uyushtiradi.
+3. Aralash (Mixed) CTF - bu Jeopardy CTF va Attack–Defense CTF elementlarini o‘zida birlashtirgan musobaqa formati hisoblanadi. Ushbu turdagi CTFlar odatda yirik va ko‘p bosqichli musobaqalarda qo‘llaniladi. Unda ishtirokchilar bir vaqtning o‘zida ham mantiqiy va tahliliy topshiriqlarni bajaradi, ham real tizimlarni himoyalash va ularga hujum qilish jarayonlarida ishtirok etadi. Bu format ishtirokchilardan keng qamrovli bilim, tezkor fikrlash va amaliy ko‘nikmalarni talab qiladi.
+Masalan namuna topshiriq (tushunish uchun). Berilgan matn:
+VGhpcyBpcyBhIENURiBleGFtcGxl
+Bu kodlangan matn. Talabaning vazifasi ushbu matnni tahlil qilib, unda Base64 kodlash usuli qo‘llanganini aniqlashdan iborat bo‘ladi. Base64 dekodlash amalga oshirilgach, matnning asl ko‘rinishi quyidagicha ochiladi: This is a CTF example.
+Bepul CTF platformalar:
+1) picoCTF (100% bepul, boshlovchilar uchun) - bu kiberxavfsizlik bo‘yicha boshlovchilar uchun mo‘ljallangan, to‘liq bepul o‘quv platformasi hisoblanadi. Unda kriptografiya, web-xavfsizlik, kriminalistika va teskari muhandislik yo‘nalishlari bo‘yicha juda ko‘p amaliy topshiriqlar jamlangan. Platforma ayniqsa o‘quvchilar va talabalarga qulay bo‘lib, barcha topshiriqlar izohlangan hamda murakkablik darajasi bosqichma-bosqich oshib boradi.
+picoCTF bilan ishlashni boshlash uchun foydalanuvchi avvalo rasmiy saytida akkaunt yaratadi. Shundan so‘ng “Practice” yoki “Get Started” bo‘limlari orqali mos topshiriq tanlanadi va bajariladi. Har bir topshiriq yakunida aniqlangan maxfiy matn flag sifatida taqdim etiladi. Ushbu flag odatda picoCTF{...} ko‘rinishida bo‘ladi va natijani tasdiqlash uchun saytga kiritiladi. Shu tarzda ishtirokchi o‘z bilimini mustahkamlab boradi va kiberxavfsizlik bo‘yicha amaliy tajriba orttiradi.
+
+10.26-rasm. picoCTF sayti
+2) OverTheWire - bu Linux muhitida va terminal bilan ishlash ko‘nikmalarini rivojlantirishga mo‘ljallangan, to‘liq bepul o‘quv platformasi hisoblanadi. Platforma “wargames” tamoyiliga asoslangan bo‘lib, ishtirokchi vazifalarni darajadan darajaga o‘tish orqali ketma-ket bajaradi. Har bir daraja oldingisiga tayanadi va amaliy bilimlarni mustahkamlashga xizmat qiladi.
+OverTheWire doirasida eng mashhur o‘yinlardan biri “Bandit” bo‘lib, u mutlaqo boshlovchilar uchun mo‘ljallangan. Ushbu “wargame” orqali SSH orqali tizimga ulanish, fayllarni izlash, ruxsatlar (permissions) bilan ishlash kabi asosiy Linux tushunchalari o‘rganiladi. “Natas” esa web-xavfsizlik asoslariga bag‘ishlangan bo‘lib, HTTP, autentifikatsiya va oddiy web-zaifliklarni tushunishga yordam beradi.
+“Bandit” bilan ishlash “Bandit Level 0” sahifasidan boshlanadi. Ushbu sahifada SSH orqali tizimga ulanish uchun zarur bo‘lgan kirish ma’lumotlari taqdim etiladi. Foydalanuvchi masofaviy tizimga ulanadi va har bir darajada berilgan topshiriqni bajarib, keyingi daraja parolini topadi. Shu tarzda darajalar ketma-ket yechiladi va foydalanuvchining Linux hamda buyruqlar satri bilan ishlash ko‘nikmalari bosqichma-bosqich rivojlanadi.
+
+10.27-rasm. OverTheWire sayti
+3) PortSwigger Web Security Academy - bu web‑ilovalar xavfsizligini o‘rganishga mo‘ljallangan, to‘liq bepul o‘quv platformasi hisoblanadi. Platforma web‑xavfsizlik bo‘yicha nazariy tushuntirishlar va amaliy laboratoriya ishlarini birlashtirgan bo‘lib, real hujum senariylariga yaqin muhitda bilimlarni mustahkamlash imkonini beradi. U web‑xavfsizlikni o‘rganish uchun eng samarali manbalardan biri sifatida keng qo‘llaniladi.
+Platformada SQL inyeksiya, Cross‑Site Scripting (XSS), Cross‑Site Request Forgery (CSRF), Server‑Side Request Forgery (SSRF) va boshqa muhim web‑zaifliklar bo‘yicha batafsil o‘quv materiallari taqdim etilgan. Har bir mavzu nazariy qism bilan boshlanadi va undan keyin maxsus laboratoriya topshiriqlari orqali amaliy ko‘nikmalar shakllantiriladi. Laboratoriyalar real web‑ilovalardagi zaifliklarni aniqlash va ulardan foydalanish jarayonini tushunishga qaratilgan.
+PortSwigger Web Security Academy bilan ishlashni boshlash uchun avvalo platformada foydalanuvchi akkaunti yaratiladi. Shundan so‘ng “Learning paths” bo‘limi orqali ketma‑ket o‘quv yo‘nalishlari tanlanishi yoki “All labs” bo‘limi orqali alohida mavzular asosida laboratoriyalar bajarilishi mumkin. Amaliy topshiriqlar odatda brauzer muhiti va Burp Suite vositasi yordamida bajariladi, bu esa web‑trafikni tahlil qilish va zaifliklarni chuqur o‘rganishga imkon beradi.
+
+10.28-rasm. PortSwigger Web Security Academy sayti
+4) TryHackMe - bu kiberxavfsizlik sohasida amaliy o‘rganishga yo‘naltirilgan interaktiv ta’lim platformasi hisoblanadi. Platforma boshlovchi foydalanuvchilar uchun bosqichma‑bosqich yo‘l‑yo‘riqlar bilan tuzilgan “rooms” orqali bilim va ko‘nikmalarni shakllantirishga mo‘ljallangan. TryHackMe bepul foydalanish imkonini beruvchi “free tier” modeliga ega bo‘lib, unda ko‘plab bepul o‘quv xonalari mavjud. Rasmiy “pricing” sahifasida 500 dan ortiq bepul “room”lar mavjudligi ko‘rsatilgan hamda “Free path” bo‘yicha alohida rasmiy blog materiali taqdim etilgan.
+Platformada tarmoq xavfsizligi, Linux asoslari, web‑xavfsizlik, ekspluatatsiya, kriminalistika va boshqa yo‘nalishlar bo‘yicha real muhitga yaqin laboratoriya mashg‘ulotlari beriladi. Har bir “room” nazariy tushuntirishlar bilan birga amaliy topshiriqlarni o‘z ichiga oladi, bu esa bilimlarni mustahkamlash va mustaqil tahlil ko‘nikmalarini rivojlantirishga xizmat qiladi.
+TryHackMe bilan ishlashni boshlash jarayoni oddiy va tizimli tarzda tashkil etilgan. Avvalo platformada foydalanuvchi akkaunti yaratiladi. Shundan so‘ng bepul “room”larni maxsus filter yordamida ajratib tanlash mumkin bo‘ladi. Amaliy topshiriqlarni bajarish uchun brauzer orqali taqdim etiladigan cheklangan “AttackBox” muhiti yoki foydalanuvchining o‘zida o‘rnatilgan Kali Linux tizimidan foydalanish mumkin.
+
+10.29-rasm. TryHackMe sayti
+Endi picoCTF platformasida bitta sodda topshiriqni bajarish jarayoni ko‘rib chiqiladi:
+1-qadam. picoCTF platformasiga kirish. Dastlab brauzer orqali picoCTF rasmiy web‑sayti ochiladi. Foydalanuvchi bepul ro‘yxatdan o‘tish jarayonidan o‘tadi va shaxsiy akkaunt yaratiladi. Ro‘yxatdan o‘tgach, tizimga kiriladi va asosiy sahifadan “Practice” bo‘limiga o‘tiladi. Ushbu bosqichda faqat foydalanuvchi muhiti tayyorlanadi va amaliy topshiriqlarni bajarish uchun zarur shartlar yaratiladi.
+2-qadam. Topshiriqni tanlash. “Practice” bo‘limi ichida mavjud topshiriqlar ro‘yxatidan qidiruv funksiyasi yoki ro‘yxat orqali “Obedient Cat” nomli topshiriq topiladi va uning sahifasi ochiladi. Topshiriq tavsifida foydalanuvchiga quyidagi mazmunga yaqin matn taqdim etiladi: fayl ichida flag ochiq holatda joylashgan va uni ko‘rish uchun faylni yuklab olib, mazmunini tekshirish talab etiladi. Bu topshiriqning asosiy maqsadi talabaning oddiy fayllar bilan ishlash va flagni aniqlash bo‘yicha boshlang‘ich ko‘nikmalarini shakllantirishdan iborat.
+
+10.30-rasm. picoCTF saytiga kirish va ro‘yxatdan o‘tish
+
+10.31-rasm. «Obedient Cat» topshirig‘ini topish
+3-qadam. Faylni yuklab olish. Topshiriq sahifasida joylashgan “Download (flag)” tugmasi bosiladi. Natijada topshiriqqa tegishli fayl foydalanuvchi kompyuteriga yuklab olinadi. Odatda bu fayl matnli formatda bo‘lib, masalan, “flag.txt” nomi bilan saqlanadi.
+
+10.32-rasm. Faylni yuklab olish
+4-qadam. Fayl mazmunini ko‘rish. Yuklab olingan fayl brauzer orqali yoki oddiy matn muharriri yordamida, masalan Notepad dasturida ochiladi. Fayl ichida oddiy matn ko‘rinishida ma’lumot aks etadi. Ushbu bosqichda fayl tarkibini diqqat bilan ko‘rib chiqish talab etiladi.
+5-qadam. Flagni aniqlash. Fayl mazmuni ichida maxsus formatda yozilgan flag joylashgan bo‘ladi. Masalan, quyidagi ko‘rinishdagi yozuv uchrashi mumkin:
+picoCTF{s4n1ty_v3r1f13d_9b8fa0bc}
+Mazkur satr topshiriqning to‘g‘ri javobi hisoblanadi va flag sifatida qabul qilinadi.
+6-qadam. Flagni topshirish. Foydalanuvchi picoCTF platformasidagi topshiriq sahifasiga qaytadi. “Submit Flag” maydoniga aniqlangan flagni to‘liq va o‘zgartirmasdan joylashtiradi hamda Submit tugmasini bosadi. Natijada tizim flagni tekshiradi va topshiriq muvaffaqiyatli bajarilganligi tasdiqlanadi (10.33-rasm).
+
+10.33-rasm. Flag kiritish maydoniga aniqlangan flagni to‘liq va o‘zgartirilmagan holda joylashtirish jarayoni
+Agar to‘g‘ri bo‘lsa, “Correct!” degan xabar chiqadi (10.34-rasm).
+
+10.34-rasm. Topshiriq muvaffaqiyatli bajarilganligi
+		CTF tushunchasini o‘rganish va CTF turlarini jadvalda yozish.
+	•	Flag nima ekanini izohlang va Jeopardy CTF bo‘limlarini sanab o‘ting. 
+	•	picoCTF platformasidan ro‘yxatdan o‘tish jarayonlarini amalga oshiring.
+Amaliy topshiriqlar
+
+
+	•	CTF tushunchasini o‘rganish va CTF turlarini jadvalda yozish.
+	•	Flag nima ekanini izohlang va Jeopardy CTF bo‘limlarini sanab o‘ting. 
+	•	picoCTF platformasidan ro‘yxatdan o‘tish jarayonlarini amalga oshiring.
+Amaliy topshiriqlar
+
+10.4. Web CTF (PicoCTF)
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda Web CTF masalalarini yechish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda Web CTF masalalarini yechish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Web brauzer;
+	•	PicoCTF platformasi.
+	•	Shaxsiy kompyuter;
+	•	Web brauzer;
+	•	PicoCTF platformasi.
+Ishning bajarish tartibi
+Web CTF - bu CTF musobaqalarining alohida yo‘nalishi bo‘lib, unda web-ilovalar bilan bog‘liq komponentlar, jumladan web-sahifa tuzilmasi, HTML kodi, URL manzillar va brauzer orqali ko‘rinadigan ma’lumotlar tahlil qilinadi. Ushbu yo‘nalish web-texnologiyalardagi zaifliklarni aniqlash va ularni amaliy misollar orqali o‘rganishga qaratilgan.
+CTF bo‘yicha boshlang‘ich bilimlarni shakllantirish uchun avvalo “play.picoctf.org” platformasida ro‘yxatdan o‘tiladi. 
+
+10.35-rasm. PicoCTF platformasidan ro‘yxatdan o‘tish
+ Ro‘yxatdan o‘tish jarayonida talab etilgan ma’lumotlar kiritiladi hamda elektron pochta manziliga yuborilgan tasdiqlash xabari orqali akkaunt faollashtiriladi.
+ 10.36-rasm. Elektron pochta akauntini tasdiqlash
+Ro‘yxatdan o‘tish muvaffaqiyatli yakunlangach, foydalanuvchiga mavjud topshiriqlar ro‘yxati jadval ko‘rinishida taqdim etiladi. Ushbu jadvalda topshiriqlar murakkablik darajasi va yo‘nalishlari bo‘yicha guruhlangan holda aks ettiriladi
+
+10.37-rasm. PicoCTF platformasi boshqaruv paneli
+Misol sifatida “SSTI1 (Server-Side Template Injection)” nomli topshiriq ko‘rib chiqiladi. Ushbu topshiriqni bajarishni boshlash uchun topshiriq sahifasiga kirilgach “Launch Instance” tugmasi bosiladi va laboratoriya muhiti ishga tushiriladi (10.38-rasm).
+Mazkur topshiriqning mohiyati server tomonida shablonlar bilan ishlash jarayonida yuzaga keladigan zaiflikni aniqlashga asoslanadi. Oddiy, xavfsiz holatda foydalanuvchi tomonidan kiritilgan matn server tomonidan faqat oddiy satr sifatida qayta ishlanadi va foydalanuvchiga hech qanday bajariluvchi kodga aylantirilmasdan chiqariladi. Bunda kiritilgan ma’lumotlar faqat ko‘rsatish uchun xizmat qiladi.
+Agar “Server-Side Template Injection” zaifligi mavjud bo‘lsa, foydalanuvchi tomonidan kiritilgan matn server tomonida kod sifatida talqin qilinadi va bajariladi. Natijada foydalanuvchi kiritgan ifodalar server muhitida ishlov berilib, tizim haqida qo‘shimcha ma’lumotlarni olish yoki ruxsatsiz amallarni bajarish imkoniyati paydo bo‘ladi. Bu holat web-ilovalar xavfsizligi nuqtayi nazaridan jiddiy tahdid hisoblanadi.
+
+10.38-rasm. Topshiriqni ishga tushurish
+Maxsus virtual zaif mashina ishga tushirilgach, tizim bilan o‘zaro aloqani boshlash va topshiriqni bajarish uchun brauzer orqali taqdim etilgan havolani ochish talab etiladi. Ushbu havola orqali web-ilovaning ishchi interfeysiga kirish amalga oshiriladi va keyingi tahlil bosqichlari bajariladi (10.39-rasm).
+
+10.39-rasm. Maxsus topshiriqqa kirish
+Sahifa ochilgandan so‘ng web-ilovaning asosiy interfeysi aks etadi (10.40-rasm). Ushbu oynada SSTI (Server-Side Template Injection) zaifligi maxsus tarzda yaratilgan bo‘lib, foydalanuvchiga mazkur zaiflikni amaliy jihatdan aniqlash va sinovdan o‘tkazish imkonini beradi. Natijada server tomonida shablonlar bilan ishlash jarayonida foydalanuvchi kiritgan ma’lumotlarning qanday qayta ishlanishi va ularning bajariluvchi kodga aylanish ehtimoli amaliy misolda ko‘rib chiqiladi.
+
+10.40-rasm. SSTI zaifligi mavjud tizim
+Mazkur hujum turini amalga oshirishdan oldin “Server-Side Template Injection (SSTI)” zaifligining mohiyatini tushunib olish zarur. SSTI zaifligi haqida batafsil nazariy va amaliy ma’lumotlar PortSwigger platformasida keltirilgan bo‘lib, quyidagi manba web-xavfsizlik bo‘yicha ishonchli asosiy resurslardan biri hisoblanadi: https://portswigger.net/web-security/server-side-template-injection.
+
+10.41-rasm. SSTI zaifligiga tekshirish
+Avvalo zaiflik bor yoki yo‘qligini tekshirish uchun yuqoridagi grafik orqali tekshirib chiqishimiz kerak (10.42-rasm):
+
+10.42-rasm. Tizimni SSTI zaifligiga tekshirish
+Avvalo, sahifada SSTI zaifligi mavjud yoki yo‘qligini aniqlash maqsadida dastlabki tekshiruv amalga oshiriladi (10.42-rasm). Buning uchun foydalanuvchi kiritish maydoniga oddiy matematik ifoda yuboriladi. Masalan, {{7*7}} ifodasi kiritiladi. Xavfsiz holatda ushbu ifoda server tomonidan oddiy matn sifatida qabul qilinib, aynan shu ko‘rinishda ekranga chiqarilishi lozim.
+Agar tizim kiritilgan ifodani qayta ishlab, natija sifatida matematik amal qiymatini, ya’ni “49” sonini qaytarsa, bu holat sahifada “Server-Side Template Injection” zaifligi mavjud ekanligini ko‘rsatadi (10.43-rasm).
+
+10.43-rasm. SSTI zaifligi
+Keyingi bosqichda aniqlangan zaiflikdan foydalangan holda tizim imkoniyatlarini kengroq tekshirish, xususan serverdagi fayllarni o‘qish imkoniyatini sinab ko‘rish mumkin. Buning uchun maxsus tayyorlangan “payload” lardan foydalaniladi. SSTI uchun turli shablonlarga mos “payload” lar to‘plami quyidagi ishonchli manbada jamlangan:
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/Python.md#jinja2.
+Payload - bu serverga yuboriladigan maxsus tuzilgan ifoda bo‘lib, u mavjud zaiflikni faollashtiradi va server tomonidan bajariladigan amallarga ta’sir ko‘rsatadi.
+
+10.44-rasm. “Payload” lardan foydalanish
+Yakuniy bosqichda aniqlangan SSTI zaifligidan amaliy tarzda foydalaniladi. Ushbu bosqichning asosiy maqsadi server tomonida bajariluvchi buyruqlar orqali tizimda saqlanayotgan flag faylini o‘qishdan iborat. Buning uchun shablonning ichki imkoniyatlaridan foydalangan holda maxsus tuzilgan payload qo‘llaniladi.
+Mazkur topshiriqda quyidagi umumiy ko‘rinishdagi shablondan foydalanish mumkin:
+{{self._TemplateReference__context.cycler.__init__.__globals__.os.popen(‘COMMAND’).read() }}
+Ushbu ifoda server tomonida ishlatilayotgan shablon mexanizmining ichki obyektlari va global muhitiga murojaat qilish imkonini beradi. Xususan, os.popen() funksiyasi orqali operatsion tizim buyruqlarini bajarish va ularning natijasini o‘qish mumkin bo‘ladi.
+Yuqoridagi payload tarkibidagi “COMMAND” qismi foydalanuvchi tomonidan kiritiladigan Linux buyruqlari bilan almashtiriladi. Masalan, “COMMAND” o‘rniga “cat flag” buyrug‘i kiritilsa, serverda joylashgan flag faylining mazmuni o‘qiladi va natija foydalanuvchiga qaytariladi. Natijada topshiriqning asosiy maqsadi — flagni aniqlash muvaffaqiyatli amalga oshiriladi.
+
+10.45-rasm. Flagni topish
+
+10.46-rasm. Topshiriqni yuborish va natija
+		PicoCTF platformasidan ro‘yxatdan o‘ting.
+	•	Eng oson 5 ta topshiriqni bajaring va flaglarni aniqlang. 
+	•	Har bir topshiriq uchun qisqa hisobot yozing (topshiriq nomi, qanday usul ishlatdingiz va qanday qiyinchiliklarga duch keldingiz).
+Amaliy topshiriqlar
+
+
+	•	PicoCTF platformasidan ro‘yxatdan o‘ting.
+	•	Eng oson 5 ta topshiriqni bajaring va flaglarni aniqlang. 
+	•	Har bir topshiriq uchun qisqa hisobot yozing (topshiriq nomi, qanday usul ishlatdingiz va qanday qiyinchiliklarga duch keldingiz).
+Amaliy topshiriqlar
+
+10.5. Parolga qaratilgan CTF (Crack the Gate)
+(Laboratoriya mashg‘uloti)
+O‘quvchilarda parolni topishga qaratilgan CTF masalalarini yechish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+O‘quvchilarda parolni topishga qaratilgan CTF masalalarini yechish ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi:
+Kerakli vositalar:
+Kerakli vositalar:
+	•	Shaxsiy kompyuter;
+	•	Burp Suite dasturi;
+	•	PicoCTF platformasi.
+	•	Shaxsiy kompyuter;
+	•	Burp Suite dasturi;
+	•	PicoCTF platformasi.
+Ishning bajarish tartibi
+Parolga qaratilgan CTF masalalari – bu yashirilgan yoki kodlangan parolni topish, noto‘g‘ri tekshiruv mantiqini aniqlash, parolni saqlashdagi xatoni tushunish va xesh (shifrlangan parol) qiymatni buzish orqali flag topishga asoslangan o‘quv topshiriqlaridir.
+Laborarotiya mashg‘uloti doirasida PicoCTF platformasidagi “Crack the Gate 1” topshirig‘i bajariladi. Topshiriqni quyidagi havola orqali topish mumkin: https://play.picoctf.org/practice/challenge/520?category=1&difficulty=1&page=1&search=crack.
+
+10.47-rasm. “Crack the Gate 1” topshirig‘iga kirish
+Yangi ochilgan sahifada foydalanuvchidan login va parol kiritish talab etiladi. CTF topshirig‘i tavsifida faqat bitta identifikator “ctf-player@picoctf.org” keltirilgan. Boshqa autentifikatsiya ma’lumotlari taqdim etilmagan.
+Shu sababli:
+	•	sahifaning tuzilishini tahlil qilish zarur;
+	•	HTML kodi va forma elementlari ko‘zdan kechiriladi;
+	•	brauzer orqali yuborilayotgan so‘rovlar o‘rganiladi;
+	•	parol tekshiruv mexanizmida mantiqiy xato yoki yashirin ma’lumot mavjudligi aniqlanadi.
+Ushbu yondashuv autentifikatsiya jarayonidagi zaifliklarni aniqlashga va flagni qo‘lga kiritishga imkon beradi.
+
+10.48-rasm. Tizimga kirish oynasi
+Brauzerda “CTRL+U” tugmalar birikmasi yoki sichqonchaning o‘ng tugmasi orqali “Inspect Code” buyrug‘i tanlanganda sahifaning manba kodi ko‘rsatiladi. Bu yerda dasturchining izohini ko‘rish mumkin (10.49-rasm).
+
+10.49-rasm. Tizim kodi va dasturchining izohi
+Tushunarsiz jumlani inson tushunadigan tilga o‘girish uchun https://cyberchef.io/ saytidan yoki boshqa istalgan dekodlovchi tizimlardan foydalanish mumkin. Bu yerda harflarning faqat joylashuvi o‘zgarganligi uchun ROT yoki Sezar shifrlash turidan foydalanganligini payqash qiyin emas. Shunday qilib ROT13 ya’ni 13 ta harf surilgan shifrlash algoritmidan foydalanib, kerakli ma’lumotni o‘qib olish mumkin (10.50-rasm).
+
+10.50-rasm. ROT13 yordamida shifr matnni o‘qish
+Yashirin holda berilgan matnni tahlil qilish jarayonida “X-Dev-Access” nomli HTTP sarlavhasiga tegishli parametrni “yes” qiymatiga o‘zgartirish zarurligi aniqlandi. HTTP so‘rovlarining sarlavha qismini tahrirlash va ularning serverga yuborilish jarayonini nazorat qilish maqsadida Burp Suite dasturiy vositasidan foydalaniladi. Ushbu vosita orqali foydalanuvchi brauzer va server o‘rtasidagi almashinuvni tahlil qilish, shuningdek, so‘rov tarkibiga qo‘shimcha sarlavhalar kiritish yoki mavjud qiymatlarni o‘zgartirish imkoniyatiga ega bo‘ladi. 
+
+10.51-rasm. Burp Suite dasturida so‘rovlarni ushlab qolish (Intercept) rejimini faollashtirish jarayoni
+Brauzer orqali yuborilayotgan so‘rovlarni tahlil qilish va ularni o‘zgartirish maqsadida Burp Suite dasturining “Proxy” bo‘limidan foydalaniladi. Ushbu bo‘limda “Intercept” rejimi “ON” holatga o‘tkazilganda, brauzerdan yuborilgan har bir so‘rov vaqtincha ushlab qolinadi.
+“Intercept” rejimi faollashtirilgan holatda foydalanuvchi so‘rov tarkibini, jumladan sarlavhalari va parametrlarini ko‘rib chiqishi hamda zarur o‘zgartirishlarni kiritishi mumkin. Shundan so‘ng so‘rov serverga yuboriladi. Ushbu mexanizm web-ilovalardagi zaifliklarni aniqlash va so‘rovlarni manipulyatsiya qilish imkonini beradi.
+
+10.52-rasm. Burp Suite dasturida tutib olingan so‘rovni o‘zgartirish
+
+10.53-rasm. Topilgan maxsus kalit (flag)
+Burp Suite dasturining “Request” bo‘limida ushlab qolingan so‘rovga topshiriqda berilgan “hint” (foydalanuvchiga yechim yo‘lini ko‘rsatuvchi qo‘shimcha ko‘rsatma) asosida qo‘shimcha sarlavha kiritiladi va “Forward” tugmasi bosilib, o‘zgartirilgan so‘rov brauzer orqali serverga uzatiladi (10.52-rasm).
+So‘rov tarkibining o‘zgartirilishi natijasida server javobi qayta ishlanadi va avval yashirin bo‘lgan ma’lumotlar aniqlanadi. Ushbu bosqich yakunida topshiriqni bajarish uchun zarur bo‘lgan maxsus kalit so‘z olinadi (10.53-rasm).
+		PicoCTF platformasida berilgan parollarni topishga qaratilgan topshiriqlarni bajaring.
+	•	Berilgan “5f4dcc3b5aa765d61d8327deb882cf99” xesh qiymat turini aniqlang va crackstation.net saytidan foydalanib parolni toping.
+	•	Har bir topshiriq uchun qisqa hisobot yozing (topshiriq nomi, qanday usul ishlatdingiz va qanday qiyinchiliklarga duch keldingiz).
+Amaliy topshiriqlar
+
+
+	•	PicoCTF platformasida berilgan parollarni topishga qaratilgan topshiriqlarni bajaring.
+	•	Berilgan “5f4dcc3b5aa765d61d8327deb882cf99” xesh qiymat turini aniqlang va crackstation.net saytidan foydalanib parolni toping.
+	•	Har bir topshiriq uchun qisqa hisobot yozing (topshiriq nomi, qanday usul ishlatdingiz va qanday qiyinchiliklarga duch keldingiz).
+Amaliy topshiriqlar
+
+
+FOYDALANILGAN ADABIYOTLAR RO‘YXATI
+	•	Patrick Engebretson. The Basics of Hacking  and Penetration Testing. Second Edition. 2013.  ISBN 978-0-12-411644-3
+	•	Georgia Weidman. Penetration testing. 2014. ISBN-10: 1-59327-564-1.
+	•	Offensive Security. Penetration Testing with Kali Linux. 2018. 
+	•	S.K.Ganiev, A.A.Ganiev, Z.T.Xudoykulov, Kiberxavfsizlik asoslari, -T.: “Iqtisod-Moliya”, 2021, -228 b.
+	•	Z.T. Xudoykulov, I.M.Boyquziyev, O.M.Allanov, U.R. Mardiyev, N.A. Jabbarov. “Kriptografik usullar”, Lesson-press nashriyoti, 2023.
+	•	Web ilovalar xavfsizligi, zaifliklar, testlash metodologiyalari: https://owasp.org/
+	•	Algoritmlar, kriptografiya va ma’lumotlar strukturalari asoslari: https://www.khanacademy.org/computing/computer-science
+	•	Interaktiv lablar va CTF (Capture The Flag) mashg‘ulotlari: https://tryhackme.com/
+	•	Real penetratsion testing mashg‘ulotlari: https://www.hackthebox.eu/
+	•	Tarmoq paketlarini tahlil qilish bo‘yicha rasmiy qo‘llanma: https://www.wireshark.org/docs/
+	•	Axloqiy hujum uchun OT, penetration testing va laboratoriyalar: https://www.kali.org/
+	•	Elektron pochta xabarlari sarlavhalarini tahlil qilish: https://mxtoolbox.com/Public/Tools/EmailHeaders.aspx 
+	•	Zararli dasturlarni tahlil qilish: https://www.virustotal.com/gui/home/upload 
+	•	“Understanding Network Intrusions and Attacks”, Scene of the Cybercrime, 1 2002: https://doi.org/10.1016/B978-193183665-4/50011-2 
+	•	Portlarni skanerlash bo‘yicha qo‘llanma (A Quick Port Scanning Tutorial): https://nmap.org/book/port-scanning-tutorial.html 
+	•	Ochiq portlarni skanerlash uchun Nmapdan foydalanish bo‘yicha ko‘rsatmalar (Using Nmap to scan for open ports): https://phoenixnap.com/kb/nmap-scan-open-ports 
+	•	Hydra va boshqa pentesting dasturlaridan foydalanish yo‘riqnomasi: https://hackviser.com/tactics/tools/hydra 
+	•	Tarmoqda har bir paketni kuzatish, filtrlash va tahlil qilish vositasi: https://www.wireshark.org/ 
+	•	S. H.C. Haris, R. B. Ahmad et al. “Packet analysis using packet filtering and traffic monitoring techniques”, International Conference on Computer Applications and Industrial, ICCAIE 2010.
+	•	IP manzil sozlamalarini amalga oshirish bo‘yicha tavsiyalar: https://www.trendnet.com/press/resource-library/how-to-set-static-ip-address
+	•	Windows OTda tarmoqlararo ekranni IP manzillarga ruxsat berish yoki bloklash uchun sozlash amalyoti: https://knowledge.civilgeo.com/configuring-windows-firewall-to-allow-or-block-ip-addresses/ 
+	•	Yangi boshlovchilar uchun Linux buyruqlarini o‘rganish bo‘yicha qo‘llanma: https://documentation.ubuntu.com/desktop/en/latest/tutorial/the-linux-command-line-for-beginners/?_gl=1*w6xmgb*_gcl_au*MTg2NjM4MjM0Ni4xNzcxMDc0MjQ2
+	•	“PortSwigger Web Security Academy” o‘quv platformasi: https://portswigger.net/web-security 
+	•	Bepul CTF platformasi: https://picoctf.org/
+
+KIBERXAVFSIZLIK (PENETRATION TESTING VA ETHICAL HACKING) YO‘NALISHI BO‘YICHA O‘QUV QO‘LLANMA
+(10-SINFLAR UCHUN)
+2-QISM
+
+
+
+
+
+
+Muharrir:
+Ishniyazov O.
+
+Dizayner:
+Aliqulov A.
+
+Rassom:
+Qodirov A.
+
+Texnik Muharrir:
+Alimdjanov X.
+
+Sahifalovchi:
+Ismoilov M.
+
+
+
+
+
+Mazkur o‘quv qo‘llanma Muhammad al-Xorazmiy nomidagi Toshkent axborot texnologiyalari universitetida yaratilgan
+
+
+
+
+
+Toshkent 2026
+

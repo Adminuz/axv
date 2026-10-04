@@ -1,0 +1,2715 @@
+OʻZBEKISTON RESPUBLIKASI  RAQAMLI TEXNOLOGIYALAR VAZIRLIGI HUZURIDAGI
+“RAQAMLI TA’LIMNI RIVOJLANTIRISH MARKAZI” DM
+“MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN 
+BI MA’LUMOTLAR MUHANDISLIGI VA MACHINE LEARNING  YO‘NALISHI BO‘YICHA USLUBIY KO‘RSATMA 
+(10-SINFLAR UCHUN)
+
+
+
+
+
+
+
+
+
+Toshkent-2026
+BI MA’LUMOTLAR MUHANDISLIGI VA MACHINE LEARNING  YO‘NALISHI BO‘YICHA USLUBIY KO‘RSATMA 
+(10-SINFLAR UCHUN)
+
+
+
+
+
+Business Intelligence, Ma’lumotlar muhandisligi va Machine Learning fanlarini kompleks o‘rganish bo‘yicha uslubiy ko‘rsatma oliy ta’lim muassasalari talabalari uchun mo‘ljallangan bo‘lib, zamonaviy ma’lumotlar ekotizimini amaliyotda qo‘llash ko‘nikmalarini shakllantirishga xizmat qiladi. Manbada Data Engineering orqali ma’lumotlar hayot siklini boshqarish va data pipelinelarni avtomatlashtirish, Business Intelligence (BI) vositalari yordamida strategik qarorlar uchun interaktiv hisobotlar tayyorlash, hamda Machine Learning (ML) algoritmlari asosida bashorat qiluvchi intellektual tizimlar yaratish jarayonlari o‘zaro uyg‘unlikda yoritilgan. Metodik ko‘rsatma talabalarda Big Data va ETL/ELT texnologiyalari bilan ishlash hamda modellarni ishlab chiqarish muhitiga joriy etish (MLOps) bo‘yicha bilim berib, ularni analitik fikrlaydigan raqobatbardosh mutaxassis sifatida tayyorlashni maqsad qilgan.
+
+
+
+
+
+Muharrir: Maxmudjanov S Dizayner: Mirzayeva G
+
+MUNDARIJA
+
+KIRISH	5
+1.1.	Ma‘lumotlar muhandisligiga kirish, Ma‘lumotlar arxitekturasi va hayot sikli.	9
+1.2.	Ma’lumot formatlari: CSV, JSON, Parquet	15
+1.3.	Ma’lumotlar bazalari: konsept va tuzilma. Relatsion ma’lumotlar bazasi (RDBMS)	31
+1.4.	SQL analitik operatolrari va amaliy qo‘llanilishi	45
+1.5.	Ma'lumotlar modellashtirish (star schema, fact/dimension, Data Mart)	51
+1.6.	Ma'lumotlar ombori: Data Warehouse va Data Lake	59
+1.7.	ETL va ELT asoslari: farqi, afzalligi va qo‘llanilishi	63
+1.8.	Ma’lumotlarni boshqarishning yakuniy jarayoni	68
+2.1. Big Data mazmuni, Apache Spark bilan ishlash.	77
+2.2. Ma’lumotlarni tozalash va transformatsiyalash : Py Spark	88
+2.3. dbt (Data Build Tool): Zamonaviy ELT Transformatsiyalar	95
+2.4. Apache Airflow: Architecture + Orchestration	99
+2.5. Airflow va dbt Pipeline Integration	103
+2.6. Azure Data Factory: Cloud Orchestration + Monitoring	112
+3.1. Machine Learningga kirish: asosiy tushunchalar va turlari	118
+3.2. ML jarayoni va model baholash: train, test, evaluate bosqichlari	122
+3.3. Ma’lumot tayyorlash (Feature Engineering)	125
+3.4. Regressiya modellari (Linear Regression)	129
+3.5. Klassifikatsiya modellari (KNN, Decision Tree)	132
+3.6. Klassifikatsiya modellar: toifalarni bashorat qilish	136
+3.7. TensorFlow asoslari	142
+3.8. PyTorch asoslari	146
+3.9. Modelni xizmatga chiqarish (FastAPI bilan deploy qilish)	150
+3.10. ML va Data Pipeline integratsiyasi.	156
+4.1. End-to-End Data Platform arxitekturasi	163
+4.2. CI/CD avtomatlashtirish tizimlari (GitHub Actions)	168
+4.3. Docker yordamida ML modelni konteynerlash	183
+4.4. Monitoring va log tahlili tizimlari	190
+4.5. Ma’lumotlarda etika va xavfsizlik (Data Ethics)	194
+4.6. Sun’iy intellekt infratuzilmalari (AI Infrastructure)	199
+4.7. Zamonaviy Data & AI texnologiyalar trendlari	204
+4.8. Kurs yakuni: Data Engineering va ML’dagi kasbiy yo‘nalishlar.	207
+
+
+
+
+KIRISH
+Bugungi kunda raqamli texnologiyalar jadal rivojlanib, jamiyat va iqtisodiyotning deyarli barcha sohalarida katta hajmdagi ma’lumotlar shakllanmoqda. Ushbu ma’lumotlardan samarali foydalanish, ularni to‘plash, saqlash, qayta ishlash va tahlil qilish zamonaviy axborot texnologiyalarining muhim vazifalaridan biri hisoblanadi. Aynan shu jarayonda Business Intelligence (BI), Ma’lumotlar muhandisligi (Data Engineering) va Machine Learning (ML) yo‘nalishlari yetakchi o‘rinni egallaydi.
+Ma’lumotlar muhandisligi — bu turli manbalardan kelib tushadigan ma’lumotlarni ishonchli va tizimli tarzda boshqarish, ularni tahlil va sun’iy intellekt tizimlari uchun tayyorlashga qaratilgan soha hisoblanadi. Data Engineering yordamida ma’lumotlar hayot sikli to‘liq boshqariladi: ma’lumotlarni yig‘ish, tozalash, transformatsiya qilish, saqlash, monitoring va xavfsizligini ta’minlash jarayonlari amalga oshiriladi. Ushbu jarayonlar zamonaviy tashkilotlarda qaror qabul qilish sifatini oshirishga xizmat qiladi. Business Intelligence texnologiyalari esa tayyorlangan ma’lumotlar asosida vizual tahlil, hisobotlar va boshqaruv qarorlarini qo‘llab-quvvatlash imkonini beradi. BI vositalari yordamida tashkilotlar o‘z faoliyatini chuqur tahlil qilib, strategik va operativ qarorlarni ma’lumotlarga asoslangan holda qabul qiladilar. Shu bilan birga, BI va Data Engineering o‘zaro chambarchas bog‘liq bo‘lib, biri ikkinchisiz to‘liq samarali ishlay olmaydi. Machine Learning esa ma’lumotlardan avtomatik bilim olish, bashorat qilish va intellektual tizimlar yaratish imkonini beruvchi zamonaviy texnologiya hisoblanadi. ML algoritmlari tarixiy ma’lumotlar asosida o‘rganib, kelajakdagi holatlarni oldindan bashorat qilish, jarayonlarni optimallashtirish va inson aralashuvisiz qaror qabul qilish imkonini yaratadi. Bugungi kunda Machine Learning bank sohasi, sog‘liqni saqlash, elektron savdo, transport, sanoat va ko‘plab boshqa yo‘nalishlarda keng qo‘llanilmoqda. Mazkur uslubiy ko‘rsatma BI, Ma’lumotlar muhandisligi va Machine Learning fanlarini kompleks tarzda o‘rganishga mo‘ljallangan bo‘lib, nazariy bilimlarni amaliy mashg‘ulotlar bilan uyg‘unlashtirishni maqsad qilgan. Ushbu fan doirasida talabalar ma’lumotlar bilan ishlashning zamonaviy yondashuvlari, Big Data texnologiyalari, ETL/ELT jarayonlari, data pipelinelarni avtomatlashtirish, Machine Learning modellari yaratish va ularni ishlab chiqarish muhitiga joriy etish bo‘yicha zarur bilim va ko‘nikmalarga ega bo‘ladilar.
+Uslubiy ko‘rsatma oliy ta’lim muassasalari talabalari uchun mo‘ljallangan bo‘lib, mashg‘ulotlarni samarali tashkil etish, mustaqil ishlarni bajarish va nazorat ishlariga tayyorgarlik ko‘rishda metodik yordam beradi. Mazkur fan talabalarning analitik fikrlashini rivojlantirish, zamonaviy axborot texnologiyalaridan amaliy foydalanish va raqobatbardosh mutaxassis bo‘lib yetishishiga xizmat qiladi.
+
+
+
+
+
+
+
+1-bob haqida umumiy ma’lumot.
+Mazkur 1-bo‘lim “BI: Ma’lumotlar muhandisligi va ML” fanining poydevor qismi bo‘lib, ma’lumotlarni tashkil etish, saqlash, qayta ishlash va boshqarishning konseptual hamda amaliy asoslarini yoritadi. Bo‘limning asosiy maqsadi — talabalarda ma’lumotlar infratuzilmasi qanday qurilishi, ma’lumotlar oqimi qanday boshqarilishi va analitika hamda ML uchun ishonchli “data foundation” qanday yaratilishini tushuntirishdir.
+Bo‘lim avvalo ma’lumotlar arxitekturasi va ma’lumotlar hayot sikli (yig‘ish → saqlash → tozalash → transformatsiya → foydalanish → arxivlash) tushunchalaridan boshlanadi. Keyin amaliyotda eng ko‘p uchraydigan ma’lumot formatlari (CSV, JSON, Parquet) ko‘rib chiqilib, ularning tuzilishi, afzalliklari va qo‘llanish holatlari taqqoslanadi: CSV — soddalik va moslashuv, JSON — yarim-tuzilmali ma’lumotlar, Parquet — ustunli saqlash va katta hajmda tezkor o‘qish uchun qulay.
+Shundan so‘ng ma’lumotlar bazalari bo‘yicha konseptual asoslar yoritilib, RDBMS (relatsion DB) tamoyillari, jadval, kalitlar (primary/foreign key), indeks, normalizatsiya kabi tushunchalar mustahkamlanadi. Amaliy qismda SQL analitik operatorlari (window functions, ranking, agregatsiya, partition) orqali BI hisob-kitoblari va tahliliy so‘rovlar tuzish ko‘nikmalari shakllantiriladi.
+Bo‘limning muhim tarkibi — ma’lumotlar modellashtirish: star schema, fact/dimension, Data Mart yondashuvlari orqali BI hisobotlari uchun qulay tuzilma yaratish; shuningdek Data Warehouse va Data Lake konsepsiyalarini farqlash, qaysi vaziyatda qaysi biri maqsadga muvofiq ekanini asoslashdir. Yakuniy mavzularda ETL va ELT jarayonlari, ularning farqi, afzalligi va qo‘llanish senariylari beriladi hamda ma’lumotlar boshqaruvining yakuniy bosqichi sifatida Monitoring, Logging, Validation orqali sifat nazorati va barqaror ishlashni ta’minlash masalalari yoritiladi.
+	•	Ma‘lumotlar muhandisligiga kirish, Ma‘lumotlar arxitekturasi va hayot sikli.
+O‘quvchilarda ma’lumotlar muhandisligi (Data Engineering)ning vazifasi va BI/ML tizimlaridagi rolini tushuntirish, ma’lumotlar arxitekturasining asosiy komponentlarini  aniqlash hamda ma’lumotlar hayot sikli bosqichlarini  amaliy misollar asosida qo‘llash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarda ma’lumotlar muhandisligi (Data Engineering)ning vazifasi va BI/ML tizimlaridagi rolini tushuntirish, ma’lumotlar arxitekturasining asosiy komponentlarini  aniqlash hamda ma’lumotlar hayot sikli bosqichlarini  amaliy misollar asosida qo‘llash ko‘nikmasini shakllantirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter yoki noutbuk (kamida 8 GB RAM tavsiya etiladi)
+	•	Barqaror internet aloqasi (resurslar va datasetlar uchun)
+	•	Kompyuter yoki noutbuk (kamida 8 GB RAM tavsiya etiladi)
+	•	Barqaror internet aloqasi (resurslar va datasetlar uchun)
+Ishni bajarish tartibi
+Nazariy ma’lumotlar
+1) Ma’lumotlar muhandisligi (Data Engineering) nima?
+Ma’lumotlar muhandisligi — tashkilotda paydo bo‘ladigan ma’lumotlarni (davomat, baho, imtihon natijalari va boshqalar) yig‘ish, saqlash, qayta ishlash, sifatini nazorat qilish va ularni analitika (BI) hamda Machine Learning uchun tayyor holatga keltirishga xizmat qiladigan yo‘nalishdir. Data engineerning vazifasi “ma’lumotlar quvuri” (data pipeline)ni barqaror, takrorlanuvchi va nazorat qilinadigan holatda yuritishdir.
+2) Ma’lumotlar arxitekturasi (Data Architecture) tushunchasi.
+Ma’lumotlar arxitekturasi — ma’lumotlar tizimining yuqori darajadagi loyihasi bo‘lib, u ma’lumot qayerdan keladi, qayerda saqlanadi, qanday qayta ishlanadi va kim uchun qanday ko‘rinishda taqdim etiladi degan savollarga javob beradi. Odatdagi arxitektura qatlamlari:
+	•	Source layer (Manbalar): LMS/SIS eksportlari, Excel/CSV jurnallar, API, sensorlar.
+	•	Ingestion layer (Yig‘ish): fayl import, API orqali olish, stream.
+	•	Storage layer (Saqlash): Raw zona (Data Lake) va/yo DWH ombor.
+	•	Processing/Transform layer (Qayta ishlash): tozalash, birlashtirish, agregatsiya (ETL/ELT).
+	•	Serving/Consumption layer (Taqdim etish): Data Mart, BI dashboard, ML feature store/ dataset.
+	•	Governance & Observability: monitoring, logging, validation, access control.
+3) Ma’lumotlar hayot sikli (Data Lifecycle)
+Hayot sikli — ma’lumotning “paydo bo‘lishi”dan “foydalanilishi” va “arxivlanishi”gacha bo‘lgan jarayon. Asosiy bosqichlar:
+	•	Collect/Ingest: ma’lumotni olish (CSV/JSON eksport, API).
+	•	Store: xom holatda saqlash (raw zone) va versiyalash.
+	•	Validate/Clean: sifat tekshiruvi, bo‘sh qiymatlar, duplicate, format xatolarini tuzatish.
+	•	Transform: biznes qoidalari asosida qayta tuzish (staging → mart).
+	•	Serve/Publish: analitika va hisobotlar uchun taqdim etish.
+	•	Monitor/Log: pipeline ishlashi, xatolar, kechikishlarni kuzatish.
+	•	Archive/Retention: saqlash muddatlari va arxiv siyosati.
+
+1.1-rasm. Ma‘lumtolarning hayot sikli
+4) Nega bu mavzu BI va ML uchun “poydevor”?
+BI va ML model sifatli natija berishi uchun ma’lumot:
+	•	to‘liq (completeness),
+	•	aniq (accuracy),
+	•	yagona standartda (consistency),
+	•	o‘z vaqtida (timeliness) bo‘lishi kerak. Shu sabab arxitektura va lifecycle to‘g‘ri qurilmasa, dashboardlar noto‘g‘ri ko‘rsatadi, ML model esa xatoga moyil bo‘ladi.
+Dars ssenariysi:
+1-bosqich. Foydalanuvchini aniqlash
+Platformadan foydalanadigan asosiy rollar:
+	•	Direktor / MMTB rahbari – hudud (viloyat/tuman) kesimida maktablar, o‘quvchilar, o‘qituvchilar va bitiruvchilar bo‘yicha umumiy ko‘rsatkichlarni ko‘radi; resurs yuklamasini baholaydi.
+	•	Analitik (o‘quv bo‘limi / reja bo‘limi) – yillar bo‘yicha trendlarni, hududlar reytingini, YoY o‘sish/pasayishni tahlil qiladi, hisobot tayyorlaydi.
+	•	O‘qituvchi / maktab metodisti – (agar mikrodata bo‘lmasa ham) umumiy resurs yuklamasidan kelib chiqib sinf/ta’lim sifati bo‘yicha muammolarni taxmin qiladi, taqsimot bo‘yicha takliflar beradi.
+	•	Administrator (data operator) – data/raw ga fayllarni yuklaydi, format/xatoliklarni tekshiradi, processed qatlamni yangilaydi, log va sifat nazoratini yuritadi.
+2-bosqich. Foydalanish maqsadini aniqlash
+Har bir rolning maqsadi:
+Direktor/MMTB rahbari:
+	•	“Qaysi hududlarda o‘quvchi/maktab ko‘rsatkichi juda yuqori?” (yuklama)
+	•	“Qaysi hududlarda o‘quvchi/o‘qituvchi ko‘rsatkichi yuqori?” (kadr yetishmovchiligi proksisi)
+	•	“Bitiruvchilar soni trendi qanday o‘zgaryapti?”
+Analitik:
+	•	YoY (yildan-yilga) o‘sish va pasayishlarni topish (LAG)
+	•	Hududlar reytingi (RANK)
+	•	3 yillik moving average (AVG OVER) bilan barqaror trend chiqarish
+	•	Hisobot (CSV/PDF/Excel) tayyorlash
+O‘qituvchi/metodist:
+	•	Hudud resurs ko‘rsatkichlariga qarab ta’lim jarayoni bosimini baholash
+	•	Resurs taqsimoti bo‘yicha tavsiyalar berish (masalan, o‘qituvchi shtati ehtiyoji)
+Administrator (data operator):
+	•	CSV/JSON fayllarni yuklash va yangilash
+	•	Validation: null/duplicate, yil diapazoni, manfiy qiymatlar, hudud nomlari standartligi
+	•	Raw → processed/csv → parquet pipeline’ni ishlatish va monitoring qilish
+3-bosqich. Foydalanuvchi ssenariylarini tuzish
+Ssenariy 1: Direktor/MMTB rahbari “Yuklama va resurs” ko‘rsatkichlarini ko‘radi
+	•	Direktor platformaga kiradi.
+	•	“Dashboard” bo‘limini tanlaydi
+	•	“Maktablar soni”, “O‘quvchilar soni”, “O‘qituvchilar soni”, “9/11 bitiruvchilar” KPI kartalarini ko‘radi.
+	•	Filtr orqali hudud va yil ni tanlaydi.
+	•	“Yuklama” bo‘limida quyilarni ko‘radi:
+	•	o‘quvchi/maktab (resurs bosimi)
+	•	o‘quvchi/o‘qituvchi (kadr yetishmovchiligi proksisi)
+	•	“Eng yuqori yuklama hududlar” reyting jadvalini ko‘radi.
+	•	“Hisobotni yuklab olish” tugmasi orqali natijani (CSV/Excel/PDF) yuklab oladi
+Ssenariy 2: Analitik “Trend va reyting” tahlilini qiladi (SQL analitik operatorlar)
+Analitik platformada “Analitika” bo‘limini ochadi.
+	•	“YoY o‘zgarish” hisobotini ko‘radi: hududlar bo‘yicha o‘quvchilar sonining yillik farqi va foizi (LAG).
+	•	“Hududlar reytingi” hisobotini ochadi (RANK):
+	•	o‘quvchi/o‘qituvchi bo‘yicha TOP/BOTTOM hududlar
+	•	“3 yillik moving average” trendini ko‘radi (AVG OVER).
+	•	“Ulush (%)” hisobotini ko‘radi: hududning respublika bo‘yicha ulushi (SUM OVER).
+	•	Natijalarni docs/ bo‘limiga xulosa sifatida yozadi.
+Ssenariy 3: Administrator ma’lumotni yangilaydi (Data Pipeline)
+	•	Administrator data/raw/csv/ va data/raw/json/ papkalariga yangi fayllarni joylaydi:
+	•	maktablar_soni.csv
+	•	maktab_oquvchilar_soni.csv
+	•	oqituvchilar_soni.csv (+ oqituvchilar_soni.json bo‘lsa)
+	•	bitiruvchilar_9_sinf.csv, bitiruvchilar_11_sinf.csv
+	•	Notebook’da “Raw profiling”ni ishga tushiradi: shape, dtypes, null, duplicate tekshiradi.
+“Validation” bosqichida quyidagilar tekshiriladi:
+	•	hudud va yil bo‘yicha duplicate yo‘qmi
+	•	soni manfiy emasmi
+	•	yil mantiqan to‘g‘rimi (masalan 2000–2025 oralig‘i)
+	•	“Cleaning” bosqichi: ustun nomlari standard, hudud matni strip, yil va soni numeric.
+	•	Tozalangan ma’lumot data/processed/csv/*_tozalangan.csv ga saqlanadi.
+	•	Keyin Parquet konvertatsiya bajariladi: data/processed/parquet/*.parquet (snappy).
+	•	SQL bazaga (SQLite) import qilinadi va v_talim view yangilanadi.
+	•	Dashboard yangilanadi, administrator monitoring bo‘limida pipeline natijasini tekshiradi (row count, null check, log).
+4-bosqich. Ssenariyni chizish (diagramma shaklida)
+Direktor/MMTB rahbari ssenariysi: Bosh sahifa → Dashboard → Filtr (hudud/yil) → KPI (o‘quvchi, o‘qituvchi, maktab, bitiruvchi) → Yuklama (o‘quvchi/maktab; o‘quvchi/o‘qituvchi) → Reyting → Hisobot export
+Administrator (pipeline) ssenariysi: Raw CSV/JSON yuklash → Profiling → Validation → Cleaning → Processed CSV → Parquet → SQLite/DWH → SQL Analitika (view) → Dashboard update → Monitoring/Logs
+5-bosqich. Ssenariyni sinab ko‘rish (test)
+Ssenariylar quyidagi savollar asosida test qilinadi:
+	•	Filtrlar (hudud/yil) tushunarli va to‘g‘ri ishlayaptimi?
+	•	KPI ko‘rsatkichlar mantiqan to‘g‘rimi (masalan, o‘quvchi/o‘qituvchi juda katta chiqib ketmayaptimi)?
+	•	SQL natijalarda YoY va reytinglar to‘g‘ri hisoblanganmi?
+	•	Pipeline validation xatolari aniq chiqayaptimi (null/duplicate/manfiy qiymat)?
+	•	Export (CSV/Excel) ishlayaptimi?
+	BI Ma‘lumotlar muhandisligi va ML uchun berilgan loyiha mavzularidan birini tanlang.(Loyiha mavzulari rejada ko‘rsatilgan) 
+	•	Tanlangan mavzu bo‘yicha quyidagi savollarga javob yozing:
+Foydalanuvchilar kimlar? Har bir foydalanuvchiga qanday ma‘lumotlar kerak va bu ma‘lumotlar qayerdan olinadi? U qanday muammoga duch kelishi mimkin? U qanday ma‘lumotlarni kuzata oladi?
+	•	Shu ma’lumotlar asosida ssenariy yozing.
+Amaliy topshiriqlar
+
+
+	•	BI Ma‘lumotlar muhandisligi va ML uchun berilgan loyiha mavzularidan birini tanlang.(Loyiha mavzulari rejada ko‘rsatilgan) 
+	•	Tanlangan mavzu bo‘yicha quyidagi savollarga javob yozing:
+Foydalanuvchilar kimlar? Har bir foydalanuvchiga qanday ma‘lumotlar kerak va bu ma‘lumotlar qayerdan olinadi? U qanday muammoga duch kelishi mimkin? U qanday ma‘lumotlarni kuzata oladi?
+	•	Shu ma’lumotlar asosida ssenariy yozing.
+Amaliy topshiriqlar
+
+
+	•	Ma’lumot formatlari: CSV, JSON, Parquet
+Maktab tahliliy platformasi loyihasi doirasida eng ko‘p uchraydigan ma’lumot formatlari (CSV, JSON, Parquet) bilan ishlashni amaliy o‘rganish
+Mashg‘ulot
+maqsadi
+Maktab tahliliy platformasi loyihasi doirasida eng ko‘p uchraydigan ma’lumot formatlari (CSV, JSON, Parquet) bilan ishlashni amaliy o‘rganish
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kompyuter/noutbuk (tavsiya: 8 GB RAM va yuqori),  Anaconda (Python distributivi), Jupyter Notebook (Anaconda tarkibida), Python kutubxonalari: pandas, numpy, pyarrow
+	•	·  )
+Kompyuter/noutbuk (tavsiya: 8 GB RAM va yuqori),  Anaconda (Python distributivi), Jupyter Notebook (Anaconda tarkibida), Python kutubxonalari: pandas, numpy, pyarrow
+	•	·  )
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+
+CSV, JSON va Parquet — ma’lumotlar muhandisligida eng ko‘p uchraydigan formatlar bo‘lib, ularning har biri turli vaziyatlarda turlicha afzallik beradi. CSV (Comma-Separated Values) jadval ko‘rinishidagi ma’lumotlarni satrlar bo‘yicha saqlaydi: ustunlar ajratgich (odatda vergul) bilan bo‘linadi. CSV sodda, barcha tizimlarda oson ochiladi va tezkor almashish uchun qulay. Biroq unda ma’lumot turlari (schema) saqlanmaydi, katta hajmda ko‘p joy egallaydi hamda encoding/ajratgich kabi muammolar tez-tez uchraydi. JSON (JavaScript Object Notation) esa kalit-qiymat va ro‘yxat strukturalariga asoslangan bo‘lib, nested (ichma-ich) ma’lumotlarni ifodalashda juda qulay. Shu sababli API’lar, loglar va web servislar orasida standart format hisoblanadi. Kamchiligi shundaki, analitik ishlov berish uchun JSON ko‘pincha json_normalize() orqali tekislab jadval ko‘rinishiga keltiriladi. Parquet — columnar (ustunlar bo‘yicha) saqlash formati bo‘lib, analitika uchun optimallashtirilgan: schema va metadata’ni ichida saqlaydi, compression qo‘llaydi, ustunlarni selektiv o‘qish imkonini beradi. Katta datasetlarda Parquet hajmni kamaytiradi va o‘qishni tezlashtiradi, lekin kichik datasetlarda metadata overhead sababli CSV’dan kattaroq chiqishi mumkin. Maktab tahliliy platformasida odatda CSV/JSON raw qatlamda, Parquet esa processed (tozalangan) qatlamda qo‘llanadi.
+Amaliy ishni bajarish bosqichlari:
+1-bosqich: Visual Studio Code (VS Code) ni o‘rnatish.
+Visual Studio Code (VS Code) - bu Microsoft tomonidan ishlab chiqilgan bepul, yengil va ochiq kodli kod muharriri. U Windows, macOS va Linux kabi bir nechta operatsion tizimlarni qo'llab-quvvatlaydi.
+VS Code ko'p qirrali va foydalanuvchilar uchun qulay bo'lishi uchun mo'ljallangan bo'lib, quyidagi kabi xususiyatlarni taklif etadi:
+	•	Sintaksisni ajratib ko'rsatish va avtomatik to'ldirish: Kodni o'qishni yaxshilaydi va kodlashni tezlashtiradi.
+	•	Integratsiyalashgan nosozliklarni tuzatish: Kodni to'g'ridan-to'g'ri muharrirda sinab ko'rish va tuzatishga yordam beradi.
+	•	O'rnatilgan Git integratsiyasi: Oson versiyani boshqarish va hamkorlikni ta'minlaydi.
+	•	Kengaytirilishi: Tillar, mavzular va vositalar uchun kengaytmalar qo'shish imkonini beradi.
+Windows-ga Visual Studio kodini o'rnatish bosqichlari
+[1-qadam]: Google Chrome , Microsoft Edge va boshqalar kabi istalgan veb-brauzer yordamida Visual Studio Code rasmiy veb-saytiga tashrif buyuring.
+
+[2-qadam]: Visual Studio Code ilovasini yuklab olishni boshlash uchun veb-saytdagi "Windows uchun yuklab olish" tugmasini bosing.
+
+[3-qadam]: Yuklab olish tugagach, yuklab olishlar papkasida Visual Studio Code belgisi paydo bo'ladi.
+
+[4-qadam]: Visual Studio Code o'rnatish jarayonini boshlash uchun O'rnatuvchi belgisini bosing.
+[5-qadam]: O'rnatuvchi ochilgandan so'ng, u sizdan Visual Studio kodining shartlari va qoidalarini qabul qilishingizni so'raydi. "Men kelishuvni qabul qilaman" tugmasini bosing va keyin "Keyingi" tugmasini bosing.
+
+[6-qadam]: Visual Studio kodini ishga tushirish uchun joylashuv ma'lumotlarini tanlang. Keyin sizdan joylashuvni ko'rib chiqishingizni so'raydi. Keyin "Keyingi" tugmasini bosing.
+
+[7-qadam]: Keyin o'rnatishni boshlash so'raladi. O'rnatish tugmasini bosing.
+
+[8-qadam]: "O'rnatish" tugmasini bosgandan so'ng, Visual Studio kodini qurilmangizga o'rnatish taxminan 1 daqiqa davom etadi.
+
+[9-qadam]: Visual Studio Code o'rnatish tugallangandan so'ng, quyidagi oyna ko'rsatiladi. "Visual Studio Code ni ishga tushirish" katagiga belgi qo'ying va keyin "Keyingi" tugmasini bosing.
+
+[10-qadam]: Oldingi bosqichdan so'ng, Visual Studio Code oynasi muvaffaqiyatli ochiladi. Endi siz Visual Studio Code oynasida yangi fayl yaratishingiz va dasturlash safaringizni boshlash uchun o'zingizning tilingizni tanlashingiz mumkin!
+
+Shunday qilib, biz Windows tizimimizga Visual Studio Code-ni muvaffaqiyatli o'rnatdik. Yuqoridagi qo'llanmada keltirilgan amallar Windows 10 da VS kodini yuklab olish va o'rnatish uchun har qanday Windows brauzerida ishlatilishi mumkin. Shunday qilib, VS Code IDE-ni qurilmangizga ham olish uchun ushbu amallarni bajaring.
+VS kod kengaytmalari
+Visual Studio Code (VS Code) dagi kengaytmalar - bu muharrirning xususiyatlarini kengaytiradigan qo'shimchalar bo'lib, ishlab chiquvchilarga uni kodlash, nosozliklarni tuzatish va loyihalarni boshqarish ehtiyojlari uchun sozlash imkonini beradi.
+2-bosqich. Loyiha papkasini yaratish.
+VS Code orqali 'maktab-pipeline' nomli loyiha yaratiladi va quyidagi struktura hosil qilinadi: data/raw, data/bronze, data/silver, data/gold, src, logs.
+
+3-bosqich. Ma’lumotlarni RAW qatlamga joylashtirish.
+Maktab statistik CSV fayllar data/raw papkasiga yuklanadi. Bu qatlamda ma’lumotlar o‘zgartirilmaydi.
+
+4-bosqich.CSV fayllarni o‘qish va tahlil qilish.
+import pandas as pd df = pd.read_csv('data/raw/maktab.csv') print(df.head())
+
+
+Pandas kutubxonasi yordamida fayl ustunlari va struktura tekshiriladi. Yil ustunlari aniqlanadi va ma’lumot formati tahlil qilinadi.Minimal ishlov berilgan fayllar bronze papkasiga yuklanadi.
+
+
+
+5-bosqich. data/bronzedagi CSVlardan Parquet yaratiladi (data/silverga).\
+df.to_parquet('data/silver/maktab.parquet', index=False)
+
+
+
+Formatlar solishtiriladi: csv va parquet:
+import os print(os.path.getsize('data/raw/maktab.csv')) print(os.path.getsize('data/silver/maktab.parquet'))
+
+
+Natija:
+
+6-bosqich. Wide formatdan long formatga otkiziladida va Silver qatlamga saqlanadi. Tozalangan va normalizatsiya qilingan ma’lumotlar Parquet formatda data/silver_long  papkasiga saqlanadi.
+
+
+import pandas as pd
+from pathlib import Path
+BRONZE_DIR = Path("data/bronze")
+SILVER_LONG_DIR = Path("data/silver_long")
+SILVER_LONG_DIR.mkdir(parents=True, exist_ok=True)
+files = list(BRONZE_DIR.glob("*.csv"))
+print("Bronze fayllar:", len(files))
+for file in files:
+    print("Processing:", file.name)
+    # encoding muammo bo‘lsa yechamiz
+    try:
+        df = pd.read_csv(file)
+    except UnicodeDecodeError:
+        df = pd.read_csv(file, encoding="cp1251")
+
+    # yil ustunlari (2010, 2011, ... kabi)
+    year_cols = [c for c in df.columns if c.isdigit()]
+    if not year_cols:
+        print("  ⚠️ Yil ustunlari topilmadi, o'tkazib yuborildi.")
+        continue
+    # region ustuni
+    region_col = "Klassifikator" if "Klassifikator" in df.columns else df.columns[1]
+    # wide -> long
+    df_long = df.melt(
+        id_vars=[region_col],
+        value_vars=year_cols,
+        var_name="year",
+        value_name="value"
+    ).rename(columns={region_col: "region"})
+    # indicator = fayl nomi
+    df_long["indicator"] = file.stem
+    # year numeric bo‘lsin
+    df_long["year"] = pd.to_numeric(df_long["year"], errors="coerce").astype("Int64")
+    # value numeric bo‘lsin (bo‘sh joy / vergul muammolari)
+    df_long["value"] = (
+        df_long["value"]
+        .astype(str)
+        .str.replace(" ", "", regex=False)
+        .str.replace(",", ".", regex=False)
+    )
+    df_long["value"] = pd.to_numeric(df_long["value"], errors="coerce")
+
+    # saqlash
+    out_path = SILVER_LONG_DIR / f"{file.stem}.parquet"
+    df_long.to_parquet(out_path, index=False)
+
+print("\n✅ Bronze → Silver_Long (wide→long) yakunlandi. Natija: data/silver_long/*.parquet")
+
+
+Parquet faylni o‘qish.
+df_parquet = pd.read_parquet('data/silver/maktab.parquet') print(df_parquet.info())
+
+
+	O‘zingiz tanlagan loyihaga doir kerakli fayllarni shakllantiring.
+	•	 Yuqoridagi amallarni ketma-ketlik bo‘yicha bajaring.
+	•	 Quyidagilarni tekshiring:
+satrlar soni konvertatsiyada o‘zgarmaganmi;
+talaba_id null emasmi;
+talabalar jadvalida talaba_id unique’mi;
+ball 0–100 oralig‘idami;
+holat ruxsat etilgan qiymatlardami
+	•	Xulosalaringizni yozing
+
+
+
+
+Amaliy topshiriqlar
+
+
+	•	O‘zingiz tanlagan loyihaga doir kerakli fayllarni shakllantiring.
+	•	 Yuqoridagi amallarni ketma-ketlik bo‘yicha bajaring.
+	•	 Quyidagilarni tekshiring:
+satrlar soni konvertatsiyada o‘zgarmaganmi;
+talaba_id null emasmi;
+talabalar jadvalida talaba_id unique’mi;
+ball 0–100 oralig‘idami;
+holat ruxsat etilgan qiymatlardami
+	•	Xulosalaringizni yozing
+
+
+
+
+Amaliy topshiriqlar
+
+
+	•	Ma’lumotlar bazalari: konsept va tuzilma. Relatsion ma’lumotlar bazasi (RDBMS)
+“Maktab tahliliy platformasi” loyihasi misolida relatsion ma’lumotlar bazasi (RDBMS) konseptlarini amalda qo‘llash va ma’lumotlarni bazaviy boshqarish ko‘nikmasini shakllantirishdir.
+Mashg‘ulot
+maqsadi
+“Maktab tahliliy platformasi” loyihasi misolida relatsion ma’lumotlar bazasi (RDBMS) konseptlarini amalda qo‘llash va ma’lumotlarni bazaviy boshqarish ko‘nikmasini shakllantirishdir.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Anaconda, Jupyter Notebook, Python (pandas, sqlalchemy,psycopg2-binary).
+Anaconda, Jupyter Notebook, Python (pandas, sqlalchemy,psycopg2-binary).
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Ma’lumotlar bazasi — ma’lumotlarni tartibli (strukturali) holda saqlash, izlash, yangilash va boshqarish uchun mo‘ljallangan tizimdir. Amaliy tizimlarda ma’lumotlar bazasi quyidagi vazifalarni bajaradi:
+	•	ma’lumotlarni markazlashtirib saqlaydi;
+	•	ko‘p foydalanuvchi ishlaganda bir xil ma’lumot bilan ishlashni ta’minlaydi;
+	•	ma’lumotlar yaxlitligi (integrity) va xavfsizligini boshqaradi;
+analitika va hisobotlar uchun tezkor so‘rov berishga imkon yaratadi.
+“Maktab tahliliy platformasi”da DB ning o‘rni: raw/processed fayllar bazaga yuklanadi, jadval va bog‘lanishlar tashkil qilinadi, keyin SQL orqali KPI, hisobot va dashboardlar quriladi.
+1. Ma’lumotlar bazasi elementlari (tuzilma)
+Relatsion ma’lumotlar bazasida asosiy elementlar:
+Schema — bazadagi jadvallar va ularning tuzilmasi (ustunlar va turlari).
+Table (jadval) — ma’lumot saqlanadigan obyekt.
+Row (qator/yozuv) — bitta obyektga tegishli yozuv.
+Column (ustun) — atribut (masalan, hudud, yil, soni).
+Primary Key (PK) — jadvaldagi yozuvni noyob aniqlovchi kalit.
+Foreign Key (FK) — boshqa jadvaldagi PK ga ishora qiluvchi ustun.
+Index — qidiruv/so‘rov tezligini oshiruvchi tuzilma.
+View — saqlanadigan (virtual) so‘rov natijasi; analitika uchun qulay qatlam.
+2. RDBMS — relatsion ma’lumotlar bazasi: xususiyatlari va mashhur tizimlar
+RDBMS (Relational Database Management System) — relatsion modelga asoslangan DB boshqaruv tizimi. Asosiy xususiyatlari:
+	•	ma’lumot jadval ko‘rinishida saqlanadi;
+	•	jadvallar o‘rtasida bog‘lanish (FK/PK) o‘rnatiladi;
+	•	SQL orqali so‘rov va boshqaruv ishlari bajariladi;
+	•	tranzaksiyalar va ACID tamoyillari qo‘llab-quvvatlanadi;
+	•	yaxlitlik va cheklovlar (constraints) bilan data quality nazorati kuchli.
+Mashhur RDBMSlar: PostgreSQL, MySQL/MariaDB, Microsoft SQL Server, Oracle Database, SQLite.
+Biz amaliyotda o‘quv maqsadida SQLite dan foydalanamiz: o‘rnatish oson, bitta .db faylga yoziladi, Jupyter bilan qulay.
+3. RDBMS ishlash tizimi (misol)
+RDBMS odatda quyidagicha ishlaydi:
+	•	ma’lumotlar jadvallarga yuklanadi (import);
+	•	schema/kalitlar/bog‘lanishlar aniqlanadi;
+	•	SQL so‘rovlari orqali ma’lumot olinadi;
+	•	natija view/hisobot/dashboards qatlamida ishlatiladi.
+4. Relatsion bog‘lanishlar (FK/PK) — klassik misol
+Loyiha  uchun analogiya
+Bizning statistik datasetlarda ko‘pincha composite key ishlaydi:
+Kalit: hudud + yil
+maktab_oquvchilar_soni(hudud, yil) ↔ oqituvchilar_soni(hudud, yil) ↔ maktablar_soni(hudud, yil) …
+Shu kalit orqali JOIN qilinadi va yagona ko‘rinishga keltiriladi.
+6. R-Diagram (ER Model) — Entity–Relationship Model
+ER model ma’lumot obyektlari (Entity) va ularning bog‘lanishlarini ko‘rsatadi.
+Loyiha uchun ER modeli (soddalashtirilgan)
+Entity: Hudud
+Entity: Yil
+Fact (o‘lchovli jadval mantiqida): o‘quvchilar soni, o‘qituvchilar soni, maktablar soni, bitiruvchilar
+Bog‘lanish:
+Hudud (1) — (M) Statistika
+Yil (1) — (M) Statistika
+Siz diagrammani quyidagicha chizib qo‘yishingiz mumkin: HUDUD —< STATISTIKA >— YIL (Statistika ichida: o‘quvchilar_soni, oqituvchilar_soni, maktablar_soni, bitiruvchilar_9, bitiruvchilar_11)
+7 . SQL bilan qisqa tanishuv
+SQL (Structured Query Language) — RDBMS bilan ishlash tili. Asosiy bloklar:
+	•	SELECT — ma’lumot olish
+	•	WHERE — shartli qidirish
+	•	JOIN — jadvallarni bog‘lash
+	•	GROUP BY — agregatsiya (yig‘indi, o‘rtacha, h.k.)
+Amaliy qism.
+	•	bosqich. PostgreSQL ni o‘rnatish.
+PostgreSQL ni o'rnatish uchun uchta muhim qadam mavjud : 
+	•	Windows uchun PostgreSQL o'rnatuvchisini yuklab oling  
+	•	PostgreSQL-ni o'rnating  
+	•	O'rnatishni tasdiqlang 
+1-qadam: Windows uchun PostgreSQL o'rnatuvchisini yuklab olish
+Siz Windows tizimingizga xos bo'lgan eng so'nggi barqaror PostgreSQL o'rnatuvchisini bu yerga bosish orqali yuklab olishingiz mumkin .
+2-qadam: PostgreSQL o'rnatuvchisini o'rnatish
+O'rnatuvchini yuklab olgandan so'ng, ustiga ikki marta bosing va quyidagi amallarni bajaring: 
+	•	Keyingi tugmasini bosing .
+
+	•	PostgreSQL o'rnatilishini istagan o'rnatish papkasini tanlang va Keyingi tugmasini bosing . 
+
+	•	O'rnatish uchun talabingizga muvofiq komponentlarni tanlang va "Keyingi" tugmasini bosing. 
+
+	•	Ma'lumotlarni saqlamoqchi bo'lgan ma'lumotlar bazasi katalogini tanlang va Keyingi tugmasini bosing . 
+
+	•	Ma'lumotlar bazasi superuseri (Postgres) uchun parolni o'rnating.
+
+	•	PostgreSQL uchun portni o'rnating. Boshqa hech qanday ilovalar ushbu portdan foydalanmayotganligiga ishonch hosil qiling. Agar ishonchingiz komil bo'lmasa, uni standart holatda qoldiring (5432) va Keyingi tugmasini bosing . 
+
+	•	Ma'lumotlar bazasi tomonidan ishlatiladigan standart joylashuvni tanlang va Keyingi tugmasini bosing. 
+
+	•	O'rnatishni boshlash uchun  Keyingi tugmasini bosing .
+
+	•	O'rnatish tugashini kuting, bu bir necha daqiqa vaqt olishi mumkin. 
+
+	•	PostgreSQL o'rnatilishini yakunlash uchun  Finish tugmasini bosing .
+
+3-qadam: PostgreSQL o'rnatilishini tekshirish
+PostgreSQL o'rnatilishini tekshirishning bir necha yo'li mavjud, masalan, pgAdmin yoki psql kabi ba'zi mijoz ilovalari yordamida ma'lumotlar bazasi serveriga ulanish .  Eng tezkor usul esa psql qobig'idan foydalanishdir. Buning uchun quyidagi amallarni bajaring: 
+	•	psql Shell ga kirish :
+	•	Windows qidiruv satrida "psql" ni qidiring va uni oching.
+	•	Server ma'lumotlarini (localhost), ma'lumotlar bazasini (standart "postgres"), portni (standart 5432), foydalanuvchi nomini (postgres) va o'rnatish paytida o'rnatgan parolingizni kiriting.
+	•	O'rnatishni tekshirish :
+	•	PostgreSQL to'g'ri o'rnatilganligini tasdiqlash uchun psql qobig'iga ' SELECT version() ;' kiriting. Versiya haqidagi ma'lumot ko'rsatilishi kerak.
+
+	•	bosqich.  Barcha parquetlarni birlashtiramiz:
+
+Faylni yaratamiz va ichiga shu kodlarni yozamiz.
+import pandas as pd
+from pathlib import Path
+
+IN_DIR = Path("data/silver_long")                 # kirish papka
+OUT_FILE = Path("data/silver_long_all.parquet")   # chiqish fayl
+
+files = sorted(IN_DIR.glob("*.parquet"))
+print("Topilgan silver_long fayllar:", len(files))
+
+dfs = []
+for f in files:
+    df = pd.read_parquet(f)
+
+    # Himoya: kerakli ustunlar bormi?
+    need = {"region", "year", "value", "indicator"}
+    if not need.issubset(df.columns):
+        print(f"⚠️ Skip: {f.name} (ustun yetishmayapti)")
+        continue
+
+    # faqat kerakli ustunlar
+    dfs.append(df[["region", "year", "value", "indicator"]])
+
+if not dfs:
+    raise SystemExit("❌ silver_long ichida mos parquet topilmadi.")
+
+# hammasini bitta jadvalga qo‘shish
+all_df = pd.concat(dfs, ignore_index=True)
+
+# kichik tozalash
+all_df["region"] = all_df["region"].astype(str).str.strip()
+all_df["indicator"] = all_df["indicator"].astype(str).str.strip()
+
+# saqlash
+all_df.to_parquet(OUT_FILE, index=False)
+
+print("✅ Tayyor:", OUT_FILE)
+print("Jami qator:", len(all_df))
+print(all_df.head())
+
+Natija:
+ 
+3-bosqich. Gold qatlamni yaratish.
+Silver_long qatlamidagi ma’lumotlar agregatsiya qilinadi va indikatorlar ustunlarga aylantiriladi. VS Code’da src/03_make_gold.py fayl yaratiladi va quyidagi kod yoziladi:
+
+import pandas as pd
+from pathlib import Path
+
+IN_FILE = Path("data/silver_long_all.parquet")
+GOLD_DIR = Path("data/gold")
+GOLD_DIR.mkdir(parents=True, exist_ok=True)
+
+OUT_FILE = GOLD_DIR / "kpi_region_year.parquet"
+
+# 1) Long datasetni o‘qish
+df = pd.read_parquet(IN_FILE)
+
+# 2) Tekshiruv
+need = {"region", "year", "value", "indicator"}
+missing = need - set(df.columns)
+if missing:
+    raise ValueError(f"Kerakli ustunlar yetishmayapti: {missing}")
+
+# 3) GOLD: pivot (indicator -> ustun)
+gold = df.pivot_table(
+    index=["region", "year"],
+    columns="indicator",
+    values="value",
+    aggfunc="sum"
+).reset_index()
+
+# 4) Saqlash
+gold.to_parquet(OUT_FILE, index=False)
+
+print("✅ GOLD tayyor:", OUT_FILE)
+print("Shape:", gold.shape)
+print(gold.head(20))
+Natijada esa quyidagi hosil boladi: 
+
+
+4-bosqich. PostgreSQL’da ma’lumotlar bazasini yaratish.
+PostgreSQL o‘rnatilgach quyidagi buyruq yordamida baza yaratiladi: CREATE DATABASE maktab_dwh;
+
+
+4-bosqich. Python orqali bazaga ulanish.
+Gold qatlam ma’lumotlarini bazaga yuklash uchun ulanish yaratiladi:
+Dastlab ulanishni taminlab beradigan kutubxonani o‘rnatib olinadi:
+ 
+from sqlalchemy import create_engine engine = create_engine('postgresql+psycopg2://postgres:parol@localhost:5432/maktab_dwh')
+5-bosqich. Gold ma’lumotlarini bazaga yuklash.
+import pandas as pd df = pd.read_parquet('data/gold/kpi_region_year.parquet') df.to_sql('school_kpi', engine, if_exists='replace', index=False) print('Ma’lumotlar yuklandi')
+6-bosqich. Bazada ma’lumotlarni tekshirish.
+SELECT * FROM school_kpi LIMIT 10;
+
+Demak  ma’lumotlar bor!
+	O‘zingiz tanlagan loyihaga doir kerakli fayllarni shakllantiring.
+	•	 Yuqoridagi amallarni ketma-ketlik bo‘yicha bajaring.
+	•	Loyihangiz uchun db hozil qiling.
+	•	har bir jadval uchun COUNT(*) chiqarish
+	•	Fact jadvalni 2 ta dimension jadval bilan JOIN qilib,kamida 10 ta natija chiqarish
+	•	PK nimaga kerak?
+	•	FK nimaga kerak?
+	•	RDBMS tuzilma nimani tartibga soladi?
+
+
+
+Amaliy topshiriqlar
+
+
+	•	O‘zingiz tanlagan loyihaga doir kerakli fayllarni shakllantiring.
+	•	 Yuqoridagi amallarni ketma-ketlik bo‘yicha bajaring.
+	•	Loyihangiz uchun db hozil qiling.
+	•	har bir jadval uchun COUNT(*) chiqarish
+	•	Fact jadvalni 2 ta dimension jadval bilan JOIN qilib,kamida 10 ta natija chiqarish
+	•	PK nimaga kerak?
+	•	FK nimaga kerak?
+	•	RDBMS tuzilma nimani tartibga soladi?
+
+
+
+Amaliy topshiriqlar
+
+	•	SQL analitik operatolrari va amaliy qo‘llanilishi
+“Maktab tahliliy platformasi” loyihasi misolida relatsion ma’lumotlar bazasi (RDBMS) konseptlarini amalda qo‘llash,SQL sorovlari yordamida tahlillarni amalga oshirish
+Mashg‘ulot
+maqsadi
+“Maktab tahliliy platformasi” loyihasi misolida relatsion ma’lumotlar bazasi (RDBMS) konseptlarini amalda qo‘llash,SQL sorovlari yordamida tahlillarni amalga oshirish
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Anaconda, Jupyter Notebook, Python (pandas, sqlite3).
+Anaconda, Jupyter Notebook, Python (pandas, sqlite3).
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+SQL analitik operatorlari (Window Functions) — natijani guruhlab (GROUP BY) yubormasdan, har bir satr kontekstida hisob-kitob qilish imkonini beradigan funksiyalardir. Ular odatda OVER (...) konstruksiyasi bilan yoziladi va ma’lumotlarni trend, taqqoslash, reyting, yilma-yil o‘zgarish (YoY), kumulativ yig‘indi, moving average kabi analitik vazifalarda qo‘llaniladi.
+Window funksiyalarining asosiy qismlari:
+	•	PARTITION BY — ma’lumotni guruhlarga bo‘ladi (masalan, hudud bo‘yicha).
+	•	ORDER BY — guruh ichida tartiblash (masalan, yil bo‘yicha).
+	•	Frame (ROWS BETWEEN ...) — moving average yoki kumulativ hisoblarda oynani belgilaydi.
+Ko‘p ishlatiladigan analitik funksiyalar:
+	•	RANK(), DENSE_RANK(), ROW_NUMBER() — reyting va tartib raqamlash.
+	•	LAG(), LEAD() — avvalgi/kelgusi satr qiymatini olib, YoY farq va foizni hisoblash.
+	•	SUM() OVER, AVG() OVER — kumulativ yig‘indi va harakatlanuvchi o‘rtacha (moving average).
+	•	SUM() OVER(PARTITION BY yil) — yil kesimida umumiy yig‘indi va ulush (%) hisoblash.
+Mazkur loyihada SQL analitik operatorlari yordamida:
+	•	hududlar bo‘yicha ta’lim resurslari yuklamasini (o‘quvchi/maktab, o‘quvchi/o‘qituvchi) hisoblash
+	•	yillik o‘sish (YoY) va trendlarni tahlil qilish,
+	•	hududlarni reytinglash,
+	•	respublika miqyosidagi ulushlarni aniqlash mumkin bo‘ladi.
+Amaliy ish bajarilgandan so‘ng quyidagi natijalar olinadi:
+	•	RDBMSning asosiy tushunchalarini (jadval, yozuv, ustun, schema, kalitlar, indeks, view) izohlab bera oladi.
+	•	O‘zbekiston ochiq ma’lumotlari asosidagi CSV/JSON ma’lumotlarni SQLite kabi relatsion bazaga import qiladi.
+	•	Ma’lumotlarni tahlil uchun standart ko‘rinishga keltiradi (wide → long transformatsiya, ustun nomlarini standardlash).
+	•	hudud va yil asosida jadvalarni bog‘lab (JOIN) yagona analitik qatlam (view) yaratadi.
+	•	Ma’lumotlarning yaxlitligi va sifatini ta’minlash uchun minimal nazoratlarni (duplicate, null, diapazon) bajaradi.
+	•	SQL so‘rovlar orqali tahliliy natijalarni olish va ularni hisobot/dashboards uchun eksport qilish jarayonini amalga oshiradi.
+Dastlab ishni processed/csv’dagi datasetlarni RDBMS (SQLite) ga import qilishdan boshlanadi.
+Barcha fayllarni jadvall korinishida o‘qib olamiz:
+Natija:Amaliy ishni bajarish ketma-ketligi:
+1-bosqich. Bazaga ulanish.
+Terminal orqali maktab_dwh bazasiga ulaniladi: psql -U postgres -d maktab_dwh
+2-bosqich. Jadval mavjudligini tekshirish.
+Jadvaldagi ma’lumotlar tekshiriladi:  SELECT COUNT(*) FROM school_kpi; 
+3-bosqich. Yillar bo‘yicha jami o‘quvchilar sonini aniqlash (GROUP BY).
+SELECT year,        SUM("Umumta’lim muassasalarida o‘quvchilar soni (jami)") AS total_students FROM school_kpi GROUP BY year ORDER BY year;
+
+4-bosqich. Yillar bo‘yicha jami o‘qituvchilar soni.
+SELECT year,        SUM("Umumta’lim muassasalarining o‘qituvchilari soni (jami)") AS total_teachers FROM school_kpi GROUP BY year ORDER BY year;
+
+5-bosqich. O‘quvchi / o‘qituvchi nisbatini hisoblash (KPI).
+SELECT year,        ROUND(          SUM("Umumta’lim muassasalarida o‘quvchilar soni (jami)")::numeric /          NULLIF(SUM("Umumta’lim muassasalarining o‘qituvchilari soni (jami)"),0)        ,2) AS student_teacher_ratio FROM school_kpi GROUP BY year ORDER BY year;
+	•	bosqich. 2024-yil uchun TOP-10 hududni aniqlash (ORDER BY, LIMIT).
+
+SELECT region,        "Umumta’lim muassasalarida o‘quvchilar soni (jami)" AS students FROM school_kpi WHERE year = 2024 ORDER BY students DESC LIMIT 10;
+7-bosqich. Yillik o‘sishni aniqlash (WINDOW funksiyasi).
+WITH t AS (   SELECT year,          SUM("Umumta’lim muassasalarida o‘quvchilar soni (jami)") AS total_students   FROM school_kpi   GROUP BY year ) SELECT year,        total_students,        total_students - LAG(total_students) OVER (ORDER BY year) AS yoy_change FROM t ORDER BY year;
+Keyingi bosqichda SQL analitik operatorlari yordamida platforma uchun asosiy ko‘rsatkichlar hisoblandi: o‘quvchi/maktab va o‘quvchi/o‘qituvchi nisbatlari, yillik reytinglar (RANK), hududlar bo‘yicha YoY o‘zgarish (LAG), kumulativ yig‘indi (SUM OVER), 3 yillik moving average (AVG OVER) va yil kesimida hudud ulushi (%) (SUM OVER) kabi tahlillar bajarildi. Natijalar data/processed/sql_results/ papkasiga CSV ko‘rinishida eksport qilinib, BI hisobotlar va dashboardlar uchun tayyor analitik qatlam hosil qilindi. Umuman olganda, amaliy ish SQL window function’lar orqali ta’lim statistikasi bo‘yicha trend, reyting va ulushlarni tez va tizimli chiqarish mumkinligini ko‘rsatdi.
+	Loyihangiz doirasudagi fayllarni bazaga yuklang.
+	•	 Bog’lanishlarni aniqlang,anomaliyalarni aniqlang,analitik view ni hosil qiling,
+	•	Sql sorovlarini qo'llab ko'ring va natijaviy fayllarni saqlang
+Amaliy topshiriqlar
+
+
+	•	Loyihangiz doirasudagi fayllarni bazaga yuklang.
+	•	 Bog’lanishlarni aniqlang,anomaliyalarni aniqlang,analitik view ni hosil qiling,
+	•	Sql sorovlarini qo'llab ko'ring va natijaviy fayllarni saqlang
+Amaliy topshiriqlar
+
+
+
+	•	Ma'lumotlar modellashtirish (star schema, fact/dimension, Data Mart)
+Kerakli vositalar
+Kerakli vositalar
+OLTP (operatsion) va OLAP/DWH (analitik) modellashtirish farqini tushunish,Star Schema tuzilmasini (Fact + Dimension) amalda yaratish.
+Mashg‘ulot
+maqsadi
+OLTP (operatsion) va OLAP/DWH (analitik) modellashtirish farqini tushunish,Star Schema tuzilmasini (Fact + Dimension) amalda yaratish.
+Mashg‘ulot
+maqsadi
+SQLite (maktab.db) — o‘quv amaliyoti uchun, Python + SQLAlchemy, Jupyter Notebook
+·  
+SQLite (maktab.db) — o‘quv amaliyoti uchun, Python + SQLAlchemy, Jupyter Notebook
+·  
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Star Schema — bu ma’lumotlar ombori (Data Warehouse) va analitik tizimlarda keng qo‘llaniladigan ma’lumotlar modellashtirish usuli bo‘lib, uning markazida Fact jadval, atrofida esa bir nechta Dimension jadvallar joylashadi. Fact jadvalda asosiy raqamli ko‘rsatkichlar saqlanadi: masalan, o‘quvchilar jami soni, o‘qituvchilar soni, bitiruvchilar, maktablar soni, nisbat va boshqa statistik qiymatlar. Dimension jadvallar esa ushbu faktlarni tavsiflovchi ma’lumotlarni beradi, masalan: hudud nomi, viloyat, hudud turi yoki sana (yil, chorak). Fact jadval dimension jadvallarga Foreign Key (FK) orqali bog‘lanadi, dimension jadvallarda esa odatda Primary Key (PK) bo‘ladi. Star Schema’ning asosiy afzalligi shundaki, u analitik so‘rovlarni soddalashtiradi va tezlashtiradi: masalan, hudud va yil kesimida statistikani olish uchun JOIN amallari kamroq bo‘ladi. Shuningdek, bu model Data Mart yaratishda ham qulay, chunki ma’lum bir soha (masalan, ta’lim statistikasi) bo‘yicha ma’lumotlar tartibli va tahlilga tayyor holatda saqlanadi. Star Schema biznes hisobotlar, KPI monitoring va trend tahlillari uchun juda mos keladi.
+Amaliy ishni bajarish ketma-ketligi:
+1-bosqich. Silver Long ma’lumotlarini PostgreSQL ga yuklash.
+df = pd.read_parquet('data/silver_long_all.parquet') df.to_sql('stage_silver_long', engine, if_exists='replace', index=False)
+
+import pandas as pd
+from sqlalchemy import create_engine
+
+# 1) PostgreSQL ulanish (PAROLni o'zingiznikiga almashtiring)
+engine = create_engine("postgresql+psycopg2://postgres:1234@localhost:5432/maktab_dwh")
+
+# 2) Silver_long faylini o'qish
+df = pd.read_parquet("data/silver_long_all.parquet")
+
+# 3) Ustun nomlarini standart qilamiz (agar sizda boshqacha bo'lsa moslang)
+# Kutiladigan ustunlar: region, year, indicator, value
+df = df.rename(columns={
+    "Klassifikator": "region",   # agar kerak bo'lsa
+    "year": "year",
+    "indicator": "indicator",
+    "value": "value"
+})
+
+# Agar ustunlar allaqachon to'g'ri bo'lsa, shu qator zarar qilmaydi:
+df = df[["region", "year", "indicator", "value"]]
+
+# 4) stage jadvalga yuklash
+df.to_sql("stage_silver_long", engine, if_exists="replace", index=False)
+
+print("OK: stage_silver_long yuklandi. Qatorlar soni:", len(df))
+
+
+
+
+
+2-bosqich. DWH schema yaratish.
+CREATE SCHEMA IF NOT EXISTS dwh;
+3-bosqich. Dimension jadvallarni yaratish.
+CREATE TABLE dwh.dim_region (   region_id SERIAL PRIMARY KEY,   region_name TEXT UNIQUE ); CREATE TABLE dwh.dim_date (   date_id SERIAL PRIMARY KEY,   year INT UNIQUE ); CREATE TABLE dwh.dim_indicator (   indicator_id SERIAL PRIMARY KEY,   indicator_name TEXT UNIQUE );
+
+4-bosqich. Fact jadvalni yaratish.
+CREATE TABLE dwh.fact_school_stats (   region_id INT REFERENCES dwh.dim_region(region_id),   date_id INT REFERENCES dwh.dim_date(date_id),   indicator_id INT REFERENCES dwh.dim_indicator(indicator_id),   value NUMERIC,   PRIMARY KEY (region_id, date_id, indicator_id) );
+5-bosqich. Dimension jadvallarni DISTINCT asosida to‘ldirish.
+INSERT INTO dwh.dim_region(region_name) SELECT DISTINCT region FROM stage_silver_long ON CONFLICT DO NOTHING; INSERT INTO dwh.dim_date(year) SELECT DISTINCT year FROM stage_silver_long ON CONFLICT DO NOTHING; INSERT INTO dwh.dim_indicator(indicator_name) SELECT DISTINCT indicator FROM stage_silver_long ON CONFLICT DO NOTHING;
+
+6-bosqich. Fact jadvalni JOIN orqali to‘ldirish.
+INSERT INTO dwh.fact_school_stats(region_id, date_id, indicator_id, value) SELECT r.region_id, d.date_id, i.indicator_id, s.value FROM stage_silver_long s JOIN dwh.dim_region r ON r.region_name = s.region JOIN dwh.dim_date d ON d.year = s.year JOIN dwh.dim_indicator i ON i.indicator_name = s.indicator;
+
+
+
+7-bosqich. Data Mart (VIEW) yaratish.
+CREATE OR REPLACE VIEW dwh.students_mart AS SELECT r.region_name AS region,        d.year,        f.value AS students_total FROM dwh.fact_school_stats f JOIN dwh.dim_region r ON r.region_id = f.region_id JOIN dwh.dim_date d ON d.date_id = f.date_id JOIN dwh.dim_indicator i ON i.indicator_id = f.indicator_id WHERE i.indicator_name ILIKE '%o%quvchilar soni%';
+
+
+
+
+Trend hudud bo‘yicha:
+
+Bu esa o’qituvchilar boyicha view:
+
+
+Star Schema diagram (PNG/PDF)
+dim_hudud, dim_sana, fact_statistika
+PK/FK va 1–N bog‘lanish ko‘rsatilgan
+	•	Data Mart ta’rifi (1 paragraf)
+mart nomi, maqsadi, kim foydalanadi (BI/analitik)
+	•	5 ta analitik so‘rov (SQL yoki ORM)
+kamida 2 ta GROUP BY
+natija screenshot yoki output
+Amaliy topshiriqlar
+
+	•	Star Schema diagram (PNG/PDF)
+dim_hudud, dim_sana, fact_statistika
+PK/FK va 1–N bog‘lanish ko‘rsatilgan
+	•	Data Mart ta’rifi (1 paragraf)
+mart nomi, maqsadi, kim foydalanadi (BI/analitik)
+	•	5 ta analitik so‘rov (SQL yoki ORM)
+kamida 2 ta GROUP BY
+natija screenshot yoki output
+Amaliy topshiriqlar
+
+	•	Ma'lumotlar ombori: Data Warehouse va Data Lake
+Data Lake va Data Warehouse farqini amaliy misolda o‘rganib, Lake uchun bronze/silver/gold (yoki raw/processed/curated) papka tuzilmasini yaratish.
+Mashg‘ulot
+maqsadi
+Data Lake va Data Warehouse farqini amaliy misolda o‘rganib, Lake uchun bronze/silver/gold (yoki raw/processed/curated) papka tuzilmasini yaratish.
+Mashg‘ulot
+maqsadi
+Kerakli
+vositalar
+Kerakli
+vositalar
+	•	csv_files — CSV fayllar yo‘llari ro‘yxati (list of file paths)
+	•	folders["data_lake_bronze"] — BRONZE papkasi yo‘li (masalan: data_lake/bronze/)
+	•	pandas as pd, os, datetime import qilingan
+	•	pyarrow yoki parquet yozish uchun muhit tayyor (pip install pyarrow)
+	•	csv_files — CSV fayllar yo‘llari ro‘yxati (list of file paths)
+	•	folders["data_lake_bronze"] — BRONZE papkasi yo‘li (masalan: data_lake/bronze/)
+	•	pandas as pd, os, datetime import qilingan
+	•	pyarrow yoki parquet yozish uchun muhit tayyor (pip install pyarrow)
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Data Lake va Data Warehouse — ma’lumotlarni saqlash va tahlil qilish uchun ishlatiladigan ikki xil yondashuvdir. Data Lake turli formatdagi (CSV, JSON, Parquet, log, rasm va boshqalar) xom ma’lumotlarni katta hajmda saqlashga mo‘ljallangan ombor bo‘lib, unda ma’lumotlar ko‘pincha dastlabki holatda saqlanadi va keyinchalik kerak bo‘lganda qayta ishlanadi. Data Warehouse esa tahlil va hisobotlar uchun maxsus tuzilgan, tartiblangan hamda modellashtirilgan (masalan, Star Schema: Fact/Dimension) ma’lumotlar omboridir. Data Lake’da “schema-on-read” yondashuvi ustun bo‘lsa, Data Warehouse’da “schema-on-write” tamoyili ishlaydi. Amaliyotda Data Lake ma’lumotlarni yig‘ish va saqlash uchun, Data Warehouse esa KPI, trend va biznes tahlillarni tez va aniq bajarish uchun qo‘llaniladi.
+Bu kod Data Lake’ning BRONZE (Raw) qatlamini yaratish uchun ishlatiladi. Dastur csv_files ro‘yxatidagi barcha CSV fayllarni ketma-ket o‘qiydi: avval utf-8 kodirovkada, agar xato bo‘lsa cp1251 orqali qayta urinadi. Har bir o‘qilgan faylga ma’lumotning qaysi fayldan kelganini ko‘rsatish uchun source_file ustuni va qabul qilingan vaqtni belgilash uchun ingestion_timestamp ustuni qo‘shiladi. So‘ng barcha DataFrame’lar pd.concat() yordamida bitta umumiy datasetga birlashtiriladi va raw_all.parquet nomi bilan BRONZE papkaga saqlanadi. Yakunda konsolga nechta fayl o‘qilgani, jami qatorlar va ustunlar soni hamda fayl saqlangan manzil chiqariladi.
+Amaliyot:
+Data Lake papkalari: data/raw data/bronze data/silver data/silver_long data/gold
+
+2-bosqich. Parquet va CSV tezligini solishtirish.
+import pandas as pd import time start = time.time() df = pd.read_csv('data/raw/maktab.csv') print('CSV time:', time.time() - start) start = time.time() df = pd.read_parquet('data/silver/maktab.parquet') print('Parquet time:', time.time() - start)
+
+
+3-bosqich. KPI ni Data Lake va DWH da solishtirish.
+Data Lake (Pandas): df = pd.read_parquet('data/silver_long_all.parquet') df_2024 = df[(df['year']==2024) & (df['indicator']=='...')] print(df_2024['value'].sum())
+
+ Data Warehouse (SQL): SELECT SUM(value) FROM dwh.fact_school_stats WHERE indicator_id = 13 AND date_id = (SELECT date_id FROM dwh.dim_date WHERE year=2024);
+
+	Data Lake va Data Warehouse farqini amaliy misolda o‘rganib, Lake uchun bronze/silver/gold (yoki raw/processed/curated) papka tuzilmasini yarating.
+	•	CSV → Parquet qilib Lake’ga joylang 
+	•	So‘ng SQLite’da Star Schema (dim/fact) asosida Data Warehouse qurib, Lake’dan Warehouse’ga load + transform jarayonini bajaring.
+Amaliy topshiriqlar
+
+
+	•	Data Lake va Data Warehouse farqini amaliy misolda o‘rganib, Lake uchun bronze/silver/gold (yoki raw/processed/curated) papka tuzilmasini yarating.
+	•	CSV → Parquet qilib Lake’ga joylang 
+	•	So‘ng SQLite’da Star Schema (dim/fact) asosida Data Warehouse qurib, Lake’dan Warehouse’ga load + transform jarayonini bajaring.
+Amaliy topshiriqlar
+
+	•	ETL va ELT asoslari: farqi, afzalligi va qo‘llanilishi
+“Maktab” CSV fayllaridan ma’lumotni yig‘ish (Extract), tozalash/standartlash (Transform) va Warehouse (SQLite Star Schema)ga yuklash (Load) ni o‘rganish.
+Mashg‘ulot
+maqsadi
+“Maktab” CSV fayllaridan ma’lumotni yig‘ish (Extract), tozalash/standartlash (Transform) va Warehouse (SQLite Star Schema)ga yuklash (Load) ni o‘rganish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kompyuter: Windows 10/11 (yoki Linux),Python: 3.10+,Jupyter Notebook (Anaconda yoki VS Code Jupyter), Kutubxonalar:pandas (CSV o‘qish va transform),numpy (hisob-kitoblar, ixtiyoriy),sqlalchemy (SQLite DWH bilan ishlash)
+	•	
+	•	
+pyarrow (Parquet yozish/oqish)
+	•	
+	•	
+datetime, os (fayl va vaqt metadatalari)
+	•	
+	•	
+Kompyuter: Windows 10/11 (yoki Linux),Python: 3.10+,Jupyter Notebook (Anaconda yoki VS Code Jupyter), Kutubxonalar:pandas (CSV o‘qish va transform),numpy (hisob-kitoblar, ixtiyoriy),sqlalchemy (SQLite DWH bilan ishlash)
+	•	
+	•	
+pyarrow (Parquet yozish/oqish)
+	•	
+	•	
+datetime, os (fayl va vaqt metadatalari)
+	•	
+	•	
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+ETL (Extract–Transform–Load) va ELT (Extract–Load–Transform) — ma’lumotlarni manbadan olib, tahlilga tayyor holatga keltirishning ikki asosiy yondashuvidir. ETL jarayonida ma’lumotlar avval manbadan olinadi (Extract), so‘ng tozalanadi, bir xil formatga keltiriladi, kerakli ustunlar tanlanadi va hisob-kitoblar bajariladi (Transform), keyin esa tayyor holatda ma’lumotlar omboriga yuklanadi (Load). Bu usulda omborga “toza” va standart ma’lumot tushadi, shu sababli klassik Data Warehouse loyihalarida keng qo‘llanadi. ELTda esa ma’lumot avval xom holatda Data Lake yoki Cloud DWH’ga yuklanadi (Load), transformatsiya keyinroq omborning o‘zida SQL/dbt orqali bajariladi (Transform). ELT katta hajmli ma’lumotlar va bulutli analitika uchun qulay: transformlar versiyalanadi, qayta ishlash tezlashadi va xom ma’lumot saqlanib qoladi. Amaliyotda ETL ko‘proq server resursi cheklangan yoki qat’iy nazorat talab qilingan tizimlarda, ELT esa cloud va modern pipeline’larda afzal ko‘riladi.
+Amaliyot:
+	•	bosqich. ETL amaliyoti (Python’da transform qilish).
+
+import pandas as pd
+from sqlalchemy import create_engine
+from sqlalchemy.engine import URL
+# 1) Ulanish 
+url = URL.create(
+    "postgresql+psycopg2",
+    username="postgres",
+    password="1234",
+    host="localhost",
+    port=5432,
+    database="maktab_dwh",
+)
+engine = create_engine(url)
+# 2) Extract: Raw CSV o‘qish
+df = pd.read_csv("data/raw/11-sinf bitiruvchilari (jami).csv")
+# 3) Transform: wide → long (yillar ustun bo‘lsa)
+year_cols = [c for c in df.columns if str(c).isdigit()]
+df_long = df.melt(
+    id_vars=["Klassifikator"],   # sizda region ustuni shu bo‘lsa
+    value_vars=year_cols,
+    var_name="year",
+    value_name="value"
+).rename(columns={"Klassifikator": "region"})
+df_long["year"] = df_long["year"].astype(int)
+# 4) Load: tayyorlangan data’ni bazaga yozish
+df_long.to_sql("etl_students_long", engine, if_exists="replace", index=False)
+print("OK: ETL jadval yaratildi -> etl_students_long")
+print("Rows:", len(df_long))
+
+
+SELECT * FROM etl_students_long LIMIT 5;
+
+
+	•	bosqich. ELT amaliyoti (bazada transform qilish).
+
+# 1. Extract + Load (to‘g‘ridan-to‘g‘ri yuklash) import pandas as pd
+from sqlalchemy import create_engine
+from sqlalchemy.engine import URL
+url = URL.create(
+    "postgresql+psycopg2",
+    username="postgres",
+    password="1234",
+    host="localhost",
+    port=5432,
+    database="maktab_dwh",
+)
+engine = create_engine(url)
+# Raw ni bazaga “xom” holatda yuklaymiz
+df_raw = pd.read_csv("data/raw/11-sinf bitiruvchilari (jami).csv")
+df_raw.to_sql("stage_raw_maktab", engine, if_exists="replace", index=False)
+
+print("OK: stage_raw_maktab yuklandi. Rows:", len(df_raw))
+
+
+-- 2. Transform (SQL ichida) DROP TABLE IF EXISTS dwh.elt_long_maktab;
+CREATE TABLE dwh.elt_long_maktab AS
+SELECT
+  t."Klassifikator" AS region,
+  (kv.key)::int AS year,
+  CASE
+    WHEN kv.value ~ '^\s*-?\d+(\.\d+)?\s*$' THEN kv.value::numeric
+    ELSE NULL
+  END AS value
+FROM stage_raw_maktab t
+CROSS JOIN LATERAL jsonb_each_text(to_jsonb(t) - 'Klassifikator' - 'Code') AS kv(key, value)
+WHERE kv.key ~ '^\d{4}$';
+
+3-bosqich. ETL va ELT taqqoslash.
+ETL – transform Python’da, yuklashdan oldin. ELT – transform PostgreSQL ichida, yuklangandan keyin. ETL kichik datasetlar uchun qulay. ELT katta dataset va kuchli DWH muhitida samaraliroq.
+
+Loyihangizdagi CSV fayllar nomiga qarab categorize_file(filename) funksiyasini yozing.
+	•	Funksiya har bir faylni metrika/kategoriya nomiga ajratsin (masalan: Sales, Customers, Revenue va h.k.).
+	•	Agar kategoriya topilmasa None qaytarsin va fayl keyingi bosqichlarda skipped bo‘lsin.
+	•	Har bir datasetda 2000–2024 oralig‘idagi yil ustunlarini toping va pd.melt() orqali unpivot qiling.
+	•	Klassifikator (yoki sizning loyihangizdagi identifikator ustuni) ni Hudud/Entity nomiga keltiring.
+	•	Fayl nomidan topilgan kategoriya nomini Kategoriya ustuniga yozing.
+	•	Barcha transform natijalarni birlashtirib df_etl hosil qiling.
+	•	 df_etl ni silver_clean.parquet nomi bilan SILVER papkaga saqlang.
+Amaliy topshiriqlar
+
+
+	•	Loyihangizdagi CSV fayllar nomiga qarab categorize_file(filename) funksiyasini yozing.
+	•	Funksiya har bir faylni metrika/kategoriya nomiga ajratsin (masalan: Sales, Customers, Revenue va h.k.).
+	•	Agar kategoriya topilmasa None qaytarsin va fayl keyingi bosqichlarda skipped bo‘lsin.
+	•	Har bir datasetda 2000–2024 oralig‘idagi yil ustunlarini toping va pd.melt() orqali unpivot qiling.
+	•	Klassifikator (yoki sizning loyihangizdagi identifikator ustuni) ni Hudud/Entity nomiga keltiring.
+	•	Fayl nomidan topilgan kategoriya nomini Kategoriya ustuniga yozing.
+	•	Barcha transform natijalarni birlashtirib df_etl hosil qiling.
+	•	 df_etl ni silver_clean.parquet nomi bilan SILVER papkaga saqlang.
+Amaliy topshiriqlar
+
+	•	Ma’lumotlarni boshqarishning yakuniy jarayoni: Monitoring, 
+Monitoring va logging jarayonida pipeline ishlashi pipeline.log fayliga yozilib, ETL natijalari fayllar soni, yozuvlar miqdori, NULL foizi va unique qiymatlar kabi validation metrics orqali nazorat qilishni o‘rganish.
+Mashg‘ulot
+maqsadi
+Monitoring va logging jarayonida pipeline ishlashi pipeline.log fayliga yozilib, ETL natijalari fayllar soni, yozuvlar miqdori, NULL foizi va unique qiymatlar kabi validation metrics orqali nazorat qilishni o‘rganish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kutubxonalar: pandas, logging, json, datetime, os, Oldingi ETL natijalari: csv_files, etl_stats, df_etl,Monitoring papkasi: folders["monitoring"] (chiqish fayllari: pipeline.log, metrics.json)
+·  
+Kutubxonalar: pandas, logging, json, datetime, os, Oldingi ETL natijalari: csv_files, etl_stats, df_etl,Monitoring papkasi: folders["monitoring"] (chiqish fayllari: pipeline.log, metrics.json)
+·  
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Monitoring, Logging va Validation — ma’lumotlar pipeline’ining ishonchli ishlashini ta’minlaydigan yakuniy boshqaruv bosqichlaridir. Logging jarayonida pipeline bajarilish holatlari (boshlanishi, tugashi, xatoliklar, ogohlantirishlar) maxsus log faylga yoziladi va bu keyinchalik muammolarni aniqlash hamda tahlil qilishga yordam beradi. Monitoring esa pipeline natijalarini doimiy kuzatib borish bo‘lib, fayllar soni, qayta ishlangan yozuvlar, o‘tkazib yuborilgan fayllar kabi ko‘rsatkichlar orqali jarayon barqarorligi baholanadi. Validation bosqichida esa ma’lumot sifati tekshiriladi: NULL qiymatlar foizi, noyob hudud/yil/kategoriya soni, mantiqiy xatolar mavjudligi aniqlanadi. Ushbu nazorat natijalari odatda metrikalar (JSON) ko‘rinishida saqlanib, pipeline “sog‘lom” yoki “muammoli” ekanligi haqida xulosa chiqariladi.
+Amaliyot:Loyiha ichida quyidagi papkalar bo‘lsin: logs/  (log fayllar) reports/ (validation hisobotlar) VS Code terminalida: mkdir logs mkdir reports
+
+1-bosqich. Logging sozlash (Python logging).
+Fayl: src/logging_setup.py
+ import logging from pathlib import Path LOG_DIR = Path('logs') LOG_DIR.mkdir(exist_ok=True) def get_logger(name='pipeline'):     logger = logging.getLogger(name)     logger.setLevel(logging.INFO)     if not logger.handlers:         fh = logging.FileHandler(LOG_DIR / 'pipeline.log', encoding='utf-8')         ch = logging.StreamHandler()         fmt = logging.Formatter('%(asctime)s | %(levelname)s | %(message)s')         fh.setFormatter(fmt)         ch.setFormatter(fmt)         logger.addHandler(fh)         logger.addHandler(ch)     return logger
+
+2-bosqich. Validation qoidalari (Data Quality checks).
+Silver_long uchun minimal qoidalar: • row_count > 0 • region bo‘sh emas • year 2010–2024 oralig‘ida • value manfiy emas • dublikatlar: (region, year, indicator) bo‘yicha yo‘q 3-bosqich. Validation skript (Parquet fayl uchun).
+Fayl: src/08_validate_silver_long.py  import pandas as pd from pathlib import Path from datetime import datetime from logging_setup import get_logger logger = get_logger('validate') REPORT_DIR = Path('reports') REPORT_DIR.mkdir(exist_ok=True) DATA_PATH = Path('data/silver_long_all.parquet') if not DATA_PATH.exists():     DATA_PATH = Path('data/silver_long/silver_long_all.parquet') df = pd.read_parquet(DATA_PATH) errors = [] metrics = {} metrics['rows'] = len(df) metrics['cols'] = df.shape[1] if metrics['rows'] == 0:     errors.append('Row count = 0') if 'region' not in df.columns or df['region'].isna().any():     errors.append('Region is NULL (or missing column)') if 'year' not in df.columns:     errors.append('Missing year column') else:     bad_year = df.loc[(df['year'] < 2010) | (df['year'] > 2024), 'year']     if len(bad_year) > 0:         errors.append('Year out of range (2010–2024)') if 'value' not in df.columns:     errors.append('Missing value column') else:     neg = df.loc[df['value'] < 0, 'value']     if len(neg) > 0:         errors.append(f'Negative values found: {len(neg)} rows') key_cols = [c for c in ['region','year','indicator'] if c in df.columns] if len(key_cols) == 3:     dup = df.duplicated(subset=key_cols).sum()     metrics['duplicates'] = int(dup)     if dup > 0:         errors.append(f'Duplicates found: {dup}') ts = datetime.now().strftime('%Y%m%d_%H%M%S') report_path = REPORT_DIR / f'validation_report_{ts}.txt' with open(report_path, 'w', encoding='utf-8') as f:     f.write('VALIDATION REPORT\n')     f.write(f'DATA: {DATA_PATH}\n\n')     f.write('METRICS:\n')     for k,v in metrics.items():         f.write(f'- {k}: {v}\n')     f.write('\nERRORS:\n')     if errors:         for e in errors:             f.write(f'- {e}\n')     else:         f.write('- NONE\n') if errors:     logger.error(f'Validation FAILED. Report: {report_path}')     raise SystemExit(f'Validation failed. See {report_path}') else:     logger.info(f'Validation PASSED. Report: {report_path}')     print('OK: Validation passed')
+
+
+Natijada bizda bu fayllar hosil boladi:
+
+
+
+4-bosqich. PostgreSQL darajasida monitoring/validation (SQL).
+	•	Qatorlar soni: SELECT COUNT(*) FROM dwh.fact_school_stats;  B) NULL tekshirish: SELECT COUNT(*) FROM stage_silver_long WHERE region IS NULL OR year IS NULL;
+	•	  C) Dublikat tekshirish: SELECT region, year, indicator, COUNT(*) FROM stage_silver_long GROUP BY region, year, indicator HAVING COUNT(*) > 1 LIMIT 20;
+
+	folders["monitoring"] papkasini yaratadi va log fayl yo‘lini sozlaydi.
+	•	pipeline.log ga kamida 3 ta log yozadi (start, ETL done, validation).
+	•	validation_metrics ichida kamida 8 ta ko‘rsatkich bo‘lishini ta’minlaydi.
+	•	metrics.json faylni yaratadi va ichini tekshiradi (JSON format).
+	•	Xulosa yozadi: NULL foiz normalmi? skipped fayllar sababi nima?
+Amaliy topshiriqlar
+
+
+	•	folders["monitoring"] papkasini yaratadi va log fayl yo‘lini sozlaydi.
+	•	pipeline.log ga kamida 3 ta log yozadi (start, ETL done, validation).
+	•	validation_metrics ichida kamida 8 ta ko‘rsatkich bo‘lishini ta’minlaydi.
+	•	metrics.json faylni yaratadi va ichini tekshiradi (JSON format).
+	•	Xulosa yozadi: NULL foiz normalmi? skipped fayllar sababi nima?
+Amaliy topshiriqlar
+
+
+
+
+2-bob haqida umumiy ma’lumot.
+Ushbu 2-bob kursning amaliy yo‘naltirilgan qismi bo‘lib, ma’lumotlar oqimini (data flow) boshqarish va avtomatlashtirish masalalariga bag‘ishlanadi. Bobning asosiy maqsadi — talabalarda katta hajmdagi ma’lumotlar bilan ishlash, ularni tozalash va transformatsiya qilish, zamonaviy ELT yondashuvlari asosida model qurish hamda butun jarayonni orkestratsiya va monitoring orqali boshqarish bo‘yicha barqaror kompetensiyalarni shakllantirishdir.
+Bob Big Data tushunchasi va Apache Spark muhitida taqsimlangan hisoblash (distributed computing) mantiqidan boshlanadi. Keyingi bosqichda PySpark yordamida ma’lumotlarni tozalash, formatlash va murakkab transformatsiyalar bajarish orqali tahlil va keyingi ishlovga tayyor datasetlar hosil qilinadi. Shundan so‘ng dbt (Data Build Tool) yordamida ELT transformatsiyalarini qatlamlar (staging → intermediate → marts) bo‘yicha to‘g‘ri tashkil etish, testlar orqali data quality nazoratini yo‘lga qo‘yish va hujjatlashtirish ko‘nikmalari rivojlantiriladi.
+Bobning markaziy bo‘limlaridan biri — Apache Airflow bo‘lib, unda pipeline’larni DAG ko‘rinishida rejalashtirish, ketma-ketlik va parallel bajarish, qayta urinishlar, SLA, logging va alert’lar orqali boshqarish amaliyoti o‘rgatiladi. Keyinchalik Airflow va dbt integratsiyasi orqali transformatsiyalarni to‘liq avtomatlashtirilgan tarzda ishga tushirish va kuzatish mexanizmlari mustahkamlanadi. Yakunda Azure Data Factory yordamida cloud orkestratsiya, Data Lake/DWH o‘rtasida ingest, monitoring va CI/CD integratsiyasi kabi zamonaviy korporativ yechimlar bilan ishlash yoritiladi.
+Natijada talaba end-to-end data pipeline’ni qurish, avtomatlashtirish va monitoring qilish bo‘yicha amaliy tayyorgarlikka ega bo‘ladi.
+
+2.1. Big Data mazmuni, Apache Spark bilan ishlash.
+O‘quvchilarni PySpark kutubxonasi bilan tanishtirish, datalarni Spark dataframe ga ogirish,Partition va count orqali Spark parallel ishlash amaliyotini o‘rgatish.
+
+Mashg‘ulot
+maqsadi
+O‘quvchilarni PySpark kutubxonasi bilan tanishtirish, datalarni Spark dataframe ga ogirish,Partition va count orqali Spark parallel ishlash amaliyotini o‘rgatish.
+
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kutubxonalar: pyspark, pandas
+
+Kutubxonalar: pyspark, pandas
+
+Ishning bajarish tartibi
+Nazariy ma‘lumotlar
+Big Data — bu hajmi katta, tezligi yuqori va xilma-xil (3V: Volume, Velocity, Variety) bo‘lgan ma’lumotlar bilan ishlash konsepsiyasidir. An’anaviy ma’lumotlar bazasi va bitta kompyuter resurslari (single machine) bunday ma’lumotlarni saqlash, qayta ishlash va tahlil qilishda samaradorlikni yo‘qotadi. Shu sababli Big Data muhitida taqsimlangan hisoblash (distributed computing) yondashuvi qo‘llaniladi: ma’lumotlar bo‘laklarga ajratilib (partition), bir vaqtning o‘zida bir nechta resurslarda parallel qayta ishlanadi. Natijada katta hajmdagi datasetlar ustida hisob-kitoblar tezlashadi va masshtablash (scaling) imkoniyati paydo bo‘ladi.
+Apache Spark — Big Data ekotizimidagi eng ommabop taqsimlangan hisoblash platformalaridan biri bo‘lib, u xotira (in-memory) hisoblash modeliga tayanganligi sababli ko‘plab jarayonlarda tezkor natija beradi. Spark’ning PySpark interfeysi Python orqali DataFrame API yordamida katta datasetlar bilan qulay ishlash imkonini yaratadi. Spark’da ma’lumotlar SparkSession orqali boshqariladi, DataFrame ustida ustunlarni tipga keltirish (cast), filtrlash, guruhlash (groupBy), agregatsiyalar (sum, avg, count) kabi amallar parallel bajariladi. Amaliyotda Spark’ning “partition” tushunchasi muhim: dataset nechta bo‘lakka bo‘lingani parallelizm darajasini belgilaydi. Shu mavzuda maqsad — ETL natijasidagi df_etl ma’lumotini Spark DataFrame’ga o‘tkazib, tiplarni standartlash va kategoriya kesimida agregatsiya natijalarini olish orqali Big Data ishlov berish mantiqini amalda tushuntirishdir.
+Amaliyot:
+Kerakli dasturlarni o‘rnatib olamiz:
+1-qadam: Java JDK faylini yuklab oling .
+
+2-qadam: Yuklab olingan Java SE Development Kit dasturini oching va o'rnatish bo'yicha ko'rsatmalarga amal qiling.
+
+3-qadam: Windows qidiruv satriga yozib, noutbukda muhit o'zgaruvchisini oching.
+
+JAVA_HOME o'zgaruvchilarini o'rnating:
+JAVA_HOME o'zgaruvchisini o'rnatish uchun quyidagi amallarni bajaring:
+C:\Program Files\Java\jdk1.8.0_261 qiymatiga ega bo'lgan PATH ga JAVA_HOME ni qo'shish foydalanuvchi o'zgaruvchisini bosing.
+Tizim o'zgaruvchisini bosing. C:\Program Files\Java\jdk1.8.0_261\bin ni PATH o'zgaruvchisiga qo'shing.
+Buyruq satrini oching va "java --version" deb yozing, u quyida paydo bo'ladi va Java o'rnatilishini tasdiqlaydi.
+
+Scala-ni o'rnatish: 
+Scala-ni mahalliy kompyuteringizga o'rnatish uchun quyidagi amallarni bajaring:
+1-qadam: Scala-ni yuklab oling . 
+2-qadam: .exe faylini bosing va ehtiyojlaringizga mos ravishda sozlash uchun ko'rsatmalarga amal qiling.
+
+
+3-qadam: Shartnomani qabul qiling va keyingi tugmasini bosing. 
+
+Atrof-muhit o'zgaruvchilarini o'rnating:
+	•	Foydalanuvchi o'zgaruvchisida SCALA_HOME ni PATH ga C:\Program Files (x86)\scala qiymati bilan qo'shing.
+	•	Tizim o'zgaruvchisida PATH o'zgaruvchisiga C:\Program Files (x86)\scala\bin qo'shing.
+Scala o'rnatilishini tekshiring:
+Buyruq satrida Scala o'rnatilishini tekshirish uchun quyidagi buyruqdan foydalaning:
+skala
+
+Sparkni o'rnatish:
+Sparkning oldindan o'rnatilgan versiyasini yuklab oling va uni C diskiga, masalan, C:\Sparkga chiqarib oling. Keyin o'rnatish faylini bosing va Sparkni sozlash uchun ko'rsatmalarga amal qiling.
+
+Atrof-muhit o'zgaruvchilarini o'rnating:
+	•	Foydalanuvchi o'zgaruvchisida SPARK_HOME ni PATH ga C:\spark\spark-2.4.6-bin-hadoop2.7 qiymati bilan qo'shing.
+	•	Tizim o'zgaruvchisida PATH o'zgaruvchisiga%SPARK_HOME%\bin qo'shing.
+Windows yordamchi dasturlarini yuklab oling:
+Agar siz Hadoop ma'lumotlari bilan ishlashni istasangiz, Hadoop uchun yordamchi dasturni yuklab olish uchun quyidagi amallarni bajaring:
+1-qadam: winutils.exe faylini yuklab oling .
+
+2-qadam: Faylni C:\spark\spark-1.6.1-bin-hadoop2.6\bin ga nusxalang.
+3-qadam: Endi quyida ko'rsatilgandek, uchqun o'rnatilishini tekshirish uchun cmd da "spark-shell" buyrug'ini bajaring:
+
+Amaliy qismni Tushunarli va yengil holatda ishlashi uchun Google colabda bajaramiz:
+1-bosqich. Google Drive va loyiha muhitini tayyorlash
+Google Colab muhitida Google Drive ulandi (mount qilindi). Drive ichida joylashgan CSV fayllar aniqlanib, loyiha papkalari (Bronze, Silver, Gold) yaratildi.
+ 
+ 
+ 
+ 
+ 
+2-bosqich. Apache Spark muhitini sozlash
+PySpark kutubxonasi o‘rnatildi va SparkSession yaratildi. Spark konfiguratsiyasida local[*] rejimi tanlanib, parallel ishlash imkoniyati yo‘lga qo‘yildi.
+ 
+ 3-bosqich. Bronze qatlamdan CSV fayllarni o‘qish
+Spark yordamida Bronze papkada joylashgan CSV fayllar o‘qildi. Schema avtomatik aniqlanib, ustunlar va ma’lumot turlari tekshirildi.
+ 4-bosqich. Wide formatdan Long formatga o‘tkazish
+2013–2024 yillar ustunlari stack() funksiyasi yordamida year va value ustunlariga ajratildi. Natijada ma’lumotlar analitik ishlov berish uchun qulay formatga keltirildi.
+ 
+ 5-bosqich. Ma’lumotlarni tozalash (Data Cleaning)
+year ustuni integer turiga, value ustuni esa double turiga o‘tkazildi. Null qiymatlar filtrlandi va minimal Data Quality nazorati amalga oshirildi.
+
+6-bosqich. Silver qatlamga saqlash (Parquet format)
+Transformatsiyalangan ma’lumotlar Parquet formatida Silver qatlamga saqlandi. Parquet ustunli (columnar) format bo‘lib, Big Data muhitida tezkor o‘qish va siqishni ta’minlaydi.
+ 7-bosqich. Distributed agregatsiya va Spark SQL
+groupBy va aggregation funksiyalari yordamida yillar kesimida umumiy qiymatlar hisoblandi. Shuningdek, Spark SQL orqali analitik so‘rovlar bajarildi.
+
+
+Mazkur mavzuda Big Data tushunchasi amaliy misol asosida o‘rganildi. Apache Spark yordamida CSV ma’lumotlarni o‘qish, transformatsiya qilish, Parquet formatga saqlash va agregatsiya qilish jarayonlari bajarildi. Natijada Bronze → Silver arxitekturasi asosida real Big Data pipeline yaratildi.
+
+Spark kutubxonasini o‘rnating
+	•	Spark ishga tushganini isbotlovchi output (count + partitions)
+	•	df_spark_agg natijasi (jadval ko‘rinishida)
+	•	3–5 gap xulosa: Spark nima uchun Big Data’da kerak?  
+Amaliy topshiriqlar
+
+
+	•	Spark kutubxonasini o‘rnating
+	•	Spark ishga tushganini isbotlovchi output (count + partitions)
+	•	df_spark_agg natijasi (jadval ko‘rinishida)
+	•	3–5 gap xulosa: Spark nima uchun Big Data’da kerak?  
+Amaliy topshiriqlar
+
+
+2.2. Ma’lumotlarni tozalash va transformatsiyalash : Py Spark
+O‘quvchilarga PySpark’da NULL qiymatlarni tozalashni (data cleansing),Window funksiyalar yordamida kategoriya kesimida statistik ustunlar yaratishni, monitoring qilishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga PySpark’da NULL qiymatlarni tozalashni (data cleansing),Window funksiyalar yordamida kategoriya kesimida statistik ustunlar yaratishni, monitoring qilishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Kutubxonalar: pyspark, pandas
+Kutubxonalar: pyspark, pandas
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+PySpark’da ma’lumotlarni tozalash (data cleansing) va transformatsiyalash — Big Data muhitida tahlilga tayyor dataset hosil qilishning eng muhim bosqichlaridan biridir. Katta hajmdagi ma’lumotlarda NULL qiymatlar, noto‘g‘ri tiplar, takroriy yozuvlar va mantiqiy nomutanosibliklar tez-tez uchraydi; bular natijaviy agregatsiyalar va model qurishda xatolarga olib kelishi mumkin. Shuning uchun PySpark’da avvalo ma’lumot sifati tekshiriladi va kerakli tozalash amallari bajariladi: NULL qiymatlarni olib tashlash yoki to‘ldirish, tiplarni standartlashtirish (cast), noto‘g‘ri qiymatlarni filtrdan o‘tkazish. Transformatsiya esa ma’lumotni yangi ko‘rinishga keltirish jarayonidir: ustunlar yaratish, guruhlash, agregatsiya, join, hamda statistik xususiyatlar (o‘rtacha, standart og‘ish)ni hisoblash. PySpark’da bu jarayonlar DataFrame API orqali parallel bajariladi va “Window functions” yordamida har bir guruh (masalan, kategoriya) ichida alohida hisob-kitoblarni amalga oshirish mumkin. Amaliyotda tozalangan va transformatsiya qilingan dataset odatda Data Lake’ning SILVER qatlamiga yozilib, keyingi analitika yoki Data Warehouse’ga yuklash uchun tayyor holatga keltiriladi.
+Amaliyot:
+ 1-bosqich. Silver qatlam ma’lumotlarini yuklash
+Parquet formatda saqlangan Silver ma’lumotlari Spark yordamida yuklanadi. Schema va ustun nomlari tekshiriladi hamda ma’lumot tuzilmasi tahlil qilinadi.
+ 2-bosqich. Data Quality tekshiruvi
+ Har bir ustun bo‘yicha null qiymatlar soni aniqlanadi. value ustunida manfiy yoki mantiqsiz qiymatlar mavjudligi tekshiriladi va noto‘g‘ri yozuvlar filtrlanadi.
+ 3-bosqich. Ma’lumot turlarini standartlashtirish
+Code ustuni string turiga, year ustuni integer turiga, value ustuni esa double turiga o‘tkaziladi. Bu bosqich keyingi analitik hisob-kitoblar uchun muhim hisoblanadi.
+ 4-bosqich. Duplicate yozuvlarni aniqlash va bartaraf etish
+Code, indicator va year kombinatsiyasi bo‘yicha takroriy yozuvlar aniqlanadi. dropDuplicates funksiyasi yordamida takroriy ma’lumotlar olib tashlanadi.
+ 
+ 5-bosqich. Anomaliya (Outlier) aniqlash
+Har bir indikator bo‘yicha o‘rtacha qiymat va standart og‘ish hisoblanadi. Z-score formulasi yordamida normadan keskin farq qiluvchi qiymatlar aniqlanadi.
+ 6-bosqich. Dimension jadvallarini yaratish
+Dim_Region jadvali Code va Klassifikator ustunlari asosida yaratiladi. Dim_Year jadvali esa mavjud yillarni ajratish orqali shakllantiriladi.
+ 
+ 
+ 7-bosqich. Fact jadval yaratish
+Fact jadval Code, year, indicator va value ustunlari asosida shakllantiriladi. Bu jadval analitik hisob-kitoblarning asosiy manbai hisoblanadi.
+ 8-bosqich. KPI va transformatsiyalar
+Pivot funksiyasi yordamida indikatorlar ustunlarga aylantiriladi. Student/Teacher ratio kabi ko‘rsatkichlar hisoblanadi.
+ 9-bosqich. Gold qatlamga saqlash
+Yakuniy transformatsiyalangan ma’lumotlar Parquet formatida Gold qatlamga yoziladi. Bu qatlam BI va ML tizimlari uchun tayyor analitik ma’lumotlarni taqdim etadi.
+ 
+ 
+Mazkur amaliyot davomida PySpark yordamida ma’lumotlarni tozalash, transformatsiya qilish, Data Quality nazoratini amalga oshirish hamda Star Schema asosida analitik model yaratish bosqichlari bajarildi. Natijada Maktab Pipeline loyihasining Silver va Gold qatlamlari professional darajada shakllantirildi.
+Consol output: avvalgi qatorlar, dropped, tozalangan qatorlarni hosil qiling
+	•	clean_spark.parquet fayli (SILVER layer) ni hosil qiling
+	•	df_silver.head() dan 5–10 qator (mean_val, stddev_val ko‘rinsin)
+	•	Xulosangizni yozing: tozalash va transformatsiya nimaga kerak?
+
+Amaliy topshiriqlar
+
+
+	•	Consol output: avvalgi qatorlar, dropped, tozalangan qatorlarni hosil qiling
+	•	clean_spark.parquet fayli (SILVER layer) ni hosil qiling
+	•	df_silver.head() dan 5–10 qator (mean_val, stddev_val ko‘rinsin)
+	•	Xulosangizni yozing: tozalash va transformatsiya nimaga kerak?
+
+Amaliy topshiriqlar
+
+2.3. dbt (Data Build Tool): Zamonaviy ELT Transformatsiyalar
+O‘quvchilarga “data-pipeline” uchun ELT transformatsiya qatlamlarini shakllantirishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga “data-pipeline” uchun ELT transformatsiya qatlamlarini shakllantirishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Jupyter Notebook yoki VS Code, dbt Core (amaliyotda DB backend tanlanadi,Agar PostgreSQL bo‘lsa: dbt-postgres,Agar DuckDB bo‘lsa (o‘quv uchun juda qulay): dbt-duckdb
+Jupyter Notebook yoki VS Code, dbt Core (amaliyotda DB backend tanlanadi,Agar PostgreSQL bo‘lsa: dbt-postgres,Agar DuckDB bo‘lsa (o‘quv uchun juda qulay): dbt-duckdb
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+dbt (Data Build Tool) — bu ELT (Extract–Load–Transform) yondashuvida transformatsiyalarni SQL orqali boshqarish uchun mo‘ljallangan zamonaviy vosita. ELT modelida ma’lumotlar avval Data Warehouse yoki Analytics DB’ga yuklanadi, so‘ng transformatsiyalar ombor ichida (SQL orqali) bajariladi. dbt’ning asosiy g‘oyasi: transformatsiyalarni modellar (SQL fayllar) ko‘rinishida versiyalash, ref() va source() orqali bog‘liqliklarni boshqarish, testlar yordamida data quality’ni nazorat qilish va avtomatik hujjatlashtirishdir. dbt odatda transformatsiyalarni qatlamlar bo‘yicha tashkil etadi: staging (xom data’ni standartlash) → intermediate (oraliq logika) → marts (biznes ko‘rsatkichlar va fact’lar). Natijada pipeline’lar izchil, auditga yaroqli va qayta ishlashga qulay bo‘ladi. dbt “software engineering” tamoyillarini (modullilik, dependency graph, test, docs) SQL transformatsiyaga olib kiradi.
+Amaliyot:  1-bosqich. dbt muhitini o‘rnatish Python muhitida dbt-core va mos adapter (masalan, dbt-sqlite yoki dbt-postgres) o‘rnatiladi. Buyruq satri orqali dbt init yordamida yangi loyiha yaratiladi.
+
+2-bosqich. Loyiha strukturasi bilan tanishish
+dbt loyihasida models, tests, seeds va macros papkalari mavjud. models papkasi transformatsiya SQL fayllarini saqlash uchun ishlatiladi.
+ 3-bosqich. profiles.yml konfiguratsiyasi
+Ma’lumotlar bazasiga ulanish uchun profiles.yml faylida database, schema va connection parametrlari sozlanadi. Bu bosqichda SQLite yoki PostgreSQL ma’lumotlar bazasi tanlanadi.
+ 4-bosqich. Source jadvalni aniqlash
+Silver qatlamdagi jadval source sifatida e’lon qilinadi. source() funksiyasi yordamida xom ma’lumotlar dbt modeliga bog‘lanadi.
+ 5-bosqich. Staging model yaratish (stg_silver)
+Staging modeli ma’lumotlarni minimal transformatsiya qiladi: ustunlarni tanlash, nomlarini standartlashtirish va keraksiz ustunlarni olib tashlash.
+ 6-bosqich. Analitik model yaratish (KPI modeli)
+ref() funksiyasi yordamida staging modelga murojaat qilinadi. CASE WHEN operatorlari orqali pivot operatsiyasi bajarilib, Student/Teacher ratio kabi ko‘rsatkichlar hisoblanadi.
+ 7-bosqich. dbt run bajarish
+dbt run buyrug‘i orqali barcha modellarning dependency tartibida bajarilishi ta’minlanadi. Natijada transformatsiyalangan jadval ma’lumotlar bazasida yaratiladi.
+ 
+Mazkur amaliyot davomida dbt yordamida ELT asosida ma’lumotlarni transformatsiya qilish, SQL modellar yaratish, test yozish va loyiha dependency tizimini boshqarish o‘rganildi. Natijada Maktab Pipeline loyihasining Silver → Gold bosqichi zamonaviy va professional usulda tashkil etildi.
+models/staging/stg_*.sql
+	•	models/marts/fct_*/*.sql
+	•	dbt_project.yml (agar ishlatilsa) test fayllari (schema.yml)
+	•	Qisqa xulosa: staging va marts farqi, ELTda dbt roli
+
+Amaliy topshiriqlar
+
+
+	•	models/staging/stg_*.sql
+	•	models/marts/fct_*/*.sql
+	•	dbt_project.yml (agar ishlatilsa) test fayllari (schema.yml)
+	•	Qisqa xulosa: staging va marts farqi, ELTda dbt roli
+
+Amaliy topshiriqlar
+
+
+2.4. Apache Airflow: Architecture + Orchestration
+O‘quvchilarga  Airflow arxitekturasinitushuntirish,
+“maktab_etl_pipeline” DAG’ini yaratadi va extract → transform → load → dbt run → dbt test oqimini quradi. o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga  Airflow arxitekturasinitushuntirish,
+“maktab_etl_pipeline” DAG’ini yaratadi va extract → transform → load → dbt run → dbt test oqimini quradi. o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Apache Airflow (tavsiya: Docker orqali)
+Metadata DB (default SQLite)
+Apache Airflow (tavsiya: Docker orqali)
+Metadata DB (default SQLite)
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Apache Airflow — bu data pipeline’larni orkestratsiya qilish (rejalashtirish, ketma-ketlikni boshqarish, monitoring) uchun mo‘ljallangan platforma. Airflow’da pipeline DAG (Directed Acyclic Graph) ko‘rinishida ifodalanadi: har bir task alohida ish bo‘lib, ular o‘zaro bog‘lanish (dependency) orqali ketma-ket yoki parallel bajariladi. Airflow arxitekturasi odatda 4 ta asosiy qismdan iborat: Webserver (UI orqali kuzatish), Scheduler (qachon qaysi task ishga tushishini belgilaydi), Executor/Workers (tasklarni bajaradi) va Metadata Database (DAG run holatlari, loglar, XCom va konfiguratsiyalarni saqlaydi). Amaliyotda Airflow ETL/ELT jarayonlarini avtomatlashtiradi, retry, SLA, logging, alert va schedule orqali pipeline’ni ishonchli ishlashiga xizmat qiladi.
+Amaliyot
+ 1. DAG konsepsiyasini aniqlash (pipeline dizayn)
+	•	extract_csv_files — CSV fayllarni topish va file_count ni XCom’ga yozish
+	•	transform_data — XCom’dan file_count olib transform ishini bajarish (hozir placeholder)
+	•	load_to_warehouse — omborga yuklash (placeholder)
+	•	run_dbt_models — dbt run
+	•	run_dbt_tests — dbt test
+Natija: DAG tasklari va dependency aniq bo‘ladi: task1 >> task2 >> task3 >> task4 >> task5
+2. Default args (operatsion boshqaruv parametrlarini berish)
+
+Maqsad: pipeline boshqaruviga tayyor operational parametrlar berish.
+3. DAG obyektini yaratish (schedule + metadata)
+
+Natija: Airflow UI’da ko‘rinadigan DAG yaratiladi.
+4 . Task 1: EXTRACT (PythonOperator + XCom)
+
+Natija: keyingi tasklar uchun “nechta fayl bor” degan metadata uzatiladi.
+ 5. Task 2: TRANSFORM (XCom’dan o‘qish)
+
+Natija: tasklar o‘rtasida bog‘lanish va ma’lumot almashish ishlaydi.
+6. Task 3: LOAD (Warehouse’ga yuklash)
+
+SQLite/Postgres DWH ga yozish yoki Data Lake → DWH load funksiyasi qo‘yiladi.
+7. Task 4–5: dbt run va dbt test (BashOperator)
+
+Natija: ELT transformatsiya va testlar orkestratsiya qilinadi.
+ 8. DAG faylini yaratish va DAGs papkaga yozish
+Natija: Airflow DAGs papkaga yangi DAG tushadi va Airflow uni “discover” qiladi.
+9. Monitoring (Airflow UI orqali)
+	•	DAG “On” 
+	•	Manual trigger 
+	•	Graph view’da task ketma-ketligini ko‘rinadi
+	•	Logs’dan har bir task natijasi tekshiriladi
+
+
+		DAG metadata’ni moslang.
+	•	Extract taskni kuchaytiring.
+	•	Transform taskga minimal real logika qo‘shing.
+	•	Load taskni amalga oshring.
+	•	dbt integratsiyasini tekshiring.
+Amaliy topshiriqlar
+
+
+	•	DAG metadata’ni moslang.
+	•	Extract taskni kuchaytiring.
+	•	Transform taskga minimal real logika qo‘shing.
+	•	Load taskni amalga oshring.
+	•	dbt integratsiyasini tekshiring.
+Amaliy topshiriqlar
+
+2.5. Airflow va dbt Pipeline Integration
+O‘quvchilarga Airflow DAG ichida dbt run va dbt test tasklarini ishga tushirishni,ETL natijasidan so‘ng dbt model va testlar avtomatik ishlashini ta’minlashni,DAG ketma-ketligini to‘g‘ri bog‘lashni, Loglar orqali pipeline natijalarini kuzatishni o‘rgatish.
+
+Mashg‘ulot
+maqsadi
+O‘quvchilarga Airflow DAG ichida dbt run va dbt test tasklarini ishga tushirishni,ETL natijasidan so‘ng dbt model va testlar avtomatik ishlashini ta’minlashni,DAG ketma-ketligini to‘g‘ri bog‘lashni, Loglar orqali pipeline natijalarini kuzatishni o‘rgatish.
+
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Apache Airflow (tavsiya: Docker orqali)
+Apache Airflow (tavsiya: Docker orqali)
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Ushbu amaliy mashg‘ulotda “Maktab pipeline” loyihasi misolida ma’lumotlarni qayta ishlash jarayonini avtomatlashtirish va nazorat qilishning zamonaviy yondashuvi bo‘lgan Airflow + dbt integratsiyasi amalda bajariladi. Bugungi kunda tashkilotlarda ma’lumotlar oqimi ko‘pincha turli manbalardan keladi (CSV fayllar, ma’lumotlar bazalari, API xizmatlar va boshqalar). Ushbu ma’lumotlarni muntazam ravishda yig‘ish, tozalash, standartlash, biznes mantiqiga mos transformatsiya qilish hamda natijani tayyor analitik jadval ko‘rinishiga keltirish uchun pipeline jarayonini boshqarish talab etiladi.
+Amaliyotning asosiy maqsadi — CSV formatidagi maktab statistik ma’lumotlarini avtomatik tarzda qabul qilish, PostgreSQL ma’lumotlar bazasiga yuklash, so‘ng dbt yordamida transformatsiya bosqichlarini (staging va marts) bajarish hamda jarayonni Airflow orqali ketma-ket boshqarib, monitoring qilishdan iborat. Bunda Docker texnologiyasi yordamida barcha servislar (Airflow va Postgres) yagona muhitda ishga tushiriladi, bu esa dasturiy muhitni o‘rnatishdagi farqlar va moslik muammolarini kamaytiradi.
+Ushbu amaliy mashg‘ulot davomida pipeline quyidagi ketma-ketlik asosida tashkil etiladi: avvalo Airflow FileSensor yordamida belgilangan katalogda CSV fayllar mavjudligini tekshiradi va ma’lumotlar kelishini kutadi. Keyingi bosqichda PythonOperator orqali CSV fayllar o‘qilib, Postgres bazasidagi “raw” qatlamga yuklanadi. Shundan so‘ng BashOperator yordamida dbt transformatsiya bosqichlari ishga tushiriladi: birinchi navbatda staging modellari bajarilib, ma’lumotlar tozalanadi va struktura standartlashtiriladi; keyingi bosqichda esa marts modellari orqali biznes ko‘rsatkichlar va agregatsiyalar hosil qilinadi. Yakuniy bosqichda PostgresOperator yordamida ma’lumotlar sifati bo‘yicha tekshiruvlar (data quality checks) bajariladi hamda pipeline muvaffaqiyatli tugaganligi haqida log/notification orqali xabar beriladi.
+Natijada, talaba yoki loyiha jamoasi Airflow interfeysi orqali pipeline’ning har bir bosqichini vizual kuzatish, bajarilish vaqtini tahlil qilish, xatolik yuz bersa loglarni ko‘rish va jarayonni qayta ishga tushirish imkoniyatiga ega bo‘ladi. dbt esa transformatsiya jarayonini SQL asosida tartibli va boshqariladigan holatda tashkil etib, testlar orqali ma’lumotlar ishonchliligini oshiradi. Shu tariqa ushbu amaliy mashg‘ulot real loyihalarda qo‘llaniladigan “orchestration + transformation” konsepsiyasini amalda o‘rgatadi va Data Engineering pipeline’ni ishlab chiqish bo‘yicha zarur ko‘nikmalarni shakllantiradi.
+Amaliyot
+1. Windows’ga Docker va Docker Compose’ni o‘rnatish
+Docker Desktop Windows’da Docker’dan foydalanishni boshlashning eng oson yo‘li. U Docker va Docker Compose’ni o‘z ichiga oladi va Linux uchun Windows Subsystem (WSL 2) bilan uzluksiz ishlaydi.
+Windows uchun Docker Desktopni yuklab oling. Docker Desktop yuklab olish sahifasiga tashrif buyuring. Tizimingizga mos keladigan versiyani tanlang (Windows 10/11 Pro yoki WSL 2 yoqilgan Enterprise tavsiya etiladi). Agar tizimingiz mos kelishiga ishonchingiz komil bo'lmasa, Docker sizga o'rnatish paytida xabar beradi. Docker Desktop-ni o'rnating. Yuklab olish tugagandan so'ng, o'rnatuvchi faylini oching. O'rnatish ustasidagi ekrandagi ko'rsatmalarga amal qiling. O'rnatish paytida, Hyper-V o'rniga WSL 2 ni yoqish variantini tanlaganingizga ishonch hosil qiling . Ushbu parametr Docker-ga yengil Linux asosidagi virtual mashinada ishlash imkonini beradi, bu ko'pgina foydalanish holatlarida Hyper-V ga qaraganda samaraliroq. O'rnatish tugagandan so'ng, agar so'ralsa, tizimingizni qayta ishga tushiring. WSL 2 ni yoqing. Docker Desktop optimal ishlashi uchun WSL 2 (Linux versiyasi 2 uchun Windows Subsystem) ni talab qiladi. Agar tizimingizda WSL 2 yoqilmagan bo'lsa, uni sozlash uchun quyidagi amallarni bajaring: Administrator sifatida PowerShell-ni oching . WSL ni o'rnatish uchun quyidagi buyruqni bajaring:
+
+
+	•	 Servislarni ishga tushiring Project papkada: 
+docker compose up -d
+docker ps 
+docker-compose.yml (Airflow + Postgres + dbt)
+version: "3.9"
+services:
+  postgres:
+    image: postgres:16
+    container_name: maktab_postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: maktab
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+  airflow-webserver:
+    image: apache/airflow:2.9.3
+    container_name: maktab_airflow_web
+    depends_on:
+      - postgres
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://admin:password@postgres:5432/maktab
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    ports:
+      - "8088:8080"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./data:/data
+      - ./dbt_maktab:/dbt_maktab
+    command: >
+      bash -c "
+      pip install -q pandas sqlalchemy psycopg2-binary &&
+      airflow db migrate &&
+      airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@local &&
+      airflow webserver
+      "
+  airflow-scheduler:
+    image: apache/airflow:2.9.3
+    container_name: maktab_airflow_sched
+    depends_on:
+      - airflow-webserver
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://admin:password@postgres:5432/maktab
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./data:/data
+      - ./dbt_maktab:/dbt_maktab
+    command: >
+      bash -c "
+      pip install -q pandas sqlalchemy psycopg2-binary &&
+      airflow scheduler
+      "
+volumes:
+  pg_data:
+Amaliyotda alohida dbt konteyner shart emas. Darsga soddaroq: dbt’ni Airflow container ichida ishlatamiz. Airflow webserver konteynerida dbt-postgres o‘rnating:
+docker exec -it maktab_airflow_web bash
+pip install dbt-postgres==1.8.2
+Exit
+Airflow Connection (PostgresOperator ishlashi uchun)
+Airflow UI: http://localhost:8088 (admin/admin)
+Admin → Connections → Add:
+	•	Conn Id: maktab_postgres
+	•	Conn Type: Postgres
+	•	Host: postgres
+	•	Schema: maktab
+	•	Login: admin
+	•	Password: password
+	•	Port: 5432
+Natija: dbt run lokalda ishlashini tasdiqlash (kamida 1 marta).
+ 3. Dependency (bog‘lanish)ni to‘g‘ri qurish
+ 
+
+Natija:
+
+
+
+
+		UI/UX dizayn uchun berilgan loyiha mavzularidan birini tanlang. 
+	Tanlangan mavzu bo‘yicha quyidagi savollarga javob yozadi:
+	Foydalanuvchi kim? Unga nima kerak? U qanday muammoga duch keladi? U dasturdan yoki saytdan qanday foydalanadi?
+	Shu ma’lumotlar asosida ssenariy yozing.
+Amaliy topshiriqlar
+
+
+	UI/UX dizayn uchun berilgan loyiha mavzularidan birini tanlang. 
+	Tanlangan mavzu bo‘yicha quyidagi savollarga javob yozadi:
+	Foydalanuvchi kim? Unga nima kerak? U qanday muammoga duch keladi? U dasturdan yoki saytdan qanday foydalanadi?
+	Shu ma’lumotlar asosida ssenariy yozing.
+Amaliy topshiriqlar
+
+
+2.6. Azure Data Factory: Cloud Orchestration + Monitoring
+O‘quvchilarga ADF pipeline arxitekturasini amalda q‘llashni o‘rgatish-(activities + dependencies + monitoring).
+Mashg‘ulot
+maqsadi
+O‘quvchilarga ADF pipeline arxitekturasini amalda q‘llashni o‘rgatish-(activities + dependencies + monitoring).
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+json, datetime, os (standart modullar), folders["output"] papkasi mavjud bo‘lishi, Microsoft Azure hisob, Azure Data Factory resursi (ADF instance)
+·  
+·  ·  Amaliyot natijasi: adf_pipeline.json
+·  
+json, datetime, os (standart modullar), folders["output"] papkasi mavjud bo‘lishi, Microsoft Azure hisob, Azure Data Factory resursi (ADF instance)
+·  
+·  ·  Amaliyot natijasi: adf_pipeline.json
+·  
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Azure Data Factory (ADF) — bu bulutda (cloud) ma’lumotlarni ko‘chirish (ingest), qayta ishlash (transform) va omborga yuklash (load) jarayonlarini orkestratsiya qiluvchi xizmatdir. ADF pipeline’lari “activities” ketma-ketligidan iborat bo‘lib, har bir activity ma’lum bir ishni bajaradi: masalan, Copy Activity (ma’lumotni bir joydan ikkinchi joyga ko‘chirish), Databricks Notebook Activity (Spark transformatsiya ishga tushirish), yoki SQL/Data Warehouse’ga yuklash. ADF monitoring funksiyasi orqali pipeline run holati, activity’larning ishlash vaqti, xatolar, retry va trigger’lar kuzatiladi. ADF odatda Data Lake (Bronze/Silver/Gold) va Data Warehouse o‘rtasida end-to-end data flow yaratishda, shuningdek korporativ muhitda CI/CD, parametrlar, variables va alert’lar bilan ishlashda keng qo‘llanadi.
+Amaliyot:
+	•	“Biz Airflow’ni orkestrator sifatida ishlatamiz: qaysi task qachon va qanday ketma-ketlikda bajarilishini nazorat qiladi.”
+	•	“dbt esa transformatsiyani SQL orqali boshqaradi: staging → intermediate → marts.”
+	•	“Airflow DAG ichida dbt’ni dbt run va dbt test komandalar bilan ishga tushiramiz.”
+	•	“XCom orqali metadata (yuklangan yozuvlar soni, environment, run timestamp) uzatiladi.”
+	•	“Quality check uchun PostgresOperator bilan mart jadvalini tekshiramiz.”
+	•	“Monitoring: Airflow UI’da task status + log + retry mexanizmi.”
+
+
+
+Natija:
+
+
+Pipeline nomi va description’ni o‘z loyihasiga moslang (masalan, “ClinicETLPipeline”, “LibraryETLPipeline”).
+	•	Activity 1’da sink formatini Parquet qilib qoldiring, ammo output dataset nomini o‘zgartiring (DataLakeBronze → BronzeLayer).
+	•	Activity 2 notebookPath’ni o‘z notebook nomingizga moslang (masalan /notebooks/transform_clean).
+	•	Activity 3’da SQL Warehouse nomini moslang va dependsOn ketma-ketligini saqlang.
+	•	Qo‘shimcha variable qo‘shing: records_count (Integer) yoki run_id (String) va nima uchun kerakligini 3–4 gapda izohlang.
+Amaliy topshiriqlar
+
+
+	•	Pipeline nomi va description’ni o‘z loyihasiga moslang (masalan, “ClinicETLPipeline”, “LibraryETLPipeline”).
+	•	Activity 1’da sink formatini Parquet qilib qoldiring, ammo output dataset nomini o‘zgartiring (DataLakeBronze → BronzeLayer).
+	•	Activity 2 notebookPath’ni o‘z notebook nomingizga moslang (masalan /notebooks/transform_clean).
+	•	Activity 3’da SQL Warehouse nomini moslang va dependsOn ketma-ketligini saqlang.
+	•	Qo‘shimcha variable qo‘shing: records_count (Integer) yoki run_id (String) va nima uchun kerakligini 3–4 gapda izohlang.
+Amaliy topshiriqlar
+
+
+
+
+3-bob haqida umumiy ma’lumot.
+Ushbu 3-bob “BI: Ma’lumotlar muhandisligi va ML” kursining Machine Learning qismiga bag‘ishlanib, ma’lumotlardan qiymat chiqarishning asosiy usuli sifatida bashorat va tasniflash modellarini ishlab chiqish jarayonini yoritadi. Bobning maqsadi — talabalarda ML algoritmlarini nazariy tushunish bilan birga, ularni real ma’lumotlar asosida qurish, baholash va amaliy tizimga joriy etish ko‘nikmalarini shakllantirishdir.
+Bob ML’ga kirish mavzusi bilan boshlanib, masalaning turini aniqlash (regressiya yoki klassifikatsiya) hamda ma’lumotlar to‘plamini train/test ga ajratish, metrikalar orqali baholash (evaluate) kabi fundamental bosqichlar mustahkamlanadi. Keyingi mavzularda Feature Engineering yordamida ma’lumotlarni tozalash, kodlash va model uchun optimal ko‘rinishga keltirish amaliyoti bajariladi. Shundan so‘ng regressiya uchun Linear Regression, klassifikatsiya uchun esa KNN va Decision Tree modellarini qurish, ularning parametrlarini tanlash va natijalarni talqin qilish ko‘rib chiqiladi.
+Bobning muhim yakuniy qismi — modelni amaliy muhitga chiqarish bo‘lib, FastAPI yordamida inference endpoint yaratish, modelni xizmat sifatida ishga tushirish va uni data pipeline bilan bog‘lash yondashuvlari o‘rgatiladi. Natijada talaba ML modelni “o‘qitishdan” tortib “deploy”gacha bo‘lgan to‘liq siklni bajarish kompetensiyasiga ega bo‘ladi.
+
+3.1. Machine Learningga kirish: asosiy tushunchalar va turlari
+O‘quvchilarga Maktab pipeline’dan olingan ma’lumotlarni ML modelga mos X (feature matrix) holatiga keltirish: pivot, NaN tozalash, ustunlar (feature) ro‘yxatini aniqlash.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga Maktab pipeline’dan olingan ma’lumotlarni ML modelga mos X (feature matrix) holatiga keltirish: pivot, NaN tozalash, ustunlar (feature) ro‘yxatini aniqlash.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Jupyter Notebook / JupyterLab yoki VS Code (Python extension bilan)
+Jupyter Notebook / JupyterLab yoki VS Code (Python extension bilan)
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+“Maktab pipeline” misolida Machine Learning (ML) tushunchalarini izchil tushuntiramiz. Avvalo, AI → ML → Deep Learning farqini ajratamiz: Artificial Intelligence (AI) — keng tushuncha bo‘lib, “aqlli” xatti-harakatni taqlid qiladigan barcha yondashuvlarni qamrab oladi. Machine Learning (ML) — AI ichidagi yo‘nalish, unda tizim qoidalarni qo‘lda yozmasdan, ma’lumotlardan o‘rganadi. Deep Learning (DL) esa ML ning kichik qismi bo‘lib, ko‘p qatlamli neyron tarmoqlar orqali murakkab naqshlarni (masalan, tasvir, nutq, matn) o‘rganadi. Maktab pipeline’da biz, masalan, “o‘quvchilar natijalari” yoki “davomat” ma’lumotlaridan bashorat qilish uchun ML ishlatamiz.
+ML uchun dataset — bu o‘rganiladigan ma’lumotlar to‘plami; pipeline’dagi raw/staging/marts qatlamlari aynan dataset sifatini boshqaradi. Feature — modelga kiruvchi ustunlar (masalan, davomat %, o‘qish soati, o‘qituvchi tajribasi). Label/target — model bashorat qiladigan natija (masalan, “imtihondan o‘tadi/o‘tmaydi” yoki “yakuniy baho”). O‘qitish jarayoni odatda train/validation/test ga bo‘linadi: train modelni o‘rgatadi, validation giperparametrlarni tanlash va overfittingni nazorat qilish uchun, test esa yakuniy xolis baholash uchun xizmat qiladi.
+Learning turlari: Supervised learning — label bor (klassifikatsiya/regressiya). Unsupervised learning — label yo‘q (clustering, segmentatsiya). Semi-supervised — label’li va label’siz data aralash (maktabda ba’zi sinflarda baho bor, ba’zilarida yo‘q). Reinforcement learning — agent mukofot asosida strategiya o‘rganadi (ta’limda adaptiv tavsiya tizimlarida uchrashi mumkin). Muammolar ham shunga mos: classification (masalan, “xavf guruhidagi o‘quvchi”ni aniqlash), regression (yakuniy ballni bashorat), clustering (hududlar yoki maktablarni o‘xshash KPI bo‘yicha guruhlash).
+Modelning ichki tuzilishida parametr — model o‘rganadigan qiymatlar (masalan, regression koeffitsiyentlari), giperparametr — o‘qitishdan oldin tanlanadigan sozlamalar (tree depth, learning rate, epochs). Loss function — model xatosini o‘lchaydi (MSE, log-loss), optimizer esa loss’ni minimallashtirish uchun parametrlarni yangilaydi (Gradient Descent, Adam). Noto‘g‘ri sozlanganda underfitting (model juda sodda, naqshni ushlamaydi) yoki overfitting (train’ni “yodlab oladi”) yuz beradi. Buni kamaytirish uchun regularization (L1/L2), early stopping, dropout (DL), ko‘proq data va to‘g‘ri validatsiya ishlatiladi.
+Baholash metrikalari: classification’da accuracy, precision/recall, F1; regression’da MAE, MSE, RMSE. To‘liq ML pipeline esa: data → preprocessing → model → evaluation → deployment. Maktab misolida: ETL/ELT orqali martsda “davomat, baho, o‘qituvchi, hudud” KPI jadvallari tayyorlanadi, preprocessing (missing, scaling), model o‘qitiladi, metrikalar bilan baholanadi va keyin dashboard yoki API ko‘rinishida “risk student” ro‘yxati yoki “keyingi chorak bashorati” sifatida amaliyotga joriy qilinadi. ML ni amalga oshirish uchun kerakli kutubxonalarni o‘rnatib olamiz, barchasi bilan batafsil keyingi amaliy ishlarda tanishtiriladi va amaliy qo’ llaniladi.
+Amaliyot:
+	•	Kutubxonalar o‘rnatiladi:
+
+	•	Ma’lumotni ML uchun pivot qilish 
+Shart: df_etl long format bo‘lsin: (wide/long)
+	•	Hudud
+	•	Yil
+	•	Kategoriya
+	•	Qiymat
+
+
+	•	pivot_table — feature engineering: “Kategoriya”lar ustunlarga aylanadi, har biri modelga kiruvchi feature bo‘ladi.
+	•	Hudud va Yil — identifikator/time feature (xohlasangiz Yil ham feature bo‘lishi mumkin).
+	•	fillna(0) — data cleaning: ba’zi hududlarda ayrim kategoriya bo‘lmasligi mumkin, ML uchun NaN’ni boshqarish kerak.
+	•	Natijada df_pivot — ML uchun X dataset (feature matrix) tayyor bo‘ladi.
+df_etl datasetning ustunlarini chiqaring (columns)
+	•	5 ta namuna qatorni ko‘rsating (head)
+	•	Quyidagilarni yozma izohlang
+	•	Dataset nimani ifodalaydi?
+	•	“Hudud”, “Yil”, “Kategoriya”, “Qiymat” rollari qanday?
+
+
+Amaliy topshiriqlar
+
+
+	•	df_etl datasetning ustunlarini chiqaring (columns)
+	•	5 ta namuna qatorni ko‘rsating (head)
+	•	Quyidagilarni yozma izohlang
+	•	Dataset nimani ifodalaydi?
+	•	“Hudud”, “Yil”, “Kategoriya”, “Qiymat” rollari qanday?
+
+
+Amaliy topshiriqlar
+
+
+3.2. ML jarayoni va model baholash: train, test, evaluate bosqichlari
+O‘quvchilarni foydalanuvchi kimligi, uning ehtiyojlarini o‘rganish, foydalanuvchining muammosini aniqlash va shu asosda oddiy ssenariy yaratishga o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarni foydalanuvchi kimligi, uning ehtiyojlarini o‘rganish, foydalanuvchining muammosini aniqlash va shu asosda oddiy ssenariy yaratishga o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	ML kutubxonalari, datalar
+	•	ML kutubxonalari, datalar
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Machine Learning jarayoni odatda Train → Test → Evaluate bosqichlari orqali amalga oshiriladi. Bu yondashuvning asosiy maqsadi — modelni faqat mavjud ma’lumotga moslab qo‘yish emas, balki yangi keladigan ma’lumotlarda ham to‘g‘ri ishlashini ta’minlashdir. Train (o‘qitish) bosqichida model ma’lumotlar to‘plamidan qonuniyatlarni o‘rganadi: ya’ni feature (kirish belgilar) va target (bashorat qilinadigan natija) o‘rtasidagi bog‘lanishlarni matematik tarzda moslashtiradi. Masalan, maktab pipeline’da “o‘qituvchilar soni”, “bitiruvchilar”, “maktablar soni” kabi ko‘rsatkichlar asosida “o‘quvchilar jami”ni bashorat qilish regressiya vazifasi bo‘lishi mumkin. Test (sinov) bosqichida model ilgari ko‘rmagan ma’lumotlarda tekshiriladi. Buning uchun dataset odatda train va test qismlarga bo‘linadi (masalan 80% train, 20% test). Bu bo‘linish modelning real sharoitda qanchalik umumlashtira olishini baholashga yordam beradi. Evaluate (baholash) bosqichida esa model natijalari metrikalar orqali o‘lchanadi: regressiya uchun MAE, MSE, RMSE; klassifikatsiya uchun accuracy, precision, recall, F1. Agar train natija yaxshi, test natija yomon bo‘lsa — overfitting yuz beradi; aksincha, ikkisi ham yomon bo‘lsa — underfitting kuzatiladi. Shu sababli train-test-evaluate jarayoni ML model sifatini nazorat qilishning eng muhim bosqichidir.
+	•	Train: model parametrlarini ma’lumotdan o‘rganadi.
+	•	Test: model ilgari ko‘rmagan data’da tekshiriladi (xolis baho).
+	•	Evaluate: metrikalar xato darajasini ko‘rsatadi (MAE, RMSE).
+	•	R²: model tushuntira olgan dispersiya ulushi (0 ga yaqin — yomon, 1 ga yaqin — yaxshi).
+
+
+Ushbu kod “maktab pipeline”dan olingan df_pivot dataset asosida Machine Learning jarayonining eng muhim bosqichi bo‘lgan train-test split (o‘qitish va sinovga ajratish) amaliyotini bajaradi. Avvalo, kodda train_test_split funksiyasi sklearn.model_selection modulidan import qilinadi. Bu funksiya datasetni tasodifiy tartibda ikkiga bo‘lish uchun ishlatiladi.
+Keyingi qadamda target_col = 'Oquvchilar_jami' deb belgilanadi. Bu ustun model bashorat qilishi kerak bo‘lgan target (label) hisoblanadi, ya’ni natija qiymati. So‘ngra feature_cols ro‘yxati beriladi: ['Ogil_bola', 'Qiz_bola', 'Oqituvchilar', 'Bitiruvchilar', 'Maktablar_soni']. Bular modelga kiruvchi featurelar bo‘lib, targetni tushuntirib beruvchi asosiy ko‘rsatkichlar sifatida tanlangan.
+Shundan so‘ng feature_cols = [c for c in feature_cols if c in df_pivot.columns] qatori orqali tekshiruv amalga oshiriladi. Ya’ni, agar berilgan feature nomlari df_pivot datasetida mavjud bo‘lsa, ular ro‘yxatda qoldiriladi, aks holda avtomatik olib tashlanadi. Bu yondashuv kodni xatolardan himoya qiladi va turli dataset variantlarida ham ishlashiga yordam beradi.
+Keyingi bosqichda df_ml = df_pivot[[target_col] + feature_cols].dropna() orqali ML uchun kerakli ustunlar ajratib olinadi va bo‘sh qiymatlar (NaN) mavjud qatorlar o‘chirib tashlanadi. Bu preprocessingning eng sodda ko‘rinishi bo‘lib, modelga faqat toza ma’lumot berish maqsadida ishlatiladi. So‘ng df_ml = df_ml[df_ml[target_col] > 0] qatori bilan target qiymati 0 yoki manfiy bo‘lgan yozuvlar filtrlanadi. Bu regressiya vazifasida mantiqsiz qiymatlarni olib tashlash uchun qo‘llaniladi.
+Shundan keyin dataset ikki qismga ajratiladi: X = df_ml[feature_cols] — bu modelga kiruvchi featurelar matritsasi, y = df_ml[target_col] esa target qiymatlar vektori hisoblanadi. Ya’ni, X — kirish, y — chiqish ma’lumotidir.
+train_test_split(X, y, test_size=0.2, random_state=42) funksiyasi yordamida datasetning 20% qismi test uchun, 80% qismi train uchun ajratiladi. random_state=42 parametri bo‘linish natijasini doimiy (bir xil) qilishga xizmat qiladi, ya’ni kod qayta ishlatilganda ham train/test tarkibi o‘zgarmaydi.
+Yakunida kod ekranga Total samples, Train, Test sonlarini chiqaradi. Bu ma’lumotlar orqali talaba dataset qanday bo‘linganini va modelni baholash uchun test qism ajratilganini ko‘radi. Shuningdek, tanlangan featurelar va target ustuni nomi ham chiqariladi. Natijada ushbu kod ML jarayonining muhim bosqichi — datasetni train va testga ajratish hamda model qurishga tayyorlash vazifasini bajaradi.
+	Loyihangiz doirasidagi datalarni o‘rganing.
+	•	Feature larni aniqlang
+	•	ML uchun datalarni tayyor holatga keltirin, train va test qismlarga ajrating.
+Amaliy topshiriqlar
+
+
+	•	Loyihangiz doirasidagi datalarni o‘rganing.
+	•	Feature larni aniqlang
+	•	ML uchun datalarni tayyor holatga keltirin, train va test qismlarga ajrating.
+Amaliy topshiriqlar
+
+3.3. Ma’lumot tayyorlash (Feature Engineering)
+O‘quvchilarni foydalanuvchi kimligi, uning ehtiyojlarini o‘rganish, foydalanuvchining muammosini aniqlash va shu asosda oddiy ssenariy yaratishga o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarni foydalanuvchi kimligi, uning ehtiyojlarini o‘rganish, foydalanuvchining muammosini aniqlash va shu asosda oddiy ssenariy yaratishga o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Jupyter Notebook / JupyterLab yoki VS Code, Oldingi mavzulardan tayyor bo‘lgan o‘zgaruvchilar: df_pivot (ML uchun tayyorlangan dataset)X_train, X_test, y_train, y_test (train-test split natijalari)
+	•	
+	•	)
+Jupyter Notebook / JupyterLab yoki VS Code, Oldingi mavzulardan tayyor bo‘lgan o‘zgaruvchilar: df_pivot (ML uchun tayyorlangan dataset)X_train, X_test, y_train, y_test (train-test split natijalari)
+	•	
+	•	)
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Feature Engineering — bu modelga kiradigan xususiyatlarni (feature) yaxshilash yoki yangi xususiyatlar yaratish jarayonidir. ML modelning sifati ko‘p hollarda aynan qaysi featurelar tanlangani va ular qanday ko‘rinishda berilgani bilan belgilanadi. Maktab pipeline misolida dastlabki featurelar (o‘g‘il bola, qiz bola, o‘qituvchilar, bitiruvchilar, maktablar soni) ma’lumotning asosiy ko‘rsatkichlari bo‘lsa-da, ularning o‘zaro nisbatlari va indekslari ko‘pincha kuchliroq signal beradi. Masalan, “o‘quvchilar/oqituvchi” nisbati (yuklama) maktab resurslarining yetarliligini, “gender balance” esa hududdagi ta’lim demografiyasini bilvosita ifodalaydi. Shuningdek, turli featurelar o‘lchov birliklari bo‘yicha juda farq qilishi mumkin (minglar, yuzlar, foizlar). Bunday holatda scale qilish (masalan, StandardScaler) modelning ayrim algoritmlarida (Linear Regression, Logistic Regression, SVM, KNN va boshqalar) barqarorlik va tezlikni oshiradi. StandardScaler har bir ustunni o‘rtacha qiymati 0, standart og‘ishi 1 bo‘ladigan ko‘rinishga keltiradi. Natijada model featurelar orasida “katta sonli” ustunlarga haddan tashqari og‘ishmasdan, hammasini bir xil masshtabda o‘rganadi.
+Amaliyot:
+Ushbu amaliy mashg‘ulotning maqsadi — “maktab pipeline”dan olingan ML datasetida mavjud ustunlar asosida yangi featurelar yaratish (feature engineering) hamda model o‘qitishdan oldin ma’lumotlarni masshtablash (scaling) orqali algoritmlar uchun mos ko‘rinishga keltirishdir. Mashg‘ulot yakunida talaba feature yaratishning amaliy ahamiyatini, nisbat (ratio) va indeks (balance) kabi hosila ko‘rsatkichlar modelga qanday qo‘shimcha signal berishini, shuningdek StandardScaler yordamida featurelarni bir xil masshtabga keltirish nima uchun kerakligini tushuntira oladi.
+	•	 StandardScaler import qilinadi
+
+Bu bosqichda ma’lumotlarni standartlashtirish (mean=0, std=1) uchun kerakli klass chaqirildi. StandardScaler keyinchalik train va test datasetga bir xil masshtab qo‘llash uchun ishlatiladi.
+	•	Bu amaliyotning maqsadi — DataFrame’ga yangi ustun qo‘shishda “SettingWithCopyWarning” kabi ogohlantirishlar chiqmasligi va original dataset buzilmasligini ta’minlash.
+  
+3. Yangi feature: “Nisbat” yaratiladi
+Agar Oqituvchilar ustuni mavjud bo‘lsa, quyidagi feature hisoblandi:
+Nisbat = y / Oqituvchilar
+Bu amalda “o‘quvchilar sonining o‘qituvchilar soniga nisbati”ga o‘xshash ko‘rsatkichni beradi (yuklama ko‘rsatkichi). Kodda Oqituvchilar 0 bo‘lib qolsa bo‘linish xatosi bo‘lmasligi uchun replace(0,1) bilan himoya qo‘yilgan.
+
+4. Yangi feature: “Gender_Balance” yaratiladi
+Agar Ogil_bola va Qiz_bola ustunlari mavjud bo‘lsa, demografik balans hisoblandi:
+Gender_Balance = Qiz_bola / (Ogil_bola + Qiz_bola)
+Bu ko‘rsatkich hudud yoki yil bo‘yicha qizlar ulushini bildiradi. Bu ham “hosila feature” bo‘lib, modelga qo‘shimcha signal beradi. Bo‘linishda 0 bo‘lib qolmasligi uchun (Ogil_bola + Qiz_bola).replace(0,1) qo‘llangan.
+
+5. Featurelarni scaling qilish (standartlashtirish)
+Bu yerda 2 ta muhim prinsip bajarildi:
+fit faqat train’da — scaler parametrlarini (mean/std) train’dan o‘rganadi.
+test faqat transform — test ma’lumot train jarayoniga ta’sir qilmaydi (bu MLda to‘g‘ri amaliyot).
+Natijada modelga beriladigan featurelar bir xil masshtabda bo‘ladi.
+Natija:
+
+
+Feature Engineering nima ekanini 4–5 gap bilan yozing.
+	•	Nega “yangi feature” yaratish model natijasini yaxshilashi mumkinligini tushuntiring.
+	•	O‘z loyihangiz doirasidagi feature larni aniqlang
+Amaliy topshiriqlar
+
+
+	•	Feature Engineering nima ekanini 4–5 gap bilan yozing.
+	•	Nega “yangi feature” yaratish model natijasini yaxshilashi mumkinligini tushuntiring.
+	•	O‘z loyihangiz doirasidagi feature larni aniqlang
+Amaliy topshiriqlar
+
+
+
+3.4. Regressiya modellari (Linear Regression)
+O‘quvchilarga X_train_scaled va X_test_scaled ma’lumotlaridan foydalanib Linear Regression modelini o‘qitishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga X_train_scaled va X_test_scaled ma’lumotlaridan foydalanib Linear Regression modelini o‘qitishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Sk learn kutubxonasi  va oldingi amaliyotdan olinga test va tain datalar)
+Sk learn kutubxonasi  va oldingi amaliyotdan olinga test va tain datalar)
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Linear Regression — bu regressiya masalalarida ishlatiladigan eng sodda va ommabop Machine Learning modeli bo‘lib, maqsad o‘zgaruvchi (target) bilan kiruvchi belgilar (feature) orasidagi bog‘lanishni chiziqli funksiya orqali ifodalaydi. Model umumiy ko‘rinishda quyidagicha yoziladi:
+
+Bu yerda b0​ — intercept, bi​ lar esa koeffitsiyentlar bo‘lib, har bir feature targetga qanday ta’sir qilishini ko‘rsatadi. Linear Regression odatda “eng kichik kvadratlar” (least squares) tamoyili asosida o‘qitiladi, ya’ni real qiymatlar y va bashorat y^orasidagi kvadrat xatolar yig‘indisini minimallashtiradi. “Maktab pipeline” kontekstida Linear Regression yordamida, masalan, Oquvchilar_jami (o‘quvchilar soni) ni Ogil_bola, Qiz_bola, Oqituvchilar, Maktablar_soni kabi ko‘rsatkichlar asosida bashorat qilish mumkin. Model sifati odatda R² (tushuntirilgan dispersiya ulushi), MAE (o‘rtacha mutlaq xato) va RMSE (katta xatolarga sezgir o‘rtacha kvadratik xato) bilan baholanadi. Featurelar turli masshtabda bo‘lsa, StandardScaler orqali standartlashtirish ko‘p hollarda modelni barqarorroq qiladi va koeffitsiyentlarni solishtirishni osonlashtiradi.
+Amaliyot:
+	•	LinearRegression() modeli yaratiladi va lr.predict(X_test_scaled) — test ma’lumotda target qiymatlar bashorat qilindi.
+
+	•	lr.fit(X_train_scaled, y_train) — model train ma’lumotdan bog‘lanishni o‘rgandi (koeffitsiyentlar topildi). r2_score, mean_absolute_error, mean_squared_error — bashoratlar y_test bilan solishtirilib, metrikalar hisoblandi.
+
+	•	lr.coef_ — har bir feature’ning targetga ta’sir koeffitsiyenti olindi; absolyut qiymati bo‘yicha saralanib top-3 feature chiqarildi.
+
+Natija:
+Ushbu mavzuda “maktab pipeline” ma’lumotlari asosida Linear Regression regressiya modeli qurish va baholash jarayoni o‘rganildi. Amaliyot davomida target sifatida o‘quvchilar jami (Oquvchilar_jami) tanlanib, unga ta’sir qiluvchi asosiy featurelar (o‘g‘il bola, qiz bola, o‘qituvchilar, bitiruvchilar, maktablar soni) ajratildi. Dataset train va test qismlarga bo‘linib, model train ma’lumotda o‘qitildi va test ma’lumotda bashorat natijalari olindi. Model sifati R², MAE va RMSE metrikalari orqali baholandi, bu esa modelning umumlashtirish darajasi va xato miqdorini aniq ko‘rsatib berdi. Shuningdek, koeffitsiyentlar tahlili orqali targetga eng kuchli ta’sir qiluvchi featurelar aniqlanib, ularning amaliy ahamiyati izohlandi. Natijada Linear Regression oddiy, tez va tushunarli model bo‘lsa-da, real loyihalarda aniqlikni oshirish uchun qo‘shimcha feature engineering, outlierlarni boshqarish va murakkabroq modellar bilan solishtirish zarurligi xulosa qilindi.
+	Loyihangiz doirasida kamida 5 ta feature tanlang va nima uchun tanlaganingizni yozing.
+	•	Linear Regression modelini o‘qiting.
+	•	Testda R², MAE, RMSE ni hisoblab chiqaring va natijani konsolga chiqaring.
+
+Amaliy topshiriqlar
+
+
+	•	Loyihangiz doirasida kamida 5 ta feature tanlang va nima uchun tanlaganingizni yozing.
+	•	Linear Regression modelini o‘qiting.
+	•	Testda R², MAE, RMSE ni hisoblab chiqaring va natijani konsolga chiqaring.
+
+Amaliy topshiriqlar
+
+
+3.5. Klassifikatsiya modellari (KNN, Decision Tree)
+O‘quvchilarni foydalanuvchi kimligi, uning ehtiyojlarini o‘rganish, foydalanuvchining muammosini aniqlash va shu asosda oddiy ssenariy yaratishga o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarni foydalanuvchi kimligi, uning ehtiyojlarini o‘rganish, foydalanuvchining muammosini aniqlash va shu asosda oddiy ssenariy yaratishga o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter yoki planshet (ixtiyoriy)
+	•	Figma yoki Canva (agar mavjud bo‘lsa)
+	•	Kompyuter yoki planshet (ixtiyoriy)
+	•	Figma yoki Canva (agar mavjud bo‘lsa)
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Klassifikatsiya — bu Machine Learningning supervised learning turiga kiruvchi vazifa bo‘lib, modelning maqsadi obyektni oldindan berilgan sinflardan (class) biriga ajratishdir. Masalan, maktab KPI larida hududlarni “yuqori ko‘rsatkich” va “past ko‘rsatkich” guruhlariga ajratish, yoki o‘quvchi natijasini “risk” va “normal” toifalarga kiritish klassifikatsiya misolidir. Klassifikatsiya modeliga kiruvchi ustunlar feature, natijasi esa label hisoblanadi. Model sifati ko‘pincha accuracy, precision/recall, F1-score kabi metrikalar bilan baholanadi. Ayniqsa sinflar nomutanosib bo‘lsa (class imbalance), faqat accuracy yetarli bo‘lmaydi, F1-score muhimroq bo‘ladi.
+Ushbu mavzuda ikki mashhur algoritm ko‘rib chiqiladi: K-Nearest Neighbors (KNN) va Decision Tree. KNN “misolga asoslangan” (instance-based) usul bo‘lib, yangi obyektni eng yaqin k ta qo‘shnilar sinfi asosida klassifikatsiya qiladi. KNN masofa hisoblashga tayanadi, shuning uchun featurelar masshtabi turlicha bo‘lsa, scaling (StandardScaler) juda muhim. Decision Tree esa “qoidalar daraxti” ko‘rinishida ishlaydi: featurelar bo‘yicha ketma-ket bo‘linishlar (split) qilib, yakunda sinf qarorini beradi. Daraxt modeli interpretatsiya uchun qulay, lekin chuqurlik oshib ketsa overfitting yuz beradi; shu sababli max_depth, min_samples_leaf kabi giperparametrlar bilan nazorat qilinadi. Real loyihalarda KNN tez prototiplash va oddiy muammolar uchun, Decision Tree esa interpretatsiya va rule-based tahlil uchun qulay tanlov hisoblanadi.
+Amaliyot:
+	•	Dataset tanlash: loyihangizdagi “marts” yoki MLga tayyor jadval (df_pivot, df_ml).
+	•	Target belgilash: loyihaga mos 1 ta sonli target tanlash (masalan, KPI, savdo, natija, o‘quvchi soni).
+	•	Binary label yaratish: target median (yoki biznes threshold) bo‘yicha 0/1 ga ajratish.
+	•	Featurelar tayyorlash: X (feature matrix) va y_class (label).
+	•	Split: train/test (oldingi mavzudagi kabi).
+	•	Scaling: KNN uchun majburiy (StandardScaler), Decision Tree uchun ixtiyoriy.
+	•	Model train: KNN (k=5), DecisionTree (max_depth=10).
+	•	Predict va evaluate: accuracy, f1, classification_report.
+	•	Solishtirish: qaysi model yaxshi, nega? (scaling, depth, data struktura).
+
+
+
+KNN uchun:
+
+Decision tree uchun:
+
+Ushbu mavzuda klassifikatsiya muammosi uchun ikki algoritm — KNN va Decision Tree amaliy solishtirildi. Target qiymat median threshold orqali ikkita sinfga ajratilib, regression ko‘rsatkichlaridan “low/high” toifalar hosil qilindi. KNN modelida masofa hisoblash asosiy rol o‘ynagani sababli featurelar masshtabi muhimligi va scaling zarurligi ko‘rsatildi. Decision Tree esa scalingga kamroq bog‘liq bo‘lib, bo‘linishlar orqali interpretatsiya qilish imkonini beradi, biroq chuqurlik ortishi bilan overfitting xavfi paydo bo‘lishi ta’kidlandi. Natijada, har bir loyiha datasetiga qarab model tanlovi va giperparametr sozlash (k, max_depth) klassifikatsiya sifatiga bevosita ta’sir qilishi xulosa qilindi.
+	O‘z loyihasida 1 ta sonli target tanlang.
+	•	Median yoki biznes threshold bo‘yicha y_class yarating.
+	•	Threshold qiymatini va 0/1 sinflar ta’rifini yozing.
+	•	k ni 3, 5, 7 qilib sinab ko‘ring.
+	•	Har bir k uchun Accuracy va F1 ni jadvalda chiqaring.
+	•	Qaysi k eng yaxshi ekanini izohlang.
+	•	max_depth ni 3, 5, 10 qilib solishtiring.
+	•	Har bir holatda Accuracy va F1 ni jadvalda chiqaring.
+	•	Overfitting ehtimoli bor-yo‘qligini izohlang (depth oshsa nima bo‘ladi?).
+	•	KNN va Decision Tree natijalarini taqqoslang.
+	•	Qaysi model sizning datasetda yaxshiroq ishladi va nega? (2–4 gap)
+	•	classification_report natijasidan precision/recall/F1 ni qisqa tahlil qiling.
+Agar sinflar notekis bo‘lsa, nega F1 muhimligini yozing.
+
+Amaliy topshiriqlar
+
+
+	•	O‘z loyihasida 1 ta sonli target tanlang.
+	•	Median yoki biznes threshold bo‘yicha y_class yarating.
+	•	Threshold qiymatini va 0/1 sinflar ta’rifini yozing.
+	•	k ni 3, 5, 7 qilib sinab ko‘ring.
+	•	Har bir k uchun Accuracy va F1 ni jadvalda chiqaring.
+	•	Qaysi k eng yaxshi ekanini izohlang.
+	•	max_depth ni 3, 5, 10 qilib solishtiring.
+	•	Har bir holatda Accuracy va F1 ni jadvalda chiqaring.
+	•	Overfitting ehtimoli bor-yo‘qligini izohlang (depth oshsa nima bo‘ladi?).
+	•	KNN va Decision Tree natijalarini taqqoslang.
+	•	Qaysi model sizning datasetda yaxshiroq ishladi va nega? (2–4 gap)
+	•	classification_report natijasidan precision/recall/F1 ni qisqa tahlil qiling.
+Agar sinflar notekis bo‘lsa, nega F1 muhimligini yozing.
+
+Amaliy topshiriqlar
+
+
+3.6. Klassifikatsiya modellar: toifalarni bashorat qilish
+O‘quvchilarga Loyihadagi sonli KPI asosida toifa (0/1 yoki 3-toifa) label yaratishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga Loyihadagi sonli KPI asosida toifa (0/1 yoki 3-toifa) label yaratishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+	•	Kompyuter yoki planshet (ixtiyoriy)
+	•	Figma yoki Canva (agar mavjud bo‘lsa)
+	•	Kompyuter yoki planshet (ixtiyoriy)
+	•	Figma yoki Canva (agar mavjud bo‘lsa)
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Klassifikatsiya — bu supervised learning vazifasi bo‘lib, modelning maqsadi obyektni oldindan belgilangan toifalardan (class) biriga ajratishdir. Regressiyada natija sonli qiymat bo‘lsa, klassifikatsiyada natija kategoriya bo‘ladi. Masalan, “maktab KPI”larida hududlarni “yuqori” va “past” natijali guruhlarga ajratish, o‘quvchini “risk” yoki “normal” toifaga kiritish, yoki sinfni “faol” va “sust” deb belgilash klassifikatsiya misollaridir. Klassifikatsiya modeli featurelar (kiruvchi belgilar) asosida label (toifa) ni bashorat qiladi. Klassifikatsiya masalalarida eng muhim masala — toifalarni to‘g‘ri belgilash va model natijasini to‘g‘ri baholashdir. Model sifatini baholashda accuracy (umumiy to‘g‘rilik) tez-tez ishlatiladi, ammo sinflar notekis bo‘lsa (masalan, “risk” juda kam), accuracy aldovchi bo‘lishi mumkin. Shuning uchun precision, recall va ayniqsa F1-score kabi metrikalar muhim hisoblanadi. Precision model “risk” dedi deganlarining qanchasi haqiqatan risk ekanini, recall esa real risklarning qanchasi topilganini bildiradi. F1-score precision va recall orasidagi muvozanatni ko‘rsatadi. Bundan tashqari, confusion matrix (TP, FP, TN, FN) model qayerda ko‘proq xato qilayotganini tahlil qilishga yordam beradi.
+Toifalarni bashorat qilishda turli algoritmlar qo‘llanadi. Oddiy modellardan KNN yaqin qo‘shnilar asosida sinfni tanlaydi va scale’ga sezgir; Decision Tree esa qoidalar orqali toifalashni amalga oshiradi va interpretatsiyasi qulay. Katta va murakkab datasetlarda esa ensemble klassifikatorlar (Random Forest, Gradient Boosting, XGBoost, LightGBM) ko‘pincha aniqroq natija beradi: Random Forest ko‘p daraxtlar o‘rtachasini olib barqarorlikni oshiradi, boosting modellar esa ketma-ket xatoni tuzatish orqali kuchliroq bashorat beradi. “Maktab pipeline” misolida klassifikatsiya orqali hududlarning KPI darajasini “Low/High” toifalarga ajratish, risk guruhini oldindan aniqlash va qaror qabul qilish jarayonini avtomatlashtirish mumkin.
+Amaliyot bajarish ketma-ketligi-har bir usul uchun shu holatdagi ketma-ketlik bajariladi:
+	•	Loyihadan dataset tanlash (marts yoki pivot qilingan feature matrix).
+	•	Target KPI tanlash (sonli).
+	•	Label yaratish: toifa: 
+	•	median/mean/threshold bo‘yicha Low–High toifa:
+	•	 b) quantile bo‘yicha Low–Medium–High
+	•	Train/Test bo‘lish.
+	•	Model(lar)ni o‘qitish: KNN, Decision Tree, Random Forest/XGBoost/LGBM.
+	•	Evaluate: accuracy, precision, recall, F1; confusion matrix.
+Kutubxonalarni yuklash:
+
+Random Forest:
+
+Gradient boosting:
+
+XGBoost:
+
+
+
+LightGBM
+
+ Tahlil va xulosa: qaysi model va nega? Ushbu tajribada “maktab pipeline” ma’lumotlari asosida to‘rtta ensemble regressiya modeli — Random Forest, Gradient Boosting, XGBoost va LightGBM natijalari R² hamda MAE ko‘rsatkichlari orqali taqqoslandi. Olingan natijalarga ko‘ra, Random Forest modeli R² = 0.9236 va MAE = 75 605 bilan barqaror va izohlanadigan natija berdi. Unda eng muhim featurelar sifatida Maktablar_soni (0.3542), Qiz_bola (0.3397) va Oqituvchilar (0.2981) ajralib chiqdi, bu esa o‘quvchilar sonini (yoki KPI ni) shakllantirishda aynan maktab infratuzilmasi va demografik tarkib kuchli ta’sirga ega ekanini ko‘rsatadi.
+Gradient Boosting modeli R² = 0.9273 va MAE = 69 741 natija bilan Random Forest’dan biroz ustun ishladi, ya’ni xatoni kamaytirishda yaxshiroq umumlashtirish ko‘rsatdi. Eng yuqori ko‘rsatkich esa XGBoost modelida kuzatildi: R² = 0.9994 va MAE = 16 630, bu juda yuqori aniqlikni bildiradi. Biroq bunday keskin yuqori R² amaliyotda ba’zan overfitting yoki data leakage ehtimolini ham anglatishi mumkin; shu sababli XGBoost natijasini tasdiqlash uchun qo‘shimcha tekshiruvlar (kross-validatsiya, vaqt bo‘yicha split, leakage tekshiruvi) tavsiya etiladi.
+
+LightGBM modeli esa ushbu datasetda kutilgan darajada ishlamadi: R² = 0.5735 va MAE = 424 232, ya’ni xatolik katta va model umumlashtira olmadi. Bu holat giperparametrlar mos emasligi, data hajmi/tuzi lishi LightGBM uchun noqulay bo‘lishi yoki preprocessing talab qilinishiga bog‘liq bo‘lishi mumkin. Umuman olganda, tajriba natijasi shuni ko‘rsatdiki, berilgan ma’lumotlarda eng istiqbolli model XGBoost, barqaror va tushunarli alternativ sifatida esa Gradient Boosting yoki Random Forest tanlanadi; LightGBM esa qayta sozlash va qo‘shimcha tuning talab qiladi.
+		O‘z loyihangizda klassifikatsiya modellarini o‘qiting.
+	•	Eng yaxshi chiqqan bitta model uchun:
+	•	classification_report ni chiqarib, precision/recall/F1 ni izohlang.
+	•	“Risk” yoki “High” sinfini topishda qaysi metrika muhimroq ekanini yozing.
+	•	precisionmi yoki recallmi? Nima uchun?
+ 
+Amaliy topshiriqlar
+
+
+	•	O‘z loyihangizda klassifikatsiya modellarini o‘qiting.
+	•	Eng yaxshi chiqqan bitta model uchun:
+	•	classification_report ni chiqarib, precision/recall/F1 ni izohlang.
+	•	“Risk” yoki “High” sinfini topishda qaysi metrika muhimroq ekanini yozing.
+	•	precisionmi yoki recallmi? Nima uchun?
+ 
+Amaliy topshiriqlar
+
+
+3.7. TensorFlow asoslari
+Keras modelni belgilangan parametrlar bilan 50 epoch davomida o‘qitish, Test datasetda modelni evaluate qilish va loss hamda MAE metrikalarini olish, Natijani models_results lug‘atiga qo‘shish (modellarning umumiy taqqoslash jadvali uchun), Tayyor modelni .h5 formatida diskka saqlash (keyingi darslarda yuklab ishlatish uchun).
+Mashg‘ulot
+maqsadi
+Keras modelni belgilangan parametrlar bilan 50 epoch davomida o‘qitish, Test datasetda modelni evaluate qilish va loss hamda MAE metrikalarini olish, Natijani models_results lug‘atiga qo‘shish (modellarning umumiy taqqoslash jadvali uchun), Tayyor modelni .h5 formatida diskka saqlash (keyingi darslarda yuklab ishlatish uchun).
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Oldingi bosqichlardan: model_tf (yaratilgan va compile qilingan model), X_train_scaled, y_train, X_test_scaled, y_test models_results (lug‘at bo‘lsa yaxshi)
+	•	
+	•	
+folders["models"] papka yo‘li (yoki oddiy path)
+	•	
+	•	)
+Oldingi bosqichlardan: model_tf (yaratilgan va compile qilingan model), X_train_scaled, y_train, X_test_scaled, y_test models_results (lug‘at bo‘lsa yaxshi)
+	•	
+	•	
+folders["models"] papka yo‘li (yoki oddiy path)
+	•	
+	•	)
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+TensorFlow — bu Google tomonidan ishlab chiqilgan, sun’iy intellekt va ayniqsa Deep Learning modellarini yaratish, o‘qitish va real tizimlarda qo‘llash uchun mo‘ljallangan kuchli kutubxona hisoblanadi. TensorFlow’ning asosiy afzalligi shundaki, u katta hajmdagi ma’lumotlarda tez ishlaydi, GPU/TPU yordamida hisoblashni tezlashtiradi va modelni tayyor holatda saqlab, keyinchalik turli platformalarda ishlatish imkonini beradi. TensorFlow ichida eng ko‘p qo‘llaniladigan modul — Keras bo‘lib, u neyron tarmoq arxitekturasini sodda va tushunarli tarzda qurishga yordam beradi. Neyron tarmoq (Neural Network) — bu inson miyasi ishlash prinsipidan ilhomlangan model bo‘lib, u ma’lumotlardan murakkab bog‘lanishlarni o‘rganadi. Keras’da model odatda qatlamlar (layers) ketma-ketligi orqali tuziladi. Masalan, Dense qatlam kiruvchi featurelarni qabul qilib, ichki vaznlar (weights) orqali hisob-kitob qiladi. Aktivatsiya funksiyasi (masalan, relu) modelga nolinearlik qo‘shib, murakkab munosabatlarni o‘rganish imkonini beradi. Model o‘qitish jarayonida optimizator (adam) vaznlarni yangilab boradi, loss funksiyasi esa model xatosini hisoblab, minimallashtirishga xizmat qiladi. Regressiya masalalarida ko‘p ishlatiladigan loss funksiyalardan biri — MSE (Mean Squared Error), baholash metrikasi sifatida esa MAE (Mean Absolute Error) keng qo‘llanadi.
+Amaliy loyihalarda modelning asosiy muammolaridan biri overfitting, ya’ni model trening ma’lumotini “yodlab olib”, yangi ma’lumotda yomon ishlashi mumkin. Buni kamaytirish uchun Dropout qatlamidan foydalaniladi: u trening vaqtida neyronlarning bir qismini vaqtincha o‘chirib, modelni umumiy qonuniyatlarni o‘rganishga majbur qiladi. “Maktab pipeline” misolida TensorFlow modeli maktablar soni, o‘qituvchilar, o‘g‘il-qizlar soni kabi featurelar asosida o‘quvchilar jami yoki KPI qiymatlarini bashorat qilish uchun ishlatiladi. Shu orqali talabalar TensorFlow’da model qurish, o‘qitish, baholash va saqlashning asosiy bosqichlarini amaliy tarzda o‘zlashtiradilar.
+Amaliyot. 
+Kutubxonani import qilish va Modelni o‘qitish (fit) 
+
+	•	epochs=50: model datasetni 50 marta ko‘rib chiqadi.
+	•	batch_size=32: har yangilanish 32 ta namunadan so‘ng amalga oshadi.
+	•	validation_split=0.2: train’ning 20% qismi validatsiyaga ajratiladi (overfitting nazorati uchun).
+	•	verbose=0: konsolga trening logini chiqarmaydi (sokin rejim).
+
+Modelni baholash (evaluate) va Natijalarni chiqarish va jamlash
+	•	Test datasetda loss (bu yerda MSE) va mae hisoblanadi.
+	•	Bu natija modelning “ilgari ko‘rmagan” ma’lumotda qanchalik xato qilishini ko‘rsatadi.
+	•	Konsolga loss, MAE va epoch soni chiqariladi.
+	•	models_results ga TensorFlow modelining MAE qiymati qo‘shiladi (boshqa modellar bilan solishtirish uchun).
+
+Modelni saqlash (save)
+
+	•	Tayyor model .h5 formatida folders["models"] papkasiga saqlanadi.
+	•	Bu keyinchalik modelni qayta o‘qitmasdan yuklab ishlatish imkonini beradi.
+Ushbu amaliyotda TensorFlow/Keras yordamida yaratilgan neyron tarmoq modeli 50 epoch davomida o‘qitildi va test datasetda baholandi. Baholash natijasida modelning asosiy xato ko‘rsatkichi sifatida loss (MSE) va MAE olindi hamda boshqa modellar bilan solishtirish uchun models_results jadvaliga kiritildi. Yakunda model .h5 formatida saqlanib, keyingi darslarda yoki amaliy vazifalarda qayta o‘qitmasdan ishlatish (deploy yoki inference) uchun tayyor holatga keltirildi.
+O‘z loyihangiz doirasida Modelni epochs=20, epochs=50 va epochs=100 qilib o‘qiting, har birida MAE ni yozib chiqing.
+	•	validation_split ni 0.1 va 0.3 qilib solishtiring. Qaysi holatda validatsiya xatosi barqarorroq?
+	•	Dropout’ni 0.0 / 0.2 / 0.3 qilib o‘zgartiring va test MAE taqqoslang.
+	•	models_results ga barcha natijalarni kiritib, eng kichik MAE chiqqan variantni “eng yaxshi” deb belgilang.
+	•	Modelni .h5 formatida saqlang va keyin keras.models.load_model() bilan qayta yuklab ko‘ring (1–2 gap izoh).
+Amaliy topshiriqlar
+
+	•	O‘z loyihangiz doirasida Modelni epochs=20, epochs=50 va epochs=100 qilib o‘qiting, har birida MAE ni yozib chiqing.
+	•	validation_split ni 0.1 va 0.3 qilib solishtiring. Qaysi holatda validatsiya xatosi barqarorroq?
+	•	Dropout’ni 0.0 / 0.2 / 0.3 qilib o‘zgartiring va test MAE taqqoslang.
+	•	models_results ga barcha natijalarni kiritib, eng kichik MAE chiqqan variantni “eng yaxshi” deb belgilang.
+	•	Modelni .h5 formatida saqlang va keyin keras.models.load_model() bilan qayta yuklab ko‘ring (1–2 gap izoh).
+Amaliy topshiriqlar
+
+
+3.8. PyTorch asoslari
+O‘quvchilarga nn.Module yordamida sodda neyron tarmoq arxitekturasini yaratishni (64 → 32 → 1). o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga nn.Module yordamida sodda neyron tarmoq arxitekturasini yaratishni (64 → 32 → 1). o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Torch, numpy,  pandas, scikit-learn (MAE uchun) kutubxonalari va oldingi darslardan olingan natijalar.
+·  
+Torch, numpy,  pandas, scikit-learn (MAE uchun) kutubxonalari va oldingi darslardan olingan natijalar.
+·  
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+PyTorch — bu Meta (Facebook) tomonidan qo‘llab-quvvatlanadigan, Deep Learning modellarini yaratish va o‘qitish uchun keng ishlatiladigan kutubxona. PyTorch’ning asosiy konsepsiyasi — tensorlar (ko‘p o‘lchovli massivlar) va autograd mexanizmi orqali avtomatik differensiallashdir. Ya’ni, modelning xatosi (loss) hisoblangach, PyTorch backward() orqali gradientlarni avtomatik topadi va optimizator (masalan, Adam) vaznlarni yangilaydi. Bu jarayon “forward pass → loss → backward pass → update” sikli sifatida qaraladi. PyTorch’da model odatda nn.Module dan meros olinib yoziladi. Qatlamlar nn.Linear, nn.Dropout, aktivatsiya nn.ReLU kabi komponentlar bilan quriladi. Regressiya vazifasida chiqish qatlamida odatda 1 ta neuron bo‘ladi (Dense/Linear(1)), loss sifatida esa MSELoss ishlatiladi. Overfittingni kamaytirish uchun Dropout qo‘llanadi.
+“Maktab pipeline” misolida PyTorch modeli X_train_scaled featurelari asosida target qiymatni (masalan, Oquvchilar_jami) regressiya sifatida bashorat qiladi. Trening tugagach, model test ma’lumotida ishlatilib, natija MAE metrikasi orqali baholanadi. Yakunda model state_dict() ko‘rinishida .pth faylga saqlanadi, bu uni keyin qayta yuklab ishlatish (inference) imkonini beradi.
+Amaliyot: 
+PyTorch kutubxonalari import qilinadi (torch, nn, optim).
+
+MaktabNN nomli model klassi yoziladi:
+
+Linear → ReLU → Dropout → Linear → ReLU → Dropout → Linear(1)
+X_train_scaled va y_train tensor ko‘rinishga o‘tkaziladi.
+	
+Model, loss (MSELoss) va optimizator (Adam) e’lon qilinadi.
+50 epoch davomida trening sikli bajariladi:
+forward: outputs = model(X)
+loss: loss = criterion(outputs, y)
+zero_grad → backward → step
+Test ma’lumot tensor qilinib, no_grad() ichida bashorat olinadi.
+
+Bashoratlar MAE bilan baholanadi va models_results ga qo‘shiladi.
+Model state_dict() ko‘rinishida .pth formatda saqlanadi
+
+Yakunda barcha modellar natijalari DataFrame ko‘rinishida chiqariladi va eng yaxshi model tanlanadi.
+
+Ushbu amaliyotdada PyTorch yordamida regressiya vazifasi uchun sodda neyron tarmoq modeli qurildi va 50 epoch davomida o‘qitildi. Model arxitekturasida Linear qatlamlar va ReLU aktivatsiyasi orqali nolinear bog‘lanishlar o‘rganildi, Dropout esa overfittingni kamaytirish uchun qo‘llandi. Trening jarayoni “forward → loss → backward → update” sikli asosida bajarilib, test ma’lumotda bashoratlar olinib MAE metrikasi orqali baholandi. Natija boshqa modellar bilan taqqoslash uchun models_results jadvaliga qo‘shildi. Yakunda model state_dict() ko‘rinishida .pth formatda saqlanib, keyinchalik qayta yuklab ishlatish uchun tayyor holatga keltirildi.
+
+Qatlamlar ketma-ketligini yozing va har qatlamning vazifasini 1–2 gap bilan izohlang (Linear, ReLU, Dropout).
+	•	Epoch ta’sirini tekshirish epochs=20, epochs=50, epochs=100 qilib sinang.
+	•	Har birida test MAE ni jadvalga yozing va qaysi biri yaxshiroq ekanini izohlang.
+	•	Dropout sozlash Dropout qiymatini 0.0 / 0.2 / 0.3 qilib o‘zgartiring.
+	•	Overfitting belgilari (loss kamayadi, test MAE oshadi) bor-yo‘qligini yozing.
+	•	Learning rate tajribasi lr=0.01, lr=0.001, lr=0.0005 variantlarini taqqoslang.
+	•	Qaysi lr barqarorroq natija berdi? 2–3 gap izoh.
+	•	Modelni saqlash va qayta yuklash 
+	•	.pth saqlang, keyin yangi model yaratib load_state_dict() bilan yuklang va test MAE qayta hisoblang.
+Amaliy topshiriqlar
+
+
+	•	Qatlamlar ketma-ketligini yozing va har qatlamning vazifasini 1–2 gap bilan izohlang (Linear, ReLU, Dropout).
+	•	Epoch ta’sirini tekshirish epochs=20, epochs=50, epochs=100 qilib sinang.
+	•	Har birida test MAE ni jadvalga yozing va qaysi biri yaxshiroq ekanini izohlang.
+	•	Dropout sozlash Dropout qiymatini 0.0 / 0.2 / 0.3 qilib o‘zgartiring.
+	•	Overfitting belgilari (loss kamayadi, test MAE oshadi) bor-yo‘qligini yozing.
+	•	Learning rate tajribasi lr=0.01, lr=0.001, lr=0.0005 variantlarini taqqoslang.
+	•	Qaysi lr barqarorroq natija berdi? 2–3 gap izoh.
+	•	Modelni saqlash va qayta yuklash 
+	•	.pth saqlang, keyin yangi model yaratib load_state_dict() bilan yuklang va test MAE qayta hisoblang.
+Amaliy topshiriqlar
+
+3.9. Modelni xizmatga chiqarish (FastAPI bilan deploy qilish)
+O‘quvchilarga Machine Learning modelni real tizimlarda foydalanish mumkin bo‘lgan API servis ko‘rinishiga keltirishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga Machine Learning modelni real tizimlarda foydalanish mumkin bo‘lgan API servis ko‘rinishiga keltirishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+FastAPI va Uvicorn,joblib, numpy, pydantic,Oldingi bosqichlardan tayyor obyektlar: lr, rf, gb, xgb, lgbm, scaler,folders["models"] va folders["api"] papka yo‘llari
+·  
+FastAPI va Uvicorn,joblib, numpy, pydantic,Oldingi bosqichlardan tayyor obyektlar: lr, rf, gb, xgb, lgbm, scaler,folders["models"] va folders["api"] papka yo‘llari
+·  
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Modelni “xizmatga chiqarish” (deployment) — bu o‘qitilgan Machine Learning modelni real tizimlarda foydalanish mumkin bo‘lgan API servis ko‘rinishiga keltirish jarayonidir. Data Science pipeline’da model o‘qitilgandan keyin uning qiymati faqat notebook ichida qolmaydi; u boshqa dasturlar (web sayt, mobil ilova, BI panel, integratsion servislar) tomonidan chaqiriladigan ko‘rinishga keltiriladi. Shu maqsadda ko‘p hollarda REST API ishlatiladi: mijoz (client) serverga featurelarni yuboradi, server model orqali bashorat (prediction) qaytaradi.
+FastAPI — Pythonda yuqori tezlikda ishlaydigan, OpenAPI/Swagger hujjatlashtirishni avtomatik beradigan zamonaviy web framework. Model deploy jarayonida FastAPI quyidagi vazifalarni bajaradi:
+	•	Kiruvchi so‘rovni (request) qabul qiladi (JSON formatda).
+	•	Ma’lumotni tekshiradi (Pydantic orqali).
+	•	Kerakli preprocessing (scaling) ni qo‘llaydi.
+	•	Modeldan prediction oladi.
+	•	Natijani JSON ko‘rinishida qaytaradi. 
+Modelni saqlash va yuklash uchun joblib/pickle ishlatiladi. Bu yondashuv “maktab pipeline” misolida bir nechta model (LR, RF, GB, XGB, LGBM)ni bitta API ichida boshqarish va turli model bilan bashorat qilish imkonini beradi.
+ Amaliyot.
+
+	•	Modellar .pkl formatida models/ papkaga saqlandi (LR, RF, GB, XGB, LGBM, scaler).
+
+	•	Har bir faylning hajmi (KB) chiqarilib, saqlash muvaffaqiyati tekshirildi.
+
+
+	•	FastAPI ilovasi yozildi (app.py): /predict — featurelar keladi, tanlangan modelga beriladi va prediction qaytadi, /health — servis sog‘lomligini tekshiradi, Pydantic BaseModel orqali kiruvchi JSON format validatsiya qilindi, Model tanlash mexanizmi qo‘shildi (model: "rf" default).  
+# FastAPI 
+fastapi_code = '''from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import List
+import joblib
+import numpy as np
+
+app = FastAPI(title="Maktab API", version="1.0.0")
+
+models = {
+    "lr": joblib.load("models/linear_regression.pkl"),
+    "rf": joblib.load("models/random_forest.pkl"),
+    "gb": joblib.load("models/gradient_boosting.pkl"),
+    "xgb": joblib.load("models/xgboost.pkl"),
+    "lgbm": joblib.load("models/lightgbm.pkl")
+}
+scaler = joblib.load("models/scaler.pkl")
+
+class PredictionRequest(BaseModel):
+    features: List[float]
+    model: str = "rf"
+
+@app.get("/")
+def root():
+    return {"message": "Maktab API", "models": list(models.keys())}
+
+@app.post("/predict")
+def predict(req: PredictionRequest):
+    if req.model not in models:
+        raise HTTPException(400, f"Model not found: {req.model}")
+    X = np.array([req.features])
+    if req.model in ["lr"]:
+        X = scaler.transform(X)
+    return {"prediction": float(models[req.model].predict(X)[0])}
+
+@app.get("/health")
+def health():
+    return {"status": "healthy", "models": len(models)}
+'''
+
+
+	•	/ — servis haqida ma’lumot va mavjud modellarning ro‘yxati.
+
+	•	Terminalda api papkaga o‘tiladi va quyidagini bajariladi:
+ Qolaversa Fast API yordamida yo‘riqnoma chiqarishimiz mumkun
+
+Ushbu mavzuda o‘qitilgan Machine Learning modellar real tizimlarda foydalanish uchun FastAPI yordamida REST servis ko‘rinishiga keltirildi. Avvalo modellarning .pkl formatda saqlanishi va kerakli preprocessing (scaler) ham alohida saqlab qo‘yilishi ta’minlandi. So‘ng FastAPI ilovasi yaratilib, /predict endpoint orqali kiruvchi featurelar qabul qilinishi, model tanlash mexanizmi asosida bashorat qaytarilishi yo‘lga qo‘yildi. /health endpoint servis holatini tekshirish uchun, / endpoint esa servis haqida umumiy ma’lumot berish uchun ishlab chiqildi. Natijada talabalar modelni notebookdan tashqariga chiqarish, API orqali integratsiya qilish va deploy jarayonining amaliy asoslarini o‘zlashtirdilar.
+	Model saqlash: kamida 2 ta modelni .pkl qilib saqlang (masalan, lr + rf) va fayl hajmini chiqaring.
+	•	FastAPI API yozish: /predict endpoint yarating va model parametri orqali model tanlashni qo‘shing.
+	•	Validatsiya: features uzunligi loyihangizdagi feature soniga mos bo‘lishini tekshiring (mos kelmasa HTTP 400 qaytarsin).
+	•	Swagger: /docs sahifasidan 3 ta turli request yuborib, natijalarni skrinshot qiling.
+	•	Xavfsiz xulosa: qaysi modelni default qilish kerak va nega? (2–4 gap)
+	•	 Logging: request kelganda model nomi va predictionni logga yozing.  
+
+
+Amaliy topshiriqlar
+
+
+	•	Model saqlash: kamida 2 ta modelni .pkl qilib saqlang (masalan, lr + rf) va fayl hajmini chiqaring.
+	•	FastAPI API yozish: /predict endpoint yarating va model parametri orqali model tanlashni qo‘shing.
+	•	Validatsiya: features uzunligi loyihangizdagi feature soniga mos bo‘lishini tekshiring (mos kelmasa HTTP 400 qaytarsin).
+	•	Swagger: /docs sahifasidan 3 ta turli request yuborib, natijalarni skrinshot qiling.
+	•	Xavfsiz xulosa: qaysi modelni default qilish kerak va nega? (2–4 gap)
+	•	 Logging: request kelganda model nomi va predictionni logga yozing.  
+
+
+Amaliy topshiriqlar
+
+
+3.10. ML va Data Pipeline integratsiyasi.
+O‘quvchilarga Train va test bo‘laklarini birlashtirib, butun dataset bo‘yicha bashoratlar olish va ulardan foydalanishni o‘rgatish
+Mashg‘ulot
+maqsadi
+O‘quvchilarga Train va test bo‘laklarini birlashtirib, butun dataset bo‘yicha bashoratlar olish va ulardan foydalanishni o‘rgatish
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+folders["data_lake_gold"] — Gold layer uchun papka (Parquet shu yerga yoziladi), folders["models"] — model saqlash papkasi (agar kerak bo‘lsa), Dataset: df_pivot yoki df_ml (tayyorlangan feature dataset). Oldingi bosqichlardan: X_train, X_test, y_train, y_test,rf, gb, xgb (o‘qitilgan modellar)
+
+folders["data_lake_gold"] — Gold layer uchun papka (Parquet shu yerga yoziladi), folders["models"] — model saqlash papkasi (agar kerak bo‘lsa), Dataset: df_pivot yoki df_ml (tayyorlangan feature dataset). Oldingi bosqichlardan: X_train, X_test, y_train, y_test,rf, gb, xgb (o‘qitilgan modellar)
+
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+ML va Data Pipeline integratsiyasi zamonaviy data engineering tizimlarida eng muhim yo‘nalishlardan biri hisoblanadi. Chunki pipeline faqat xom ma’lumotlarni yig‘ish va tozalash bilan cheklanib qolmay, endilikda ushbu ma’lumotlar asosida bashorat (prediction) qilish va qaror qabul qilish jarayonini ham avtomatlashtiradi. Bunday integratsiyada Data Lake arxitekturasi odatda Bronze–Silver–Gold qatlamlar asosida tashkil qilinadi: Bronze qatlamda xom ma’lumotlar saqlanadi, Silver qatlamda ma’lumotlar tozalanib tartibga keltiriladi, Gold qatlam esa biznes uchun tayyor analitik ma’lumotlarni taqdim etadi. ML natijalari aynan Gold qatlamni boyitadi, ya’ni Gold endi faqat faktlar va KPI lar emas, balki model tomonidan hisoblangan bashorat ko‘rsatkichlarini ham o‘z ichiga oladi.
+Amaliy jarayonda train va test datasetlar birlashtirilib, butun ma’lumotlar bo‘yicha bir nechta modellardan (masalan, Random Forest, Gradient Boosting, XGBoost) bashoratlar olinadi. Keyin haqiqiy target qiymatlar, prediction ustunlari hamda original featurelar birlashtirilib, yangi “ML Gold dataset” hosil qilinadi. Ushbu dataset Parquet formatda Gold layerga yoziladi, chunki Parquet tez o‘qiladigan va saqlash hajmi kichik bo‘lgan columnar format hisoblanadi hamda Spark, Databricks kabi platformalar bilan yaxshi ishlaydi. Yakunda model natijalarini nazorat qilish uchun MAPE yoki MAE kabi metrikalar hisoblanib, qaysi model aniqroq bashorat qilayotgani solishtiriladi. Natijada pipeline “tozalangan ma’lumot” bilan birga “bashoratli ma’lumot”ni ham taqdim etadi va bu BI, rejalashtirish, monitoring hamda resurslarni taqsimlash kabi real biznes vazifalarida katta amaliy ahamiyatga ega bo‘ladi.
+Amaliyot:
+	•	Train va Test ni birlashtirish
+	•	X_all va y_all yaratildi: datasetning barcha qatorlari bir joyga jamlandi.
+	•	Bu bosqich maqsadi: keyingi bosqichda “butun dataset” bo‘yicha ML natijalar bilan enriched dataset olish.
+
+	•	Bashorat qilish (3 ta model)
+	•	rf.predict(X_all)
+	•	gb.predict(X_all)
+	•	xgb.predict(X_all) Natijada har bir model uchun alohida prediction massivlari hosil bo‘ldi.
+
+
+	•	Gold layer dataset yaratish va Parquet formatda saqlash (Gold Layer)
+	•	df_ml_gold DataFrame tuzildi:
+	•	haqiqiy target (target_col)
+	•	prediction_rf, prediction_gb, prediction_xgb
+Keyin original featurelar ham qayta qo‘shildi (for col in X_all.columns), ya’ni Gold jadval “facts + predictions + features” formatida bo‘ldi.
+	•	ml_predictions.parquet nomi bilan folders["data_lake_gold"] ichiga yozildi.
+	•	Parquet tanlanish sababi: columnar format, tez o‘qiladi, saqlash hajmi kichik, BI/Databricks/Spark bilan yaxshi integratsiya qiladi.
+
+
+Natija:
+
+	•	MAPE orqali aniqlikni hisoblash
+	•	mean_absolute_percentage_error yordamida uch model uchun MAPE topildi.
+	•	1 - MAPE ko‘rinishida foizga o‘tkazilib “bashorat aniqligi” sifatida chiqarildi (bu soddalashtirilgan interpretatsiya).
+
+Ushbu amaliyotda ML modellari Data Pipeline’ning Gold qatlamiga integratsiya qilindi: train va test ma’lumotlar jamlanib, Random Forest, Gradient Boosting va XGBoost modellaridan bashoratlar olindi. Bashorat natijalari haqiqiy target va original featurelar bilan birga yagona df_ml_gold jadvalga birlashtirilib, Data Lake Gold qatlamga Parquet formatda saqlandi. Natijada pipeline faqat tarixiy “tozalangan” ma’lumotni emas, balki model bashoratlarini ham o‘z ichiga olgan “analitika uchun tayyor” datasetni taqdim etdi. Yakunda MAPE asosida modellarning bashorat sifati solishtirilib, qaysi model yaxshiroq ishlayotgani bo‘yicha dastlabki xulosa chiqarish imkoniyati yaratildi.
+	Gold layer yaratish: o‘z loyihangizda kamida 2 ta model (masalan, RF va XGB) predictionini hisoblab, df_ml_gold yarating.
+	•	Saqlash: Gold qatlamga Parquet formatda saqlang (ml_predictions.parquet).
+	•	Baholash:
+	•	Test set uchun MAE yoki MAPE ni hisoblang (faqat testda).
+	•	Modellarni solishtirib, qaysi biri yaxshi chiqqanini yozing
+	•	Tahlil: Gold datasetdan 3 ta insight yozing:
+	•	qaysi featurelar katta ta’sir ko‘rsatadi (RF importance yoki tahlil)
+	•	qaysi hudud/yil prediction yuqori chiqdi
+	•	qaysi joylarda model ko‘proq xato qiladi
+	•	 Monitoring: prediction va haqiqiy target farqidan error = y - pred ustunini qo‘shing va eng katta 10 ta xato qatorni toping.
+
+
+
+Amaliy topshiriqlar
+
+
+	•	Gold layer yaratish: o‘z loyihangizda kamida 2 ta model (masalan, RF va XGB) predictionini hisoblab, df_ml_gold yarating.
+	•	Saqlash: Gold qatlamga Parquet formatda saqlang (ml_predictions.parquet).
+	•	Baholash:
+	•	Test set uchun MAE yoki MAPE ni hisoblang (faqat testda).
+	•	Modellarni solishtirib, qaysi biri yaxshi chiqqanini yozing
+	•	Tahlil: Gold datasetdan 3 ta insight yozing:
+	•	qaysi featurelar katta ta’sir ko‘rsatadi (RF importance yoki tahlil)
+	•	qaysi hudud/yil prediction yuqori chiqdi
+	•	qaysi joylarda model ko‘proq xato qiladi
+	•	 Monitoring: prediction va haqiqiy target farqidan error = y - pred ustunini qo‘shing va eng katta 10 ta xato qatorni toping.
+
+
+
+Amaliy topshiriqlar
+
+
+
+
+
+
+
+
+
+4-bob haqida umumiy ma’lumot.
+Ushbu 4-bob kursning yakuniy va integratsion bosqichi bo‘lib, avvalgi boblarda o‘rganilgan Data Engineering va Machine Learning komponentlarini ishlab chiqarish (production) darajasiga olib chiqish tamoyillariga bag‘ishlanadi. Bobning asosiy g‘oyasi — alohida vositalarni bilishdan tashqari, ularni yagona End-to-End Data Platform ko‘rinishida birlashtirish, jarayonlarni avtomatlashtirish va tizimni barqaror ishlashini ta’minlashdir.
+Bobda avvalo platforma arxitekturasi, servislar o‘rtasidagi integratsiya, ma’lumot oqimi va ML inference zanjiri (data → transform → model → servis → monitoring) konseptual jihatdan yoritiladi. Keyingi mavzularda GitHub Actions asosida CI/CD avtomatlashtirish orqali kod sifati nazorati, test, build va deploy jarayonlari standartlashtiriladi. Docker yordamida ML model va servislar konteynerlanib, muhit muammolari kamaytiriladi va ko‘chirish (portability) ta’minlanadi.
+Shuningdek, monitoring va log tahlili vositalari yordamida pipeline va modelning ishlash ko‘rsatkichlarini kuzatish, xatoliklarni erta aniqlash va xizmat barqarorligini oshirish yondashuvlari beriladi. Bobning muhim tarkibiy qismi — Data Ethics va xavfsizlik, ya’ni ma’lumotlardan mas’uliyatli foydalanish, maxfiylik, ruxsat nazorati, audit va governance tamoyillaridir. Yakunda AI Infrastructure hamda zamonaviy trendlar (Data Mesh, AutoML, Generative AI) tahlil qilinib, talabalarga Data Engineering va ML yo‘nalishlarida kasbiy trajektoriya va amaliy kompetensiyalarni mustahkamlash bo‘yicha yakuniy xulosalar beriladi.
+
+4.1. End-to-End Data Platform arxitekturasi
+O‘quvchilarga End-to-End Data Platform arxitekturasini tushuntirish va data mahsulot qanday yaratilishini bosqichma-bosqich ko‘rsatish va o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga End-to-End Data Platform arxitekturasini tushuntirish va data mahsulot qanday yaratilishini bosqichma-bosqich ko‘rsatish va o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+ pandas numpy scikit-learn pyarrow joblib fastapi uvicorn xgboost lightgbm
+ pandas numpy scikit-learn pyarrow joblib fastapi uvicorn xgboost lightgbm
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+End-to-End Data Platform — bu ma’lumotlar hayotiy siklini boshidan oxirigacha qamrab oladigan yagona arxitektura bo‘lib, u ma’lumotni yig‘ish (ingestion)dan boshlab, tozalash va transformatsiya (processing), saqlash (storage), analitika/ML (machine learning) hamda natijani xizmat sifatida taqdim etish (serving) bosqichlarini bir-biriga bog‘laydi. Bunday platformaning maqsadi — data jarayonlarni standartlashtirish, avtomatlashtirish, kuzatuvchan (observability) qilish va real biznes qarorlariga xizmat qiladigan “ishonchli data mahsulot” yaratishdir.
+“Maktab pipeline” misolida platforma birinchi bosqichda turli manbalardan keladigan 40 ta CSV faylni qabul qiladi va ularni minimal o‘zgarish bilan Bronze layerga joylaydi. Bronze qatlam xom ma’lumotlar ombori sifatida ishlaydi: u qayta ishlashda xatolik bo‘lsa, manbaga qaytib tiklash imkonini beradi va audit uchun asosiy qatlam hisoblanadi. Keyingi bosqichda Spark yordamida ETL/ELT transformatsiyalar bajarilib, ma’lumotlar tozalanadi, tiplari normallashtiriladi, dublikat va null muammolari boshqariladi hamda Silver layerga o‘tkaziladi. Silver qatlam “ishonchli va strukturali” ma’lumotlar qatlami bo‘lib, analitik hisob-kitoblar va keyingi transformatsiyalar uchun tayyor holatni ta’minlaydi.
+Storage qismida Bronze, Silver va Gold qatlamlar ma’lumotning turli tayyorgarlik darajasini ifodalaydi: Bronze’da xom ma’lumotlar, Silver’da tozalangan/standartlashtirilgan ma’lumotlar, Gold’da esa biznes uchun tayyor agregatsiyalar, KPIlar va ML uchun “feature-ready” datasetlar saqlanadi. Siz ko‘rsatganidek, Bronze’da 35K+ qator, Silver’da 30K+ qator kabi hajm farqi tozalash va filtr bosqichlari natijasida yuzaga keladi. Gold layer esa “ML ready data” sifatida modelga beriladigan yakuniy featurelar majmuasini hamda bashorat natijalarini (prediction store) saqlash uchun ishlatiladi.
+Machine Learning bosqichida Gold qatlamdan olingan tayyor dataset asosida bir nechta model sinab ko‘riladi: klassik modellar (Linear Regression, Random Forest, XGBoost) hamda chuqur o‘rganish modellari (TensorFlow, PyTorch). Bu bosqichning vazifasi — bashorat aniqligi (R², MAE va boshqalar) bo‘yicha eng mos modelni tanlash, feature importance orqali tahlil qilish va modelni saqlab, keyingi bosqichga uzatishdir. Nihoyat, Serving bosqichida tanlangan modellar FastAPI orqali REST servis ko‘rinishida ishga tushirilib, tashqi tizimlar (dashboard, web ilova, mobil ilova yoki boshqa servislar) uchun /predict endpoint orqali bashorat taqdim etiladi. Natijada platforma “ma’lumot → transformatsiya → model → servis” zanjirini yakunlab, real foydalanish mumkin bo‘lgan data mahsulotni beradi.
+Amaliy jihatdan end-to-end platforma quyidagi asosiy tamoyillarni mustahkamlaydi: (1) qatlamli saqlash (Bronze/Silver/Gold) orqali ma’lumot ishonchliligi va qayta tiklash imkoniyati, (2) Spark/ETL orqali masshtablanuvchan qayta ishlash, (3) ML pipeline orqali prognoz va analitika qiymatini oshirish, (4) FastAPI kabi serving qatlami orqali modelni real tizimlarga integratsiya qilish. Shu bilan birga, bunday platformada monitoring (loglar, metrikalar), data quality (testlar), versiyalash (Git), hamda avtomatlashtirish (Airflow kabi orchestrator) qo‘shilsa, u production darajasidagi to‘liq Data Platformaga aylanadi.
+print("\n" + "="*80)
+print("MAVZU 25: END-TO-END DATA PLATFORM")
+print("="*80 + "\n")
+
+print("""
+┌────────────────────────────────────────┐
+│      END-TO-END DATA PLATFORM                         │
+└────────────────────────────────────────┘
+
+ INGESTION
+   └─ 40 CSV Files → Bronze Layer
+
+ PROCESSING
+   └─ Spark → ETL → Silver Layer
+
+  STORAGE
+   ├─ Bronze: 35K+ qator
+   ├─ Silver: 30K+ qator
+   └─ Gold: ML ready data
+
+ MACHINE LEARNING
+   ├─ Linear Regression (R²=99%)
+   ├─ Random Forest (R²=99%)
+   ├─ XGBoost (R²=99%)
+   └─ TensorFlow, PyTorch
+
+ SERVING
+   └─ FastAPI → 5 models
+""")
+
+
+Ushbu mavzuda End-to-End Data Platform arxitekturasi “maktab pipeline” misolida to‘liq ko‘rib chiqildi. Jarayon ma’lumotlarni manbadan qabul qilish (ingestion)dan boshlanib, Bronze–Silver–Gold qatlamlar orqali saqlash va qayta ishlash tamoyillari asosida tashkil etildi. Processing bosqichida ETL transformatsiyalar orqali ma’lumotlar tozalandi, tartiblandi va analitika hamda ML uchun tayyor holatga keltirildi. Gold qatlamda esa biznes uchun muhim KPI va agregatsiyalar bilan birga, Machine Learning modellar yordamida olingan bashorat natijalari ham shakllantirildi. Keyingi bosqichda model natijalarini real tizimlarda ishlatish uchun FastAPI orqali servis (serving) konsepti tushuntirildi. Natijada talabalar data pipeline va ML pipeline o‘rtasidagi bog‘lanishni, qatlamli arxitekturaning amaliy ahamiyatini hamda real loyihada data mahsulotni boshidan oxirigacha yaratish jarayonini yagona tizim sifatida tushunib oldilar.
+O‘z loyihasi bo‘yicha 5 qatlamli arxitektura chizmasini tuzing (oddiy blok-sxema yetarli):
+	•	Ingestion (qayerdan ma’lumot keladi?)
+	•	Processing/ETL (qanday tozalanadi, transform qilinadi?)
+	•	Storage (Bronze/Silver/Gold yoki DWH qatlamlari)
+	•	Machine Learning (qaysi muammo yechiladi?)
+	•	Serving (API/BI/dashboard)
+	•	Topshirish: diagram + har blok uchun 1–2 gap izoh.
+
+Amaliy topshiriqlar
+
+
+	•	O‘z loyihasi bo‘yicha 5 qatlamli arxitektura chizmasini tuzing (oddiy blok-sxema yetarli):
+	•	Ingestion (qayerdan ma’lumot keladi?)
+	•	Processing/ETL (qanday tozalanadi, transform qilinadi?)
+	•	Storage (Bronze/Silver/Gold yoki DWH qatlamlari)
+	•	Machine Learning (qaysi muammo yechiladi?)
+	•	Serving (API/BI/dashboard)
+	•	Topshirish: diagram + har blok uchun 1–2 gap izoh.
+
+Amaliy topshiriqlar
+
+
+4.2. CI/CD avtomatlashtirish tizimlari (GitHub Actions)
+Triggerlar: push, PR va kunlik schedule (02:00) orqali pipeline’ni avtomatlashtirish.
+Mashg‘ulot
+maqsadi
+Triggerlar: push, PR va kunlik schedule (02:00) orqali pipeline’ni avtomatlashtirish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Loyihada minimal fayllar: requirements.txt,train.py, validate_models.py,tests/ papkasi (kamida 1 test)
+	•	
+
+Loyihada minimal fayllar: requirements.txt,train.py, validate_models.py,tests/ papkasi (kamida 1 test)
+	•	
+
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+CI/CD (Continuous Integration / Continuous Delivery-Deployment) — dasturiy ta’minot va data/ML loyihalarida kodni muntazam tekshirish, testdan o‘tkazish, build qilish va avtomatik tarzda yetkazib berish jarayonidir. CI bosqichi asosan kod sifati va barqarorligini ta’minlaydi: har bir push yoki pull request (PR) kelganda loyiha avtomatik test qilinadi, lint tekshiruvlar ishlaydi, model trening/validatsiya skriptlari bajarilib, xatolik bo‘lsa merge to‘xtatiladi. CD bosqichi esa muvaffaqiyatli testdan keyin build va deploy ishlarini avtomatlashtiradi: Docker image tayyorlanadi, registry’ga push qilinadi va production/staging muhitga chiqariladi.
+Data/ML loyihalarida CI/CD ayniqsa muhim, chunki bu yerda faqat kod emas, balki model sifati ham nazorat qilinadi. Masalan, train.py modelni qayta o‘qitadi, validate_models.py esa metrikalar (MAE, R², accuracy, drift) bo‘yicha model “qabul qilinadimi yo‘qmi” degan qarorni beradi. Natijada har bir yangilanishda pipeline avtomatik tekshiriladi va production’ga faqat sifatli artefaktlar (model, API) chiqariladi.
+Dastlab Git Hub dan tayyor fayllarni joylashni korib chiqamiz, bunda Git hub desktop yokida git buyruqlaridan foydalanib amalga oshirish mumkin:
+GitHub - bu dasturiy ta'minotni ishlab chiqish dunyosida muhim rol o'ynaydigan veb-asoslangan platforma. U versiyalarni boshqarish, hamkorlik va loyihalarni boshqarish uchun markaziy markaz bo'lib xizmat qiladi. Boshqa tomondan, GitHub Desktop - bu GitHub tomonidan taqdim etiladigan foydalanuvchilar uchun qulay ish stoli ilovasi. U Git omborlari bilan o'zaro ishlash jarayonini soddalashtiradi, loyihalaringizni yaratish, klonlash, topshirish va ularga o'zgartirishlar kiritishni osonlashtiradi. Quyida Git-hub va git-hub ish stolidan qanday foydalanish bo'yicha bosqichma-bosqich ko‘rsatib o’tiladi.
+Yangi repository yaratish
+
+yangi repository yaratish
+GitHub akkauntiga kirgandan/kirgandan so'ng, yangi repository yaratish uchun yangi belgini bosing. Tasvirni to'liq hajmda ko'rish uchun Enter tugmasini bosing yoki bosing
+
+Repozitoriyingizga nom qo'shing va uni ommaviy yoki maxfiy qilishni tanlang.
+Tasvirni to'liq hajmda ko'rish uchun Enter tugmasini bosing yoki bosing
+
+Avtomatik ravishda yaratilgan fayllar va ikkilik fayllar o'zgarishlar sifatida ko'rinmasligi uchun ixtiyoriy ravishda .gitignore faylini qo'shishingiz mumkin.
+
+Repozitoriyangizni yaratish uchun Repozitoriya yaratish tugmasini bosing.
+
+Endi sizda omborxona bor!
+GitHub ish stolini o'rnatish va git repositorini klonlash
+Repozitoriyani yoki GitHub-dagi har qanday ommaviy repozitoriyni klonlashning bir necha yo'li mavjud, biz soddaligi uchun GitHub ish stolidan foydalanamiz .
+
+Yuklab olish tugmasini bosing, yuklab olish papkangizdan bajariladigan faylni oching, shartlar va qoidalarni qabul qiling va uni o'rnating.
+
+Endi sizning Windows dasturingiz kutubxonasida GitHub belgisi yoki OSX da tushlik daftarchangiz 🚀 mavjud!
+
+Hisobingiz bilan kirish uchun fayl > sozlamalar bo'limiga o'ting.
+
+Klonlash/yuklab olish uchun omborni tanlash uchun Fayl > Repozitoriyni klonlash tugmasini bosing.
+
+O'zingizning omborlaringiz avtomatik ravishda paydo bo'ladi, shuningdek, URL yorlig'ini bosish orqali ommaviy omborlarni klonlashingiz mumkin, omboringiz uchun mahalliy yo'lni tanlashni unutmang.
+
+Fayllar va o'zgarishlar
+
+Repozitoriyani mahalliy ravishda ochish uchun "repozitoriya" > "Explorerda ko'rsatish" tugmasini bosing!
+
+
+GitHub-da saqlangan omboringizga yuborish uchun fayl qo'shing.
+
+Endi qo'shilgan faylni github ish stolida ko'rishingiz mumkin!
+Faylingizni yuborish uchun avval nima qilayotganingizni tasvirlash uchun majburiyatni bajarishingiz kerak, bu holda biz yangi fayl qo'shdik, shuning uchun biz majburiyatimizni quyidagicha nomlashimiz mumkinCreated first commit
+
+
+Endi agar siz yangi o'zgarishlar qo'shmoqchi bo'lsangiz yoki commit xulosasini o'zgartirmoqchi bo'lsangiz, commitingizni bekor qilishingiz yoki push/upload qilish uchun Moviy Push tugmasini bosishingiz mumkin.
+
+Endi o'zgarishlaringiz xulosasini tarix yorlig'ida ko'rishingiz mumkin!
+
+Tasvirni to'liq hajmda ko'rish uchun Enter tugmasini bosing yoki bosing
+
+Mavjud loyihani qo'shish
+GitHub’da loyihani noldan boshlash o‘rniga, mavjud loyihangizni uning tarixi va uzluksizligini saqlab qolish uchun ko‘chirishingiz mumkin, shu bilan birga GitHub’ning hamkorlik vositalaridan ham foydalanishingiz mumkin.
+Mavjud omboringizga (klonlagan omboringizga) o'tishdan boshlang. Shuni yodda tutingki, qadamlar operatsion tizimingizga qarab farq qilishi mumkin va .git papkasi va .gitignore fayli odatda yashirin bo'ladi. Joylashtirilgandan so'ng, ushbu fayllarni tanlang va ularni GitHub-ga ko'chirmoqchi bo'lgan loyihangizga o'tkazing.
+
+
+Gitni ko'chirgandan so'ng, Github ish stolini oching va u sizga omborni topishni yoki uni klonlashni taklif qiladi, joylashishni tanlang.
+Tasvirni to'liq hajmda ko'rish uchun Enter tugmasini bosing yoki bosing
+
+Endi tizimingizdagi papkani tanlang.
+
+Github ish stolini oching, git barcha yangi fayl va papkalarni o'zgarishlar sifatida ko'rib chiqqani uchun ko'plab o'zgarishlarni ko'rasiz.
+
+Loyihani Github’da saqlash uchun o‘zgartirishlaringizni kiritishni va amalga oshirishni unutmang.
+Hamkor qo'shish
+
+GitHub veb-saytidan omboringizni oching va sozlamalarni bosing.
+
+Endi chapdagi Hamkorlar belgisini bosing.
+
+
+
+
+
+Amaliyot: 
+	•	.github/workflows/ papkasi yaratildi.
+	•	ci_cd.yml workflow fayli yozildi.
+	•	Workflow 3 xil trigger bilan ishga tushadi:
+	•	push (main, develop)
+	•	pull_request (main)
+	•	schedule (har kuni 02:00)
+	•	2 ta job mavjud:
+	•	test: checkout → python setup → dependencies → pytest → train → validate
+	•	deploy: test’dan keyin → docker build → push → kubectl apply
+
+
+Natija:
+
+
+	GitHub repo yarating va loyihangizni push qiling.
+	•	requirements.txt, train.py, validate_models.py va tests/ mavjudligini ta’minlang.
+	•	.github/workflows/ci_cd.yml yarating va quyidagilarni ishlating: trigger: push + PR va  job: test → train → validate
+	•	pytest ichida kamida 1 ta test yozing (masalan: dataset yuklanadimi, feature soni > 0, model predict ishlaydimi).
+	•	validate_models.py da metrika threshold qo‘ying (masalan: MAE < X bo‘lsa “pass”, aks holda “fail”).
+
+
+Amaliy topshiriqlar
+
+
+	•	GitHub repo yarating va loyihangizni push qiling.
+	•	requirements.txt, train.py, validate_models.py va tests/ mavjudligini ta’minlang.
+	•	.github/workflows/ci_cd.yml yarating va quyidagilarni ishlating: trigger: push + PR va  job: test → train → validate
+	•	pytest ichida kamida 1 ta test yozing (masalan: dataset yuklanadimi, feature soni > 0, model predict ishlaydimi).
+	•	validate_models.py da metrika threshold qo‘ying (masalan: MAE < X bo‘lsa “pass”, aks holda “fail”).
+
+
+Amaliy topshiriqlar
+
+4.3. Docker yordamida ML modelni konteynerlash
+O‘quvchilarga FastAPI asosidagi ML servisni Docker image sifatida build qilishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga FastAPI asosidagi ML servisni Docker image sifatida build qilishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Windows 11 (Docker Desktop) yoki Linux, Docker Desktop / Docker Engine, api/app.py,FastAPI), models/ papkasi (model fayllari)
+·  ·  requirements.txt
+·  
+	•	·  )
+Windows 11 (Docker Desktop) yoki Linux, Docker Desktop / Docker Engine, api/app.py,FastAPI), models/ papkasi (model fayllari)
+·  ·  requirements.txt
+·  
+	•	·  )
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Docker — bu dastur va uning barcha bog‘liqliklarini (kutubxonalar, runtime, konfiguratsiya) yagona standart muhitga joylab, konteyner ko‘rinishida ishga tushirish texnologiyasidir. ML loyihalarda muammo shundaki, model notebookda ishlashi mumkin, ammo boshqa kompyuterda kutubxona versiyasi yoki OS farqi sabab ishlamasligi ehtimoli yuqori. Docker bu muammoni “bir marta yig‘ib (build), hamma joyda bir xil ishlaydi (run)” tamoyili bilan hal qiladi.
+ML modelni konteynerlashda odatda quyidagilar konteyner ichiga kiradi:
+	•	API (FastAPI) — modelni servis sifatida taqdim etish (/predict, /health)
+	•	Model fayllari (.pkl, .h5, .pth) — inference uchun
+	•	Kutubxonalar (requirements.txt) — scikit-learn, xgboost, lightgbm va boshqalar
+	•	(Qo‘shimcha servislar) Postgres — saqlash; Grafana — monitoring
+Shu bilan konteynerlash nafaqat deployni osonlashtiradi, balki CI/CD, staging/production muhitlarini bir xil yuritishga ham xizmat qiladi.
+Docker bilan ishlashdan avval uni Windows tizimiga o‘rnatishni ko‘rib chiqamiz:
+
+Windowsga Docker Desktopni o‘rnatish:
+	•	Install sahifaning yuqori qismidagi yuklab olish tugmasi yoki docker.com/products/docker-desktop saytidan yuklab oling .
+	•	Installerni ishga tushirish uchun Docker Desktop Installer.exe faylini ikki marta bosing. Odatiy bo'lib, Docker Desktop is installed at {% embed %}C:\Program Files\Docker\Docker.
+	•	So'ralganda, konfiguratsiya sahifasidagi Hyper-V o'rniga WSL 2 ni ishlatish opsiyasi tanlangan yoki tanlanmaganligiga ishonch hosil qiling.
+	•	O'rnatishga ruxsat berish va uni davom ettirish uchun ko‘rsatmadagi ko'rsatmalarga amal qiling.
+	•	O'rnatish muvaffaqiyatli tugagandan so'ng, o'rnatish jarayonini yakunlash uchun Yopish-ni tanlang.
+Agar administrator hisobingiz foydalanuvchi hisobingizdan farq qilsa, foydalanuvchini docker-users guruhiga qo'shishingiz kerak:
+	•	Kompyuter boshqaruvini administrator sifatida ishga tushiring .
+	•	Mahalliy foydalanuvchilar va guruhlar > Guruhlar > docker-users ga o'ting .
+	•	Foydalanuvchini guruhga qo'shish uchun sichqonchaning o'ng tugmachasini bosing.
+	•	O'zgarishlar kuchga kirishi uchun tizimdan chiqing va qayta kiring.
+
+Docker ish stolini ishga tushiring:
+Docker Desktop o'rnatilgandan so'ng avtomatik ravishda ishga tushmaydi. Docker Desktopni ishga tushirish uchun:
+	•	Docker ni qidiring va qidiruv natijalarida Docker Desktop ni tanlang.
+
+	•	Ilovani ishga tushirish uchun Docker Desktop belgisini bosing.
+	•	Docker Desktop ishga tushishi uchun bir necha daqiqa vaqt ketishi mumkin, ayniqsa, agar uni o'rnatishdan keyin yoki tizimni qayta ishga tushirgandan so'ng birinchi marta ishga tushirsangiz.
+	•	Endi konteynerlar va tasvirlarni boshqarish uchun buyruq satrida, PowerShell yoki terminalda Docker buyruqlaridan foydalanishni boshlashingiz mumkin.
+Amaliyot
+	•	Dockerfile yaratildi
+python:3.10-slim bazaviy image olindi (yengil).
+WORKDIR /app bilan ish katalogi belgilandi.
+requirements.txt ko‘chirildi va dependencylar o‘rnatildi.
+models/ va api/app.py konteynerga copy qilindi.
+EXPOSE 8000 — FastAPI porti ochildi.
+HEALTHCHECK — /health endpoint orqali servis holati tekshirildi.
+CMD — uvicorn bilan servis ishga tushirildi.
+
+	•	docker-compose.yml yaratildi (3 servis)
+api: Dockerfile’dan build bo‘ladi, port 8000 ochiladi, ./models volume bog‘lanadi.
+postgres: postgres:15 image, DB/user/password sozlanadi, volume bilan persist qilinadi.
+grafana: grafana image, port 3000 ochiladi, volume bilan persist qilinadi
+Natijalar esa quyidagicha:
+
+
+
+	•	 requirements.txt yaratildi
+
+	•	FastAPI, ML kutubxonalar, Spark, DL frameworklar kiritilgan.
+
+
+Hamda FastAPI ni dockerga yuklangan natijasini ko’rishingiz mumkun bo’ladi,
+
+
+
+	•	Terminalda Docker fayllar turgan papkada:
+
+Natijalarni esa quyidagicha ko‘rish mumkin.
+O‘z loyihangizdagi FastAPI app.py va models/ papkasini tayyorlang.
+	•	Dockerfile yarating (python slim + requirements + uvicorn).
+	•	docker-compose.yml yarating:
+	•	kamida 2 servis: api va postgres (grafana bonus).
+	•	docker compose up -d --build bilan ishga tushiring.
+	•	/health va /docs ishlayotganini skrinshot qiling.
+	•	/predict endpointga 3 ta so‘rov yuboring (2 ta turli model bilan bo‘lsin).
+	•	Hisobot: 8–10 gapda “konteynerlash nimani hal qildi” va “nima qiyin bo‘ldi” yozing.
+Amaliy topshiriqlar
+
+
+	•	O‘z loyihangizdagi FastAPI app.py va models/ papkasini tayyorlang.
+	•	Dockerfile yarating (python slim + requirements + uvicorn).
+	•	docker-compose.yml yarating:
+	•	kamida 2 servis: api va postgres (grafana bonus).
+	•	docker compose up -d --build bilan ishga tushiring.
+	•	/health va /docs ishlayotganini skrinshot qiling.
+	•	/predict endpointga 3 ta so‘rov yuboring (2 ta turli model bilan bo‘lsin).
+	•	Hisobot: 8–10 gapda “konteynerlash nimani hal qildi” va “nima qiyin bo‘ldi” yozing.
+Amaliy topshiriqlar
+
+
+4.4. Monitoring va log tahlili tizimlari
+O‘quvchilarga “Maktab pipeline” tizimi uchun monitoring infratuzilmasini yaratishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga “Maktab pipeline” tizimi uchun monitoring infratuzilmasini yaratishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+Docker Desktop (tavsiya, agar Prometheus/Grafana konteynerda bo‘lsa)
+·  ·  FastAPI servis (API ishlayotgan bo‘lishi kerak)
+·  
+Docker Desktop (tavsiya, agar Prometheus/Grafana konteynerda bo‘lsa)
+·  ·  FastAPI servis (API ishlayotgan bo‘lishi kerak)
+·  
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Monitoring va log tahlili — bu data pipeline va ML tizimlarining barqaror ishlashini ta’minlaydigan eng muhim boshqaruv mexanizmlaridan biridir. Real loyihalarda pipeline bir marta ishga tushib qolmaydi, u har kuni/har soatda avtomatik ishlaydi. Shu sababli tizimda xatolik bo‘lsa, kechikish (latency) oshsa yoki ma’lumot sifati pasaysa, buni tezda aniqlash va chora ko‘rish talab qilinadi. Monitoring tizimlari odatda metrikalar (metrics) orqali ishlaydi: ular API so‘rovlari soni, response vaqti, ETL muvaffaqiyat foizi, data quality ko‘rsatkichlari, model aniqligi kabi raqamli qiymatlarni muntazam yig‘adi. Log tahlili esa servis ichida sodir bo‘layotgan hodisalarni (xatolik, warning, ishlash jarayoni) matn ko‘rinishida saqlab, muammo sababini aniqlashga yordam beradi.
+ML va Data pipeline’da monitoring 3 yo‘nalishda bo‘ladi:
+	•	Infrastructure monitoring (CPU, RAM, disk, container health)
+	•	Pipeline monitoring (ETL run status, fayl soni, qatorlar soni, job duration)
+	•	ML monitoring (prediction latency, model metrikalari, drift, data quality
+Prometheus metrikalarni yig‘adi, Grafana esa ularni dashboard ko‘rinishida vizual tarzda ko‘rsatadi. Shu sababli Prometheus + Grafana kombinatsiyasi production tizimlarda eng ko‘p ishlatiladigan monitoring yechimlaridan biridir.
+	•	Prometheus konfiguratsiyasi yaratildi
+	•	prometheus.yml faylda:
+	•	scrape_interval: 15s — har 15 sekundda metrikalar olinadi.
+	•	job_name: maktab_api — API servisdan metrikalar olinadi:
+	•	target: api:8000
+	•	metrics endpoint: /metrics
+	•	job_name: postgres — Postgres target qo‘shilgan (real monitoring uchun odatda postgres_exporter kerak bo‘ladi).
+Bu konfiguratsiya Prometheus’ga qaysi servislarni kuzatishni aytadi.
+
+B) Grafana dashboard (JSON) yaratildi
+Grafana dashboard ichida 4 ta panel bor:
+	•	API Requests/sec — API so‘rovlar tezligi (rate)
+	•	Model Latency (p95) — prediction latency 95% quantile
+	•	Data Quality Score — ma’lumot sifati balli
+	•	ETL Success Rate — ETL muvaffaqiyat foizi
+Bu dashboard pipeline’ning real vaqtdagi holatini ko‘rish uchun ishlatiladi.
+
+C) Model metrics JSON yaratildi
+model_metrics.json faylida quyidagi ma’lumotlar saqlandi:
+	•	timestamp (qachon yozilgan)
+	•	pipeline statistikasi (csv fayl soni, processed, total records)
+	•	models natijalari (har bir model metrikalari)
+	•	data quality ko‘rsatkichlari (null %, completeness)
+
+Bu JSON fayl monitoringga “hisobot” sifatida xizmat qiladi va keyinchalik audit/analitika uchun ishlatiladi.
+
+
+API’da /health va /metrics endpointlarini qo‘shing.
+	•	docker-compose’da postgres, postgres-exporter, prometheus, grafana servislarini ko‘taring.
+	•	Prometheus Targets sahifasidan “UP” holatini skrinshot qiling.
+	•	Grafana’da 3 ta panel yarating:
+	•	Requests/sec
+	•	Latency p95
+	•	Postgres pg_up yoki pg_stat_* metrikasi
+	•	 Xulosa yozing: monitoring nima uchun kerak, qaysi metrika nimani anglatadi?
+
+
+Amaliy topshiriqlar
+
+
+	•	API’da /health va /metrics endpointlarini qo‘shing.
+	•	docker-compose’da postgres, postgres-exporter, prometheus, grafana servislarini ko‘taring.
+	•	Prometheus Targets sahifasidan “UP” holatini skrinshot qiling.
+	•	Grafana’da 3 ta panel yarating:
+	•	Requests/sec
+	•	Latency p95
+	•	Postgres pg_up yoki pg_stat_* metrikasi
+	•	 Xulosa yozing: monitoring nima uchun kerak, qaysi metrika nimani anglatadi?
+
+
+Amaliy topshiriqlar
+
+
+4.5. Ma’lumotlarda etika va xavfsizlik (Data Ethics)
+O‘quvchilarga datasetni anonimlashtirish psevdonimlashtirish (keraksiz ustunlarni olib tashlash, identifikatorlarni mask qilishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga datasetni anonimlashtirish psevdonimlashtirish (keraksiz ustunlarni olib tashlash, identifikatorlarni mask qilishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+pandas, numpy,scikit-learn
+·  
+pandas, numpy,scikit-learn
+·  
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+Data Ethics & Security — bu ma’lumotlarni yig‘ish, saqlash, qayta ishlash va ulardan model yoki analitika natijalarini chiqarishda maxfiylik (privacy), xavfsizlik (security) va adolat (fairness) talablariga rioya qilish tamoyillaridir. Har qanday data platformada ma’lumotlar qiymatli aktiv hisoblanadi; shu sababli noto‘g‘ri boshqaruv ma’lumotlarning oshkor bo‘lishi, ruxsatsiz foydalanish, noto‘g‘ri qarorlar (bias), hamda qonuniy talablar buzilishiga olib kelishi mumkin. Ayniqsa ta’lim sohasidagi “maktab” kabi loyihalarda data jamiyat uchun sezgir bo‘lishi mumkin: hududlar kesimida ko‘rsatkichlarni noto‘g‘ri talqin qilish, kichik guruhlar bo‘yicha shaxsni bilvosita aniqlab qo‘yish yoki model natijalari biror guruhga nisbatan nohaq chiqishi ehtimoli mavjud.
+Shu bois data platformada “data governance” siyosati bo‘lishi kerak. Data governance quyidagilarni tartibga soladi: ma’lumotlarni tasniflash (public/confidential/restricted), rollarga asoslangan ruxsatlar (RBAC), shifrlash (at rest va in transit), anonimlashtirish/psevdonimlashtirish, audit loglar va saqlash muddati (retention), shuningdek, ML tizimlarida bias monitoring va fairness metrikalarini nazorat qilish. Natijada platforma nafaqat texnik jihatdan ishlaydigan, balki mas’uliyatli, qonuniy talablarga mos va ishlab chiqarish (production) darajasida boshqariladigan tizimga aylanadi.
+Data Ethics amaliyotda odatda 6 ta asosiy tamoyil bilan ifodalanadi:
+	•	Maxfiylik (Privacy) — shaxsiy ma’lumotlarni himoya qilish.
+	•	Rozilik va maqsad cheklovi (Consent & Purpose limitation) — data faqat belgilangan maqsad uchun ishlatilishi.
+	•	Minimalizm (Data minimization) — faqat zarur maydonlarni yig‘ish/saqlash.
+	•	Adolat (Fairness) — model va tahlilda guruhlar bo‘yicha kamsitish bo‘lmasligi.
+	•	Shaffoflik (Transparency) — qanday ma’lumot, qanday ishlov, qanday model ishlatilgani tushunarli bo‘lishi.
+	•	Xavfsizlik (Security) — autentifikatsiya, ruxsatlar, shifrlash, audit loglar, zaxira (backup).
+Amaliyot
+	•	Data Governance policy tuzildi. Kodda data_governance nomli lug‘at (dict) yaratilgan. Bu lug‘at platformaning data boshqaruvi bo‘yicha qoidalarini strukturalangan ko‘rinishda saqlaydi.
+	•	Ma’lumotlar public/confidential/restricted kategoriyalariga ajratilmoqda.
+	•	Hozircha “maktab_statistika” public deb ko‘rsatilgan (ya’ni shaxsiy ma’lumot yo‘q, umumiy statistik ko‘rsatkichlar).
+
+	•	Access Control (rollar bo‘yicha ruxsat)
+RBAC (Role-Based Access Control) yondashuvi ishlatilgan.
+Data engineer — to‘liq ruxsat (o‘qish/yozish/transform).
+Data analyst — faqat o‘qish (read).
+ML engineer — o‘qish va model o‘qitish (model_train).
+	•	Privacy (maxfiylik va shifrlash)
+
+Anonimlashtirish yoqilgan. Diskda saqlanganda shifrlash (at rest) va tarmoq orqali uzatishda (in transit) shifrlash talabi belgilangan. GDPR mosligi “True” deb ko‘rsatilgan (darsda “standart compliance” sifatida tushuntiriladi).
+	•	Audit (log va retention)
+
+Log yozish yoqilgan: pipeline va access hodisalari qayd etiladi. Loglarni saqlash muddati: 90 kun (retention policy). Access loglar alohida yuritilishi belgilangan.
+	•	Bias monitoring (adolat nazorati)
+
+Model natijalarida kamsitish/bias bo‘lmasligi uchun monitoring yoqilgan. Fairness metrikalari sifatida: Threshold: 0.8 (ya’ni fairness ko‘rsatkichlari shu chegaradan past tushsa — risk).
+demographic_parity
+equal_opportunity
+	•	Policy JSON faylga yozildi
+Siyosat data_governance.json nomli faylga saqlanadi. Bu fayl loyiha hujjati sifatida ishlatiladi (audit va standartlash uchun)
+Ushbu amaliyotda “maktab pipeline” loyihasi uchun Data Ethics & Security yondashuvi Data Governance policy ko‘rinishida shakllantirildi. Ma’lumotlar tasniflanib, rollarga asoslangan ruxsatlar belgilandi, maxfiylikni ta’minlash uchun anonimlashtirish va shifrlash talablari kiritildi. Audit loglari va retention siyosati orqali tizimda kuzatuvchanlik va javobgarlik kuchaytirildi. Shuningdek, ML natijalarida adolatni ta’minlash maqsadida bias monitoring parametrlari va fairness metrikalari belgilandi. Natijada platforma nafaqat texnik jihatdan ishlaydigan, balki etik va xavfsizlik talablariga mos boshqariladigan data tizim ko‘rinishiga keltirildi.
+O‘z loyihangiz uchun data_governance policy yarating va quyidagilarni to‘ldiring:
+classification: kamida 2 dataset nomi (public va 	confidential/restrictedga ajrating)
+	•	Kamida 4 ta rol belgilang (misol: admin, data_engineer, analyst, ml_engineer) va ruxsatlarni yozing.
+Privacy bo‘limida:
+anonymization: True/False asoslab yozing
+encryption_at_rest/in_transit haqida 2–3 gap izoh qo‘shing 	(hisobotga)
+	•	Audit bo‘limida retention’ni loyihaga moslang (30/90/180 kun) va sababini yozing. 
+Bias monitoring bo‘limida: qaysi guruh bo‘yicha fairness tekshirilishini yozing (hudud, yosh segmenti, kategoriya va h.k.) 
+threshold qiymatini tanlang va asoslang
+	•	Policyni JSON ko‘rinishida saqlang va 8–10 gapli xulosa yozing.
+
+Amaliy topshiriqlar
+
+
+	•	O‘z loyihangiz uchun data_governance policy yarating va quyidagilarni to‘ldiring:
+classification: kamida 2 dataset nomi (public va 	confidential/restrictedga ajrating)
+	•	Kamida 4 ta rol belgilang (misol: admin, data_engineer, analyst, ml_engineer) va ruxsatlarni yozing.
+Privacy bo‘limida:
+anonymization: True/False asoslab yozing
+encryption_at_rest/in_transit haqida 2–3 gap izoh qo‘shing 	(hisobotga)
+	•	Audit bo‘limida retention’ni loyihaga moslang (30/90/180 kun) va sababini yozing. 
+Bias monitoring bo‘limida: qaysi guruh bo‘yicha fairness tekshirilishini yozing (hudud, yosh segmenti, kategoriya va h.k.) 
+threshold qiymatini tanlang va asoslang
+	•	Policyni JSON ko‘rinishida saqlang va 8–10 gapli xulosa yozing.
+
+Amaliy topshiriqlar
+
+
+4.6. Sun’iy intellekt infratuzilmalari (AI Infrastructure)
+O‘quvchilarga data engeneering loyihalari uchun AI/MLOps infratuzilma konfiguratsiyasini (config) yaratishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga data engeneering loyihalari uchun AI/MLOps infratuzilma konfiguratsiyasini (config) yaratishni o‘rgatish.
+Mashg‘ulot
+maqsadi
+Kerakli vositalar
+Kerakli vositalar
+optuna kutubxonasi (AutoML/tuning uchun
+optuna kutubxonasi (AutoML/tuning uchun
+Ishni bajarish tartibi
+Nazariy ma‘lumotlar
+AI Infrastructure — bu ML/AI modelni yaratishdan tortib, uni xizmatga chiqarish va real vaqt rejimida boshqarishgacha bo‘lgan butun jarayonni qo‘llab-quvvatlaydigan texnologiyalar, xizmatlar va standartlar majmuasidir. Oddiy “model o‘qitish” yetarli emas: modelning versiyalari, feature’lar, tajriba natijalari, deploy, monitoring, qayta o‘qitish va audit jarayonlari bir tizimda boshqarilmasa, loyiha tezda beqaror bo‘lib qoladi. Shuning uchun AI infratuzilma MLOps konsepsiyasiga tayangan holda tashkil qilinadi.
+MLOps’da asosiy komponentlar: model registry (model versiyalarini boshqarish), experiment tracking (tajriba va metrikalarni yozib borish), feature store (feature’larni yagona manbada saqlash va qayta ishlatish), serving (modelni API yoki batch servis ko‘rinishida chiqarish), hamda monitoring (latency, accuracy, drift, data quality). AutoML esa model tanlash va hyperparameter tuning jarayonini avtomatlashtirib, optimal konfiguratsiyani tezroq topishga yordam beradi. Masalan, Optuna yordamida 100 ta sinov (trial) o‘tkazilib, metrika bo‘yicha eng yaxshi parametrlar tanlanadi. Natijada “maktab pipeline” kabi loyihalarda model yaratish jarayoni tezlashadi, boshqaruv va ishonchlilik oshadi, hamda production muhitga chiqarish professional darajaga yaqinlashadi.
+Amaliyot
+	•	Optuna o‘rnatildi
+
+Bu — AutoML/hyperparameter tuning uchun ishlatiladigan kutubxonani loyihaga ulash.
+	•	 MLOps konfiguratsiya (mlops_config) tuzildi
+
+Kodda mlops_config nomli dict yaratilgan va u AI infratuzilmaning asosiy bloklarini belgilaydi:
+	•	Model Registry (MLflow)
+	•	Model versiyalari, stage’lari (dev/staging/prod) va artefaktlar shu yerda boshqariladi.
+	•	Feature Store (Feast)
+	•	Offline store: Parquet (batch)
+	•	Online store: Redis (real-time inference uchun)
+	•	Experiment Tracking (Weights & Biases)
+	•	Har bir trening tajribasining metrikalari, parametrlar va natijalari saqlanadi.
+	•	Model Serving
+	•	FastAPI — inference API
+	•	Kubernetes — production deploy.
+	•	AutoML (Optuna)
+	•	100 ta trial bilan hyperparameter tuning rejalashtirilgan.
+	•	Data Mesh konsepti
+	•	Domain: education
+	•	Data product: maktab_metrics (Gold/KPI yoki feature dataset)
+	•	Generative AI bo‘limi
+LLM integratsiyasi konsept sifatida kiritilgan (masalan, natural language analytics, chatbot, summarization).
+	•	 Config JSON faylga saqlandi. Bu konfiguratsiya keyingi bosqichlarda (Docker, CI/CD, deploy, monitoring) “bitta manba” sifatida ishlatilishi mumkin.
+
+	•	AutoML uchun objective funksiyani tayyorlandi.
+
+	•	Modelni o‘qitildi va baholandi.
+
+	•	Opuna Study Ishga tushirildi.
+
+Auto ML ishga tushdi:
+
+Ushbu amaliyotda “AI Infrastructure & AutoML” mavzusi maktab pipeline misolida qisqa va amaliy ko‘rinishda bajarildi. Avvalo MLOps infratuzilmasining asosiy komponentlari (model registry, feature store, experiment tracking, model serving va AutoML) konfiguratsiya qilinib, mlops_config.json fayliga saqlandi. Keyin Optuna yordamida Gradient Boosting modeli uchun giperparametrlar (n_estimators, max_depth, learning_rate) avtomatik tanlanib, 20 ta trial orqali eng yuqori R² natija beruvchi parametrlar topildi. Natijada AutoML yondashuvi model sifatini oshirish va optimal konfiguratsiyani tez aniqlashga xizmat qilishi amaliy tarzda ko‘rsatildi hamda keyingi bosqichlarda modelni saqlash, deploy qilish va monitoringga tayyor holatga keltirildi.
+O‘z loyihangiz uchun mlops_config yarating va quyidagi bo‘limlarni to‘ldiring: 
+model_registry (qaysi tool? mlflow yoki boshqasi)
+feature_store (online/offline)
+experiment_tracking
+model_serving (API + deploy muhiti)
+automl (framework + n_trials)
+	•	AutoML uchun 2 ta model tanlang (masalan: RandomForest va XGBoost) va qaysi parametrlar tuning qilinishini yozing (5 ta parametr).
+	•	“Data product” sifatida Gold layerda qaysi dataset/metric chiqishini belgilang (nomi, ustunlar).
+	•	1 betli izoh yozing: “Nega AI infra kerak, oddiy notebook yetmaydi?” (kamida 8–10 gap).
+	•	mlops_config.json faylni topshiring.
+Amaliy topshiriqlar
+
+
+	•	O‘z loyihangiz uchun mlops_config yarating va quyidagi bo‘limlarni to‘ldiring: 
+model_registry (qaysi tool? mlflow yoki boshqasi)
+feature_store (online/offline)
+experiment_tracking
+model_serving (API + deploy muhiti)
+automl (framework + n_trials)
+	•	AutoML uchun 2 ta model tanlang (masalan: RandomForest va XGBoost) va qaysi parametrlar tuning qilinishini yozing (5 ta parametr).
+	•	“Data product” sifatida Gold layerda qaysi dataset/metric chiqishini belgilang (nomi, ustunlar).
+	•	1 betli izoh yozing: “Nega AI infra kerak, oddiy notebook yetmaydi?” (kamida 8–10 gap).
+	•	mlops_config.json faylni topshiring.
+Amaliy topshiriqlar
+
+
+4.7. Zamonaviy Data & AI texnologiyalar trendlari (Data Mesh, AutoML, Generative AI)
+O‘quvchilarga zamonaviy data va AI trendlarini loyihalari davomida qo‘llashlari mumkinligini o‘rgatish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga zamonaviy data va AI trendlarini loyihalari davomida qo‘llashlari mumkinligini o‘rgatish.
+Mashg‘ulot
+maqsadi
+
+Nazariy ma‘lumotlar
+“Maktab pipeline” loyihasi (CSV → ETL/Spark → Bronze/Silver/Gold → ML → API) zamonaviy Data & AI trendlari qanday ishlashini tushuntirish uchun juda qulay real misoldir. Bu loyihada asosiy maqsad — hududlar va yillar kesimida maktab ko‘rsatkichlarini (o‘quvchilar, o‘qituvchilar, bitiruvchilar, maktablar soni) yig‘ish, sifatini tekshirish, tahlil qilish va prognozga aylantirish. Endi shu tizimda Data Mesh, AutoML va Generative AI yondashuvlari qanday qo‘llanishini ko‘rib chiqamiz.
+Data Mesh “maktab pipeline”da ma’lumotlarni “dataset” emas, data product sifatida boshqarishni anglatadi. Masalan, ta’lim domeni (education) doirasida maktab_metrics degan data product yaratiladi. Bu product Gold layerda joylashadi va quyidagilar bilan birga taqdim etiladi: aniq schema (ustunlar nomi, turlari), yangilanish jadvali (masalan, har kuni 02:00 da Airflow orqali), sifat testlari (dbt test yoki validation qoidalari), owner (mas’ul shaxs/jamoa) va foydalanish qoidalari. Natijada analitiklar va boshqa jamoalar “qaysi jadval to‘g‘ri?” degan savol o‘rniga, hujjatlashtirilgan va ishonchli maktab_metrics productdan foydalanadi. Data Mesh shuningdek, hududlar bo‘yicha alohida productlar (masalan, fergana_maktab_metrics) yoki “bitiruvchilar KPI” kabi ixtisoslashgan productlarga ham yo‘l ochadi.
+AutoML “maktab pipeline”da ML bosqichini tezlashtiradi. Sizda allaqachon X_train, X_test, y_train, y_test tayyor (feature engineering va scaling bosqichlaridan keyin). AutoML (Optuna) yordamida Gradient Boosting kabi model uchun n_estimators, max_depth, learning_rate kabi giperparametrlar avtomatik qidiriladi. Masalan, 20–100 trial orqali R² maksimal qilinadi va “eng yaxshi parametrlar” topiladi. Bu yondashuv qo‘lda ko‘p variant sinashni kamaytiradi, model sifatini oshiradi va natijani takrorlanadigan qiladi. Eng yaxshi parametrlar topilgach, model “best model” sifatida registry’ga (MLflow) yozilishi, CI/CD orqali testdan o‘tishi va API’da serving qilinishi mumkin.
+Generative AI “maktab pipeline”da natijani “inson tushunadigan” ko‘rinishga keltiradi. Masalan, Gold layerdagi KPI va ML prognozlar asosida LLM yordamida avtomatik hisobot tayyorlanadi: “2022–2024 yillarda Farg‘ona hududida o‘quvchilar soni trendi”, “o‘qituvchi–o‘quvchi nisbatidagi o‘zgarishlar”, “prognoz bo‘yicha risk hududlar” kabi. Bundan tashqari, “chat-analitika” yondashuvi ham mumkin: foydalanuvchi “Qaysi hududda o‘sish eng yuqori?” deb so‘raydi, tizim esa Gold productdan kerakli agregatsiyani olib, qisqa xulosa beradi. Biroq bu yerda Data Ethics & Security talablari (maxfiylik, ruxsatlar, audit) qat’iy saqlanishi zarur.
+“Maktab pipeline” misolida Data Mesh, AutoML va Generative AI bir-birini to‘ldiruvchi uchta trend ekanligi ko‘rinadi: Data Mesh Gold layerni ishonchli “data product”ga aylantiradi, AutoML ML bosqichida optimal modelni tez topadi, Generative AI esa KPI va prognozlarni matnli hisobot va interaktiv savol-javob shakliga olib chiqadi. Ushbu yondashuvlar birgalikda qo‘llansa, ta’lim statistikasi bilan ishlash jarayoni tezroq, boshqariladigan va foydalanuvchi uchun qulay bo‘lgan “modern data platform” darajasiga yaqinlashadi.
+
+
+O‘z loyihangiz uchun 1 ta domain tanlang (education, health, retail, transport va h.k.).
+	•	Gold layerda 1 ta data product yarating va nom bering: project_metrics
+	•	Data product pasporti yozing (1 sahifa):
+	•	product nomi
+	•	owner (mas’ul rol)
+	•	schema (kamida 6 ta ustun)
+	•	refresh schedule (kuniga 1 marta yoki haftasiga 1 marta)
+	•	quality rules (kamida 5 ta qoida: not_null, unique, accepted_values…)
+Amaliy topshiriqlar
+
+
+	•	O‘z loyihangiz uchun 1 ta domain tanlang (education, health, retail, transport va h.k.).
+	•	Gold layerda 1 ta data product yarating va nom bering: project_metrics
+	•	Data product pasporti yozing (1 sahifa):
+	•	product nomi
+	•	owner (mas’ul rol)
+	•	schema (kamida 6 ta ustun)
+	•	refresh schedule (kuniga 1 marta yoki haftasiga 1 marta)
+	•	quality rules (kamida 5 ta qoida: not_null, unique, accepted_values…)
+Amaliy topshiriqlar
+
+
+4.8. Kurs yakuni: Data Engineering va ML’dagi kasbiy yo‘nalishlar. 
+O‘quvchilarga data engeneering vaML kursini o‘rganib qaysi sohalarda faoliyat yuritishi mumkinligi haqida hulosalar berish.
+Mashg‘ulot
+maqsadi
+O‘quvchilarga data engeneering vaML kursini o‘rganib qaysi sohalarda faoliyat yuritishi mumkinligi haqida hulosalar berish.
+Mashg‘ulot
+maqsadi
+Nazariy ma‘lumotlar
+Data Engineering va Machine Learning ekotizimi kengaygani sari kasbiy yo‘nalishlar ham aniq segmentlarga bo‘linib bormoqda. “Maktab pipeline” (CSV → ETL/Spark → Bronze/Silver/Gold → ML → API → Monitoring) kabi end-to-end loyiha bitta odam emas, balki bir nechta rollar hamkorligi orqali barqaror ishlaydi. Quyida Data Engineering va ML’dagi asosiy kasbiy yo‘nalishlar va ularning maktab loyihasidagi vazifalari keltiriladi.
+1) Data Engineer (DE) — ma’lumot oqimini quruvchi asosiy mutaxassis. “Maktab pipeline”da Data Engineer CSV fayllarni ingestion qilish, data lake (Bronze/Silver/Gold) qatlamlarini tashkil etish, Spark/SQL transformatsiyalar, data quality qoidalarini kiritish va ETL/ELT jarayonlarini avtomatlashtirish bilan shug‘ullanadi. U, shuningdek, Postgres/DWH bilan integratsiya, schema dizayni (fact/dimension), partitioning va performance optimizatsiyalarni ham bajaradi.
+2) Analytics Engineer (dbt) — analitika uchun tayyor, ishonchli “business layer”ni yaratadi. Maktab loyihasida analytics engineer dbt orqali staging → marts model qatlamlarini yozadi, testlar (not_null, unique, accepted_values)ni qo‘yadi va maktab_metrics kabi Gold productni hujjatlashtiradi. Bu rol Data Mesh yondashuviga juda mos: data productning owner’i sifatida “KPI jadval”ning sifatini kafolatlaydi.
+3) Data Analyst / BI Analyst — foydalanuvchi ehtiyojlarini KPIga aylantiradi. Maktab loyihasida analyst Power BI yoki boshqa BI vositalarda hudud/yil kesimidagi trendlar, reja–fakt, o‘qituvchi–o‘quvchi nisbatlari kabi vizual tahlillarni quradi. U data model (star schema), metrikalar definitsiyasi va stakeholder bilan ishlashda muhim.
+4) Machine Learning Engineer (MLE) — model quradi va xizmatga chiqaradi. Maktab loyihasida MLE feature engineering (nisbatlar, gender balance), train/test split, regressiya/klassifikatsiya/ensemble modellarni sinash, metrikalar (R², MAE, F1) bilan baholash va eng yaxshi modelni tanlashni bajaradi. Keyin modelni joblib/torch/tf formatida saqlab, FastAPI orqali inference API’ga ulaydi.
+5) MLOps Engineer — ML’ni productionga tayyorlaydi va boshqaradi. “Maktab”da u model registry (MLflow), experiment tracking (W&B), AutoML tuning (Optuna), CI/CD (GitHub Actions), Docker konteynerlash, deployment (Kubernetes), monitoring (Prometheus/Grafana) va drift/quality nazoratini yo‘lga qo‘yadi. MLE model yaratadi, MLOps esa modelni barqaror ishlab turadigan servisga aylantiradi.
+6) Data Platform / Cloud Engineer — infratuzilma va resurslarni boshqaradi. Bu rol Docker, Kubernetes, tarmoq, xavfsizlik, storage va IAM (ruxsatlar)ni sozlaydi. Maktab loyihasida Airflow, Postgres, Prometheus, Grafana kabi servislarni konteynerlarda ko‘tarish va ularning uzluksiz ishlashini ta’minlaydi.
+7) Data Governance / Security (Data Steward) — etik, maxfiylik va compliance’ni nazorat qiladi. U data classification, access control, audit log, retention, anonymization va bias monitoring qoidalarini belgilaydi (siz yozgan data_governance.json kabi).
+Data Engineering va Machine Learning Engineering o‘rtasidagi asosiy farq nimada?
+	•	End-to-End “maktab pipeline”da qaysi bosqichlar Data Engineer, qaysilari ML Engineer vazifasiga kiradi?
+	•	Data Analyst va Analytics Engineer (dbt) farqini 3 ta band bilan tushuntiring.
+	•	MLOps nima va u ML Engineer ishidan qaysi jihatlari bilan farq qiladi?
+	•	Data Platform Engineer qanday vazifalarni bajaradi? Misol keltiring.
+Amaliy topshiriqlar
+
+
+	•	Data Engineering va Machine Learning Engineering o‘rtasidagi asosiy farq nimada?
+	•	End-to-End “maktab pipeline”da qaysi bosqichlar Data Engineer, qaysilari ML Engineer vazifasiga kiradi?
+	•	Data Analyst va Analytics Engineer (dbt) farqini 3 ta band bilan tushuntiring.
+	•	MLOps nima va u ML Engineer ishidan qaysi jihatlari bilan farq qiladi?
+	•	Data Platform Engineer qanday vazifalarni bajaradi? Misol keltiring.
+Amaliy topshiriqlar
+
+
+Xulosa
+Ushbu loyiha va kurs yakunida “O‘zbekiston maktablari” misolida to‘liq end-to-end Data Platform yaratish bosqichlari izchil bajarildi hamda nazariy bilimlar amaliy natijalar bilan mustahkamlandi. Kurs davomida talabalar ma’lumotni oddiy CSV ko‘rinishidan boshlab, uni sanoat darajasidagi data pipeline’ga aylantirish jarayonini to‘liq ko‘rdi: ingestion, tozalash, transformatsiya, saqlash, model qurish, servisga chiqarish va monitoringgacha bo‘lgan zanjir yakunlandi. Bu yondashuv real kompaniyalardagi data mahsulot yaratish metodologiyasiga mos keladi va “maktab” loyihasi orqali tushunarli, o‘lchanadigan ko‘rsatkichlar bilan namoyish etildi.
+Loyihada data lake arxitekturasi (Bronze–Silver–Gold) asosida xom ma’lumotlar yig‘ildi, sifat nazorati va validatsiya qo‘llanildi, so‘ng ML uchun tayyor “Gold layer” shakllantirildi. DWH va Star Schema konsepsiyasi orqali analitika uchun barqaror model yaratildi, dbt yordamida staging va marts qatlamlari mantiqan ajratildi, Airflow bilan jarayonlar orchestration qilindi. Keyingi bosqichlarda regressiya va ensemble modellar sinovdan o‘tkazilib, metrikalar asosida eng yaxshi model tanlash, AutoML (Optuna) bilan tuning qilish, TensorFlow va PyTorch asoslarida neyron tarmoqlar bilan tanishish amalga oshirildi. FastAPI orqali model servis sifatida chiqarilib, Docker yordamida konteynerlash, CI/CD (GitHub Actions) bilan avtomatlashtirish va Prometheus–Grafana orqali monitoring konsepsiyalari ham kiritildi.
+Umuman olganda, kurs talabalarga nafaqat alohida texnologiyalarni, balki ularning o‘zaro integratsiyasini, productionga tayyor yondashuvni, data governance va xavfsizlik tamoyillarini ham anglatdi. Natijada ishtirokchilar “data → qiymat” yo‘lini to‘liq tushunib, o‘z loyihalarida qo‘llashga tayyor, amaliy kompetensiyaga ega bo‘ldilar.
+
+Foydalanilgan adabiyotlar:
+	•	Apache Airflow. (2025). Apache Airflow Documentation. Apache Software Foundation.
+	•	Apache Spark. (2025). Apache Spark Documentation. Apache Software Foundation.
+	•	Azure. (2025). Azure Data Factory Documentation. Microsoft.
+	•	Breck, E., Polyzotis, N., Roy, S., Whang, S. E., & Zinkevich, M. (2017). The ML test score: A rubric for ML production readiness and technical debt reduction. Google Research.
+	•	Burns, B., Beda, J., & Hightower, K. (2019). Kubernetes: Up and Running (2nd ed.). O’Reilly Media.
+	•	Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 785–794.
+	•	Docker. (2025). Docker Documentation. Docker Inc.
+	•	Feast. (2025). Feast Feature Store Documentation. Feast Project.
+	•	Fowler, M. (2018). Refactoring: Improving the Design of Existing Code (2nd ed.). Addison-Wesley.
+	•	Géron, A. (2022). Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow (3rd ed.). O’Reilly Media.
+	•	GitHub. (2025). GitHub Actions Documentation. GitHub Inc.
+	•	Grafana Labs. (2025). Grafana Documentation. Grafana Labs.
+	•	Hastie, T., Tibshirani, R., & Friedman, J. (2009). The Elements of Statistical Learning: Data Mining, Inference, and Prediction (2nd ed.). Springer.
+	•	Inmon, W. H. (2005). Building the Data Warehouse (4th ed.). Wiley.
+	•	Joblib. (2025). Joblib Documentation. Joblib Project.
+	•	Kimball, R., & Ross, M. (2013). The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling (3rd ed.). Wiley.
+	•	Kleppmann, M. (2017). Designing Data-Intensive Applications. O’Reilly Media.
+	•	LightGBM. (2025). LightGBM Documentation. Microsoft.
+	•	MLflow. (2025). MLflow Documentation. Linux Foundation AI & Data.
+	•	NIST. (2023). Artificial Intelligence Risk Management Framework (AI RMF 1.0). National Institute of Standards and Technology.
+	•	Optuna. (2025). Optuna Documentation. Optuna Project.
+	•	PostgreSQL. (2025). PostgreSQL Documentation. PostgreSQL Global Development Group.
+	•	Prometheus. (2025). Prometheus Documentation. Cloud Native Computing Foundation.
+	•	Python Software Foundation. (2025). Python Documentation. Python.org.
+	•	scikit-learn. (2025). scikit-learn Documentation. scikit-learn Developers.
+	•	TensorFlow. (2025). TensorFlow Documentation. Google.
+	•	The dbt Team. (2025). dbt Documentation. dbt Labs.
+	•	The pandas Development Team. (2025). pandas Documentation.
+	•	The PyTorch Team. (2025). PyTorch Documentation. Meta AI.
+	•	U.S. Department of Commerce. (2020). NIST Privacy Framework: A Tool for Improving Privacy Through Enterprise Risk Management (Version 1.0). National Institute of Standards and Technology.
+	•	Wiggins, A. (2017). The Twelve-Factor App.
+	•	Zaharia, M., Chowdhury, M., Das, T., Dave, A., Ma, J., McCauley, M., Franklin, M. J., Shenker, S., & Stoica, I. (2012). Resilient distributed datasets: A fault-tolerant abstraction for in-memory cluster computing. Proceedings of the 9th USENIX Conference on Networked Systems Design and Implementation (NSDI), 2–2.
+
+BI MA’LUMOTLAR MUHANDISLIGI VA MACHINE LEARNING  YO‘NALISHI BO‘YICHA USLUBIY KO‘RSATMA 
+(10-SINFLAR UCHUN)
+
+
+Muharrir:
+Maxmudjanov S.
+Dizayner:
+Mirzayeva G.
+Rassom:
+Joldasov Sh.
+Texnik muharrir:
+Gaziyev X.
+Sahifalovchi:
+Mirzayeva G.
+
+
+Mazkur o‘quv qo‘llanma Muhammad al-Xorazmiy nomidagi Toshkent axborot texnologiyalari universitetida yaratilgan
+
+Toshkent-2026

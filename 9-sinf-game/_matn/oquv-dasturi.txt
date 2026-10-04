@@ -1,0 +1,1073 @@
+OʻZBEKISTON RESPUBLIKASI  RAQAMLI TEXNOLOGIYALAR VAZIRLIGI
+	
+RAQAMLI TA’LIMNI RIVOJLANTIRISH
+
+“MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN 
+GAME DESIGN YO‘NALISHI BO‘YICHA O‘QUV DASTURI
+(9-SINFLAR UCHUN)
+	
+
+
+
+
+
+
+
+
+
+
+
+
+Toshkent – 2025
+
+MUNDARIJA
+ HYPERLINK \l "_Toc207718330" 1. Dasturda qoʻllanilgan tayanch atamalar	 PAGEREF _Toc207718330 \h 2
+ HYPERLINK \l "_Toc207718332" 2. Game Design yo‘nalishining tayanch oʻquv rejasi	5
+ HYPERLINK \l "_Toc207718333" 3. Game Design yo‘nalishiga tayyorlashning muddati	6
+ HYPERLINK \l "_Toc207718334" 4. Game Design yo‘nalishi oʻquv mavzu rejasi	7
+ HYPERLINK \l "_Toc207718335" 5. Game Design yo‘nali oʻquv dasturi	9
+ HYPERLINK \l "_Toc207718336" 6. Game Design yo‘nalishi boʻyicha oʻtiladigan dars soatlari	16
+ HYPERLINK \l "_Toc207718337" Sodda o‘yinlar yaratish va nazorat ishi.	 PAGEREF _Toc207718337 \h 
+ HYPERLINK \l "_Toc207718338" 7. Oʻquv jarayonini tashkil etishda oʻqitish metodlari, shakllari va vositalari	19
+ HYPERLINK \l "_Toc207718339" 8. Baholash mezonlari	20
+ HYPERLINK \l "_Toc207718340" 9. Game Design yo‘nalishi tavsifi	23
+ HYPERLINK \l "_Toc207718341" 9.1. Bitiruvchining kasbiy faoliyati sohalari:	23
+ HYPERLINK \l "_Toc207718342" 9.2. Bitiruvchining kasbiga muvofiq kasbiy faoliyat obyektlari:	23
+ HYPERLINK \l "_Toc207718343" 9.3. Game Design yo‘nalishi kasbiy faoliyat turlari	23
+ HYPERLINK \l "_Toc207718345" 10. Kasbning qoʻllanish sohasi	24
+11. Game design yoʻnalishi oʻqitish natijalar ………………………………....….25
+12. Game Design yo‘nalishi bo‘yicha loyiha ishlar………………………………31
+ HYPERLINK \l "_Toc207718346" 13. Game Design  xonasi uchun qoʻyiladigan umumiy talablar	32
+ HYPERLINK \l "_Toc207718347" 14. Game Design yo‘nalishi oʻqitish xonasini jihozlashga qoʻyilgan talablar........33
+ HYPERLINK \l "_Toc207718348" 15. Game Design yo‘nalishini oʻrgatish uchun zarur boʻladigan xom ashyolar roʻyxati	34
+ HYPERLINK \l "_Toc207718349" 16. Kasbiy taʼlim ustasi lavozimiga qoʻyiladigan talablar	35
+ HYPERLINK \l "_Toc207718350" 17. 9-sinf oʻquvchilariga qoʻyilgan umumiy malaka talablari	36
+ HYPERLINK \l "_Toc207718351" 18. Foydalanilgan adabiyotlar va elektron  manbalar roʻyxati	37
+
+
+1. DASTURDA QOʻLLANILGAN TAYANCH ATAMALAR           
+Kasb - maxsus tayyorgarlik va ish tajribasi natijasida maʼlum bir sohada kasbiy faoliyatni amalga oshirish uchun lozim boʻlgan nazariy bilimlar, amaliy koʻnikma va malakalar majmuasini egallagan, jismoniy imkoniyat, aqliy qobiliyat va yuridik huquqlari taʼminlangan mehnat faoliyati (mashgʻuloti)ning turidir.
+Koʻnikma - muayyan vazifani bajarish uchun egallangan qobiliyat.
+Bilim - oʻrganilgan maʼlumotlarni eslab qolish va qayta tushuntirib berish.
+Kompetensiya - mavjud bilim, koʻnikma va malakalarni kundalik faoliyatda qoʻllay olish qobiliyati.
+Kasbiy faoliyat sohasi - ilmiy, ijtimoiy, iqtisodiy, ishlab chiqarishda namoyon boʻladigan kasbiy faoliyat obyektlarining majmui.
+Kasbiy faoliyat obyekti - predmetlar, voqeliklar, jarayonlar va faoliyat doirasida harakatga yoʻnaltirilgan tizimlar.
+Kasbiy faoliyat turi - kasbiy faoliyat obyektiga taʼsir qilishning usullari, uslublari va tavsifi.
+Oʻquv rejasi - oʻquv faoliyati turlari, oʻquv amaliyotlari (modullari) va ishlab chiqarish amaliyotlari tarkibi, ularni oʻrganish izchilligi, soha va tarmoqlarda ish turlarining mavsumiyligini hamda soatlardagi hajmini belgilaydigan hujjat.
+Oʻquv amaliyoti - nazariy bilim va amaliy koʻnikmalarini integratsiyalashga qaratilgan oʻquv jarayonining elementi. 
+Kasbga tayyorlash oʻquv kursi - umumiy oʻrta taʼlim tashkilotlarining  9-sinf oʻquvchilari uchun tashkil etilgan kasb-hunarga oʻrgatish darslari majmuasi.
+Taʼlim dasturi - taʼlimning asosiy xususiyatlari (hajmi, mazmuni, rejalashtirilgan natijalar), tashkiliy-pedagogik shart-sharoitlar, umumiy talablar, shuningdek, taʼlimni tashkil etish va amalga oshirish uchun zarur boʻlgan oʻquv-metodik koʻrsatmalar majmui.
+Windows operatsion tizimida ishlash - kompyuterlarning texnik tomondan mukammallashishi hamda grafik imkoniyatlarining rivojlanib borishi dasturchilarda grafik interfeysli qobiq-dasturlar ishlab chiqarish fikrini uygʻotdi. 
+Kompyuterni yigʻish tartibi - statsionar kompyuterni oʻzingiz yigʻish uchun siz bir nechta nyuanslarni bilishingiz kerak. Bu bitta butunga ulanadigan qurilmalar toʻplamini toʻgʻri tanlash uchun zarur. 
+Kompyuterdagi nosozliklarni bartaraf etish - mobil kompyuterlar bilan ishlashda baʼzida maʼlum bir xato yoki nosozlik sababini topish qiyin. Muayyan muammolarni topish uchun siz maxsus dasturlar va usullardan foydalanishingiz kerak.
+Kompyuterni ishga tushirish - quvvat manbai kompyuterga ulanganda,
+ yuklash jarayoni boshlanadi. BIOS (Basic In-Out System) kompyuterning asosiy qurilmalarini soʻrovdan oʻtkazadigan POST (Power On Self Test) dasturini ishga tushiradi.
+Monitorlar tuzilmalari - kompyuter monitori(monitor) - grafik, matnli maʼlumotlarni ekranga chiqarib berish uchun xizmat qiladigan qurilmadir, ekranga chiqarish monitor displeyi orqali amalga oshiriladi.
+Notebooklar turlari - hajmi va diagonal. Ushbu toifani guruhlarga boʻlish mumkin: 7-10 dyuymli diagonali — netbuklar, 11-13 — subnotebooklar (qurilma standartdan kichikroq, ammo deyarli bir xil funksionallikka ega), 14-16 dyuym — standart va 16 va undan ortiq narsalar almashtirish ish stoli kompyuter.
+Flash xotiraga ega qurilmalari - odatda kompyuterlarda ishlatiladigan oddiy RAM xotira (Random Access Memory) uchuvchi hisoblanadi. Yaʼni, kompyuterni oʻchirib qoʻysangiz, xotira yangilanganda saqlanadigan barcha maʼlumotlar yoʻqoladi. Bunga qaramasdan, flesh xotira doimiy emas, yaʼni bu turdagi xotira texnologiyasida saqlanadigan maʼlumotlar quvvatni kesganda saqlanadi degan maʼnoni anglatadi. 
+Kompyuter tarmoqlarga ulash taʼminotini tashkil qilish - aksariyat zamonaviy kompyuterlar qandaydir kompyuter tarmogʻiga ulangan. Bunday tuzilmaning yaratilishi kerakli maʼlumotlarga tezkor kirish imkonini beradi. Bundan tashqari, mahalliy tarmoqlar bir nechta foydalanuvchilarga maʼlum bir vazifa ustida sinxron ishlashga imkon beradi.
+Operatsion tizimga xizmat koʻrsatish - operatsion tizimning taʼrifi va bugungi kunda ishlatiladigan operatsion tizimlarning misollari Odatda OS sifatida qisqartirilgan operatsion tizim kuchli va odatda kompyuterda  HYPERLINK "https://uz.eyewated.com/sizning-kompyuteringiz-haqida-bilishingiz-kerak-bolgan-hamma-narsalar/" apparat va boshqa dasturlarni boshqaradigan yirik dastur hisoblanadi.
+2. GAME DESIGN YO‘NALISHINING TAYANCH OʻQUV REJASI
+T/r
+Tayanch oʻquv reja tarkibi
+Mashg‘ulotlar soni
+Umumiy yuklamaga
+nisbatan foiz hisobida
+I.
+Oʻquv maʼruzasi
+34
+33,3
+II.
+Oʻquv amaliyoti
+63
+61.8
+III.
+Oraliq nazorat ishi (Loyiha ishi)
+4
+3,9
+IV.
+Yakuniy nazorat ishi
+1
+1,0
+Hammasi:
+102
+100
+
+
+3. GAME DESIGN YO‘NALISHIGA TAYYORLASHNING MUDDATI
+Yo‘nalish nomi
+Game Design
+Yo‘nalishga tayyorlashning meʼyoriy muddati
+9-sinflarda haftasiga 80 daqiqadan 3 ta dars 
+1 oʻquv yili davomida
+
+
+Sinf
+Oʻquv chorak
+Haftalar soni
+Mashg‘ulotlar soni
+9
+I
+12
+36
+II
+7
+21
+III
+8
+24
+IV
+7
+21
+Jami
+34 hafta
+102
+
+Tushuntirish xati
+
+1. Umumiy oʻrta taʼlim tashkilotlarida oʻquv yilining 2 - sentyabridan kelgusi yilning 25-mayigacha boʻlgan davrda toʻrt chorakka boʻlingan holda tashkil etiladi.
+2. Oʻquv yilining davomiyligi - 34 hafta:
+haftasiga 3 marta belgilangan soatlar doirasidan chiqmagan holda oʻqish tashkil etiladi;
+mashgʻulotning davomiyligi  1 soat 20 daqiqani tashkil etadi;
+mashgʻulotlar oraligʻidagi tanaffusning davomiyligi 5 - 10 daqiqa. 
+3. Oraliq va Yakuniy nazoratlar nazariy yoki koʻrgazmali amaliy imtihon shaklida tasdiqlangan baholash mezonlari asosida oʻtkaziladi.
+
+4. GAME DESIGN YO‘NALISHINING OʻQUV MAVZU REJASI
+T/r
+Mavzu
+Ajratilgan mashg‘ulotlar soni
+shundan
+Nazariy
+Amaliy
+Nazorat ishi
+I-bob
+Game Design asoslari 
+4
+4
+
+
+
+Game Design faniga kirish
+1
+1
+
+
+
+O‘yinlarning tarixi va  janrlari 
+1
+1
+
+
+
+UI va UX ning Game designdagi roli 
+1
+1
+
+
+
+O‘yin loyihalash va ssenariy
+1
+1
+
+
+II-bob
+2D grafika  asoslari va Photoshop
+15
+5
+10
+
+
+Photoshop interfeysi va vositalari
+3
+1
+2
+
+
+Ranglar nazariyasi va dizayn asoslari
+3
+1
+2
+
+
+O‘yin uchun ikonka va spraytlar yaratish
+3
+1
+2
+
+
+UI dizayn: tugmalar, menyular, HUD
+3
+1
+2
+
+
+O‘yin interfeysini prototiplash
+3
+1
+2
+
+III-bob
+3D modellashtirish asoslari (Blender)
+17
+5
+11
+1
+
+Blender interfeysi va oddiy obyektlar
+3
+1
+2
+
+
+Mesh va modellashtirish usullari
+3
+1
+2
+
+
+Oddiy o‘yin obyektlarni yaratish 
+3
+1
+2
+
+
+Animatsiya va effektlar
+4
+1
+3
+
+
+Loyihani saqlash va eksport qilish. Oraliq nazorat
+4
+1
+2
+1
+IV-bobO‘yin muhiti va Level Design asoslari
+14
+4
+10
+
+15.
+O‘yin dunyosi (Game World)  dizayni haqida
+4
+1
+3
+
+16.
+Level Design ahamiyati va roli
+4
+1
+3
+
+17.
+O‘yin muhiti elementlari 
+3
+1
+2
+
+18.
+O‘yin darajalarti (Levels)
+3
+1
+2
+
+V-bob
+Dasturlash va o‘yin mexanikasi 
+11
+4
+6
+1
+19.
+Kodlash asoslari va  Godot interfeysi
+2
+1
+1
+
+20.
+O‘yin mexanikasi va  UI elementlari. Oraliq nazorat
+5
+2
+2
+1
+21.
+O‘yin matematikasi
+4
+1
+3
+
+VI-bob
+
+O‘yin yaratishda jamoaviy ish va Git
+13
+4
+9
+
+22.
+Game Production jarayoni 
+4
+1
+3
+
+23.
+Git da asosiy buyruqlar
+5
+2
+3
+
+24.
+O‘yin ishlab chiqishda version controlning afzalliklari
+4
+1
+3
+
+VII-bob
+
+Unity o‘yin dizayni
+10
+4
+5
+1
+25.
+Unityni o‘rnatish va  interfeysi bilan tanishish
+2
+1
+1
+
+26.
+Unity komponentalari va UI/HUD  Oraliq nazorat
+5
+2
+2
+1
+27.
+O‘yin yaratishda ijodiy yondashuv 
+3
+1
+2
+
+VIII-bob
+Marketing va Publishing
+8
+3
+5
+
+28.
+Publishing va Monetization modellari 
+4
+2
+2
+
+29.
+Google Play Consoleda o‘yin yuklash qoidalari
+4
+1
+3
+
+IX-bob
+Yakuniy loyiha
+10
+1
+7
+2
+30.
+GDD (Game Design Document) tuzish
+2
+1
+1
+
+31.
+Prototip yaratish
+4
+
+4
+
+32.
+Sinash (Testing). Oraliq nazorat
+3
+
+2
+1
+33.
+Yakuniy nazorat ishi
+1
+
+
+1
+Jami:
+102
+34
+63
+5
+
+5. GAME DESIGN  YO‘NALISHINING OʻQUV DASTURI
+I-BOB. GAME DESIGN ASOSLARI
+Game Design faniga kirish 
+ 
+Game Design tushunchasi va uning ahamiyati. O‘yin yaratuvchi (game designer)ning vazifalari. O‘yin elementlari. O‘yin dizayni komponentalari. 2D va 3D grafika. O‘yin mexanikasi tizimlari. O‘yinlarni yaratishda ishlatiladigan dasturiy vositalar. Game Designing ta‘limiy va ijodiy ahamiyati.  
+ O‘yinlarning tarixi va  janrlari
+O‘yin tushunchasi va insoniyat tarixidagi o‘rni. O‘yinlarning qisqa tarixi. O‘yin janrlari va ularning xususiyatlari. O‘yin janrlari.  O‘yin janrlarining umumiy tasnifi O‘yin tarixidan tanish o‘yinlar haqida ma’lumot. Ta’lim maqsadida yaratilgan o‘yinlar va ularning ta’siri. Texnologik rivojlanish
+UI va UX ning Game designdagi roli
+O‘yinlarda foydalanuvchi interfeysi (UI - User Interface) va foydalanuvchi tajribasi (UX - User Experience) haqidai. To‘g‘ri ishlab chiqilgan UI va UX o‘yinchi uchun qulaylik, tushunarlilik va jalb etuvchanlikni ta‘minlanishi va ahamiyati. O‘yinlarda interfeysning asosiy elementlari va tiplari. Interfeys game dizaynerning asosiy vazifalari. Prototiplarni ishlab chiqish. Diyegetik va nodiyegetik interfeys.Fazofiy, meta interfeys. UX dizayner va UI dizayner o‘rtasidagi farq. O‘yinlarda vizual elementlar va interaktivlik
+O‘yin loyihalash va ssenariy 
+O‘yin g‘oyasini belgilash. Ssenariy va voqealar ketma-ketligi ya‘ni qahramonlar, ularning vazifalari, syujet rivoji va o‘yin davomida yuz beradigan voqealar. O‘yin dunyosi (level design). Qahramonlar va obyektlar. O‘yin mexanikasi. O‘yin va film tsenariysi. O‘yinchi bajarishi kerak bo‘lgan vazifalar, qiziqarli suhbatlar va muammolarni hal qilish yo‘llarini ko‘rib chiqish.
+
+
+
+II-BOB. 2D GRAFIKA  ASOSLARI  VA PHOTOSHOP
+
+Photoshop interfeysi va vositalari
+ 2D grafika va uning turlari. Rastr, vektor, fraktal grafikasi, ularning afzalliklari va kamchiliklari. UI elementlari. Photoshop dasturi haqida umumiy tushuncha. Photoshop interfeysi asosiy qismlari. Photoshop asosiy vositalari va ularning vazifalari.  Grafik dizayndagi o’rni va ahamiyati. Panellar va ularning vazifasi.  Amaliy qo’llanilish. 
+
+Ranglar nazariyasi va dizayn asoslari
+ Ranglar nazariyasi haqida tushuncha.  Ranglarning uyg‘unligi. RGB va CMYK rang modellarining farqi. O‘yin dizaynidagi rang psixologiyasi. Rang doirasi va asosiy rang kombinatsiyalari.  Dizayn asoslari va o‘yindagi roli. Photoshop’da rang bilan ishlash vositalari (Color Picker, Swatches, Gradient). Ranglarning dizayndagi ahamiyati.
+
+O‘yin uchun ikonka va spraytlar yaratish 
+Ikonka va spraytlar haqida umumiy tushuncha. Sprayt va ikonka yaratishda dasturiy vositalar. O‘yinlardagi ikonkalarning turlari va vazifalari. Spraytlarni yaratish bosqichlari. Kutubxonalar. Photoshopda ikonkalar. PNG, SVG, GIF formatlari. Animatsiya dasturlari. O‘yin interfeysi uchun ikonka va fon. Personaj va obyektlar uchun spraytlar.
+
+UI dizayn: tugmalar, menyular, HUD 
+UI dizayn tushunchasi va o‘yinlardagi roli. Foydalanuvchi tajribasiga (UX) ta’siri. O‘yinlarda UI-dizaynerning asosiy vazifalari. Tugmalar turlari va dizayni uchun talablar. Menyu turlari. HUD tushunchasi, unga qo‘yilgan talablar va o‘yinlarda vazifasi.  Photoshopda menyular dizayni. Gorizontal va vertikal menyular. Icon va matn uyg’unligi. Rang va effektlarni qo‘llash. 
+  
+
+
+O‘yin interfeysini prototiplash
+Prototiplash tushunchasi, uning o‘yin yaratishda ahamiyati; prototiplash turlari (Wireframe, Mockup, Prototype) va ularning vazifalari; prototiplashning qisqa kelib chiqish tarixi; o‘yin dvijoklarida prototiplash imkoniyatlari; prototiplash texnologiyalari (qog‘ozda chizish, grafik dasturlarda yaratish, o‘yin dvijoklarida sinash); o‘yin jarayoniga mos interfeys elementlari (tugmalar, menyular, HUD); Photoshopda prototip yaratish jarayoni. 
+
+
+
+III-BOB. 3D MODELLASHTIRISH ASOSLARI (BLENDER)
+
+ Blender interfeysi va oddiy obyektlar
+Blender dasturi haqida umumiy tushuncha. Interfeys tuzilishi (Viewport, Tools, Properties, Timeline).  Asosiy panellar va ularning vazifalari. Oddiy obyektlar: kub, sfera, silindr, konus. Obyektlar ustida amallar (Move, rotate, scale). Asosiy va qo‘shimcha yorug‘lik manbalari. Oddiy obyektlarni joylashtirib sahna yaratish.
+
+Mesh va modellashtirish usullari
+Blenderda Mesh tushunchasi va asosiy elementlari (vertex, edge, face). Polygonal modellashtirish usuli. NURBS modellashtirish. Modifikatorlardan foydalanish. Tekstura va material berish.  
+ Oddiy o‘yin obyektlarni yaratish 
+Blenderda standart primitivlar. Kub, sfera va silindrdan foydalanib  modellashtirish. Oddiy shakllardan foydalanish. Predmetlar yasash.  Material va rang berish.  Teksturalash orqali realizm qo‘shish. Sahna ichida obyektlarni joylashtirish. Rendering va natijani ko‘rish.
+
+ Animatsiya va effektlar
+Animatsiya haqida umumiy tushuncha va uning turlari. Vizual va maxsus effektlarning farqi. Blenderda visual effektlar. Timeline va Dope Sheet panellari. Keyframe qo‘yish va obyektlarni harakatlantirish. Kamerani animatsiya qilish. Oddiy effektlar (yorug‘lik, tutun, olov, zarracha effektlari). 
+
+ Loyihani saqlash va eksport qilish
+
+Yaratilgan 3D sahna, modellash, materiallar, yorug‘lik, kamera va animatsiyani keyinchalik tahrir qilish yoki davom ettirish uchun saqlash. Blenderda yaratilgan model yoki sahnani boshqa dastur yoki fayl formatida foydalanish uchun chiqarish. 
+
+IV-BOB.  O‘YIN MUHITI VA LEVEL DESIGN ASOSLARI
+ O‘yin dunyosi (Game World) dizayni haqida
+Game World tushunchasi, o‘yin ichidagi virtual makon, qoidalar, xarita, vaqt, atmosfera va o‘yin mexanikasi; realizm, fantaziya, futuristik. O‘yin dunyosi. O‘yinchi va muhit orqali hikoya. Muhitda ovoz, yorug‘lik va dizayn elementlari. 
+
+  Level Design ahamiyati va roli
+Level Design tushunchasi. O‘yinchi yo‘nalishi, qiyinchilik balansi, vazifalar va o‘yin ritmi. Hududlar, dushmanlar, mukofotlar, platformalar va interaktiv elementlar. To‘gri tanlangan Level dizaynning o‘yindagi o‘rni. O‘yinchining motivatsiyasi. 
+ O‘yin muhiti elementlari
+O‘yin muhiti elementlari haqida. Makoni va uning tarkibiy qismlari. O‘yin sahnasining asosiy fon rasmi yoki animatsiyasi. Animatsiyalar. User interface qismlari. Audio va visual effektlar. O‘yin tajribasini shakllantiruvchi vizual va interaktiv qismlar.
+ O‘yin darajalari (Levels)
+O‘yinchi bosqichma-bosqich o‘tadigan segmentlar (darajalar). Levelda yangi qiyinchilik, dushmanlar, vazifalar, interaktiv obyektlar, mukofotlar va platformalarni taqdim etish. Level dizayn orqali o‘yin ritmi, o‘sish jarayoni va o‘yinchi motivatsiyasi boshqarish. Level turlari 2D platformer, 3D ochiq dunyo, puzzle, linear. 
+
+V-BOB. DASTURLASH VA O‘YIN MEXANIKASI
+ Kodlash asoslari va  Godot interfeysi
+
+Kodlash asoslari. Godot va uning interfeysi haqida. Godot interfeysi asosiy bo‘limlari: Scene tree (sahna daraxti), Inspector (xususiyatlar paneli), FileSystem (fayl tizimi), Viewport (ko‘rinish oynasi), Script editor (skript muharriri) GDScript, VisualScript kodlarini yozish, Toolbar va Docklar, ular yordamida obyekt qo‘shish, transformatsiya qilish, oynani boshqarish va sahna elementlarini tezkor sozlash. Godot Engine dasturida birinchi vizual skriptni yaratish.
+
+  O‘yin mexanikasi va  UI elementlari
+
+O‘yin mexanikasi haqida. O‘yin mexanikasining asosiy tarkibiy qismlari. O‘yinlarda fundamental o‘zaro ta’sir mexanikasi. Turli janrlardagi jangovar va musobaqa mexaniklari. Progressiya va xarakterning rivojlanish mexanikasi. O‘yinlarda UI elementlarining asosiy turlari va namunalari. 
+
+O‘yin matematikasi
+ 
+O‘yin matematikasi haqida. O‘yinlarda matematika: o‘yin jarayonini shakllantirilishi. O‘yinlarni ishlab chiqishning turli jihatlarida matematikani qo‘llash. O‘yinlar nazariyasi va o‘yinlar turlari. Matematik o‘yinlar ta’lim va intellektni rivojlantirish vositasi. O‘yin jarayonida matematikani qo‘llashning ahamiyati.
+
+VI-BOB. O‘YIN YARATISHDA JAMOAVIY ISH VA GIT
+
+ Game Production jarayoni
+
+O‘yinlarni yaratishda g‘oya va konsept yaratish. O‘yin dizayni hujjati (Game Design Document) tayyorlash. Prototiplash. O‘yin yaratish uchun namuna yaratish va vositalarni tanlash. Loyiha menejeri, o‘yin dizaynerlari, dasturchilar, rassomlar, ovoz dizaynerlari va ovoz rejissyorlari, testchilar.
+
+
+
+
+
+ Git da asosiy buyruqlar 
+
+Git ning qisqacha tarixi. Git qanday ishlaydi va nima uchun ishlatiladi. Git tushunchasi va konfiguratsiya. O‘zgartirishlarni qo‘shish va saqlash. Git va Github farqi. 
+
+ O‘yin ishlab chiqishda version controlning afzalliklari
+
+Versiyalarni nazorat qilish tizimlari haqida. Versiyalarni nazorat qilish tizimlarining afzalliklari va kamchiliklari. Version control o‘yin ishlab chiqishda xavfsizlik, tartib, jamoaviy ish va kod tarixini boshqarish imkoni.
+
+VII-BOB. UNITY  O‘YIN DIZAYNI
+
+Unityni o‘rnatish va  interfeysi bilan tanishish
+
+Unity o‘yin dvijogi (dasturi) haqida umumiy tushuncha va uni o‘rnatish. Unity interfeysi bilan tanishish.  Hierarchy oynasi.  Scene va Game oynasi.  Inspector oynasi. Project oynasi. Sahna (Scene) tushunchasi. 
+
+ Unity komponentalari va UI/HUD
+
+Unityda componentalar nima. Unity dasturida obyektlarni boshqarish uchun maxsus vositalar. Obyekt tushunchasi. Asosiy komponentalar: Transform, Mesh Renderer, Rigidbody va Collider. Sinash va sozlash. UI tushunchasi va UI komponentalar.
+
+O‘yin yaratishda ijodiy yondashuv
+
+Ijodiy yondashuv bosqichlari. O‘yin g‘oyasini ishlab chiqish. Haqiqiy qahramonlarni yaratish uchun odamlarning kundalik hayoti, syujetlari va his-tuyg‘ularini kuzatish. Konsepsiya ishlab chiqish. O‘yin olami va personajlarni yaratish. Tajribalar va innovatsiyalar: yangi o‘yin mexanikasi, interaktiv elementlar yoki vizual effektlar sinovdan o‘tishi.
+
+
+
+
+
+VIII-BOB.  MARKETING VA PUBLISHING
+
+ Publishing va Monetization modellari
+
+Publishing haqida umumiy tushuncha. Self-publishing. Publishing modellari (O‘yinlarni nashr qilish). Traditional publishing. Digital distribution (raqamli tarqatish). Early Access / Beta release. Monetization modellari (Daromad olish): Premium, Free-to-play, Subscription.
+
+Google Play Consoleda o‘yin yuklash qoidalari
+Google Play Console platformasi haqida umumiy tushuncha. Hisob ochish. O‘yin qo‘shish bosqichlari – nom berish, ikonka, screenshot va ta’rif yuklash.  Fayl yuklash. APK yoki AAB formatidagi o‘yin faylini joylashtirish.  Xavfsizlik va qoidalar. O‘yinni joylashtirish.
+
+IX-BOB.  YAKUNIY LOYIHA
+
+GDD (Game Design Document) tuzish 
+GDD tuzish tushunchasi va kelib chiqish tarixi haqida. GDD asosiy tarkibiy qismlari va maqsadi. GDD ning strukturasi. O‘yin dizayn hujjatida  media fayllar.
+
+ Prototip yaratish 
+Prototiplash tushunchasi va ularni yaratish bosqichlari. Prototiplar qanday bo‘ladi va  prototip turlari. Tezkor prototiplash texnologiyalari. 2D va 3D prototiplash va ularning bir-biridan farqi. 3D modellarni prototiplashning qo‘llanish sohalari. GDD asosida o‘yinning vizual va interaktiv qismlarini sinovdan o‘tkazish.
+
+ Sinash (Testing)
+ 	O‘yinlarni sinash nima: asosiy vazifalar va maqsadlari. Prototipni sinash, xatolarni aniqlash, gameplay va balansni tekshirish. O‘yinlarni funksional va regression sinash. Unumdorlikni tekshirish. Maxsus va beta-test usullari. O‘yinlarni sinash uchun avtomatlashtirish va vositalar
+
+6. GAME DESIGN  YO‘NALISHI BOʻYICHA OʻTILADIGAN DARS SOATLARI
+T/r
+Mavzular
+I-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta8-hafta9-hafta10-hafta11-hafta12-hafta1.Game Design faniga kirish1 2.O‘yinlarning tarixi va  janrlari 1 3.UI va UX ning Game designdagi roli1 4.O‘yin loyihalash va ssenariy15.Photoshop interfeysi va vositalari26.Ranglar nazariyasi va dizayn asoslari37.O‘yin uchun ikonka va saytlar yaratish38.UI dizayn: tugmalar, menyular, HUD39.O‘yin interfeysini prototiplash310.Blender interfeysi va oddiy obyektlar311.Mesh va modellashtirish usullari312.Oddiy o‘yin obyektlarini yaratish313.Animatsiya va effektlar3114.Loyihani saqlash va eksport qilish.23
+
+T/r
+Mavzular
+II-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta1.O‘yin dunyosi (Game World) dizayni haqida 31   2.Level Design ahamiyati va roli 22  3.O‘yin muhiti elementlari   124.O‘yin darajalari (Levels)   125.Kodlash asoslari va  Godot interfeysi116.O‘yin mexanikasi va  UI elementlari. 23
+
+
+T/r
+Mavzular
+III-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta8-hafta1.O‘yin matematikasi312.Game Production jarayoni223.Git da asosiy buyruqlar1314.O‘yin ishlab chiqishda version controlning afzalliklari225.Unityni o‘rnatish va  interfeysi bilan tanishish116.Unity komponentalari va UI/HUD 23
+
+T/r
+Mavzular
+IV-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta1.O‘yin yaratishda ijodiy yondashuv 32.Publishing va Monetization modellari313.Google Play Consoleda o‘yin yuklash qoidalari224.GDD (Game Design Document) tuzish115.Prototip yaratish 236.Sinash (Testing)37. OʻQUV JARAYONINI TASHKIL ETISHDA OʻQITISH METODLARI, SHAKLLARI VA VOSITALARI
+Oʻqitish metodlari - ogʻzaki, koʻrgazmali, amaliy, muammoli-izlanish, mustaqil ishlash va shu kabilar.
+Oʻqitish shakllari
+
+Nazariy
+Amaliy
+Umumiy
+maʼruza;
+mustaqil ishlar;
+maslahat olish va shu kabilar.
+amaliy mashgʻulotlar;
+mustaqil uy ishi;
+didaktik, ishchan va rolli oʻyinlar;
+tajriba-konstruktorlik faoliyati, treninglar;
+sayohatlar, olimpiadalar va koʻrik-tanlovlar.
+ommaviy;
+jamoaviy;
+guruhli;
+kichik guruhli;
+juftli;
+yakka tartibda.
+Oʻqitish vositalari
+
+Oʻqitish vositalari
+(oddiy va murakkab)
+Oʻquv qurollari va koʻrgazmali qurollar
+darsliklar, oʻquv qoʻllanmalari;
+metodik qoʻllanmalar;
+maʼlumotnomalar;
+maxsus adabiyotlar;
+metodik tavsiyalar;
+ensiklopediyalar;
+jadval va plakat;
+mulyaj va modellar;
+videolar.
+Axborot materiallari va dasturiy taʼminot
+kompyuter;
+amaliy topshiriqlar;
+kasbiy koʻnikma va malakaviy dastur;
+testlar, nazorat topshiriqlari va boshqalar.
+
+
+
+8. BAHOLASH MEZONLARI
+	Oʻquvchilarning kasbga oid bilim, koʻnikma, malaka va kompetensiyalarini baholash va nazorat qilish maqsadida quyidagi nazorat turlari amalga oshiriladi:
+joriy nazorat - soʻrovlar, bajarilgan loyiha ishlarini izohlash tarzida oʻquvchilarning bilimlari, koʻnikma va malakalari muntazam nazorat qilinadi.
+oraliq nazorat - chorak tamom boʻlganda va oʻquv dasturining tegishli boʻlimi tugallangandan keyin oʻquvchilarning bilimlari, koʻnikma va malakalarini baholash uchun amalga oshiriladi. U amaliy, yozma nazorat ishi yoki testlar shaklida oʻtkaziladi. Ushbu nazoratda foydalaniladigan materiallar Game Design  yo‘nalishi boʻyicha kasbiy taʼlim ustasi tomonidan tayyorlanadi. Oraliq nazorat har chorak yakunida o‘tkaziladi va nazorat ishlarining miqdori va mavzulari oʻquv dasturiga asoslangan rejada belgilanadi hamda muddati va shakli koʻrsatiladi.
+yakuniy nazorat - oʻquv yili tamom boʻlgandan keyin ogʻzaki va amaliy ish koʻrinishida imtihon shaklida amalga oshiriladi. Uning asosida reyting aniqlanadi va oʻquvchini navbatdagi sinfga oʻtkazish toʻgʻrisida qaror qabul qilinadi. Yakuniy nazorat materiallari kasbiy taʼlim ustasi tomonidan oʻquv dasturi asosida tayyorlanadi va ularni amaliy fanlar uslubiy birlashmasi muhokamasidan oʻtkaziladi. Umumiy oʻrta taʼlim muassasalari bitiruvchilari uchun choraklik baholar asosida yillik baho, shuningdek, yakuniy nazoratda olingan baho va yillik baho asosida yakuniy baho aniqlanadi.
+Kasbiy taʼlim yoʻnalishi boʻyicha yakuniy nazorat imtihonlarni oʻtkazish tartibi.
+Kasbiy taʼlim yoʻnalishi boʻyicha oʻquv reja va dasturning barcha talablarini toʻliq bajargan bitiruvchiga maktab direktorining buyrugʻiga asosan amaliy yakuniy nazoratni topshirishga ruxsat beriladi.
+Yakuniy nazorat oʻtkazish jadvali, u oʻtkaziladigan kunlar koʻrsatilgan holda, maktab direktori tomonidan tasdiqlanadi va yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin taʼlim muassasasining oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar xabardor etiladi.
+Yakuniy nazorat amaliy topshiriq shaklida oʻtkaziladi. Bunda yakuniy nazorat savollari orqali bitta amaliy topshiriq beriladi.
+Amaliy topshiriqlar oʻqitilgan mutaxassislik oʻquv dasturi asosida tuziladi va maktabning pedagogik kengashi tomonidan tasdiqlanadi hamda yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin barcha oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar eʼtiboriga yetkaziladi.
+Oʻquvchilar bilimi quyidagi mezonlar asosida baholanadi:
+Har bir oʻquvchining kasb boʻyicha oʻzlashtirish darajasi ball tizimi orqali ifodalanadi, ya’ni 100 ballik shkalaga o‘tkaziladi.
+0-59 ball – 2 baho;
+60-70 ball – 3 baho;
+71-89 ball – 4 baho;
+90-100 ball – 5 baho.
+Oʻquvchilarning har bir nazorat turi boʻyicha bilimini baholash va koʻrsatkichini aniqlash ularning kasbni oʻquv dasturi mavzusi boʻyicha tasavvurga ega boʻlishi, mavzuning mohiyatini tushunib yetishi va aytib bera olishi, olgan bilimlarini amalda qoʻllay olishi, ijodiy fikrlay olishi va xulosa qabul qila olishi hamda mustaqil ishlarni bajarishi kabi mezonlarga qarab amalga oshiriladi.
+Jumladan:
+bitiruvchi mustaqil xulosa va qaror qabul qiladi, ijodiy fikrlay oladi, mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (fanning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (fan) boʻyicha tasavvurga ega deb topilganda – 90-100 (aʼlo) ball;
+bitiruvchi mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (fanning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb(fan) boʻyicha tasavvurga ega deb topilganda – 71-89 (yaxshi) ball;
+bitiruvchi olgan bilimini amalda qoʻllay oladi, kasbning (fanning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (fan) boʻyicha tasavvurga ega deb topilganda – 60-70 (qoniqarli) ball;
+bitiruvchi kasb dasturini oʻzlashtirmagan, kasbning (fanning) mohiyatini tushunmaganda- 0-59 (qoniqarsiz) ball.
+Nazorat turlarini oʻtkazish boʻyicha tuzilgan topshiriqlarning mazmuni oʻquvchining oʻzlashtirishini xolis (obyektiv) va aniq baholash imkoniyatini berishi lozim.
+O‘quvchilar bilimini baholash mezonlari
+Baholash usuli
+Topshiriq
+Baholash mezonlari
+Maksimal ball
+Baholash o’tkazish vaqti
+Joriy nazorat
+Bajarilgan loyiha ishini
+loyiha belgilangan talab va mavzuga mos bo’lishi; 
+o‘yin asosiy funksiyalarining to’liq va xatosiz ishlashi;
+foydalanuvchi kutilgan natijalarni olishi;
+grafika va interfeys (UI) qulay, tushunarli va estetik jihatdan to‘g‘ri bo’lishi;
+animatsiyalar va o‘zaro ta’sir elementlarining borligi;
+zamonaviy vositalardan foydalanilganligi;
+loyihaning maqsadi, ishlash prinsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi.
+40 ball
+O’quv jarayoni davomiyligida o’tkaziladi
+Oraliq nazorat
+Yozma, topshiriqlar 
+nazariy savollarga to’liq va aniq javob berilganligi;
+javoblar faktlarga asoslanganligi va xato yo’qligi;
+tushuntirish aniq va misollar bilan boyitilganligi;
+matnda grammatik va imlo xatolarining kamligi;
+muammoni tahlil qilinganligi va fikrlarni ifodalash darajasi.
+20 ball
+Har chorak yakunida
+Amaliy topshiriqlar
+qog’ozda kichkina o‘yin konsepsiyasi yaratish;
+UI elementlari (Start, Exit tugmalari) tayyorlash va menyu dizayni yaratish;
+zarur texnologiyalar to‘g‘ri ishlatilganligi;
+loyihaning to’liqligi, bog’liqligi.
+Test topshiriqlari
+savollarga to‘g‘ri javob berganligi.
+Yakuniy nazorat
+Loyiha ishlarini yakuni bo’yicha
+Bajarilgan loyiha belgilangan talab va mavzuga mos bo’lishi;  
+Grafika va interfeys (UI) qulay, tushunarli va estetik bo’lishi; 
+Foydalanuvchi kutilgan natijalarni olishi;
+Zamonaviy o‘yin vositalaridan foydalanilganligi;
+Animatsiyalar va o‘zaro ta’sir elementlarining borligi;
+Loyihaning taqdimoti aniq va tushunarli bo’lishi;
+Loyihaning maqsadi, ishlash prinsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi.
+40 ball
+O’quv yili oxirida, kurs yakunida
+Jami
+
+
+100 ball
+
+
+Oraliq nazoratda  topshiriq  turlaring nazorat jarayonida faqat bitta turidan foydalanish mumkin.
+9. GAME DESIGN YO‘NALISHI TAVSIFI
+9.1. Bitiruvchining kasbiy faoliyati sohalari
+Game Design kursini to‘liq o‘zlashtirgan bitiruvchi chuqur malaka talab qilmaydigan darajada:
+oddiy o‘yinlar yaratishi, o‘yin grafikasi va interfeys (UI) elementlarini chizish, o‘yin qoidalari va darajalarini tuzish, GDScript, Unity, Blender, Photoshop, Google Play Console kabi vositalardan foydalanishi mumkin. Ushbu ko’nikmalar maktab, to’garak, IT markazlari va kichik studiyalarda o‘yin loyihalarini yaratish va taqdim etish jarayonida qo’llaniladi.  
+9.2. Bitiruvchining yo‘nalishga muvofiq kasbiy faoliyat obyektlari
+- 2D va 3D o‘yin obyektlari (sprite, model, level);
+- o‘yin dvijoklari;
+- o‘yin interfeysi (UI/UX elementlari);
+- prototiplash va test qilish jarayonlari. 
+9.3. Game design kasbiy faoliyat turlari
+O‘yin loyihasi uchun ish joyini to‘g‘ri tashkil etish va kerakli dasturiy vositalarni tanlash;
+  Kompyuter va grafik jihozlarni foydalanishga tayyorlash, texnika xavfsizligi, yong‘in xavfsizligi hamda sanitariya-gigiyena qoidalariga amal qilish;
+ Game designer – o‘yin g‘oyasini ishlab chiqish, qoidalarini belgilash va o‘yin jarayonini boshqarish bilan shug‘ullanish.
+9.4. Game design 
+Game design yo‘nalishini o‘zlashtirgan bitiruvchi keyinchalik kasbiy taʼlimini chuqurlashtirish maqsadida maxsus kurslarda malakasini oshirishi, kollej, texnikum va Oliy taʼlim muassasalarida oʻqishi mumkin.
+10. KASBNING QOʻLLANISH SOHASI
+	Mazkur malaka talabi “Game design” yo‘nalishi boʻyicha umumiy oʻrta taʼlim muassasalarining 9-sinf oʻquvchilarini kasb-hunarga tayyorlash kurslari (keyingi oʻrinlarda - kasb-hunarga tayyorlash kurslari) boʻyicha ishchilarni tayyorlashning zaruriy bilimlar mazmunini va kasbiy tayyorgarlik darajasiga qoʻyiladigan talablarni shuningdek oʻquv yuklamalari hajmini va belgilangan talablarni bajarilishini nazoratini belgilaydi. 
+Malaka talablari kasbga oʻrgatish tayyorgarligi sifati va darajasini baholashda asosiy mezon hisoblanadi. Mazkur talablarning bajarilishi kasbga tayyorlash bitiruvchilariga kasbning tegishli darajasini olganligi toʻgʻrisida davlat namunasidagi sertifikat berilishi uchun asos hisoblanadi.
+Malaka talablari yo‘nalishga tayyorlash oʻquv jarayonini tashkil qilgan taʼlim tashkilotlari tomonidan tatbiq etilishi majburiydir.
+Mazkur talablarni bajargan umumiy oʻrta taʼlim tashkilotlarining 9-sinf oʻquvchilari Oʻzbekiston Respublikasi Milliy malakalar ramkasining 2-darajali sertifikatga ega boʻladi.
+11. GAME DESIGN YO‘NALISHI O‘QITISH NATIJALARI
+11.1. Birinchi chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko’nikma
+Game Design asoslariGame Design faniga kirishGame design tushunchasi va uning ahamiyati haqida biladi;
+O‘yin dizaynining asosiy komponentalari;
+Game dizayn fanini o‘rganishda zamonaviy dasturiy vositalar haqida tushunchaga ega bo‘ladi;
+O‘yin dizaynining asosiy jihatlarini biladi;
+Birinchi yaratilgan o‘yin turlari haqida ma’lumotga ega bo‘ladi;
+O‘yin dizaynerining vazifalari haqida biladi.
+O‘yinlarning tarixi va  janrlariO‘yinlarning tarixiy rivojlanish bosqichlari haqida ma’lumot oladi;
+Kompyuter o‘yinlarining paydo bo‘lishi va boshqaruv bosqichlari haqida biladi;
+O‘yin janrlarini va ularning tasnifi haqida biladi;
+Har bir janrning asosiy xususiyatlarini anglaydi;
+O‘yinlarni janriga qarab taqqoslash va misollar keltirishni o‘rganadi;
+O‘yin tarixidan kelib chiqib, bugungi o‘yinlarning rivojlanishini tushunadi.
+UI va UX ning Game designdagi roliInterfeysning muhimligi, ya’ni  o‘yinchi va o‘yin o’rtasidagi aloqa vositasi ekanini biladi.
+Grafik elementlar (rang, shakl, fon) o‘yinga kayfiyat berishini tushunadi.
+O‘yin interfeysi tiplari haqida biladi;
+Oddiy interfeys qulaylikligi va tezkorligini biladi.
+Ranglar uyg’unligi o‘yinning jozibadorligini oshirishini biladi.
+Grafik va interfeys orqali o‘yin mazmuni va maqsadi tushunarli bo’lishini anglaydi;
+Oddiy grafik elementlardan foydalanib, kichik interfeys loyihasi tuzishga qiziqadi.
+O‘yin loyihalash va ssenariyO‘yin dizayni asoslari: g‘oya, maqsad va o‘yin janrlarini tushunish;
+O‘yinchilar psixologiyasi va motivatsiyasi haqida nazariy bilimlar;
+Ssenariy tuzish va o‘yin dunyosini shakllantirishni biladi;
+Dialog yozish va personaj xarakterlarini ishlab chiqish;
+O‘yin g‘oyasidan ssenariy yaratish va uni yozma shaklda ifodalashni o‘rganadi;
+O‘yin ssenariysini vizual xaritalar yoki storyboard orqali tasvirlashni biladi.
+2D grafika asoslari  va Photoshop
+Photoshop interfeysi va vositalari
+2D grafika va uning elementlari haqida tushunchaga ega bo‘ladi;
+Rastr, Vektor, Fraktal grafika nima va farqlarini biladi;
+Photoshop interfeysi va vositalari haqida biladi;
+Photoshop yordamida oddiy dizayn yaratishni biladi;
+Dastur oynasida kerakli vositalarni topib ishlata oladi;
+Rang berish va effektlar qo’shadi;
+Oddiy dizayn ishlarini amalda bajarish ko’nikmasiga ega bo’ladi.
+
+
+
+
+
+
+Ranglar nazariyasi va dizayn asoslariRanglarning asosiy turlari va ularning o‘zaro munosabatini biladi;
+Ranglarning uyg’unligini  tushunadi;
+Ranglarning inson kayfiyati va hissiyotiga ta’sirini biladi;
+Dizaynda rang tanlash ishning umumiy ko‘rinishiga qanday ta’sir qilishini biladi;
+Oddiy dizayn yaratishda rang nazariyasidan foydalanish yo‘llarini biladi;
+Oddiy rang kombinatsiyalarini tanlay oladi;
+Dizayn haqida tushuncha va o‘yinlardagi roli haqida biladi;
+Amaliy ishlari uchun rang uyg’unligini amalda qo’llay oladi.
+O‘yin uchun ikonka va spraytlar yaratishIkonka  va saytlar haqida umumiy tushunchaga ega bo‘ladi;
+Sprayt va ikonkalar yaratishda vositalar haqida biladi;
+Photoshopda ikonka va saytlar yaratishni biladi.UI dizayn: tugmalar, menyularUI (User Interface) tushunchasi va uning o‘yinlardagi o‘rni haqida biladi;
+Tugmalar, menyular va HUD elementlarining vazifasini o‘rganadi;
+Tugma va menyularni oddiy shakllarda yaratish jarayonini o‘rganadi;
+Photoshopda UI elementlarini yaratish bosqichlarini biladi;
+Tayyor UI elementlarini o‘yin loyihasiga qo‘shib ishlatish qobiliyatiga ega bo‘ladi.
+
+
+O‘yin interfeysini prototiplash
+Prototiplash va ularning turlari haqida tushunchaga ega bo‘ladi;
+Wireframe va layout (joylashuv maketi) tushunchalarini biladi;
+UI elementlari: tugma, menyu, HUD, ikonka va panellarning vazifasini biladi;
+Rang uyg‘unligi, shrift va vizual uslubni tanlash qoidalarini farqlay oladi;
+Photoshopda oddiy shakllar yordamida UI elementlarini yaratish ko‘nikmasiga ega bo‘ladi;
+Tugmalar va menyularni joylashtirib, ekran maketini  tayyorlashni o‘rganadi;
+Tayyor interfeys prototipini yarata oladi.
+
+3D modellashtirish asoslari (Blender)
+Blender interfeysi va oddiy obyektlar
+Blender interfeysi : asosiy oynalar (3D Viewport, Outliner, Properties) va ularning vazifasini biladi;
+Oddiy obyektlar : kub, sfera, silindr, konus kabi primitivlaridan foydalana oladi; 
+Blender primitivlari va modifikatorlari haqida  tushunchaga ega bo‘ladi;
+Oddiy obyektlarni harakatlantirish, aylantirish va o‘lchamini o‘zgartirishni biladi.
+Mesh va modellashtirish usullariMesh Blenderda 3D obyektlarning asosiy shakli ekanligini, u uchburchak va to‘rtburchak poligonlardan tashkil topishini biladi; 
+Modellashtirishda asosiy usullar (exstrude, silindr, kublardan obyekt yasash, boolean, modifierlar orqali o‘zgartirish) haqida nazariy tushuncha hosil qiladi;
+Vertex, Edge, Facelarning  vazifasi haqida biladi;
+Asosiy primitiv shakllardan (kub, sfera, silindr, konus) kabi obyektlardan murakkab modellar yaratishni o‘rganadi;
+Mirror, Subdivision Surface modifikatorlari yordamida simmetrik modellar yasash ko‘nikmasiga ega bo‘ladi;
+Oddiy obyektlardan kompozitsiya yaratish ko‘nikmasiga ega bo‘ladi.
+Oddiy o‘yin obyektlarini yaratishO‘yin obyektlari tushunchasi – o‘yin olamida ishlatiladigan elementlar haqida tasavvurga ega bo‘ladi;
+Oddiy shakllardan murakkab obyekt yaratishni biladi;
+O‘yin uchun model talablari bo‘lgan, obyektlar juda murakkab bo‘lmasligi, poligonlarni  kamroq qilish zarurligi tushunadi;
+O‘yin obyektlarini faqat shakl emas, balki realistik ko‘rinishda yaratish haqida biladi;
+Blenderda oddiy primitivlardan uy, daraxt modeli yasay oladi;
+Kichik sahna yaratish: uy + daraxt + predmetlardan iborat kichik o‘yin muhiti yig‘ish ko‘nikmasiga ega bo‘ladi.
+Animatsiya  effektlarAnimatsiya va uning tarixi haqida tushunchaga ega bo‘ladi;
+Transformatsiya animatsiyasi:  (Move), (Rotate), (Scale) bo‘yicha animatsiya yaratishni biladi;
+Effektlar haqida biladi;
+Particle system  yomg‘ir, qor, tutun kabi effektlarni yarata oladi;
+Fizika simulyatsiyalarini qo‘llay oladi;
+Blenderda obyektni harakatlantirish, aylantirish, kattalashtirish animatsiyasini yarata oladi;.
+Keyframe larni to‘g‘ri qo‘yishni biladi;
+Tayyor animatsiyani render qilish va kichik video sifatida saqlash ko‘nikmasiga ega bo‘ladi.Loyihani saqlash va eksport qilishLoyihani saqlash (Save) – Blender fayli .blend formatida saqlashni biladi;
+Eksport qilish tushunchasi haqida ma’lumotga ega bo‘ladi;
+Modelni Export → .fbx yoki .obj formatida chiqarishni biladi;.
+Animatsiyani video (mp4/avi) formatida render qilib saqlay oladi;
+Render natijalarini rasm sifatida (png/jpg) saqlash ko‘nikmasiga ega bo‘ladi.
+
+11.2. Ikkinchi chorak uchun
+
+O‘yin muhiti va  Level Design asoslariO‘yin dunyosi 
+(Game World) dizayni
+  haqidaO‘yin dunyosi (Game World) haqida biladi; 
+O‘yin janrlariga qarab dunyo qanday bo‘lishini biladi;
+Level o‘yinchi uchun qiziqarli bo‘lishi, haddan tashqari qiyin bo‘lmasligi haqida biladi;
+Ranglar, materiallar, yoritish orqali o‘yin muhiti kayfiyatini yarata olish haqida biladi;
+Kamera pozitsiyasini sozlaydi va ishlay oladi;
+Tayyor sahnani render qilish yoki eksport qilish amaliy ko‘nikmasiga ega bo‘ladi.
+Level Design ahamiyati va roliNazariy bilimlarga ega bo‘ladi;
+Oddiy Level maketini yarata oladi;
+Yorug‘likni sozlay oladi;
+Qiyinchilik darajasi, sinovdan o‘tkazish va levelni bezash ko‘nikmalariga ega bo‘ladi. 
+
+
+O‘yin muhiti 
+elementlari
+O‘yin muhiti tushunchasi va uning o‘yindagi o‘rnini biladi.
+O‘yin muhitining asosiy elementlarini tushunadi:fon (background),
+obyektlar (qahramonlar, buyumlar), makon (2D va 3D), yorug‘lik va ranglar, tovush va effektlar.
+O‘yin muhitini yaratishda ishlatiladigan oddiy grafik va animatsion elementlar haqida umumiy tushunchaga ega bo‘ladi.
+Oddiy o’yin uchun muhit elementlarini yaratish bilimiga ega bo’ladi.
+
+O‘yin darajalari (Levels)
+Level Design haqida umumiy tushunchaga ega bo‘ladi;
+Level elementlari bilan ishlay oladi;
+Atmosfera va dizayn – fon rasmlari, rang palitrasi orqali kayfiyat yaratishni biladi;
+Godot’da yangi 2D sahna yarata oladi;
+Tayyor levelni sinab ko‘rish (Play test) va kerakli joylarni tuzatish ko‘nikmasiga ega bo‘ladi.
+
+Dasturlash va  o‘yin mexanikasi
+Kodlash asoslari va  Godot interfeysi
+Kod nima ekanini biladi;
+O‘zgaruvchilar (Variables) haqida tushunchaga ega bo‘ladi;
+Funksiya (Function) nima ekanini biladi
+Oddiy kod yozishni biladi;
+GDScript’ning oddiy buyruqlaridan foydalana oladi; 
+Godot interfeysi tuzilishi haqida biladi;
+Node, Scene tushunchasi va Inspector oynasi haqida biladi.
+Sahna yarata oladi va yaratilgan sahnani saqlash amaliy ko‘nikmasiga ega bo‘ladi.
+
+O‘yin mexanikasi va  UI elementlari
+Mexanika – o‘yin tajribasini qiziqarli qiladigan eng muhim qism ekanini tushunadi;
+GDScript tili - Godot o‘yin dvijogida ishlatiladigan dasturlash tili ekanini biladi;
+Obyektlarni chapga, o‘ngga, yuqoriga va pastga harakatlantirish usullarini bilib oladi;
+UI elementlarining muhimligini biladi va to‘g‘ri qo‘llay oladi.  
+
+11.3. Uchinchi chorak uchun
+
+
+
+O‘yin
+ matematikasi
+ Koordinatalar tizimi haqida biladi;
+Vektor - harakat yo‘nalishi va tezligini belgilovchi matematik kattalik ekanini biladi;
+O‘yinlar matematik asosda ishlashini tushunadi;
+To‘qnashuv matematikasining sodda ko‘rinishini tushunadi;
+O‘yin mexanikalarini yaratishda matematikani qo‘llay oladi.
+
+O‘yin yaratishda  jamoaviy ish va Git
+Game Production jarayoni
+ Game Production nima va uning bosqichlari haqida ma’lumotga  ega bo‘ladi;
+Ish jarayonida guruh ishining ahamiyati haqida biladi;
+Oddiy o‘yin g‘oyasini ishlab chiqadi va prototip yarata oladi;
+Oddiy prototip yaratish qobiliyatiga ega bo‘ladi.
+
+Git da asosiy buyruqlar
+Nazariy bilimlarga ega bo‘ladi;
+GIT va GITHUB asosiy tushunchalarini biladi;
+O‘zgarishlarni saqlash va izohlashni bajaradi;
+Fayllarni qo‘shish, saqlash, loyihani ko‘rishni biladi;
+Remont repository, Branch bilan ishlash haqida biladi.
+
+O‘yin ishlab chiqishda version controlning afzalliklari
+Kod va loyiha fayllaridagi o‘zgarishlarni kuzatib borish tizimi ekanini tushunadi; 
+Branch va merge tushunchalari haqida biladi;
+Git yordamida fayllarni kuzata va saqlay oladi;
+Version control tushunchasini tushunadi;
+Afzallik va kamchiliklari haqida biladi.
+
+Unity o‘yin dizayni
+Unityni o‘rnatish va  interfeysi bilan tanishish
+Unity – o‘yin yaratish  dvijogi haqida tushunchaga ega bo‘ladi;
+Unityni kompyuterga o‘rnatishda Unity Hub dasturidan foydalanishni biladi;
+Unity Hub orqali kerakli versiyani o‘rnatishni amalda bajaradi;
+Yangi loyiha yaratishda 2D va 3D rejimlari farqini tushunadi;
+Yangi loyiha yaratish va uni ochishni amalda bajaradi;
+Unity interfeysi tarkibiy qismlari (Scene, Game, Hierarchy, Project, Inspector, Console) bilan tanishadi;
+
+
+Unity komponentalari va UI/HUD
+Unity’da har bir obyekt turli xususiyatlarni boshqaruvchi qismlardan (Components) tashkil topganini tushunadi;
+UI va HUD (Heads-Up Display) haqida biladi;
+Transform, Rigidbody, Collider, Sprite Renderer va boshqa komponentlarni qo‘shish va sozlashni biladi;
+Tugmalar (Button), matn (Text), panel (Panel) va rasm (Image) qo‘shishni biladi.
+
+
+
+
+
+
+
+11.4. To‘rtinchi chorak uchun
+
+
+Unity o‘yin dizayni
+O‘yin yaratishda ijodiy yondashuv
+Oddiy 3D shakllar (kublar, sharchalar)ni joylashtirish, ularni harakatlantirish va o‘zgartirishni biladi;
+Material va teksturalar bilan ishlashni biladi;
+O‘yin muhiti, darajalar va personajlarni o‘z fantaziyasiga ko‘ra loyihalashni o‘raganadi.
+
+Marketing va Publishing
+Publishing va Monetization modellari
+Publishing haqida va O‘yin ishlab chiqilgandan so‘ng, uni foydalanuvchilarga taqdim etish jarayoni haqida biladi;
+O‘yin orqali daromad olish usullari;
+Asosiy monetization modellari haqida biladi;
+Platformani tanlashni biladi.
+
+
+Google Play Consoleda o‘yin yuklash qoidalari
+Google Play Console haqida umumiy tushunchaga ega bo‘ladi;
+Hisob ochish jarayonini bosqichma-bosqich bilib oladi;
+O‘yin qo‘shishda nom, ikonka, screenshot va qisqa ta’rif qo‘shishni o‘rganadi;
+APK yoki AAB faylini yuklash tartibini tushunadi;
+ Kontent xavfsizligi va mualliflik huquqi haqida umumiy bilim oladi;
+O‘yin yuklangandan so‘ng Play Marketda paydo bo‘lishi va foydalanuvchilar uni ko‘rib, yuklab olishini tushunadi.
+
+
+Yakuniy loyiha
+GDD (Game Design Document) tuzish
+GDD nima va uning ahamiyati haqida tushunchaga ega bo‘ladi;
+GDD tarkibi nimalardan iborat ekanligini biladi;
+O‘yin g‘oyasini aniqlash va dokument shaklida yozishni o‘rganadi;
+Oddiy level va o‘yin mexanikasini GDD’da tasvirlay oladi;
+Grafika, audio va monetization elementlarini rejalashtira oladi;
+GDD orqali loyiha ishlab chiqish jarayonini tartibga soladi.
+
+Prototip yaratish
+2D yoki 3D prototip tushunchasini tushunadi;
+Yangi sahna yaratadi va obyektlarni joylashtiradi;
+Obyektlar harakatini va interaktivlikni qo‘shadi;
+Prototip orqali level va o‘yin mexanikasini sinab ko‘ra oladi.
+
+Sinash (Testing)
+Testing va uning maqsadi haqida umumiy tushunchaga ega bo‘ladi;
+Testing turlari haqida biladi;
+Xatolarni aniqlash va tuzatishni o‘rganadi;
+Foydalanuvchi tajribasini baholay oladi;
+O‘z o‘yinini testlab, sifatini yaxshilashni biladi.
+
+
+
+12. GAME DESIGN YO‘NALISHI BO‘YICHA LOYIHA ISHLARI
+Game Design kursi davomida bajariladigan loyihalar o‘tilgan mavzular doirasida beriladi va joriy nazorat ishlarini baholashda asos bo‘ladi. Kursda tahsil olayotgan har bir o‘quvchiga loyiha topshiriqlari individual tarzda beriladi. Berilgan loyihalarni kurs davomida yoki yakuniy loyiha sifatida bajarish mumkin.
+№
+Loyiha mavzulari
+Photoshopda o‘yin interfeysi tugmasini yasash
+Photoshopda ikonkalar yasash (HP, coin va boshqalar)
+Photoshopda oddiy fon yaratish
+Yorug‘lik va ranglar yordamida o‘yinning hissiyotini ko‘rsatish (atmosfera)
+Blenderda low poly uslubida odam yoki hayvon modeli yasash
+Blenderda o‘yin muhiti (level elementlari) yaratish
+Unityda oddiy fizikaga asoslangan o‘yin yaratish (masalan, sharni tushirish)Godotda oddiy platforma yasash
+O‘yinchi harakatini kodlashScript yordamida o‘yin darajasini yaratishUnityda o‘yinchi personajini harakatlantirish
+Unityda menyular yaratish
+Unityda level dizayn qilish – platformalar, to‘siqlar, coin joylashuvi
+Oddiy menyu yasash (Unity UI – Start, Exit tugmalari)
+
+Oddiy o‘yin muhitini yaratish (Game World)
+ 
+ 
+13. GAME DESIGN  XONASI UCHUN QOʻYILADIGAN UMUMIY TALABLAR
+Game design  xonasi maktab binosining ikki va undan yuqori qavatda alohida binoda joylashgan boʻlishi;
+Game design  xonasining umumiy maydoni 60-120m2;
+barcha oʻquv binolarini tabiiy, sunʼiy kombinatsiyalangan yoritishga ega boʻlishi;
+Xona harorati 17-20o C boʻlishi kerak.
+Game design  xonasining umumiy maydoni mashgʻulotlar boshlanishidan oldin va tugagandan soʻng, shamollatiladi. Shamollatishning davomiyligi ob-havo sharoiti, shamolning yoʻnalishi va tezligi, isitish tizimining samaradorligi bilan belgilanadi.
+Game design xonasi uchun ajratilgan xonadagi haroratni meʼyorida saqlab turish uchun sovitish va isitish tizimi (konditsioner) oʻrnatilgan boʻlishi kerak. 
+Game design xonasi uchun ajratilgan xonada birinchi tibbiy yordam koʻrsatish uchun tibbiy toʻplamlar boʻlishi kerak. 
+Game design xonasi uchun quyidagi boʻyoq ranglarini qoʻllash tavsiya etiladi: shiftlar uchun moviy rang, devorlar uchun  qaymoq rang, pushti, yashil, koʻk ranglarning ochiq ohanglari, mebel (shkaflar, stollar) uchun  tabiiy yoki och jigarrang, toʻq  jigarrang; eshiklar, deraza romlari uchun  oq ranglar. 
+14. GAME DESIGN  YO‘NALISHIGA OʻQITISH XONASINI JIHOZLASHGA QOʻYILGAN TALABLAR
+T/rJihoz nomiOʻlchov birligiSoniJihoz rasmi1.Monitor (Full HD – 1920×1080 px boʻlishi kerak. toʻplam12.FHD (1920×1080)
+toʻplam13.Mat.karta  (22×27)
+ATX/EATXtoʻplam14.Kompyuter klaviaturasi oʻlchami 445x136-mm, ergonomikdona15.Kompyuter sichqonchasi oʻlchami 101-mm 75-mm, optikdona1
+15. GAME DESIGN  OʻRGATISH UCHUN ZARUR BOʻLADIGAN XOM ASHYOLAR ROʻYXATI
+T/r 
+Xom ashyo va materiallar nomi 
+Oʻlchov birligi
+Bir oʻquvchi uchun belgilangan miqdor 
+1.
+Monitor (uzunligi toʻgʻridan — toʻgʻri 1920 pixels 1080 pixels)
+dona
+1
+2.
+FHD-1920X1080
+dona
+1
+3.
+Protsessor (Intel i3/i5 yoki AMD Ryzen 3/5) 
+dona
+1
+4.
+Kompyuter klaviaturasi (445-mm 136-mm)
+dona
+1
+5.
+Kompyuter sichqonchasi (101-mm 75-mm)
+dona
+1
+
+16. KASBIY TAʼLIM USTASI LAVOZIMIGA QOʻYILADIGAN TALABLAR
+T/r
+Lavozim nomi
+Ta’lim darajasi
+Malakaviy talablar
+Ish darajasi va shaxsiy sifatlari
+1.
+
+
+Informatika va axborot texnonologiya-lari, dasturlash yo‘nalishi bo‘yicha mentor
+O‘rta maxsus 
+yoki oliy ma’lumot
+
+
+Mutaxassisli-giga talab qo‘yilmaydi
+Raqamli texnologiyalar, dasturlash bo‘yicha chuqur bilim va zamonaviy ko‘nikmalarga ega; mazkur yo‘nalish bo‘yicha kamida 2 yil ishlash tajribasiga ega (mehnat daftarchasi yoki ma’lumotnoma asosida); taqdim etilgan o‘quv reja va dasturlar asosida darslarni tashkillashtirish, shuningdek, ularni o‘quvchilarning darajasi, qiziqishi va talablariga ko‘ra  moslashtira olish ko‘nikmasi; ijodkorlik, jamoa bilan ishlash, moslashuvchanlik, tashkilotchilik, muloqot ko‘nikmalariga ega.
+
+Lavozim vazifalari:
+biriktirilgan guruhlarda Game Design, 2D/3D grafika, prototiplash va o‘yin loyihalari bo‘yicha amaliy mashg‘ulotlarni tashkil etish va nazorat qilish; 
+kompyuter sinflarini, dasturiy vositalari va o‘quv materiallarini amaliy mashg‘ulotga tayyorlash;  
+o‘yin yaratish jarayoni uchun kerak bo‘lgan grafik materiallar, audio fayllar va 3D modellarni tayyorlash, ularni sahnaga joylashtirish va ishlatilishini nazorat qilish
+o‘quvchilarning interaktiv loyiha va prototiplar yaratish ko‘nikmalarini shakllantirish. Oraliq va yakuniy amaliy imtihonlar, demo-proektlar uchun tayyorlash; 
+kompyuter jihozlari, dasturiy vositalar va o‘quv materiallaridan ehtiyotkorlik bilan foydalanish, laboratoriya va sinf texnik xavfsizligini ta’minlash;
+tanlab olingan kasb-hunarni egallash jarayonida о‘quvchilarning kasbiy layoqat, kо‘nikma va malakalarini shakllantirish;
+kasb-hunarga tayyorlash tizimi va mazmunini jamiyat ehtiyojlaridan, fan, madaniyat va zamonaviy innovatsion texnika yutuqlaridan kelib chiqqan holda takomillashtirish;
+kompyuter sinflari va laboratoriya jihozlarini tartibga solish, yong‘in xavfsizligi va mehnatni muhofaza qilish qoidalarini bajarilishini ta’minlash. 
+Bilishi kerak:
+Taʼlimga oid О‘zbekiston Respublikasi qonunlarini, kasbiy va amaliy faoliyatga tegishli masalalar bо‘yicha meʼyoriy va uslubiy hujjatlarni, mehnat qonunchiligi, mehnat muhofazasining qoidalari va meʼyorlarini, xavfsizlik texnikasi qoidalarini.
+Malaka talablari: 
+Pedagogik, muhandis-pedagogik yoki biriktirilgan guruh tayyorlov yо‘nalishiga mos ravishda kamida oʻrta maxsus maʼlumotga ega boʻlishi kerak. 
+
+
+
+17. 9-SINF OʻQUVCHILARIGA QOʻYILGAN UMUMIY MALAKA TALABLARI
+Bilim
+O‘yin dvijoklarini o‘rnatish va ularning interfeysi bilan tanishish. 3D va 2D obyektlar ni yaratish, ularni sahnaga joylashtirish va boshqarish. Blender, Photoshop, Unity dasturlari haqida tushunchalarga ega bo‘lish.
+O‘yin muhitini yaratish. Interaktiv obyektlar qo‘shish orqali o‘yinchi tajribasini boyitish. O‘yin mexanikalari. UI dizayn va UX asoslari: menyu, tugmalar, o‘yinchi qulayligi. O‘yin loyihasini tayyorlash va yakuniy taqdimot qilish qoidalari bilimlariga ega boʻlishi kerak.   
+Koʻnikma
+Oddiy 3D obyektlar yaratish va ularga o‘lcham berish, joylashtirish va aylantirish. O‘yin qahramoni, uy, daraxt yoki mebel kabi modellar yasash. Material va yorug‘lik bilan ishlash. Animatsiya. UI va UX bilan ishlash. O‘yin dvijoklari bilan ishlash haqida amaliy ko‘nikmalarga ega bo‘ladi.
+
+Kompetensiya
+UI va UX design, 2D va 3D modellashtirish, materiallar qo‘llash va kamera bilan ishlash, animatsiya qilish, game designda qanday qurilma vositalarida foydalanish, ishlatish, joylashtirish, maxsus effektlar bilan ishlash kompetensiyalariga ega boʻlishi kerak.
+
+18. FOYDALANILGAN ADABIYOTLAR VA ELEKTRON  MANBALAR ROʻYXATI
+Foydalanilgan adabiyotlar roʻyxati.
+Adobe Photoshop CC. Официальный учебный курс - М.: Эксмо, 2021. - 456 c.
+Мария Серова, Учебник-самоучитель по трехмерной графике в Blender 3D. Моделирование, дизайн, анимация, спецэффекты, 2021, 270 стр.
+Game Design Workshop: A Playcentric Approach to Creating Innovative Games — Tracy Fullerton, 2004.
+ 
+Elektron manbalar.
+	1  HYPERLINK "https://godotengine.org/asset-library/asset" https://godotengine.org/asset-library/asset   
+2.  HYPERLINK "https://www.youtube.com/watch?v=U2eOc18gOOg" https://www.youtube.com/watch?v=U2eOc18gOOg 
+3.  HYPERLINK "https://ru.wikipedia.org/wiki" https://ru.wikipedia.org/wiki 
+4.  HYPERLINK "https://book.leveldesignbook.com/introduction" https://book.leveldesignbook.com/introduction  
+5.  HYPERLINK "https://www.qollanmalar.uz" https://www.qollanmalar.uz 
+
+
+
+
+
+
+
+
+PAGE   \* MERGEFORMAT10
+
+
+
+

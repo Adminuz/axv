@@ -1,0 +1,928 @@
+OʻZBEKISTON RESPUBLIKASI  RAQAMLI TEXNOLOGIYALAR VAZIRLIGI
+	
+RAQAMLI TA’LIMNI RIVOJLANTIRISH
+
+“MUHAMMAD AL-XORAZMIY VORISLARI” TIZIMI ASOSIDA TASHKIL ETILADIGAN MAXSUS GURUHLAR UCHUN 
+ANDROID DASTURLASH YO‘NALISHI BO‘YICHA O‘QUV DASTURI
+(9-SINFLAR UCHUN)
+	
+
+
+
+
+
+
+
+
+
+
+
+
+Toshkent – 2025
+
+
+MUNDARIJA
+ TOC \o "1-3" \h \z \u  HYPERLINK \l "_Toc207718330" 1. Dasturda qoʻllanilgan tayanch atamalar	 PAGEREF _Toc207718330 \h 3
+ HYPERLINK \l "_Toc207718331" 2. Normativ-huquqiy hujjatlar	 PAGEREF _Toc207718331 \h 5
+ HYPERLINK \l "_Toc207718332" 3. Android dasturlash kasbining tayanch oʻquv rejasi	 PAGEREF _Toc207718332 \h 6
+ HYPERLINK \l "_Toc207718333" 4. Android dasturlash kasbiga tayyorlashning muddati	 PAGEREF _Toc207718333 \h 7
+ HYPERLINK \l "_Toc207718334" 5. Android dasturlash kasbi oʻquv mavzu rejasi	 PAGEREF _Toc207718334 \h 8
+ HYPERLINK \l "_Toc207718335" 6. Android dasturlash kasbi oʻquv dasturi	 PAGEREF _Toc207718335 \h 10
+ HYPERLINK \l "_Toc207718336" 7. Android dasturlash yo‘nalishi boʻyicha oʻtiladigan dars soatlari	 PAGEREF _Toc207718336 \h 12
+ HYPERLINK \l "_Toc207718338" 8. Oʻquv jarayonini tashkil etishda oʻqitish metodlari, shakllari va vositalari	 PAGEREF _Toc207718338 \h 16
+ HYPERLINK \l "_Toc207718339" 9. Baholash mezonlari	 PAGEREF _Toc207718339 \h 17
+ HYPERLINK \l "_Toc207718340" 10. Android dasturlash kasbi tavsifi	 PAGEREF _Toc207718340 \h 20
+ HYPERLINK \l "_Toc207718341" 10.1. Bitiruvchining kasbiy faoliyati sohalari:	 PAGEREF _Toc207718341 \h 20
+ HYPERLINK \l "_Toc207718342" 10.2. Bitiruvchining kasbiga muvofiq kasbiy faoliyat obyektlari:	 PAGEREF _Toc207718342 \h 20
+ HYPERLINK \l "_Toc207718343" 10.3. Android dasturlash kasbiy faoliyat turlari:	 PAGEREF _Toc207718343 \h 20
+ HYPERLINK \l "_Toc207718344" 10.4. Android dasturlash:	 PAGEREF _Toc207718344 \h 20
+ HYPERLINK \l "_Toc207718345" 11. Kasbning qoʻllanish sohasi	 PAGEREF _Toc207718345 \h 21
+ HYPERLINK \l "_Toc207718346" 12. Android dasturlash xonasi uchun qoʻyiladigan umumiy talablar	 PAGEREF _Toc207718346 \h 22
+ HYPERLINK \l "_Toc207718347" 13. Android dasturlash kasbiga oʻqitish xonasini jihozlashga qoʻyilgan talablar	 PAGEREF _Toc207718347 \h 23
+ HYPERLINK \l "_Toc207718348" 14. Android dasturlash kasbiga oʻrgatish uchun zarur boʻladigan xom ashyolar roʻyxati	 PAGEREF _Toc207718348 \h 24
+ HYPERLINK \l "_Toc207718349" 15. Kasbiy taʼlim ustasi lavozimiga qoʻyiladigan talablar	 PAGEREF _Toc207718349 \h 25
+ HYPERLINK \l "_Toc207718350" 16. 9-sinf oʻquvchilariga qoʻyilgan umumiy malaka talablari	 PAGEREF _Toc207718350 \h 26
+ HYPERLINK \l "_Toc207718351" 17. Foydalanilgan adabiyotlar va elektron  manbalar roʻyxati	 PAGEREF _Toc207718351 \h 27
+
+
+
+1. DASTURDA QOʻLLANILGAN TAYANCH ATAMALAR           
+Kasb – Android dasturlash bo‘yicha nazariy bilimlar, amaliy ko‘nikma va malakalarni egallab, mobil ilovalarni ishlab chiqish, sinovdan o‘tkazish va nashr qilishga qodir mutaxassislik faoliyatini amalga oshirish uchun zarur tayyorgarlikka ega bo‘lgan mehnat faoliyati turi.
+Ko‘nikma – Android Studio, IntelliJ IDEA, Java yoki Kotlin tillarida dastur yozish, interfeys yaratish (XML yoki Jetpack Compose orqali), ma’lumotlar bazasi (SQLite, Firebase Firestore) bilan ishlash, ilovani testlash va nashr qilishni o‘z ichiga olgan amaliy faoliyatni bajarish qobiliyati.
+Bilim – Android operatsion tizimi, Java/Kotlin dasturlash tillari sintaksisi, ma’lumotlar tuzilmalari, foydalanuvchi interfeysi (UI) elementlari, tarmoq texnologiyalari (Retrofit, Volley, OkHttp) hamda Firebase xizmatlari haqidagi nazariy ma’lumotlarni o‘zlashtirish va tushuntirish imkoniyati.
+Kompetensiya – Dasturchilik jarayonida olingan bilim va ko‘nikmalarni amaliy loyihalarda qo‘llash, muammoli vaziyatlarni tahlil qilish, texnik yechimlarni ishlab chiqish hamda dasturiy mahsulotni foydalanuvchiga qulay shaklda yaratish qobiliyati.
+Kasbiy faoliyat sohasi – Mobil dasturlash, axborot texnologiyalari, dasturiy ta’minot ishlab chiqish, foydalanuvchi interfeysi loyihalash va ma’lumotlar bazasi bilan ishlash yo‘nalishlarini qamrab oladi.
+Kasbiy faoliyat obyekti – Mobil ilovalar, foydalanuvchi interfeyslari, ma’lumotlar bazalari, tarmoq orqali ma’lumot almashish tizimlari, dasturiy kod va foydalanuvchi tajribasi (UX).
+Kasbiy faoliyat turi – Android platformasi uchun dasturiy ta’minot yaratish, texnik sinovdan o‘tkazish, dizayn va texnik hujjatlarni ishlab chiqish, Firebase va Google Play Console orqali ilovani joylashtirish faoliyatlari majmui.
+O‘quv rejasi – “Android dasturlash” fani bo‘yicha o‘quv mashg‘ulotlari tarkibi, ularni o‘rganish ketma-ketligi, amaliy mashg‘ulotlar, oraliq va yakuniy nazorat ishlarining umumiy hajmi va mazmunini belgilovchi hujjat.
+O‘quv amaliyoti – Android Studio muhitida loyihalar yaratish, Java yoki Kotlin dasturlari yozish, XML interfeys chizish, ma’lumotlar bazasi bilan ishlash, ilovani testlash va xatoliklarni tuzatish jarayonlari.
+Kasbga tayyorlash o‘quv kursi – 9-sinf o‘quvchilari uchun mo‘ljallangan, mobil dasturlashning zamonaviy vositalarini (Android Studio, Firebase, Retrofit, Firestore, Google Play Console) o‘rgatuvchi amaliy yo‘nalishdagi darslar majmuasi.
+Ta’lim dasturi – “Android dasturlash” fanining maqsadi, mazmuni, o‘quv natijalari, tashkiliy-pedagogik shart-sharoitlari hamda nazorat va baholash tartibini belgilovchi me’yoriy-uslubiy hujjat.
+Android Studio muhiti – Android ilovalarini ishlab chiqish uchun mo‘ljallangan integratsiyalashgan dasturlash muhiti (IDE) bo‘lib, u Java, Kotlin, XML, Compose, Gradle va Emulator vositalarini o‘z ichiga oladi.
+XML (Extensible Markup Language) – Android ilovalarida foydalanuvchi interfeysining (UI) tuzilmasini yaratish uchun ishlatiladigan belgilash tili.
+Retrofit, Volley, OkHttp – Internet orqali ma’lumot almashish (API so‘rovlar) uchun qo‘llaniladigan Android kutubxonalari.
+Firebase – Google tomonidan yaratilgan mobil platforma bo‘lib, u autentifikatsiya (login/ro‘yxatdan o‘tish), ma’lumotlar bazasi (Firestore, Realtime DB), bildirishnomalar va tahlil xizmatlarini taqdim etadi.
+Google Play Console – Dasturchilar uchun yaratilgan xizmat bo‘lib, unda Android ilovalari sinovdan o‘tkazilib, Play Market’da nashr qilinadi.
+Android Emulator – Android qurilmasining virtual nusxasi bo‘lib, dasturchilarga ilovalarni kompyuterda testlash imkonini beradi.3. ANDROID DASTURlASH KASBINING TAYANCH OʻQUV REJASI
+T/r
+Tayanch oʻquv reja tarkibi
+Mashg‘ulotlar soni
+Umumiy yuklamaga
+nisbatan foiz hisobida
+I.
+Oʻquv maʼruzasi
+38
+37,2
+II.
+Oʻquv amaliyoti
+59
+57,8
+III.
+Oraliq nazorat ishi (Loyiha ishi)
+4
+3,9
+IV.
+Yakuniy nazorat ishi
+1
+1
+Jami:
+102
+100
+
+
+4. ANDROID DASTURLASH KASBIGA TAYYORLASHNING MUDDATI
+Kasb nomi
+Android dasturlash
+Kasbga tayyorlashning meʼyoriy muddati
+9-sinflarda haftasiga 80 daqiqadan 3 ta dars 
+1 oʻquv yili davomida
+
+
+Sinf
+Oʻquv chorak
+Haftalar soni
+Mashg‘ulotlar soni
+9
+I
+12
+36
+II
+7
+21
+III
+8
+24
+IV
+7
+21
+Jami
+34 hafta
+102
+
+Tushuntirish xati
+
+1. Umumiy oʻrta taʼlim tashkilotlarida oʻquv yilining 2 - sentabridan kelgusi yilning 25-mayigacha boʻlgan davrda toʻrt chorakka boʻlingan holda tashkil etiladi.
+2. Oʻquv yilining davomiyligi - 34 hafta:
+haftasiga 3 marta belgilangan soatlar doirasidan chiqmagan holda oʻqish tashkil etiladi;
+mashgʻulotning davomiyligi  1 soat 20 daqiqani tashkil etadi;
+mashgʻulotlar oraligʻidagi tanaffusning davomiyligi 5 - 10 daqiqa. 
+3. Oraliq va Yakuniy nazoratlar nazariy yoki koʻrgazmali amaliy imtihon shaklida tasdiqlangan baholash mezonlari asosida oʻtkaziladi.
+
+5. ANDROID DASTURLASH KASBI OʻQUV MAVZU REJASI
+T/r
+Mavzu
+Ajratilgan mashg‘ulotlar soni
+shundan
+Nazariy
+Amaliy
+Nazorat ishi
+I-BOB. Android muhiti va dasturlash asoslari1064
+
+1
+Android nima va uning rivojlanish tarixi
+1
+1
+0
+
+2
+Android tizimi va arxitekturasi
+1
+1
+0
+
+3
+Androidning imkoniyatlari va qo‘llanilish sohalari
+1
+1
+0
+
+4
+Android ekotizimi va Google xizmatlari
+2
+1
+1
+
+5
+Android Studio va Android SDK bilan tanishuv
+3
+1
+2
+
+6
+Simulyator va Emulator haqida tushuncha
+2
+1
+1
+
+II-BOB. Java va Kotlin dasturlash asoslari1679
+
+7
+Kotlin sintaksisi: o‘zgaruvchilar, shartlar, sikllar
+3
+1
+2
+
+8
+Funksiyalar va sinflar
+2
+1
+1
+
+9
+Kotlinda ma’lumot turlari, list va maplar
+2
+1
+1
+
+10
+Kotlinda obyektga yo‘naltirilgan dasturlash (OOP) bilan tanishish
+5
+2
+3
+
+11
+Null-safety va xavfsiz ma’lumotlar bilan ishlash
+2
+1
+1
+
+12
+Exception va logcat orqali xatolarni tahlil qilish
+2
+1
+1
+
+III-BOB. Jetpack Compose va interfeys yaratish19612
+1
+13
+XML va Jetpack Compose asoslari
+3
+1
+2
+
+14
+Layoutlar: Column, Row, Box, LazyColumn
+3
+1
+2
+
+15
+Asosiy UI elementlari: Button, TextField, Image, Card , Oraliq Nazorat
+4
+1
+2
+1
+16
+Rasm va ikonlar bilan ishlash, Material3 komponentlari
+3
+1
+2
+
+17
+Snackbar, Dialog va BottomSheet yaratish
+3
+1
+2
+
+18
+Foydalanuvchi interfeysi holatini boshqarish 
+3
+1
+2
+
+IV-BOB. Activity, Intent va Fragmentlar1669
+1
+19
+Activity va Lifecycle
+3
+1
+2
+
+20
+Intentlar orqali ma’lumot uzatish
+3
+1
+2
+
+21
+Fragmentlar bilan ishlash va NavHostController
+3
+1
+2
+
+22
+BottomNavigation va Toolbar yaratish, Oraliq Nazorat
+3
+1
+1
+1
+23
+Ekranlar o‘rtasidagi ma’lumot uzatish (Bundle, SafeArgs)
+4
+2
+2
+
+V-BOB. Ma’lumotlar bilan ishlash1569
+
+24
+SharedPreferences bilan ishlash
+3
+1
+2
+
+25
+SQLite va Room kutubxonasi bilan ishlash
+4
+2
+2
+
+26
+CRUD amallarini yozish
+3
+1
+2
+
+27
+Ma’lumotlarni saralash va filtrlash
+3
+1
+2
+
+28
+Fayl va MediaStore bilan ishlash
+2
+1
+1
+
+VI-BOB. Hisoblash va tahlil1678
+1
+29
+Jetpack Compose’da grafik elementlar, Oraliq Nazorat
+2
+1
+1
+
+30
+ViewModel va LiveData bilan hisoblash logikasi, , Oraliq Nazorat
+3
+1
+1
+1
+31
+Retrofit orqali API’dan kurslarni olish (valyuta yoki ob-havo)
+4
+2
+2
+
+32
+JSON parsing (Gson, Moshi)
+4
+2
+2
+
+33
+Hisobotlarni Excelga eksport qilish (CSV yoki PDF)
+3
+1
+2
+
+VII-BOB. Dizayn, testlash va yakuniy loyiha1034
+2
+34
+
+
+Git va versiya nazorati asoslari
+
+
+3
+1
+2
+
+35
+Loyiha kodini yakunlash, ma’lumotlar sinxronligi
+3
+1
+2
+
+36
+APK fayl yaratish va ilovani testlash, , Oraliq Nazorat
+3
+1
+1
+1
+37
+Yakuniy nazorat ishi
+1
+
+
+1
+JAMI:10238595
+
+6. ANDROID DASTURLASH KASBI OʻQUV DASTURI
+I-BOB. Android muhiti va dasturlash asoslari
+Android nima va uning rivojlanish tarixi: Mobil operatsion tizimlarning rivojlanishi, Android tizimining paydo bo‘lishi, Google tomonidan Android’ning egallanishi, versiyalar tarixi (Cupcake’dan Android 14 gacha), hozirgi zamon mobil tizimlar ichida Android’ning o‘rni. Android tizimi va arxitekturasi: Android arxitektura qatlamlari, Linux yadrosi (Kernel), Android Runtime (ART) va kutubxonalar, Framework va Application qatlamlari, APK tuzilmasi. Androidning imkoniyatlari va qo‘llanilish sohalari: Smartfon va planshetlar uchun imkoniyatlar, IoT qurilmalarda Android, avtomobil va soat tizimlarida Android (Android Auto, WearOS), o‘yin va biznes ilovalar uchun imkoniyatlar, Androidning ochiq manba (open source) afzalliklari. Android ekotizimi va Google xizmatlari: Google Play ekotizimi, Google API’lar (Maps, Drive, Firebase), Google Play Services roli, Google Cloud bilan integratsiya, Android Developer Account va Play Console. Android Studio va Android SDK bilan tanishuv: Android Studio interfeysi, SDK Manager va AVD Manager, emulyator sozlamalari, loyiha tuzilmasi (Gradle, Manifest, res, java), ilovani ishga tushirish va sinovdan o‘tkazish. Simulyator va Emulator haqida tushuncha: Simulyator va emulyator farqi, AVD (Android Virtual Device) yaratish, qurilma konfiguratsiyasi, emulyator tezligini oshirish usullari, real qurilmada testlash.
+II-BOB. Java va Kotlin dasturlash asoslari
+Kotlin sintaksisi: o‘zgaruvchilar, shartlar, sikllar: Kotlin dastur tuzilmasi, o‘zgaruvchilar (val, var), shart operatorlari (if, when), sikllar (for, while, do-while), foydalanuvchi kiritmasi va natija chiqarish. Funksiyalar va sinflar, obyektlar bilan ishlash: Funksiya yaratish va chaqirish, parametrlar va qaytarilgan qiymatlar, sinflar va obyektlar tushunchasi, konstruktorlar va metodlar, nasl olish (inheritance). Kotlin’da ma’lumot turlari, list va maplar: Asosiy ma’lumot turlari (Int, String, Boolean), list bilan ishlash, mutable va immutable listlar farqi, map va set bilan ishlash, lambda ifodalar va kolleksiyalarni filtrlash. Kotlinda obyektga yonaltirilgan dasturlash (OOP) bilan tanishish :OOP asoslari: obyekt va klass tushunchasi, Konstruktorlar va obyekt yaratish jarayoni, Xususiyatlar (properties) va metodlar, Inkapsulyatsiya va ko‘rinish modifikatorlari, Kotlinda meros olish, open class, override metodlar, super klassga murojaat, Polimorfizm va metodlarni qayta aniqlash, Abstract klasslar, interface yaratish, bir nechta interface’dan foydalanish imkoniyati, Data klasslar, singleton obyektlar, companion object orqali statik-like maydonlar. Null-safety va xavfsiz ma’lumotlar bilan ishlash: Null qiymat tushunchasi, ? va !! operatorlari, let, apply, also funksiyalari, nullable turlarni tekshirish, xatolarni oldini olish usullari. Exception va logcat orqali xatolarni tahlil qilish: Exception turlari, try, catch, finally bloklari, throw operatori, Logcat orqali xatolarni kuzatish, debug rejimida ishlash.
+III-BOB. Jetpack Compose va interfeys yaratish
+XML va Jetpack Compose asoslari: XML interfeysi tuzilmasi, Jetpack Compose kirish, Composable funksiyalar, preview va hot reload, XML va Compose farqlari. Layoutlar: Column va Row joylashuvi, Box orqali ustma-ust elementlar, scrollable ro‘yxatlar (LazyColumn, LazyRow), modifier parametrlari, padding va alignment. Asosiy UI elementlari: Button turlari va eventlar, Text va TextField bilan ishlash, Image joylash, Card komponenti, IconButton va matn bilan ikon integratsiyasi. Rasm va ikonlar bilan ishlash, Material3 komponentlari: Rasm manbalari (drawable, URL), vector asset va ikon kutubxonalari, Material3 dizayn prinsiplari, temalar va ranglar, tipografika bilan ishlash. Snackbar, Dialog va BottomSheet yaratish: Snackbar xabarnomalari, AlertDialog oynasi, BottomSheet interfeysi, modal va persistent turlari, foydalanuvchi javobiga asoslangan xatti-harakatlar. Foydalanuvchi interfeysi holatini boshqarish: remember va mutableStateOf, state hoisting tushunchasi, UI holatini saqlash, ViewModel bilan integratsiya, LiveData va Flow bilan sinxronlash.
+IV-BOB. Activity, Intent va Fragmentlar
+Activity va Lifecycle: Activity tushunchasi, lifecycle bosqichlari (onCreate, onStart, onResume, onPause, onStop, onDestroy), holatni saqlash (onSaveInstanceState), Log.d orqali bosqichlarni kuzatish, Activity’lar o‘rtasidagi aloqani tushunish. Intentlar orqali ma’lumot uzatish: Explicit va implicit intentlar, startActivity va putExtra metodlari, getIntent() orqali ma’lumot olish, Intent orqali qo‘ng‘iroq, SMS, kamera chaqirish, Activity natijalarini qaytarish (startActivityForResult). Fragmentlar bilan ishlash va NavHostController: Fragment tushunchasi, Fragment lifecycle, FragmentManager va FragmentTransaction, Jetpack Navigation Component bilan boshqaruv, NavHostController yordamida ekranni almashtirish. BottomNavigation va Toolbar yaratish: Toolbar yaratish va sozlash, menyu qo‘shish (menu.xml), BottomNavigationView bilan sahifalarni boshqarish, ikon va matn integratsiyasi, AppBar va Navigation kombinatsiyasi. Ekranlar o‘rtasida ma’lumot uzatish: Bundle orqali ma’lumot yuborish, SafeArgs kutubxonasi bilan xavfsiz uzatish, ViewModel orqali umumiy ma’lumotni bo‘lishish, Parcelable interfeysi, LiveData yordamida real vaqt sinxronlash.
+V-BOB. Ma’lumotlar bilan ishlash
+SharedPreferences bilan ishlash: Ma’lumotni saqlash va olish (getSharedPreferences), putString, putInt funksiyalari, apply() va commit() farqi, foydalanuvchi sozlamalarini saqlash, avto-login misoli. SQLite va Room kutubxonasi bilan ishlash: SQLite ma’lumotlar bazasi asoslari, jadval yaratish va so‘rovlar (CREATE, INSERT, UPDATE, DELETE), Room arxitekturasi (Entity, DAO, Database), @Query va @Insert annotatsiyalari, LiveData bilan sinxronlash. CRUD amallarini yozish: Create, Read, Update, Delete funksiyalarining amaliy tahlili, RecyclerView orqali ma’lumotlarni chiqarish, foydalanuvchi interfeysidan yozish va tahrirlash, Room bilan MVVM integratsiyasi, xatolarni loglash. Ma’lumotlarni saralash va filtrlash: ORDER BY va WHERE shartlari, foydalanuvchi kiritmasi asosida filtrlash, LIKE operatori, Kotlin’da filter va sortBy funksiyalari, real vaqt filtrlash interfeysi yaratish. Fayl va MediaStore bilan ishlash: Ichki va tashqi xotira farqi, fayl yozish va o‘qish (FileOutputStream, FileInputStream), rasm va video saqlash, MediaStore API, ruxsatlar (READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE).
+VI-BOB. Hisoblash va tahlil
+Jetpack Compose’da grafik elementlar: Grafik komponentlar bilan ishlash (Canvas, DrawScope), chizish amaliyoti (chiziq, aylana, matn), animatsiyalar qo‘shish, real vaqt statistik grafiklar yaratish, interaktiv diagrammalar. ViewModel va LiveData bilan hisoblash logikasi: ViewModel arxitekturasi, LiveData bilan ma’lumot kuzatish, hisob-kitob natijalarini saqlash, foydalanuvchi harakatlariga asoslangan hisoblashlar, holatni saqlash va tiklash. Retrofit orqali API’dan kurslarni olish: Retrofit kutubxonasini sozlash, interfeys yaratish (@GET, @POST), valyuta yoki ob-havo API’dan ma’lumot olish, Coroutines yordamida asinxron so‘rovlar, natijani UI’da ko‘rsatish. JSON parsing (Gson, Moshi): JSON format tushunchasi, Gson va Moshi bilan parsing, model klass yaratish, massiv va obyektlarni ajratish, parsing xatolarini tahlil qilish. Hisobotlarni Excelga eksport qilish (CSV yoki PDF): CSV fayl yaratish va yozish, FileWriter yordamida eksport qilish, PDF yaratish (iText, ReportLab kutubxonalari), foydalanuvchi ma’lumotlarini eksport qilish amaliyoti, fayl yuklab olish.
+VII-BOB. Dizayn, testlash va yakuniy loyiha
+Git va versiya nazorati asoslari : Versiya nazorati nima va nima uchun kerak? Gitning ishlash tamoyili va asosiy terminlar, Git o‘rnatish va lokal repository yaratish, Commit jarayoni: o‘zgarishlarni saqlash, Branchlar bilan ishlash va tarmoqlanish, GitHub bilan tanishish va remote repository, Konfliktlar (merge conflicts) va ularni hal qilish, Amaliy Git jarayonlari: klonlash, forking, pull request. Loyiha kodini yakunlash va optimallashtirish: Kodni tozalash (refactoring), resurslarni birlashtirish, takroriy kodni kamaytirish, arxitektura barqarorligini tekshirish, ProGuard yordamida kodni himoyalash. Ma’lumotlar sinxronligi: Offline va online rejimda ma’lumotlar sinxronlash, Room + Retrofit kombinatsiyasi, Firebase Firestore bilan sinxronlash, real vaqt yangilanishi, foydalanuvchi profil ma’lumotlarini yangilash. APK fayl yaratish va ilovani testlash: Build variantlari (debug, release), imzo qo‘yish (keyStore), APK va Android App Bundle (AAB) formatlari, ilovani qurilmada o‘rnatish, test sinovlari va xatoliklarni bartaraf etish. Yakuniy loyiha tahlili va taqdimoti: Loyiha hujjatlarini tayyorlash (README, texnik tavsif), foydalanuvchi qo‘llanmasi, videoprezentatsiya, loyiha himoyasiga tayyorgarlik, natijalarni baholash mezonlari.
+
+
+
+
+7. ANDROID DASTURLASH YO‘NALISHI BOʻYICHA OʻTILADIGAN DARS SOATLARI
+T/r
+Mavzular
+I-CHORAK
+
+
+
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta8-hafta9-hafta10-hafta11-hafta12-haftaAndroid nima va uning rivojlanish tarixi1Android tizimi va arxitekturasi1Androidning imkoniyatlari va qo‘llanilish sohalari1Android ekotizimi va Google xizmatlari2Android Studio va Android SDK bilan tanishuv12Simulyator va Emulator haqida tushuncha11Kotlin sintaksisi: o‘zgaruvchilar, shartlar, sikllar21Funksiyalar bilan ishlash.2Kotlinda obyektga yonaltirilgan dasturlash (OOP) bilan tanishish32Kotlin’da ma’lumot turlari, list va maplar11Null-safety va xavfsiz ma’lumotlar bilan ishlash2Exception va logcat orqali xatolarni tahlil qilish  2XML va Jetpack Compose asoslari12Layoutlar: Column, Row, Box, LazyColumn12Asosiy UI elementlari: Button, TextField, Image, Card, Oraliq Nazorat13
+
+T/r
+Mavzular
+II-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta1Rasm va ikonlar bilan ishlash, Material3 komponentlari32Snackbar, Dialog va BottomSheet yaratish33Foydalanuvchi interfeysi holatini boshqarish 34Activity va Lifecycle, Oraliq Nazorat35Intentlar orqali ma’lumot uzatish36Fragmentlar bilan ishlash va NavHostController37BottomNavigation va Toolbar yaratish3
+T/r
+Mavzular
+III-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta8-hafta1Ekranlar o‘rtasidagi ma’lumot uzatish (Bundle, SafeArgs)312SharedPreferences bilan ishlash213SQLite va Room kutubxonasi bilan ishlash224CRUD amallarini yozish125Ma’lumotlarni saralash va filtrlash126Fayl va MediaStore bilan ishlash117Jetpack Compose’da grafik elementlar, Oraliq Nazorat28ViewModel va LiveData bilan hisoblash logikasi, , Oraliq Nazorat3
+
+T/r
+Mavzular
+IV-CHORAK
+1-hafta2-hafta3-hafta4-hafta5-hafta6-hafta7-hafta3Retrofit orqali API’dan kurslarni olish (valyuta yoki ob-havo)314JSON parsing (Gson, Moshi)225Hisobotlarni Excelga eksport qilish (CSV yoki PDF)126
+
+Dizaynda foydalanuvchi tajribasini (UX) baholash
+
+127Loyiha kodini yakunlash, ma’lumotlar sinxronligi128APK fayl yaratish va ilovani testlash, Yakuniy nazorat ishi (loyiha himoyasi)138. OʻQUV JARAYONINI TASHKIL ETISHDA OʻQITISH METODLARI, SHAKLLARI VA VOSITALARI
+Oʻqitish metodlari - ogʻzaki, koʻrgazmali, amaliy, muammoli-izlanish, mustaqil ishlash va shu kabilar.
+Oʻqitish shakllari
+
+Nazariy
+Amaliy
+Umumiy
+maʼruza;
+ekskursiya (sayohat);
+mustaqil ishlar;
+maslahat olish va shu kabilar.
+amaliy mashgʻulotlar;
+mustaqil uy ishi;
+didaktik, ishchan va rolli oʻyinlar;
+tajriba-konstruktorlik faoliyati, treninglar;
+sayohatlar, olimpiadalar va koʻrik-tanlovlar.
+ommaviy;
+jamoaviy;
+guruhli;
+kichik guruhli;
+juftli;
+yakka tartibda.
+Oʻqitish vositalari
+
+Oʻqitish vositalari
+(oddiy va murakkab)
+Oʻquv qurollari va koʻrgazmali qurollar
+darsliklar, oʻquv qoʻllanmalari;
+metodik qoʻllanmalar;
+maʼlumotnomalar;
+maxsus adabiyotlar;
+metodik tavsiyalar;
+ensiklopediyalar;
+jadval va plakat;
+mulyaj va modellar.
+Axborot materiallari va dasturiy taʼminot
+kompyuter;
+amaliy topshiriqlar;
+kasbiy koʻnikma va malakaviy dastur;
+testlar, nazorat topshiriqlari va boshqalar.
+
+
+
+9. BAHOLASH MEZONLARI
+	Oʻquvchilarning kasbga oid bilim, koʻnikma, malaka va kompetensiyalarini baholash va nazorat qilish maqsadida quyidagi nazorat turlari amalga oshiriladi:
+joriy nazorat - soʻrovlar, bajarilgan loyiha ishlarini izohlash tarzida oʻquvchilarning bilimlari, koʻnikma va malakalari muntazam nazorat qilinadi.
+oraliq nazorat - chorak tamom boʻlganda va oʻquv dasturining tegishli boʻlimi tugallangandan keyin oʻquvchilarning bilimlari, koʻnikma va malakalarini baholash uchun amalga oshiriladi. U amaliy, yozma nazorat ishi yoki testlar shaklida oʻtkaziladi. Ushbu nazoratda foydalaniladigan materiallar Android dasturlash kasbi boʻyicha kasbiy taʼlim ustasi tomonidan tayyorlanadi. Oraliq nazorat har chorak yakunida o‘tkaziladi va nazorat ishlarining miqdori va mavzulari oʻquv dasturiga asoslangan rejada belgilanadi hamda muddati va shakli koʻrsatiladi.
+yakuniy nazorat - oʻquv yili tamom boʻlgandan keyin ogʻzaki va amaliy ish koʻrinishida imtihon shaklida amalga oshiriladi. Uning asosida reyting aniqlanadi va oʻquvchini navbatdagi sinfga oʻtkazish toʻgʻrisida qaror qabul qilinadi. Yakuniy nazorat materiallari kasbiy taʼlim ustasi tomonidan oʻquv dasturi asosida tayyorlanadi va ularni amaliy fanlar uslubiy birlashmasi muhokamasidan oʻtkaziladi. Umumiy oʻrta taʼlim muassasalari bitiruvchilari uchun choraklik baholar asosida yillik baho, shuningdek, yakuniy nazoratda olingan baho va yillik baho asosida yakuniy baho aniqlanadi.
+Kasbiy taʼlim yoʻnalishi boʻyicha yakuniy nazorat imtihonlarini oʻtkazish tartibi quyidagilardan iborat:
+Kasbiy taʼlim yoʻnalishi boʻyicha oʻquv reja va dasturning barcha talablarini toʻliq bajargan bitiruvchiga maktab direktorining buyrugʻiga asosan amaliy yakuniy nazoratni topshirishga ruxsat beriladi.
+Yakuniy nazorat oʻtkazish jadvali, u oʻtkaziladigan kunlar koʻrsatilgan holda, maktab direktori tomonidan tasdiqlanadi va yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin taʼlim muassasasining oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar xabardor etiladi.
+Yakuniy nazorat amaliy topshiriq shaklida oʻtkaziladi. Bunda yakuniy nazorat savollari orqali bitta amaliy topshiriq beriladi.
+Amaliy topshiriqlar oʻqitilgan mutaxassislik oʻquv dasturi asosida tuziladi va maktabning pedagogik kengashi tomonidan tasdiqlanadi hamda yakuniy nazorat boshlanishidan kamida oʻn besh kun oldin barcha oʻquvchilar koʻrishi mumkin boʻlgan joydagi eʼlonlar taxtasiga osib qoʻyish orqali oʻquvchilar eʼtiboriga yetkaziladi.
+Oʻquvchilar bilimi quyidagi mezonlar asosida baholanadi:
+Har bir oʻquvchining kasb boʻyicha oʻzlashtirish darajasi ball tizimi orqali ifodalanadi, ya’ni 100 ballik shkalaga o‘tkaziladi.
+0-59 ball – 2 baho;
+60-70 ball – 3 baho;
+71-89 ball – 4 baho;
+90-100 ball – 5 baho.
+Oʻquvchilarning har bir nazorat turi boʻyicha bilimini baholash va koʻrsatkichlarini aniqlash ularning kasbni oʻquv dasturi mavzusi boʻyicha tasavvurga ega boʻlishi, mavzuning mohiyatini tushunib yetishi va aytib bera olishi, olgan bilimlarini amalda qoʻllay olishi, ijodiy fikrlay olishi va xulosa qabul qila olishi hamda mustaqil ishlarni bajarishi kabi mezonlarga qarab amalga oshiriladi.
+Jumladan:
+bitiruvchi mustaqil xulosa va qaror qabul qiladi, ijodiy fikrlay oladi, mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (mavzu) boʻyicha tasavvurga ega deb topilganda – 90-100 (aʼlo) ball;
+bitiruvchi mustaqil mushohada yuritadi, olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb(mavzu) boʻyicha tasavvurga ega deb topilganda – 71-89 (yaxshi) ball;
+bitiruvchi olgan bilimini amalda qoʻllay oladi, kasbning (mavzuning) mohiyatini tushunadi, biladi, ifodalay oladi, aytib beradi hamda kasb (mavzu) boʻyicha tasavvurga ega deb topilganda – 60-70 (qoniqarli) ball;
+bitiruvchi kasb dasturini oʻzlashtirmagan, kasbning (mavzuning) mohiyatini tushunmaganda- 0-59 (qoniqarsiz) ball.
+Nazorat turlarini oʻtkazish boʻyicha tuzilgan topshiriqlarning mazmuni oʻquvchining oʻzlashtirishini xolis (obyektiv) va aniq baholash imkoniyatini berishi lozim.
+O‘quvchilar bilimini baholash mezonlari
+Baholash usuli
+Topshiriq
+Baholash mezonlari
+Maksimal ball
+Baholash o‘tkazish vaqti
+Joriy nazorat
+Bajarilgan loyiha ishini
+bajarilgan loyihaning belgilangan talablariga javob berishi; 
+ilovaning asosiy funksiyalari to‘liq va xatosiz ishlashi;
+foydalanuvchi kutilgan natijalarni olishi;
+ilova interfeysi qulay, tushunarli va estetik jihatdan yaxshi dizaynlashganligi;
+animatsiyalar va o‘zaro ta’sir elementlarining borligi;
+kod toza, o‘qilishi oson, yaxshi tuzilganligi;
+android dasturlashning zamonaviy usullaridan foydalanilganligi;
+loyihaning maqsadi, ishlash printsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi.
+40 ball
+O‘quv jarayoni davomiyligida o‘tkaziladi
+Oraliq nazorat
+Yozma, topshiriqlar 
+nazariy savollarga to‘liq va aniq javob berilganligi;
+javoblar faktlarga asoslanganligi va xato yo‘qligi;
+tushuntirish aniq va misollar bilan boyitilganligi;
+matnda grammatik va imlo xatolarining kamligi;
+muammoni tahlil qilinganligi va fikrlarni ifodalashdarajasi.
+20 ball
+Har chorak yakunida
+Amaliy topshiriqlar
+belgilangan barcha funksiyalar to‘liq ishlashi;
+kod o‘qilishi osonligi, izohlar mavjudligi, keraksiz takrorlanishlar  yo‘qligi;
+zarur texnologiyalar  to‘g‘ri ishlatilganligi;
+ilova barqarorligi va xatolar yo‘qligi.
+Test topshiriqlari
+savollarga to‘g‘ri javob berganligi.
+Yakuniy nazorat
+Loyiha ishlarini yakuni bo‘yicha
+bajarilgan loyihaning belgilangan talablariga javob berishi; 
+ilovaning asosiy funksiyalari to‘liq va xatosiz ishlashi;
+foydalanuvchi kutilgan natijalarni olishi;
+ilova interfeysi qulay, tushunarli va estetik jihatdan yaxshi dizaynlashganligi;
+animatsiyalar va o‘zaro ta’sir elementlarining borligi;
+kod toza, o‘qilishi oson, yaxshi tuzilganligi;
+android dasturlashning zamonaviy usullaridan foydalanilganligi;
+loyihaning maqsadi, ishlash printsipi, ishlatilgan texnologiyalar haqida aniq va tushunarli taqdimot qilinishi.
+40 ball
+O‘quv yili oxirida, kurs yakunida
+Jami
+
+
+100 ball
+
+
+Oraliq nazoratda  topshiriq  turlaring nazorat jarayonida faqat bitta turidan foydalanish mumkin.
+10. ANDROID DASTURLASH KASBI TAVSIFI
+10.1. Bitiruvchining kasbiy faoliyati sohalari
+“Android dasturlash” kasb-hunarga tayyorlash kursini muvaffaqiyatli tugatgan o‘quvchi mobil ilovalar ishlab chiqish va texnik qo‘llab-quvvatlash sohasida boshlang‘ich darajadagi amaliy faoliyatni amalga oshira oladi. U quyidagi yo‘nalishlarda faoliyat yuritishi mumkin:
+ta’lim muassasalari, startap loyihalar va IT kompaniyalarda mobil dasturlash bo‘yicha amaliyotchi yoki texnik yordamchi sifatida;
+tashkilot va korxonalarning ichki mobil yechimlarini (hisobot, nazorat, servis ilovalari) ishlab chiqishda ishtirok etuvchi dasturchi sifatida;
+frilanser yoki mustaqil loyiha ishlab chiquvchi sifatida oddiy Android ilovalarni yaratish bo‘yicha xizmat ko‘rsatuvchi sifatida.
+10.2. Bitiruvchining kasbiga muvofiq kasbiy faoliyat obyektlari
+Bitiruvchi faoliyat yuritishi mumkin bo‘lgan asosiy obyektlar:
+Android ilovalar va ularning komponentlari (Activity, Fragment, Service, Broadcast Receiver);
+Dasturlash muhitlari: Android Studio, IntelliJ IDEA;
+Foydalanuvchi interfeyslari (UI/UX) – XML, Material Design, Jetpack Compose asosida yaratilgan sahifalar;
+Ma’lumotlar bazalari: SQLite, Room, Firebase Firestore;
+Internet texnologiyalari: Retrofit, Volley, OkHttp asosida yaratilgan API interfeyslar;
+Bulutli xizmatlar: Firebase Authentication, Cloud Storage, Google Play Console;
+Sinov muhiti va asboblar: Android Emulator, real qurilmalar, Logcat, Debug tizimlari.
+10.3. Android dasturlash kasbiy faoliyat turlari
+Bitiruvchi quyidagi kasbiy faoliyat turlarini bajarishga tayyorlanadi:
+Android Studio muhiti va zarur asbob-uskunalarni o‘rnatish, sozlash va ulardan samarali foydalanish;
+Dasturiy loyihalar yaratish, kod tuzilmasini to‘g‘ri tashkil etish va fayl arxitekturasini yuritish;
+Java yoki Kotlin tillarida mobil ilovalar ishlab chiqish;
+UI elementlarini loyihalash va interaktiv sahifalarni yaratish;
+Ma’lumotlar bazasi bilan ishlash, CRUD amaliyotlarini bajarish;
+Internet orqali ma’lumot almashish (API so‘rovlar, JSON parsing);
+Firebase xizmatlari yordamida foydalanuvchi autentifikatsiyasi va ma’lumotlar saqlashni amalga oshirish;
+Ilovani sinovdan o‘tkazish (debug, test, logcat) va yakuniy APK faylini tayyorlash;
+Dastur xavfsizligini ta’minlash va foydalanuvchi ma’lumotlarini himoyalash;
+Google Play Console orqali ilovani nashr qilish bosqichlarini bajarish.
+10.4. Android dasturlash bo‘yicha malaka talablari
+Bitiruvchi quyidagi kasbiy malakalarni egallaydi:
+Android Studio muhitida mustaqil loyiha yaratish va ishga tushirish;
+UI/UX dizayn elementlarini Material Design standartlariga mos ishlab chiqish;
+Dasturlash jarayonida algoritmik va mantiqiy fikrlashni qo‘llash;
+Kichik hajmli real loyihalarda jamoa bilan ishlash va kod versiyasini boshqarish (Git);
+Ma’lumotlar bilan ishlashda xatoliklarni aniqlash, tahlil qilish va bartaraf etish.
+10.5. Kasbiy rivojlanish istiqbollari
+Android dasturlash kasbini egallagan bitiruvchi o‘z malakasini quyidagi yo‘nalishlarda davom ettirishi mumkin:
+Malaka oshirish va qo‘shimcha kurslar: Jetpack Compose, Firebase, Kotlin Coroutines, Clean Architecture bo‘yicha;
+O‘rta maxsus va oliy ta’lim muassasalari: axborot texnologiyalari, dasturiy injiniring yoki kompyuter tizimlari mutaxassisligi bo‘yicha;
+Kasbiy faoliyatni kengaytirish: Android dasturchi, mobil dastur testlovchisi, UI/UX dizayneri yoki backend integratsiya mutaxassisi sifatida.
+11. KASBNING QOʻLLANISH SOHASI
+	Mazkur malaka talabi “Android dasturlash” kasbi bo‘yicha umumiy o‘rta ta’lim muassasalarining 9-sinf o‘quvchilari uchun kasb-hunarga tayyorlash kurslari (keyingi o‘rinlarda — kasb-hunarga tayyorlash kurslari) doirasida mobil dasturlashning boshlang‘ich bosqichini o‘rganish uchun ishlab chiqilgan.
+Mazkur dastur o‘quvchilarda mobil ilovalar yaratish, testlash va foydalanuvchi interfeysini loyihalash bo‘yicha zaruriy nazariy bilimlar va amaliy ko‘nikmalarni shakllantirishni ko‘zda tutadi.
+Mazkur malaka talabi quyidagilarni belgilaydi:
+Android dasturlash bo‘yicha ishchilarni tayyorlashning zaruriy bilimlar mazmuni, o‘quv yuklamasi hajmi hamda kasbiy tayyorgarlik darajasiga qo‘yiladigan asosiy talablarni;
+“Android dasturlash” kursini o‘qitishda ta’lim jarayonini tashkil etish va baholash mezonlarini;
+O‘quv jarayoni davomida nazorat ishlari, oraliq loyihalar va yakuniy loyiha himoyasi orqali o‘quvchilarning egallagan bilim va ko‘nikmalarini amaliy baholash tartibini.
+Malaka talablari quyidagilar uchun asos bo‘ladi:
+kasbga tayyorlash sifati va darajasini aniqlashda asosiy mezon sifatida foydalaniladi;
+o‘quv dasturini amalga oshirayotgan ta’lim tashkilotlari tomonidan o‘quvchilarning kasbiy tayyorgarligini baholashda asos sifatida qabul qilinadi;
+o‘quv dasturini to‘liq o‘zlashtirgan bitiruvchilarga kasbning tegishli darajasini tasdiqlovchi davlat namunasidagi sertifikatni berish uchun asos hisoblanadi.
+Mazkur malaka talablari barcha umumiy o‘rta ta’lim tashkilotlari tomonidan tatbiq etilishi majburiydir.
+“Android dasturlash” kasb-hunarga tayyorlash kursini to‘liq o‘zlashtirgan 9-sinf o‘quvchilari O‘zbekiston Respublikasi Milliy malakalar ramkasining 2-darajali sertifikatini olish huquqiga ega bo‘ladi.
+12. ANDROID DASTURLASH  KASBIGA O‘QITISH NATIJALARI
+12.1. Birinchi chorak uchun
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+
+I-BOB. Android muhiti va dasturlash asoslari
+Android nima va uning rivojlanish tarixi
+- Android operatsion tizimi va uning paydo bo‘lish tarixini tushunadi; - Androidning dastlabki versiyalari va hozirgi avlod tizimlari o‘rtasidagi farqni biladi; - Mobil texnologiyalar rivojida Androidning o‘rni va afzalliklarini izohlab bera oladi.
+
+Android tizimi va arxitekturasi
+- Android tizimi qatlamlarini (Linux Kernel, Libraries, Application Framework, Applications) nomlay oladi; - Har bir qatlamning vazifasini va ular o‘rtasidagi o‘zaro bog‘liqlikni tushunadi; - Android Runtime (ART) va Dalvik Virtual Machine haqida boshlang‘ich tushunchaga ega bo‘ladi.
+
+Androidning imkoniyatlari va qo‘llanilish sohalari
+- Android tizimining texnik imkoniyatlarini tushuntira oladi; - Androidning smartfon, planshet, soat, televizor va avtomobil tizimlarida ishlatilishini biladi. - Androidning ochiq manbali tizim sifatida afzalliklarini izohlab bera oladi.
+
+Android ekotizimi va Google xizmatlari
+- Google Play, Gmail, YouTube, Maps va boshqa xizmatlarning Android ekotizimidagi o‘rnini biladi; - Google hisob orqali sinxronlashtirish va ma’lumot almashish jarayonini tushunadi; - Android tizimida Google xizmatlarining integratsiya tamoyillarini tushuntira oladi.
+
+Android Studio va Android SDK bilan tanishuv
+- Android Studio interfeysining asosiy elementlarini (Toolbar, Project Structure, Logcat) biladi; - SDK (Software Development Kit) tarkibini va uning vazifasini tushunadi; - Android Studio muhitida loyiha yaratish, sozlash va kod muhiti bilan ishlash tamoyillarini biladi.
+
+Simulyator va Emulator haqida tushuncha
+- Emulator va Simulyatorning farqini tushuntira oladi; - Android Virtual Device (AVD) vazifasini biladi; - Ilovani haqiqiy qurilmasiz testlash jarayonining mohiyatini tushunadi.
+
+II-BOB. Java va Kotlin dasturlash asoslari
+Kotlin sintaksisi: o‘zgaruvchilar, shartlar, sikllar
+-Kotlin tilining sintaksisini biladi; - O‘zgaruvchi turlari, shartli operatorlar (if, when) va sikllar (for, while) yordamida kod yozishni tushunadi; - Dastur mantiqini tuzish va kod bloklarini to‘g‘ri joylashtirishni biladi.
+Funksiyalar va sinflar– O‘quvchi funksiya (function) tushunchasini, uning nomi, parametrlari, qaytariladigan qiymati (return type) va chaqirilish tartibini tushuntira oladi; – Kotlin tilida funksiya yozish, unga parametr berish, qiymat qaytarish va funksiyani loyihada to‘g‘ri chaqirish ko‘nikmasiga ega bo‘ladi; – Funksiya va sinflar yordamida kodni mantiqiy bo‘limlarga ajratish, takrorlanishni kamaytirish va kodni tartibli saqlash qoidalarini biladi;
+
+
+Kotlin’da ma’lumot turlari, list va maplar
+- Ma’lumot turlarini ajrata oladi; - List va Map kolleksiyalari bilan ishlash asoslarini biladi; - Ma’lumotlarni saqlash, izlash va saralash usullarini tushunadi.
+Kotlinda obyektga yonaltirilgan dasturlash (OOP) bilan tanishish– Sinf (class) va obyekt (object) tushunchalarini bilib oladi, konstruktor, xususiyat (property) va metodlarni ajrata oladi;  – Inkapulyatsiya va ko‘rinish darajalari (public, private, protected, internal) ma’nosini tushunadi va kodda qo‘llay oladi;  – Merosxo‘rlik (inheritance) va polimorfizm (override) orqali kodni qayta ishlatish tamoyilini ko‘rsatib bera oladi;  – Interface, abstrakt sinf, data class, sealed classlarning vazifasini farqlaydi va sodda misollar yozadi;  – Companion object va singleton (object) orqali umumiy resurslarni boshqarish g‘oyasini tushuntiradi;  – Getter/setter, val/var, lateinit va nullable xususiyatlar bilan xavfsiz ishlashni ko‘rsatadi; 
+Null-safety va xavfsiz ma’lumotlar bilan ishlash- Null qiymat va NullPointerException tushunchalarini biladi; -?, !! va ?: operatorlari yordamida xavfsiz ma’lumot bilan ishlashni tushunadi; - Ma’lumotlar ishonchliligini ta’minlash va xatoliklarning oldini olishni biladi.
+
+
+Exception va logcat orqali xatolarni tahlil qilish
+- Exception mexanizmini tushunadi; - Logcat orqali xatoliklarni tahlil qilishni biladi; - Dasturda xato yuz berganda ularni topish va tuzatish bo‘yicha mantiqni qo‘llay oladi.
+XML va Jetpack Compose asoslari- XML va Jetpack Compose yordamida interfeys yaratish tamoyillarini biladi; - Deklarativ (Compose) va an’anaviy (XML) yondashuv o‘rtasidagi farqni tushunadi; - Compose faylining asosiy tuzilmasini (@Composable, setContent) biladi; - Foydalanuvchi interfeysi elementlarini kod orqali yaratish jarayonini tushunadi; - Interfeys tuzilmalarini tahlil qila oladi va ularni real ilovaga mos tanlay oladi.
+
+
+Layoutlar: Column, Row, Box, LazyColumn
+- Jetpack Compose’dagi Layout tushunchasini biladi; - Column va Row elementlarini to‘g‘ri joylashtirish uchun ishlata oladi; - Box orqali elementlarni qatlamli (overlay) joylashtirishni tushunadi; - LazyColumn yordamida ro‘yxatlar (list) yaratish usulini biladi; - Layout elementlari orasidagi joylashuv, bo‘shliq va hizalanishni boshqarishni tushunadi.
+
+Asosiy UI elementlari: Button, TextField, Image, Card
+- Button, TextField, Image va Card komponentlarining vazifasini biladi; - Har bir element uchun Compose sintaksisini to‘g‘ri qo‘llay oladi; - Matn kiritish, rasm joylashtirish va karta uslubidagi interfeys yaratishni biladi; - UI elementlarini o‘zaro bog‘lash (onClick, modifier) tamoyillarini tushunadi; - Dizayn elementlarini bir butun ko‘rinishda tashkil eta oladi.
+
+
+12.2. Ikinchi chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+
+III-BOB. Jetpack Compose va interfeys yaratish
+Rasm va ikonlar bilan ishlash, Material3 komponentlari
+-Material Design 3 qoidalarini tushunadi; -Rasm va ikonlarni Android loyihasiga import qilishni biladi; -Material3 rang sxemalari va tipografik uslublarni tanlay oladi; - UI’da kontrast, rang uyg‘unligi va o‘qilishi qulay bo‘lgan interfeys yaratish tamoyillarini tushunadi; - Interfeys elementlariga MaterialTheme qo‘llashni biladi.
+
+Snackbar, Dialog va BottomSheet yaratish
+- Snackbar, Dialog va BottomSheet elementlarining maqsadini biladi; - Foydalanuvchi bilan o‘zaro muloqot yaratish uchun bu elementlarni qo‘llay oladi; - Dialog oynalarida ma’lumot ko‘rsatish va foydalanuvchi javobini qayta ishlashni biladi; - BottomSheet yordamida qo‘shimcha menyularni yaratishni tushunadi; - Bildirishnomalar orqali UX (foydalanuvchi tajribasi)ni yaxshilash usullarini biladi.
+
+Foydalanuvchi interfeysi holatini boshqarish
+- State tushunchasini va uning UI’dagi ahamiyatini biladi; - MutableState va remember funksiyalarining vazifasini tushunadi; - UI elementlari holatini yangilash va qayta chizish jarayonini biladi; - State hoisting konsepsiyasini tushunadi va uni loyihada qo‘llay oladi; - Holatni to‘g‘ri boshqarish orqali ilovaning barqarorligini ta’minlashni biladi.
+
+Activity va Lifecycle
+- Activity’ning mohiyatini va Android ilovadagi rolini biladi;
+- Activity hayot aylanishi (Lifecycle) bosqichlarini (onCreate, onStart, onResume, onPause, onStop, onDestroy) tushunadi;
+- Har bir bosqichning dastur ishiga ta’sirini tahlil qila oladi;
+- Activity’lar orasida holatni saqlash va tiklash jarayonini biladi;
+- Activity lifecycle diagrammasini chiza oladi va uni amaliy holatga tatbiq etadi.
+
+Snackbar, Dialog va BottomSheet yaratish
+- Snackbar, Dialog va BottomSheet elementlarining maqsadini biladi; - Foydalanuvchi bilan o‘zaro muloqot yaratish uchun bu elementlarni qo‘llay oladi; - Dialog oynalarida ma’lumot ko‘rsatish va foydalanuvchi javobini qayta ishlashni biladi; - BottomSheet yordamida qo‘shimcha menyularni yaratishni tushunadi; - Bildirishnomalar orqali UX (foydalanuvchi tajribasi)ni yaxshilash usullarini biladi.
+XML va Jetpack Compose asoslari- XML va Jetpack Compose yordamida interfeys yaratish tamoyillarini biladi; - Deklarativ (Compose) va an’anaviy (XML) yondashuv o‘rtasidagi farqni tushunadi; - Compose faylining asosiy tuzilmasini (@Composable, setContent) biladi; - Foydalanuvchi interfeysi elementlarini kod orqali yaratish jarayonini tushunadi; - Interfeys tuzilmalarini tahlil qila oladi va ularni real ilovaga mos tanlay oladi.
+
+IV-BOB. Activity, Intent va Fragmentlar
+Layoutlar: Column, Row, Box, LazyColumn
+- Jetpack Compose’dagi Layout tushunchasini biladi; - Column va Row elementlarini to‘g‘ri joylashtirish uchun ishlata oladi; - Box orqali elementlarni qatlamli (overlay) joylashtirishni tushunadi; - LazyColumn yordamida ro‘yxatlar (list) yaratish usulini biladi; - Layout elementlari orasidagi joylashuv, bo‘shliq va hizalanishni boshqarishni tushunadi.
+
+Asosiy UI elementlari: Button, TextField, Image, Card
+- Button, TextField, Image va Card komponentlarining vazifasini biladi; - Har bir element uchun Compose sintaksisini to‘g‘ri qo‘llay oladi; - Matn kiritish, rasm joylashtirish va karta uslubidagi interfeys yaratishni biladi; - UI elementlarini o‘zaro bog‘lash (onClick, modifier) tamoyillarini tushunadi; - Dizayn elementlarini bir butun ko‘rinishda tashkil eta oladi.
+
+
+
+12.3. Uchinchi chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+
+IV-BOB. Activity, Intent va Fragmentlar
+Ekranlar o‘rtasidagi ma’lumot uzatish (Bundle, SafeArgs)
+- Bundle yordamida ma’lumot uzatishning asosiy tamoyillarini biladi; - SafeArgs yordamida xavfsiz navigatsiya va ma’lumot almashishni tushunadi; - Ma’lumotlarni Fragmentlar o‘rtasida uzatish va qayta qabul qilishni biladi; - JSON yoki obyekt tipidagi ma’lumotlarni xavfsiz uzatish amaliyotini tushunadi; - SafeArgs va Bundle farqlarini izohlab bera oladi.
+
+
+SharedPreferences bilan ishlash
+- SharedPreferences yordamida oddiy ma’lumotlarni saqlash va o‘qish jarayonini biladi; - Kalit–qiymat (key–value) juftligi asosida ma’lumot yozishni tushunadi; - Ma’lumotlarni doimiy saqlash va qayta yuklash o‘rtasidagi farqni biladi; - Foydalanuvchi sozlamalarini saqlash uchun SharedPreferences’dan foydalanishni o‘rganadi; - Ma’lumotlarni o‘chirish va yangilash amallarini bajarishni biladi.
+
+CRUD amallarini yozish
+- SQLite ma’lumotlar bazasining tuzilmasi va vazifasini tushunadi; - Room kutubxonasining afzalliklarini biladi va uni ishlatish tamoyillarini o‘zlashtiradi; - Entity, DAO va Database komponentlari orasidagi bog‘lanishni tushunadi; - Ma’lumotlarni kiritish, o‘qish, yangilash va o‘chirish amallarini bajarishni biladi; - Room orqali mahalliy bazada foydalanuvchi ma’lumotlarini boshqarishni o‘rganadi.
+
+Ma’lumotlarni saralash va filtrlash
+- CRUD (Create, Read, Update, Delete) amallarining mohiyatini biladi; - Har bir amal uchun SQL va Kotlin orqali kod yozishni o‘rganadi; - Ma’lumotlarni tahlil qilish va o‘zgartirish uchun kerakli so‘rovlarni tuzishni biladi; - CRUD jarayonlarida xatolarni aniqlab, tuzatish usullarini qo‘llay oladi; - CRUD amallarini real ilova kontekstida qo‘llay oladi.
+V-BOB. Ma’lumotlar bilan ishlashFayl va MediaStore bilan ishlash- Kotlin’dagi filter(), sortBy() va map() funksiyalarining vazifasini biladi; - Ma’lumotlarni saralash, tartiblash va tanlash mezonlarini tushunadi; - UI’da ma’lumotlarni filtrlab ko‘rsatish usullarini biladi; - Foydalanuvchi kiritgan shartlar asosida ro‘yxatni yangilash jarayonini tushunadi; - Filtrlash natijasini dinamik tarzda interfeysda aks ettira oladi.
+
+
+Jetpack Compose’da grafik elementlar
+- Jetpack Compose’da grafik elementlar (diagramma, chizma) yaratishni biladi; - Canvas API yordamida oddiy vizual grafiklar chizishni tushunadi; - Ma’lumotlarni grafik tarzda ifodalashning afzalliklarini biladi; - Diagrammalarda o‘qish oson bo‘lgan ranglar va shakllarni tanlay oladi; - UI’da dinamik o‘zgaruvchan grafiklarni yaratishni tushunadi.
+
+Jetpack Compose’da grafik elementlar
+- Jetpack Compose’da grafik elementlar (diagramma, chizma) yaratishni biladi; - Canvas API yordamida oddiy vizual grafiklar chizishni tushunadi; - Ma’lumotlarni grafik tarzda ifodalashning afzalliklarini biladi; - Diagrammalarda o‘qish oson bo‘lgan ranglar va shakllarni tanlay oladi; - UI’da dinamik o‘zgaruvchan grafiklarni yaratishni tushunadi.
+
+ViewModel va LiveData bilan hisoblash logikasi
+- ViewModel konsepsiyasini va uning ilovadagi ahamiyatini biladi; - LiveData yordamida real vaqt rejimida ma’lumot yangilanishini tushunadi; - Arxitekturaviy komponentlar yordamida UI holatini boshqarishni o‘rganadi; - Ma’lumot oqimini kuzatish va natijani UI’da aks ettirishni biladi; - Hisoblash jarayonini foydalanuvchi harakatlaridan mustaqil tashkil etishni biladi.
+
+VI-BOB. Hisoblash va tahlil
+
+
+
+
+
+
+
+
+
+
+
+12.4. To`rtinchi  chorak uchun
+
+№
+BOB
+Mavzu
+Bilim va ko‘nikma
+
+VI-BOB. Hisoblash va tahlil
+
+Retrofit orqali API’dan kurslarni olish (valyuta yoki ob-havo)
+- API (Application Programming Interface) tushunchasini biladi; - Retrofit kutubxonasining vazifasini va afzalliklarini tushunadi; - Internet orqali ma’lumot olish (GET, POST so‘rovlari) jarayonini biladi; - JSON formatidagi javobni qabul qilish va qayta ishlashni biladi; - API’dan olingan ma’lumotni UI’da ko‘rsatish amaliyotini tushunadi.
+
+JSON parsing (Gson, Moshi)
+- JSON ma’lumotlar formati va tuzilishini biladi; - Gson va Moshi kutubxonalarining farqini tushunadi; - JSON’dan obyektga va obyektni JSON formatiga o‘tkazish jarayonini biladi; - Ma’lumotlarni tahlil qilishda parsing xatolarini aniqlay oladi; - API orqali olingan ma’lumotlarni tuzilmali holatda saqlashni biladi.
+
+Hisobotlarni Excelga eksport qilish (CSV yoki PDF)
+- CSV va PDF formatlarining farqini biladi; - Ma’lumotlarni jadval ko‘rinishida eksport qilish tamoyillarini tushunadi; - Foydalanuvchi hisobotlarini Excel yoki PDF faylga saqlashni biladi; - Kotlin’da fayl yozish va saqlash funksiyalaridan foydalanishni biladi; - Eksport qilingan ma’lumotlarni tekshirish va ularning to‘g‘riligini baholay oladi.
+Git va versiya nazorati asoslari- Git tizimining versiya nazorati uchun ahamiyatini tushunadi;
+- Loyiha o‘zgarishlarini saqlash, kuzatish va boshqarish jarayonlarini biladi;
+- .gitignore faylini Android loyihasi uchun to‘g‘ri sozlashni o‘rganadi;
+- Tarmoqlar (branch) yaratish, birlashtirish va versiyalarni boshqarish ko‘nikmasiga ega bo‘ladi;
+- GitHub, GitLab kabi platformalar bilan sinxron ishlashni biladi;
+
+VII-BOB. Dizayn, testlash va yakuniy loyiha
+Loyiha kodini yakunlash, ma’lumotlar sinxronligi
+- Loyiha kodini to‘liq integratsiya qilish va tekshirishni biladi; - Ma’lumotlarning sinxron yangilanishi tamoyilini tushunadi; - Kodni optimallashtirish va xatolarni tuzatish usullarini biladi; - Ilova modullarining o‘zaro bog‘lanishini tahlil qila oladi; - Yakuniy loyiha strukturasi va arxitekturasini to‘g‘ri tashkil etadi.
+
+APK fayl yaratish va ilovani testlash
+- Build jarayoni va kompilyatsiya bosqichlarini tushunadi; - APK fayl yaratish va uni qurilmada sinash usullarini biladi; - Testlash turlari (qo‘lda, avtomatik, UI test)ni ajrata oladi; - Xatoliklarni topish va Logcat orqali tahlil qilishni biladi; - Tayyor ilovani ishga tushirish va barqarorligini baholay oladi.
+
+
+
+
+
+
+
+13. ANDROID DASTURLASH KURSI BO‘YICHA LOYIHA ISHLARI
+Android dasturlash kursi davomida bajariladigan loyihalar o‘tilgan mavzular doirasida beriladi va joriy nazorat ishlarini baholashda asos bo‘ladi. Kursda tahsil olayotgan har bir o‘quvchiga loyiha topshiriqlari individual tarzda beriladi. Berilgan loyihalarni kurs davomida yoki yakuniy loyiha sifatida bajarish mumkin.
+№
+Loyiha mavzulari
+
+Kalkulyator ilovasini yaratish
+
+To-do List (Vazifalar ro‘yxati)  ilovasini yaratish
+
+Notepad / Eslatma ilovasi ilovasini yaratish
+
+Shaxsiy profil sahifasi (UI dizayn) ilovasini yaratish
+
+Androidda Ob-havo ilovasi ilovasini yaratish
+
+Kitoblar kutubxonasi ilovasi yaratish
+
+Valyuta konvertori ilovasini yaratish
+
+Mahalliy yangiliklar ilovasini yaratish
+
+Dasturlash lug‘ati (offline dictionary)  ilovasini yaratish
+
+Foydalanuvchilar ro‘yxati va chat (Firebase Chat App)  ilovasini yaratish
+
+Online do‘kon ilovasi (e-commerce mockup) ilovasini yaratish
+
+Masofaviy mashg‘ulotlar ilovasi (Workout App) ilovasini yaratish
+
+Online test yoki quiz  ilovasini yaratish
+
+Restoran buyurtma ilovasini yaratish
+
+O‘yin ilovasini yaratish
+
+Sayohat rejalashtiruvchi ilovasini yaratish
+
+Sog‘liqni nazorat qiluvchi ilovasini yaratish
+
+O‘zbekiston shaharlari haqida ma’lumotnoma ilovasini yaratish
+
+Mahalliy transport ma’lumot ilovasi ilovasini yaratish
+ 
+ 
+14. ANDROID DASTURLASH XONASI UCHUN QOʻYILADIGAN UMUMIY TALABLAR
+Android dasturlash xonasi maktab binosining ikki va undan yuqori qavatda alohida binoda joylashgan boʻlishi;
+Android dasturlash xonasining umumiy maydoni 63 m2;
+barcha oʻquv binolarini tabiiy, sunʼiy kombinatsiyalangan yoritishga ega boʻlishi;
+Xona harorati 17-20o C boʻlishi kerak.
+Android dasturlash xonasi mashgʻulotlar boshlanishidan oldin va tugagandan soʻng, shamollatiladi. Shamollatishning davomiyligi ob-havo sharoiti, shamolning yoʻnalishi va tezligi, isitish tizimining samaradorligi bilan belgilanadi.
+Android dasturlash xonasi uchun ajratilgan xonadagi haroratni meʼyorida saqlab turish uchun sovutish va isitish tizimi (konditsioner) oʻrnatilgan boʻlishi kerak. 
+Android dasturlash xonasi uchun ajratilgan xonada birinchi tibbiy yordam koʻrsatish uchun tibbiy toʻplamlar boʻlishi kerak.
+Android dasturlash xonasi uchun quyidagi boʻyoq ranglarini qoʻllash tavsiya etiladi: shiftlar uchun moviy rang, devorlar uchun — qaymoq rang, pushti, yashil, koʻk ranglarning ochiq ohanglari, mebel (shkaflar, stollar) uchun — tabiiy yoki och jigarrang, toʻq  jigarrang; eshiklar, deraza romlari uchun — oq ranglar.
+15. ANDROID DASTURLASH KASBIGA OʻQITISH XONASINI JIHOZLASHGA QOʻYILGAN TALABLAR
+T/rJihoz nomiOʻlchov birligiSoniJihoz rasmi1.Monitor Full HD — 1920×1080 piksel (kamida); tavsiya: 2K (2560×1440), 23.8" (24 dyuym) dan kichik bo‘lmasligi keraktoʻplam152.Shaxsiy kompyuter (o‘quvchi uchun): Intel Core i5 (10-avlod) yoki Ryzen 5 3600+, RAM 16 GB, SSD 512 GB, integratsiyalashgan grafik/GTX 1050 darajasigacha, kamida 2×USB 3.0, 1×HDMI, LAN 1 Gbit/stoʻplam153.Kompyuter klaviaturasi oʻlchami 445-mm 136-mmdona154.Kompyuter sichqonchasi oʻlchami 101-mm 75-mmdona15
+16. ANDROID DASTURLASH KASBIGA OʻRGATISH UCHUN ZARUR BOʻLADIGAN XOM ASHYOLAR ROʻYXATI
+T/r 
+Xom ashyo va materiallar nomi 
+Oʻlchov birligi
+Bir oʻquvchi uchun belgilangan miqdor 
+1.
+Monitor Full HD — 1920×1080 piksel (kamida); tavsiya: 2K (2560×1440), 23.8" (24 dyuym) dan kichik bo‘lmasligi kerak
+dona
+15
+2.
+Intel Core i5 (10-avlod) yoki Ryzen 5 3600+
+dona
+15
+3.
+RAM 16 GB
+dona
+15
+4.
+integratsiyalashgan grafik/GTX 1050 darajasigacha
+dona
+15
+5.
+SSD 512 GB
+dona
+15
+7.
+Kompyuter klaviaturasi (445-mm 136-mm)
+dona
+15
+8.
+Kompyuter sichqonchasi (101-mm 75-mm)
+dona
+15
+
+17. KASBIY TAʼLIM USTASI LAVOZIMIGA QOʻYILADIGAN TALABLAR
+T/r
+Lavozim nomlanishi
+Ta’lim darajasi
+Malakaviy talablar
+Ish tajribasi va shaxsiy sifatlari
+1
+Android dasturlash yo‘nalishi bo‘yicha mentor
+O‘rta maxsus yoki oliy ma’lumotli
+Android dasturlash bo‘yicha amaliy bilim va ko‘nikmalarga ega; o‘quv-amaliy jarayonini rejalashtirish, texnologik xaritalar tuzish va mashg‘ulot hujjatlarini yurita olish; 
+Raqamli texnologiyalar, dasturlash bo‘yicha chuqur
+bilim va zamonaviy
+ko‘nikmalarga ega;
+mazkur yo‘nalish bo‘yicha
+kamida 2 yil o‘quvchilar bilan
+ishlash tajribasiga ega (mehnat
+daftarchasi yoki
+ma‘lumotnoma asosida):
+taqdim etilgan o'‘quv reja va
+dasturlar asosida darslarni
+tashkillashtirish, shuningdek
+ularni o‘quvchilarning
+darajasi, qiziqishi va
+talablariga ko‘ra moslashtira
+olish ko‘nikmasi;
+ijodkorlik, jamoa bilan
+ishlash, moslashuvchanlik,
+tashkilotchilik, muloqot
+ko'nikmalariga ega.
+
+Lavozim vazifalari:
+biriktirilgan guruhlarda о‘quv amaliyoti mashgʻulotlarni о‘tish, ishlab chiqarish amaliyotiga rahbarlik qilish; 
+о‘quv ustaxonalarida, poligonlarda va о‘quv xо‘jaligida jihozlar va texnika vositalarini amaliy mashgʻulotlarga tayyorlash; 
+kerak bо‘ladigan xom-ashyo va materiallarni tayyorlash, texnologik xaritalarni ishlab chiqish, mashgʻulotga sarf bо‘ladigan xom-ashyo sarfini aniqlash, hisobini yuritish;
+о‘quvchilarni oraliq, bitiruv amaliy imtihonlarini topshirishga tayyorlash, biriktirilgan guruhlarda tarbiyaviy ish olib borish, о‘quv mashgʻulot jurnallarini yuritish va saqlash; 
+taʼlim-tarbiya jarayoni davomida о‘quv-texnika jihozlari va vositalaridan, ustaxonalardan, maktabga qarashli jihozlardan ehtiyotkorlik bilan foydalanish;
+tanlab olingan kasb-hunarni egallash jarayonida о‘quvchilarning kasbiy layoqat, kо‘nikma va malakalarini shakllantirish;
+kasb-hunarga tayyorlash tizimi va mazmunini jamiyat ehtiyojlaridan, fan, madaniyat va zamonaviy innovatsion texnika yutuqlaridan kelib chiqqan holda takomillashtirish;
+ish о‘rinlarini jihozlash, yongʻinga qarshi himoya, xavfsizlik texnikasi va mehnatni muhofaza qilish qoidalari va meʼyorlarining bajarilishini taʼminlash. 
+Bilishi kerak:
+Taʼlimga oid О‘zbekiston Respublikasi qonunlarini, kasbiy va amaliy faoliyatga tegishli masalalar bо‘yicha meʼyoriy va uslubiy hujjatlarni, mehnat qonunchiligi, mehnat muhofazasining qoidalari va meʼyorlarini, xavfsizlik texnikasi qoidalarini.
+Malaka talablari: 
+Pedagogik, muhandis-pedagogik yoki biriktirilgan guruh tayyorlov yо‘nalishiga mos ravishda kamida oʻrta maxsus maʼlumotga ega boʻlishi kerak. 
+
+18. 9-SINF OʻQUVCHILARIGA QOʻYILGAN UMUMIY MALAKA TALABLARI
+Bilim
+     Android Studio dasturini o‘rnatish, uning interfeysi va asosiy funksiyalari bilan tanishish, mobil ilovalar yaratilish tamoyillari, foydalanuvchi interfeysi (UI) tuzilmasi va dasturlash (Java/Kotlin) asoslari bo‘yicha nazariy bilimlarga ega bo‘lishi kerak.
+Koʻnikma
+     Android dasturlash muhitida yangi loyiha yaratish, interfeys (XML) tuzish, komponentlarga effektlar va animatsiyalar qo‘llash, ilovalarni tahrirlash va sinovdan o‘tkazish, ma’lumotlar bilan ishlash (SQLite, SharedPreferences), hamda mobil ilovaga oddiy funksiyalar (hisoblash, saralash, filtr qo‘llash)ni qo‘shish ko‘nikmalariga ega bo‘lishi kerak.
+Kompetensiya
+    Android dasturlash jarayonida qurilma (telefon, planshet, emulator) imkoniyatlaridan foydalanish, foydalanuvchi interfeysini loyihalash, ilovani ishga tushirish va testlash, dastur kodini tahrirlash, natijalarni vizual tarzda ko‘rsatish (diagramma, grafik, interfeys elementi) kompetensiyalariga ega bo‘lishi kerak.
+
+19. FOYDALANILGAN ADABIYOTLAR VA ELEKTRON  MANBALAR ROʻYXATI
+Foydalanilgan adabiyotlar roʻyxati.
+F. Zeev. Android operatsion tizimi uchun smartfon va planshetlarga ilovalar yaratish
+D. Jemyorov. Amaliyotda Kotlin
+D. Kolisnichenko. Android uchun dasturlash
+S. Retabouil. Android NDK: Yangi boshlovchilar uchun qo‘llanma
+           Elektron manbalar:
+Android dokumentatsyasi:  HYPERLINK "https://developer.android.com/" https://developer.android.com/
+Google gaydlar:  HYPERLINK "https://developer.android.com/guide" \t "_blank" https://developer.android.com/guide
+Google Pathways:  HYPERLINK "https://developers.google.com/learn/pathways" https://developers.google.com/learn/pathways
+Metanit.com :  HYPERLINK "https://metanit.com/java/android/" https://metanit.com/java/android/
+
+
+
+
+
+
+
+
+
+PAGE   \* MERGEFORMAT6
+
+
+
+
