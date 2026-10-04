@@ -9,8 +9,8 @@ Manba: `4_2_Standart...`, `4_2_Uslubiy_ko`rsatma...`, `4_2_O'quv_qo'llanma...`. 
 ## Joriy holat
 
 - Oxirgi o'tilgan dars: **0**
-- Keyingi dars: **1** (1-hafta)
-- Oxirgi yangilanish: —
+- Keyingi dars: **10** (4-hafta)
+- Oxirgi yangilanish: 2026-10-04 (1-3 haftalar tayyorlandi)
 
 ## Eslatmalar
 
@@ -25,15 +25,15 @@ Manba: `4_2_Standart...`, `4_2_Uslubiy_ko`rsatma...`, `4_2_O'quv_qo'llanma...`. 
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 1 | 1 | Django REST Framework. Server side rendering va user side rendering tushunchalari | ⬜ |
-| 2 | 1 | DRF loyiha qurish: MBni loyihalash. Loyihani yaratish, dastlabki sozlamalar | ⬜ |
-| 3 | 1 | Model, View va Serializer. Routerlar | ⬜ |
-| 4 | 2 | Foydalanuvchilarni boshqarish: Identifikatsiya, autentifikatsiya va avtorizatsiya. Token, session va JWT | ⬜ |
-| 5 | 2 | Ruxsatlar bilan ishlash | ⬜ |
-| 6 | 2 | Filtrlash, qidiruv va tartiblash | ⬜ |
-| 7 | 3 | Pagination va throttling | ⬜ |
-| 8 | 3 | Statik fayllar bilan ishlash. Fayllarni yuklash va koʻchirib olish | ⬜ |
-| 9 | 3 | APIni testlash. APIni hujjatlashtirish. (Swagger, Redoc) | ⬜ |
+| 1 | 1 | Django REST Framework. Server side rendering va user side rendering tushunchalari | 📝 |
+| 2 | 1 | DRF loyiha qurish: MBni loyihalash. Loyihani yaratish, dastlabki sozlamalar | 📝 |
+| 3 | 1 | Model, View va Serializer. Routerlar | 📝 |
+| 4 | 2 | Foydalanuvchilarni boshqarish: Identifikatsiya, autentifikatsiya va avtorizatsiya. Token, session va JWT | 📝 |
+| 5 | 2 | Ruxsatlar bilan ishlash | 📝 |
+| 6 | 2 | Filtrlash, qidiruv va tartiblash | 📝 |
+| 7 | 3 | Pagination va throttling | 📝 |
+| 8 | 3 | Statik fayllar bilan ishlash. Fayllarni yuklash va koʻchirib olish | 📝 |
+| 9 | 3 | APIni testlash. APIni hujjatlashtirish. (Swagger, Redoc) | 📝 |
 | 10 | 4 | API havfsizligini ta’minlash | ⬜ |
 | 11 | 4 | Tayyor loyihani hostingga joylash (deploy) | ⬜ |
 
