@@ -9,8 +9,8 @@ Manba: `4.1.Standart`, `4_1_O'quv_qo'llanma...`, `4_1_Uslubiy_ko'rsatma...`. Mat
 ## Joriy holat
 
 - Oxirgi o'tilgan dars: **0**
-- Keyingi dars: **7** (3-hafta)
-- Oxirgi yangilanish: **2026-10-04 (2-hafta tayyorlandi: 4-6 darslar)**
+- Keyingi dars: **10** (4-hafta)
+- Oxirgi yangilanish: **2026-10-04 (3-hafta tayyorlandi: 7-9 darslar)**
 
 ## Eslatmalar
 
@@ -37,9 +37,9 @@ Manba: `4.1.Standart`, `4_1_O'quv_qo'llanma...`, `4_1_Uslubiy_ko'rsatma...`. Mat
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 7 | 3 | Ranglar psixologiyasi va tipografiya | ⬜ |
-| 8 | 3 | Grid tizimlari va kompozitsiya | ⬜ |
-| 9 | 3 | Ikonka, tugma va navigatsiya elementlarini dizayni (UI Kit) | ⬜ |
+| 7 | 3 | Ranglar psixologiyasi va tipografiya | 📝 |
+| 8 | 3 | Grid tizimlari va kompozitsiya | 📝 |
+| 9 | 3 | Ikonka, tugma va navigatsiya elementlarini dizayni (UI Kit) | 📝 |
 
 ## IV bob. Prototiplash va Wireframe yaratish (3 dars)
 
