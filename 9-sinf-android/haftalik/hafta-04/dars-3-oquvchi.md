@@ -39,32 +39,106 @@ Kotlinda `1..5` yozuvi 1, 2, 3, 4, 5 sonlarini o'z ichiga olgan oraliqni bildira
 
 ## Topshiriqlar
 
-1. **Musbat yoki manfiy · oson**  
-   Son berilgan (`val son = -15`). `if-else` yordamida uning musbat yoki manfiy ekanligini konsolga chiqaring.
+### 1. Juft yoki toq · oson
 
-2. **Kattasini topish · oson**  
-   Ikkita son `a = 45` va `b = 78` berilgan. `val katta = if (a > b) a else b` ifodasi orqali kattasini aniqlang va chiqaring.
+Sonning juft yoki toqligini `val tur = if (son % 2 == 0) "Juft" else "Toq"` shaklida aniqlang. 3 xil son bilan sinang.
 
-3. **Fasllar aniqlagichi · oson**  
-   1 dan 4 gacha bo'lgan fasl raqamiga qarab fasl nomini (`1 &rarr; Qish, 2 &rarr; Bahor...`) chiqaruvchi `when` dasturini yozing.
+**Kutiladigan natija:** har son uchun to'g'ri javob.
 
-4. **Oraliq tekshiruvi · oson**  
-   O'quvchining yoshi berilgan. `in 7..17` sharti orqali uning maktab o'quvchisi ekanligini aniqlang.
+### 2. Katta son · oson
 
-5. **Parol uzunligi · o'rta**  
-   Parol satri berilgan. Agar uzunligi (`parol.length`) 8 dan kam bo'lsa &mdash; `"Zaif parol"`, 8 va undan ko'p bo'lsa &mdash; `"Xavfsiz parol"` deb chiqaring.
+`a` va `b` sonlardan kattasini `if` ifodasi bilan bitta qatorda toping.
 
-6. **Baholash tizimi · o'rta**  
-   0 dan 100 gacha bo'lgan ball berilgan. `when` va `in` orqali an'anaviy bahoni (2, 3, 4, 5) aniqlab, `val baho` o'zgaruvchisiga saqlang.
+**Kutiladigan natija:** `val kattasi = if (a > b) a else b` va to'g'ri natija.
 
-7. **Svetofor qoidasi · o'rta**  
-   Chiroq rangi (`"Qizil"`, `"Sariq"`, `"Yashil"`) bo'yicha haydovchiga nima qilish kerakligini ko'rsatuvchi `when` blokini yozing.
+### 3. Fasllar · oson
 
-8. **Oy kunlari soni · o'rta**  
-   Oy raqami (1..12) berilgan. `when` yordamida oydagi kunlar sonini (28, 30 yoki 31) aniqlang (bir nechta oyni vergul bilan yozing: `1, 3, 5, 7, 8, 10, 12 -> 31`).
+1–4 raqamga qarab fasl nomini `when` bilan chiqaring. Boshqa son kelsa, «Noto'g'ri fasl raqami» chiqsin.
 
-9. **Mini-Kalkulyator · qiyin**  
-   Ikkita haqiqiy son `val a = 12.0`, `val b = 4.0` va amal belgisi `val amal = "/"` berilgan. `when (amal)` orqali barcha 4 arifmetik amalni bajaring (0 ga bo'lish xavfini `if (b == 0.0)` bilan tekshiring).
+**Kutiladigan natija:** 5 ta sinovda to'g'ri javob, jumladan `else` holati.
 
-10. **Valyuta kursi va konvertatsiya · bonus**  
-    Foydalanuvchi summa (`100.0`) va valyuta kodi (`"USD"`, `"EUR"`, `"RUB"`) kiritadi. `when` orqali mos kursga ko'paytirib, o'zbek so'midagi yakuniy summani chiqaring.
+### 4. Kirish ruxsati · oson
+
+Yosh 18 dan katta yoki teng bo'lsa «Xush kelibsiz!», aks holda «Kirish taqiqlanadi.» chiqaring.
+
+**Kutiladigan natija:** 17 va 18 yosh uchun ikki xil natija.
+
+### 5. Hafta kunlari · o'rta
+
+1 dan 7 gacha son bo'yicha hafta kuni nomini `when` ifodasi bilan `val kunNomi` ga saqlang.
+
+**Kutiladigan natija:** 7 ta to'g'ri javob va `else` uchun «Bunday kun yo'q».
+
+### 6. Ball → baho · o'rta
+
+Ballni `when` va `in` oraliqlari bilan bahoga aylantiring: 90–100 → 5, 70–89 → 4, 60–69 → 3, 0–59 → 2.
+
+**Kutiladigan natija:** 88 → 4, 95 → 5, 59 → 2, 120 → «Noto'g'ri ball».
+
+### 7. Natijani bashorat qiling · o'rta
+
+Ishga tushirmasdan javob bering, keyin tekshiring:
+
+```kotlin
+val x = 10
+val s = when {
+    x > 5 -> "katta"
+    x > 0 -> "musbat"
+    else -> "boshqa"
+}
+println(s)
+```
+
+**Kutiladigan natija:** `katta`: birinchi to'g'ri shart bajarilgach `when` to'xtaydi.
+
+### 8. Bir nechta qiymat · o'rta
+
+Oy raqami bo'yicha faslni toping: `12, 1, 2 -> "Qish"` kabi vergul bilan bir nechta qiymat yozing.
+
+**Kutiladigan natija:** 12 ta oy uchun to'g'ri fasl.
+
+### 9. Xatoni toping · qiyin
+
+Bu kod kompilyatsiya bo'lmaydi. Nega? Tuzating:
+
+```kotlin
+val ball = 75
+val baho = when (ball) {
+    in 90..100 -> "A'lo"
+    in 70..89 -> "Yaxshi"
+}
+```
+
+**Kutiladigan natija:** sabab: ifoda sifatidagi `when` da `else` yo'q; `else -> ...` qo'shilgan.
+
+### 10. Svetofor moduli · qiyin
+
+Chiroq rangi (`"Qizil"`, `"Sariq"`, `"Yashil"`) va tezlik berilgan. Yashilda tezlik 60 dan oshsa ogohlantirish chiqaring. `when` ichida `if` ishlating.
+
+**Kutiladigan natija:** 4 ta holat uchun to'g'ri ko'rsatma, jumladan noma'lum signal.
+
+### 11. Mini-kalkulyator · qiyin
+
+`a = 20.0`, `b = 5.0` va `amal` (`"+"`, `"-"`, `"*"`, `"/"`) berilgan. `when (amal)` bilan natijani hisoblang. `b = 0.0` bo'lsa bo'lishda ogohlantirish chiqsin.
+
+**Kutiladigan natija:** to'rt amal uchun to'g'ri natija va nolga bo'lish holati.
+
+### 12. Chegirma tizimi · bonus
+
+Xarid summasiga qarab chegirmani toping: 100 minggacha 0%, 500 minggacha 5%, 1 milliongacha 10%, undan ko'p 15%. Yakuniy to'lovni chiqaring.
+
+**Kutiladigan natija:** bir nechta summa uchun to'g'ri chegirma va to'lov.
+
+## O'zingizni tekshiring
+
+1. Kotlin'da ternar operator bormi? Uning o'rniga nima ishlatiladi?
+2. `if` ifoda sifatida ishlatilganda `else` shartmi?
+3. `when` Java'dagi qaysi operator o'rnini bosadi?
+4. `when` da `break` yozish kerakmi?
+5. Oraliq qanday tekshiriladi?
+6. `when` ifoda sifatida ishlatilganda nima majburiy?
+7. Argumentsiz `when { ... }` qachon qulay?
+
+## Uyga vazifa
+
+Yosh toifasini aniqlash (`when` + `in`), mini-kalkulyator va chegirma tizimi dasturlarini yozing (20–30 daqiqa). To'liq shart: `uyga-vazifa.md`.

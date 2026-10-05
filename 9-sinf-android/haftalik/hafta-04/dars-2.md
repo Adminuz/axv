@@ -151,4 +151,4 @@ fun main() {
 
 1. `val` va `var` yordamida o'z smartfoningiz haqidagi ma'lumotlarni (modeli, narxi, xotirasi, quvvat foizi) saqlovchi dastur yozing.
 2. 3 ta fandan olingan baholarning o'rtacha arifmetik qiymatini hisoblab, `${...}` shabloni orqali chiqaring.
-3. String ko'rinishidagi narxni (`val narx = "150000"`) `toInt()` orqali songa o'tkazib, 15% QQS qo'shilgan summani hisoblang.
+3. String ko'rinishidagi narxni (`val narx = "150000"`) `toInt()` orqali songa o'tkazib, 12% QQS qo‘shilgan summani hisoblang.

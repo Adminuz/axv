@@ -40,35 +40,87 @@ Rang psixologiyasida ko'k rang ishonchlilik, xavfsizlik va barqarorlik hissini u
 
 ## Topshiriqlar
 
-1. **Monoxromatik to'rtburchaklar · oson**  
-   Figma'da 4 ta to'rtburchak chizing va bitta rangning (masalan binafsha) 4 xil och-to'q soyasini bering.
+### 1. Monoxromatik to'rtburchaklar · oson
 
-2. **Komplementar juftlik · oson**  
-   Rang g'ildiragidan foydalanib quyidagi ranglarning qarama-qarshi (komplementar) juftini toping:  
-   a) Ko'k &rarr; ?  
-   b) Qizil &rarr; ?  
-   c) Sariq &rarr; ?
+Figma'da 4 ta to'rtburchak chizing va bitta rangning (masalan, binafsha) 4 xil och-to'q soyasini bering. HSB da faqat S va B ni o'zgartiring.
 
-3. **HEX kodlarini aniqlash · oson**  
-   Figma'da «Eyedropper» (pipetka &mdash; `I` tugmasi) orqali sevimli ilovangiz logotipining asosiy rang HEX kodini aniqlang.
+**Kutiladigan natija:** 4 ta bir oilaviy rang: ton (H) bir xil, to'yinganlik va yorqinlik har xil.
 
-4. **Kontrastli tugma · oson**  
-   To'q ko'k (`#0D47A1`) fonga ega tugma chizing va uning ichiga oq (`#FFFFFF`) matn bilan `"Boshlash"` deb yozing.
+### 2. Komplementar juftlik · oson
 
-5. **60-30-10 qoidasi sxemasi · o'rta**  
-   Figma'da 3 ta doira chizing: 60% lik doiraga och kulrang fon, 30% lik doiraga oq karta rangi, 10% lik doiraga yorqin yashil aksent rangini bering.
+Rang g'ildiragi bo'yicha qarama-qarshi juftini toping: a) ko'k; b) qizil; c) sariq.
 
-6. **WebAIM tekshiruvi · o'rta**  
-   Sariq fonga oq matn yozilgan tugma va to'q kulrang fonga oq matn yozilgan tugmaning kontrast nisbatini solishtiring. Nega birinchisidan foydalanish taqiqlanadi?
+**Kutiladigan natija:** 3 ta juftlik va har birining g'ildirakdagi o'rni chizilgan.
 
-7. **Ta'lim platformasi palitrasi · o'rta**  
-   Maktab o'quvchilari uchun ta'lim ilovasi dizayniga mos 3 ta rang (Fon: `#F8FAFC`, Asosiy matn: `#1E293B`, Aksent: `#3B82F6`) tanlang va kichik test oynasini chizing.
+### 3. Pipetka bilan HEX · oson
 
-8. **Tungi rejim (Dark mode) palitrasi · o'rta**  
-   Kunduzgi rejimdagi oq fonli kartani qorong'i rejimga (`#121212` fon, `#1E1E1E` karta, `#E0E0E0` matn) o'tkazing.
+Figma'da pipetka (`I` tugmasi) bilan sevimli ilovangiz logotipining asosiy HEX rangini aniqlang.
 
-9. **Madaniy farqlar tahlili · qiyin**  
-   Qizil rangning Yevropa moliya bozorlaridagi ma'nosi (pasayish / xavf) va Xitoy moliya bozorlaridagi ma'nosi (o'sish / omad) nima uchun farqlanishini va dizayner bundan qanday xulosa chiqarishi kerakligini yozma bayon qiling.
+**Kutiladigan natija:** logotip skrinshoti va uning HEX kodi yozilgan rangli to'rtburchak.
 
-10. **Mahsulot kartasi (Product Card) · bonus**  
-    Figma'da to'liq mahsulot kartasini chizing: Mahsulot rasmi, Nomi, Narxi, Chegirma tegi (qizil), «Savatga qo'shish» tugmasi (aksent brend rangi) va barcha WCAG kontrast talablariga rioya qiling.
+### 4. Kontrastli tugma · oson
+
+To'q ko'k fonli tugma chizing va ichiga oq matn bilan «Boshlash» deb yozing.
+
+**Kutiladigan natija:** matn uzoqdan ham aniq o'qiladigan tugma.
+
+### 5. 60-30-10 sxemasi · o'rta
+
+3 ta doira chizing: 60% li doiraga och kulrang fon, 30% li doiraga oq karta rangi, 10% li doiraga yorqin aksent rang bering. Keyin shu ranglar bilan kichik ekran chizing.
+
+**Kutiladigan natija:** sxema va ekran: aksent rang faqat asosiy tugma va havolalarda.
+
+### 6. Kontrastni o'lchang · o'rta
+
+Sariq fonga oq matnli va to'q kulrang fonga oq matnli tugmalarni kontrast tekshiruvchi vosita bilan o'lchang. Nega birinchisini ishlatib bo'lmaydi?
+
+**Kutiladigan natija:** ikki nisbat yozilgan va WCAG 4.5:1 talabi bilan solishtirilgan.
+
+### 7. Palitrani aniqlang · o'rta
+
+Uchta mashhur ilovaning (masalan, Telegram, Spotify, Instagram) bosh ekranini ko'rib, har birida qaysi palitra turi (monoxromatik, analog, komplementar, triadik) ishlatilganini aniqlang.
+
+**Kutiladigan natija:** 3 qatorli jadval: ilova, asosiy ranglar, palitra turi va qisqa sabab.
+
+### 8. Tungi rejim · o'rta
+
+Oq fonli kartani tungi rejimga o'tkazing: fon juda to'q kulrang, karta biroz ochroq, matn och kulrang bo'lsin.
+
+**Kutiladigan natija:** kunduzgi va tungi nusxa yonma-yon; ikkalasida ham matn aniq o'qiladi.
+
+### 9. Madaniy farqlar · qiyin
+
+Qizil rang Yevropa moliya bozorida pasayish, Xitoyda esa o'sish va omadni bildiradi. Xalqaro ilova uchun dizayner bundan qanday xulosa chiqarishi kerak?
+
+**Kutiladigan natija:** 4-5 jumlalik javob: auditoriyani bilish, faqat rangga tayanmaslik (ikonka, matn ham qo'shish).
+
+### 10. Xatoni toping · qiyin
+
+Bitta ekranda 7 xil yorqin rang, och sariq fonda oq matn va 5 ta bir xil rangli tugma bor. Kamida 3 ta xatoni toping va tuzatilgan variantni chizing.
+
+**Kutiladigan natija:** xatolar ro'yxati (ko'p rang, past kontrast, CTA ajralmaydi) va 60-30-10 ga mos tuzatilgan ekran.
+
+### 11. Brend rangi tanlash · qiyin
+
+Maktab kutubxonasi ilovasi uchun bitta asosiy brend rangini tanlang. Nega aynan shu rang? Unga mos monoxromatik va komplementar yordamchi ranglarni toping.
+
+**Kutiladigan natija:** asosiy rang, 3 ta soya, 1 ta komplementar rang va 2-3 jumlalik asos.
+
+### 12. Mahsulot kartasi · bonus
+
+To'liq mahsulot kartasini chizing: rasm, nomi, narxi, qizil chegirma tegi va brend rangidagi «Savatga qo'shish» tugmasi. Barcha matnlar WCAG talabiga mos bo'lsin.
+
+**Kutiladigan natija:** 60-30-10 ga mos, kontrasti tekshirilgan, chiroyli karta.
+
+## O'zingizni tekshiring
+
+1. Rang palitrasining 4 turini sanang.
+2. Monoxromatik va analog palitra farqi nima?
+3. Komplementar ranglar g'ildirakda qanday joylashadi?
+4. 60-30-10 qoidasida har bir ulush nimaga beriladi?
+5. WCAG bo'yicha oddiy va katta matn uchun minimal kontrast qancha?
+6. Nega interfeysda bitta asosiy brend rangi tanlanadi?
+
+## Uyga vazifa
+
+«60-30-10 rang palitrasi va kontrast»: o'z brendingiz uchun 3 ta rang tanlang, «Mahsulot kartasi»ni chizing va tugma kontrasti kamida 4.5:1 ekanini tekshiring (20–30 daqiqa). To'liq shart: `uyga-vazifa.md`.

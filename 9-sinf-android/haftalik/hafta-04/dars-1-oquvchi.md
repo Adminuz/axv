@@ -42,32 +42,87 @@ Ha! Android 11 va undan yuqori versiyalarda Android Studio'da *Pair Devices Usin
 
 ## Topshiriqlar
 
-1. **Dasturchi rejimini yoqish · oson**  
-   O'z Android smartfoningizda *Build Number* ustiga 7 marta bosib, *Developer Options* menyusini faollashtiring.
+### 1. Dasturchi rejimini yoqish · oson
 
-2. **USB Debugging ruxsati · oson**  
-   Yangi ochilgan *Developer Options* menyusiga kirib, *USB Debugging* tugmachasini yoqing.
+Telefoningizda *Sozlamalar → Telefon haqida → Build Number* ustiga 7 marta bosing.
 
-3. **Kompyuterga ulash · oson**  
-   Smartfonni USB kabel orqali kompyuterga ulang va ekranga chiqqan *Allow USB Debugging?* oynasida *Always allow* qilib tasdiqlang.
+**Kutiladigan natija:** «Siz endi dasturchisiz!» xabari chiqadi va sozlamalarda *Developer Options* bo'limi paydo bo'ladi.
 
-4. **ADB bilan tekshirish · oson**  
-   Android Studio'dagi *Terminal* oynasini ochib, `adb devices` buyrug'ini tering. Natijada qurilmangiz kodi va `device` so'zi chiqqanini tekshiring.
+### 2. USB Debugging · oson
 
-5. **Ilovani telefonda ishga tushirish · oson**  
-   Android Studio yuqori panelida emulyator o'rniga o'z telefoningiz nomini tanlang va yashil `Run` (&blacktriangleright;) tugmasini bosing.
+*Developer Options* ichida *USB Debugging* ni yoqing, telefonni kabel bilan ulang va RSA oynasida *Always allow* ni belgilang.
 
-6. **Log.d xabarini qo'shish · o'rta**  
-   `MainActivity.kt` fayliga `Log.d("MENING_ILOVAM", "Salom, bu mening birinchi log xabarim!")` kodini yozing.
+**Kutiladigan natija:** kompyuter telefonga ruxsat oldi, oyna qayta chiqmaydi.
 
-7. **Logcat qidiruvidan foydalanish · o'rta**  
-   Android Studio'dagi *Logcat* oynasini oching va qidiruv satriga `tag:MENING_ILOVAM` deb yozib, o'z xabaringizni toping.
+### 3. adb devices · oson
 
-8. **Log darajalari bilan tajriba · o'rta**  
-   Dasturda bir vaqtning o'zida `Log.i()`, `Log.w()`, `Log.e()` xabarlarini yuboring va ularning Logcat oynasida qanday ranglarda (ko'k, sariq, qizil) chiqishini kuzating.
+Android Studio *Terminal* oynasida `adb devices` buyrug'ini tering.
 
-9. **Crash xatosini tahlil qilish · qiyin**  
-   Kodingizga ataylab xato yozing (`val a = 5 / 0`) va ilovani ishga tushiring. Ilova yopilib ketgach, Logcat oynasidagi qizil xabardan xatolik qaysi fayl va qaysi qatorda bo'lganini aniqlang.
+**Kutiladigan natija:** ro'yxatda qurilma kodi va yonida `device` so'zi (`unauthorized` emas).
 
-10. **Ekran o'lchamlarini logda chiqarish · bonus**  
-    `resources.displayMetrics` yordamida telefoningiz ekran kengligi va balandligini pikselda aniqlab, `Log.i("EKRAN", "Kenglik: $width, Balandlik: $height")` ko'rinishida Logcat'ga chiqaring.
+### 4. Telefonda ishga tushirish · oson
+
+Yuqori paneldagi qurilmalar ro'yxatidan emulyator o'rniga telefoningizni tanlab, `Run` tugmasini bosing.
+
+**Kutiladigan natija:** ilova telefon ekranida ochiladi.
+
+### 5. Birinchi log xabari · o'rta
+
+`MainActivity.kt` dagi `onCreate` ichiga `Log.d("MENING_ILOVAM", "Salom, bu mening birinchi log xabarim!")` qatorini qo'shing va `import android.util.Log` ni unutmang.
+
+**Kutiladigan natija:** ilova ishga tushganda Logcat'da shu xabar chiqadi.
+
+### 6. Logcat filtri · o'rta
+
+Logcat qidiruv satriga `tag:MENING_ILOVAM` yozing. Keyin `level:error` filtrini sinab ko'ring.
+
+**Kutiladigan natija:** birinchi filtrda faqat sizning xabaringiz, ikkinchisida faqat xatolar qoladi.
+
+### 7. Log darajalari · o'rta
+
+Bir vaqtda `Log.v`, `Log.d`, `Log.i`, `Log.w`, `Log.e` xabarlarini yuboring va Logcat'da qanday ko'rinishini kuzating.
+
+**Kutiladigan natija:** 5 ta xabar; har darajaning harfi (V, D, I, W, E) va rangi farq qiladi. Jadvalga yozing.
+
+### 8. Qaysi daraja? · o'rta
+
+Har vaziyatga mos darajani tanlang: a) tugma bosildi (tekshirish uchun); b) internet sekin, lekin ilova ishlayapti; c) server javob bermadi va ilova yopildi; d) foydalanuvchi profili yuklandi.
+
+**Kutiladigan natija:** 4 ta javob va har biriga bitta jumla sabab.
+
+### 9. Crash tahlili · qiyin
+
+Kodga ataylab xato yozing (`val a = 5 / 0`) va ilovani ishga tushiring. Logcat'dagi qizil xabardan xato turi, fayl nomi va qator raqamini toping.
+
+**Kutiladigan natija:** `ArithmeticException` va xato bo'lgan `MainActivity.kt` qatori aniqlangan.
+
+### 10. Emulyator yoki real qurilma? · qiyin
+
+Uchta vaziyatda nima tanlaysiz: a) GPS orqali yo'l chizish; b) kompyuter juda kuchsiz; c) 5 xil ekran o'lchamida tez ko'rish. Har birini asoslang.
+
+**Kutiladigan natija:** jadval: vaziyat, tanlov (emulyator / real qurilma), sabab.
+
+### 11. ADB qismlari · qiyin
+
+ADB ning 3 qismini (Client, Server, Daemon) sxema qilib chizing: qaysi biri kompyuterda, qaysi biri telefonda ishlaydi va buyruq qanday yo'l bosadi?
+
+**Kutiladigan natija:** strelkali sxema: terminal → server (kompyuter) → adbd (telefon).
+
+### 12. Ekran o'lchami logda · bonus
+
+`resources.displayMetrics` yordamida telefon ekranining kengligi va balandligini pikselda oling va `Log.i("EKRAN", "Kenglik: $w, Balandlik: $h")` ko'rinishida chiqaring.
+
+**Kutiladigan natija:** Logcat'da telefoningizning haqiqiy ekran o'lchamlari.
+
+## O'zingizni tekshiring
+
+1. Nega ilovani real qurilmada ham sinash kerak? 3 ta sabab ayting.
+2. Developer Options qanday yoqiladi?
+3. ADB qanday 3 qismdan iborat?
+4. `adb devices` natijasida `unauthorized` chiqsa nima qilasiz?
+5. Logcat nima?
+6. Log darajalarini quyidan yuqoriga sanang.
+
+## Uyga vazifa
+
+Telefoningizda USB Debugging ni yoqing, `adb devices` natijasi va Logcat'dagi `Log.i("UY_IShI", ...)` xabarining skrinshotini oling (20–30 daqiqa). To'liq shart: `uyga-vazifa.md`.

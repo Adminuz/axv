@@ -288,7 +288,7 @@ h1 {
     <thead><tr><th>Turi</th><th>Yozilishi</th><th>Nimani tanlaydi</th></tr></thead>
     <tbody>
       <tr class="fragment"><td>Element</td><td><code>p</code></td><td>Barcha &lt;p&gt; teglari</td></tr>
-      <tr class="fragment"><td>Class</td><td><code>.karta</code></td><td>class="karta" elementlar</td></tr>
+      <tr class="fragment"><td>Class</td><td><code>.karta</code></td><td>class=&quot;karta&quot; elementlar</td></tr>
       <tr class="fragment"><td>Id</td><td><code>#logo</code></td><td>id="logo" yagona element</td></tr>
       <tr class="fragment"><td>Universal</td><td><code>*</code></td><td>Sahifadagi hamma element</td></tr>
       <tr class="fragment"><td>Guruh</td><td><code>h1, h2</code></td><td>Vergul bilan sanalganlar</td></tr>
@@ -319,8 +319,8 @@ p {
     </code></pre>
     <pre><code class="language-html" data-trim data-noescape>
 &lt;p&gt;Oddiy matn&lt;/p&gt;
-&lt;div class="karta"&gt;...&lt;/div&gt;
-&lt;div class="karta"&gt;...&lt;/div&gt;
+&lt;div class=&quot;karta&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;karta&quot;&gt;...&lt;/div&gt;
 &lt;h1 id="logo"&gt;AXV&lt;/h1&gt;
     </code></pre>
   </div>
@@ -338,9 +338,9 @@ p {
       <ul>
         <li>Nuqta bilan: <code>.karta</code></li>
         <li>Ko'p elementda takrorlanadi</li>
-        <li>Bitta elementda bir nechta: <code>class="karta katta"</code></li>
+        <li>Bitta elementda bir nechta: <code>class=&quot;karta katta&quot;</code></li>
       </ul>
-      <div class="callout tip">Ko'pincha shu ishlatiladi</div>
+      <p class="mt"><b>Ko'pincha shu ishlatiladi</b></p>
     </div>
     <div class="side b fragment">
       <h3><i data-ic="hash"></i> Id</h3>
@@ -349,7 +349,7 @@ p {
         <li>Sahifada faqat bir marta</li>
         <li>Yagona, noyob element uchun</li>
       </ul>
-      <div class="callout warn">Bir id ikki marta yozilmaydi</div>
+      <p class="mt"><b>Bir id ikki marta yozilmaydi</b></p>
     </div>
   </div>
   <aside class="notes">
@@ -470,7 +470,7 @@ p { color: red; }
 #asosiy { color: blue; }
     </code></pre>
     <pre><code class="language-html" data-trim data-noescape>
-&lt;p id="asosiy" class="xabar"&gt;
+&lt;p id="asosiy" class=&quot;xabar&quot;&gt;
   Salom!
 &lt;/p&gt;
     </code></pre>

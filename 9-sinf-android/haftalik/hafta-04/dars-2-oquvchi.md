@@ -45,40 +45,101 @@ val yosh = 16        // Kotlin o'zi Int ekanini tushunadi
 
 ## Topshiriqlar
 
-1. **O'zgarmas o'zgaruvchi · oson**  
-   `val mamlakat = "O'zbekiston"` o'zgaruvchisini e'lon qiling va uni `println()` bilan chiqaring.
+### 1. val yoki var? · oson
 
-2. **O'zgaruvchan ball · oson**  
-   `var ball = 50` deb e'lon qiling, keyingi qatorda unga 30 ball qo'shing va yangi qiymatni chiqaring.
+Har biri uchun `val` yoki `var` tanlang: tug'ilgan yil, joriy ball, ism, telefon quvvati foizi, pi soni, savatdagi mahsulotlar soni.
 
-3. **String shabloni · oson**  
-   `ism` va `familiya` o'zgaruvchilarini yarating va `$ism $familiya` shabloni orqali to'liq ismni ekranga chiqaring.
+**Kutiladigan natija:** 6 ta javob: o'zgarmaydiganlar `val`, o'zgaradiganlar `var`.
 
-4. **Yosh hisobi · oson**  
-   Tug'ilgan yilingizni `val tugilganYil = 2010` deb saqlang va `${2026 - tugilganYil}` shabloni orqali joriy yoshingizni chiqaring.
+### 2. Ma'lumot turlari · oson
 
-5. **To'g'ri tur tanlash · oson**  
-   Quyidagi ma'lumotlar uchun to'g'ri turni tanlab o'zgaruvchilar yarating:  
-   a) Do'kondagi non narxi (Double);  
-   b) Maktabdagi sinf raqami (Int);  
-   c) Dars boshlanganmi (Boolean).
+Har qiymatning Kotlin turini yozing: `15`, `12500.50`, `4.5f`, `true`, `'A'`, `"Android"`.
 
-6. **Val xatosini topish · o'rta**  
-   Quyidagi kod nega xato berishini tushuntiring va uni to'g'rilang:  
-   ```kotlin
-   val tezlik = 60
-   tezlik = 80
-   println(tezlik)
-   ```
+**Kutiladigan natija:** `Int`, `Double`, `Float`, `Boolean`, `Char`, `String`.
 
-7. **Matndan songa o'tkazish · o'rta**  
-   `val str1 = "100"` va `val str2 = "250"` satrlarini `.toInt()` yordamida butun songa o'tkazing va ularning yig'indisini hisoblang.
+### 3. O'quvchi kartochkasi · oson
 
-8. **Doira yuzi · o'rta**  
-   `val pi = 3.14159` va `val radius = 5.0` berilgan. Doira yuzini ($S = \pi \cdot r^2$) hisoblang va natijani ekranga chiqaring.
+Ismingiz (`val`), yoshingiz (`var`), bo'yingiz (`val`, `Double`) va `val dasturchimi: Boolean` ni e'lon qilib, bitta `println` bilan chiqaring.
 
-9. **Valyuta konvertori · qiyin**  
-   AQSH dollarining so'mdagi kursi `val kurs = 12800.0` berilgan. Foydalanuvchining dollar miqdori (`val dollar = 150`) uchun so'mdagi umumiy summani va uning 12% daromad solig'ini hisoblab chiqaring.
+**Kutiladigan natija:** bitta qatorda barcha ma'lumotlar `$` shabloni orqali chiqadi.
 
-10. **Karta ma'lumotlarini formatlash · bonus**  
-    16 xonali plastik karta raqamini (`val karta = "8600123456789012"`) faqat oxirgi 4 ta raqamini ochiq qoldirib (`"**** **** **** 9012"`), xavfsiz ko'rinishda String Template orqali shakllantiring.
+### 4. Type inference · oson
+
+Turini yozmasdan `val shahar = "Toshkent"`, `val yil = 2026`, `val narx = 9.99` e'lon qiling. Android Studio'da o'zgaruvchi ustiga sichqonchani olib borib turini ko'ring.
+
+**Kutiladigan natija:** Kotlin turlarni o'zi aniqlagan: `String`, `Int`, `Double`.
+
+### 5. Xatoni toping · o'rta
+
+Bu kod nega ishlamaydi? Tuzating:
+
+```kotlin
+val ball = 70
+ball = ball + 15
+println("Yangi ball: $ball")
+```
+
+**Kutiladigan natija:** xato sababi (`Val cannot be reassigned`) va tuzatilgan kod `85` ni chiqaradi.
+
+### 6. Natijani bashorat qiling · o'rta
+
+Ishga tushirmasdan oldin natijani yozing, keyin tekshiring:
+
+```kotlin
+val a = 7
+val b = 3
+println("$a + $b = ${a + b}")
+println("$a + $b")
+```
+
+**Kutiladigan natija:** ikki qator natija va nega ikkinchisida yig'indi hisoblanmagani tushuntirilgan.
+
+### 7. Konvertatsiya · o'rta
+
+`val s1 = "45"` va `val s2 = "12"` matnlarini `toInt()` bilan songa o'tkazing, yig'indi va ko'paytmani chiqaring. `s1 + s2` nima berishini ham tekshiring.
+
+**Kutiladigan natija:** `57` va `540`; `s1 + s2` esa `"4512"` (matnlar ulanadi).
+
+### 8. Telefon ma'lumotlari · o'rta
+
+Smartfoningiz modeli (`String`), narxi (`Double`), xotirasi (`Int`), quvvat foizi (`var Int`) va kamerasi borligi (`Boolean`) uchun o'zgaruvchilar yarating. Quvvatni 15 ga kamaytirib, qayta chiqaring.
+
+**Kutiladigan natija:** ikki marta chiqarilgan ma'lumot: quvvat foizi o'zgargan, qolganlari bir xil.
+
+### 9. O'rtacha baho · qiyin
+
+3 ta fandan baholarni `Int` da saqlang va o'rtachasini `${...}` ichida hisoblab chiqaring. Nega `(5 + 4 + 4) / 3` butun son beradi? Qanday qilib aniq o'nlik natija olasiz?
+
+**Kutiladigan natija:** to'g'ri o'rtacha `4.33...`: `toDouble()` yoki `/ 3.0` ishlatilgan.
+
+### 10. Xavfli konvertatsiya · qiyin
+
+`"abc".toInt()` ni ishga tushiring. Qanday xato chiqadi? `toIntOrNull()` bilan sinab ko'ring va farqni yozing.
+
+**Kutiladigan natija:** `NumberFormatException` va `toIntOrNull()` ning `null` qaytarishi tushuntirilgan.
+
+### 11. QQS hisoblash · qiyin
+
+`val narx = "150000"` ni songa o'tkazib, 12% QQS qo'shilgan yakuniy summani hisoblang va chiroyli qilib chiqaring.
+
+**Kutiladigan natija:** `Jami: 168000.0 so'm` kabi natija.
+
+### 12. Mini-profil · bonus
+
+O'zingiz haqingizda 6 ta turdagi (`Int`, `Double`, `Float`, `Boolean`, `Char`, `String`) o'zgaruvchi yarating va ularni ramka ichida chiroyli profil qilib chiqaring.
+
+**Kutiladigan natija:** bir nechta qatorli chiroyli profil, har turdan kamida bitta qiymat.
+
+## O'zingizni tekshiring
+
+1. Kotlin'ni kim yaratgan va Google uni qachon Android uchun tavsiya qilgan?
+2. `val` va `var` farqi nima?
+3. Nega ko'p hollarda `val` tavsiya etiladi?
+4. Kotlin'dagi 6 ta asosiy turni sanang.
+5. Type inference nima?
+6. String shablonida `$ism` va `${a + b}` qachon ishlatiladi?
+7. Matnni songa qanday aylantirasiz?
+
+## Uyga vazifa
+
+Smartfoningiz ma'lumotlari uchun `val`/`var` o'zgaruvchilar, 3 ta baho o'rtachasi va matnli narxga 12% QQS qo'shish dasturlarini yozing (20–30 daqiqa). To'liq shart: `uyga-vazifa.md`.

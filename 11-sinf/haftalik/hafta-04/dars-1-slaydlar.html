@@ -362,6 +362,103 @@ def test_order_subject_notifies_all_observers():
   </aside>
 </section>
 
+<!-- QO'SHIMCHA: Telegram o'xshatishi -->
+<section>
+  <h2>O‘xshatish: Telegram kanali</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 380">
+      <g data-tip="Subject: kanal postni bir marta e'lon qiladi va obunachilarni tanimaydi">
+        <rect class="fa pulse" x="390" y="20" width="220" height="90" rx="18"/>
+        <text class="t-head" x="500" y="60" text-anchor="middle" font-size="26">Kanal</text>
+        <text class="t-muted" x="500" y="92" text-anchor="middle" font-size="20">Subject: notify()</text>
+      </g>
+      <g class="fragment" data-tip="Observer: bir xil kontrakt - update(post)">
+        <line class="la flowing" x1="450" y1="110" x2="160" y2="240"/>
+        <line class="la flowing" x1="500" y1="110" x2="500" y2="240"/>
+        <line class="la flowing" x1="550" y1="110" x2="840" y2="240"/>
+        <rect class="fc" x="60" y="240" width="200" height="80" rx="14"/><text class="t-head" x="160" y="290" text-anchor="middle" font-size="22">Email</text>
+        <rect class="fc" x="400" y="240" width="200" height="80" rx="14"/><text class="t-head" x="500" y="290" text-anchor="middle" font-size="22">Analytics</text>
+        <rect class="fc" x="740" y="240" width="200" height="80" rx="14"/><text class="t-head" x="840" y="290" text-anchor="middle" font-size="22">Loyalty</text>
+      </g>
+      <g class="fragment" data-tip="Yangi obunachi qo'shish Subject kodini o'zgartirmaydi: loose coupling">
+        <text class="t-accent" x="500" y="365" text-anchor="middle" font-size="22">subscribe() / unsubscribe() - Subject kodi o‘zgarmaydi</text>
+      </g>
+    </svg>
+  </div>
+  <aside class="notes">Kanal egasi obunachilarni tanimaydi. Kim xohlasa obuna bo'ladi, kim xohlasa chiqib ketadi. Bu loose coupling.</aside>
+</section>
+
+<!-- QO'SHIMCHA: Sinxron va asinxron -->
+<section>
+  <h2>Sinxron Observer yoki asinxron pub/sub?</h2>
+  <div class="swap">
+    <div class="swap-tabs"><button type="button">Sinxron Observer</button><button type="button">Asinxron pub/sub</button></div>
+    <div class="swap-p"><div class="card"><h3>Bitta jarayon ichida</h3><p>Kuzatuvchi tugamaguncha kutiladi. Juda sodda, lekin jarayon yiqilsa hodisa yo‘qoladi.</p></div></div>
+    <div class="swap-p"><div class="card accent"><h3>Xizmatlar o‘rtasida (navbat / event bus)</h3><p>E’lon qilish tez, kuzatuvchi mustaqil. Navbat hodisani saqlaydi. Infratuzilma kerak: RabbitMQ, Kafka, SQS.</p></div></div>
+  </div>
+</section>
+
+<!-- QO'SHIMCHA: Navbat sxemasi -->
+<section>
+  <h2>Event-driven: navbat orqali</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 340">
+      <rect class="fa" x="20" y="120" width="190" height="90" rx="16"/><text class="t-head" x="115" y="172" text-anchor="middle" font-size="22">Producer</text>
+      <g class="fragment" data-tip="Navbat: cho'qqi yukda bufer, hodisani saqlaydi">
+        <line class="la flowing" x1="210" y1="165" x2="300" y2="165"/>
+        <rect class="fn" x="300" y="110" width="360" height="110" rx="16"/>
+        <rect class="fb" x="320" y="135" width="60" height="60" rx="8"/><rect class="fb" x="395" y="135" width="60" height="60" rx="8"/><rect class="fb" x="470" y="135" width="60" height="60" rx="8"/><rect class="fb" x="545" y="135" width="60" height="60" rx="8"/>
+        <text class="t-muted" x="480" y="250" text-anchor="middle" font-size="20">message queue</text>
+      </g>
+      <g class="fragment" data-tip="Consumer'lar mustaqil masshtablanadi">
+        <line class="lc flowing" x1="660" y1="150" x2="760" y2="90"/><line class="lc flowing" x1="660" y1="180" x2="760" y2="240"/>
+        <rect class="fc" x="760" y="50" width="200" height="80" rx="14"/><text class="t-head" x="860" y="98" text-anchor="middle" font-size="22">Consumer A</text>
+        <rect class="fc" x="760" y="200" width="200" height="80" rx="14"/><text class="t-head" x="860" y="248" text-anchor="middle" font-size="22">Consumer B</text>
+      </g>
+      <g class="fragment" data-tip="Yiqilgan hodisa yutilmaydi: dead-letter queue">
+        <line class="lb" x1="480" y1="220" x2="480" y2="280" stroke-dasharray="6 6"/>
+        <rect class="fb" x="400" y="280" width="160" height="50" rx="12"/><text class="t-head" x="480" y="313" text-anchor="middle" font-size="20">DLQ</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- QO'SHIMCHA: Xavflar flip -->
+<section>
+  <h2>Xavf va yechim. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:140px"><div class="flip-in"><div class="face front"><h3>Xotira oqimi</h3><span class="flip-hint">bosing</span></div><div class="face back"><p><code>unsubscribe</code> / weak reference</p></div></div></div>
+    <div class="flip" style="min-height:140px"><div class="flip-in"><div class="face front"><h3>Tartibga ishonish</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Tartib kafolatlanmaydi (Kafka: faqat bitta partition ichida)</p></div></div></div>
+    <div class="flip" style="min-height:140px"><div class="flip-in"><div class="face front"><h3>Takroriy hodisa</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Idempotentlik: <code>event-id</code> bo‘yicha deduplikatsiya</p></div></div></div>
+    <div class="flip" style="min-height:140px"><div class="flip-in"><div class="face front"><h3>Xatoni yutish</h3><span class="flip-hint">bosing</span></div><div class="face back"><p><code>try/except</code> + log yoki DLQ</p></div></div></div>
+  </div>
+</section>
+
+<!-- QO'SHIMCHA: Qachon kerak -->
+<section>
+  <h2>Observer qachon kerak, qachon ortiqcha?</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="circle-check" data-anim="pulse"></i></div><h3>Kerak</h3><p>Bitta hodisaga bir nechta mustaqil javob; javob beruvchilar soni o‘zgarib turadi; UI komponentlari</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="triangle-alert" data-anim="wiggle"></i></div><h3>Ortiqcha</h3><p>Bitta qabul qiluvchi, bitta aniq harakat, 5 qatorli skript: oddiy funksiya chaqirish yetarli</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="lightbulb"></i></div><h3>Qoida</h3><p>Andoza muammoni hal qilsin, murakkablik qo‘shmasin (over-engineering)</p></div></div>
+  </div>
+</section>
+
+<!-- QO'SHIMCHA: Quiz -->
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Komponent yopildi, lekin <code>unsubscribe</code> chaqirilmadi. Nima bo‘ladi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Python o‘zi avtomatik obunani bekor qiladi</button>
+      <button class="opt" type="button" data-ok>Subject havolani ushlab turadi: xotira oqimi, eskirgan kuzatuvchi hodisa olaveradi</button>
+      <button class="opt" type="button">Dastur darhol <code>TypeError</code> beradi</button>
+      <button class="opt" type="button">Boshqa kuzatuvchilar ishlamay qoladi</button>
+    </div>
+    <div class="explain">Ro‘yxatda havola qolgani uchun obyekt tozalanmaydi. Yechim: <code>unsubscribe</code> yoki weak reference.</div>
+  </div>
+</section>
+
 <!-- SLIDE 15: Mini-loyiha: Kutubxona boshqaruvi -->
 <section>
   <h2>Mini-loyiha: «Kutubxona boshqaruvi»</h2>

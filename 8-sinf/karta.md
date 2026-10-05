@@ -32,7 +32,7 @@ Manba: `8-sinf web full-stack dasturlash.docx` (o'quv dasturi). Agentlar avval s
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 10–11 | 4 | CSS asoslari: selektorlar, rang, shrift | ⬜ |
+| 10–11 | 4 | CSS asoslari: selektorlar, rang, shrift | 📝 |
 | 12–14 | 4–5 | Box model, flexbox va grid | ⬜ |
 | 15–17 | 5–6 | Responsiv dizayn, media so'rovlar, Figma | ⬜ |
 | 18–20 | 6–7 | Git va GitHub, hosting, SEO. Jamoa bilan loyiha | ⬜ |

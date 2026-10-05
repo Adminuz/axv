@@ -45,9 +45,9 @@ Manba: `4.1.Standart`, `4_1_O'quv_qo'llanma...`, `4_1_Uslubiy_ko'rsatma...`. Mat
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 10 | 4 | Prototip va ularning turlari (Low-fidelity vs High-fidelity) | ⬜ |
-| 11 | 4 | UX flow diagrammalari va axborot arxitekturasi | ⬜ |
-| 12 | 4 | Figma / Adobe XD da interaktiv Wireframe yaratish | ⬜ |
+| 10 | 4 | Prototip va ularning turlari (Low-fidelity vs High-fidelity) | 📝 |
+| 11 | 4 | UX flow diagrammalari va axborot arxitekturasi | 📝 |
+| 12 | 4 | Figma / Adobe XD da interaktiv Wireframe yaratish | 📝 |
 
 ## V bob. Front-End asoslari (HTML5, CSS3, JavaScript) (24 dars)
 

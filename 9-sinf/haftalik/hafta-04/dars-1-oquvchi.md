@@ -41,39 +41,87 @@
 
 ## Topshiriqlar
 
-1. **Atamalarni farqlash · oson**  
-   `Typeface` va `Font` farqini daftaringizga 2 ta aniq misol bilan yozing.
+### 1. Atamalarni farqlash · oson
 
-2. **Google Fonts kashfiyoti · oson**  
-   `fonts.google.com` saytiga kiring va *Inter*, *Roboto*, *Merriweather* shriftlarini qidirib toping.
+`Typeface` va `Font` farqini daftaringizga 2 ta aniq misol bilan yozing.
 
-3. **Serif va Sans Serif ajratish · oson**  
-   Quyidagi 4 ta shriftdan qaysilari Serif, qaysilari Sans Serif ekanini aniqlang:  
-   a) *Times New Roman*;  
-   b) *Arial*;  
-   c) *Georgia*;  
-   d) *Open Sans*.
+**Kutiladigan natija:** har misolda oila nomi (masalan, *Roboto*) va undagi variant (masalan, *Roboto Bold Italic*) alohida ko'rsatilgan.
 
-4. **Figma'da matn yaratish · oson**  
-   Figma dasturida yangi fayl oching, `T` (Text) asbobini tanlab, ekranga `"Mening birinchi tipografiya ishim"` matnini yozing.
+### 2. Serif yoki Sans Serif? · oson
 
-5. **Shrift o'lchamini sozlash · oson**  
-   Figma o'ng panelidagi *Typography* bo'limidan matn o'lchamini `32px`, qalinligini esa `Bold` qilib sozlang.
+Shriftlarni ikki guruhga ajrating: *Times New Roman*, *Arial*, *Georgia*, *Open Sans*, *Merriweather*, *Roboto*.
 
-6. **E-kutubxona sarlavhasi · o'rta**  
-   Figma'da «E-kutubxona» mobil ilovasi uchun 3 qatlamli matn bloki tuzing:  
-   - Katta sarlavha: *Poppins Bold, 24px*;  
-   - Kichik ta'rif: *Inter Regular, 14px*;  
-   - Sana/muallif: *Inter Light, 12px*.
+**Kutiladigan natija:** ikki ustunli jadval: chapda serif shriftlar, o'ngda sans serif shriftlar.
 
-7. **Satrlar oralig'i (Line height) · o'rta**  
-   Figma'da 4 qatorli matn yozing va uning *Line Height* parametrini `120%` dan `150%` ga o'zgartirib, o'qilishi qanday yaxshilanganini solishtiring.
+### 3. Google Fonts kashfiyoti · oson
 
-8. **Dekorativ va Skript tanlovi · o'rta**  
-   Qahvaxona logotipi uchun *Pacifico* (skript), texnologiya yangiliklari sayti uchun esa *Roboto* (sans-serif) shriftidan foydalanib 2 xil banner yarating.
+`fonts.google.com` saytida *Inter*, *Roboto* va *Merriweather* shriftlarini toping. Har birida nechta uslub (Light, Regular, Bold...) borligini yozing.
 
-9. **Jakob qonuni tahlili · qiyin**  
-   O'zbekistondagi mashhur bank yoki to'lov ilovalarining (Payme, Click, Uzum) interfeyslarida qanday shrift uslubi ishlatilganini tahlil qiling va nega dekorativ shrift tanlanmaganini yozma asoslang.
+**Kutiladigan natija:** 3 qatorli ro'yxat: shrift nomi, turi (serif/sans serif) va uslublar soni.
 
-10. **Tipografik ierarxiya kartasi · bonus**  
-    Figma'da bitta to'liq mobil yangilik kartasi (News Card) dizaynini chizing: Rasm, Kategoriya tegi (10px BOLD), Sarlavha (18px SemiBold), Qisqa xulosa (14px Regular), O'qish vaqti (12px Muted).
+### 4. Figma'da birinchi matn · oson
+
+Figma'da yangi Frame oching, `T` asbobi bilan «Mening birinchi tipografiya ishim» deb yozing va Typography bo'limida o'lchamni `32px`, qalinlikni `Bold` qiling.
+
+**Kutiladigan natija:** skrinshotda matn tanlangan va o'ng panelda 32 hamda Bold ko'rinib turibdi.
+
+### 5. E-kutubxona sarlavhasi · o'rta
+
+«E-kutubxona» ilovasi uchun 3 darajali matn blokini yarating: katta sarlavha (*Poppins Bold, 24px*), qisqa ta'rif (*Inter Regular, 14px*), sana va muallif (*Inter Light, 12px*).
+
+**Kutiladigan natija:** ko'z avval sarlavhaga, keyin ta'rifga, oxirida sanaga tushadi: o'lcham va qalinlik pasayib boradi.
+
+### 6. Line height tajribasi · o'rta
+
+4 qatorli matn yozing. Uning *Line Height* qiymatini avval `120%`, keyin `150%` qiling. Ikki holatni yonma-yon qo'yib solishtiring.
+
+**Kutiladigan natija:** ikki nusxa yonma-yon va 1-2 jumlalik xulosa: qaysi biri o'qishga qulayroq va nega.
+
+### 7. Ikki xil kayfiyat · o'rta
+
+Qahvaxona logotipi uchun *Pacifico* (skript), texnologiya yangiliklari banneri uchun *Roboto* (sans serif) bilan 2 ta kichik banner chizing.
+
+**Kutiladigan natija:** ikki banner: biri samimiy va iliq, ikkinchisi toza va neytral ko'rinadi.
+
+### 8. Xatoni toping · o'rta
+
+Do'stingiz uzun maqolaning asosiy matniga *Lobster* (dekorativ) shriftini 12px qilib bergan. Bu yerda nechta xato bor? Har birini qanday tuzatasiz?
+
+**Kutiladigan natija:** kamida 2 xato topilgan: dekorativ shrift uzun matnga mos emas va 12px mobil uchun juda kichik (14–16 kerak).
+
+### 9. Jakob qonuni tahlili · qiyin
+
+Payme, Click yoki Uzum ilovasining skrinshotini oling. Qanday shrift turi ishlatilganini aniqlang va nega dekorativ shrift tanlanmaganini Jakob qonuni orqali asoslang.
+
+**Kutiladigan natija:** skrinshot va 3-4 jumlalik tahlil: shrift turi, o'qilishi, foydalanuvchi kutishlari.
+
+### 10. GOV.UK va The Atlantic · qiyin
+
+Nega GOV.UK sans serif, The Atlantic esa serif ishlatadi? «Shakl funksiyadan keyin» tamoyili bilan tushuntiring va har biriga yana bitta o'xshash sayt toping.
+
+**Kutiladigan natija:** jadval: sayt, shrift turi, foydalanuvchi maqsadi (tez xizmat yoki uzoq o'qish).
+
+### 11. Kirish imkoniyati · qiyin
+
+Keksa yoki ko'rishi past foydalanuvchi uchun matnni qulay qilishning 3 ta usulini yozing va bittasini Figma'da ko'rsating.
+
+**Kutiladigan natija:** 3 ta usul (o'lcham, kontrast, sans serif yoki maxsus shrift) va bitta oldin/keyin namunasi.
+
+### 12. Yangilik kartasi · bonus
+
+Figma'da to'liq mobil yangilik kartasini chizing: rasm, kategoriya tegi (10px Bold), sarlavha (18px SemiBold), qisqa xulosa (14px Regular), o'qish vaqti (12px, och rang).
+
+**Kutiladigan natija:** 5 darajali aniq ierarxiyaga ega, toza va o'qilishi oson karta.
+
+## O'zingizni tekshiring
+
+1. Tipografiya nima va u interfeysga nima beradi?
+2. Typeface va font farqini misol bilan ayting.
+3. Shriftning 4 asosiy jihati qaysilar?
+4. Nega mobil ilovada sukut bo'yicha sans serif tavsiya etiladi?
+5. Dekorativ va skript shriftlar qayerda ishlatiladi, qayerda ishlatilmaydi?
+6. Figmada shrift sozlamalari qaysi bo'limda joylashgan?
+
+## Uyga vazifa
+
+«Tipografik ierarxiya va shrift juftligi»: Figma'da `Mobile (375x812)` Frame oching, sarlavha va asosiy matn uchun ikki shrift tanlang va 4 darajali yangilik kartasini yarating (20–30 daqiqa). To'liq shart: `uyga-vazifa.md`.

@@ -322,12 +322,13 @@
   <h2>Terminalda curl bilan API sinash</h2>
   <div class="terminal">
     <pre><code class="language-bash"># 1. Barcha kitoblarni olish
-curl -X GET http://localhost:8000/api/v1/books -H "Accept: application/json"
+curl -X GET http://localhost:8000/api/v1/books \
+  -H "Accept: application/json"
 
 # 2. Yangi kitob qo'shish
 curl -X POST http://localhost:8000/api/v1/books \
   -H "Content-Type: application/json" \
-  -d '{"title": "Clean Architecture", "author": "R. Martin", "price": 150000}'
+  -d '{"title": "Clean Code", "price": 150000}'
 
 # 3. Kitobni o'chirish
 curl -X DELETE http://localhost:8000/api/v1/books/42 -v</code></pre>
@@ -335,6 +336,105 @@ curl -X DELETE http://localhost:8000/api/v1/books/42 -v</code></pre>
   <aside class="notes">
     -v (verbose) bayrog'i sarlavhalarni to'liq ko'rish uchun zarurligini ko'rsating.
   </aside>
+</section>
+
+<!-- QO'SHIMCHA: So'rov-javob sxemasi -->
+<section>
+  <h2>So‘rov va javob: bitta aylana</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 360">
+      <rect class="fa" x="30" y="110" width="220" height="120" rx="18"/><text class="t-head" x="140" y="165" text-anchor="middle" font-size="26">Mijoz</text><text class="t-muted" x="140" y="200" text-anchor="middle" font-size="20">curl, brauzer</text>
+      <rect class="fc" x="750" y="110" width="220" height="120" rx="18"/><text class="t-head" x="860" y="165" text-anchor="middle" font-size="26">Server</text><text class="t-muted" x="860" y="200" text-anchor="middle" font-size="20">/api/books</text>
+      <g class="fragment" data-tip="Metod + URI + sarlavhalar + (ixtiyoriy) tana">
+        <line class="la flowing" x1="250" y1="140" x2="750" y2="140"/>
+        <text class="t-accent" x="500" y="120" text-anchor="middle" font-size="22">GET /api/books/5</text>
+        <text class="t-muted" x="500" y="75" text-anchor="middle" font-size="18">Accept: application/json · Authorization: Bearer ...</text>
+      </g>
+      <g class="fragment" data-tip="Status kodi + sarlavhalar + JSON tana">
+        <line class="lc flowing" x1="750" y1="210" x2="250" y2="210"/>
+        <text class="t-accent" x="500" y="245" text-anchor="middle" font-size="22">200 OK</text>
+        <text class="t-muted" x="500" y="285" text-anchor="middle" font-size="18">Content-Type: application/json</text>
+        <text class="t-muted" x="500" y="315" text-anchor="middle" font-size="18">{"id": 5, "title": "Sarob"}</text>
+      </g>
+    </svg>
+  </div>
+  <aside class="notes">Server seansni eslab qolmaydi (stateless): har so'rov tokenni o'zi olib keladi.</aside>
+</section>
+
+<!-- QO'SHIMCHA: URI tuzatish flip -->
+<section>
+  <h2>URL’ni tuzating. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:130px"><div class="flip-in"><div class="face front"><h3><code>/getAllBooks</code></h3><span class="flip-hint">bosing</span></div><div class="face back"><p><code>GET /api/books</code></p></div></div></div>
+    <div class="flip" style="min-height:130px"><div class="flip-in"><div class="face front"><h3><code>/api/book/create</code></h3><span class="flip-hint">bosing</span></div><div class="face back"><p><code>POST /api/books</code></p></div></div></div>
+    <div class="flip" style="min-height:130px"><div class="flip-in"><div class="face front"><h3><code>/api/deleteBook?id=5</code></h3><span class="flip-hint">bosing</span></div><div class="face back"><p><code>DELETE /api/books/5</code></p></div></div></div>
+    <div class="flip" style="min-height:130px"><div class="flip-in"><div class="face front"><h3><code>/api/books/5/getAuthor</code></h3><span class="flip-hint">bosing</span></div><div class="face back"><p><code>GET /api/books/5/author</code></p></div></div></div>
+  </div>
+  <p class="small mt">Qoida: «nima?» - URI (ko‘plikdagi ot), «qanday?» - HTTP metodi.</p>
+</section>
+
+<!-- QO'SHIMCHA: Idempotentlik SVG -->
+<section>
+  <h2>Idempotentlik: 3 marta yuborsak?</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 340">
+      <g data-tip="DELETE: necha marta yuborsak ham holat bir xil - kitob yo'q">
+        <text class="t-accent" x="250" y="40" text-anchor="middle" font-size="26">DELETE /api/books/5</text>
+        <rect class="fn" x="60" y="70" width="110" height="60" rx="10"/><text class="t-head" x="115" y="108" text-anchor="middle" font-size="20">204</text>
+        <rect class="fn" x="195" y="70" width="110" height="60" rx="10"/><text class="t-head" x="250" y="108" text-anchor="middle" font-size="20">404</text>
+        <rect class="fn" x="330" y="70" width="110" height="60" rx="10"/><text class="t-head" x="385" y="108" text-anchor="middle" font-size="20">404</text>
+        <rect class="fg" x="90" y="170" width="320" height="90" rx="14"/><text class="t-head" x="250" y="222" text-anchor="middle" font-size="22">holat: kitob yo‘q</text>
+        <text class="t-muted" x="250" y="300" text-anchor="middle" font-size="22">idempotent</text>
+      </g>
+      <g class="fragment" data-tip="POST: har yuborishda yangi resurs - holat o'zgaradi">
+        <text class="t-accent" x="750" y="40" text-anchor="middle" font-size="26">POST /api/books</text>
+        <rect class="fn" x="560" y="70" width="110" height="60" rx="10"/><text class="t-head" x="615" y="108" text-anchor="middle" font-size="20">201</text>
+        <rect class="fn" x="695" y="70" width="110" height="60" rx="10"/><text class="t-head" x="750" y="108" text-anchor="middle" font-size="20">201</text>
+        <rect class="fn" x="830" y="70" width="110" height="60" rx="10"/><text class="t-head" x="885" y="108" text-anchor="middle" font-size="20">201</text>
+        <rect class="fb pulse" x="590" y="170" width="320" height="90" rx="14"/><text class="t-head" x="750" y="222" text-anchor="middle" font-size="22">3 ta bir xil kitob</text>
+        <text class="t-muted" x="750" y="300" text-anchor="middle" font-size="22">idempotent emas: Idempotency-Key</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- QO'SHIMCHA: Stateless swap -->
+<section>
+  <h2>Holatsizlik (stateless)</h2>
+  <div class="swap">
+    <div class="swap-tabs"><button type="button">Seansli server</button><button type="button">Stateless REST</button></div>
+    <div class="swap-p"><div class="card"><h3>Server eslab qoladi</h3><p>Foydalanuvchi qaysi serverga kirgan bo‘lsa, faqat o‘sha server uni taniydi. Ikkinchi nusxa qo‘shish qiyin.</p></div></div>
+    <div class="swap-p"><div class="card accent"><h3>Har so‘rov o‘zi to‘liq</h3><p><code>Authorization: Bearer &lt;jwt&gt;</code> har so‘rovda keladi. Load balancer ortida istalgan nusxa javob beradi: gorizontal masshtablash oson.</p></div></div>
+  </div>
+</section>
+
+<!-- QO'SHIMCHA: Quiz -->
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Kitobning faqat <code>year</code> maydonini o‘zgartirish kerak. Qaysi so‘rov eng to‘g‘ri?</p>
+    <div class="opts">
+      <button class="opt" type="button"><code>GET /api/books/5?year=2001</code></button>
+      <button class="opt" type="button"><code>POST /api/updateYear</code></button>
+      <button class="opt" type="button" data-ok><code>PATCH /api/books/5</code> va tanada <code>{"year": 2001}</code></button>
+      <button class="opt" type="button"><code>DELETE /api/books/5</code>, keyin qayta yaratish</button>
+    </div>
+    <div class="explain">PATCH - qisman yangilash. GET bilan holatni o‘zgartirish xato, URI’da fe’l bo‘lmaydi.</div>
+  </div>
+</section>
+
+<!-- QO'SHIMCHA: Odatiy xatolar -->
+<section>
+  <h2>Odatiy xatolar</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="triangle-alert" data-anim="wiggle"></i></div><h3>Hammasiga 200</h3><p>Xatoni ham 200 bilan qaytarish: mijoz xatoni sezmaydi</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="lock"></i></div><h3>401 va 403</h3><p>401 - kimligi noma’lum, 403 - ma’lum, lekin ruxsat yo‘q</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="eye-off"></i></div><h3>Sir URL’da</h3><p>Token query’da loglarda qolib ketadi: sarlavhada yuboring</p></div>
+  </div>
+  <div class="stats mt">
+    <div class="stat"><div class="v"><span class="count" data-to="5">0</span></div><div class="l">HTTP metodi</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="9">0</span></div><div class="l">asosiy status kodi</div></div>
+  </div>
 </section>
 
 <!-- SLIDE 15: Interfaol savol -->

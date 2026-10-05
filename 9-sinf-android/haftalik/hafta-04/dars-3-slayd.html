@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="color-scheme" content="dark light">
-  <title>Kotlin: if va when Shart operatorlari</title>
+  <title>Kotlin: if va when</title>
   <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
   <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
   <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
@@ -17,196 +17,265 @@
   <div class="reveal">
     <img class="slide-logo" src="../../../reveal/logo.png" alt="">
     <div class="slides">
-<!-- SLIDE 1: Hero -->
-<section class="hero">
-  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
-  <h1>Kotlin: if va when Shart operatorlari</h1>
-  <p class="muted">Tarmoqlanuvchi algoritmlar · if ifoda sifatida · when operatori · Oraliqlar (in)</p>
-  <span class="badge">9-sinf</span><span class="badge">Android dasturlash</span><span class="badge">4-hafta · 12-dars</span>
-  <aside class="notes">
-    Kirish: «Dastur foydalanuvchi xatti-harakatiga qarab qanday qaror qabul qiladi? Java'dagi switch nega eskirgan va Kotlin'dagi when qanday ishlaydi?» deb boshlang.
-  </aside>
-</section>
+      <!-- 1. SARLAVHA -->
+      <section class="hero">
+        <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+        <h1>Kotlin: if va when</h1>
+        <p class="muted">Shart operatorlari va ularni ifoda sifatida ishlatish</p>
+        <span class="badge">9-sinf</span><span class="badge">Android dasturlash</span><span class="badge">4-hafta · 12-dars</span>
+        <aside class="notes">Takrorlash: val/var, turlar, $shablon. Bugun dastur qaror qabul qilishni o'rganadi.</aside>
+      </section>
 
-<!-- SLIDE 2: Reja -->
-<section>
-  <h2>Bugungi dars rejasi</h2>
-  <div class="cards three">
-    <div class="card fragment fade-up">
-      <div class="icon"><i data-ic="git-fork" data-anim="pulse"></i></div>
-      <h3>01. if-else ifodasi</h3>
-      <p>Shartli tekshiruv va <code>if</code> ning qiymat qaytarishi (Expression).</p>
-    </div>
-    <div class="card fragment fade-up">
-      <div class="icon"><i data-ic="list-filter" data-anim="float"></i></div>
-      <h3>02. when operatori</h3>
-      <p>Zamonaviy tanlash vositasi, bir nechta qiymatlar va oraliqlar (<code>in</code>).</p>
-    </div>
-    <div class="card fragment fade-up">
-      <div class="icon"><i data-ic="sparkles" data-anim="wiggle"></i></div>
-      <h3>03. when ifoda sifatida</h3>
-      <p>O'zgaruvchiga qiymat yuklash va majburiy <code>else</code> intizomi.</p>
-    </div>
-  </div>
-  <aside class="notes">
-    Dars rejasini tanishtiring.
-  </aside>
-</section>
+      <!-- 2. REJA -->
+      <section>
+        <h2>Bugun nimalarni o‘rganamiz?</h2>
+        <div class="cards three">
+          <div class="card fragment fade-up"><div class="icon"><i data-ic="git-branch" data-anim="float"></i></div><h3><code>if-else</code></h3><p>Oddiy shart va zanjir</p></div>
+          <div class="card fragment fade-up"><div class="icon"><i data-ic="equal" data-anim="pulse"></i></div><h3><code>if</code> - ifoda</h3><p>Qiymat qaytaradi: ternar operator o‘rniga</p></div>
+          <div class="card fragment fade-up"><div class="icon"><i data-ic="list" data-anim="bounce"></i></div><h3><code>when</code></h3><p>Qiymat, oraliq <code>in</code>, <code>else</code></p></div>
+        </div>
+      </section>
 
-<!-- SLIDE 3: Bo'lim 1 -->
-<section class="sec">
-  <div class="num">01</div>
-  <h1>if-else ifoda sifatida</h1>
-  <p>Ternar operatorsiz, toza va xavfsiz qiymat tanlash</p>
-  <aside class="notes">
-    1-qism: if as expression.
-  </aside>
-</section>
+      <!-- 3. TAKRORLASH -->
+      <section>
+        <h2>Takrorlash</h2>
+        <div class="quiz">
+          <p class="q"><code>val yosh = 16</code><br><code>println("Kelasi yil ${yosh + 1}")</code> nima chiqaradi?</p>
+          <div class="opts">
+            <button class="opt" type="button"><code>Kelasi yil 161</code></button>
+            <button class="opt" type="button" data-ok><code>Kelasi yil 17</code></button>
+            <button class="opt" type="button"><code>Kelasi yil ${yosh + 1}</code></button>
+            <button class="opt" type="button">Xato</button>
+          </div>
+          <div class="explain"><code>${...}</code> ichidagi ifoda hisoblanadi: 16 + 1 = 17.</div>
+        </div>
+      </section>
 
-<!-- SLIDE 4: if as expression -->
-<section>
-  <h2>if ifoda sifatida (Expression)</h2>
-  <div class="cards two">
-    <div class="card fragment">
-      <div class="icon"><i data-ic="code"></i></div>
-      <h3>An'anaviy if-else</h3>
-      <pre><code class="language-kotlin">var max = 0
-if (a > b) {
-    max = a
+      <!-- 4. SEC 01 -->
+      <section class="sec">
+        <div class="num">01</div>
+        <h1>if-else</h1>
+        <p>Shart to‘g‘ri bo‘lsa - bir yo‘l, aks holda - boshqa</p>
+      </section>
+
+      <!-- 5. SVG 1: TARMOQLANISH -->
+      <section>
+        <h2>Shart - yo‘l ayrilishi</h2>
+        <div class="illus">
+          <svg viewBox="0 0 1000 360">
+            <rect class="fn" x="380" y="20" width="240" height="70" rx="14"/>
+            <text class="t-head" x="500" y="65" text-anchor="middle" font-size="26">yosh = 17</text>
+            <polygon class="fa" points="500,120 640,190 500,260 360,190"/>
+            <text class="t-head" x="500" y="198" text-anchor="middle" font-size="24">yosh &gt;= 18 ?</text>
+            <line class="ln" x1="500" y1="90" x2="500" y2="120"/>
+            <g class="fragment" data-tip="Shart true bo'lsa"><line class="lg flowing" x1="360" y1="190" x2="200" y2="270"/><rect class="fg" x="40" y="270" width="300" height="70" rx="14"/><text class="t-head" x="190" y="314" text-anchor="middle" font-size="22">true: Xush kelibsiz!</text></g>
+            <g class="fragment" data-tip="Shart false bo'lsa - else"><line class="lb flowing" x1="640" y1="190" x2="800" y2="270"/><rect class="fb pulse" x="660" y="270" width="300" height="70" rx="14"/><text class="t-head" x="810" y="314" text-anchor="middle" font-size="22">false: Kirish taqiqlanadi</text></g>
+          </svg>
+        </div>
+      </section>
+
+      <!-- 6. KOD: if-else -->
+      <section>
+        <h2>if-else: kodda</h2>
+        <pre><code class="language-kotlin" data-trim data-line-numbers="1|2-3|4-6">
+val yosh = 17
+if (yosh >= 18) {
+    println("Xush kelibsiz!")
 } else {
-    max = b
-}</code></pre>
-    </div>
-    <div class="card fragment">
-      <div class="icon"><i data-ic="zap"></i></div>
-      <h3>Kotlinda qisqa ifoda</h3>
-      <pre><code class="language-kotlin">val max = if (a > b) a else b
-// Bir qatorda, val bilan xavfsiz!</code></pre>
-      <p class="t-accent"><em>Kotlinda ternary (?:) operatori o'rniga if ishlatiladi!</em></p>
-    </div>
-  </div>
-  <aside class="notes">
-    if natijasini to'g'ridan-to'g'ri val o'zgaruvchisiga tenglash mumkin.
-  </aside>
-</section>
+    println("Kirish taqiqlanadi.")
+}
+        </code></pre>
+        <p class="small fragment">Natija: <code>Kirish taqiqlanadi.</code></p>
+      </section>
 
-<!-- SLIDE 5: Bo'lim 2 -->
-<section class="sec">
-  <div class="num">02</div>
-  <h1>when: Zamonaviy tanlash operatori</h1>
-  <p>Switch o'rnini egallagan kuchli va moslashuvchan mexanizm</p>
-  <aside class="notes">
-    2-qism: when operatori.
-  </aside>
-</section>
+      <!-- 7. if-else if zanjiri -->
+      <section>
+        <h2>Zanjir: else if</h2>
+        <pre><code class="language-kotlin" data-trim data-line-numbers="2|3|4|5">
+val harorat = 28
+if (harorat > 30) println("Juda issiq")
+else if (harorat > 20) println("Iliq")
+else if (harorat > 10) println("Salqin")
+else println("Sovuq")
+        </code></pre>
+        <p class="small fragment">Shartlar yuqoridan pastga tekshiriladi, birinchi to‘g‘risi bajariladi: <code>Iliq</code>.</p>
+      </section>
 
-<!-- SLIDE 6: when sintaksisi -->
-<section>
-  <h2>when operatorining imkoniyatlari</h2>
-  <pre><code class="language-kotlin">val fasl = 2
+      <!-- 8. SEC 02 -->
+      <section class="sec">
+        <div class="num">02</div>
+        <h1>if - ifoda</h1>
+        <p>Kotlinda <code>? :</code> ternar operator yo‘q</p>
+      </section>
+
+      <!-- 9. VS -->
+      <section>
+        <h2>Boshqa tillar va Kotlin</h2>
+        <div class="vs">
+          <div class="side fragment"><h3>Java / JavaScript</h3><code>max = (a &gt; b) ? a : b;</code><br>ternar operator</div>
+          <div class="mid">VS</div>
+          <div class="side b fragment"><h3>Kotlin</h3><code>val max = if (a &gt; b) a else b</code><br><code>if</code> qiymat qaytaradi</div>
+        </div>
+        <div class="card accent fragment mt"><p>Ifoda sifatida ishlatilganda <code>else</code> <b>majburiy</b>: qiymat har doim bo‘lishi kerak.</p></div>
+      </section>
+
+      <!-- 10. auto-animate: if ifoda -->
+      <section data-auto-animate>
+        <h2>Juft yoki toq?</h2>
+        <pre data-id="jt"><code class="language-kotlin" data-trim>
+val son = 24
+        </code></pre>
+      </section>
+      <section data-auto-animate>
+        <h2>Juft yoki toq?</h2>
+        <pre data-id="jt"><code class="language-kotlin" data-trim data-line-numbers="1|2|3">
+val son = 24
+val tur = if (son % 2 == 0) "Juft" else "Toq"
+println("$son soni - $tur son.")
+        </code></pre>
+      </section>
+
+      <!-- 11. MINI-TEST 1 -->
+      <section>
+        <h2>Mini-test</h2>
+        <div class="quiz">
+          <p class="q"><code>val a = 15; val b = 25</code><br><code>val k = if (a &gt; b) a else b</code>. <code>k</code> nimaga teng?</p>
+          <div class="opts">
+            <button class="opt" type="button"><code>15</code></button>
+            <button class="opt" type="button"><code>true</code></button>
+            <button class="opt" type="button"><code>40</code></button>
+            <button class="opt" type="button" data-ok><code>25</code></button>
+          </div>
+          <div class="explain">15 &gt; 25 noto‘g‘ri, shuning uchun <code>else</code> qismidagi <code>b</code> qaytadi.</div>
+        </div>
+      </section>
+
+      <!-- 12. SEC 03 -->
+      <section class="sec">
+        <div class="num">03</div>
+        <h1>when</h1>
+        <p>Java’dagi <code>switch</code> o‘rniga, <code>break</code> siz</p>
+      </section>
+
+      <!-- 13. SVG 2: when tarmoqlari -->
+      <section>
+        <h2>when: bitta qiymat - ko‘p yo‘l</h2>
+        <div class="illus">
+          <svg viewBox="0 0 1000 360">
+            <rect class="fa" x="390" y="20" width="220" height="70" rx="14"/>
+            <text class="t-head" x="500" y="65" text-anchor="middle" font-size="26">when (fasl)</text>
+            <g class="fragment"><line class="la flowing" x1="450" y1="90" x2="110" y2="200"/><rect class="fn" x="30" y="200" width="160" height="70" rx="12"/><text class="t-head" x="110" y="244" text-anchor="middle" font-size="22">1 -&gt; Qish</text></g>
+            <g class="fragment"><line class="la flowing" x1="480" y1="90" x2="300" y2="200"/><rect class="fg pulse" x="220" y="200" width="160" height="70" rx="12"/><text class="t-head" x="300" y="244" text-anchor="middle" font-size="22">2 -&gt; Bahor</text></g>
+            <g class="fragment"><line class="la flowing" x1="500" y1="90" x2="490" y2="200"/><rect class="fn" x="410" y="200" width="160" height="70" rx="12"/><text class="t-head" x="490" y="244" text-anchor="middle" font-size="22">3 -&gt; Yoz</text></g>
+            <g class="fragment"><line class="la flowing" x1="520" y1="90" x2="680" y2="200"/><rect class="fn" x="600" y="200" width="160" height="70" rx="12"/><text class="t-head" x="680" y="244" text-anchor="middle" font-size="22">4 -&gt; Kuz</text></g>
+            <g class="fragment"><line class="lb flowing" x1="550" y1="90" x2="870" y2="200"/><rect class="fb" x="790" y="200" width="180" height="70" rx="12"/><text class="t-head" x="880" y="244" text-anchor="middle" font-size="22">else -&gt; ?</text></g>
+            <text class="t-muted" x="500" y="330" text-anchor="middle" font-size="22">fasl = 2 bo‘lsa, faqat «Bahor» bajariladi - break kerak emas</text>
+          </svg>
+        </div>
+      </section>
+
+      <!-- 14. KOD: when -->
+      <section>
+        <h2>when: kodda</h2>
+        <pre><code class="language-kotlin" data-trim data-line-numbers="1|2|3-6|7">
+val fasl = 2
 when (fasl) {
     1 -> println("Qish")
     2 -> println("Bahor")
     3 -> println("Yoz")
     4 -> println("Kuz")
-    else -> println("Noto'g'ri raqam")
+    else -> println("Noto'g'ri fasl raqami")
 }
-// break so'zi umuman shart emas!</code></pre>
-  <aside class="notes">
-    Java switch'idagi eng katta xato (break'ni unutish) Kotlinda butunlay hal qilingan.
-  </aside>
-</section>
+        </code></pre>
+      </section>
 
-<!-- SLIDE 7: Oraliqlar (in) bilan when -->
-<section>
-  <h2>Oraliqlar (Range: in ..)</h2>
-  <div class="cards two">
-    <div class="card fragment">
-      <div class="icon"><i data-ic="award"></i></div>
-      <h3>Baholash shkalasi</h3>
-      <pre><code class="language-kotlin">val ball = 85
+      <!-- 15. SVG 3: in oraliqlari -->
+      <section>
+        <h2>Oraliqlar: <code>in 90..100</code></h2>
+        <div class="illus">
+          <svg viewBox="0 0 1000 300">
+            <line class="ln" x1="40" y1="150" x2="960" y2="150"/>
+            <g class="fragment"><rect class="fb" x="40" y="110" width="540" height="80" rx="10"/><text class="t-head" x="310" y="160" text-anchor="middle" font-size="24">0..59 -&gt; 2</text></g>
+            <g class="fragment"><rect class="fn" x="590" y="110" width="90" height="80" rx="10"/><text class="t-head" x="635" y="160" text-anchor="middle" font-size="20">60..69 -&gt; 3</text></g>
+            <g class="fragment"><rect class="fc" x="690" y="110" width="180" height="80" rx="10"/><text class="t-head" x="780" y="160" text-anchor="middle" font-size="22">70..89 -&gt; 4</text></g>
+            <g class="fragment"><rect class="fg" x="880" y="110" width="80" height="80" rx="10"/><text class="t-head" x="920" y="160" text-anchor="middle" font-size="18">90..100</text></g>
+            <g class="fragment"><circle class="fa pulse" cx="832" cy="240" r="18"/><text class="t-accent" x="832" y="290" text-anchor="middle" font-size="24">ball = 88 -&gt; 4</text><line class="la" x1="832" y1="222" x2="832" y2="190"/></g>
+          </svg>
+        </div>
+      </section>
+
+      <!-- 16. KOD: when ifoda -->
+      <section>
+        <h2>when - ifoda sifatida</h2>
+        <pre><code class="language-kotlin" data-trim data-line-numbers="1|2|3-6|7|9">
+val ball = 88
 val baho = when (ball) {
     in 90..100 -> "5 (A'lo)"
     in 70..89  -> "4 (Yaxshi)"
     in 60..69  -> "3 (Qoniqarli)"
-    else       -> "2 (Qoniqarsiz)"
+    in 0..59   -> "2 (Qoniqarsiz)"
+    else       -> "Noto'g'ri ball"
 }
-println("Baho: $baho")</code></pre>
-    </div>
-    <div class="card fragment">
-      <div class="icon"><i data-ic="layers"></i></div>
-      <h3>Ko'p qiymatlarni birlashtirish</h3>
-      <pre><code class="language-kotlin">val oy = 5
-val kunlar = when (oy) {
-    1, 3, 5, 7, 8, 10, 12 -> 31
-    4, 6, 9, 11 -> 30
-    2 -> 28
-    else -> 0
-}</code></pre>
-    </div>
-  </div>
-  <aside class="notes">
-    in 90..100 sintaksisini va vergul bilan bir nechta qiymat berishni ko'rsating.
-  </aside>
-</section>
+println("Natija: $baho")
+        </code></pre>
+      </section>
 
-<!-- SLIDE 8: Bo'lim 3 -->
-<section class="sec">
-  <div class="num">03</div>
-  <h1>Amaliyot va Xavfsizlik</h1>
-  <p>To'liq qamrov va else blokining zarurligi</p>
-  <aside class="notes">
-    3-qism: else va amaliy dastur.
-  </aside>
-</section>
+      <!-- 17. FLIP: when imkoniyatlari -->
+      <section>
+        <h2>when imkoniyatlari. Bosing</h2>
+        <div class="cards two">
+          <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Bir nechta qiymat</h3><span class="flip-hint">bosing</span></div><div class="face back"><p><code>12, 1, 2 -&gt; "Qish"</code></p></div></div></div>
+          <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Oraliq</h3><span class="flip-hint">bosing</span></div><div class="face back"><p><code>in 13..18 -&gt; "O'smir"</code></p></div></div></div>
+          <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Tur tekshiruvi</h3><span class="flip-hint">bosing</span></div><div class="face back"><p><code>is String -&gt; "matn"</code></p></div></div></div>
+          <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Argumentsiz</h3><span class="flip-hint">bosing</span></div><div class="face back"><p><code>when { x &gt; 5 -&gt; ... }</code> - if-else zanjiri o‘rniga</p></div></div></div>
+        </div>
+      </section>
 
-<!-- SLIDE 9: Mini-dastur -->
-<section>
-  <h2>Svetofor va Tezlik boshqaruvi</h2>
-  <pre><code class="language-kotlin">val chiroq = "Yashil"
-val tezlik = 65
+      <!-- 18. MINI-TEST 2 -->
+      <section>
+        <h2>Xatoni toping</h2>
+        <div class="quiz">
+          <p class="q"><code>val baho = when (ball) {</code><br><code>&nbsp;&nbsp;in 90..100 -&gt; "A'lo"</code><br><code>&nbsp;&nbsp;in 70..89 -&gt; "Yaxshi" }</code> - nega kompilyatsiya bo‘lmaydi?</p>
+          <div class="opts">
+            <button class="opt" type="button"><code>break</code> yo‘q</button>
+            <button class="opt" type="button" data-ok>Ifoda sifatida ishlatilgan, lekin <code>else</code> yo‘q</button>
+            <button class="opt" type="button"><code>in</code> ishlatib bo‘lmaydi</button>
+            <button class="opt" type="button"><code>val</code> o‘rniga <code>var</code> kerak</button>
+          </div>
+          <div class="explain">Ball 50 bo‘lsa, <code>baho</code> qiymatsiz qoladi. Shuning uchun <code>else</code> majburiy.</div>
+        </div>
+      </section>
 
-when (chiroq) {
-    "Qizil" -> println("TO'XTANG!")
-    "Sariq" -> println("DIQQAT!")
-    "Yashil" -> {
-        if (tezlik > 60) {
-            println("Ogohlantirish: Tezlik yuqori ($tezlik km/soat)!")
-        } else {
-            println("Harakatlanishga ruxsat.")
-        }
-    }
-    else -> println("Noma'lum signal")
-}</code></pre>
-  <aside class="notes">
-    when ichida blok {} va if-else birga qanday ishlashini ko'rsating.
-  </aside>
-</section>
+      <!-- 19. STEPPER: svetofor -->
+      <section>
+        <h2>Svetofor moduli: when + if</h2>
+        <div class="stepper">
+          <div class="stp on"><div class="card"><div class="icon"><i data-ic="octagon-x" data-anim="pulse"></i></div><h3>"Qizil"</h3><p>TO‘XTANG! Harakatlanish taqiqlanadi.</p></div></div>
+          <div class="stp"><div class="card"><div class="icon"><i data-ic="triangle-alert"></i></div><h3>"Sariq"</h3><p>DIQQAT! Harakatga tayyorlaning.</p></div></div>
+          <div class="stp"><div class="card"><div class="icon"><i data-ic="gauge"></i></div><h3>"Yashil"</h3><p>Ichida <code>if (tezlik &gt; 60)</code>: ogohlantirish yoki ruxsat.</p></div></div>
+        </div>
+      </section>
 
-<!-- SLIDE 10: Xulosa -->
-<section>
-  <h2>4-hafta xulosasi</h2>
-  <div class="cards three">
-    <div class="card fragment">
-      <div class="icon"><i data-ic="smartphone"></i></div>
-      <h3>10-dars: Real qurilma</h3>
-      <p>ADB drayverlari, USB Debugging va Logcat tahlili.</p>
-    </div>
-    <div class="card fragment">
-      <div class="icon"><i data-ic="code"></i></div>
-      <h3>11-dars: val &amp; var</h3>
-      <p>Kotlin turlari, o'zgarmaslik (val) va String shablonlari.</p>
-    </div>
-    <div class="card fragment">
-      <div class="icon"><i data-ic="git-fork"></i></div>
-      <h3>12-dars: if &amp; when</h3>
-      <p>Qaror qabul qilish, if ifodalari va <code>when</code> imkoniyatlari.</p>
-    </div>
-  </div>
-  <aside class="notes">
-    4-haftani umumlashtiring.
-  </aside>
-</section>
+      <!-- 20. AMALIYOT -->
+      <section>
+        <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+        <div class="task"><span class="level easy">Oson</span>Juft yoki toq: <code>val tur = if (...) ... else ...</code></div>
+        <div class="task"><span class="level mid">O'rta</span>1–7 son bo‘yicha hafta kuni nomi: <code>when</code> va <code>else</code>.</div>
+        <div class="task"><span class="level hard">Qiyin</span>Svetofor va tezlik monitoringi: <code>when</code> ichida <code>if</code>.</div>
+        <div class="stats mt">
+          <div class="stat"><div class="v"><span class="count" data-to="3">0</span></div><div class="l">daraja</div></div>
+        </div>
+      </section>
+
+      <!-- 21. XULOSA -->
+      <section>
+        <h2>Xulosa</h2>
+        <div class="cards two">
+          <div class="card"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Bugun o‘rgandik</h3><p><code>if-else</code>, <code>else if</code>, <code>if</code> ifoda sifatida, <code>when</code> qiymat, oraliq va <code>else</code> bilan.</p></div>
+          <div class="card"><div class="icon"><i data-ic="book-open"></i></div><h3>Uyga vazifa</h3><p>Yosh toifasi, mini-kalkulyator, chegirma tizimi.</p></div>
+        </div>
+        <p class="fragment mt">Keyingi hafta: <b>Kotlin davomi</b> - sikllar va funksiyalar.</p>
+      </section>
 
     </div>
   </div>
