@@ -120,9 +120,9 @@ print(sorted(s), len(s))
 `["Ali", "Vali", "Ali", "Laylo", "Vali", "Madina"]` listida nechta turli mehmon borligini va ularni alifbo tartibida chiqaring.
 **Kutiladigan natija:** `4` va tartiblangan ismlar.
 
-### 9. Takrorlanmas so‘zlar · qiyin
-Foydalanuvchi matn kiritadi. Matndagi takrorlanmas so‘zlarni (kichik harflarda) alifbo tartibida va ularning sonini chiqaring.
-**Kutiladigan natija:** `Salom dunyo salom Python` → `['dunyo', 'python', 'salom']`, `3 ta`.
+### 9. Takrorlanmas harflar · qiyin
+Foydalanuvchi bitta so‘z kiritadi. So‘zdagi takrorlanmas harflarni (kichik harflarda) alifbo tartibida va ularning sonini chiqaring.
+**Kutiladigan natija:** `Dasturlash` -> 8 ta harf: `['a', 'd', 'h', 'l', 'r', 's', 't', 'u']`.
 
 ### 10. Bloklangan loginlar · qiyin
 Bloklangan loginlar setini yarating. Foydalanuvchidan login so‘rang: bloklangan bo‘lsa `"Kirish taqiqlangan"`, aks holda `"Xush kelibsiz"`, so‘ng yangi loginni ham `add()` bilan «faol foydalanuvchilar» setiga qo‘shing.

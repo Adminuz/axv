@@ -42,41 +42,74 @@ Satrlar o'zgarmas (immutable) bo'lgani sababli, Python ularni xotirada xavfsiz k
 
 ## Topshiriqlar
 
-1. **Uch usul · oson**  
-   O‘z ismingizni `"..."` bilan, familiyangizni `'...'` bilan e'lon qiling va ikkalasini alohida qatorda ekranga chiqaring.
+### 1. Uch usul · oson
+O‘z ismingizni `"..."` bilan, familiyangizni `'...'` bilan yarating va ikkalasini alohida qatorda chiqaring.
+**Kutiladigan natija:** 2 qatorda ism va familiya.
 
-2. **Ko'p qatorli matn · oson**  
-   `"""..."""` yordamida sevimli kitobingizdan 3 qatorli parcha yoki maqolni bitta o'zgaruvchida saqlab, ekranga chiqaring.
+### 2. Ko‘p qatorli matn · oson
+`"""..."""` yordamida 3 qatorli maqolni bitta o‘zgaruvchida saqlang va bitta `print()` bilan chiqaring.
+**Kutiladigan natija:** 3 qator matn.
 
-3. **Apostrofli matn · oson**  
-   Matn ichida `"O'zbekiston - kelajagi buyuk davlat!"` jumlasi bo'lgan satr yarating (tashqi tirnoqlardan to'g'ri foydalaning).
+### 3. Apostrofli matn · oson
+`O'zbekiston - kelajagi buyuk davlat!` jumlasidan iborat string yarating (tashqi tirnoqni to‘g‘ri tanlang).
+**Kutiladigan natija:** Jumla xatosiz chiqadi.
 
-4. **Tirnoq ichida tirnoq · oson**  
-   Ekranga `Alisher dedi: "Bugun dars juda qiziq bo'ldi!"` matnini chiqaruvchi bitta `print()` yozing.
+### 4. Tirnoq ichida tirnoq · oson
+Ekranga `Alisher dedi: "Bugun dars juda qiziq bo'ldi!"` matnini chiqaruvchi bitta `print()` yozing.
+**Kutiladigan natija:** Matn qo‘shtirnoqlari bilan chiqadi.
 
-5. **Satr uzunligi · oson**  
-   `shahar = "Samarqand"` satri berilgan. `len()` funksiyasidan foydalanib unda nechta belgi borligini aniqlang.
+### 5. Turini aniqlang · o'rta
+`a = "15"`, `b = 15`, `c = """15"""` ning turlarini `type()` bilan chiqaring. Qaysilari string?
+**Kutiladigan natija:** `str`, `int`, `str`.
 
-6. **Satrlarni ulash (Konkatenatsiya) · o'rta**  
-   `a = "Backend"` va `b = "Dasturchi"` o'zgaruvchilarini oralariga bo'sh joy (`" "`) qo'shib birlashtiring.
+### 6. Bu kod nima chiqaradi? · o'rta
+```python
+s = "Python"
+t = "J" + s[1:]
+print(s, t)
+```
+Avval daftarga javob yozing, keyin tekshiring.
+**Kutiladigan natija:** Bashoratingiz va haqiqiy natija bir xil.
 
-7. **Kodni bashorat qiling · o'rta**  
-   Quyidagi kod nima chiqaradi va nega?  
-   ```python
-   s = "Python"
-   t = "J" + s[1:]
-   print(s, t)
-   ```
+### 7. Xatoni toping · o'rta
+```python
+shahar = 'O'zbekiston'
+print(shahar)
+```
+Nega xato chiqadi? Tuzating.
+**Kutiladigan natija:** `O'zbekiston` chiqadi.
 
-8. **Bosh harfni o'zgartirish · o'rta**  
-   `word = "Salom"` satrining birinchi harfini `"K"` ga almashtirib yangi `Kalom` satrini hosil qiling. Asl `word` o'zgaruvchisi o'zgarmaganini isbotlang.
+### 8. Satr uzunligi · o'rta
+`shahar = "Samarqand"` va `gap = "Men dasturchiman"` uchun `len()` natijasini chiqaring. Bo‘sh joy hisobga kirdimi?
+**Kutiladigan natija:** `9` va `16`.
 
-9. **Tuzilmalarni moslashtirish · qiyin**  
-   Quyidagi 4 ta ma'lumot uchun Python'ning qaysi ma'lumotlar tuzilmasi eng mos kelishini tanlang va izohlang:  
-   a) O'quvchining ismi;  
-   b) Baholar ro'yxati (o'zgarishi mumkin);  
-   c) GPS koordinatalari (kenglik, uzunlik &mdash; o'zgarmas);  
-   d) Telefon daftarchasi (ism &rarr; raqam).
+### 9. Bosh harfni almashtirish · qiyin
+`word = "Salom"` dan `"Kalom"` hosil qiling. So‘ng `"Salom!"` yarating. Asl `word` o‘zgarmaganini chiqarib isbotlang.
+**Kutiladigan natija:** `Kalom`, `Salom!`, `Salom`.
 
-10. **Taqiqlangan amal va TypeError · bonus**  
-    `matn = "Salom"` satrida `matn[0] = "X"` deb yozganda yuzaga keladigan xatolikni `try/except` yordamida ushlang va ekranga `"Satrlarni to'g'ridan-to'g'ri o'zgartirib bo'lmaydi!"` xabarini chiqaring.
+### 10. Jython va Cython · qiyin
+`s = "Python"` dan bir-biridan mustaqil `"Jython"` va `"Cython"` stringlarini yarating. `s` ham, ikkala yangi string ham chiqsin.
+**Kutiladigan natija:** `Python Jython Cython`
+
+### 11. Tuzilmalarni moslashtirish · qiyin
+Quyidagi ma’lumotlar uchun mos tuzilmani tanlang va izoh shaklida yozing: a) o‘quvchining ismi; b) o‘zgaradigan baholar ro‘yxati; c) GPS koordinatalari (o‘zgarmas); d) telefon daftarchasi (ism -> raqam).
+**Kutiladigan natija:** 4 ta javob va qisqa izoh.
+
+### 12. Men haqimda kartochka · bonus
+Ism (`"`), maktab (`'`) va 3 qatorli «Men haqimda» (`"""`) stringlarini yarating. Ismning birinchi harfini (`ism[0]`) va har bir stringning `len()` ini chiqaring.
+**Kutiladigan natija:** Kartochka va 3 ta uzunlik.
+
+## O'zingizni tekshiring
+
+1. Ma’lumotlar tuzilmasi nima va nega uni to‘g‘ri tanlash muhim?
+2. Pythonning 5 ta asosiy tuzilmasini ayting.
+3. String ichida qanday belgilar bo‘lishi mumkin?
+4. Stringni qanday 3 usulda yaratish mumkin?
+5. Nega `s[0] = "J"` xato beradi?
+6. String o‘zgarmas bo‘lsa, «o‘zgartirilgan» variantni qanday olamiz?
+
+## Uyga vazifa
+
+1. `string_asos.py`: ism (`"`), familiya (`'`) va 3 qatorli «Men haqimda» (`"""`) matnini yarating va chiqaring.
+2. `s = "Python"` dan `"Jython"` va `"Cython"` yasang, asl `s` o‘zgarmaganini isbotlang.
+3. Ism, yosh, fanlar ro‘yxati, koordinata, telefon-ism juftligi uchun mos tuzilmani izoh shaklida yozing.

@@ -48,38 +48,77 @@
 
 ## Topshiriqlar
 
-1. **Meva ro'yxati · oson**  
-   `mevalar = ["olma", "banan", "shaftoli"]` ro'yxatini e'lon qiling va uning 0-hamda -1-indeksdagi elementlarini chiqaring.
+### 1. Meva ro‘yxati · oson
+`mevalar = ["olma", "banan", "shaftoli"]` ning 0- va -1-elementlarini chiqaring.
+**Kutiladigan natija:** `olma` va `shaftoli`.
 
-2. **Oxiriga qo'shish · oson**  
-   Bo'sh `shaxarlar = []` ro'yxatini tuzing va unga `.append()` yordamida navbatma-navbat 3 ta shahar nomini qo'shing.
+### 2. Oxiriga qo‘shish · oson
+Bo‘sh `shaharlar = []` yarating va `append()` bilan 3 ta shahar qo‘shing.
+**Kutiladigan natija:** 3 ta shahardan iborat list.
 
-3. **Boshiga kiritish · oson**  
-   `sonlar = [10, 20, 30]` ro'yxatining eng boshiga (`0`-indeksga) `.insert(0, 5)` orqali 5 sonini kiriting.
+### 3. Boshiga kiritish · oson
+`sonlar = [10, 20, 30]` boshiga `insert(0, 5)` bilan 5 ni kiriting.
+**Kutiladigan natija:** `[5, 10, 20, 30]`
 
-4. **Qiymatni o'zgartirish · oson**  
-   `baholar = [4, 5, 3, 5]` ro'yxatidagi 3 bahosini (`baholar[2]`) 5 ga o'zgartiring.
+### 4. Qiymatni o‘zgartirish · oson
+`baholar = [4, 5, 3, 5]` dagi 3 ni (`baholar[2]`) 5 ga o‘zgartiring.
+**Kutiladigan natija:** `[4, 5, 5, 5]`
 
-5. **Qiymat bo'yicha o'chirish · oson**  
-   `fanlar = ["Matematika", "Adabiyot", "Fizika"]` ro'yxatidan `.remove("Adabiyot")` yordamida "Adabiyot"ni o'chirib tashlang.
+### 5. Qiymat bo‘yicha o‘chirish · o'rta
+`fanlar = ["Matematika", "Adabiyot", "Fizika"]` dan `remove()` bilan `"Adabiyot"` ni o‘chiring.
+**Kutiladigan natija:** `['Matematika', 'Fizika']`
 
-6. **Oxirgi elementni sug'urish · o'rta**  
-   `navbat = ["Ali", "Vali", "Gani"]` ro'yxatidan eng oxirgi odamni `.pop()` orqali sug'urib oling va `print("Xizmat ko'rsatildi:", odam)` deb chiqaring.
+### 6. Navbat · o'rta
+`navbat = ["Ali", "Vali", "Gani"]`. Birinchi odamni `pop(0)` bilan oling va `Xizmat ko'rsatildi: Ali` deb chiqaring, so‘ng qolgan navbatni chiqaring.
+**Kutiladigan natija:** `Xizmat ko'rsatildi: Ali` va `['Vali', 'Gani']`.
 
-7. **Boshidan sug'urish · o'rta**  
-   Xuddi shu navbatdan birinchi turgan odamni `.pop(0)` orqali oling va qolgan navbatni chiqaring.
+### 7. Bu kod nima chiqaradi? · o'rta
+```python
+a = [1, 2, 2, 3]
+a.remove(2)
+x = a.pop(0)
+print(x, a)
+```
+Avval bashorat qiling, keyin tekshiring.
+**Kutiladigan natija:** Bashoratingiz va haqiqiy natija.
 
-8. **Kodni bashorat qiling · o'rta**  
-   Quyidagi kod natijasini taxmin qiling va tekshiring:  
-   ```python
-   a = [1, 2, 2, 3]
-   a.remove(2)
-   x = a.pop(0)
-   print(x, a)
-   ```
+### 8. Slicing · o'rta
+`filmlar` ro‘yxatiga 5 ta film yozing. `[1:4]`, `[:2]` va `[::-1]` natijalarini chiqaring.
+**Kutiladigan natija:** 3 ta kesilgan list.
 
-9. **Talabaning fanlari mini-loyihasi · qiyin**  
-   Talaba ismi (`string`) va uning 3 ta fani (`list`) berilgan. Yangi fan qo'shing (`append`), 1-o'ringa boshqa fan kiriting (`insert`), bir fanni o'chiring (`remove`) va oxirgisini `pop()` qilib har bir holatdagi ro'yxatni chop eting.
+### 9. Xatoni toping · qiyin
+```python
+a = [10, 20, 30]
+a.insert(99)
+a.remove(40)
+print(a[3])
+```
+Har bir qatordagi xatoni tushuntiring va kodni ishlaydigan qiling.
+**Kutiladigan natija:** Xatosiz ishlaydigan kod.
 
-10. **Ro'yxatni saralash va tozalash · bonus**  
-    `raqamlar = [45, 12, 89, 3, 27]` ro'yxatini o'sish tartibida saralang (`.sort()`), so'ngra `.clear()` qilib bo'sh qolganini ko'rsating.
+### 10. Metodlar zanjiri · qiyin
+`a = [1, 2]` bilan ketma-ket: `append(3)`, `insert(0, 0)`, `remove(2)`, `pop()`, `clear()`. Har qadamdan keyin `a` ni chiqaring.
+**Kutiladigan natija:** `[1, 2, 3]`, `[0, 1, 2, 3]`, `[0, 1, 3]`, `[0, 1]`, `[]`.
+
+### 11. Talabaning fanlari · qiyin
+Talaba ismi (`string`) va 3 ta fani (`list`) berilgan. Yangi fan qo‘shing (`append`), 1-o‘ringa boshqa fan kiriting (`insert`), bir fanni o‘chiring (`remove`), oxirgisini `pop()` qiling. Har holatdagi ro‘yxatni va `len()` ni chiqaring.
+**Kutiladigan natija:** 4 bosqichdagi ro‘yxatlar.
+
+### 12. Teskari navbat · bonus
+`navbat = ["Ali", "Vali", "Gani", "Laylo"]`. `while` sikli va `pop()` yordamida ro‘yxat bo‘shaguncha har safar oxirgi odamni chiqaring (`while navbat:`).
+**Kutiladigan natija:** `Laylo`, `Gani`, `Vali`, `Ali` va oxirida `[]`.
+
+## O'zingizni tekshiring
+
+1. List nima va uning 3 ta xususiyatini ayting.
+2. List va string’ning umumiy jihati va asosiy farqi nimada?
+3. `append()` va `insert()` farqi nima?
+4. `remove()` va `pop()` qachon ishlatiladi?
+5. `pop()` va `pop(0)` farqi nima?
+6. `clear()` dan keyin list nimaga teng bo‘ladi?
+
+## Uyga vazifa
+
+1. `list_mashq.py`: 5 ta film ro‘yxatini yarating; birinchi, oxirgi elementni, `[1:4]` va `[::-1]` ni chiqaring.
+2. `a = [1, 2]` ni `append`, `insert`, `remove`, `pop`, `clear` bilan o‘zgartirib, har qadamni chop eting.
+3. «Talabalar ma’lumotlari» boshlang‘ich qismi: ism-familiya `string`, fanlar `list` (qo‘shish va o‘chirish bilan).

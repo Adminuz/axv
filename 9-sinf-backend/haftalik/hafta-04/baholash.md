@@ -1,57 +1,95 @@
-# 4-hafta. Baholash (faqat mentor uchun)
+# 4-hafta. Baholash
 
-Guruhdagi har bir o'quvchi uchun haftalik natijalar qaydnomasi.
+Dasturdagi mezonlarga asoslangan (100 ballik shkala): **90–100 — 5**, **71–89 — 4**, **60–70 — 3**, **0–59 — 2**.
 
-**Guruh:** 9-sinf (Advanced Back-end)  **Hafta:** 4-hafta  **Mentor:** ____________________
+Dasturda joriy nazorat o‘quv jarayoni davomida o‘tkaziladi (umumiy 100 ball: joriy nazorat 40, oraliq 20, yakuniy 40). 9-sinf guruhi (12–15 nafar o‘quvchi) uchun har bir dars bo‘yicha qayd etish shabloni.
 
-## Shkala va mezonlar
-
-100 ballik shkala: **90–100 — 5 (a'lo)**, **71–89 — 4 (yaxshi)**, **60–70 — 3 (qoniqarli)**, **0–59 — 2 (qoniqarsiz)**.
+## Mezonlar (har bir dars uchun)
 
 | Mezon | Max |
 |---|---|
-| Nazariy tushuncha (tezkor nazorat, savol-javob) | 30 |
-| Amaliy topshiriq (darsdagi amaliyot va mustaqil ish) | 30 |
-| Kod sifati va intizomi (PEP 8, toza kod, sintaksis) | 20 |
-| Uyga vazifa (o'z vaqtida va to'liq bajarilishi) | 20 |
+| Mavzu mohiyatini tushunadi va savollarga javob bera oladi (tezkor nazorat) | 30 |
+| Amaliy topshiriq: mustaqil va to‘g‘ri bajarilgan | 30 |
+| Kod tozaligi: to‘g‘ri tirnoq, indeks chegarasi, mos metod tanlangani | 20 |
+| Uyga vazifa o‘z vaqtida va to‘liq topshirilgan | 20 |
 | **Jami** | **100** |
 
----
+## 10-dars (Ma’lumotlar tuzilmalari va string asoslari)
 
-## O'quvchilar natijalari jadvali
+Kuzatiladi: tuzilma tushunchasi va 5 turi; stringni 3 usulda yaratish; immutable va `"J" + s[1:]`.
 
-| № | O'quvchi F.I.Sh. | 10-dars (str asoslari) /100 | 11-dars (slicing, metodlar) /100 | 12-dars (list metodlari) /100 | O'rtacha ball | Hafta bahosi |
+| O'quvchi | Nazorat /30 | Amaliyot /30 | Kod /20 | Uyga vazifa /20 | Jami | Baho |
 |---|---|---|---|---|---|---|
-| 1 | | | | | | |
-| 2 | | | | | | |
-| 3 | | | | | | |
-| 4 | | | | | | |
-| 5 | | | | | | |
-| 6 | | | | | | |
-| 7 | | | | | | |
-| 8 | | | | | | |
-| 9 | | | | | | |
-| 10 | | | | | | |
+| 1. | | | | | | |
+| 2. | | | | | | |
+| 3. | | | | | | |
+| 4. | | | | | | |
+| 5. | | | | | | |
+| 6. | | | | | | |
+| 7. | | | | | | |
+| 8. | | | | | | |
+| 9. | | | | | | |
+| 10. | | | | | | |
+| 11. | | | | | | |
+| 12. | | | | | | |
 
----
+## 11-dars (String: indeks, slicing va metodlar)
 
-## Darslar bo'yicha e'tibor qaratiladigan nuqtalar
+Kuzatiladi: musbat/manfiy indeks; `[b:t:q]` va tugash kirmasligi; `[::-1]`; 4 ta metod va natijani saqlash.
 
-### 10-dars. Ma’lumotlar tuzilmalari va string asoslari
-- 5 ta ma'lumotlar tuzilmasini farqlay olishi;
-- Stringning o'zgarmasligi (immutability) va `TypeError` sababini tushunishi;
-- Ko'p qatorli `"""` matnlar bilan to'g'ri ishlashi.
+| O'quvchi | Nazorat /30 | Amaliyot /30 | Kod /20 | Uyga vazifa /20 | Jami | Baho |
+|---|---|---|---|---|---|---|
+| 1. | | | | | | |
+| 2. | | | | | | |
+| 3. | | | | | | |
+| 4. | | | | | | |
+| 5. | | | | | | |
+| 6. | | | | | | |
+| 7. | | | | | | |
+| 8. | | | | | | |
+| 9. | | | | | | |
+| 10. | | | | | | |
+| 11. | | | | | | |
+| 12. | | | | | | |
 
-### 11-dars. String: indeks, slicing va metodlar
-- 0 va -1 indekslarini to'g'ri qo'llay olishi;
-- Slicing formulasi `[start:stop:step]` va stop kirmasligini bilishi;
-- `upper()`, `lower()`, `title()`, `capitalize()` metodlarini amalda to'g'ri ishlatishi.
+## 12-dars (List: yaratish, indeks va metodlar)
 
-### 12-dars. List (ro‘yxat): yaratish, indeks va metodlar
-- Listning mutable ekanini va indeks orqali qiymat o'zgartirishni bilishi;
-- `append()` va `insert()` farqlarini tushunishi;
-- `remove()`, `pop()` va `clear()` metodlarini to'g'ri tanlashi.
+Kuzatiladi: list mutable ekani; `append`/`insert` farqi; `remove`/`pop`/`clear` ni to‘g‘ri tanlash.
 
----
+| O'quvchi | Nazorat /30 | Amaliyot /30 | Kod /20 | Uyga vazifa /20 | Jami | Baho |
+|---|---|---|---|---|---|---|
+| 1. | | | | | | |
+| 2. | | | | | | |
+| 3. | | | | | | |
+| 4. | | | | | | |
+| 5. | | | | | | |
+| 6. | | | | | | |
+| 7. | | | | | | |
+| 8. | | | | | | |
+| 9. | | | | | | |
+| 10. | | | | | | |
+| 11. | | | | | | |
+| 12. | | | | | | |
 
-**Mentor xulosasi va tavsiyalari:** __________________________________________________
+## Hafta yakuni
+
+| O'quvchi | 10-dars | 11-dars | 12-dars | O'rtacha | Baho | Izoh (kuchli/zaif tomonlari) |
+|---|---|---|---|---|---|---|
+| 1. | | | | | | |
+| 2. | | | | | | |
+| 3. | | | | | | |
+| 4. | | | | | | |
+| 5. | | | | | | |
+| 6. | | | | | | |
+| 7. | | | | | | |
+| 8. | | | | | | |
+| 9. | | | | | | |
+| 10. | | | | | | |
+| 11. | | | | | | |
+| 12. | | | | | | |
+
+## Hafta xulosasi va keyingi haftaga ko'prik
+
+**Bu hafta:** Ma’lumotlar tuzilmasi tushunchasi va Pythonning 5 ta asosiy tuzilmasi bilan tanishildi. `string`: belgilar ketma-ketligi, `"..."`, `'...'`, `"""..."""` bilan yaratish, immutable xususiyati va yangi string yaratish (`"J" + s[1:]`); indeks (musbat va manfiy), slicing `[boshlanish : tugash : qadam]`, `upper()`, `lower()`, `title()`, `capitalize()`. `list`: tartibli va mutable ro‘yxat, indeks va slicing, `append()`, `insert()`, `remove()`, `pop()`, `clear()`.
+
+**Keyingi hafta (5-hafta, 13–15 darslar):** qolgan uchta tuzilma — o‘zgarmas `tuple`, takrorlanmaydigan `set` va kalit-qiymatli `dictionary`. Hafta yakunida beshta tuzilma «Talabalar ma’lumotlari» loyihasida birlashtiriladi; bu haftadagi «talabaning fanlari» mini-loyihasi uning boshlang‘ich qismi bo‘ladi.

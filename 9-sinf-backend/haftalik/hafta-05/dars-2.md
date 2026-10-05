@@ -185,21 +185,21 @@ hammasi = sinf_a | sinf_b
 print(f"Jami: {len(hammasi)} ta o'quvchi")
 ```
 
-### 5-topshiriq. Takrorlanmas so‘zlar (qiyin)
-Foydalanuvchi matn kiritadi. Matndagi takrorlanmas so‘zlarni alifbo tartibida va ularning sonini chiqaring (`lower()` va `split()` 4-haftadan).
+### 5-topshiriq. Takrorlanmas harflar (qiyin)
+Foydalanuvchi bitta so‘z kiritadi. So‘zdagi takrorlanmas harflarni (kichik harflarda, `lower()` 11-darsdan) alifbo tartibida va ularning sonini chiqaring.
 
-**Kutiladigan natija** (kiritish: `Salom dunyo salom Python`):
+**Kutiladigan natija** (kiritish: `Dasturlash`):
 ```text
-['dunyo', 'python', 'salom']
-Takrorlanmas so'zlar: 3 ta
+['a', 'd', 'h', 'l', 'r', 's', 't', 'u']
+Takrorlanmas harflar: 8 ta
 ```
 
 **Yechim:**
 ```python
-matn = input("Matn kiriting: ")
-sozlar = set(matn.lower().split())
-print(sorted(sozlar))
-print(f"Takrorlanmas so'zlar: {len(sozlar)} ta")
+soz = input("So'z kiriting: ")
+harflar = set(soz.lower())
+print(sorted(harflar))
+print(f"Takrorlanmas harflar: {len(harflar)} ta")
 ```
 
 ## 5. Tezkor nazorat (savollar va javoblar)

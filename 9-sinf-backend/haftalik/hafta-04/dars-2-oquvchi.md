@@ -49,32 +49,75 @@ Yo'q! String immutable bo'lgani sababli, `s.upper()` chaqirilganda `s` o'zgarib 
 
 ## Topshiriqlar
 
-1. **Birinchi va oxirgi belgi · oson**  
-   `word = "Python"` satrining birinchi va oxirgi harfini indekslar yordamida ekranga chiqaring.
+### 1. Birinchi va oxirgi belgi · oson
+`word = "Python"` ning birinchi va oxirgi harfini indeks bilan chiqaring.
+**Kutiladigan natija:** `P` va `n`.
 
-2. **So'zning o'rtasi · oson**  
-   `matn = "Dasturlash"` satridan `[3:7]` oraliqdagi qismni ajratib olib ekranga chiqaring.
+### 2. So‘zning o‘rtasi · oson
+`matn = "Dasturlash"` dan `[3:7]` qismini chiqaring.
+**Kutiladigan natija:** `turl`
 
-3. **Teskari o'girish · oson**  
-   `shahar = "Toshkent"` so'zini `[::-1]` yordamida teskari tartibda chiqaring.
+### 3. Teskari o‘girish · oson
+`shahar = "Toshkent"` ni `[::-1]` bilan teskari chiqaring.
+**Kutiladigan natija:** `tnekhsoT`
 
-4. **Katta harflar · oson**  
-   `fayl = "readme.txt"` satrini `.upper()` metodi bilan to'liq bosh harflarga aylantiring.
+### 4. Katta va kichik · oson
+`fayl = "readme.txt"` ni `upper()` bilan, `login = "ADMINISTRATOR"` ni `lower()` bilan chiqaring.
+**Kutiladigan natija:** `README.TXT` va `administrator`.
 
-5. **Harflarni kichraytirish · oson**  
-   `login = "ADMINISTRATOR"` satrini `.lower()` yordamida kichik harflarga o'tkazing.
+### 5. Har bir so‘z bosh harfda · o'rta
+`kitob = "alisher navoiy xamsa"` ni `title()` bilan chiqaring. `capitalize()` natijasi bilan solishtiring.
+**Kutiladigan natija:** `Alisher Navoiy Xamsa` va `Alisher navoiy xamsa`.
 
-6. **Har bir so'z bosh harfda · o'rta**  
-   `kitob = "alisher navoiy xamsa"` satrini `.title()` metodi orqali `Alisher Navoiy Xamsa` ko'rinishiga keltiring.
+### 6. Ismni tozalash · o'rta
+`ism = "dAvRoN"`. Uni `Davron` ko‘rinishiga keltiring.
+**Kutiladigan natija:** `Davron`
 
-7. **Ismni tozalash · o'rta**  
-   Foydalanuvchi ismini noto'g'ri kiritgan: `ism = "dAvRoN"`. Uni chiroyli `Davron` ko'rinishiga keltiruvchi kod yozing.
+### 7. Bu kod nima chiqaradi? · o'rta
+```python
+w = "Backend"
+print(w[:4], w[4:], w[-1], w[::3])
+```
+Avval bashorat qiling, keyin tekshiring.
+**Kutiladigan natija:** Bashoratingiz va haqiqiy natija.
 
-8. **Qadam bilan sakrash · o'rta**  
-   `alfabit = "abcdefghijklmnop"` satridan har ikkinchi harfni (`[::2]`) ajratib oling.
+### 8. Har ikkinchi harf · o'rta
+`alfabit = "abcdefghijklmnop"` dan `[::2]` bilan har ikkinchi harfni oling.
+**Kutiladigan natija:** `acegikmo`
 
-9. **Palindrom tekshiruvi · qiyin**  
-   Foydalanuvchi kiritgan so'z palindrom (masalan `"alla"`, `"radar"`, `"kiyik"`) ekanligini `if/else` va `[::-1]` yordamida tekshiring.
+### 9. Fayl kengaytmasi · qiyin
+`fayl = "rasm.png"`. Manfiy indeksli slicing bilan oxirgi 3 belgini (kengaytmani) va nuqtagacha bo‘lgan nomni chiqaring.
+**Kutiladigan natija:** `png` va `rasm`.
 
-10. **Matn shifrlash (Mirror string) · bonus**  
-    Berilgan matnning birinchi yarmini o'z holicha, ikkinchi yarmini esa teskari tartibda birlashtirib chiqaruvchi dastur tuzing (Masalan: `"Dasturchi"` &rarr; birinchi yarmi + ikkinchi yarmi teskari).
+### 10. Palindrom tekshiruvi · qiyin
+Foydalanuvchi so‘z kiritadi. `[::-1]` va `if/else` bilan palindrom ekanini tekshiring (`radar`, `kiyik`, `non`). Katta-kichik harf farq qilmasin (`lower()`).
+**Kutiladigan natija:** `Radar` -> `Palindrom`, `Python` -> `Palindrom emas`.
+
+### 11. Xatoni toping · qiyin
+```python
+s = "Python"
+print(s[6])
+s.upper()
+print(s)
+```
+Bu kodda 2 ta muammo bor: biri xato beradi, ikkinchisi kutilgan `PYTHON` ni chiqarmaydi. Tuzating.
+**Kutiladigan natija:** `n` va `PYTHON`.
+
+### 12. Mirror string · bonus
+Matnning birinchi yarmini o‘z holicha, ikkinchi yarmini teskari tartibda ulab chiqaring (`len()` va `//` dan foydalaning). Masalan: `"Dasturchi"`.
+**Kutiladigan natija:** `Dastihcru`
+
+## O'zingizni tekshiring
+
+1. Pythonda indeks nechadan boshlanadi? Oxirgi belgining manfiy indeksi qanday?
+2. Slicing shaklidagi 3 qismni ayting.
+3. `[1:4]` da 4-indeksdagi belgi nega kirmaydi?
+4. `[::-1]` nima qiladi?
+5. `title()` va `capitalize()` farqi nimada?
+6. Nega `s.upper()` dan keyin `s` o‘zgarmaydi?
+
+## Uyga vazifa
+
+1. `slicing_mashq.py`: `word = "Backend"` uchun `[1:4]`, `[:3]`, `[3:]`, `[::2]`, `[::-1]` natijalarini chiqaring.
+2. `"ozbekiston respublikasi"` ni 4 ta metod bilan alohida qatorlarda chiqaring.
+3. Kiritilgan so‘zning palindrom ekanini `[::-1]` bilan tekshiring.
