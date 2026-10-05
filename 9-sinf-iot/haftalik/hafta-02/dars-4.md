@@ -71,7 +71,7 @@ Elektronika va IoT ni o'rganishda yangi boshlovchilar tez-tez quyidagi muammolar
 Circuits bo'limida **"Create your first circuit"** yoki **"Create new Circuit"** tugmasi bosilganda asosiy laboratoriya oynasi ochiladi:
 
 1. **Yuqori chap panel (Asboblar):**
-   - **Rotate (R):** Tanlangan komponentni 30 gradusga burish;
+   - **Rotate (R):** Tanlangan komponentni 45 gradusga burish;
    - **Delete (Del):** Komponentni o'chirish;
    - **Undo (Ctrl+Z) / Redo (Ctrl+Y):** Harakatni bekor qilish yoki qaytarish;
    - **Notes (N):** Sxemaga matnli eslatma biriktirish;
@@ -113,7 +113,7 @@ Ish maydoniga 1 ta rezistor va 1 ta LED joylashtiring. Rezistor qiymatini 220 Ω
 2. Rezistor bosilganda ochiladigan parametrlar oynasida:
    - "Resistance" qatoriga `220` yoziladi;
    - Yonidagi o'lchov birligi menyusidan `kΩ` o'rniga `Ω` (Om) tanlanadi (rang chiziqlari darhol o'zgaradi: qizil-qizil-jigarrang-oltin).
-3. Rezistor tanlangan holatda klaviaturadagi `R` harfi 3 marta bosiladi (har bosish 30° buradi, jami 90° buriladi).
+3. Rezistor tanlangan holatda klaviaturadagi `R` harfi 2 marta bosiladi (har bosish 45° buradi, jami 90° buriladi).
 4. Ish maydoniga `LED` qo'yiladi va parametrlar oynasidan "Color" menyusi ochilib, `Green` tanlanadi.
 5. Yuqori paneldagi "Notes" (N) belgisi bosilib, ish maydoniga `Tinkercad 1-amaliyot` matni kiritiladi.
 

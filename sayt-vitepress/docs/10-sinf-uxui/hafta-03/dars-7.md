@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (UX/UI)", "link": "/10-sinf-uxui/"}, "week": {"n": 3, "link": "/10-sinf-uxui/hafta-03/"}, "g": 13, "title": "7-dars: Ranglar psixologiyasi va tipografiya", "lead": "Semantik HTML5 teglari va accessibility (WCAG) asoslari", "slide": "/slaydlar/10-sinf-uxui/hafta-03/dars-7.html", "tabs": [{"g": 13, "link": "/10-sinf-uxui/hafta-03/dars-7", "current": true}, {"g": 14, "link": "/10-sinf-uxui/hafta-03/dars-8", "current": false}, {"g": 15, "link": "/10-sinf-uxui/hafta-03/dars-9", "current": false}], "prev": null, "next": {"g": 14, "title": "8-dars: Grid tizimlari va kompozitsiya", "link": "/10-sinf-uxui/hafta-03/dars-8"}}
+dars: {"sinf": {"name": "10-sinf (UX/UI)", "link": "/10-sinf-uxui/"}, "week": {"n": 3, "link": "/10-sinf-uxui/hafta-03/"}, "g": 13, "title": "7-dars: Ranglar psixologiyasi va tipografiya", "lead": "Semantik HTML5 teglari va accessibility (WCAG) asoslari", "slide": "/slaydlar/10-sinf-uxui/hafta-03/dars-7.html", "test": "/slaydlar/10-sinf-uxui/hafta-03/dars-7-test.html", "tabs": [{"g": 13, "link": "/10-sinf-uxui/hafta-03/dars-7", "current": true}, {"g": 14, "link": "/10-sinf-uxui/hafta-03/dars-8", "current": false}, {"g": 15, "link": "/10-sinf-uxui/hafta-03/dars-9", "current": false}], "prev": null, "next": {"g": 14, "title": "8-dars: Grid tizimlari va kompozitsiya", "link": "/10-sinf-uxui/hafta-03/dars-8"}}
 ---
 
 **Sinf:** 10-sinf  

@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "11-sinf", "link": "/11-sinf/"}, "week": {"n": 3, "link": "/11-sinf/hafta-03/"}, "g": 7, "title": "Clean Code asoslari va SOLID: SRP hamda OCP tamoyillari", "lead": "Professional kod madaniyati, to'g'ri nomlash, DRY/KISS/YAGNI tamoyillari hamda barqaror arxitektura poydevori: SRP va OCP.", "slide": "/slaydlar/11-sinf/hafta-03/dars-1.html", "tabs": [{"g": 7, "link": "/11-sinf/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/11-sinf/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/11-sinf/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "SOLID chuqurlashtirilgan: LSP, ISP, DIP va Code Smells refaktoringi", "link": "/11-sinf/hafta-03/dars-2"}}
+dars: {"sinf": {"name": "11-sinf", "link": "/11-sinf/"}, "week": {"n": 3, "link": "/11-sinf/hafta-03/"}, "g": 7, "title": "Clean Code asoslari va SOLID: SRP hamda OCP tamoyillari", "lead": "Professional kod madaniyati, to'g'ri nomlash, DRY/KISS/YAGNI tamoyillari hamda barqaror arxitektura poydevori: SRP va OCP.", "slide": "/slaydlar/11-sinf/hafta-03/dars-1.html", "test": "/slaydlar/11-sinf/hafta-03/dars-1-test.html", "tabs": [{"g": 7, "link": "/11-sinf/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/11-sinf/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/11-sinf/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "SOLID chuqurlashtirilgan: LSP, ISP, DIP va Code Smells refaktoringi", "link": "/11-sinf/hafta-03/dars-2"}}
 ---
 
 

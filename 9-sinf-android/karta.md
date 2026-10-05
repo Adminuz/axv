@@ -30,14 +30,14 @@ Manba: `2.3 Standart (Android dasturlash).doc`, `2.3 Uslubiy ko'rsatma`, `2.3 O'
 | 7 | 3 | Android Studio va Android SDK bilan tanishuv (2-qism): Loyiha strukturasi (java/kotlin, res, AndroidManifest.xml, Gradle) | 📝 |
 | 8 | 3 | Android Studio va Android SDK bilan tanishuv (3-qism): Birinchi «Hello World» ilovasini yaratish va Gradle build mexanizmi | 📝 |
 | 9 | 3 | Simulyator va Emulator haqida tushuncha (1-qism): Simulyator vs Emulyator farqi, AVD yaratish va CPU virtualizatsiyasi | 📝 |
-| 10 | 4 | Simulyator va Emulator haqida tushuncha (2-qism): Real qurilmani USB orqali ulash, ADB drayverlari va logcat kuzatuvi | ⬜ |
+| 10 | 4 | Simulyator va Emulator haqida tushuncha (2-qism): Real qurilmani USB orqali ulash, ADB drayverlari va logcat kuzatuvi | 📝 |
 
 ## II bob. Java va Kotlin dasturlash asoslari
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 11 | 4 | Kotlin sintaksisi (1-qism): Kotlin afzalliklari, o‘zgaruvchilar (val vs var) va ma’lumot turlari | ⬜ |
-| 12 | 4 | Kotlin sintaksisi (2-qism): Shart operatorlari (if, when) va ularning ifoda sifatida qo'llanilishi | ⬜ |
+| 11 | 4 | Kotlin sintaksisi (1-qism): Kotlin afzalliklari, o‘zgaruvchilar (val vs var) va ma’lumot turlari | 📝 |
+| 12 | 4 | Kotlin sintaksisi (2-qism): Shart operatorlari (if, when) va ularning ifoda sifatida qo'llanilishi | 📝 |
 | 13 | 5 | Kotlin sintaksisi (3-qism): Sikllar (for, while, do-while) va oraliqlar (ranges: in, downTo, step) | ⬜ |
 | 14 | 5 | Funksiyalar va sinflar (1-qism): Funksiya e'lon qilish, parametrlar, standart qiymatlar va nomlangan argumentlar | ⬜ |
 | 15 | 5 | Funksiyalar va sinflar (2-qism): Sinflar, obyektlar, konstruktorlar (primary vs secondary) va metodlar | ⬜ |

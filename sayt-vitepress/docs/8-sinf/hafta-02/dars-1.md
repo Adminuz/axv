@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "8-sinf", "link": "/8-sinf/"}, "week": {"n": 2, "link": "/8-sinf/hafta-02/"}, "g": 4, "title": "Rasm va ro'yxat teglari: <img>, <figure>, <ul>, <ol>, <dl>", "lead": "Surat mingta so'zdan afzal, ro'yxatlar esa har qanday chalkashlikni tartibga soladi. Ushbu darsda veb-sahifaga rasm joylash, to'g'ri manzillarni ko'rsatish va 3 xil ro'yxat turidan foydalanishni o'rganamiz.", "slide": "/slaydlar/8-sinf/hafta-02/dars-1.html", "tabs": [{"g": 4, "link": "/8-sinf/hafta-02/dars-1", "current": true}, {"g": 5, "link": "/8-sinf/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/8-sinf/hafta-02/dars-3", "current": false}], "prev": null, "next": {"g": 5, "title": "Jadval teglari: <table>, <tr>, <td>, <th>, colspan va rowspan", "link": "/8-sinf/hafta-02/dars-2"}}
+dars: {"sinf": {"name": "8-sinf", "link": "/8-sinf/"}, "week": {"n": 2, "link": "/8-sinf/hafta-02/"}, "g": 4, "title": "Rasm va ro'yxat teglari: <img>, <figure>, <ul>, <ol>, <dl>", "lead": "Surat mingta so'zdan afzal, ro'yxatlar esa har qanday chalkashlikni tartibga soladi. Ushbu darsda veb-sahifaga rasm joylash, to'g'ri manzillarni ko'rsatish va 3 xil ro'yxat turidan foydalanishni o'rganamiz.", "slide": "/slaydlar/8-sinf/hafta-02/dars-1.html", "test": "/slaydlar/8-sinf/hafta-02/dars-1-test.html", "tabs": [{"g": 4, "link": "/8-sinf/hafta-02/dars-1", "current": true}, {"g": 5, "link": "/8-sinf/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/8-sinf/hafta-02/dars-3", "current": false}], "prev": null, "next": {"g": 5, "title": "Jadval teglari: <table>, <tr>, <td>, <th>, colspan va rowspan", "link": "/8-sinf/hafta-02/dars-2"}}
 ---
 
 

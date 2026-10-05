@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (BI)", "link": "/9-sinf-bi/"}, "week": {"n": 2, "link": "/9-sinf-bi/hafta-02/"}, "g": 4, "title": "Excelda ma'lumotlar tahlili: Saralash, filtrlash va shartli formatlash", "lead": "Tartibsiz jadvallardan qimmatli tushunchalarga: Excelda ma'lumotlarni saralash, aqlli filtrlar va shartli formatlash yordamida anomaliyalarni topish sirlari.", "slide": "/slaydlar/9-sinf-bi/hafta-02/dars-1.html", "tabs": [{"g": 4, "link": "/9-sinf-bi/hafta-02/dars-1", "current": true}, {"g": 5, "link": "/9-sinf-bi/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/9-sinf-bi/hafta-02/dars-3", "current": false}], "prev": null, "next": {"g": 5, "title": "Professional jadval tuzish, Tidy Data va Excel Table (Ctrl+T)", "link": "/9-sinf-bi/hafta-02/dars-2"}}
+dars: {"sinf": {"name": "9-sinf (BI)", "link": "/9-sinf-bi/"}, "week": {"n": 2, "link": "/9-sinf-bi/hafta-02/"}, "g": 4, "title": "Excelda ma'lumotlar tahlili: Saralash, filtrlash va shartli formatlash", "lead": "Tartibsiz jadvallardan qimmatli tushunchalarga: Excelda ma'lumotlarni saralash, aqlli filtrlar va shartli formatlash yordamida anomaliyalarni topish sirlari.", "slide": "/slaydlar/9-sinf-bi/hafta-02/dars-1.html", "test": "/slaydlar/9-sinf-bi/hafta-02/dars-1-test.html", "tabs": [{"g": 4, "link": "/9-sinf-bi/hafta-02/dars-1", "current": true}, {"g": 5, "link": "/9-sinf-bi/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/9-sinf-bi/hafta-02/dars-3", "current": false}], "prev": null, "next": {"g": 5, "title": "Professional jadval tuzish, Tidy Data va Excel Table (Ctrl+T)", "link": "/9-sinf-bi/hafta-02/dars-2"}}
 ---
 
 

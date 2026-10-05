@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>CSS Box model</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<!-- 1. Hero -->
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>CSS Box model</h1>
+  <p class="muted">content · padding · border · margin · box-sizing</p>
+  <span class="badge">8-sinf</span><span class="badge">Web Full-stack</span><span class="badge">4-hafta · 12-dars</span>
+  
+</section>
+
+<!-- 2. Takrorlash -->
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q">Qaysi xususiyatlar meros bo'lib o'tadi?</p>
+    <div class="opts">
+      <button class="opt good" onclick="pick(this)">color, font-family, font-size</button>
+      <button class="opt bad" onclick="pick(this)">border, background-color, padding</button>
+      <button class="opt bad" onclick="pick(this)">margin, width, height</button>
+      <button class="opt bad" onclick="pick(this)">display, position, overflow</button>
+    </div>
+    <div class="explain">border va background-color meros bo'lmaydi — har bir elementda alohida yozish kerak.</div>
+  </div>
+  
+</section>
+
+<!-- 3. Box model nima? -->
+<section>
+  <h2>Brauzer uchun har bir element — quti</h2>
+  <div class="illus">
+    <svg viewBox="0 0 560 300">
+      <!-- Margin -->
+      <rect x="10" y="10" width="540" height="280" rx="6" fill="none" stroke="#f97316" stroke-width="2" stroke-dasharray="6"/>
+      <text x="290" y="30" text-anchor="middle" font-size="13" fill="#f97316" font-weight="bold">margin (tashqi masofa)</text>
+      <!-- Border -->
+      <rect x="60" y="45" width="440" height="210" rx="6" fill="none" stroke="#a855f7" stroke-width="3"/>
+      <text x="290" y="62" text-anchor="middle" font-size="12" fill="#a855f7" font-weight="bold">border (chegara)</text>
+      <!-- Padding -->
+      <rect x="90" y="72" width="380" height="156" rx="4" fill="rgba(59,130,246,0.12)" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4"/>
+      <text x="290" y="90" text-anchor="middle" font-size="12" fill="#3b82f6" font-weight="bold">padding (ichki masofa)</text>
+      <!-- Content -->
+      <rect x="130" y="105" width="300" height="90" rx="4" fill="rgba(34,197,94,0.18)" stroke="#22c55e" stroke-width="2"/>
+      <text x="290" y="155" text-anchor="middle" font-size="14" fill="#22c55e" font-weight="bold">content</text>
+      <text x="290" y="175" text-anchor="middle" font-size="11" fill="var(--text)">(matn, rasm)</text>
+    </svg>
+  </div>
+  
+</section>
+
+<!-- 4. 4 qatlam -->
+<section>
+  <h2>To'rt qatlam — ichkaridan tashqariga</h2>
+  <div class="cards four" style="--cards-min:120px">
+    <div class="card accent fragment">
+      <div class="icon"><i data-ic="square"></i></div>
+      <h3>1. Content</h3>
+      <p>Asosiy mazmun: matn, rasm</p>
+    </div>
+    <div class="card teal fragment">
+      <div class="icon"><i data-ic="move"></i></div>
+      <h3>2. Padding</h3>
+      <p>Content va chegara orasidagi ichki masofa</p>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="square-dashed"></i></div>
+      <h3>3. Border</h3>
+      <p>Chegara chizig'i (qalinlik, tur, rang)</p>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="maximize-2"></i></div>
+      <h3>4. Margin</h3>
+      <p>Chegaradan tashqarida: boshqa elementlargacha masofa</p>
+    </div>
+  </div>
+  
+</section>
+
+<!-- 5. Padding vs Margin -->
+<section>
+  <h2>Padding va Margin farqi</h2>
+  <div class="vs">
+    <div class="side">
+      <h3>Padding</h3>
+      <ul>
+        <li>Chegara <strong>ichida</strong></li>
+        <li>Fon rangi padding ni <strong>qoplaydi</strong></li>
+        <li>Element ko'rinadigan hajmini kattalashtiradi</li>
+      </ul>
+      <pre><code>.karta {
+  padding: 20px;
+  background: lightblue;
+}</code></pre>
+    </div>
+    <div class="mid">≠</div>
+    <div class="side b">
+      <h3>Margin</h3>
+      <ul>
+        <li>Chegaradan <strong>tashqarida</strong></li>
+        <li>Fon rangi yo'q, <strong>shaffof</strong></li>
+        <li>Boshqa elementlarga masofa beradi</li>
+      </ul>
+      <pre><code>.karta {
+  margin: 15px;
+  /* fon yo'q */
+}</code></pre>
+    </div>
+  </div>
+  
+</section>
+
+<!-- 6. Qisqa yozuv -->
+<section>
+  <h2>Qisqa yozuv (shorthand)</h2>
+  <pre><code>/* 1 qiymat — to'rt tomon */
+padding: 10px;
+
+/* 2 qiymat — tepa/past | chap/o'ng */
+padding: 10px 20px;
+
+/* 3 qiymat — tepa | chap/o'ng | past */
+padding: 10px 20px 5px;
+
+/* 4 qiymat — tepa, o'ng, past, chap (soat mili bo'yicha) */
+padding: 10px 20px 5px 0;
+
+/* Alohida tomon */
+margin-top: 30px;
+margin-left: 0;
+
+/* Gorizontal markazlash (width bilan birga!) */
+margin: 0 auto;</code></pre>
+  
+</section>
+
+<!-- 7. Border -->
+<section>
+  <h2>Border — chegara chizig'i</h2>
+  <pre><code>/* qalinlik   tur      rang */
+border: 3px  solid  crimson;
+
+border-radius: 12px;             /* yumaloq burchaklar */
+border-bottom: 1px dashed gray;  /* faqat bitta tomon */
+border-top: none;                /* chegara yo'q */</code></pre>
+  <div class="cards three">
+    <div class="card fragment"><h3>solid</h3><p>To'liq chiziq ——</p></div>
+    <div class="card accent fragment"><h3>dashed</h3><p>Chiziqli - - -</p></div>
+    <div class="card teal fragment"><h3>dotted</h3><p>Nuqtali · · ·</p></div>
+  </div>
+  
+</section>
+
+<!-- 8. box-sizing muammosi -->
+<section>
+  <h2>box-sizing muammosi</h2>
+  <div class="vs">
+    <div class="side">
+      <h3>content-box (standart)</h3>
+      <pre><code>width: 300px;
+padding: 20px;
+border: 2px solid;</code></pre>
+      <p>Jami kenglik:<br>300 + 40 + 4 = <strong>344px</strong></p>
+      <p class="small">Kutilganidan kattaroq!</p>
+    </div>
+    <div class="mid">→</div>
+    <div class="side b">
+      <h3>border-box (tavsiya)</h3>
+      <pre><code>* { box-sizing: border-box; }
+width: 300px;
+padding: 20px;
+border: 2px solid;</code></pre>
+      <p>Jami kenglik: <strong>300px</strong></p>
+      <p class="small">Padding va border ichiga sig'adi!</p>
+    </div>
+  </div>
+  <p class="small mt fragment"><i data-ic="info"></i> Deyarli har bir loyihada <code>* &#123; box-sizing: border-box; &#125;</code> yoziladi</p>
+  
+</section>
+
+<!-- 9. DevTools -->
+<section>
+  <h2>DevTools da Box model</h2>
+  <div class="cards two">
+    <div class="card">
+      <div class="icon"><i data-ic="monitor"></i></div>
+      <h3>F12 → Elements</h3>
+      <ul>
+        <li>Elementni tanla</li>
+        <li>Computed ↗ bo'limida rangli quti ko'rinadi</li>
+        <li>To'q yashil — content</li>
+        <li>Ko'k — padding</li>
+        <li>Sariq — margin</li>
+        <li>To'q sariq — border</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="icon"><i data-ic="eye"></i></div>
+      <h3>Nima ko'ramiz?</h3>
+      <ul>
+        <li>Content: <code>200 × 100</code></li>
+        <li>Padding: har tomonda</li>
+        <li>Border: qatlam qalinligi</li>
+        <li>Margin: masofa</li>
+      </ul>
+      <p class="small">Real vaqtda o'zgartirish mumkin!</p>
+    </div>
+  </div>
+  
+</section>
+
+<!-- 10. Amaliyot: Karta -->
+<section>
+  <h2>Amaliyot: Karta (.karta) yasaymiz</h2>
+  <pre><code>/* CSS */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.karta {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid royalblue;
+  border-radius: 12px;
+  margin: 15px;
+  background-color: white;
+}</code></pre>
+  <pre><code>&lt;!-- HTML --&gt;
+&lt;div class="karta"&gt;
+  &lt;h3&gt;Birinchi karta&lt;/h3&gt;
+  &lt;p&gt;Bu karta matni.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="karta"&gt;
+  &lt;h3&gt;Ikkinchi karta&lt;/h3&gt;
+  &lt;p&gt;Bu karta matni.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+  
+</section>
+
+<!-- 11. Odatiy xatolar -->
+<section>
+  <h2>Odatiy xatolar</h2>
+  <div class="cards two">
+    <div class="card">
+      <div class="icon"><i data-ic="triangle-alert"></i></div>
+      <h3>padding ↔ margin adashtirish</h3>
+      <p>padding — ichki, margin — tashqi. DevTools da tekshiring.</p>
+    </div>
+    <div class="card accent">
+      <div class="icon"><i data-ic="triangle-alert"></i></div>
+      <h3>box-sizing yozmaslik</h3>
+      <p>Quti kutilganidan 344px chiqishi sababchisi shu.</p>
+    </div>
+    <div class="card teal">
+      <div class="icon"><i data-ic="triangle-alert"></i></div>
+      <h3>margin: 0 auto bilan width yo'q</h3>
+      <p>Markazlash ishlaydi faqat <code>width</code> berilganda.</p>
+    </div>
+    <div class="card">
+      <div class="icon"><i data-ic="triangle-alert"></i></div>
+      <h3>border da tur tushib qolishi</h3>
+      <p><code>border: 2px crimson</code> — <code>solid</code> yo'q, chegara ko'rinmaydi.</p>
+    </div>
+  </div>
+  
+</section>
+
+<!-- 12. Tezkor nazorat -->
+<section>
+  <h2>Tezkor nazorat</h2>
+  <div class="cards two">
+    <div class="card fragment">
+      <h3>Box model qismlarini ichkaridan tashqariga ayting</h3>
+      <p class="small">Javob: content → padding → border → margin</p>
+    </div>
+    <div class="card fragment">
+      <h3><code>padding: 10px 20px;</code> nimani anglatadi?</h3>
+      <p class="small">Javob: tepa/past 10px, chap/o'ng 20px</p>
+    </div>
+    <div class="card fragment">
+      <h3><code>box-sizing: border-box</code> nima beradi?</h3>
+      <p class="small">Javob: width padding va border ni o'z ichiga oladi</p>
+    </div>
+    <div class="card accent fragment">
+      <h3><code>margin: 0 auto;</code> nima uchun?</h3>
+      <p class="small">Javob: width berilgan blokni gorizontal markazlash</p>
+    </div>
+  </div>
+  
+</section>
+
+<!-- 13. Xulosa -->
+<section>
+  <h2>4-hafta yakuni va uyga vazifa</h2>
+  <div class="cards two">
+    <div class="card teal">
+      <div class="icon"><i data-ic="circle-check"></i></div>
+      <h3>4-hafta o'rganildi</h3>
+      <ul>
+        <li>CSS tanlash: sinf, id, atribut, psevdo</li>
+        <li>Rang, shrift va meros</li>
+        <li>Box model: content, padding, border, margin</li>
+        <li>box-sizing: border-box</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="icon"><i data-ic="book-open"></i></div>
+      <h3>Uyga vazifa</h3>
+      <ul>
+        <li>3 xil karta yasang (rang, border farqli)</li>
+        <li>Har biriga box-sizing: border-box qo'ying</li>
+        <li>Kartalar orasida margin bilan masofa bering</li>
+        <li>DevTools da Box model rasmini skrinshotga oling</li>
+      </ul>
+    </div>
+  </div>
+  <p class="small mt"><i data-ic="zap"></i> <strong>Keyingi hafta:</strong> Flexbox — elementlarni qatorga va ustunlarga joylash</p>
+  
+</section>
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>

@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf", "link": "/9-sinf/"}, "week": {"n": 1, "link": "/9-sinf/hafta-01/"}, "g": 1, "title": "UX va UI dizayn tushunchalari: nima va nima uchun", "lead": "Har kuni Telegram, Instagram yoki o'yinlarni ochasiz, lekin ularning ko'rinishi va qulayligi ortida kimdir turganini o'ylab ko'rganmisiz? Bugun siz ikkita sirli qisqartma, UX va UI, ni ajratishni o'rganasiz va ilovalarga dizayner ko'zi bilan qaraysiz.", "slide": "/slaydlar/9-sinf/hafta-01/dars-1.html", "tabs": [{"g": 1, "link": "/9-sinf/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/9-sinf/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "UX/UI dizayn tamoyillari va jarayoni: yaxshi dizayn qanday bo'ladi", "link": "/9-sinf/hafta-01/dars-2"}}
+dars: {"sinf": {"name": "9-sinf", "link": "/9-sinf/"}, "week": {"n": 1, "link": "/9-sinf/hafta-01/"}, "g": 1, "title": "UX va UI dizayn tushunchalari: nima va nima uchun", "lead": "Har kuni Telegram, Instagram yoki o'yinlarni ochasiz, lekin ularning ko'rinishi va qulayligi ortida kimdir turganini o'ylab ko'rganmisiz? Bugun siz ikkita sirli qisqartma, UX va UI, ni ajratishni o'rganasiz va ilovalarga dizayner ko'zi bilan qaraysiz.", "slide": "/slaydlar/9-sinf/hafta-01/dars-1.html", "test": "/slaydlar/9-sinf/hafta-01/dars-1-test.html", "tabs": [{"g": 1, "link": "/9-sinf/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/9-sinf/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "UX/UI dizayn tamoyillari va jarayoni: yaxshi dizayn qanday bo'ladi", "link": "/9-sinf/hafta-01/dars-2"}}
 ---
 
 

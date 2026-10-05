@@ -160,11 +160,11 @@ sut_soni = 2
 
 jami_non = non_narxi * non_soni
 jami_sut = sut_narxi * sut_soni
-jami_to'lov = jami_non + jami_sut
+jami_tolov = jami_non + jami_sut  # Izoh: Python o'zgaruvchi nomida apostrof bo'lishi mumkin emas
 
 print("Nonlar summasi:", jami_non, "so'm")
 print("Sutlar summasi:", jami_sut, "so'm")
-print("Jami to'lov:", jami_to'lov, "so'm")
+print("Jami to'lov:", jami_tolov, "so'm")
 ```
 
 ### 4-topshiriq. Qiymatlarni almashtirish (Swap) (qiyin)

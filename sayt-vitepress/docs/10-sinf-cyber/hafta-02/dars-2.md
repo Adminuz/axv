@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (Cyber)", "link": "/10-sinf-cyber/"}, "week": {"n": 2, "link": "/10-sinf-cyber/hafta-02/"}, "g": 5, "title": "CIA uchligi (2-qism): CIA buzilish ssenariylari va MITM hujumlari", "lead": "[!CAUTION]", "slide": "/slaydlar/10-sinf-cyber/hafta-02/dars-2.html", "tabs": [{"g": 4, "link": "/10-sinf-cyber/hafta-02/dars-1", "current": false}, {"g": 5, "link": "/10-sinf-cyber/hafta-02/dars-2", "current": true}, {"g": 6, "link": "/10-sinf-cyber/hafta-02/dars-3", "current": false}], "prev": {"g": 4, "title": "CIA uchligi (1-qism): konfidensiallik, yaxlitlik va foydalanuvchanlik tamoyillari", "link": "/10-sinf-cyber/hafta-02/dars-1"}, "next": {"g": 6, "title": "Xavfsizlikni anglash (1-qism): xavfsizlik tafakkuri va kuchli parollar siyosati", "link": "/10-sinf-cyber/hafta-02/dars-3"}}
+dars: {"sinf": {"name": "10-sinf (Cyber)", "link": "/10-sinf-cyber/"}, "week": {"n": 2, "link": "/10-sinf-cyber/hafta-02/"}, "g": 5, "title": "CIA uchligi (2-qism): CIA buzilish ssenariylari va MITM hujumlari", "lead": "[!CAUTION]", "slide": "/slaydlar/10-sinf-cyber/hafta-02/dars-2.html", "test": "/slaydlar/10-sinf-cyber/hafta-02/dars-2-test.html", "tabs": [{"g": 4, "link": "/10-sinf-cyber/hafta-02/dars-1", "current": false}, {"g": 5, "link": "/10-sinf-cyber/hafta-02/dars-2", "current": true}, {"g": 6, "link": "/10-sinf-cyber/hafta-02/dars-3", "current": false}], "prev": {"g": 4, "title": "CIA uchligi (1-qism): konfidensiallik, yaxlitlik va foydalanuvchanlik tamoyillari", "link": "/10-sinf-cyber/hafta-02/dars-1"}, "next": {"g": 6, "title": "Xavfsizlikni anglash (1-qism): xavfsizlik tafakkuri va kuchli parollar siyosati", "link": "/10-sinf-cyber/hafta-02/dars-3"}}
 ---
 
 ---

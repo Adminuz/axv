@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (Back-end)", "link": "/9-sinf-backend/"}, "week": {"n": 1, "link": "/9-sinf-backend/hafta-01/"}, "g": 1, "title": "Python: o‘rnatish, muhit sozlash va ilk dastur", "lead": "Serverlar olamiga xush kelibsiz! Ushbu darsda zamonaviy IT sanoatining eng qudratli tili bo‘lgan Python interpretatorini o‘rnatamiz, terminal bilan do‘stlashamiz va ilk dasturimizni ishga tushiramiz.", "slide": "/slaydlar/9-sinf-backend/hafta-01/dars-1.html", "tabs": [{"g": 1, "link": "/9-sinf-backend/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/9-sinf-backend/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf-backend/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "Sodda ma’lumot toifalari va arifmetik amallar", "link": "/9-sinf-backend/hafta-01/dars-2"}}
+dars: {"sinf": {"name": "9-sinf (Back-end)", "link": "/9-sinf-backend/"}, "week": {"n": 1, "link": "/9-sinf-backend/hafta-01/"}, "g": 1, "title": "Python: o‘rnatish, muhit sozlash va ilk dastur", "lead": "Serverlar olamiga xush kelibsiz! Ushbu darsda zamonaviy IT sanoatining eng qudratli tili bo‘lgan Python interpretatorini o‘rnatamiz, terminal bilan do‘stlashamiz va ilk dasturimizni ishga tushiramiz.", "slide": "/slaydlar/9-sinf-backend/hafta-01/dars-1.html", "test": "/slaydlar/9-sinf-backend/hafta-01/dars-1-test.html", "tabs": [{"g": 1, "link": "/9-sinf-backend/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/9-sinf-backend/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf-backend/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "Sodda ma’lumot toifalari va arifmetik amallar", "link": "/9-sinf-backend/hafta-01/dars-2"}}
 ---
 
 

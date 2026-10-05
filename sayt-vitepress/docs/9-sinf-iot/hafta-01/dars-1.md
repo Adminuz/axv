@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (IoT)", "link": "/9-sinf-iot/"}, "week": {"n": 1, "link": "/9-sinf-iot/hafta-01/"}, "g": 1, "title": "IoT tushunchasi va qo‘llanish sohalari", "lead": "IoT tushunchasi va qo‘llanish sohalari", "slide": "/slaydlar/9-sinf-iot/hafta-01/dars-1.html", "tabs": [{"g": 1, "link": "/9-sinf-iot/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/9-sinf-iot/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf-iot/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "IoT arxitekturasi: Sensorlar, aktuatorlar va apparat ta'minoti", "link": "/9-sinf-iot/hafta-01/dars-2"}}
+dars: {"sinf": {"name": "9-sinf (IoT)", "link": "/9-sinf-iot/"}, "week": {"n": 1, "link": "/9-sinf-iot/hafta-01/"}, "g": 1, "title": "IoT tushunchasi va qo‘llanish sohalari", "lead": "IoT tushunchasi va qo‘llanish sohalari", "slide": "/slaydlar/9-sinf-iot/hafta-01/dars-1.html", "test": "/slaydlar/9-sinf-iot/hafta-01/dars-1-test.html", "tabs": [{"g": 1, "link": "/9-sinf-iot/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/9-sinf-iot/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf-iot/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "IoT arxitekturasi: Sensorlar, aktuatorlar va apparat ta'minoti", "link": "/9-sinf-iot/hafta-01/dars-2"}}
 ---
 
 

@@ -1,0 +1,177 @@
+<!-- SLIDE 1: Hero -->
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Ma’lumotlar tuzilmalari va String asoslari</h1>
+  <p class="muted">Data Structures · str yaratish · Immutability · Yangi satrlar</p>
+  <span class="badge">9-sinf</span><span class="badge">Advanced Back-end</span><span class="badge">4-hafta · 10-dars</span>
+  <aside class="notes">
+    Darsni boshlash: o'quvchilardan «Nega faqat son yoki bitta matn bilan cheklanib bo'lmaydi? Millionlab ma'lumotlarni qanday saqlaymiz?» deb so'rang.
+  </aside>
+</section>
+
+<!-- SLIDE 2: Reja -->
+<section>
+  <h2>Bugungi dars rejasi</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up">
+      <div class="icon"><i data-ic="boxes" data-anim="pulse"></i></div>
+      <h3>01. Tuzilmalar xaritasi</h3>
+      <p>Data Structure nima va Python'ning 5 asosiy o'rnatilgan tuzilmasi.</p>
+    </div>
+    <div class="card fragment fade-up">
+      <div class="icon"><i data-ic="quote" data-anim="float"></i></div>
+      <h3>02. String yaratish</h3>
+      <p>Bittalik, qo'shtirnoq va ko'p qatorli <code>"""..."""</code> matnlar.</p>
+    </div>
+    <div class="card fragment fade-up">
+      <div class="icon"><i data-ic="lock" data-anim="wiggle"></i></div>
+      <h3>03. Immutable String</h3>
+      <p>Nega satrni o'zgartirib bo'lmaydi va yangi satr yaratish qoidalari.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    Dars rejasini tanishtiring.
+  </aside>
+</section>
+
+<!-- SLIDE 3: Bo'lim 1 -->
+<section class="sec">
+  <div class="num">01</div>
+  <h1>Ma’lumotlar tuzilmasi nima?</h1>
+  <p>Xotirada tartibli saqlash va tezkor qayta ishlash poydevori</p>
+  <aside class="notes">
+    1-qism: Ma'lumotlar tuzilmalari tushunchasi.
+  </aside>
+</section>
+
+<!-- SLIDE 4: 5 ta asosiy tuzilma -->
+<section>
+  <h2>Python'ning 5 ta asosiy tuzilmasi</h2>
+  <div class="cards two">
+    <div class="card fragment">
+      <div class="icon"><i data-ic="type"></i></div>
+      <h3>1. String (str)</h3>
+      <p>Belgilar ketma-ketligi, matnlar. O'zgarmas (immutable): <code>"Backend"</code>.</p>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="list"></i></div>
+      <h3>2. List (ro'yxat)</h3>
+      <p>Tartiblangan, o'zgaruvchan (mutable) to'plam: <code>[10, 20, 30]</code>.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    Qolgan 3 ta tuzilma (tuple, set, dict) 5-haftada o'rganiladi.
+  </aside>
+</section>
+
+<!-- SLIDE 5: Bo'lim 2 -->
+<section class="sec">
+  <div class="num">02</div>
+  <h1>String yaratish usullari</h1>
+  <p>Tirnoqlarning to'g'ri tanlovi va ko'p qatorli matnlar</p>
+  <aside class="notes">
+    2-qism: String yaratish.
+  </aside>
+</section>
+
+<!-- SLIDE 6: Tirnoqlar kod namunasi -->
+<section>
+  <h2>String yaratishning 3 usuli</h2>
+  <pre><code class="language-python"># 1. Bittalik tirnoq
+shahar = 'Toshkent'
+
+# 2. Qo'shtirnoq (ichida apostrof bo'lganda qulay)
+davlat = "O'zbekiston"
+
+# 3. Uchlik tirnoq (ko'p qatorli matnlar)
+maqol = """Bilimli kishi
+bilmaganini so'raydi,
+bilmagan kishi - qo'rqadi."""</code></pre>
+  <aside class="notes">
+    Qo'shtirnoq va bittalik tirnoq farqini eslatib o'ting.
+  </aside>
+</section>
+
+<!-- SLIDE 7: Bo'lim 3 -->
+<section class="sec">
+  <div class="num">03</div>
+  <h1>Immutable (O'zgarmas) String</h1>
+  <p>TypeError va satrlarni xavfsiz boshqarish</p>
+  <aside class="notes">
+    3-qism: Immutability tushunchasi.
+  </aside>
+</section>
+
+<!-- SLIDE 8: TypeError va Yangi String -->
+<section>
+  <h2>Immutability va TypeError</h2>
+  <div class="cards two">
+    <div class="card fragment">
+      <div class="icon"><i data-ic="circle-x"></i></div>
+      <h3>Taqiqlangan amal</h3>
+      <pre><code class="language-python">s = "Python"
+s[0] = "J"
+# TypeError: 'str' object
+# does not support item assignment</code></pre>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="circle-check"></i></div>
+      <h3>To'g'ri usul (Yangi satr)</h3>
+      <pre><code class="language-python">s = "Python"
+s2 = "J" + s[1:]
+print(s2)  # Jython
+print(s)   # Python (o'zgarmadi!)</code></pre>
+    </div>
+  </div>
+  <aside class="notes">
+    Satrning birorta belgisini almashtirish doim yangi satr yaratish orqali bo'ladi.
+  </aside>
+</section>
+
+<!-- SLIDE 9: Interfaol savol -->
+<section>
+  <h2>Tezkor sinov: Natijani toping</h2>
+  <p class="muted">Quyidagi kod ishlaganda ekranga nima chiqadi?</p>
+  <div class="cards two">
+    <div class="card">
+      <pre><code class="language-python">word = "Salom"
+yangi = "K" + word[1:]
+print(yangi)
+print(word)</code></pre>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="circle-check"></i></div>
+      <h3>Natija:</h3>
+      <p><code>Kalom</code><br><code>Salom</code></p>
+      <p class="t-muted">Chunki <code>word</code> ning o'zi xotirada o'zgarmay saqlanib qoladi!</p>
+    </div>
+  </div>
+  <aside class="notes">
+    O'quvchilardan natijani so'rang.
+  </aside>
+</section>
+
+<!-- SLIDE 10: Xulosa -->
+<section>
+  <h2>Bugungi dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment">
+      <div class="icon"><i data-ic="database"></i></div>
+      <h3>5 ta tuzilma</h3>
+      <p>Python'da 5 ta asosiy o'rnatilgan ma'lumotlar tuzilmasi mavjud.</p>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="lock"></i></div>
+      <h3>Immutable</h3>
+      <p>String o'zgarmasdir, o'zgarishlar yangi satr hosil qiladi.</p>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="circle-arrow-right"></i></div>
+      <h3>Keyingi dars</h3>
+      <p>11-darsda <strong>String indekslari, slicing va metodlari</strong>ni o'rganamiz.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    Darsni xulosalang.
+  </aside>
+</section>

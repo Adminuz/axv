@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (Game)", "link": "/9-sinf-game/"}, "week": {"n": 2, "link": "/9-sinf-game/hafta-02/"}, "g": 4, "title": "O‘yin loyihalash va ssenariy: G'oyadan voqealar zanjirigacha", "lead": "Kitobda siz hikoyani o'qiysiz, kinoda uni ko'rasiz, o'yinda esa siz ushbu hikoyaning ichida yashaysiz va uni o'zingiz yaratasiz!", "slide": "/slaydlar/9-sinf-game/hafta-02/dars-1.html", "tabs": [{"g": 4, "link": "/9-sinf-game/hafta-02/dars-1", "current": true}, {"g": 5, "link": "/9-sinf-game/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/9-sinf-game/hafta-02/dars-3", "current": false}], "prev": null, "next": {"g": 5, "title": "Photoshop interfeysi va vositalari (1-qism): 2D grafika turlari va interfeys", "link": "/9-sinf-game/hafta-02/dars-2"}}
+dars: {"sinf": {"name": "9-sinf (Game)", "link": "/9-sinf-game/"}, "week": {"n": 2, "link": "/9-sinf-game/hafta-02/"}, "g": 4, "title": "O‘yin loyihalash va ssenariy: G'oyadan voqealar zanjirigacha", "lead": "Kitobda siz hikoyani o'qiysiz, kinoda uni ko'rasiz, o'yinda esa siz ushbu hikoyaning ichida yashaysiz va uni o'zingiz yaratasiz!", "slide": "/slaydlar/9-sinf-game/hafta-02/dars-1.html", "test": "/slaydlar/9-sinf-game/hafta-02/dars-1-test.html", "tabs": [{"g": 4, "link": "/9-sinf-game/hafta-02/dars-1", "current": true}, {"g": 5, "link": "/9-sinf-game/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/9-sinf-game/hafta-02/dars-3", "current": false}], "prev": null, "next": {"g": 5, "title": "Photoshop interfeysi va vositalari (1-qism): 2D grafika turlari va interfeys", "link": "/9-sinf-game/hafta-02/dars-2"}}
 ---
 
 

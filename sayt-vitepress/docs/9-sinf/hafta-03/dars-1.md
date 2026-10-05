@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf", "link": "/9-sinf/"}, "week": {"n": 3, "link": "/9-sinf/hafta-03/"}, "g": 7, "title": "Axure RP: Dinamik panellar va interaktiv bog'lanishlar (Interactions)", "lead": "Statik chizmalardan chertiladigan (clickable) prototiplarga o'tish, Dinamik panellar va sahifalararo navigatsiya sirlari.", "slide": "/slaydlar/9-sinf/hafta-03/dars-1.html", "tabs": [{"g": 7, "link": "/9-sinf/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/9-sinf/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "Foydalanuvchi formalari, kiritish maydonlari va xatoliklar dizayni (Form Wireframing)", "link": "/9-sinf/hafta-03/dars-2"}}
+dars: {"sinf": {"name": "9-sinf", "link": "/9-sinf/"}, "week": {"n": 3, "link": "/9-sinf/hafta-03/"}, "g": 7, "title": "Axure RP: Dinamik panellar va interaktiv bog'lanishlar (Interactions)", "lead": "Statik chizmalardan chertiladigan (clickable) prototiplarga o'tish, Dinamik panellar va sahifalararo navigatsiya sirlari.", "slide": "/slaydlar/9-sinf/hafta-03/dars-1.html", "test": "/slaydlar/9-sinf/hafta-03/dars-1-test.html", "tabs": [{"g": 7, "link": "/9-sinf/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/9-sinf/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "Foydalanuvchi formalari, kiritish maydonlari va xatoliklar dizayni (Form Wireframing)", "link": "/9-sinf/hafta-03/dars-2"}}
 ---
 
 

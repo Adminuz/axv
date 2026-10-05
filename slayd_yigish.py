@@ -37,7 +37,10 @@ def wrap(content, up, title=None):
 def main():
     subprocess.run([sys.executable, str(ROOT / "ikon_yigish.py")], check=True)
     n = 0
-    for src in sorted(ROOT.glob("*/haftalik/*/dars-[0-9]-slaydlar.html")):
+    srcs = sorted(ROOT.glob("*/haftalik/*/dars-[0-9]-slaydlar.html")) \
+        + sorted(ROOT.glob("*/haftalik/*/dars-[0-9]-test-slaydlar.html")) \
+        + sorted(ROOT.glob("*/haftalik/*/hafta-test-slaydlar.html"))
+    for src in srcs:
         dst = src.with_name(src.name.replace("-slaydlar", "-slayd"))
         dst.write_text(wrap(src.read_text(encoding="utf-8"), "../../../"), encoding="utf-8")
         n += 1

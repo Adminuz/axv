@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (UX/UI)", "link": "/10-sinf-uxui/"}, "week": {"n": 3, "link": "/10-sinf-uxui/hafta-03/"}, "g": 14, "title": "8-dars: Grid tizimlari va kompozitsiya", "lead": "Formalar, validatsiya va interfeys elementlari semantikasi", "slide": "/slaydlar/10-sinf-uxui/hafta-03/dars-8.html", "tabs": [{"g": 13, "link": "/10-sinf-uxui/hafta-03/dars-7", "current": false}, {"g": 14, "link": "/10-sinf-uxui/hafta-03/dars-8", "current": true}, {"g": 15, "link": "/10-sinf-uxui/hafta-03/dars-9", "current": false}], "prev": {"g": 13, "title": "7-dars: Ranglar psixologiyasi va tipografiya", "link": "/10-sinf-uxui/hafta-03/dars-7"}, "next": {"g": 15, "title": "9-dars: Ikonka, tugma va navigatsiya elementlarini dizayni (UI Kit)", "link": "/10-sinf-uxui/hafta-03/dars-9"}}
+dars: {"sinf": {"name": "10-sinf (UX/UI)", "link": "/10-sinf-uxui/"}, "week": {"n": 3, "link": "/10-sinf-uxui/hafta-03/"}, "g": 14, "title": "8-dars: Grid tizimlari va kompozitsiya", "lead": "Formalar, validatsiya va interfeys elementlari semantikasi", "slide": "/slaydlar/10-sinf-uxui/hafta-03/dars-8.html", "test": "/slaydlar/10-sinf-uxui/hafta-03/dars-8-test.html", "tabs": [{"g": 13, "link": "/10-sinf-uxui/hafta-03/dars-7", "current": false}, {"g": 14, "link": "/10-sinf-uxui/hafta-03/dars-8", "current": true}, {"g": 15, "link": "/10-sinf-uxui/hafta-03/dars-9", "current": false}], "prev": {"g": 13, "title": "7-dars: Ranglar psixologiyasi va tipografiya", "link": "/10-sinf-uxui/hafta-03/dars-7"}, "next": {"g": 15, "title": "9-dars: Ikonka, tugma va navigatsiya elementlarini dizayni (UI Kit)", "link": "/10-sinf-uxui/hafta-03/dars-9"}}
 ---
 
 **Sinf:** 10-sinf  

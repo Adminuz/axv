@@ -34,14 +34,14 @@ Manba: `4_2_Standart...`, `4_2_Uslubiy_ko`rsatma...`, `4_2_O'quv_qo'llanma...`. 
 | 7 | 3 | Pagination va throttling | 📝 |
 | 8 | 3 | Statik fayllar bilan ishlash. Fayllarni yuklash va koʻchirib olish | 📝 |
 | 9 | 3 | APIni testlash. APIni hujjatlashtirish. (Swagger, Redoc) | 📝 |
-| 10 | 4 | API havfsizligini ta’minlash | ⬜ |
-| 11 | 4 | Tayyor loyihani hostingga joylash (deploy) | ⬜ |
+| 10 | 4 | API havfsizligini ta’minlash | 📝 |
+| 11 | 4 | Tayyor loyihani hostingga joylash (deploy) | 📝 |
 
 ## II BOB. FastAPI
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 12 | 4 | FastAPI loyiha yaratish. Loyiha uchun MB ni loyihalash va yaratish, dastlabki sozlamalar | ⬜ |
+| 12 | 4 | FastAPI loyiha yaratish. Loyiha uchun MB ni loyihalash va yaratish, dastlabki sozlamalar | 📝 |
 | 13 | 5 | Foydalanuvchilarni boshqarish: Identifikatsiya, autentifikatsiya va avtorizatsiya. Token, session va JWT | ⬜ |
 | 14 | 5 | CRUD amallarni bajarish (model, forma, validatsiya) | ⬜ |
 | 15 | 5 | Filtrlash, qidiruv va tartiblash | ⬜ |

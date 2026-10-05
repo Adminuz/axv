@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (Back-end)", "link": "/9-sinf-backend/"}, "week": {"n": 2, "link": "/9-sinf-backend/hafta-02/"}, "g": 4, "title": "Pythonda operatorlar va ifodalar", "lead": "Dasturimiz fikrlashni boshlaydi! Ushbu darsda taqqoslash va mantiqiy operatorlar bilan tanishib, kompyuterga qiymatlarni solishtirish, rost va yolg‘onni ajratish hamda murakkab shartli ifodalar tuzishni o‘rgatamiz.", "slide": "/slaydlar/9-sinf-backend/hafta-02/dars-1.html", "tabs": [{"g": 4, "link": "/9-sinf-backend/hafta-02/dars-1", "current": true}, {"g": 5, "link": "/9-sinf-backend/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/9-sinf-backend/hafta-02/dars-3", "current": false}], "prev": null, "next": {"g": 5, "title": "Tarmoqlanuvchi algoritm: if va else operatorlari", "link": "/9-sinf-backend/hafta-02/dars-2"}}
+dars: {"sinf": {"name": "9-sinf (Back-end)", "link": "/9-sinf-backend/"}, "week": {"n": 2, "link": "/9-sinf-backend/hafta-02/"}, "g": 4, "title": "Pythonda operatorlar va ifodalar", "lead": "Dasturimiz fikrlashni boshlaydi! Ushbu darsda taqqoslash va mantiqiy operatorlar bilan tanishib, kompyuterga qiymatlarni solishtirish, rost va yolg‘onni ajratish hamda murakkab shartli ifodalar tuzishni o‘rgatamiz.", "slide": "/slaydlar/9-sinf-backend/hafta-02/dars-1.html", "test": "/slaydlar/9-sinf-backend/hafta-02/dars-1-test.html", "tabs": [{"g": 4, "link": "/9-sinf-backend/hafta-02/dars-1", "current": true}, {"g": 5, "link": "/9-sinf-backend/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/9-sinf-backend/hafta-02/dars-3", "current": false}], "prev": null, "next": {"g": 5, "title": "Tarmoqlanuvchi algoritm: if va else operatorlari", "link": "/9-sinf-backend/hafta-02/dars-2"}}
 ---
 
 

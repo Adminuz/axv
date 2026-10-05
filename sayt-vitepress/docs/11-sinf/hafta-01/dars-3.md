@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "11-sinf", "link": "/11-sinf/"}, "week": {"n": 1, "link": "/11-sinf/hafta-01/"}, "g": 3, "title": "GitHub: masofaviy repo, push/pull/clone, README, .gitignore, Issues va birinchi loyiha", "lead": "Bugun kodingiz birinchi marta noutbukdan chiqib, butun dunyo ko'ra oladigan joyga boradi: GitHub. Oxirida sizda ish beruvchiga ko'rsatsa bo'ladigan birinchi haqiqiy repo bo'ladi.", "slide": "/slaydlar/11-sinf/hafta-01/dars-3.html", "tabs": [{"g": 1, "link": "/11-sinf/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/11-sinf/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/11-sinf/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "Git asoslari: versiyalarni boshqarish, repozitoriy, commit, branch va merge", "link": "/11-sinf/hafta-01/dars-2"}, "next": null}
+dars: {"sinf": {"name": "11-sinf", "link": "/11-sinf/"}, "week": {"n": 1, "link": "/11-sinf/hafta-01/"}, "g": 3, "title": "GitHub: masofaviy repo, push/pull/clone, README, .gitignore, Issues va birinchi loyiha", "lead": "Bugun kodingiz birinchi marta noutbukdan chiqib, butun dunyo ko'ra oladigan joyga boradi: GitHub. Oxirida sizda ish beruvchiga ko'rsatsa bo'ladigan birinchi haqiqiy repo bo'ladi.", "slide": "/slaydlar/11-sinf/hafta-01/dars-3.html", "test": "/slaydlar/11-sinf/hafta-01/dars-3-test.html", "tabs": [{"g": 1, "link": "/11-sinf/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/11-sinf/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/11-sinf/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "Git asoslari: versiyalarni boshqarish, repozitoriy, commit, branch va merge", "link": "/11-sinf/hafta-01/dars-2"}, "next": null}
 ---
 
 

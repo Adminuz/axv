@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "8-sinf", "link": "/8-sinf/"}, "week": {"n": 3, "link": "/8-sinf/hafta-03/"}, "g": 7, "title": "HTML5 semantik teglari: <header>, <nav>, <main>, <section>, <article>, <aside>, <footer>", "lead": "Veb-sahifalarni «div sho'rvasi»dan qutqarish, brauzerlar va qidiruv tizimlari uchun tushunarli toza arxitektura hamda HTML5 semantika san'ati.", "slide": "/slaydlar/8-sinf/hafta-03/dars-1.html", "tabs": [{"g": 7, "link": "/8-sinf/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/8-sinf/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/8-sinf/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "HTML5 multimedia va interaktiv elementlar: <video>, <audio>, <figure>, <details>, <progress>", "link": "/8-sinf/hafta-03/dars-2"}}
+dars: {"sinf": {"name": "8-sinf", "link": "/8-sinf/"}, "week": {"n": 3, "link": "/8-sinf/hafta-03/"}, "g": 7, "title": "HTML5 semantik teglari: <header>, <nav>, <main>, <section>, <article>, <aside>, <footer>", "lead": "Veb-sahifalarni «div sho'rvasi»dan qutqarish, brauzerlar va qidiruv tizimlari uchun tushunarli toza arxitektura hamda HTML5 semantika san'ati.", "slide": "/slaydlar/8-sinf/hafta-03/dars-1.html", "test": "/slaydlar/8-sinf/hafta-03/dars-1-test.html", "tabs": [{"g": 7, "link": "/8-sinf/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/8-sinf/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/8-sinf/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "HTML5 multimedia va interaktiv elementlar: <video>, <audio>, <figure>, <details>, <progress>", "link": "/8-sinf/hafta-03/dars-2"}}
 ---
 
 

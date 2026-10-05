@@ -26,7 +26,7 @@ Manba: `2.2. Uslubiy ko`rsatma (Advanced Back-end va DevOps).docx`. Agentlar avv
 | 1–3 | 1 | Python: o‘rnatish, ilk dastur, ma'lumotlar toifalari va o‘zgaruvchilar | 📝 |
 | 4–6 | 2 | Arifmetik, taqqoslash va mantiqiy operatorlar. Tarmoqlanuvchi algoritm (if/else/elif) | 📝 |
 | 7–9 | 3 | Takrorlanuvchi algoritm: for va while sikllari. match/case tanlash operatori | 📝 |
-| 10–12 | 4 | Ma’lumotlar tuzilmalari: satrlar (string) va ro‘yxatlar (list) | ⬜ |
+| 10–12 | 4 | Ma’lumotlar tuzilmalari: satrlar (string) va ro‘yxatlar (list) | 📝 |
 | 13–15 | 5 | Ma’lumotlar tuzilmalari: kortejlar (tuple), to‘plamlar (set) va lug‘atlar (dict) | ⬜ |
 | 16–18 | 6 | DRY prinsipi, funksiyalar (def), istisnoli holatlar (try/except) va fayllar bilan ishlash | ⬜ |
 

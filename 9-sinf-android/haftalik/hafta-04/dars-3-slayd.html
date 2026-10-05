@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Kotlin: if va when Shart operatorlari</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<!-- SLIDE 1: Hero -->
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>Kotlin: if va when Shart operatorlari</h1>
+  <p class="muted">Tarmoqlanuvchi algoritmlar · if ifoda sifatida · when operatori · Oraliqlar (in)</p>
+  <span class="badge">9-sinf</span><span class="badge">Android dasturlash</span><span class="badge">4-hafta · 12-dars</span>
+  <aside class="notes">
+    Kirish: «Dastur foydalanuvchi xatti-harakatiga qarab qanday qaror qabul qiladi? Java'dagi switch nega eskirgan va Kotlin'dagi when qanday ishlaydi?» deb boshlang.
+  </aside>
+</section>
+
+<!-- SLIDE 2: Reja -->
+<section>
+  <h2>Bugungi dars rejasi</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up">
+      <div class="icon"><i data-ic="git-fork" data-anim="pulse"></i></div>
+      <h3>01. if-else ifodasi</h3>
+      <p>Shartli tekshiruv va <code>if</code> ning qiymat qaytarishi (Expression).</p>
+    </div>
+    <div class="card fragment fade-up">
+      <div class="icon"><i data-ic="list-filter" data-anim="float"></i></div>
+      <h3>02. when operatori</h3>
+      <p>Zamonaviy tanlash vositasi, bir nechta qiymatlar va oraliqlar (<code>in</code>).</p>
+    </div>
+    <div class="card fragment fade-up">
+      <div class="icon"><i data-ic="sparkles" data-anim="wiggle"></i></div>
+      <h3>03. when ifoda sifatida</h3>
+      <p>O'zgaruvchiga qiymat yuklash va majburiy <code>else</code> intizomi.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    Dars rejasini tanishtiring.
+  </aside>
+</section>
+
+<!-- SLIDE 3: Bo'lim 1 -->
+<section class="sec">
+  <div class="num">01</div>
+  <h1>if-else ifoda sifatida</h1>
+  <p>Ternar operatorsiz, toza va xavfsiz qiymat tanlash</p>
+  <aside class="notes">
+    1-qism: if as expression.
+  </aside>
+</section>
+
+<!-- SLIDE 4: if as expression -->
+<section>
+  <h2>if ifoda sifatida (Expression)</h2>
+  <div class="cards two">
+    <div class="card fragment">
+      <div class="icon"><i data-ic="code"></i></div>
+      <h3>An'anaviy if-else</h3>
+      <pre><code class="language-kotlin">var max = 0
+if (a > b) {
+    max = a
+} else {
+    max = b
+}</code></pre>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="zap"></i></div>
+      <h3>Kotlinda qisqa ifoda</h3>
+      <pre><code class="language-kotlin">val max = if (a > b) a else b
+// Bir qatorda, val bilan xavfsiz!</code></pre>
+      <p class="t-accent"><em>Kotlinda ternary (?:) operatori o'rniga if ishlatiladi!</em></p>
+    </div>
+  </div>
+  <aside class="notes">
+    if natijasini to'g'ridan-to'g'ri val o'zgaruvchisiga tenglash mumkin.
+  </aside>
+</section>
+
+<!-- SLIDE 5: Bo'lim 2 -->
+<section class="sec">
+  <div class="num">02</div>
+  <h1>when: Zamonaviy tanlash operatori</h1>
+  <p>Switch o'rnini egallagan kuchli va moslashuvchan mexanizm</p>
+  <aside class="notes">
+    2-qism: when operatori.
+  </aside>
+</section>
+
+<!-- SLIDE 6: when sintaksisi -->
+<section>
+  <h2>when operatorining imkoniyatlari</h2>
+  <pre><code class="language-kotlin">val fasl = 2
+when (fasl) {
+    1 -> println("Qish")
+    2 -> println("Bahor")
+    3 -> println("Yoz")
+    4 -> println("Kuz")
+    else -> println("Noto'g'ri raqam")
+}
+// break so'zi umuman shart emas!</code></pre>
+  <aside class="notes">
+    Java switch'idagi eng katta xato (break'ni unutish) Kotlinda butunlay hal qilingan.
+  </aside>
+</section>
+
+<!-- SLIDE 7: Oraliqlar (in) bilan when -->
+<section>
+  <h2>Oraliqlar (Range: in ..)</h2>
+  <div class="cards two">
+    <div class="card fragment">
+      <div class="icon"><i data-ic="award"></i></div>
+      <h3>Baholash shkalasi</h3>
+      <pre><code class="language-kotlin">val ball = 85
+val baho = when (ball) {
+    in 90..100 -> "5 (A'lo)"
+    in 70..89  -> "4 (Yaxshi)"
+    in 60..69  -> "3 (Qoniqarli)"
+    else       -> "2 (Qoniqarsiz)"
+}
+println("Baho: $baho")</code></pre>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="layers"></i></div>
+      <h3>Ko'p qiymatlarni birlashtirish</h3>
+      <pre><code class="language-kotlin">val oy = 5
+val kunlar = when (oy) {
+    1, 3, 5, 7, 8, 10, 12 -> 31
+    4, 6, 9, 11 -> 30
+    2 -> 28
+    else -> 0
+}</code></pre>
+    </div>
+  </div>
+  <aside class="notes">
+    in 90..100 sintaksisini va vergul bilan bir nechta qiymat berishni ko'rsating.
+  </aside>
+</section>
+
+<!-- SLIDE 8: Bo'lim 3 -->
+<section class="sec">
+  <div class="num">03</div>
+  <h1>Amaliyot va Xavfsizlik</h1>
+  <p>To'liq qamrov va else blokining zarurligi</p>
+  <aside class="notes">
+    3-qism: else va amaliy dastur.
+  </aside>
+</section>
+
+<!-- SLIDE 9: Mini-dastur -->
+<section>
+  <h2>Svetofor va Tezlik boshqaruvi</h2>
+  <pre><code class="language-kotlin">val chiroq = "Yashil"
+val tezlik = 65
+
+when (chiroq) {
+    "Qizil" -> println("TO'XTANG!")
+    "Sariq" -> println("DIQQAT!")
+    "Yashil" -> {
+        if (tezlik > 60) {
+            println("Ogohlantirish: Tezlik yuqori ($tezlik km/soat)!")
+        } else {
+            println("Harakatlanishga ruxsat.")
+        }
+    }
+    else -> println("Noma'lum signal")
+}</code></pre>
+  <aside class="notes">
+    when ichida blok {} va if-else birga qanday ishlashini ko'rsating.
+  </aside>
+</section>
+
+<!-- SLIDE 10: Xulosa -->
+<section>
+  <h2>4-hafta xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment">
+      <div class="icon"><i data-ic="smartphone"></i></div>
+      <h3>10-dars: Real qurilma</h3>
+      <p>ADB drayverlari, USB Debugging va Logcat tahlili.</p>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="code"></i></div>
+      <h3>11-dars: val &amp; var</h3>
+      <p>Kotlin turlari, o'zgarmaslik (val) va String shablonlari.</p>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="git-fork"></i></div>
+      <h3>12-dars: if &amp; when</h3>
+      <p>Qaror qabul qilish, if ifodalari va <code>when</code> imkoniyatlari.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    4-haftani umumlashtiring.
+  </aside>
+</section>
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>

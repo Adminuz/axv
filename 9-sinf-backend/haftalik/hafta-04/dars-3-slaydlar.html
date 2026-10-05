@@ -1,0 +1,197 @@
+<!-- SLIDE 1: Hero -->
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>List (Ro‘yxat) va uning Metodlari</h1>
+  <p class="muted">Mutable to'plam · Indeks va Slicing · append · insert · remove · pop · clear</p>
+  <span class="badge">9-sinf</span><span class="badge">Advanced Back-end</span><span class="badge">4-hafta · 12-dars</span>
+  <aside class="notes">
+    Darsni boshlash: o'quvchilardan «Har xil narsalarni bitta savatga solib saqlash kerak bo'lsa, qaysi tuzilma ishlatiladi?» deb so'rang.
+  </aside>
+</section>
+
+<!-- SLIDE 2: Reja -->
+<section>
+  <h2>Bugungi dars rejasi</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up">
+      <div class="icon"><i data-ic="list" data-anim="pulse"></i></div>
+      <h3>01. List nima?</h3>
+      <p>Kvadrat qavslar <code>[...]</code>, tartiblilik va Mutable (o'zgaruvchanlik).</p>
+    </div>
+    <div class="card fragment fade-up">
+      <div class="icon"><i data-ic="circle-plus" data-anim="float"></i></div>
+      <h3>02. Qo'shish amallari</h3>
+      <p><code>append()</code> va <code>insert()</code> yordamida element kiritish.</p>
+    </div>
+    <div class="card fragment fade-up">
+      <div class="icon"><i data-ic="trash" data-anim="wiggle"></i></div>
+      <h3>03. O'chirish amallari</h3>
+      <p><code>remove()</code>, <code>pop()</code> va <code>clear()</code> farqlari.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    Dars rejasini tushuntiring.
+  </aside>
+</section>
+
+<!-- SLIDE 3: Bo'lim 1 -->
+<section class="sec">
+  <div class="num">01</div>
+  <h1>List (Ro'yxat) tushunchasi</h1>
+  <p>Tartiblangan va o'zgartirish mumkin bo'lgan universal to'plam</p>
+  <aside class="notes">
+    1-qism: List xususiyatlari.
+  </aside>
+</section>
+
+<!-- SLIDE 4: List yaratish va Mutable -->
+<section>
+  <h2>List yaratish va elementni o'zgartirish</h2>
+  <div class="cards two">
+    <div class="card fragment">
+      <div class="icon"><i data-ic="boxes"></i></div>
+      <h3>Yaratish va Indeks</h3>
+      <pre><code class="language-python">mevalar = ["olma", "banan", "gilos"]
+print(mevalar[0])   # olma
+print(mevalar[-1])  # gilos</code></pre>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="pencil"></i></div>
+      <h3>Mutable (O'zgaruvchan)</h3>
+      <pre><code class="language-python">sonlar = [10, 20, 30]
+sonlar[1] = 99
+print(sonlar)  # [10, 99, 30]</code></pre>
+    </div>
+  </div>
+  <aside class="notes">
+    Stringdan farqi: listda to'g'ridan-to'g'ri a[1] = 99 qilish mumkin.
+  </aside>
+</section>
+
+<!-- SLIDE 5: Bo'lim 2 -->
+<section class="sec">
+  <div class="num">02</div>
+  <h1>Element qo'shish: append va insert</h1>
+  <p>Ro'yxatni dinamik kengaytirish usullari</p>
+  <aside class="notes">
+    2-qism: Qo'shish metodlari.
+  </aside>
+</section>
+
+<!-- SLIDE 6: append vs insert -->
+<section>
+  <h2>append() vs insert()</h2>
+  <div class="cards two">
+    <div class="card fragment">
+      <div class="icon"><i data-ic="corner-down-right"></i></div>
+      <h3>append(qiymat)</h3>
+      <p>Doim ro'yxatning <strong>eng oxiriga</strong> yangi element qo'shadi:</p>
+      <pre><code class="language-python">a = [1, 2]
+a.append(3)
+print(a)  # [1, 2, 3]</code></pre>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="log-in"></i></div>
+      <h3>insert(indeks, qiymat)</h3>
+      <p>Ko'rsatilgan <strong>indeksga</strong> element qo'yib, qolganlarini suradi:</p>
+      <pre><code class="language-python">a = [1, 2, 3]
+a.insert(0, 0)
+print(a)  # [0, 1, 2, 3]</code></pre>
+    </div>
+  </div>
+  <aside class="notes">
+    append doim tez ishlaydi (O(1)), insert esa elementlarni surgani uchun resurs talab qiladi.
+  </aside>
+</section>
+
+<!-- SLIDE 7: Bo'lim 3 -->
+<section class="sec">
+  <div class="num">03</div>
+  <h1>Element o'chirish: remove, pop va clear</h1>
+  <p>Tozalash va kerakli elementni sug'urib olish</p>
+  <aside class="notes">
+    3-qism: O'chirish metodlari.
+  </aside>
+</section>
+
+<!-- SLIDE 8: remove, pop, clear -->
+<section>
+  <h2>3 xil o'chirish usuli</h2>
+  <div class="cards three">
+    <div class="card fragment">
+      <div class="icon"><i data-ic="circle-x"></i></div>
+      <h3>remove(qiymat)</h3>
+      <p>Qiymat bo'yicha birinchi uchraganini o'chiradi:</p>
+      <pre><code class="language-python">a = [1, 2, 2, 3]
+a.remove(2)
+# a &rarr; [1, 2, 3]</code></pre>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="arrow-up-right"></i></div>
+      <h3>pop(indeks)</h3>
+      <p>Indeksdagi elementni sug'urib qaytaradi:</p>
+      <pre><code class="language-python">a = [10, 20, 30]
+x = a.pop(0)
+# x=10, a=[20, 30]</code></pre>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="trash"></i></div>
+      <h3>clear()</h3>
+      <p>Ro'yxatni butunlay bo'shatadi:</p>
+      <pre><code class="language-python">a = [1, 2, 3]
+a.clear()
+# a &rarr; []</code></pre>
+    </div>
+  </div>
+  <aside class="notes">
+    pop() ning parametr berilmasa oxirgisini olishini eslatib o'ting.
+  </aside>
+</section>
+
+<!-- SLIDE 9: Interfaol savol -->
+<section>
+  <h2>Tezkor sinov: Natijani toping</h2>
+  <p class="muted">Quyidagi kod natijasini taxmin qiling:</p>
+  <div class="cards two">
+    <div class="card">
+      <pre><code class="language-python">a = [1, 2, 2, 3]
+a.remove(2)
+x = a.pop(0)
+print(x, a)</code></pre>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="circle-check"></i></div>
+      <h3>Natija:</h3>
+      <p><code>1 [2, 3]</code></p>
+      <p class="t-muted"><code>remove(2)</code> birinchi 2 ni o'chirdi &rarr; <code>[1, 2, 3]</code>. <code>pop(0)</code> esa 1 ni sug'urib oldi.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    O'quvchilardan javobni so'rang.
+  </aside>
+</section>
+
+<!-- SLIDE 10: Xulosa -->
+<section>
+  <h2>4-hafta xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment">
+      <div class="icon"><i data-ic="type"></i></div>
+      <h3>10-dars: String</h3>
+      <p>Ma'lumotlar tuzilmalari xaritasi va o'zgarmas (immutable) satrlar.</p>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="scissors"></i></div>
+      <h3>11-dars: Slicing</h3>
+      <p>Indekslash, <code>[start:stop:step]</code> va harflarni o'zgartirish metodlari.</p>
+    </div>
+    <div class="card fragment">
+      <div class="icon"><i data-ic="list"></i></div>
+      <h3>12-dars: List</h3>
+      <p>O'zgaruvchan (mutable) ro'yxatlar, element qo'shish va o'chirish metodlari.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    4-haftani umumlashtiring.
+  </aside>
+</section>

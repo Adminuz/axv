@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf", "link": "/9-sinf/"}, "week": {"n": 3, "link": "/9-sinf/hafta-03/"}, "g": 9, "title": "Wireframe loyihasini yakunlash, annotatsiyalar va Figmaga eksport", "lead": "Izohli simli ramkalar (Annotated wireframes), PNG/SVG/PDF eksport va Figmada UI dizayn uchun referens qatlamini sozlash.", "slide": "/slaydlar/9-sinf/hafta-03/dars-3.html", "tabs": [{"g": 7, "link": "/9-sinf/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/9-sinf/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "Foydalanuvchi formalari, kiritish maydonlari va xatoliklar dizayni (Form Wireframing)", "link": "/9-sinf/hafta-03/dars-2"}, "next": null}
+dars: {"sinf": {"name": "9-sinf", "link": "/9-sinf/"}, "week": {"n": 3, "link": "/9-sinf/hafta-03/"}, "g": 9, "title": "Wireframe loyihasini yakunlash, annotatsiyalar va Figmaga eksport", "lead": "Izohli simli ramkalar (Annotated wireframes), PNG/SVG/PDF eksport va Figmada UI dizayn uchun referens qatlamini sozlash.", "slide": "/slaydlar/9-sinf/hafta-03/dars-3.html", "test": "/slaydlar/9-sinf/hafta-03/dars-3-test.html", "tabs": [{"g": 7, "link": "/9-sinf/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/9-sinf/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "Foydalanuvchi formalari, kiritish maydonlari va xatoliklar dizayni (Form Wireframing)", "link": "/9-sinf/hafta-03/dars-2"}, "next": null}
 ---
 
 

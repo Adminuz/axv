@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (Cyber)", "link": "/10-sinf-cyber/"}, "week": {"n": 3, "link": "/10-sinf-cyber/hafta-03/"}, "g": 7, "title": "Xavfsizlikni anglash (2-qism): raqamli gigiyena, brauzer xavfsizligi va 2FA", "lead": "Xavfsizlikni anglash tushunchasi (2-qism): raqamli gigiyena, brauzer xavfsizligi va ikki bosqichli autentifikatsiya (2FA)", "slide": "/slaydlar/10-sinf-cyber/hafta-03/dars-1.html", "tabs": [{"g": 7, "link": "/10-sinf-cyber/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/10-sinf-cyber/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/10-sinf-cyber/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "Xavfsizlikni anglash (3-qism): tahdidlarni modellashtirish, Red/Blue Team va CTF", "link": "/10-sinf-cyber/hafta-03/dars-2"}}
+dars: {"sinf": {"name": "10-sinf (Cyber)", "link": "/10-sinf-cyber/"}, "week": {"n": 3, "link": "/10-sinf-cyber/hafta-03/"}, "g": 7, "title": "Xavfsizlikni anglash (2-qism): raqamli gigiyena, brauzer xavfsizligi va 2FA", "lead": "Xavfsizlikni anglash tushunchasi (2-qism): raqamli gigiyena, brauzer xavfsizligi va ikki bosqichli autentifikatsiya (2FA)", "slide": "/slaydlar/10-sinf-cyber/hafta-03/dars-1.html", "test": "/slaydlar/10-sinf-cyber/hafta-03/dars-1-test.html", "tabs": [{"g": 7, "link": "/10-sinf-cyber/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/10-sinf-cyber/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/10-sinf-cyber/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "Xavfsizlikni anglash (3-qism): tahdidlarni modellashtirish, Red/Blue Team va CTF", "link": "/10-sinf-cyber/hafta-03/dars-2"}}
 ---
 
 ---

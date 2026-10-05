@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (BI)", "link": "/9-sinf-bi/"}, "week": {"n": 3, "link": "/9-sinf-bi/hafta-03/"}, "g": 7, "title": "Ma’lumotlarni tozalash (Data Cleaning) va transformatsiya", "lead": "Tahlilchining eng muhim mahorati: ortiqcha bo'shliqlar, xato formatlar va dublikatlardan xoli, 100% toza va sifatli ma'lumotlar to'plamini yaratish san'ati.", "slide": "/slaydlar/9-sinf-bi/hafta-03/dars-1.html", "tabs": [{"g": 7, "link": "/9-sinf-bi/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/9-sinf-bi/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf-bi/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "Pivot jadvallar (PivotTable) va ma'lumotlar vizualizatsiyasi", "link": "/9-sinf-bi/hafta-03/dars-2"}}
+dars: {"sinf": {"name": "9-sinf (BI)", "link": "/9-sinf-bi/"}, "week": {"n": 3, "link": "/9-sinf-bi/hafta-03/"}, "g": 7, "title": "Ma’lumotlarni tozalash (Data Cleaning) va transformatsiya", "lead": "Tahlilchining eng muhim mahorati: ortiqcha bo'shliqlar, xato formatlar va dublikatlardan xoli, 100% toza va sifatli ma'lumotlar to'plamini yaratish san'ati.", "slide": "/slaydlar/9-sinf-bi/hafta-03/dars-1.html", "test": "/slaydlar/9-sinf-bi/hafta-03/dars-1-test.html", "tabs": [{"g": 7, "link": "/9-sinf-bi/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/9-sinf-bi/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf-bi/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "Pivot jadvallar (PivotTable) va ma'lumotlar vizualizatsiyasi", "link": "/9-sinf-bi/hafta-03/dars-2"}}
 ---
 
 

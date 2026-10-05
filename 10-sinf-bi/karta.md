@@ -9,8 +9,8 @@ Manba: Rasmiy o'quv dasturi (`10-sinf-bi/_matn/oquv-dasturi.txt`), Uslubiy ko'rs
 ## Joriy holat
 
 - Oxirgi o'tilgan dars: **0**
-- Keyingi dars: **4** (2-hafta, 1-dars)
-- Oxirgi yangilanish: 1-hafta (1–3 darslar) tayyorlandi
+- Keyingi dars: **7** (3-hafta, 1-dars)
+- Oxirgi yangilanish: 3-hafta (7–9 darslar) tayyorlandi
 
 ---
 
@@ -21,15 +21,15 @@ Manba: Rasmiy o'quv dasturi (`10-sinf-bi/_matn/oquv-dasturi.txt`), Uslubiy ko'rs
 | 1 | 1 | Ma’lumotlar muhandisligiga kirish (DIKW piramidasi, Data Engineer roli, Data Pipeline) | 📝 |
 | 2 | 1 | Ma'lumotlar arxitekturasi va hayot sikli (6 qatlam, 7 bosqich, Data Quality mezonlari) | 📝 |
 | 3 | 1 | Ma’lumot formatlari: CSV va JSON bilan ishlash (Tabular vs Nested, Medallion arxitekturasi) | 📝 |
-| 4 | 2 | Ma’lumot formatlari: Parquet va Columnar saqlash formati (Snappy siqish, CSV vs Parquet) | ⬜ |
-| 5 | 2 | Ma’lumot formatlari: Avro va formatlarni chuqur taqqoslash | ⬜ |
-| 6 | 2 | Ma’lumotlar bazalari: konsept va tuzilma. Relatsion ma’lumotlar bazasi (RDBMS) asoslari | ⬜ |
-| 7 | 3 | Relyatsion jadvallar, Primary Key, Foreign Key va relyatsion yaxlitlik | ⬜ |
-| 8 | 3 | R-diagrammalar (ERD) loyihalash va SQLite bilan ishlash | ⬜ |
-| 9 | 3 | SQL analitik operatorlari: SELECT, WHERE, ORDER BY, LIMIT asoslari | ⬜ |
-| 10 | 4 | SQL analitik operatorlari: GROUP BY va HAVING bilan ma'lumotlarni guruhlash | ⬜ |
-| 11 | 4 | SQL JOIN turlari (INNER, LEFT, RIGHT, FULL) va amaliy tahlil | ⬜ |
-| 12 | 4 | Subquery, CTE (WITH) va CASE WHEN operatorlari | ⬜ |
+| 4 | 2 | Ma’lumot formatlari: Parquet va Columnar saqlash formati (Snappy siqish, CSV vs Parquet) | 📝 |
+| 5 | 2 | Ma’lumot formatlari: Avro va formatlarni chuqur taqqoslash | 📝 |
+| 6 | 2 | Ma’lumotlar bazalari: konsept va tuzilma. Relatsion ma’lumotlar bazasi (RDBMS) asoslari | 📝 |
+| 7 | 3 | Relyatsion jadvallar, Primary Key, Foreign Key va relyatsion yaxlitlik | 📝 |
+| 8 | 3 | R-diagrammalar (ERD) loyihalash va SQLite bilan ishlash | 📝 |
+| 9 | 3 | SQL analitik operatorlari: SELECT, WHERE, ORDER BY, LIMIT asoslari | 📝 |
+| 10 | 4 | SQL analitik operatorlari: GROUP BY va HAVING bilan ma'lumotlarni guruhlash | 📝 |
+| 11 | 4 | SQL JOIN turlari (INNER, LEFT, RIGHT, FULL) va amaliy tahlil | 📝 |
+| 12 | 4 | Subquery, CTE (WITH) va CASE WHEN operatorlari | 📝 |
 | 13 | 5 | Ma'lumotlar modellashtirish: Kimball metodologiyasi, Star Schema va Snowflake Schema | ⬜ |
 | 14 | 5 | Fakt (Fact) va O'lcham (Dimension) jadvallarini loyihalash | ⬜ |
 | 15 | 5 | Data Mart tushunchasi va sohaga oid martlar yaratish | ⬜ |

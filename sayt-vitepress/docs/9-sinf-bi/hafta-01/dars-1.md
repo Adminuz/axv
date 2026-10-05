@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (BI)", "link": "/9-sinf-bi/"}, "week": {"n": 1, "link": "/9-sinf-bi/hafta-01/"}, "g": 1, "title": "Ma’lumot tushunchasi, uning turlari va DIKW modeli", "lead": "Raqamlar olamiga kirish: xom ma'lumotlar qanday qilib foydali axborot, chuqur bilim va oqilona qarorlarga aylanishini DIKW piramidasi orqali kashf eting.", "slide": "/slaydlar/9-sinf-bi/hafta-01/dars-1.html", "tabs": [{"g": 1, "link": "/9-sinf-bi/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/9-sinf-bi/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf-bi/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "Business Intelligence (BI) asoslari: Katta to'rtlik va hayotiy sikl", "link": "/9-sinf-bi/hafta-01/dars-2"}}
+dars: {"sinf": {"name": "9-sinf (BI)", "link": "/9-sinf-bi/"}, "week": {"n": 1, "link": "/9-sinf-bi/hafta-01/"}, "g": 1, "title": "Ma’lumot tushunchasi, uning turlari va DIKW modeli", "lead": "Raqamlar olamiga kirish: xom ma'lumotlar qanday qilib foydali axborot, chuqur bilim va oqilona qarorlarga aylanishini DIKW piramidasi orqali kashf eting.", "slide": "/slaydlar/9-sinf-bi/hafta-01/dars-1.html", "test": "/slaydlar/9-sinf-bi/hafta-01/dars-1-test.html", "tabs": [{"g": 1, "link": "/9-sinf-bi/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/9-sinf-bi/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf-bi/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "Business Intelligence (BI) asoslari: Katta to'rtlik va hayotiy sikl", "link": "/9-sinf-bi/hafta-01/dars-2"}}
 ---
 
 

@@ -26,7 +26,7 @@ Manba: `9-sinf/2_1_O'quv_qo'llanma_UXUI_dizayn_va_Advanced_Front_end.docx` (naza
 | 1–2 | 1 | UX va UI dizayn tushunchalari | 📝 |
 | 3–4 | 1–2 | Foydalanuvchi tadqiqotlari va ssenariy yaratish usullari | 📝 |
 | 5–9 | 2–3 | Axure RP va Balsamiq'da wireframe yasash | 📝 |
-| 10–12 | 4 | UI elementlari: rang, shrift va kompozitsiya asoslari | ⬜ |
+| 10–12 | 4 | UI elementlari: rang, shrift va kompozitsiya asoslari | 📝 |
 | 13–15 | 5 | UI kit va dizayn tizimlariga kirish | ⬜ |
 
 ## II-bob. Prototiplash va UX/UI dizayn vositalari (20 dars)

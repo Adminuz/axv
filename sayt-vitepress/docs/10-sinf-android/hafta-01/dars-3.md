@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (Android)", "link": "/10-sinf-android/"}, "week": {"n": 1, "link": "/10-sinf-android/hafta-01/"}, "g": 3, "title": "3-dars: Dependency management va versiyalar bilan ishlash (Version Catalog)", "lead": "Dependency management va versiyalar bilan ishlash: kutubxonalar, repozitoriylar, Version Catalog (TOML)", "slide": "/slaydlar/10-sinf-android/hafta-01/dars-3.html", "tabs": [{"g": 1, "link": "/10-sinf-android/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/10-sinf-android/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/10-sinf-android/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "2-dars: Build variantlari va Product Flavors", "link": "/10-sinf-android/hafta-01/dars-2"}, "next": null}
+dars: {"sinf": {"name": "10-sinf (Android)", "link": "/10-sinf-android/"}, "week": {"n": 1, "link": "/10-sinf-android/hafta-01/"}, "g": 3, "title": "3-dars: Dependency management va versiyalar bilan ishlash (Version Catalog)", "lead": "Dependency management va versiyalar bilan ishlash: kutubxonalar, repozitoriylar, Version Catalog (TOML)", "slide": "/slaydlar/10-sinf-android/hafta-01/dars-3.html", "test": "/slaydlar/10-sinf-android/hafta-01/dars-3-test.html", "tabs": [{"g": 1, "link": "/10-sinf-android/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/10-sinf-android/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/10-sinf-android/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "2-dars: Build variantlari va Product Flavors", "link": "/10-sinf-android/hafta-01/dars-2"}, "next": null}
 ---
 
 **Fan:** Advanced Android dasturlash  

@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "11-sinf", "link": "/11-sinf/"}, "week": {"n": 1, "link": "/11-sinf/hafta-01/"}, "g": 1, "title": "IT ekotizimi qatlamlari, SDLC bosqichlari va jamoadagi rollar", "lead": "Siz har kuni ishlatadigan ilova ortida ko'zga ko'rinmaydigan butun bir «shahar» bor: qatlamlar, serverlar va jamoa. Bugun uni xaritaga tushiramiz va o'z portfolio-loyihangiz uchun birinchi professional hujjatni yozamiz.", "slide": "/slaydlar/11-sinf/hafta-01/dars-1.html", "tabs": [{"g": 1, "link": "/11-sinf/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/11-sinf/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/11-sinf/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "Git asoslari: versiyalarni boshqarish, repozitoriy, commit, branch va merge", "link": "/11-sinf/hafta-01/dars-2"}}
+dars: {"sinf": {"name": "11-sinf", "link": "/11-sinf/"}, "week": {"n": 1, "link": "/11-sinf/hafta-01/"}, "g": 1, "title": "IT ekotizimi qatlamlari, SDLC bosqichlari va jamoadagi rollar", "lead": "Siz har kuni ishlatadigan ilova ortida ko'zga ko'rinmaydigan butun bir «shahar» bor: qatlamlar, serverlar va jamoa. Bugun uni xaritaga tushiramiz va o'z portfolio-loyihangiz uchun birinchi professional hujjatni yozamiz.", "slide": "/slaydlar/11-sinf/hafta-01/dars-1.html", "test": "/slaydlar/11-sinf/hafta-01/dars-1-test.html", "tabs": [{"g": 1, "link": "/11-sinf/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/11-sinf/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/11-sinf/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "Git asoslari: versiyalarni boshqarish, repozitoriy, commit, branch va merge", "link": "/11-sinf/hafta-01/dars-2"}}
 ---
 
 

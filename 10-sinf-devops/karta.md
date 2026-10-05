@@ -40,9 +40,9 @@ Manba: `4.5. Uslubiy ko'rsatma`, `4.5. O'quv qo'llanma`. Matnlari `_matn/` papka
 |---|---|---|---|
 | 8 | 3 | Kompyuter tarmoqlari asoslari: Tarmoq turlari (LAN, WAN), OSI 7 qatlamli modeli va TCP/IP steki | 📝 |
 | 9 | 3 | IP manzillash, Subnetting va tarmoq diagnostikasi vositalari (ping, traceroute, ss, netstat, curl) | 📝 |
-| 10 | 4 | Bash skripting asoslari: o'zgaruvchilar, argumentlar va kiritish/chiqarish (read, echo, printf) | ⬜ |
-| 11 | 4 | Shart operatorlari va mantiqiy ifodalar (if/elif/else, test, [[]], arifmetik amallar) | ⬜ |
-| 12 | 4 | Sikllar va takrorlanishlar (for, while, until) hamda matnli oqimlarni qayta ishlash | ⬜ |
+| 10 | 4 | Bash skripting asoslari: o'zgaruvchilar, argumentlar va kiritish/chiqarish (read, echo, printf) | 📝 |
+| 11 | 4 | Shart operatorlari va mantiqiy ifodalar (if/elif/else, test, [[]], arifmetik amallar) | 📝 |
+| 12 | 4 | Sikllar va takrorlanishlar (for, while, until) hamda matnli oqimlarni qayta ishlash | 📝 |
 | 13 | 5 | Matn filtralari va muntazam ifodalar: grep, sed, awk va xargs amaliyoti | ⬜ |
 | 14 | 5 | Linux jarayonlari va rejalashtirish: cron, crontab, at va tizim monitoringi (htop, iotop) | ⬜ |
 | 15 | 5 | Linux xavfsizligi va foydalanuvchilar: useradd, usermod, sudoers, SSH kalitlar bilan xavfsiz ulanish | ⬜ |

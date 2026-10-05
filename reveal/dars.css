@@ -29,8 +29,15 @@
   --tk-kw: #58a6ff; --tk-str: #ce9178; --tk-num: #b5cea8; --tk-com: #85c46e; --tk-tag: #58a6ff;
   --tk-attr: #9cdcfe; --tk-fn: #dcdcaa; --tk-type: #4ec9b0; --tk-ctl: #c586c0; --tk-punct: #b0b0b0;
   --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+  /* Reveal.js o'zgaruvchilarini ham boshqarish */
+  --r-background: #1e1e1e;
+  --r-background-color: #1e1e1e;
+  --r-main-color: #d4d4d4;
+  --r-heading-color: #ffffff;
+  --r-link-color: #58a6ff;
 }
-:root[data-theme="light"] {
+:root[data-theme="light"], body[data-theme="light"] {
   /* VS Code "Light+" ranglari */
   --bg: #ffffff;
   --bg2: #f3f3f3;
@@ -59,16 +66,24 @@
   --tk-kw: #0000ff; --tk-str: #a31515; --tk-num: #098658; --tk-com: #008000; --tk-tag: #800000;
   --tk-attr: #e50000; --tk-fn: #795e26; --tk-type: #267f99; --tk-ctl: #af00db; --tk-punct: #6e6e6e;
   --shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  /* Reveal.js o'zgaruvchilarini ham boshqarish */
+  --r-background: #ffffff;
+  --r-background-color: #ffffff;
+  --r-main-color: #333333;
+  --r-heading-color: #1f1f1f;
+  --r-link-color: #0066b8;
 }
 
 /* ===== Reveal asosi ===== */
 .reveal-viewport {
+  background-color: var(--bg);
   background:
     radial-gradient(900px 600px at 0% 0%, var(--glow1), transparent 60%),
     radial-gradient(900px 600px at 100% 100%, var(--glow2), transparent 60%),
     var(--bg);
 }
-.reveal { font-size: 34px; color: var(--text); }
+.reveal { font-size: 28px; color: var(--text); }
 .reveal h1, .reveal h2, .reveal h3, .reveal h4 { text-transform: none; letter-spacing: -0.01em; color: var(--head); }
 .reveal h1 { font-size: 2.1em; }
 .reveal h2 { font-size: 1.5em; margin-bottom: 0.5em; }
@@ -111,17 +126,18 @@ svg.ic { width: 1.05em; height: 1.05em; vertical-align: -0.16em; margin-right: 0
 }
 .theme-toggle:hover { border-color: var(--accent); }
 .theme-toggle svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.theme-toggle .sun { display: none; }
-:root[data-theme="light"] .theme-toggle .moon { display: none; }
-:root[data-theme="light"] .theme-toggle .sun { display: block; }
+.theme-toggle .moon { display: none; }
+.theme-toggle .sun { display: block; }
+:root[data-theme="light"] .theme-toggle .sun { display: none; }
+:root[data-theme="light"] .theme-toggle .moon { display: block; }
 .theme-toggle.in-page { position: static; }
 
 /* ===== Sarlavha va bo'lim slaydlari ===== */
 .reveal section.hero { text-align: center; }
-.reveal .hero h1 { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 2.3em; }
+.reveal .hero h1 { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: var(--accent); -webkit-text-fill-color: transparent; font-size: 2.3em; }
 .badge { display: inline-block; padding: 0.15em 0.7em; border-radius: 999px; font-size: 0.55em; background: var(--card-hi); border: 1px solid var(--line); color: var(--text); margin: 0.2em; }
 .reveal section.sec { text-align: left; }
-.reveal .sec .num { font-size: 7em; line-height: 0.9; font-weight: 800; color: transparent; -webkit-text-stroke: 3px var(--accent); opacity: 0.9; }
+.reveal .sec .num { font-size: 7em; line-height: 0.9; font-weight: 800; color: var(--accent); -webkit-text-fill-color: transparent; -webkit-text-stroke: 3px var(--accent); opacity: 0.9; }
 .reveal .sec h1 { font-size: 2em; margin-top: 0.1em; }
 .reveal .sec p { color: var(--muted); font-size: 0.8em; }
 
@@ -141,7 +157,7 @@ svg.ic { width: 1.05em; height: 1.05em; vertical-align: -0.16em; margin-right: 0
 /* ===== Statistika (katta raqam) ===== */
 .stats { display: flex; gap: 22px; margin-top: 0.8em; }
 .stat { flex: 1; text-align: center; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px 10px; }
-.stat .v { font-size: 2.3em; font-weight: 800; line-height: 1; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.stat .v { font-size: 2.3em; font-weight: 800; line-height: 1; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: var(--accent); -webkit-text-fill-color: transparent; }
 .stat .l { font-size: 0.55em; color: var(--muted); margin-top: 6px; }
 
 /* ===== Ketma-ketlik (flow), vaqt chizig'i, raqamli qadamlar ===== */

@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "8-sinf (Foundation)", "link": "/8-sinf-cs/"}, "week": {"n": 3, "link": "/8-sinf-cs/hafta-03/"}, "g": 8, "title": "Raqamli savodxonlik va raqamli madaniyat", "lead": "Zamonaviy axborot olamida to'g'ri yo'l topish, tarmoq etiketi (Netiket), raqamli iz javobgarligi va feyk xabarlarni fosh qilish mahorati.", "slide": "/slaydlar/8-sinf-cs/hafta-03/dars-2.html", "tabs": [{"g": 7, "link": "/8-sinf-cs/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/8-sinf-cs/hafta-03/dars-2", "current": true}, {"g": 9, "link": "/8-sinf-cs/hafta-03/dars-3", "current": false}], "prev": {"g": 7, "title": "Klaviaturada tez va to‘g‘ri yozish ko‘nikmalari (Touch typing)", "link": "/8-sinf-cs/hafta-03/dars-1"}, "next": {"g": 9, "title": "Raqamli transformatsiya tushunchasi", "link": "/8-sinf-cs/hafta-03/dars-3"}}
+dars: {"sinf": {"name": "8-sinf (Foundation)", "link": "/8-sinf-cs/"}, "week": {"n": 3, "link": "/8-sinf-cs/hafta-03/"}, "g": 8, "title": "Raqamli savodxonlik va raqamli madaniyat", "lead": "Zamonaviy axborot olamida to'g'ri yo'l topish, tarmoq etiketi (Netiket), raqamli iz javobgarligi va feyk xabarlarni fosh qilish mahorati.", "slide": "/slaydlar/8-sinf-cs/hafta-03/dars-2.html", "test": "/slaydlar/8-sinf-cs/hafta-03/dars-2-test.html", "tabs": [{"g": 7, "link": "/8-sinf-cs/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/8-sinf-cs/hafta-03/dars-2", "current": true}, {"g": 9, "link": "/8-sinf-cs/hafta-03/dars-3", "current": false}], "prev": {"g": 7, "title": "Klaviaturada tez va to‘g‘ri yozish ko‘nikmalari (Touch typing)", "link": "/8-sinf-cs/hafta-03/dars-1"}, "next": {"g": 9, "title": "Raqamli transformatsiya tushunchasi", "link": "/8-sinf-cs/hafta-03/dars-3"}}
 ---
 
 

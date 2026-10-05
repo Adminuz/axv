@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (Back-end)", "link": "/9-sinf-backend/"}, "week": {"n": 3, "link": "/9-sinf-backend/hafta-03/"}, "g": 7, "title": "Takrorlanuvchi algoritm va for sikli", "lead": "Bir xil kodni qayta-qayta yozishdan charchadingizmi? Ushbu darsda dasturlashning eng qudratli kuchi — for sikli va range() funksiyasi yordamida minglab amallarni bir soniyada bajarishni o‘rganamiz.", "slide": "/slaydlar/9-sinf-backend/hafta-03/dars-1.html", "tabs": [{"g": 7, "link": "/9-sinf-backend/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/9-sinf-backend/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf-backend/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "Shartli takrorlanish: while sikli va boshqaruv operatorlari", "link": "/9-sinf-backend/hafta-03/dars-2"}}
+dars: {"sinf": {"name": "9-sinf (Back-end)", "link": "/9-sinf-backend/"}, "week": {"n": 3, "link": "/9-sinf-backend/hafta-03/"}, "g": 7, "title": "Takrorlanuvchi algoritm va for sikli", "lead": "Bir xil kodni qayta-qayta yozishdan charchadingizmi? Ushbu darsda dasturlashning eng qudratli kuchi — for sikli va range() funksiyasi yordamida minglab amallarni bir soniyada bajarishni o‘rganamiz.", "slide": "/slaydlar/9-sinf-backend/hafta-03/dars-1.html", "test": "/slaydlar/9-sinf-backend/hafta-03/dars-1-test.html", "tabs": [{"g": 7, "link": "/9-sinf-backend/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/9-sinf-backend/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf-backend/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "Shartli takrorlanish: while sikli va boshqaruv operatorlari", "link": "/9-sinf-backend/hafta-03/dars-2"}}
 ---
 
 

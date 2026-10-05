@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (Cyber)", "link": "/10-sinf-cyber/"}, "week": {"n": 1, "link": "/10-sinf-cyber/hafta-01/"}, "g": 3, "title": "Kibertahdidlarning turlari (2-qism): ijtimoiy muhandislik, fishing va email tahlili", "lead": "Kibertahdidlarning turlari (2-qism): ijtimoiy muhandislik, fishing turlari va elektron pochta xavfsizligi tahlili", "slide": "/slaydlar/10-sinf-cyber/hafta-01/dars-3.html", "tabs": [{"g": 1, "link": "/10-sinf-cyber/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/10-sinf-cyber/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/10-sinf-cyber/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "Kibertahdidlarning turlari (1-qism): zararli dasturlar va DoS/DDoS hujumlari", "link": "/10-sinf-cyber/hafta-01/dars-2"}, "next": null}
+dars: {"sinf": {"name": "10-sinf (Cyber)", "link": "/10-sinf-cyber/"}, "week": {"n": 1, "link": "/10-sinf-cyber/hafta-01/"}, "g": 3, "title": "Kibertahdidlarning turlari (2-qism): ijtimoiy muhandislik, fishing va email tahlili", "lead": "Kibertahdidlarning turlari (2-qism): ijtimoiy muhandislik, fishing turlari va elektron pochta xavfsizligi tahlili", "slide": "/slaydlar/10-sinf-cyber/hafta-01/dars-3.html", "test": "/slaydlar/10-sinf-cyber/hafta-01/dars-3-test.html", "tabs": [{"g": 1, "link": "/10-sinf-cyber/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/10-sinf-cyber/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/10-sinf-cyber/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "Kibertahdidlarning turlari (1-qism): zararli dasturlar va DoS/DDoS hujumlari", "link": "/10-sinf-cyber/hafta-01/dars-2"}, "next": null}
 ---
 
 ---

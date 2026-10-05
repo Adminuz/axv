@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (IoT)", "link": "/9-sinf-iot/"}, "week": {"n": 1, "link": "/9-sinf-iot/hafta-01/"}, "g": 2, "title": "IoT arxitekturasi: Sensorlar, aktuatorlar va apparat ta'minoti", "lead": "IoT arxitekturasi: Sensorlar, aktuatorlar va apparat ta'minoti", "slide": "/slaydlar/9-sinf-iot/hafta-01/dars-2.html", "tabs": [{"g": 1, "link": "/9-sinf-iot/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/9-sinf-iot/hafta-01/dars-2", "current": true}, {"g": 3, "link": "/9-sinf-iot/hafta-01/dars-3", "current": false}], "prev": {"g": 1, "title": "IoT tushunchasi va qo‘llanish sohalari", "link": "/9-sinf-iot/hafta-01/dars-1"}, "next": {"g": 3, "title": "IoT arxitekturasi: Tarmoq, bulut va foydalanuvchi interfeysi", "link": "/9-sinf-iot/hafta-01/dars-3"}}
+dars: {"sinf": {"name": "9-sinf (IoT)", "link": "/9-sinf-iot/"}, "week": {"n": 1, "link": "/9-sinf-iot/hafta-01/"}, "g": 2, "title": "IoT arxitekturasi: Sensorlar, aktuatorlar va apparat ta'minoti", "lead": "IoT arxitekturasi: Sensorlar, aktuatorlar va apparat ta'minoti", "slide": "/slaydlar/9-sinf-iot/hafta-01/dars-2.html", "test": "/slaydlar/9-sinf-iot/hafta-01/dars-2-test.html", "tabs": [{"g": 1, "link": "/9-sinf-iot/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/9-sinf-iot/hafta-01/dars-2", "current": true}, {"g": 3, "link": "/9-sinf-iot/hafta-01/dars-3", "current": false}], "prev": {"g": 1, "title": "IoT tushunchasi va qo‘llanish sohalari", "link": "/9-sinf-iot/hafta-01/dars-1"}, "next": {"g": 3, "title": "IoT arxitekturasi: Tarmoq, bulut va foydalanuvchi interfeysi", "link": "/9-sinf-iot/hafta-01/dars-3"}}
 ---
 
 

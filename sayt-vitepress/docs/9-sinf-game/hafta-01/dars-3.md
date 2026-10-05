@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (Game)", "link": "/9-sinf-game/"}, "week": {"n": 1, "link": "/9-sinf-game/hafta-01/"}, "g": 3, "title": "UI va UX ning Game designdagi roli: Interfeys tiplari va HUD arxitekturasi", "lead": "Eng yaxshi o'yin interfeysi — bu o'yinchi sezmaydigan, ammo har qanday vaziyatda unga ko'maklashadigan ko'rinmas do'stdir!", "slide": "/slaydlar/9-sinf-game/hafta-01/dars-3.html", "tabs": [{"g": 1, "link": "/9-sinf-game/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/9-sinf-game/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf-game/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "O‘yinlarning tarixi va janrlari: O'yin evolyutsiyasi, janrlar tasnifi va madaniy ta'siri", "link": "/9-sinf-game/hafta-01/dars-2"}, "next": null}
+dars: {"sinf": {"name": "9-sinf (Game)", "link": "/9-sinf-game/"}, "week": {"n": 1, "link": "/9-sinf-game/hafta-01/"}, "g": 3, "title": "UI va UX ning Game designdagi roli: Interfeys tiplari va HUD arxitekturasi", "lead": "Eng yaxshi o'yin interfeysi — bu o'yinchi sezmaydigan, ammo har qanday vaziyatda unga ko'maklashadigan ko'rinmas do'stdir!", "slide": "/slaydlar/9-sinf-game/hafta-01/dars-3.html", "test": "/slaydlar/9-sinf-game/hafta-01/dars-3-test.html", "tabs": [{"g": 1, "link": "/9-sinf-game/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/9-sinf-game/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf-game/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "O‘yinlarning tarixi va janrlari: O'yin evolyutsiyasi, janrlar tasnifi va madaniy ta'siri", "link": "/9-sinf-game/hafta-01/dars-2"}, "next": null}
 ---
 
 

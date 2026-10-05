@@ -167,6 +167,7 @@ def load_week(week_dir):
             "k": k, "g": glob_lesson(n, k), "title": clean_title(md_title(md)),
             "md": md, "stu": stu.read_text(encoding="utf-8") if stu.exists() else "",
             "slide": (week_dir / f"dars-{k}-slaydlar.html"),
+            "test": (week_dir / f"dars-{k}-test-slaydlar.html"),
         })
     return n, lessons
 DOCS = SITE / "docs"
@@ -271,9 +272,16 @@ def build_sinf(sinf_dir, sinf_name, fan, icon, choraklar, gacha):
                 dst = PUB / "slaydlar" / sinf_dir / f"hafta-{n:02d}" / f"dars-{L['k']}.html"
                 dst.parent.mkdir(parents=True, exist_ok=True)
                 dst.write_text(wrap(content, "../../../"), encoding="utf-8")
+            test_url = None
+            if L["test"].exists():
+                test_url = f"/slaydlar/{sinf_dir}/hafta-{n:02d}/dars-{L['k']}-test.html"
+                tdst = PUB / "slaydlar" / sinf_dir / f"hafta-{n:02d}" / f"dars-{L['k']}-test.html"
+                tdst.parent.mkdir(parents=True, exist_ok=True)
+                tdst.write_text(wrap(re.sub(r"<aside class=\"notes\">.*?</aside>", "", L["test"].read_text(encoding="utf-8"), flags=re.S), "../../../"), encoding="utf-8")
+            L["test_url"] = test_url
             link = f"/{sinf_dir}/hafta-{n:02d}/dars-{L['k']}"
             lead = lead_of(L["stu"]) or karta.get(L["g"], ("", "", ""))[1]
-            cards.append({"g": L["g"], "title": plain(L["title"]), "lead": plain(lead), "link": link, "slide": slide_url})
+            cards.append({"g": L["g"], "title": plain(L["title"]), "lead": plain(lead), "link": link, "slide": slide_url, "test": test_url})
             entries.append((L, link, slide_url, lead))
 
         for idx, (L, link, slide_url, lead) in enumerate(entries):
@@ -287,7 +295,7 @@ def build_sinf(sinf_dir, sinf_name, fan, icon, choraklar, gacha):
                 "layout": "doc", "sidebar": False, "aside": False, "outline": False,
                 "kind": "dars",
                 "dars": {"sinf": {"name": sinf_name, "link": sinf_link}, "week": {"n": n, "link": wlink},
-                         "g": L["g"], "title": plain(L["title"]), "lead": plain(lead), "slide": slide_url,
+                         "g": L["g"], "title": plain(L["title"]), "lead": plain(lead), "slide": slide_url, "test": L.get("test_url"),
                          "tabs": [{"g": c["g"], "link": c["link"], "current": c["g"] == L["g"]} for c in cards],
                          "prev": prev_l, "next": next_l},
             }
@@ -301,10 +309,17 @@ def build_sinf(sinf_dir, sinf_name, fan, icon, choraklar, gacha):
             t = re.split(r"^## Mentor uchun", t, flags=re.M)[0]
             t = re.sub(r"^## (\d+-dars)", r"### \1", t, flags=re.M)
             hw_md = f'\n<div class="blk">\n\n## <Icon name="house" /> Uyga vazifa\n\n{badge_headings(safe_md(strip_solutions(t))).strip()}\n\n</div>\n'
+        wtest = wdir / "hafta-test-slaydlar.html"
+        wtest_url = None
+        if wtest.exists():
+            wtest_url = f"/slaydlar/{sinf_dir}/hafta-{n:02d}/hafta-test.html"
+            wdst = PUB / "slaydlar" / sinf_dir / f"hafta-{n:02d}" / "hafta-test.html"
+            wdst.parent.mkdir(parents=True, exist_ok=True)
+            wdst.write_text(wrap(re.sub(r"<aside class=\"notes\">.*?</aside>", "", wtest.read_text(encoding="utf-8"), flags=re.S), "../../../"), encoding="utf-8")
         data = {
             "title": f"{n}-hafta", "layout": "doc", "sidebar": False, "aside": False, "outline": False,
             "kind": "hafta",
-            "hafta": {"sinf": {"name": sinf_name, "link": sinf_link}, "n": n, "bob": bob, "lessons": cards},
+            "hafta": {"sinf": {"name": sinf_name, "link": sinf_link}, "n": n, "bob": bob, "lessons": cards, "test": wtest_url},
         }
         (wout / "index.md").write_text(fm(data) + hw_md, encoding="utf-8")
 

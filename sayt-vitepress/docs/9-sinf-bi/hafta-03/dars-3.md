@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (BI)", "link": "/9-sinf-bi/"}, "week": {"n": 3, "link": "/9-sinf-bi/hafta-03/"}, "g": 9, "title": "Relatsion ma’lumotlar bazalari va model tushunchasi (1-qism): Jadvallar, Primary Key, Foreign Key va munosabatlar", "lead": "Dunyodagi barcha yirik axborot tizimlarining poydevori: ma'lumotlarni o'zaro bog'langan qat'iy jadvallar tizimida saqlash va boshqarish san'ati!", "slide": "/slaydlar/9-sinf-bi/hafta-03/dars-3.html", "tabs": [{"g": 7, "link": "/9-sinf-bi/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/9-sinf-bi/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf-bi/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "Pivot jadvallar (PivotTable) va ma'lumotlar vizualizatsiyasi", "link": "/9-sinf-bi/hafta-03/dars-2"}, "next": null}
+dars: {"sinf": {"name": "9-sinf (BI)", "link": "/9-sinf-bi/"}, "week": {"n": 3, "link": "/9-sinf-bi/hafta-03/"}, "g": 9, "title": "Relatsion ma’lumotlar bazalari va model tushunchasi (1-qism): Jadvallar, Primary Key, Foreign Key va munosabatlar", "lead": "Dunyodagi barcha yirik axborot tizimlarining poydevori: ma'lumotlarni o'zaro bog'langan qat'iy jadvallar tizimida saqlash va boshqarish san'ati!", "slide": "/slaydlar/9-sinf-bi/hafta-03/dars-3.html", "test": "/slaydlar/9-sinf-bi/hafta-03/dars-3-test.html", "tabs": [{"g": 7, "link": "/9-sinf-bi/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/9-sinf-bi/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/9-sinf-bi/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "Pivot jadvallar (PivotTable) va ma'lumotlar vizualizatsiyasi", "link": "/9-sinf-bi/hafta-03/dars-2"}, "next": null}
 ---
 
 

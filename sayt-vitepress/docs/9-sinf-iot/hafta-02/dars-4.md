@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (IoT)", "link": "/9-sinf-iot/"}, "week": {"n": 2, "link": "/9-sinf-iot/hafta-02/"}, "g": 7, "title": "4-dars: Tinkercad.com virtual laboratoriyasida ro‘yxatdan o‘tish va interfeys", "lead": "Elektron sxema asosida ikki LED lampaning ishlash prinsipi va ulanishi", "slide": "/slaydlar/9-sinf-iot/hafta-02/dars-4.html", "tabs": [{"g": 7, "link": "/9-sinf-iot/hafta-02/dars-4", "current": true}, {"g": 8, "link": "/9-sinf-iot/hafta-02/dars-5", "current": false}, {"g": 9, "link": "/9-sinf-iot/hafta-02/dars-6", "current": false}], "prev": null, "next": {"g": 8, "title": "5-dars: Tinkercad muhitida virtual elektron komponentlar bilan ishlash", "link": "/9-sinf-iot/hafta-02/dars-5"}}
+dars: {"sinf": {"name": "9-sinf (IoT)", "link": "/9-sinf-iot/"}, "week": {"n": 2, "link": "/9-sinf-iot/hafta-02/"}, "g": 7, "title": "4-dars: Tinkercad.com virtual laboratoriyasida ro‘yxatdan o‘tish va interfeys", "lead": "Elektron sxema asosida ikki LED lampaning ishlash prinsipi va ulanishi", "slide": "/slaydlar/9-sinf-iot/hafta-02/dars-4.html", "test": "/slaydlar/9-sinf-iot/hafta-02/dars-4-test.html", "tabs": [{"g": 7, "link": "/9-sinf-iot/hafta-02/dars-4", "current": true}, {"g": 8, "link": "/9-sinf-iot/hafta-02/dars-5", "current": false}, {"g": 9, "link": "/9-sinf-iot/hafta-02/dars-6", "current": false}], "prev": null, "next": {"g": 8, "title": "5-dars: Tinkercad muhitida virtual elektron komponentlar bilan ishlash", "link": "/9-sinf-iot/hafta-02/dars-5"}}
 ---
 
 **Fan:** Internet of Things (IoT — Buyumlar Interneti)  
@@ -26,7 +26,7 @@ Tinkercad.com — bu Autodesk kompaniyasi tomonidan yaratilgan, brauzer orqali i
 - **Workplane:** Komponentlar joylashtiriladigan va simlar orqali ulanadigan markaziy ishchi maydon;
 - **Komponentlar paneli:** Chap/o'ng tomondagi elementlar kutubxonasi (Basic va All toifalari);
 - **Start Simulation:** Zanjirga virtual elektr tokini uzatib, uning ishlashini tekshirish tugmasi;
-- **Tezkor klavishlar:** `R` — komponentni 30° ga burish, `Del` — o'chirish, `Ctrl+Z` — orqaga qaytarish, `N` — matnli eslatma qo'yish.
+- **Tezkor klavishlar:** `R` — komponentni 45° ga burish, `Del` — o'chirish, `Ctrl+Z` — orqaga qaytarish, `N` — matnli eslatma qo'yish.
 
 ---
 

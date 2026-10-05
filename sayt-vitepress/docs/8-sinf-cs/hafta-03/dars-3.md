@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "8-sinf (Foundation)", "link": "/8-sinf-cs/"}, "week": {"n": 3, "link": "/8-sinf-cs/hafta-03/"}, "g": 9, "title": "Raqamli transformatsiya tushunchasi", "lead": "Hayot, ta'lim, davlat xizmatlari va biznesni zamonaviy texnologiyalar bilan yangilash, qog'ozsiz hujjat aylanishi hamda raqamli xavfsizlik asoslari.", "slide": "/slaydlar/8-sinf-cs/hafta-03/dars-3.html", "tabs": [{"g": 7, "link": "/8-sinf-cs/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/8-sinf-cs/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/8-sinf-cs/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "Raqamli savodxonlik va raqamli madaniyat", "link": "/8-sinf-cs/hafta-03/dars-2"}, "next": null}
+dars: {"sinf": {"name": "8-sinf (Foundation)", "link": "/8-sinf-cs/"}, "week": {"n": 3, "link": "/8-sinf-cs/hafta-03/"}, "g": 9, "title": "Raqamli transformatsiya tushunchasi", "lead": "Hayot, ta'lim, davlat xizmatlari va biznesni zamonaviy texnologiyalar bilan yangilash, qog'ozsiz hujjat aylanishi hamda raqamli xavfsizlik asoslari.", "slide": "/slaydlar/8-sinf-cs/hafta-03/dars-3.html", "test": "/slaydlar/8-sinf-cs/hafta-03/dars-3-test.html", "tabs": [{"g": 7, "link": "/8-sinf-cs/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/8-sinf-cs/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/8-sinf-cs/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "Raqamli savodxonlik va raqamli madaniyat", "link": "/8-sinf-cs/hafta-03/dars-2"}, "next": null}
 ---
 
 

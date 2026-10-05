@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (Cyber)", "link": "/10-sinf-cyber/"}, "week": {"n": 3, "link": "/10-sinf-cyber/hafta-03/"}, "g": 9, "title": "Tarmoq asoslari: mijoz-server arxitekturasi, topologiyalar, OSI va TCP/IP modellari", "lead": "Tarmoq asoslari: mijoz-server arxitekturasi, topologiyalar, OSI va TCP/IP modellari", "slide": "/slaydlar/10-sinf-cyber/hafta-03/dars-3.html", "tabs": [{"g": 7, "link": "/10-sinf-cyber/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/10-sinf-cyber/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/10-sinf-cyber/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "Xavfsizlikni anglash (3-qism): tahdidlarni modellashtirish, Red/Blue Team va CTF", "link": "/10-sinf-cyber/hafta-03/dars-2"}, "next": null}
+dars: {"sinf": {"name": "10-sinf (Cyber)", "link": "/10-sinf-cyber/"}, "week": {"n": 3, "link": "/10-sinf-cyber/hafta-03/"}, "g": 9, "title": "Tarmoq asoslari: mijoz-server arxitekturasi, topologiyalar, OSI va TCP/IP modellari", "lead": "Tarmoq asoslari: mijoz-server arxitekturasi, topologiyalar, OSI va TCP/IP modellari", "slide": "/slaydlar/10-sinf-cyber/hafta-03/dars-3.html", "test": "/slaydlar/10-sinf-cyber/hafta-03/dars-3-test.html", "tabs": [{"g": 7, "link": "/10-sinf-cyber/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/10-sinf-cyber/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/10-sinf-cyber/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "Xavfsizlikni anglash (3-qism): tahdidlarni modellashtirish, Red/Blue Team va CTF", "link": "/10-sinf-cyber/hafta-03/dars-2"}, "next": null}
 ---
 
 ---

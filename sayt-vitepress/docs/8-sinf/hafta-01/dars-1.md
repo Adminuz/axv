@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "8-sinf", "link": "/8-sinf/"}, "week": {"n": 1, "link": "/8-sinf/hafta-01/"}, "g": 1, "title": "Internet qanday ishlaydi? DNS, hosting, domain. Front-end va Back-end", "lead": "Telegramda xabar yozasiz, YouTube'da video ochasiz: bir soniyada hammasi ekranda. Bu darsda \"parda ortiga\" kirib, brauzer, DNS va server qanday hamkorlik qilishini ko'ramiz.", "slide": "/slaydlar/8-sinf/hafta-01/dars-1.html", "tabs": [{"g": 1, "link": "/8-sinf/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/8-sinf/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/8-sinf/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "HTML hujjat strukturasi. Teg, atribut, head, sarlavhalar", "link": "/8-sinf/hafta-01/dars-2"}}
+dars: {"sinf": {"name": "8-sinf", "link": "/8-sinf/"}, "week": {"n": 1, "link": "/8-sinf/hafta-01/"}, "g": 1, "title": "Internet qanday ishlaydi? DNS, hosting, domain. Front-end va Back-end", "lead": "Telegramda xabar yozasiz, YouTube'da video ochasiz: bir soniyada hammasi ekranda. Bu darsda \"parda ortiga\" kirib, brauzer, DNS va server qanday hamkorlik qilishini ko'ramiz.", "slide": "/slaydlar/8-sinf/hafta-01/dars-1.html", "test": "/slaydlar/8-sinf/hafta-01/dars-1-test.html", "tabs": [{"g": 1, "link": "/8-sinf/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/8-sinf/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/8-sinf/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "HTML hujjat strukturasi. Teg, atribut, head, sarlavhalar", "link": "/8-sinf/hafta-01/dars-2"}}
 ---
 
 

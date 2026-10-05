@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (Cyber)", "link": "/10-sinf-cyber/"}, "week": {"n": 1, "link": "/10-sinf-cyber/hafta-01/"}, "g": 1, "title": "Kiberxavfsizlik asoslari: axborot xavfsizligi, kiberjinoyat, kiberqonun, inson omili va aktivlar", "lead": "Kiberxavfsizlik asoslari: axborot xavfsizligi, kiberjinoyat, kiberqonun, inson omili va aktivlar", "slide": "/slaydlar/10-sinf-cyber/hafta-01/dars-1.html", "tabs": [{"g": 1, "link": "/10-sinf-cyber/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/10-sinf-cyber/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/10-sinf-cyber/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "Kibertahdidlarning turlari (1-qism): zararli dasturlar va DoS/DDoS hujumlari", "link": "/10-sinf-cyber/hafta-01/dars-2"}}
+dars: {"sinf": {"name": "10-sinf (Cyber)", "link": "/10-sinf-cyber/"}, "week": {"n": 1, "link": "/10-sinf-cyber/hafta-01/"}, "g": 1, "title": "Kiberxavfsizlik asoslari: axborot xavfsizligi, kiberjinoyat, kiberqonun, inson omili va aktivlar", "lead": "Kiberxavfsizlik asoslari: axborot xavfsizligi, kiberjinoyat, kiberqonun, inson omili va aktivlar", "slide": "/slaydlar/10-sinf-cyber/hafta-01/dars-1.html", "test": "/slaydlar/10-sinf-cyber/hafta-01/dars-1-test.html", "tabs": [{"g": 1, "link": "/10-sinf-cyber/hafta-01/dars-1", "current": true}, {"g": 2, "link": "/10-sinf-cyber/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/10-sinf-cyber/hafta-01/dars-3", "current": false}], "prev": null, "next": {"g": 2, "title": "Kibertahdidlarning turlari (1-qism): zararli dasturlar va DoS/DDoS hujumlari", "link": "/10-sinf-cyber/hafta-01/dars-2"}}
 ---
 
 ---

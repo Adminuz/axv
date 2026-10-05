@@ -102,9 +102,13 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
         </a>
         <div class="lsn-act">
           <a v-if="l.slide" class="btn btn-primary btn-sm" :href="withBase(l.slide)" target="_blank" rel="noopener"><Icon name="play" />Slaydlar</a>
+          <a v-if="l.test" class="btn btn-ghost btn-sm" :href="withBase(l.test)" target="_blank" rel="noopener"><Icon name="list-checks" />Test</a>
           <a class="btn btn-ghost btn-sm" :href="withBase(l.link)"><Icon name="book-open" />Dars sahifasi</a>
         </div>
       </article>
+    </div>
+    <div v-if="hafta.test" class="btns">
+      <a class="btn btn-primary btn-lg" :href="withBase(hafta.test)" target="_blank" rel="noopener"><Icon name="list-checks" />Haftalik test<Icon name="arrow-right" /></a>
     </div>
   </div>
 
@@ -126,6 +130,7 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
         <a v-if="dars.slide" class="btn btn-primary btn-lg" :href="withBase(dars.slide)" target="_blank" rel="noopener">
           <Icon name="play" />Slaydlarni ochish<Icon name="arrow-right" />
         </a>
+        <a v-if="dars.test" class="btn btn-ghost btn-lg" :href="withBase(dars.test)" target="_blank" rel="noopener"><Icon name="list-checks" />Dars testi</a>
         <a class="btn btn-ghost btn-lg" :href="withBase(dars.week.link)"><Icon name="layers" />{{ dars.week.n }}-hafta</a>
       </div>
       <nav class="tabs" aria-label="Haftadagi darslar">

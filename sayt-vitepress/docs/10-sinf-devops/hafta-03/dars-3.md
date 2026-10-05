@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (DevOps)", "link": "/10-sinf-devops/"}, "week": {"n": 3, "link": "/10-sinf-devops/hafta-03/"}, "g": 9, "title": "IP manzillash, Subnetting va tarmoq diagnostikasi vositalari", "lead": "Tarmoq muhandisligi asoslari: IPv4 va IPv6, qism tarmoqlarni hisoblash (Subnetting, CIDR) hamda nosozliklarni aniqlovchi qurollar (ping, traceroute, ss, curl).", "slide": "/slaydlar/10-sinf-devops/hafta-03/dars-3.html", "tabs": [{"g": 7, "link": "/10-sinf-devops/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/10-sinf-devops/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/10-sinf-devops/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "Kompyuter tarmoqlari asoslari: OSI 7 qatlamli modeli va TCP/IP steki", "link": "/10-sinf-devops/hafta-03/dars-2"}, "next": null}
+dars: {"sinf": {"name": "10-sinf (DevOps)", "link": "/10-sinf-devops/"}, "week": {"n": 3, "link": "/10-sinf-devops/hafta-03/"}, "g": 9, "title": "IP manzillash, Subnetting va tarmoq diagnostikasi vositalari", "lead": "Tarmoq muhandisligi asoslari: IPv4 va IPv6, qism tarmoqlarni hisoblash (Subnetting, CIDR) hamda nosozliklarni aniqlovchi qurollar (ping, traceroute, ss, curl).", "slide": "/slaydlar/10-sinf-devops/hafta-03/dars-3.html", "test": "/slaydlar/10-sinf-devops/hafta-03/dars-3-test.html", "tabs": [{"g": 7, "link": "/10-sinf-devops/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/10-sinf-devops/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/10-sinf-devops/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "Kompyuter tarmoqlari asoslari: OSI 7 qatlamli modeli va TCP/IP steki", "link": "/10-sinf-devops/hafta-03/dars-2"}, "next": null}
 ---
 
 ---

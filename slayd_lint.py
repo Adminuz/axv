@@ -66,9 +66,9 @@ def main():
     files = []
     if args:
         for a in args:
-            files += sorted((ROOT / a).glob("dars-[0-9]-slaydlar.html"))
+            files += sorted((ROOT / a).glob("*-slaydlar.html"))
     else:
-        files = sorted(ROOT.glob("*/haftalik/*/dars-[0-9]-slaydlar.html"))
+        files = sorted(ROOT.glob("*/haftalik/*/dars-[0-9]-slaydlar.html")) + sorted(ROOT.glob("*/haftalik/*/dars-[0-9]-test-slaydlar.html")) + sorted(ROOT.glob("*/haftalik/*/hafta-test-slaydlar.html"))
     bad = 0
     for f in files:
         pr = lint(f)

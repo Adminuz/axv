@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (UX/UI)", "link": "/10-sinf-uxui/"}, "week": {"n": 1, "link": "/10-sinf-uxui/hafta-01/"}, "g": 3, "title": "3-dars: Interfeys dizaynida asosiy tamoyillar: Usability, Accessibility, Simplicity", "lead": "Interfeys dizaynida asosiy tamoyillar: usability, accessibility, simplicity", "slide": "/slaydlar/10-sinf-uxui/hafta-01/dars-3.html", "tabs": [{"g": 1, "link": "/10-sinf-uxui/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/10-sinf-uxui/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/10-sinf-uxui/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "2-dars: Foydalanuvchiga yo‘naltirilgan dizayn (User-Centered Design — UCD) tamoyillari va bosqichlari", "link": "/10-sinf-uxui/hafta-01/dars-2"}, "next": null}
+dars: {"sinf": {"name": "10-sinf (UX/UI)", "link": "/10-sinf-uxui/"}, "week": {"n": 1, "link": "/10-sinf-uxui/hafta-01/"}, "g": 3, "title": "3-dars: Interfeys dizaynida asosiy tamoyillar: Usability, Accessibility, Simplicity", "lead": "Interfeys dizaynida asosiy tamoyillar: usability, accessibility, simplicity", "slide": "/slaydlar/10-sinf-uxui/hafta-01/dars-3.html", "test": "/slaydlar/10-sinf-uxui/hafta-01/dars-3-test.html", "tabs": [{"g": 1, "link": "/10-sinf-uxui/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/10-sinf-uxui/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/10-sinf-uxui/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "2-dars: Foydalanuvchiga yo‘naltirilgan dizayn (User-Centered Design — UCD) tamoyillari va bosqichlari", "link": "/10-sinf-uxui/hafta-01/dars-2"}, "next": null}
 ---
 
 **Sinf:** 10-sinf  

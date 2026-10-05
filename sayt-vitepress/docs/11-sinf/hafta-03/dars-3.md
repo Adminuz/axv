@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "11-sinf", "link": "/11-sinf/"}, "week": {"n": 3, "link": "/11-sinf/hafta-03/"}, "g": 9, "title": "Loyihalash andozalari: Factory va Singleton arxitekturasi", "lead": "Creational patterns: Factory Method yordamida obyekt yaratishni markazlashtirish, Singleton kuchi va global holat xatarlari.", "slide": "/slaydlar/11-sinf/hafta-03/dars-3.html", "tabs": [{"g": 7, "link": "/11-sinf/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/11-sinf/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/11-sinf/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "SOLID chuqurlashtirilgan: LSP, ISP, DIP va Code Smells refaktoringi", "link": "/11-sinf/hafta-03/dars-2"}, "next": null}
+dars: {"sinf": {"name": "11-sinf", "link": "/11-sinf/"}, "week": {"n": 3, "link": "/11-sinf/hafta-03/"}, "g": 9, "title": "Loyihalash andozalari: Factory va Singleton arxitekturasi", "lead": "Creational patterns: Factory Method yordamida obyekt yaratishni markazlashtirish, Singleton kuchi va global holat xatarlari.", "slide": "/slaydlar/11-sinf/hafta-03/dars-3.html", "test": "/slaydlar/11-sinf/hafta-03/dars-3-test.html", "tabs": [{"g": 7, "link": "/11-sinf/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/11-sinf/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/11-sinf/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "SOLID chuqurlashtirilgan: LSP, ISP, DIP va Code Smells refaktoringi", "link": "/11-sinf/hafta-03/dars-2"}, "next": null}
 ---
 
 

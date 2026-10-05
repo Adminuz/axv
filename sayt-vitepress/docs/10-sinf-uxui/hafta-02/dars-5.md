@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (UX/UI)", "link": "/10-sinf-uxui/"}, "week": {"n": 2, "link": "/10-sinf-uxui/hafta-02/"}, "g": 8, "title": "5-dars: Persona va empatiya xaritasini yaratish", "lead": "Grid tizimlari va kompozitsiya", "slide": "/slaydlar/10-sinf-uxui/hafta-02/dars-5.html", "tabs": [{"g": 7, "link": "/10-sinf-uxui/hafta-02/dars-4", "current": false}, {"g": 8, "link": "/10-sinf-uxui/hafta-02/dars-5", "current": true}, {"g": 9, "link": "/10-sinf-uxui/hafta-02/dars-6", "current": false}], "prev": {"g": 7, "title": "4-dars: Foydalanuvchi tadqiqot usullari: intervyu, so‘rovnoma, kuzatish", "link": "/10-sinf-uxui/hafta-02/dars-4"}, "next": {"g": 9, "title": "6-dars: Foydalanuvchi tarixi va senariysini yozish (User Story & User Journey Map)", "link": "/10-sinf-uxui/hafta-02/dars-6"}}
+dars: {"sinf": {"name": "10-sinf (UX/UI)", "link": "/10-sinf-uxui/"}, "week": {"n": 2, "link": "/10-sinf-uxui/hafta-02/"}, "g": 8, "title": "5-dars: Persona va empatiya xaritasini yaratish", "lead": "Grid tizimlari va kompozitsiya", "slide": "/slaydlar/10-sinf-uxui/hafta-02/dars-5.html", "test": "/slaydlar/10-sinf-uxui/hafta-02/dars-5-test.html", "tabs": [{"g": 7, "link": "/10-sinf-uxui/hafta-02/dars-4", "current": false}, {"g": 8, "link": "/10-sinf-uxui/hafta-02/dars-5", "current": true}, {"g": 9, "link": "/10-sinf-uxui/hafta-02/dars-6", "current": false}], "prev": {"g": 7, "title": "4-dars: Foydalanuvchi tadqiqot usullari: intervyu, so‘rovnoma, kuzatish", "link": "/10-sinf-uxui/hafta-02/dars-4"}, "next": {"g": 9, "title": "6-dars: Foydalanuvchi tarixi va senariysini yozish (User Story & User Journey Map)", "link": "/10-sinf-uxui/hafta-02/dars-6"}}
 ---
 
 **Sinf:** 10-sinf  

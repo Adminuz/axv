@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf", "link": "/9-sinf/"}, "week": {"n": 1, "link": "/9-sinf/hafta-01/"}, "g": 3, "title": "Foydalanuvchi tadqiqotlari: nega, qanday usullar va persona", "lead": "Yaxshi dizayner chizishdan oldin so'raydi, kuzatadi va tinglaydi. Bugun siz sinfdoshingizdan haqiqiy intervyu olasiz va uning «portreti» (persona) ni yasaysiz.", "slide": "/slaydlar/9-sinf/hafta-01/dars-3.html", "tabs": [{"g": 1, "link": "/9-sinf/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/9-sinf/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "UX/UI dizayn tamoyillari va jarayoni: yaxshi dizayn qanday bo'ladi", "link": "/9-sinf/hafta-01/dars-2"}, "next": null}
+dars: {"sinf": {"name": "9-sinf", "link": "/9-sinf/"}, "week": {"n": 1, "link": "/9-sinf/hafta-01/"}, "g": 3, "title": "Foydalanuvchi tadqiqotlari: nega, qanday usullar va persona", "lead": "Yaxshi dizayner chizishdan oldin so'raydi, kuzatadi va tinglaydi. Bugun siz sinfdoshingizdan haqiqiy intervyu olasiz va uning «portreti» (persona) ni yasaysiz.", "slide": "/slaydlar/9-sinf/hafta-01/dars-3.html", "test": "/slaydlar/9-sinf/hafta-01/dars-3-test.html", "tabs": [{"g": 1, "link": "/9-sinf/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/9-sinf/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "UX/UI dizayn tamoyillari va jarayoni: yaxshi dizayn qanday bo'ladi", "link": "/9-sinf/hafta-01/dars-2"}, "next": null}
 ---
 
 

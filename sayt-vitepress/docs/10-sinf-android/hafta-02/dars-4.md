@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (Android)", "link": "/10-sinf-android/"}, "week": {"n": 2, "link": "/10-sinf-android/hafta-02/"}, "g": 7, "title": "4-dars: Dependency management va ziddiyatlarni hal qilish", "lead": "Git bilan versiya nazorati asoslari: Git repository, commit, log, .gitignore", "slide": "/slaydlar/10-sinf-android/hafta-02/dars-4.html", "tabs": [{"g": 7, "link": "/10-sinf-android/hafta-02/dars-4", "current": true}, {"g": 8, "link": "/10-sinf-android/hafta-02/dars-5", "current": false}, {"g": 9, "link": "/10-sinf-android/hafta-02/dars-6", "current": false}], "prev": null, "next": {"g": 8, "title": "5-dars: ProGuard va R8 yordamida kodni optimallashtirish (1-qism)", "link": "/10-sinf-android/hafta-02/dars-5"}}
+dars: {"sinf": {"name": "10-sinf (Android)", "link": "/10-sinf-android/"}, "week": {"n": 2, "link": "/10-sinf-android/hafta-02/"}, "g": 7, "title": "4-dars: Dependency management va ziddiyatlarni hal qilish", "lead": "Git bilan versiya nazorati asoslari: Git repository, commit, log, .gitignore", "slide": "/slaydlar/10-sinf-android/hafta-02/dars-4.html", "test": "/slaydlar/10-sinf-android/hafta-02/dars-4-test.html", "tabs": [{"g": 7, "link": "/10-sinf-android/hafta-02/dars-4", "current": true}, {"g": 8, "link": "/10-sinf-android/hafta-02/dars-5", "current": false}, {"g": 9, "link": "/10-sinf-android/hafta-02/dars-6", "current": false}], "prev": null, "next": {"g": 8, "title": "5-dars: ProGuard va R8 yordamida kodni optimallashtirish (1-qism)", "link": "/10-sinf-android/hafta-02/dars-5"}}
 ---
 
 **Fan:** Advanced Android dasturlash  

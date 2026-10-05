@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "8-sinf", "link": "/8-sinf/"}, "week": {"n": 1, "link": "/8-sinf/hafta-01/"}, "g": 3, "title": "Matn teglari, <a> tegi, block va inline elementlar", "lead": "Oddiy matn bugun «jonlanadi»: so'zlar qalin, qiyshiq, sariq bo'ladi va bosiladigan havolaga aylanadi. Telegramdagi har bir ko'k yozuv qanday ishlashini ham bilib olasiz.", "slide": "/slaydlar/8-sinf/hafta-01/dars-3.html", "tabs": [{"g": 1, "link": "/8-sinf/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/8-sinf/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/8-sinf/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "HTML hujjat strukturasi. Teg, atribut, head, sarlavhalar", "link": "/8-sinf/hafta-01/dars-2"}, "next": null}
+dars: {"sinf": {"name": "8-sinf", "link": "/8-sinf/"}, "week": {"n": 1, "link": "/8-sinf/hafta-01/"}, "g": 3, "title": "Matn teglari, <a> tegi, block va inline elementlar", "lead": "Oddiy matn bugun «jonlanadi»: so'zlar qalin, qiyshiq, sariq bo'ladi va bosiladigan havolaga aylanadi. Telegramdagi har bir ko'k yozuv qanday ishlashini ham bilib olasiz.", "slide": "/slaydlar/8-sinf/hafta-01/dars-3.html", "test": "/slaydlar/8-sinf/hafta-01/dars-3-test.html", "tabs": [{"g": 1, "link": "/8-sinf/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/8-sinf/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/8-sinf/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "HTML hujjat strukturasi. Teg, atribut, head, sarlavhalar", "link": "/8-sinf/hafta-01/dars-2"}, "next": null}
 ---
 
 

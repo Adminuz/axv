@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (BI)", "link": "/9-sinf-bi/"}, "week": {"n": 1, "link": "/9-sinf-bi/hafta-01/"}, "g": 3, "title": "BI tizimlari turlari, mutaxassislik rollari va Excel analitik platformasi", "lead": "Katta biznes qanday boshqariladi: BI tizimlarining turlari, jamoaviy rollar va barcha tahlillar poydevori bo'lgan Microsoft Excel bilan yaqindan tanishing.", "slide": "/slaydlar/9-sinf-bi/hafta-01/dars-3.html", "tabs": [{"g": 1, "link": "/9-sinf-bi/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/9-sinf-bi/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf-bi/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "Business Intelligence (BI) asoslari: Katta to'rtlik va hayotiy sikl", "link": "/9-sinf-bi/hafta-01/dars-2"}, "next": null}
+dars: {"sinf": {"name": "9-sinf (BI)", "link": "/9-sinf-bi/"}, "week": {"n": 1, "link": "/9-sinf-bi/hafta-01/"}, "g": 3, "title": "BI tizimlari turlari, mutaxassislik rollari va Excel analitik platformasi", "lead": "Katta biznes qanday boshqariladi: BI tizimlarining turlari, jamoaviy rollar va barcha tahlillar poydevori bo'lgan Microsoft Excel bilan yaqindan tanishing.", "slide": "/slaydlar/9-sinf-bi/hafta-01/dars-3.html", "test": "/slaydlar/9-sinf-bi/hafta-01/dars-3-test.html", "tabs": [{"g": 1, "link": "/9-sinf-bi/hafta-01/dars-1", "current": false}, {"g": 2, "link": "/9-sinf-bi/hafta-01/dars-2", "current": false}, {"g": 3, "link": "/9-sinf-bi/hafta-01/dars-3", "current": true}], "prev": {"g": 2, "title": "Business Intelligence (BI) asoslari: Katta to'rtlik va hayotiy sikl", "link": "/9-sinf-bi/hafta-01/dars-2"}, "next": null}
 ---
 
 

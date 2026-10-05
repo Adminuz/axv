@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (DevOps)", "link": "/10-sinf-devops/"}, "week": {"n": 2, "link": "/10-sinf-devops/hafta-02/"}, "g": 6, "title": "Git va versiya boshqaruvi tizimlariga kirish (Git asoslari)", "lead": "Dasturiy ta'minotning vaqt mashinasi: Git versiya boshqaruvi, 3 ta hudud (Working, Staging, Repository), commitlar anatomiyasi va .gitignore sirlari.", "slide": "/slaydlar/10-sinf-devops/hafta-02/dars-3.html", "tabs": [{"g": 4, "link": "/10-sinf-devops/hafta-02/dars-1", "current": false}, {"g": 5, "link": "/10-sinf-devops/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/10-sinf-devops/hafta-02/dars-3", "current": true}], "prev": {"g": 5, "title": "Disklar, fayl tizimlari va paket menejerlari (APT, DNF)", "link": "/10-sinf-devops/hafta-02/dars-2"}, "next": null}
+dars: {"sinf": {"name": "10-sinf (DevOps)", "link": "/10-sinf-devops/"}, "week": {"n": 2, "link": "/10-sinf-devops/hafta-02/"}, "g": 6, "title": "Git va versiya boshqaruvi tizimlariga kirish (Git asoslari)", "lead": "Dasturiy ta'minotning vaqt mashinasi: Git versiya boshqaruvi, 3 ta hudud (Working, Staging, Repository), commitlar anatomiyasi va .gitignore sirlari.", "slide": "/slaydlar/10-sinf-devops/hafta-02/dars-3.html", "test": "/slaydlar/10-sinf-devops/hafta-02/dars-3-test.html", "tabs": [{"g": 4, "link": "/10-sinf-devops/hafta-02/dars-1", "current": false}, {"g": 5, "link": "/10-sinf-devops/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/10-sinf-devops/hafta-02/dars-3", "current": true}], "prev": {"g": 5, "title": "Disklar, fayl tizimlari va paket menejerlari (APT, DNF)", "link": "/10-sinf-devops/hafta-02/dars-2"}, "next": null}
 ---
 
 ---

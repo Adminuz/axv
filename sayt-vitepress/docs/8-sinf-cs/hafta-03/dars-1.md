@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "8-sinf (Foundation)", "link": "/8-sinf-cs/"}, "week": {"n": 3, "link": "/8-sinf-cs/hafta-03/"}, "g": 7, "title": "Klaviaturada tez va to‘g‘ri yozish ko‘nikmalari (Touch typing)", "lead": "Klaviaturaga qaramasdan 10 barmoqda chaqqon yozish san'ati, F va J sirlari, to'g'ri gavda ergonomikasi va yozish tezligini oshirish mashqlari.", "slide": "/slaydlar/8-sinf-cs/hafta-03/dars-1.html", "tabs": [{"g": 7, "link": "/8-sinf-cs/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/8-sinf-cs/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/8-sinf-cs/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "Raqamli savodxonlik va raqamli madaniyat", "link": "/8-sinf-cs/hafta-03/dars-2"}}
+dars: {"sinf": {"name": "8-sinf (Foundation)", "link": "/8-sinf-cs/"}, "week": {"n": 3, "link": "/8-sinf-cs/hafta-03/"}, "g": 7, "title": "Klaviaturada tez va to‘g‘ri yozish ko‘nikmalari (Touch typing)", "lead": "Klaviaturaga qaramasdan 10 barmoqda chaqqon yozish san'ati, F va J sirlari, to'g'ri gavda ergonomikasi va yozish tezligini oshirish mashqlari.", "slide": "/slaydlar/8-sinf-cs/hafta-03/dars-1.html", "test": "/slaydlar/8-sinf-cs/hafta-03/dars-1-test.html", "tabs": [{"g": 7, "link": "/8-sinf-cs/hafta-03/dars-1", "current": true}, {"g": 8, "link": "/8-sinf-cs/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/8-sinf-cs/hafta-03/dars-3", "current": false}], "prev": null, "next": {"g": 8, "title": "Raqamli savodxonlik va raqamli madaniyat", "link": "/8-sinf-cs/hafta-03/dars-2"}}
 ---
 
 

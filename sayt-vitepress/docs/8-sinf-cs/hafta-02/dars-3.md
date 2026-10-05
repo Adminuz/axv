@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "8-sinf (Foundation)", "link": "/8-sinf-cs/"}, "week": {"n": 2, "link": "/8-sinf-cs/hafta-02/"}, "g": 6, "title": "Kompyuter xavfsizligi va antivirus dasturlari", "lead": "Kompyuterni kiberxatarlardan himoyalash, zararli dasturlar turlari, antiviruslarning ishlash sirlari hamda mustahkam parollar yaratish madaniyati.", "slide": "/slaydlar/8-sinf-cs/hafta-02/dars-3.html", "tabs": [{"g": 4, "link": "/8-sinf-cs/hafta-02/dars-1", "current": false}, {"g": 5, "link": "/8-sinf-cs/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/8-sinf-cs/hafta-02/dars-3", "current": true}], "prev": {"g": 5, "title": "Internet, brauzerlar va elektron pochta bilan ishlash", "link": "/8-sinf-cs/hafta-02/dars-2"}, "next": null}
+dars: {"sinf": {"name": "8-sinf (Foundation)", "link": "/8-sinf-cs/"}, "week": {"n": 2, "link": "/8-sinf-cs/hafta-02/"}, "g": 6, "title": "Kompyuter xavfsizligi va antivirus dasturlari", "lead": "Kompyuterni kiberxatarlardan himoyalash, zararli dasturlar turlari, antiviruslarning ishlash sirlari hamda mustahkam parollar yaratish madaniyati.", "slide": "/slaydlar/8-sinf-cs/hafta-02/dars-3.html", "test": "/slaydlar/8-sinf-cs/hafta-02/dars-3-test.html", "tabs": [{"g": 4, "link": "/8-sinf-cs/hafta-02/dars-1", "current": false}, {"g": 5, "link": "/8-sinf-cs/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/8-sinf-cs/hafta-02/dars-3", "current": true}], "prev": {"g": 5, "title": "Internet, brauzerlar va elektron pochta bilan ishlash", "link": "/8-sinf-cs/hafta-02/dars-2"}, "next": null}
 ---
 
 

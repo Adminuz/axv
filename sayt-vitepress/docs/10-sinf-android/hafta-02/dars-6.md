@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (Android)", "link": "/10-sinf-android/"}, "week": {"n": 2, "link": "/10-sinf-android/hafta-02/"}, "g": 9, "title": "6-dars: ProGuard va R8 qoidalari bilan ishlash (2-qism: Amaliyot)", "lead": "GitHub’da loyihalar yaratish va boshqarish: remote repozitoriy, push, pull, issues, README", "slide": "/slaydlar/10-sinf-android/hafta-02/dars-6.html", "tabs": [{"g": 7, "link": "/10-sinf-android/hafta-02/dars-4", "current": false}, {"g": 8, "link": "/10-sinf-android/hafta-02/dars-5", "current": false}, {"g": 9, "link": "/10-sinf-android/hafta-02/dars-6", "current": true}], "prev": {"g": 8, "title": "5-dars: ProGuard va R8 yordamida kodni optimallashtirish (1-qism)", "link": "/10-sinf-android/hafta-02/dars-5"}, "next": null}
+dars: {"sinf": {"name": "10-sinf (Android)", "link": "/10-sinf-android/"}, "week": {"n": 2, "link": "/10-sinf-android/hafta-02/"}, "g": 9, "title": "6-dars: ProGuard va R8 qoidalari bilan ishlash (2-qism: Amaliyot)", "lead": "GitHub’da loyihalar yaratish va boshqarish: remote repozitoriy, push, pull, issues, README", "slide": "/slaydlar/10-sinf-android/hafta-02/dars-6.html", "test": "/slaydlar/10-sinf-android/hafta-02/dars-6-test.html", "tabs": [{"g": 7, "link": "/10-sinf-android/hafta-02/dars-4", "current": false}, {"g": 8, "link": "/10-sinf-android/hafta-02/dars-5", "current": false}, {"g": 9, "link": "/10-sinf-android/hafta-02/dars-6", "current": true}], "prev": {"g": 8, "title": "5-dars: ProGuard va R8 yordamida kodni optimallashtirish (1-qism)", "link": "/10-sinf-android/hafta-02/dars-5"}, "next": null}
 ---
 
 **Fan:** Advanced Android dasturlash  

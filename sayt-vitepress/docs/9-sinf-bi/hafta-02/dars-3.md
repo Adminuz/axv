@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "9-sinf (BI)", "link": "/9-sinf-bi/"}, "week": {"n": 2, "link": "/9-sinf-bi/hafta-02/"}, "g": 6, "title": "Excel formulalari: Nisbiy/absolut murojaatlar, shartli va qidiruv funksiyalari", "lead": "Hisob-kitoblar qudrati: formulalarda absolut va nisbiy manzillar, mantiqiy shartlar (IF, SUMIF, COUNTIF) hamda mukammal XLOOKUP qidiruv mexanizmi.", "slide": "/slaydlar/9-sinf-bi/hafta-02/dars-3.html", "tabs": [{"g": 4, "link": "/9-sinf-bi/hafta-02/dars-1", "current": false}, {"g": 5, "link": "/9-sinf-bi/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/9-sinf-bi/hafta-02/dars-3", "current": true}], "prev": {"g": 5, "title": "Professional jadval tuzish, Tidy Data va Excel Table (Ctrl+T)", "link": "/9-sinf-bi/hafta-02/dars-2"}, "next": null}
+dars: {"sinf": {"name": "9-sinf (BI)", "link": "/9-sinf-bi/"}, "week": {"n": 2, "link": "/9-sinf-bi/hafta-02/"}, "g": 6, "title": "Excel formulalari: Nisbiy/absolut murojaatlar, shartli va qidiruv funksiyalari", "lead": "Hisob-kitoblar qudrati: formulalarda absolut va nisbiy manzillar, mantiqiy shartlar (IF, SUMIF, COUNTIF) hamda mukammal XLOOKUP qidiruv mexanizmi.", "slide": "/slaydlar/9-sinf-bi/hafta-02/dars-3.html", "test": "/slaydlar/9-sinf-bi/hafta-02/dars-3-test.html", "tabs": [{"g": 4, "link": "/9-sinf-bi/hafta-02/dars-1", "current": false}, {"g": 5, "link": "/9-sinf-bi/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/9-sinf-bi/hafta-02/dars-3", "current": true}], "prev": {"g": 5, "title": "Professional jadval tuzish, Tidy Data va Excel Table (Ctrl+T)", "link": "/9-sinf-bi/hafta-02/dars-2"}, "next": null}
 ---
 
 

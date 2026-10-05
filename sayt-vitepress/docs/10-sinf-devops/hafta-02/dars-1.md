@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "10-sinf (DevOps)", "link": "/10-sinf-devops/"}, "week": {"n": 2, "link": "/10-sinf-devops/hafta-02/"}, "g": 4, "title": "Xizmatlar va jarayonlarni boshqarish (ps, top, kill, systemd)", "lead": "Linux operatsion tizimi tomir urishi: jarayonlar monitoringi (ps, top), boshqaruv signallari (kill, nice) hamda doimiy ishlovchi xizmatlar (systemd/systemctl).", "slide": "/slaydlar/10-sinf-devops/hafta-02/dars-1.html", "tabs": [{"g": 4, "link": "/10-sinf-devops/hafta-02/dars-1", "current": true}, {"g": 5, "link": "/10-sinf-devops/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/10-sinf-devops/hafta-02/dars-3", "current": false}], "prev": null, "next": {"g": 5, "title": "Disklar, fayl tizimlari va paket menejerlari (APT, DNF)", "link": "/10-sinf-devops/hafta-02/dars-2"}}
+dars: {"sinf": {"name": "10-sinf (DevOps)", "link": "/10-sinf-devops/"}, "week": {"n": 2, "link": "/10-sinf-devops/hafta-02/"}, "g": 4, "title": "Xizmatlar va jarayonlarni boshqarish (ps, top, kill, systemd)", "lead": "Linux operatsion tizimi tomir urishi: jarayonlar monitoringi (ps, top), boshqaruv signallari (kill, nice) hamda doimiy ishlovchi xizmatlar (systemd/systemctl).", "slide": "/slaydlar/10-sinf-devops/hafta-02/dars-1.html", "test": "/slaydlar/10-sinf-devops/hafta-02/dars-1-test.html", "tabs": [{"g": 4, "link": "/10-sinf-devops/hafta-02/dars-1", "current": true}, {"g": 5, "link": "/10-sinf-devops/hafta-02/dars-2", "current": false}, {"g": 6, "link": "/10-sinf-devops/hafta-02/dars-3", "current": false}], "prev": null, "next": {"g": 5, "title": "Disklar, fayl tizimlari va paket menejerlari (APT, DNF)", "link": "/10-sinf-devops/hafta-02/dars-2"}}
 ---
 
 ---

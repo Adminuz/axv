@@ -16,7 +16,7 @@ Tinkercad.com — bu Autodesk kompaniyasi tomonidan yaratilgan, brauzer orqali i
 - **Workplane:** Komponentlar joylashtiriladigan va simlar orqali ulanadigan markaziy ishchi maydon;
 - **Komponentlar paneli:** Chap/o'ng tomondagi elementlar kutubxonasi (Basic va All toifalari);
 - **Start Simulation:** Zanjirga virtual elektr tokini uzatib, uning ishlashini tekshirish tugmasi;
-- **Tezkor klavishlar:** `R` — komponentni 30° ga burish, `Del` — o'chirish, `Ctrl+Z` — orqaga qaytarish, `N` — matnli eslatma qo'yish.
+- **Tezkor klavishlar:** `R` — komponentni 45° ga burish, `Del` — o'chirish, `Ctrl+Z` — orqaga qaytarish, `N` — matnli eslatma qo'yish.
 
 ---
 

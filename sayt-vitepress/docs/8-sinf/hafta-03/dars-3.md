@@ -5,7 +5,7 @@ sidebar: false
 aside: false
 outline: false
 kind: "dars"
-dars: {"sinf": {"name": "8-sinf", "link": "/8-sinf/"}, "week": {"n": 3, "link": "/8-sinf/hafta-03/"}, "g": 9, "title": "HTML5 global atributlari va zamonaviy forma imkoniyatlari. I bob yakuni", "lead": "Barcha teglar uchun universal global atributlar, data-* sirlari, yangi kiritish vositalari hamda I bob bo'yicha to'liq mustaqil veb-loyiha.", "slide": "/slaydlar/8-sinf/hafta-03/dars-3.html", "tabs": [{"g": 7, "link": "/8-sinf/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/8-sinf/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/8-sinf/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "HTML5 multimedia va interaktiv elementlar: <video>, <audio>, <figure>, <details>, <progress>", "link": "/8-sinf/hafta-03/dars-2"}, "next": null}
+dars: {"sinf": {"name": "8-sinf", "link": "/8-sinf/"}, "week": {"n": 3, "link": "/8-sinf/hafta-03/"}, "g": 9, "title": "HTML5 global atributlari va zamonaviy forma imkoniyatlari. I bob yakuni", "lead": "Barcha teglar uchun universal global atributlar, data-* sirlari, yangi kiritish vositalari hamda I bob bo'yicha to'liq mustaqil veb-loyiha.", "slide": "/slaydlar/8-sinf/hafta-03/dars-3.html", "test": "/slaydlar/8-sinf/hafta-03/dars-3-test.html", "tabs": [{"g": 7, "link": "/8-sinf/hafta-03/dars-1", "current": false}, {"g": 8, "link": "/8-sinf/hafta-03/dars-2", "current": false}, {"g": 9, "link": "/8-sinf/hafta-03/dars-3", "current": true}], "prev": {"g": 8, "title": "HTML5 multimedia va interaktiv elementlar: <video>, <audio>, <figure>, <details>, <progress>", "link": "/8-sinf/hafta-03/dars-2"}, "next": null}
 ---
 
 
