@@ -37,8 +37,8 @@ Manba: `8-sinf Computer Science o'quv dasturi last.docx` (o'quv dasturi). Agentl
 | 7 | 3 | Klaviaturada tez va to‘g‘ri yozish ko‘nikmalari (Touch typing) | 📝 |
 | 8 | 3 | Raqamli savodxonlik va raqamli madaniyat | 📝 |
 | 9 | 3 | Raqamli transformatsiya tushunchasi | 📝 |
-| 10 | 4 | Internet qanday ishlaydi? IP, hosting, domen, DNS, brauzer, HTTP/HTTPS | ⬜ |
-| 11–12 | 4 | Bulutli xizmatlar va onlayn hamkorlik vositalari (1–2-dars) | ⬜ |
+| 10 | 4 | Internet qanday ishlaydi? IP, hosting, domen, DNS, brauzer, HTTP/HTTPS | 📝 |
+| 11–12 | 4 | Bulutli xizmatlar va onlayn hamkorlik vositalari (1–2-dars) | 📝 |
 | 13 | 5 | Bulutli xizmatlar va onlayn hamkorlik vositalari (3-dars) | ⬜ |
 | 14–15 | 5 | Git va GitHub bilan tanishuv (1–2-dars) | ⬜ |
 | 16–17 | 6 | Git va GitHub bilan tanishuv (3–4-dars) | ⬜ |
