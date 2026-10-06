@@ -1,0 +1,157 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Test: 16-dars. DRY va funksiyalar</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">9-sinf</span><span class="badge">Advanced Back-end va DevOps</span><span class="badge">6-hafta · 16-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">DRY nima?</p>
+    <div class="opts">
+      <button class="opt" type="button">Kodni o'chirish</button>
+      <button class="opt" type="button" data-ok>Kodni takrorlamaslik</button>
+      <button class="opt" type="button">Faqat izoh</button>
+      <button class="opt" type="button">Tez yozish</button>
+    </div>
+    <div class="explain">Don't Repeat Yourself.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q">Funksiya e'loni?</p>
+    <div class="opts">
+      <button class="opt" type="button">func</button>
+      <button class="opt" type="button" data-ok>def</button>
+      <button class="opt" type="button">function</button>
+      <button class="opt" type="button">fn</button>
+    </div>
+    <div class="explain"><code>def</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q">Natijani qaytaradigan operator?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>return</button>
+      <button class="opt" type="button">print</button>
+      <button class="opt" type="button">send</button>
+      <button class="opt" type="button">give</button>
+    </div>
+    <div class="explain"><code>return</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q"><code>return</code> bo'lmasa?</p>
+    <div class="opts">
+      <button class="opt" type="button">0</button>
+      <button class="opt" type="button" data-ok>None</button>
+      <button class="opt" type="button">Xato</button>
+      <button class="opt" type="button">Bo'sh ro'yxat</button>
+    </div>
+    <div class="explain"><code>None</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q">Chaqirishdagi qiymat nima deyiladi?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>Argument</button>
+      <button class="opt" type="button">Parametr</button>
+      <button class="opt" type="button">Modul</button>
+      <button class="opt" type="button">Klass</button>
+    </div>
+    <div class="explain">Argument.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q">Standart qiymat qanday yoziladi?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>def f(a=10)</button>
+      <button class="opt" type="button">def f(a:10)</button>
+      <button class="opt" type="button">def f(10)</button>
+      <button class="opt" type="button">def f(a==10)</button>
+    </div>
+    <div class="explain"><code>a=10</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q">Funksiya tanasi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Surilmaydi</button>
+      <button class="opt" type="button">Faqat bitta qator</button>
+      <button class="opt" type="button" data-ok>4 bo'shliq surilgan</button>
+      <button class="opt" type="button">Qavs ichida</button>
+    </div>
+    <div class="explain">Surilgan blok.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q">Uzun if/elif o'rniga?</p>
+    <div class="opts">
+      <button class="opt" type="button">set</button>
+      <button class="opt" type="button">tuple</button>
+      <button class="opt" type="button">range</button>
+      <button class="opt" type="button" data-ok>dict</button>
+    </div>
+    <div class="explain">dict.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q"><code>d.get("x", 0)</code> nima qiladi?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>Kalit bo'lmasa 0 qaytaradi</button>
+      <button class="opt" type="button">Xato beradi</button>
+      <button class="opt" type="button">Kalitni o'chiradi</button>
+      <button class="opt" type="button">Lug'atni tozalaydi</button>
+    </div>
+    <div class="explain">Standart qiymat.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q"><code>return min(s), max(s)</code> nimani qaytaradi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Bitta son</button>
+      <button class="opt" type="button">Ro'yxat doim</button>
+      <button class="opt" type="button" data-ok>Ikki qiymat (tuple)</button>
+      <button class="opt" type="button">None</button>
+    </div>
+    <div class="explain">Ikki qiymat.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 16-dars konspekti va slaydlari</p>
+</section>

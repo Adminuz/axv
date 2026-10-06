@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Test: 17-dars. try/except va istisnolar</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>Test: 17-dars. try/except va istisnolar</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">9-sinf</span><span class="badge">Advanced Back-end va DevOps</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">Istisno nima?</p>
+    <div class="opts">
+      <button class="opt" type="button">Funksiya turi</button>
+      <button class="opt" type="button">Ro'yxat turi</button>
+      <button class="opt" type="button">Komment</button>
+      <button class="opt" type="button" data-ok>Dasturdagi kutilmagan holat</button>
+    </div>
+    <div class="explain">Kutilmagan holat.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q"><code>int("abc")</code>?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>ValueError</button>
+      <button class="opt" type="button">KeyError</button>
+      <button class="opt" type="button">IndexError</button>
+      <button class="opt" type="button">SyntaxError</button>
+    </div>
+    <div class="explain"><code>ValueError</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q">0 ga bo'lish?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>ZeroDivisionError</button>
+      <button class="opt" type="button">ValueError</button>
+      <button class="opt" type="button">TypeError</button>
+      <button class="opt" type="button">KeyError</button>
+    </div>
+    <div class="explain"><code>ZeroDivisionError</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q">Lug'atda yo'q kalit?</p>
+    <div class="opts">
+      <button class="opt" type="button">IndexError</button>
+      <button class="opt" type="button" data-ok>KeyError</button>
+      <button class="opt" type="button">ValueError</button>
+      <button class="opt" type="button">NameError</button>
+    </div>
+    <div class="explain"><code>KeyError</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q">Xatoni ushlash bloki?</p>
+    <div class="opts">
+      <button class="opt" type="button">catch</button>
+      <button class="opt" type="button" data-ok>except</button>
+      <button class="opt" type="button">error</button>
+      <button class="opt" type="button">handle</button>
+    </div>
+    <div class="explain"><code>except</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q">Xato bo'lmasa ishlaydigan blok?</p>
+    <div class="opts">
+      <button class="opt" type="button">finally</button>
+      <button class="opt" type="button">except</button>
+      <button class="opt" type="button">raise</button>
+      <button class="opt" type="button" data-ok>else</button>
+    </div>
+    <div class="explain"><code>else</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q">Doim ishlaydigan blok?</p>
+    <div class="opts">
+      <button class="opt" type="button">else</button>
+      <button class="opt" type="button">except</button>
+      <button class="opt" type="button" data-ok>finally</button>
+      <button class="opt" type="button">try</button>
+    </div>
+    <div class="explain"><code>finally</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q">O'zimiz istisno chiqarish?</p>
+    <div class="opts">
+      <button class="opt" type="button">throw</button>
+      <button class="opt" type="button">error</button>
+      <button class="opt" type="button" data-ok>raise</button>
+      <button class="opt" type="button">make</button>
+    </div>
+    <div class="explain"><code>raise</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q">Ikki istisnoni bir qatorda ushlash?</p>
+    <div class="opts">
+      <button class="opt" type="button">except A, B, C</button>
+      <button class="opt" type="button">except A and B</button>
+      <button class="opt" type="button" data-ok>except (A, B):</button>
+      <button class="opt" type="button">except [A B]</button>
+    </div>
+    <div class="explain">Tuple bilan.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q">Kiritishni tekshirish andozasi?</p>
+    <div class="opts">
+      <button class="opt" type="button">for + if</button>
+      <button class="opt" type="button">if + else</button>
+      <button class="opt" type="button" data-ok>while True + try</button>
+      <button class="opt" type="button">def + class</button>
+    </div>
+    <div class="explain"><code>while True</code> + <code>try</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 17-dars konspekti va slaydlari</p>
+</section>
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>

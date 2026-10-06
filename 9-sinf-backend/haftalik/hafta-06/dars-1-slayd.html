@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>DRY va funksiyalar</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>DRY va funksiyalar</h1>
+  <p class="muted">DRY, def, parametr va return, standart qiymat, dict bilan DRY</p>
+  <span class="badge">9-sinf</span><span class="badge">Advanced Back-end va DevOps</span><span class="badge">6-hafta · 16-dars</span>
+  <aside class="notes">Takrorlash: 13–15-darslar (tuple, set, dict). Savol: «Chegirma hisoblaydigan 3 qatorni 10 joyda yozsak va formula o'zgarsa nima bo'ladi?» Dars Python 3 va VS Code (yoki onlayn Python muharriri)da o'tkaziladi.</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="copy" data-anim="pulse"></i></div><h3>DRY prinsipi</h3><p>Takrorlama</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="square-function" data-anim="float"></i></div><h3>def va return</h3><p>Funksiya yozish</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="book-open" data-anim="blink"></i></div><h3>dict bilan DRY</h3><p>if/elif o'rniga</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q">Lug'atdan kalit orqali qiymat qanday olinadi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok><code>d["kalit"]</code> yoki <code>d.get("kalit")</code></button>
+    <button class="opt" type="button"><code>d.kalit</code></button>
+    <button class="opt" type="button"><code>d(kalit)</code></button>
+    <button class="opt" type="button"><code>d{kalit}</code></button>
+    </div>
+    <div class="explain">Kvadrat qavs yoki <code>get()</code>.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>DRY prinsipi</h1>
+  <p>Takrorlama</p>
+</section>
+
+<section>
+  <h2>DRY ga yo'l</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">Takrorni</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">ko'ring</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Funksiyaga</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">ajrating</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">Argument</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">bering</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Hamma joyda</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">chaqiring</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Bitta manba — bitta o'zgartirish</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>DRY emas va DRY</h2>
+  <pre><code class="language-python" data-trim data-line-numbers="2-4|6-8|10-12">
+# DRY emas: bir xil formula 3 marta
+a = 200 - 200 * 10 / 100
+b = 500 - 500 * 20 / 100
+c = 90 - 90 * 5 / 100
+
+# DRY: formula bitta joyda
+def chegirma(narx, foiz):
+    return narx - narx * foiz / 100
+
+print(chegirma(200, 10))   # 180.0
+print(chegirma(500, 20))   # 400.0
+print(chegirma(90, 5))     # 85.5
+  </code></pre>
+  <div class="callout warn mt fragment"><i data-ic="triangle-alert"></i>Qoida: bir xil kodni ikkinchi marta yozayotgan bo'lsangiz — to'xtang va funksiya qiling. Uch marta takrorlangan kod — funksiya uchun qat'iy signal.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">DRY nimani anglatadi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Bir xil kodni takrorlamaslik</button>
+    <button class="opt" type="button">Kodni qisqartirib o'qib bo'lmas qilish</button>
+    <button class="opt" type="button">Faqat izoh yozish</button>
+    <button class="opt" type="button">Faqat bitta o'zgaruvchi ishlatish</button>
+    </div>
+    <div class="explain">Don't Repeat Yourself.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>def va return</h1>
+  <p>Funksiya yozish</p>
+</section>
+
+<section>
+  <h2>Funksiya tuzilishi</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">def</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">nom(parametr):</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Tana (4</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">bo'shliq)</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">return natija</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Chaqirish:</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">nom(arg)</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Funksiya = nom + parametr + natija</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Funksiya turlari</h2>
+  <pre><code class="language-python" data-trim data-line-numbers="1-2|4-5|7-8|10|11-13|14-15">
+def salom_ber():
+    print("Salom, Python!")
+
+def salom(ism="Mehmon"):
+    return f"Salom, {ism}!"
+
+def yigindi(a, b):
+    return a + b
+
+salom_ber()                  # Salom, Python!
+print(salom())               # Salom, Mehmon!
+print(salom("Ali"))          # Salom, Ali!
+natija = yigindi(3, 4) * 2
+print(natija)                # 14
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Funksiya ichida natijani faqat <code>print</code> qilsangiz, uni keyin hisobda ishlata olmaysiz: <code>yigindi(3, 4) * 2</code> ishlashi uchun <code>return</code> kerak.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>return</code> bo'lmagan funksiya nimani qaytaradi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok><code>None</code></button>
+    <button class="opt" type="button"><code>0</code></button>
+    <button class="opt" type="button">Bo'sh satr</button>
+    <button class="opt" type="button">Xato</button>
+    </div>
+    <div class="explain"><code>None</code>.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>dict bilan DRY</h1>
+  <p>if/elif o'rniga</p>
+</section>
+
+<section>
+  <h2>dict bilan soddalashtirish</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">if/elif</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">zanjiri</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Lug'at: kalit</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">→ qiymat</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">get(kalit,</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">standart)</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Yangi qiymat</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">— bitta qator</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Ma'lumotni kodga emas, lug'atga yozing</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Til bo'yicha salomlashuv</h2>
+  <pre><code class="language-python" data-trim data-line-numbers="1-5|7-8|10-11|13-14|15-16">
+texts = {
+    "uz": "Assalomu alaykum!",
+    "ru": "Zdravstvuyte!",
+    "en": "Hello!",
+}
+
+def salomlash(til):
+    return texts.get(til, texts["en"])
+
+def chegara(sonlar):
+    return min(sonlar), max(sonlar)
+
+print(salomlash("uz"))      # Assalomu alaykum!
+print(salomlash("de"))      # Hello! (topilmadi, standart)
+kichik, katta = chegara([4, 9, 1, 7])
+print(kichik, katta)        # 1 9
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Kalit bo'lmasa <code>texts["de"]</code> <code>KeyError</code> beradi, <code>texts.get("de", ...)</code> esa standart qiymat qaytaradi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Uzun <code>if/elif</code> o'rniga qaysi tuzilma qulay?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok><code>dict</code></button>
+    <button class="opt" type="button"><code>tuple</code></button>
+    <button class="opt" type="button"><code>set</code></button>
+    <button class="opt" type="button"><code>print</code></button>
+    </div>
+    <div class="explain">Kalit → qiymat juftliklari.</div>
+  </div>
+</section>
+
+<section>
+  <h2>print va return</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>print()</h3>Ekranga chiqaradi; qiymat dasturda qolmaydi</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>return</h3>Qiymatni funksiya chaqirilgan joyga qaytaradi</div>
+  </div>
+  <div class="card accent fragment mt"><p>Hisob uchun return, ko'rsatish uchun print.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>DRY</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Kodni takrorlamaslik prinsipi</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>def</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Funksiya e'lon qilish kalit so'zi</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Parametr</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>E'londagi nom: def f(a, b)</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Argument</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Chaqirishdagi qiymat: f(3, 4)</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Funksiya yozish</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="copy" data-anim="pulse"></i></div><h3>1. Takrorni toping</h3><p>Bir xil kod.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="square-function"></i></div><h3>2. def yozing</h3><p>Parametr va return.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="check"></i></div><h3>3. Chaqiring</h3><p>Turli argument bilan.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>Funksiya qismlari</h2>
+    <table>
+      <thead><tr><th>Qism</th><th>Misol</th><th>Vazifa</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td><code>def</code></td><td><code>def chegirma(...)</code></td><td>E'lon boshlanishi</td></tr>
+        <tr class="fragment"><td>Parametr</td><td><code>narx, foiz</code></td><td>Kiruvchi nom</td></tr>
+        <tr class="fragment"><td>Tana</td><td>4 bo'shliq surilgan</td><td>Ish bajariladi</td></tr>
+        <tr class="fragment"><td><code>return</code></td><td><code>return narx - ...</code></td><td>Natija qaytadi</td></tr>
+        <tr class="fragment"><td>Chaqirish</td><td><code>chegirma(200, 10)</code></td><td>Funksiyani ishlatish</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: funksiya qismlari</p>
+  </section>
+  <section>
+    <h2>Do'kon hisobi</h2>
+    <ol class="steps-n">
+      <li class="fragment">Takrorlanuvchi chegirma kodini yozing (3 marta).</li>
+      <li class="fragment">Uni <code>chegirma(narx, foiz)</code> funksiyasiga aylantiring.</li>
+      <li class="fragment">Funksiyani 3 xil argument bilan chaqiring va natijani chiqaring.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Funksiya natijasi</h2>
+  <pre data-id="c"><code class="language-python" data-trim>
+def kvadrat(x):
+    print(x * x)
+
+natija = kvadrat(4) + 1
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Funksiya natijasi</h2>
+  <pre data-id="c"><code class="language-python" data-trim data-line-numbers="1|2">
+def kvadrat(x):
+    return x * x
+
+natija = kvadrat(4) + 1
+  </code></pre>
+</section>
+
+<section>
+  <h2>Funksiyalar raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> marta takrorlangan kod — funksiya uchun signal</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="4" data-suf="">0</span></div><div class="l"> bo'shliq — tana surilishi</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="1" data-suf="">0</span></div><div class="l"> ish — bitta funksiya vazifasi</div></div>
+  </div>
+  <p class="small fragment">Kichik, aniq nomli funksiyalar yozing.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Funksiya yozing: Ikki sonni qo'shib qaytaradigan <code>yigindi(a, b)</code> yozing.</div>
+  <div class="task"><span class="level easy">Oson</span>Salom funksiyasi: Standart ismi «Mehmon» bo'lgan <code>salom(ism)</code> yozing.</div>
+  <div class="task"><span class="level mid">O'rta</span>Chegirma: <code>chegirma(narx, foiz)</code> funksiyasini yozing va 3 marta chaqiring.</div>
+  <div class="task"><span class="level mid">O'rta</span>format_user: Ism va yoshni «Ali — 20 yosh» ko'rinishida qaytaradigan funksiya yozing.</div>
+  <div class="task"><span class="level hard">Qiyin</span>dict bilan salom: Til bo'yicha salom beradigan funksiya yozing (uz, ru, en); noma'lum til — inglizcha.</div>
+  <div class="task"><span class="level hard">Bonus</span>Eng kichik va eng katta: Sonlar ro'yxatidan eng kichik va eng katta sonni qaytaring.</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>DRY</h3><p>Takrorlama — bug manbai.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>def va return</h3><p>Parametr, argument, natija.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>dict bilan DRY</h3><p>if/elif o'rniga lug'at.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: DRY va funksiyalar: chegirma, salomlashuv.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="shield-alert" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: try/except</h1>
+  <p class="muted">Xatolarni boshqarish</p>
+  <span class="badge">6-hafta · 17-dars</span>
+</section>
+
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>

@@ -28,7 +28,7 @@ Manba: `2.2. Uslubiy ko`rsatma (Advanced Back-end va DevOps).docx`. Agentlar avv
 | 7–9 | 3 | Takrorlanuvchi algoritm: for va while sikllari. match/case tanlash operatori | 📝 |
 | 10–12 | 4 | Ma’lumotlar tuzilmalari: satrlar (string) va ro‘yxatlar (list) | 📝 |
 | 13–15 | 5 | Ma’lumotlar tuzilmalari: kortejlar (tuple), to‘plamlar (set) va lug‘atlar (dict) | 📝 |
-| 16–18 | 6 | DRY prinsipi, funksiyalar (def), istisnoli holatlar (try/except) va fayllar bilan ishlash | ⬜ |
+| 16–18 | 6 | DRY prinsipi, funksiyalar (def), istisnoli holatlar (try/except) va fayllar bilan ishlash | 📝 |
 
 ## II-bob. OOP, Aiogram va Linux asoslari (21 dars)
 
