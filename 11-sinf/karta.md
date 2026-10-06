@@ -28,9 +28,9 @@ Manba: `11-sinf/++6. Professional IT development .docx` (o'quv dasturi) va `++6.
 | 9 | 3 | Loyihalash andozalari: Factory va Singleton | 📝 |
 | 10 | 4 | Loyihalash andozalari: Observer va hodisalar arxitekturasi | 📝 |
 | 11–12 | 4 | REST API va JSON asoslari | 📝 |
-| 13 | 5 | Muloqot va jamoada ishlash ko'nikmalari | ⬜ |
-| 14 | 5 | Liderlik, mas'uliyat va vaqtni boshqarish | ⬜ |
-| 15 | 5 | ORALIQ NAZORAT | ⬜ |
+| 13 | 5 | Muloqot va jamoada ishlash ko'nikmalari | 📝 |
+| 14 | 5 | Liderlik, mas'uliyat va vaqtni boshqarish | 📝 |
+| 15 | 5 | ORALIQ NAZORAT | 📝 |
 
 ## II-bob. DevOps va uzluksiz integratsiya (CI) asoslari (12 dars)
 
