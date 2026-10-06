@@ -30,9 +30,9 @@ Manba: Rasmiy o'quv dasturi (`10-sinf-bi/_matn/oquv-dasturi.txt`), Uslubiy ko'rs
 | 10 | 4 | SQL analitik operatorlari: GROUP BY va HAVING bilan ma'lumotlarni guruhlash | 📝 |
 | 11 | 4 | SQL JOIN turlari (INNER, LEFT, RIGHT, FULL) va amaliy tahlil | 📝 |
 | 12 | 4 | Subquery, CTE (WITH) va CASE WHEN operatorlari | 📝 |
-| 13 | 5 | Ma'lumotlar modellashtirish: Kimball metodologiyasi, Star Schema va Snowflake Schema | ⬜ |
-| 14 | 5 | Fakt (Fact) va O'lcham (Dimension) jadvallarini loyihalash | ⬜ |
-| 15 | 5 | Data Mart tushunchasi va sohaga oid martlar yaratish | ⬜ |
+| 13 | 5 | Ma'lumotlar modellashtirish: Kimball metodologiyasi, Star Schema va Snowflake Schema | 📝 |
+| 14 | 5 | Fakt (Fact) va O'lcham (Dimension) jadvallarini loyihalash | 📝 |
+| 15 | 5 | Data Mart tushunchasi va sohaga oid martlar yaratish | 📝 |
 | 16 | 6 | Sekin o'zgaruvchi o'lchamlar (SCD Type 1, Type 2) va surrogat kalitlar | ⬜ |
 | 17 | 6 | Ma'lumotlar ombori: Data Warehouse (DWH) tushunchasi, arxitekturasi va afzalliklari | ⬜ |
 | 18 | 6 | Data Lake konsepsiyasi, Bronze / Silver / Gold zonalari | ⬜ |
