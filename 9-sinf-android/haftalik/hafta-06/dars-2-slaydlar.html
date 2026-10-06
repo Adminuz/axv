@@ -1,0 +1,281 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Lambda, filter, map, forEach</h1>
+  <p class="muted">Lambda sintaksisi, <code>it</code>, forEach, filter, map, zanjir</p>
+  <span class="badge">9-sinf</span><span class="badge">Android dasturlash</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Takrorlash: 16-dars (List, Set, Map). Savol: «Ro'yxatdan faqat juft sonlarni olish uchun siklda <code>if</code> yozgan edik. Buni bir qatorda qila olamizmi?»</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="zap" data-anim="pulse"></i></div><h3>Lambda ifoda</h3><p>Nomsiz funksiya</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="list-ordered" data-anim="float"></i></div><h3>forEach va filter</h3><p>Aylanish va tanlash</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="shuffle" data-anim="blink"></i></div><h3>map va zanjir</h3><p>O'zgartirish</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q">Map da kalit yo'q bo'lsa <code>map[kalit]</code> nima qaytaradi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok><code>null</code></button>
+    <button class="opt" type="button">0</button>
+    <button class="opt" type="button">Xato doim</button>
+    <button class="opt" type="button">Bo'sh matn</button>
+    </div>
+    <div class="explain">Kalit yo'q bo'lsa <code>null</code>.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>Lambda ifoda</h1>
+  <p>Nomsiz funksiya</p>
+</section>
+
+<section>
+  <h2>Lambda yozish</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">{ parametr</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">-&gt; tana }</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Oxirgi ifoda</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">— natija</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">Bitta</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">parametr: it</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Qavsdan</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">tashqarida</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Nomsiz funksiya</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Lambda ifodalar</h2>
+  <pre><code class="language-kotlin" data-trim data-line-numbers="1-2|4-5|7-8">
+val kvadrat = { x: Int -&gt; x * x }
+println(kvadrat(5))               // 25
+
+val ikkilash: (Int) -&gt; Int = { it * 2 }
+println(ikkilash(7))              // 14
+
+val salom = { ism: String -&gt; "Salom, $ism!" }
+println(salom("Ali"))             // Salom, Ali!
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i><code>(Int) -&gt; Int</code> — funksiya turi: «Int oladi, Int qaytaradi». Lambdaning turi kompilyatorga ma'lum bo'lsa, <code>it</code> ni ishlatsangiz kod qisqa bo'ladi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Bitta parametrli lambdada parametr nomisiz qanday ishlatiladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok><code>it</code></button>
+    <button class="opt" type="button"><code>this</code></button>
+    <button class="opt" type="button"><code>self</code></button>
+    <button class="opt" type="button"><code>arg</code></button>
+    </div>
+    <div class="explain">Yagona parametr <code>it</code> deb ataladi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>forEach va filter</h1>
+  <p>Aylanish va tanlash</p>
+</section>
+
+<section>
+  <h2>Kolleksiya funksiyalari</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">forEach: har</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">biri uchun</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">filter:</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">tanlash</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">count / any</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">sortedBy:</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">tartiblash</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Sikl o'rniga bir qator</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>forEach va filter</h2>
+  <pre><code class="language-kotlin" data-trim data-line-numbers="2|3-4|5|6|8-9">
+val sonlar = listOf(1, 2, 3, 4, 5, 6)
+sonlar.forEach { println(it) }
+val juft = sonlar.filter { it % 2 == 0 }
+println(juft)                          // [2, 4, 6]
+println(sonlar.count { it &gt; 3 })       // 3
+println(sonlar.any { it &gt; 5 })         // true
+
+val narxlar = mapOf("Laptop" to 1200.0, "Phone" to 800.0, "Watch" to 250.0)
+println(narxlar.filter { it.value &gt; 500 })   // {Laptop=1200.0, Phone=800.0}
+  </code></pre>
+  <div class="callout warn mt fragment"><i data-ic="triangle-alert"></i><code>filter</code> yangi ro'yxat qaytaradi, asl ro'yxatni o'zgartirmaydi. Natijani o'zgaruvchiga saqlashni unutmang.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>listOf(1, 2, 3, 4).filter { it &gt; 2 }</code> natijasi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok><code>[3, 4]</code></button>
+    <button class="opt" type="button"><code>[1, 2]</code></button>
+    <button class="opt" type="button"><code>[2, 3]</code></button>
+    <button class="opt" type="button"><code>[4]</code></button>
+    </div>
+    <div class="explain"><code>it &gt; 2</code> shartiga 3 va 4 mos.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>map va zanjir</h1>
+  <p>O'zgartirish</p>
+</section>
+
+<section>
+  <h2>Zanjir</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Ro'yxat</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">filter:</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">tanlash</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">map:</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">o'zgartirish</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">sum / forEach</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Chapdan o'ngga o'qiladi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>map va zanjir</h2>
+  <pre><code class="language-kotlin" data-trim data-line-numbers="2|5|7-8">
+val nomlar = listOf("ali", "vali", "gulnora")
+println(nomlar.map { it.uppercase() })   // [ALI, VALI, GULNORA]
+
+val sonlar = listOf(1, 2, 3, 4, 5, 6)
+println(sonlar.map { it * it })          // [1, 4, 9, 16, 25, 36]
+
+val jami = sonlar.filter { it &gt; 2 }.map { it * 10 }.sum()
+println(jami)                            // 180
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i><code>map</code> natijasi — yangi ro'yxat: uni o'zgaruvchiga saqlang yoki <code>println</code> ga bering. Asl ro'yxat o'zgarmaydi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>listOf(1, 2, 3).map { it * 2 }</code> natijasi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok><code>[2, 4, 6]</code></button>
+    <button class="opt" type="button"><code>[1, 2, 3]</code></button>
+    <button class="opt" type="button"><code>6</code></button>
+    <button class="opt" type="button"><code>[3]</code></button>
+    </div>
+    <div class="explain">Har element 2 ga ko'paytiriladi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>filter va map</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>filter</h3>Elementlarni tanlaydi: ro'yxat qisqarishi mumkin</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>map</h3>Har elementni o'zgartiradi: uzunlik saqlanadi</div>
+  </div>
+  <div class="card accent fragment mt"><p>Tanlash — filter, o'zgartirish — map.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Lambda</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Nomsiz funksiya <code>{ x -&gt; ... }</code></p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>it</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Bitta parametrli lambdaning standart nomi</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>filter</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Shartga mos elementlarni tanlash</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>map</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Har elementni o'zgartirish</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Qayta ishlash</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="funnel" data-anim="pulse"></i></div><h3>1. Tanlang</h3><p>filter { shart }.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="shuffle"></i></div><h3>2. O'zgartiring</h3><p>map { amal }.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="sigma"></i></div><h3>3. Hisoblang</h3><p>sum, count, forEach.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>Kolleksiya funksiyalari</h2>
+    <table>
+      <thead><tr><th>Funksiya</th><th>Vazifasi</th><th>Natija turi</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td><code>forEach</code></td><td>Har biriga amal</td><td>Hech narsa</td></tr>
+        <tr class="fragment"><td><code>filter</code></td><td>Shartga mosini tanlash</td><td>Yangi ro'yxat</td></tr>
+        <tr class="fragment"><td><code>map</code></td><td>Har birini o'zgartirish</td><td>Yangi ro'yxat</td></tr>
+        <tr class="fragment"><td><code>count</code></td><td>Mos elementlar soni</td><td>Int</td></tr>
+        <tr class="fragment"><td><code>any</code></td><td>Kamida bittasi mosmi</td><td>Boolean</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: funksiyalar</p>
+  </section>
+  <section>
+    <h2>Mahsulotlarni filtrlash</h2>
+    <ol class="steps-n">
+      <li class="fragment">Mahsulot → narx Map yarating (5 ta mahsulot).</li>
+      <li class="fragment"><code>filter</code> bilan narxi 500 dan yuqori mahsulotlarni tanlang.</li>
+      <li class="fragment"><code>map</code> bilan mahsulot nomlarini katta harflarga o'tkazing va <code>forEach</code> bilan chiqaring.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Juft sonlarni olish</h2>
+  <pre data-id="c"><code class="language-kotlin" data-trim>
+val juft = mutableListOf&lt;Int&gt;()
+for (n in sonlar) { if (n % 2 == 0) juft.add(n) }
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Juft sonlarni olish</h2>
+  <pre data-id="c"><code class="language-kotlin" data-trim data-line-numbers="2|1">
+val juft = sonlar.filter { it % 2 == 0 }
+  </code></pre>
+</section>
+
+<section>
+  <h2>Lambda raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> asosiy funksiya: forEach, filter, map</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="1" data-suf="">0</span></div><div class="l"> qator — sikl o'rniga</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="180" data-suf="">0</span></div><div class="l"> — zanjir namunasining natijasi</div></div>
+  </div>
+  <p class="small fragment">Qisqa va o'qilishi oson kod.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Lambda yozing: Sonni 3 ga ko'paytiradigan lambda yozing va 4 ni bering.</div>
+  <div class="task"><span class="level easy">Oson</span>forEach: Ism ro'yxatini <code>forEach</code> bilan chiqaring.</div>
+  <div class="task"><span class="level mid">O'rta</span>Juft sonlar: <code>1..10</code> dan juft sonlarni <code>filter</code> bilan oling.</div>
+  <div class="task"><span class="level mid">O'rta</span>Kvadratlar: <code>listOf(1, 2, 3, 4)</code> kvadratlari ro'yxatini <code>map</code> bilan oling.</div>
+  <div class="task"><span class="level hard">Qiyin</span>Qimmat mahsulotlar: Narxi 500 dan yuqori mahsulotlar nomlarini katta harflarda chiqaring.</div>
+  <div class="task"><span class="level hard">Bonus</span>Zanjir yig'indisi: 3 dan katta sonlarni 10 ga ko'paytirib, yig'indisini hisoblang.</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Lambda</h3><p><code>{ x -&gt; ... }</code>, <code>it</code>.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>filter</h3><p>Shartga mos elementlar.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>map</h3><p>Har elementni o'zgartirish, zanjir.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: filter, map, forEach bilan mahsulotlarni qayta ishlash.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="box" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: OOP asoslari</h1>
+  <p class="muted">Inkapsulyatsiya va kirish huquqlari</p>
+  <span class="badge">6-hafta · 18-dars</span>
+</section>
+

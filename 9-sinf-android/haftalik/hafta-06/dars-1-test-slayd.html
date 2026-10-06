@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Test: 16-dars. Kolleksiyalar: List, Set, Map</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>Test: 16-dars. Kolleksiyalar: List, Set, Map</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">9-sinf</span><span class="badge">Android dasturlash</span><span class="badge">6-hafta · 16-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">O'zgarmas ro'yxat qaysi funksiya bilan yaratiladi?</p>
+    <div class="opts">
+      <button class="opt" type="button">mutableListOf</button>
+      <button class="opt" type="button" data-ok>listOf</button>
+      <button class="opt" type="button">arrayOf faqat</button>
+      <button class="opt" type="button">mapOf</button>
+    </div>
+    <div class="explain"><code>listOf</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q">O'zgaruvchan ro'yxat?</p>
+    <div class="opts">
+      <button class="opt" type="button">listOf</button>
+      <button class="opt" type="button" data-ok>mutableListOf</button>
+      <button class="opt" type="button">setOf</button>
+      <button class="opt" type="button">mapOf</button>
+    </div>
+    <div class="explain"><code>mutableListOf</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q">Birinchi element indeksi?</p>
+    <div class="opts">
+      <button class="opt" type="button">1</button>
+      <button class="opt" type="button">-1</button>
+      <button class="opt" type="button" data-ok>0</button>
+      <button class="opt" type="button">10</button>
+    </div>
+    <div class="explain">0.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q">Xavfsiz olish usuli?</p>
+    <div class="opts">
+      <button class="opt" type="button">getAll</button>
+      <button class="opt" type="button" data-ok>getOrNull</button>
+      <button class="opt" type="button">getNow</button>
+      <button class="opt" type="button">getLast faqat</button>
+    </div>
+    <div class="explain"><code>getOrNull</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q">Takrorlanmaydigan to'plam?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>Set</button>
+      <button class="opt" type="button">List</button>
+      <button class="opt" type="button">Map</button>
+      <button class="opt" type="button">Array faqat</button>
+    </div>
+    <div class="explain">Set.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q">Map da kalit qanday?</p>
+    <div class="opts">
+      <button class="opt" type="button">Takrorlanadi</button>
+      <button class="opt" type="button">Doim son</button>
+      <button class="opt" type="button">Doim null</button>
+      <button class="opt" type="button" data-ok>Noyob</button>
+    </div>
+    <div class="explain">Noyob.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q">Map ga yangi qiymat yozish?</p>
+    <div class="opts">
+      <button class="opt" type="button">map.add(qiymat)</button>
+      <button class="opt" type="button">map.push(qiymat)</button>
+      <button class="opt" type="button" data-ok>map[kalit] = qiymat</button>
+      <button class="opt" type="button">map &lt;&lt; qiymat</button>
+    </div>
+    <div class="explain"><code>map[kalit] = qiymat</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q">Kalit yo'q bo'lsa <code>map[kalit]</code>?</p>
+    <div class="opts">
+      <button class="opt" type="button">0</button>
+      <button class="opt" type="button">Xato doim</button>
+      <button class="opt" type="button">Bo'sh matn</button>
+      <button class="opt" type="button" data-ok>null</button>
+    </div>
+    <div class="explain"><code>null</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q">Map ni aylanish?</p>
+    <div class="opts">
+      <button class="opt" type="button">for (map)</button>
+      <button class="opt" type="button">while(map)</button>
+      <button class="opt" type="button">map.loop()</button>
+      <button class="opt" type="button" data-ok>for ((k, v) in map)</button>
+    </div>
+    <div class="explain">Destructuring.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q">Takrorlarni olib tashlash?</p>
+    <div class="opts">
+      <button class="opt" type="button">toMap()</button>
+      <button class="opt" type="button">clear()</button>
+      <button class="opt" type="button" data-ok>toSet()</button>
+      <button class="opt" type="button">size</button>
+    </div>
+    <div class="explain"><code>toSet()</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 16-dars konspekti va slaydlari</p>
+</section>
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>
