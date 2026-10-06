@@ -1,0 +1,281 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Kutubxonalarni ulash va boshqarish</h1>
+  <p class="muted">repositories, BOM, kapt va ksp, dinamik versiyalar, dependency tree</p>
+  <span class="badge">10-sinf</span><span class="badge">Advanced Android</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Takrorlash: Gradle tasks va xatolar. Savol: «Kutubxona topilmasa, Gradle uni qayerdan qidiradi?»</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="database" data-anim="pulse"></i></div><h3>Repositories</h3><p>Kutubxona qayerdan keladi</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="package-plus" data-anim="float"></i></div><h3>Kutubxona ulash</h3><p>BOM, kapt va ksp</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="git-compare" data-anim="blink"></i></div><h3>Versiya va ziddiyat</h3><p>Dependency tree</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q">Build xatosida birinchi nimaga qaraladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Birinchi qizil qator</button>
+    <button class="opt" type="button">Oxirgi qator</button>
+    <button class="opt" type="button">Rasm</button>
+    <button class="opt" type="button">Hech narsa</button>
+    </div>
+    <div class="explain">Birinchi xabar odatda asosiy sabab.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>Repositories</h1>
+  <p>Kutubxona qayerdan keladi</p>
+</section>
+
+<section>
+  <h2>Kutubxona yo'li</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">dependencies</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">{}</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Repository</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Yuklash</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Build</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Repository yo'q bo'lsa — «Could not find»</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Repositories</h2>
+  <pre><code class="language-kotlin" data-trim data-line-numbers="4|5|6">
+// settings.gradle.kts
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Jitpack ni faqat kerak bo'lganda qo'shing: ishonchsiz manbalar xavfsizlik xavfini oshiradi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Retrofit va OkHttp odatda qaysi repository da bo'ladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok><code>mavenCentral()</code></button>
+    <button class="opt" type="button"><code>jitpack</code> faqat</button>
+    <button class="opt" type="button">Hech qayerda</button>
+    <button class="opt" type="button">Faqat lokal fayl</button>
+    </div>
+    <div class="explain">Ko'pchilik ochiq kutubxonalar mavenCentral da.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>Kutubxona ulash</h1>
+  <p>BOM, kapt va ksp</p>
+</section>
+
+<section>
+  <h2>Qo'shish tartibi</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Hujjat</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">dependencies</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">{}</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Sync Now</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Ishlatish</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Har o'zgarishdan keyin Sync</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>BOM, Retrofit va Room (ksp)</h2>
+  <pre><code class="language-kotlin" data-trim data-line-numbers="2-3|5|7-8">
+dependencies {
+    implementation(platform("androidx.compose:compose-bom:2024.06.00"))
+    implementation("androidx.compose.material3:material3")
+
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+
+    implementation("androidx.room:room-runtime:2.6.1")
+    ksp("androidx.room:room-compiler:2.6.1")
+}
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>BOM dagi kutubxonalarga versiya yozmaysiz: versiyani BOM belgilaydi. <code>kapt</code> o'rniga <code>ksp</code> ishlating (plaginni ulash kerak).</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">BOM nimaga xizmat qiladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Bir oila kutubxonalar versiyasini birga boshqaradi</button>
+    <button class="opt" type="button">Rasm siqadi</button>
+    <button class="opt" type="button">Test yozadi</button>
+    <button class="opt" type="button">APK imzolaydi</button>
+    </div>
+    <div class="explain">Versiyalar o'zaro mos bo'ladi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>Versiya va ziddiyat</h1>
+  <p>Dependency tree</p>
+</section>
+
+<section>
+  <h2>Ziddiyatni hal qilish</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">Daraxtni</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">ko'ring</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Sababni toping</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">exclude</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">/ force</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Sync va test</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Avval tahlil, keyin tuzatish</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>exclude va force</h2>
+  <pre><code class="language-kotlin" data-trim data-line-numbers="1-3|5-9">
+implementation(libs.boshqa.kutubxona) {
+    exclude(group = "com.squareup.okhttp3", module = "okhttp")
+}
+
+configurations.all {
+    resolutionStrategy {
+        force("com.squareup.okhttp3:okhttp:4.12.0")
+    }
+}
+  </code></pre>
+  <div class="callout warn mt fragment"><i data-ic="triangle-alert"></i>Ataylab aniq versiya yozing: <code>2.9.0</code>. <code>2.9.+</code> yoki <code>latest.release</code> — xavfli.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Qaysi yozuv dinamik versiya (xavfli)?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok><code>retrofit:2.9.+</code></button>
+    <button class="opt" type="button"><code>retrofit:2.9.0</code></button>
+    <button class="opt" type="button"><code>retrofit:2.9.1</code></button>
+    <button class="opt" type="button"><code>retrofit:2.8.2</code></button>
+    </div>
+    <div class="explain"><code>+</code> har safar eng oxirgi versiyani oladi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Versiya yozish usuli</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>Dinamik (<code>1.2.+</code>)</h3>Har safar boshqa versiya: build takrorlanmaydi, ertaga buzilishi mumkin</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>Aniq (<code>1.2.3</code>)</h3>Build har safar bir xil, yangilashni o'zingiz boshqarasiz</div>
+  </div>
+  <div class="card accent fragment mt"><p>Aniq versiya barqaror natija beradi.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Repository</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Kutubxona yuklanadigan manba</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>BOM</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Bir oila kutubxona versiyalari to'plami</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>ksp</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Tez annotation processing</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>exclude</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Ichki kutubxonani olib tashlash</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Kutubxona ulash</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="book-open" data-anim="pulse"></i></div><h3>1. Hujjat</h3><p>Rasmiy sahifadan <code>guruh:nom:versiya</code> ni oling.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="pencil"></i></div><h3>2. Yozing</h3><p><code>dependencies {}</code> ga qo'shing.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="refresh-cw"></i></div><h3>3. Sync</h3><p>Sync Now va ishga tushiring.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>Repository turlari</h2>
+    <table>
+      <thead><tr><th>Manba</th><th>Nima uchun</th><th>Misol</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td><code>google()</code></td><td>Android va Jetpack</td><td>Room, Compose</td></tr>
+        <tr class="fragment"><td><code>mavenCentral()</code></td><td>ochiq kutubxonalar</td><td>Retrofit, Coil</td></tr>
+        <tr class="fragment"><td>Jitpack</td><td>GitHub kutubxonalari</td><td>shaxsiy kutubxona</td></tr>
+        <tr class="fragment"><td>Lokal <code>.aar</code></td><td>qo'lda qo'shilgan fayl</td><td>kamdan-kam</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: tekshirish</p>
+  </section>
+  <section>
+    <h2>Daraxtni tahlil qilish</h2>
+    <ol class="steps-n">
+      <li class="fragment"><code>./gradlew app:dependencies</code> ni ishga tushiring.</li>
+      <li class="fragment">Bitta kutubxonani toping va ichki kutubxonalarini sanang.</li>
+      <li class="fragment">Ziddiyat bo'lsa, <code>exclude</code> yoki <code>force</code> tanlang.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">kapt dan ksp ga</h2>
+  <pre data-id="c"><code class="language-kotlin" data-trim>
+kapt("androidx.room:room-compiler:2.6.1")
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">kapt dan ksp ga</h2>
+  <pre data-id="c"><code class="language-kotlin" data-trim data-line-numbers="1|1">
+ksp("androidx.room:room-compiler:2.6.1")
+  </code></pre>
+</section>
+
+<section>
+  <h2>Kutubxonalar raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> qism: guruh, nom, versiya</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> ta asosiy repository: google, mavenCentral, jitpack</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="1" data-suf="">0</span></div><div class="l"> BOM bir oila versiyalarini boshqaradi</div></div>
+  </div>
+  <p class="small fragment">Barcha qismlar qo'llanma materialidan.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Repository qo'shing: <code>settings.gradle.kts</code> ga <code>google()</code> va <code>mavenCentral()</code> ni yozing.</div>
+  <div class="task"><span class="level easy">Oson</span>Kutubxona ulang: Module-level faylga Coil <code>2.3.0</code> (<code>io.coil-kt:coil-compose</code>) ni ulang.</div>
+  <div class="task"><span class="level mid">O'rta</span>kapt dan ksp ga: <code>kapt("androidx.room:room-compiler:2.6.1")</code> ni KSP ga almashtiring va farqini yozing.</div>
+  <div class="task"><span class="level mid">O'rta</span>Dinamik versiya: <code>retrofit:2.+</code> nima uchun xavfli? Qanday tuzatasiz?</div>
+  <div class="task"><span class="level hard">Qiyin</span>BOM bilan: Compose BOM ni ulang va <code>material3</code> ni versiyasiz yozing.</div>
+  <div class="task"><span class="level hard">Qiyin</span>Ziddiyatni hal qiling: <code>./gradlew app:dependencies</code> da OkHttp ning ikki xil versiyasi ko'rinmoqda. <code>force</code> bilan <code>4.12.0</code> ni tanlang.</div>
+  <div class="task"><span class="level hard">Bonus</span>exclude: Ichki <code>okhttp</code> ni <code>exclude</code> qiling.</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Repository</h3><p><code>google()</code>, <code>mavenCentral()</code>, Jitpack.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Ulash</h3><p><code>dependencies {}</code>, BOM, <code>ksp</code>, Sync.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Versiya</h3><p>SemVer, aniq versiya; <code>exclude</code>, <code>force</code>.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: 2 ta kutubxonani ulash va daraxtni tahlil qilish.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="layers" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: Dependency turlari</h1>
+  <p class="muted">implementation, api, compileOnly</p>
+  <span class="badge">6-hafta · 18-dars</span>
+</section>
+

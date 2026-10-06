@@ -37,9 +37,9 @@ Manba: `4.3. Srtandart`, `4.3. Uslubiy ko'rsatma`, `4.3. O'quv qo'llanma`. Agent
 | 13 | 5 | build.gradle faylining asosiy tuzilmasi va modullararo bog‘lanishi | 📝 |
 | 14 | 5 | Build variantlar (debug, release) va ularning farqi | 📝 |
 | 15 | 5 | Gradle yordamida kutubxonalarni ulash va versiyalarni boshqarish ko‘nikmasiga ega bo‘ladi; | 📝 |
-| 16 | 6 | Gradle so‘rovlarini (tasks) bajarish va xatoliklarni aniqlashni biladi; | ⬜ |
-| 17 | 6 | build.gradle faylida kutubxonalarni ulash va boshqarishni biladi; | ⬜ |
-| 18 | 6 | implementation, api, compileOnly kabi dependency turlarining farqini tushunadi; | ⬜ |
+| 16 | 6 | Gradle so‘rovlarini (tasks) bajarish va xatoliklarni aniqlashni biladi; | 📝 |
+| 17 | 6 | build.gradle faylida kutubxonalarni ulash va boshqarishni biladi; | 📝 |
+| 18 | 6 | implementation, api, compileOnly kabi dependency turlarining farqini tushunadi; | 📝 |
 | 19 | 7 | Kutubxona versiyalarini yangilash va moslik muammolarini hal qilish ko‘nikmasiga ega bo‘ladi; | ⬜ |
 | 20 | 7 | Versiyalarni avtomatik boshqarish va yangilanishni tekshirish usullarini qo‘llay oladi; | ⬜ |
 | 21 | 7 | R8 ning Android’da standart bo‘lishi, ProGuard’dan farqi va ularning ishlash tamoyillarini biladi; | ⬜ |
