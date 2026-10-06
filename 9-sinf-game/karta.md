@@ -41,9 +41,9 @@ Manba: `2.5. Standart (Game Design)`, `2.5. Uslubiy ko'rsatma`, `2.5. O'quv qo'l
 | 13 | 5 | O‘yin uchun ikonka va spraytlar yaratish (3-qism): Sprayt sheet (atlas) tayyorlash va optimallashtirish | 📝 |
 | 14 | 5 | UI dizayn: tugmalar, menyular, HUD (1-qism): Tugmalar turlari, holatlari (Normal, Hover, Pressed) | 📝 |
 | 15 | 5 | UI dizayn: tugmalar, menyular, HUD (2-qism): Bosh menyu, sozlamalar va pauza menyusi dizayni | 📝 |
-| 16 | 6 | UI dizayn: tugmalar, menyular, HUD (3-qism): Jonli o'yin HUD'i (Health bar, tangalar, mini-xarita) | ⬜ |
-| 17 | 6 | O‘yin interfeysini prototiplash (1-qism): Wireframe, Mockup va Prototype bosqichlari | ⬜ |
-| 18 | 6 | O‘yin interfeysini prototiplash (2-qism): O'yin stsenariysiga mos interfeys sxemasini chizish | ⬜ |
+| 16 | 6 | UI dizayn: tugmalar, menyular, HUD (3-qism): Jonli o'yin HUD'i (Health bar, tangalar, mini-xarita) | 📝 |
+| 17 | 6 | O‘yin interfeysini prototiplash (1-qism): Wireframe, Mockup va Prototype bosqichlari | 📝 |
+| 18 | 6 | O‘yin interfeysini prototiplash (2-qism): O'yin stsenariysiga mos interfeys sxemasini chizish | 📝 |
 | 19 | 7 | O‘yin interfeysini prototiplash (3-qism): Photoshop'da to'liq interaktiv o'yin UI prototipini yig'ish | ⬜ |
 
 ## III bob. 3D modellashtirish asoslari (Blender) (17 dars)
