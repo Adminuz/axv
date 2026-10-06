@@ -1,0 +1,276 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>ESP8266 va ESP32 (umumiy)</h1>
+  <p class="muted">ESP8266 va ESP32 o'rni, farqlar, 3,3 V ehtiyoti, pinlar, JSON va protokollar, MicroPython, energiya tejash</p>
+  <span class="badge">9-sinf</span><span class="badge">IoT</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Takrorlash: 14-dars (ESP imkoniyatlari, Wi-Fi rejimlari, WiFi.h kodi) va 16-dars (ADC, PWM). Savol: «Nega Arduino Uno'ga 5 V beramiz, ESP'ga esa 3,3 V?» Dars nazariy-amaliy; plata bo'lmasa, Wokwi/Tinkercad simulyatoridan foydalanish mumkin.</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="wifi" data-anim="pulse"></i></div><h3>ESP o'rni va farqlar</h3><p>ESP8266 va ESP32</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="cpu" data-anim="float"></i></div><h3>Pinlar va 3,3 V</h3><p>Ehtiyot bo'ling</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="cloud" data-anim="blink"></i></div><h3>Bulutga yuborish</h3><p>JSON, HTTP, MQTT va dasturlash</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q">Station rejimida ESP nima qiladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Mavjud routerga ulanadi</button>
+    <button class="opt" type="button">O'zi Wi-Fi tarmoq yaratadi</button>
+    <button class="opt" type="button">Uxlaydi</button>
+    <button class="opt" type="button">Bluetooth ni o'chiradi</button>
+    </div>
+    <div class="explain">AP rejimida o'zi tarmoq yaratadi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>ESP o'rni va farqlar</h1>
+  <p>ESP8266 va ESP32</p>
+</section>
+
+<section>
+  <h2>Qaysi birini tanlaymiz?</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Loyiha talabi</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Bluetooth</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">kerakmi?</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Pin va tezlik</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Narx va</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">energiya</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Talabdan boshlang, chipdan emas</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Qiyoslash (qo'llanma)</h2>
+  <pre><code class="language-text" data-trim data-line-numbers="1|2-3|4-6|7">
+Xususiyat       ESP8266      ESP32
+Tezlik          80 MHz       160-240 MHz
+Yadro           1            2
+SRAM            cheklangan   katta
+Bluetooth       yo'q         bor (Classic + BLE)
+GPIO            ~17          ~34+
+Kuchlanish      3.3 V        3.3 V
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Jadvaldagi raqamlar taxminiy: «NodeMCU» va «DevKit» platalarida chiqarilgan pinlar soni boshqacha bo'lishi mumkin.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Qaysi chip Bluetooth'ga ega?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>ESP32</button>
+    <button class="opt" type="button">ESP8266</button>
+    <button class="opt" type="button">Ikkalasi ham</button>
+    <button class="opt" type="button">Hech biri</button>
+    </div>
+    <div class="explain">Bluetooth (Classic + BLE) — ESP32 da.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>Pinlar va 3,3 V</h1>
+  <p>Ehtiyot bo'ling</p>
+</section>
+
+<section>
+  <h2>Pin turlari</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">GPIO: raqamli</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">ADC: analog</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">kirish</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">PWM: silliq</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">chiqish</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">I2C /</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">SPI: aloqa</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">3,3 V mantiq darajasi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>DHT11 ulanishi (3,3 V)</h2>
+  <pre><code class="language-text" data-trim data-line-numbers="1|2|3|4">
+DHT11            ESP (NodeMCU / DevKit)
+VCC   -------&gt;   3.3V        (5V EMAS!)
+GND   -------&gt;   GND
+DATA  -------&gt;   raqamli pin (masalan, D4)
+  </code></pre>
+  <div class="callout warn mt fragment"><i data-ic="triangle-alert"></i>Plata va sensor modeliga qarab pin nomlari (D4, GPIO4) farq qiladi. Ulashdan oldin plata sxemasiga qarang.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">ESP8266/ESP32 qaysi kuchlanishda ishlaydi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>3,3 V</button>
+    <button class="opt" type="button">5 V</button>
+    <button class="opt" type="button">12 V</button>
+    <button class="opt" type="button">220 V</button>
+    </div>
+    <div class="explain">5 V ulansa, chip ishdan chiqishi mumkin.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>Bulutga yuborish</h1>
+  <p>JSON, HTTP, MQTT va dasturlash</p>
+</section>
+
+<section>
+  <h2>Ma'lumot yo'li</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Sensor o'qiydi</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">JSON tuziladi</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">HTTP / MQTT</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Bulut:</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">grafik, alert</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">O'lchash → yuborish → ko'rish</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>MicroPython: LED miltillashi</h2>
+  <pre><code class="language-python" data-trim data-line-numbers="1-2|4|6-10">
+from machine import Pin
+import time
+
+led = Pin(2, Pin.OUT)   # ichki LED pini modelga bog'liq
+
+while True:
+    led.value(1)
+    time.sleep(0.5)
+    led.value(0)
+    time.sleep(0.5)
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>MicroPython'da <code>Pin</code>, <code>time</code> kabi modullar ESP ichida ishlaydi. Pin raqami (masalan, 2) plata modeliga bog'liq — hujjatga qarang.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Sensor ma'lumotini bulutga uzatish uchun qaysi format qulay?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>JSON</button>
+    <button class="opt" type="button">BMP</button>
+    <button class="opt" type="button">MP3</button>
+    <button class="opt" type="button">EXE</button>
+    </div>
+    <div class="explain">JSON — matnli, tahlil qilish oson.</div>
+  </div>
+</section>
+
+<section>
+  <h2>ESP8266 va ESP32</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>ESP8266</h3>Oddiy IoT, arzon, Wi-Fi; 1 yadro, Bluetooth yo'q</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>ESP32</h3>Murakkab IoT, 2 yadro, Wi-Fi + Bluetooth, ko'p pin</div>
+  </div>
+  <div class="card accent fragment mt"><p>Loyiha talabiga qarab tanlang.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>GPIO</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Umumiy maqsadli kirish-chiqish pini</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>JSON</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Ma'lumot almashish matn formati</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>MicroPython</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Mikrokontrollerlar uchun Python</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Deep Sleep</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Chuqur uyqu — energiya tejash rejimi</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Oddiy IoT qurilma</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="cpu" data-anim="pulse"></i></div><h3>1. Ulash</h3><p>Sensor — ESP, 3,3 V.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="wifi"></i></div><h3>2. Dastur</h3><p>O'qish va yuborish.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="cloud"></i></div><h3>3. Bulut</h3><p>Grafik va alert.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>IoT loyihalari</h2>
+    <table>
+      <thead><tr><th>Loyiha</th><th>Elementlar</th><th>Aloqa</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td>Aqlli chiroq</td><td>ESP, harakat sensori, rele, LED</td><td>Wi-Fi</td></tr>
+        <tr class="fragment"><td>Ob-havo stansiyasi</td><td>ESP, DHT/BMP, bulut</td><td>HTTP / MQTT</td></tr>
+        <tr class="fragment"><td>Masofadan boshqaruv</td><td>ESP, mobil ilova</td><td>Wi-Fi, MQTT</td></tr>
+        <tr class="fragment"><td>Gaz monitoringi</td><td>ESP, MQ sensor</td><td>MQTT / HTTP</td></tr>
+        <tr class="fragment"><td>Wi-Fi termometr</td><td>ESP8266, DHT11, Blynk</td><td>Wi-Fi</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Qo'llanma namunalari</p>
+  </section>
+  <section>
+    <h2>Termometr loyihasi</h2>
+    <ol class="steps-n">
+      <li class="fragment">ESP ga DHT11 ni ulang: VCC — 3,3 V, GND — GND, DATA — raqamli pin.</li>
+      <li class="fragment">Dasturda har 5 soniyada haroratni o'qing va Wi-Fi'ga ulanishni tekshiring.</li>
+      <li class="fragment">Qiymatni JSON ko'rinishida tuzing va bulutga yuborish yo'lini (HTTP yoki MQTT) tanlang.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Sensor ulanishi</h2>
+  <pre data-id="c"><code class="language-text" data-trim>
+DHT11 VCC  -&gt;  5V
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Sensor ulanishi</h2>
+  <pre data-id="c"><code class="language-text" data-trim data-line-numbers="1|1">
+DHT11 VCC  -&gt;  3.3V
+  </code></pre>
+</section>
+
+<section>
+  <h2>Raqamlar</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> V — ESP ning ish kuchlanishi (3,3)</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="2" data-suf="">0</span></div><div class="l"> ta yadro — ESP32</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="17" data-suf="">0</span></div><div class="l"> taxminan ESP8266 GPIO soni</div></div>
+  </div>
+  <p class="small fragment">Raqamlar taxminiy: model hujjatiga qarang.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Solishtirish: ESP8266 va ESP32 ni 4 ta xususiyat bo'yicha solishtiring.</div>
+  <div class="task"><span class="level easy">Oson</span>Kuchlanish: ESP ga sensorni qaysi kuchlanishdan ulaysiz? 5 V ulansa nima bo'ladi?</div>
+  <div class="task"><span class="level mid">O'rta</span>Pin turlari: GPIO, ADC, PWM va I2C ning vazifasini bir gapdan yozing.</div>
+  <div class="task"><span class="level mid">O'rta</span>JSON yozish: Harorat 27,5 va namlik 55 qiymatlarini JSON ko'rinishida yozing.</div>
+  <div class="task"><span class="level hard">Qiyin</span>Loyiha tanlash: Batareyada yillab ishlaydigan oddiy sensor va Bluetooth kerak bo'lgan qurilma uchun qaysi chipni tanlaysiz? Nega?</div>
+  <div class="task"><span class="level hard">Bonus</span>Deep Sleep g'oyasi: Ob-havo stansiyasi har 10 daqiqada o'lchaydi. Energiyani qanday tejaysiz?</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Farq</h3><p>ESP32: 2 yadro, Bluetooth, ko'p pin.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Qoida</h3><p>ESP — 3,3 V; 5 V ulamang.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Yuborish</h3><p>JSON + HTTP/MQTT.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: ESP8266/ESP32: farqlar, pinlar, JSON va 3,3 V.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="traffic-cone" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: Svetofor</h1>
+  <p class="muted">Arduino Uno va Tinkercad</p>
+  <span class="badge">6-hafta · 18-dars</span>
+</section>
+

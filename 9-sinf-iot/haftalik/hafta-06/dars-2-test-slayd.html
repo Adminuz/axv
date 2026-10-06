@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Test: 17-dars. ESP8266 va ESP32 (umumiy)</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>Test: 17-dars. ESP8266 va ESP32 (umumiy)</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">9-sinf</span><span class="badge">IoT</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">Qaysi chipda Bluetooth bor?</p>
+    <div class="opts">
+      <button class="opt" type="button">ESP8266</button>
+      <button class="opt" type="button" data-ok>ESP32</button>
+      <button class="opt" type="button">Ikkalasida yo'q</button>
+      <button class="opt" type="button">Arduino Uno</button>
+    </div>
+    <div class="explain">ESP32.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q">ESP ning ish kuchlanishi?</p>
+    <div class="opts">
+      <button class="opt" type="button">5 V</button>
+      <button class="opt" type="button">9 V</button>
+      <button class="opt" type="button">12 V</button>
+      <button class="opt" type="button" data-ok>3,3 V</button>
+    </div>
+    <div class="explain">3,3 V.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q">ESP32 nechta yadroli?</p>
+    <div class="opts">
+      <button class="opt" type="button">1</button>
+      <button class="opt" type="button">4</button>
+      <button class="opt" type="button" data-ok>2</button>
+      <button class="opt" type="button">8</button>
+    </div>
+    <div class="explain">Dual-core.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q">GPIO nima?</p>
+    <div class="opts">
+      <button class="opt" type="button">Wi-Fi turi</button>
+      <button class="opt" type="button">Xotira turi</button>
+      <button class="opt" type="button">Dastur tili</button>
+      <button class="opt" type="button" data-ok>Umumiy kirish-chiqish pini</button>
+    </div>
+    <div class="explain">Pin.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q">PWM nima uchun?</p>
+    <div class="opts">
+      <button class="opt" type="button">Wi-Fi'ga ulanish</button>
+      <button class="opt" type="button" data-ok>Yorqinlik/tezlikni silliq boshqarish</button>
+      <button class="opt" type="button">Dasturni yuklash</button>
+      <button class="opt" type="button">Sensorni ulash</button>
+    </div>
+    <div class="explain">Silliq boshqarish.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q">Sensor ma'lumoti formati?</p>
+    <div class="opts">
+      <button class="opt" type="button">EXE</button>
+      <button class="opt" type="button" data-ok>JSON</button>
+      <button class="opt" type="button">MP3</button>
+      <button class="opt" type="button">PNG</button>
+    </div>
+    <div class="explain">JSON.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q">IoT uchun yengil protokol?</p>
+    <div class="opts">
+      <button class="opt" type="button">SMTP</button>
+      <button class="opt" type="button">FTP</button>
+      <button class="opt" type="button">HDMI</button>
+      <button class="opt" type="button" data-ok>MQTT</button>
+    </div>
+    <div class="explain">MQTT.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q">MicroPython qaysi tilga asoslangan?</p>
+    <div class="opts">
+      <button class="opt" type="button">C</button>
+      <button class="opt" type="button" data-ok>Python</button>
+      <button class="opt" type="button">Java</button>
+      <button class="opt" type="button">Pascal</button>
+    </div>
+    <div class="explain">Python.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q">Deep Sleep nima uchun?</p>
+    <div class="opts">
+      <button class="opt" type="button">Tezlikni oshirish</button>
+      <button class="opt" type="button">Bluetooth ulash</button>
+      <button class="opt" type="button" data-ok>Energiya tejash</button>
+      <button class="opt" type="button">Pin qo'shish</button>
+    </div>
+    <div class="explain">Batareya uchun.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q">DHT11 ni ESP ga qanday ulaymiz?</p>
+    <div class="opts">
+      <button class="opt" type="button">VCC — 12 V</button>
+      <button class="opt" type="button">VCC — 220 V</button>
+      <button class="opt" type="button" data-ok>VCC — 3,3 V</button>
+      <button class="opt" type="button">VCC — 5 V va 3,3 V birga</button>
+    </div>
+    <div class="explain">3,3 V.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 17-dars konspekti va slaydlari</p>
+</section>
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>

@@ -46,9 +46,9 @@ Manba: `2_6_Standart_IoT...`, `2_6_Uslubiy_ko`rsatma...`, `2.6. O`quv qo`llanma`
 | 13 | 5 | IoT uchun asosiy qurilmalar: Arduino va Raspberry Pi taqqosi | 📝 |
 | 14 | 5 | IoT uchun asosiy qurilmalar: ESP8266 va ESP32 imkoniyatlari | 📝 |
 | 15 | 5 | Mikrokontroller tushunchasi va IoT qurilmalaridagi o‘rni (1-qism) | 📝 |
-| 16 | 6 | Mikrokontroller tushunchasi va IoT qurilmalaridagi o‘rni (2-qism) | ⬜ |
-| 17 | 6 | ESP8266 va ESP32 mikrokontrollerlari haqida umumiy tushuncha | ⬜ |
-| 18 | 6 | Arduino Uno va Tinkercad asosida svetofor tizimini modellashtirish (1-qism) | ⬜ |
+| 16 | 6 | Mikrokontroller tushunchasi va IoT qurilmalaridagi o‘rni (2-qism) | 📝 |
+| 17 | 6 | ESP8266 va ESP32 mikrokontrollerlari haqida umumiy tushuncha | 📝 |
+| 18 | 6 | Arduino Uno va Tinkercad asosida svetofor tizimini modellashtirish (1-qism) | 📝 |
 
 ## IV bob. Svetofor, 7-segment displey va servo motorlar (9 dars)
 
