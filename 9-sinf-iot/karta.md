@@ -35,9 +35,9 @@ Manba: `2_6_Standart_IoT...`, `2_6_Uslubiy_ko`rsatma...`, `2.6. O`quv qo`llanma`
 | 7 | 3 | Elektron sxema asosida ikki LED lampaning ishlash prinsipi va ulanishi | 📝 |
 | 8 | 3 | Arduino UNO yordamida LED indikatorlari va push-button bilan ishlash (1-qism) | 📝 |
 | 9 | 3 | Arduino UNO yordamida LED indikatorlari va push-button bilan interaktiv interfeys (2-qism) | 📝 |
-| 10 | 4 | Arduino UNO va tugma orqali LED holatini boshqarish dasturi | ⬜ |
-| 11 | 4 | Breadboardda DIP switch (DPST) va LED yordamida oddiy elektron sikl yaratish (1-qism) | ⬜ |
-| 12 | 4 | Breadboardda DIP switch (DPST) va LED yordamida oddiy elektron sikl yaratish (2-qism) | ⬜ |
+| 10 | 4 | Arduino UNO va tugma orqali LED holatini boshqarish dasturi | 📝 |
+| 11 | 4 | Breadboardda DIP switch (DPST) va LED yordamida oddiy elektron sikl yaratish (1-qism) | 📝 |
+| 12 | 4 | Breadboardda DIP switch (DPST) va LED yordamida oddiy elektron sikl yaratish (2-qism) | 📝 |
 
 ## III bob. Mikrokontrollerlar va IoT qurilmalari (Arduino, ESP8266, ESP32) (6 dars)
 
