@@ -43,9 +43,9 @@ Manba: `4.5. Uslubiy ko'rsatma`, `4.5. O'quv qo'llanma`. Matnlari `_matn/` papka
 | 10 | 4 | Bash skripting asoslari: o'zgaruvchilar, argumentlar va kiritish/chiqarish (read, echo, printf) | 📝 |
 | 11 | 4 | Shart operatorlari va mantiqiy ifodalar (if/elif/else, test, [[]], arifmetik amallar) | 📝 |
 | 12 | 4 | Sikllar va takrorlanishlar (for, while, until) hamda matnli oqimlarni qayta ishlash | 📝 |
-| 13 | 5 | Matn filtralari va muntazam ifodalar: grep, sed, awk va xargs amaliyoti | ⬜ |
-| 14 | 5 | Linux jarayonlari va rejalashtirish: cron, crontab, at va tizim monitoringi (htop, iotop) | ⬜ |
-| 15 | 5 | Linux xavfsizligi va foydalanuvchilar: useradd, usermod, sudoers, SSH kalitlar bilan xavfsiz ulanish | ⬜ |
+| 13 | 5 | Matn filtralari va muntazam ifodalar: grep, sed, awk va xargs amaliyoti | 📝 |
+| 14 | 5 | Linux jarayonlari va rejalashtirish: cron, crontab, at va tizim monitoringi (htop, iotop) | 📝 |
+| 15 | 5 | Linux xavfsizligi va foydalanuvchilar: useradd, usermod, sudoers, SSH kalitlar bilan xavfsiz ulanish | 📝 |
 | 16 | 6 | Git ilg'or texnikalari: git stash, rebase, cherry-pick va reflog imkoniyatlari | ⬜ |
 | 17 | 6 | Git taglar va versiyalash: semantik versiyalash (SemVer), release yaratish | ⬜ |
 | 18 | 6 | GitHub Flow va GitKraken/CLI orqali jamoaviy kollaboratsiya | ⬜ |
