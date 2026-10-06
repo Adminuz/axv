@@ -38,9 +38,9 @@ Manba: `2.4. Standart (BI)`, `2.4. Uslubiy ko'rsatma`, `2.4. O'quv qo'llanma`. M
 | 10 | 4 | Relatsion ma’lumotlar bazalari va model tushunchasi (2-qism): Normalizatsiya asoslari va BI'dagi o'rni | 📝 |
 | 11 | 4 | Relatsion ma’lumotlar bazalari va model tushunchasi (3-qism): RDBMS muhitlari va ma'lumotlar yaxlitligi | 📝 |
 | 12 | 4 | SQL asoslari: SELECT, ustunlar va sodda ifodalar | 📝 |
-| 13 | 5 | SQL asoslari: WHERE shartli filtrlash, taqqoslash va mantiqiy operatorlar (AND, OR, NOT) | ⬜ |
-| 14 | 5 | SQL asoslari: ORDER BY saralash (ASC, DESC), LIMIT va OFFSET | ⬜ |
-| 15 | 5 | SQL asoslari: NULL qiymatlar bilan ishlash va ma'lumot turlari | ⬜ |
+| 13 | 5 | SQL asoslari: WHERE shartli filtrlash, taqqoslash va mantiqiy operatorlar (AND, OR, NOT) | 📝 |
+| 14 | 5 | SQL asoslari: ORDER BY saralash (ASC, DESC), LIMIT va OFFSET | 📝 |
+| 15 | 5 | SQL asoslari: NULL qiymatlar bilan ishlash va ma'lumot turlari | 📝 |
 | 16 | 6 | Aggregatsiya funksiyalari: COUNT, SUM, AVG, MIN, MAX | ⬜ |
 | 17 | 6 | GROUP BY operatori va guruhlash mexanizmi | ⬜ |
 | 18 | 6 | HAVING filtrlash operatori (WHERE vs HAVING) | ⬜ |
