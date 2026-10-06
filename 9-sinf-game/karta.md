@@ -35,9 +35,9 @@ Manba: `2.5. Standart (Game Design)`, `2.5. Uslubiy ko'rsatma`, `2.5. O'quv qo'l
 | 7 | 3 | Photoshop interfeysi va vositalari (3-qism): Qatlamlar bilan amaliy ishlash va assetlar kollaji | 📝 |
 | 8 | 3 | Ranglar nazariyasi va dizayn asoslari (1-qism): RGB va CMYK, rang g'ildiragi va rang psixologiyasi | 📝 |
 | 9 | 3 | Ranglar nazariyasi va dizayn asoslari (2-qism): Color Picker, Swatches va Gradient bilan ishlash | 📝 |
-| 10 | 4 | Ranglar nazariyasi va dizayn asoslari (3-qism): O'yin atmosferasiga mos rang palitrasi yaratish | ⬜ |
-| 11 | 4 | O‘yin uchun ikonka va spraytlar yaratish (1-qism): Sprayt va ikonka tushunchasi, formatlar (PNG, SVG) | ⬜ |
-| 12 | 4 | O‘yin uchun ikonka va spraytlar yaratish (2-qism): Personaj va obyektlar uchun spraytlar chizish | ⬜ |
+| 10 | 4 | Ranglar nazariyasi va dizayn asoslari (3-qism): O'yin atmosferasiga mos rang palitrasi yaratish | 📝 |
+| 11 | 4 | O‘yin uchun ikonka va spraytlar yaratish (1-qism): Sprayt va ikonka tushunchasi, formatlar (PNG, SVG) | 📝 |
+| 12 | 4 | O‘yin uchun ikonka va spraytlar yaratish (2-qism): Personaj va obyektlar uchun spraytlar chizish | 📝 |
 | 13 | 5 | O‘yin uchun ikonka va spraytlar yaratish (3-qism): Sprayt sheet (atlas) tayyorlash va optimallashtirish | ⬜ |
 | 14 | 5 | UI dizayn: tugmalar, menyular, HUD (1-qism): Tugmalar turlari, holatlari (Normal, Hover, Pressed) | ⬜ |
 | 15 | 5 | UI dizayn: tugmalar, menyular, HUD (2-qism): Bosh menyu, sozlamalar va pauza menyusi dizayni | ⬜ |
