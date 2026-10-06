@@ -1,0 +1,157 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Test: 18-dars. WireGuard va OpenVPN</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">10-sinf</span><span class="badge">Kiberxavfsizlik</span><span class="badge">6-hafta · 18-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">WireGuard da sir saqlanadigan kalit?</p>
+    <div class="opts">
+      <button class="opt" type="button">Ochiq (public)</button>
+      <button class="opt" type="button" data-ok>Shaxsiy (private)</button>
+      <button class="opt" type="button">Ikkalasi</button>
+      <button class="opt" type="button">Hech qaysi</button>
+    </div>
+    <div class="explain">Shaxsiy kalit sir.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q">Kalit yaratuvchi buyruq?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>wg genkey</button>
+      <button class="opt" type="button">wg new</button>
+      <button class="opt" type="button">wg make</button>
+      <button class="opt" type="button">wg key</button>
+    </div>
+    <div class="explain"><code>wg genkey</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q">Ikkinchi tomonni tasvirlovchi bo'lim?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>[Peer]</button>
+      <button class="opt" type="button">[Interface]</button>
+      <button class="opt" type="button">[Main]</button>
+      <button class="opt" type="button">[Net]</button>
+    </div>
+    <div class="explain">[Peer].</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q">WireGuard odatiy porti?</p>
+    <div class="opts">
+      <button class="opt" type="button">1194/TCP</button>
+      <button class="opt" type="button">22/TCP</button>
+      <button class="opt" type="button" data-ok>51820/UDP</button>
+      <button class="opt" type="button">3389/TCP</button>
+    </div>
+    <div class="explain">51820/UDP.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q">Tunnelni yoquvchi buyruq?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>wg-quick up wg0</button>
+      <button class="opt" type="button">wg start</button>
+      <button class="opt" type="button">vpn go</button>
+      <button class="opt" type="button">wg net</button>
+    </div>
+    <div class="explain"><code>wg-quick up wg0</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q">Tunnel holatini ko'rsatuvchi buyruq?</p>
+    <div class="opts">
+      <button class="opt" type="button">wg list</button>
+      <button class="opt" type="button" data-ok>wg show</button>
+      <button class="opt" type="button">wg info</button>
+      <button class="opt" type="button">wg ls</button>
+    </div>
+    <div class="explain"><code>wg show</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q">OpenVPN odatiy porti?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>1194</button>
+      <button class="opt" type="button">51820</button>
+      <button class="opt" type="button">80</button>
+      <button class="opt" type="button">25</button>
+    </div>
+    <div class="explain">1194.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q">OpenVPN mijoz sozlama fayli?</p>
+    <div class="opts">
+      <button class="opt" type="button">.wg</button>
+      <button class="opt" type="button" data-ok>.ovpn</button>
+      <button class="opt" type="button">.vpn</button>
+      <button class="opt" type="button">.key</button>
+    </div>
+    <div class="explain">.ovpn.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q">Butun trafikni tunnelga yo'naltiruvchi AllowedIPs?</p>
+    <div class="opts">
+      <button class="opt" type="button">10.8.0.0/24</button>
+      <button class="opt" type="button">127.0.0.1</button>
+      <button class="opt" type="button" data-ok>0.0.0.0/0</button>
+      <button class="opt" type="button">8.8.8.8</button>
+    </div>
+    <div class="explain">0.0.0.0/0.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q">Qaysi protokol eski va zaif?</p>
+    <div class="opts">
+      <button class="opt" type="button">WireGuard</button>
+      <button class="opt" type="button">OpenVPN</button>
+      <button class="opt" type="button">IKEv2</button>
+      <button class="opt" type="button" data-ok>PPTP</button>
+    </div>
+    <div class="explain">PPTP.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 18-dars konspekti va slaydlari</p>
+</section>

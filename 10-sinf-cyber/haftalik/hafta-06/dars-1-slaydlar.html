@@ -1,0 +1,270 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Firewall qoidalari</h1>
+  <p class="muted">netsh advfirewall, profillar, iptables zanjirlari INPUT/OUTPUT/FORWARD, qoida tartibi, default-deny</p>
+  <span class="badge">10-sinf</span><span class="badge">Kiberxavfsizlik</span><span class="badge">6-hafta · 16-dars</span>
+  <aside class="notes">Takrorlash: 15-dars. Savol: «ALLOW, DENY va default-deny nima? Nega ACL tartibi muhim?»</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="shield" data-anim="pulse"></i></div><h3>Windows Defender Firewall</h3><p>Profillar va netsh</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="terminal" data-anim="float"></i></div><h3>iptables</h3><p>Linux firewall</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="lock" data-anim="blink"></i></div><h3>Default-deny va tartib</h3><p>Xavfsiz sozlash</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q">Hamma narsani taqiqlab, faqat kerakli xizmatlarga ruxsat berish nima deyiladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Default-deny</button>
+    <button class="opt" type="button">Default-allow</button>
+    <button class="opt" type="button">NAT</button>
+    <button class="opt" type="button">Proksi</button>
+    </div>
+    <div class="explain">Default-deny: eng xavfsiz yondashuv.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>Windows Defender Firewall</h1>
+  <p>Profillar va netsh</p>
+</section>
+
+<section>
+  <h2>Qoida elementlari</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Profil</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Yo'nalish</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Protokol/port</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Harakat</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Har qoida shu 4 savolga javob beradi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Holat va qoida</h2>
+  <pre><code class="language-bash" data-trim data-line-numbers="1|2|3|4">
+netsh advfirewall show allprofiles state
+netsh advfirewall firewall add rule name="Web80" dir=in action=allow protocol=TCP localport=80
+netsh advfirewall firewall show rule name="Web80"
+netsh advfirewall firewall delete rule name="Web80"
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i><code>netsh</code> buyruqlari administrator CMD da bajariladi. Faqat laboratoriya kompyuterida sinang; firewall ni uzoq o'chirib qo'ymang.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>dir=in</code> nimani bildiradi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Kiruvchi trafik qoidasi</button>
+    <button class="opt" type="button">Chiquvchi trafik</button>
+    <button class="opt" type="button">Papka nomi</button>
+    <button class="opt" type="button">Dastur nomi</button>
+    </div>
+    <div class="explain"><code>in</code> — kiruvchi, <code>out</code> — chiquvchi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>iptables</h1>
+  <p>Linux firewall</p>
+</section>
+
+<section>
+  <h2>Zanjirlar</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Paket keldi</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">INPUT</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">Qoidalar</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">ro'yxati</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">ACCEPT</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">yoki DROP</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Qoidalar yuqoridan pastga tekshiriladi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Asosiy qoidalar</h2>
+  <pre><code class="language-bash" data-trim data-line-numbers="1|2|3|4|5">
+sudo iptables -L -n -v --line-numbers
+sudo iptables -A INPUT -i lo -j ACCEPT
+sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>2–3-qatorlar: lokal (loopback) va allaqachon o'rnatilgan ulanishlarga ruxsat. Busiz ichki aloqa va javoblar to'xtab qoladi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Qaysi zanjir shu kompyuterga kelayotgan paketlarni tekshiradi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>INPUT</button>
+    <button class="opt" type="button">OUTPUT</button>
+    <button class="opt" type="button">FORWARD</button>
+    <button class="opt" type="button">LOCAL</button>
+    </div>
+    <div class="explain">INPUT — kiruvchi trafik.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>Default-deny va tartib</h1>
+  <p>Xavfsiz sozlash</p>
+</section>
+
+<section>
+  <h2>Xavfsiz tartib</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">Loopback +</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">ESTABLISHED</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">SSH (22)</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">ruxsat</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">Kerakli</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">portlar</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Policy: DROP</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Policy DROP eng oxirida</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Default-deny</h2>
+  <pre><code class="language-bash" data-trim data-line-numbers="1|2|3|4">
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+sudo iptables -P INPUT DROP
+sudo iptables -D INPUT 4
+sudo iptables-save &gt; rules.v4
+  </code></pre>
+  <div class="callout warn mt fragment"><i data-ic="triangle-alert"></i>Avval ruxsat, keyin <code>-P INPUT DROP</code>. Tajribani virtual mashinada qiling; xato bo'lsa <code>sudo iptables -F</code> va <code>-P INPUT ACCEPT</code> bilan qaytarasiz.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>-P INPUT DROP</code> dan oldin nima qilish shart (SSH orqali ishlasangiz)?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>22-portga ACCEPT yozish</button>
+    <button class="opt" type="button">Kompyuterni o'chirish</button>
+    <button class="opt" type="button">Hech narsa</button>
+    <button class="opt" type="button">Firewall ni o'chirish</button>
+    </div>
+    <div class="explain">Aks holda ulanishingiz uziladi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Windows va iptables</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>Windows Firewall</h3>Grafik oyna yoki <code>netsh</code>, profillar bor</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>iptables</h3>Buyruq qatori, zanjirlar va tartib muhim</div>
+  </div>
+  <div class="card accent fragment mt"><p>Ikkalasi ham ALLOW/DENY mantiqida ishlaydi.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Profil</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Domain, Private yoki Public tarmoq rejimi</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Zanjir</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>INPUT, OUTPUT yoki FORWARD qoidalar ro'yxati</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>DROP</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Paketni jimgina tashlash</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Policy</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Zanjirning standart qoidasi</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Qoida yaratish</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="list" data-anim="pulse"></i></div><h3>1. Holatni ko'ring</h3><p>Firewall yoqilganini tekshiring.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="plus"></i></div><h3>2. Qoida qo'shing</h3><p>Port, yo'nalish, harakat.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="circle-check"></i></div><h3>3. Sinang</h3><p>Brauzerda ochib ko'ring.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>Windows va Linux</h2>
+    <table>
+      <thead><tr><th>Vazifa</th><th>Windows (netsh)</th><th>Linux (iptables)</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td>Holat</td><td><code>show allprofiles state</code></td><td><code>-L -n -v</code></td></tr>
+        <tr class="fragment"><td>Qoida qo'shish</td><td><code>add rule ...</code></td><td><code>-A INPUT ...</code></td></tr>
+        <tr class="fragment"><td>Qoida o'chirish</td><td><code>delete rule</code></td><td><code>-D INPUT n</code></td></tr>
+        <tr class="fragment"><td>Ruxsat</td><td><code>action=allow</code></td><td><code>-j ACCEPT</code></td></tr>
+        <tr class="fragment"><td>Taqiq</td><td><code>action=block</code></td><td><code>-j DROP</code></td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: solishtirish</p>
+  </section>
+  <section>
+    <h2>80-port qoidasi (Windows)</h2>
+    <ol class="steps-n">
+      <li class="fragment">Administrator CMD ni oching.</li>
+      <li class="fragment"><code>add rule name="Web80" ...</code> ni yozing.</li>
+      <li class="fragment"><code>show rule</code> bilan tekshiring, so'ng <code>delete rule</code> bilan o'chiring.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Tartib xatosi</h2>
+  <pre data-id="c"><code class="language-bash" data-trim>
+iptables -A INPUT -j DROP
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Tartib xatosi</h2>
+  <pre data-id="c"><code class="language-bash" data-trim data-line-numbers="1|2">
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -j DROP
+  </code></pre>
+</section>
+
+<section>
+  <h2>Firewall raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> ta profil: Domain, Private, Public</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> ta zanjir: INPUT, OUTPUT, FORWARD</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="95" data-suf="%">0</span></div><div class="l"> hujum inson omiliga bog'liq (qo'llanma)</div></div>
+  </div>
+  <p class="small fragment">Firewall inson e'tiborsizligini almashtirmaydi.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Profillar: Windows Firewall ning 3 ta profilini sanang.</div>
+  <div class="task"><span class="level easy">Oson</span>Zanjirni toping: Shu kompyuterga kelayotgan trafik qaysi zanjirga tushadi?</div>
+  <div class="task"><span class="level mid">O'rta</span>80-port: <code>netsh</code> bilan 80-port uchun kiruvchi qoida yozing.</div>
+  <div class="task"><span class="level mid">O'rta</span>Tartibni tuzating: Umumiy DROP birinchi turibdi. Nima bo'ladi?</div>
+  <div class="task"><span class="level hard">Qiyin</span>Default-deny: SSH va HTTP ga ruxsat beruvchi 3 qatorli iptables qoidasini yozing.</div>
+  <div class="task"><span class="level hard">Bonus</span>Hisobot: Qoidani yaratib, sinab, hisobot yozing.</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Windows</h3><p>Profillar va <code>netsh advfirewall</code>.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Linux</h3><p><code>iptables</code>: zanjirlar, <code>-A</code>, <code>-P</code>, <code>-j</code>.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Xavfsizlik</h3><p>Tartib, default-deny, SSH ni yo'qotmaslik.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: Firewall qoidalarini yaratish.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="lock-keyhole" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: VPN arxitekturasi</h1>
+  <p class="muted">Tunnellash va IPsec</p>
+  <span class="badge">6-hafta · 17-dars</span>
+</section>
+

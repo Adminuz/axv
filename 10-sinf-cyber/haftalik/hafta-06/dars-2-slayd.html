@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>VPN va IPsec</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>VPN va IPsec</h1>
+  <p class="muted">VPN maqsadi, shifrlash, tunnellash va inkapsulyatsiya, VPN turlari, IPsec transport va tunnel rejimlari</p>
+  <span class="badge">10-sinf</span><span class="badge">Kiberxavfsizlik</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Takrorlash: 16-dars. Savol: «Nega ochiq internetda IP paketlarni istalgan oraliq tugun o'qiy oladi?»</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="eye" data-anim="pulse"></i></div><h3>Nega VPN kerak</h3><p>Shifrlash</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="package" data-anim="float"></i></div><h3>Tunnellash</h3><p>Inkapsulyatsiya</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="shield-check" data-anim="blink"></i></div><h3>VPN turlari va IPsec</h3><p>Rejimlar</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q"><code>-P INPUT DROP</code> dan oldin nimaga ruxsat berish shart (SSH orqali)?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>22-port</button>
+    <button class="opt" type="button">80-port</button>
+    <button class="opt" type="button">25-port</button>
+    <button class="opt" type="button">53-port</button>
+    </div>
+    <div class="explain">Aks holda ulanish uziladi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>Nega VPN kerak</h1>
+  <p>Shifrlash</p>
+</section>
+
+<section>
+  <h2>Shifrlash</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Plaintext</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Kalit +</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">algoritm</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Ciphertext</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Deshifrlash</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Kalitsiz ciphertext tushunarsiz</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Simmetrik g'oya (soddalashtirilgan)</h2>
+  <pre><code class="language-python" data-trim data-line-numbers="1-2|3|4|5">
+kalit = 3
+matn = "SALOM"
+shifr = "".join(chr((ord(c) - 65 + kalit) % 26 + 65) for c in matn)
+asl = "".join(chr((ord(c) - 65 - kalit) % 26 + 65) for c in shifr)
+print(shifr, asl)
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Bir kalit yopadi va ochadi — bu simmetrik shifrlash. Real himoyada Sezar shifri ishlatilmaydi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Simmetrik shifrlashda nechta kalit ishlatiladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Bitta umumiy kalit</button>
+    <button class="opt" type="button">Ikkita: ochiq va shaxsiy</button>
+    <button class="opt" type="button">Kalit yo'q</button>
+    <button class="opt" type="button">Har paketga alohida 10 ta</button>
+    </div>
+    <div class="explain">Bir xil kalit ham shifrlaydi, ham deshifrlaydi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>Tunnellash</h1>
+  <p>Inkapsulyatsiya</p>
+</section>
+
+<section>
+  <h2>Tunnel orqali</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Asl paket</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Inkapsulyatsiya</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">+ shifr</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Internet</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Ochish</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Internet faqat tashqi sarlavhani ko'radi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Tunnel paketi (sxema)</h2>
+  <pre><code class="language-text" data-trim data-line-numbers="1|2">
+[Tashqi IP sarlavha][Tunnel sarlavhasi][ Shifrlangan asl paket ]
+      Internet ko'radi          ichkarida: asl IP + ma'lumot
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Tunnel odatda shifrlanadi yoki autentifikatsiya bilan himoyalanadi, lekin tunnelning o'zi har doim ham shifrlamaydi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Inkapsulyatsiya nima?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Paketni boshqa paket ichiga o'rash</button>
+    <button class="opt" type="button">Paketni o'chirish</button>
+    <button class="opt" type="button">Parolni saqlash</button>
+    <button class="opt" type="button">IP ni o'zgartirish</button>
+    </div>
+    <div class="explain">Asl paket yangi sarlavha ichiga joylanadi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>VPN turlari va IPsec</h1>
+  <p>Rejimlar</p>
+</section>
+
+<section>
+  <h2>IPsec rejimlari</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Hostlar</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Transport</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">rejim</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Filiallar</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Tunnel rejim</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Tunnel rejimi butun paketni yashiradi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>IPsec rejimini tanlash</h2>
+  <pre><code class="language-python" data-trim data-line-numbers="1-3|4-5|8">
+def rejim(ulanish):
+    if ulanish == "host-host":
+        return "transport"
+    if ulanish == "ofis-ofis":
+        return "tunnel"
+    return "noma'lum"
+
+print(rejim("ofis-ofis"))
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>PPTP (MPPE/RC4) eskirgan va zaif hisoblanadi; zamonaviy amaliyotda IPsec/IKEv2, OpenVPN va WireGuard ishlatiladi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Butun paketni sarlavhasi bilan shifrlaydigan IPsec rejimi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Tunnel</button>
+    <button class="opt" type="button">Transport</button>
+    <button class="opt" type="button">Oddiy</button>
+    <button class="opt" type="button">Ochiq</button>
+    </div>
+    <div class="explain">Tunnel rejimida butun asl paket inkapsulyatsiya qilinadi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Transport va tunnel rejimi</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>Transport</h3>Hostlar orasida; faqat ma'lumot qismi shifrlanadi</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>Tunnel</h3>Butun paket sarlavhasi bilan shifrlanadi; filiallar uchun</div>
+  </div>
+  <div class="card accent fragment mt"><p>Ikkalasi ham IPsec ning rejimi.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>VPN</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Ochiq tarmoq ustida himoyalangan vaqtinchalik kanal</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Tunnellash</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Paketni boshqa protokol ichiga o'rab uzatish</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>IPsec</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Tarmoq sathi shifrlash va autentifikatsiya protokoli</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Site-to-Site</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Ikki filial tarmog'ini bog'lovchi VPN</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>VPN tanlash</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="users" data-anim="pulse"></i></div><h3>1. Kim ulanadi?</h3><p>Xodim yoki butun filial.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="shield"></i></div><h3>2. Qaysi protokol?</h3><p>IPsec, OpenVPN yoki WireGuard.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="lock"></i></div><h3>3. Qanday shifr?</h3><p>Simmetrik shifr + kalit almashinuvi.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>VPN protokollari (OSI sathi)</h2>
+    <table>
+      <thead><tr><th>Sath</th><th>Protokol</th><th>Shifr</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td>Seans</td><td>SOCKS</td><td>qo'shimcha vosita</td></tr>
+        <tr class="fragment"><td>Transport</td><td>SSH, SSL/TLS</td><td>AES, 3DES va h.</td></tr>
+        <tr class="fragment"><td>Tarmoq</td><td>IPsec (ESP)</td><td>AES, 3DES</td></tr>
+        <tr class="fragment"><td>Kanal</td><td>L2TP</td><td>IPsec ga tayanadi</td></tr>
+        <tr class="fragment"><td>Kanal</td><td>PPTP</td><td>MPPE (RC4), zaif</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: 2.2-jadval</p>
+  </section>
+  <section>
+    <h2>Tunnelni chizish</h2>
+    <ol class="steps-n">
+      <li class="fragment">Ikki ofis va ular orasidagi internetni chizing.</li>
+      <li class="fragment">Har ofisga VPN shlyuzini qo'ying.</li>
+      <li class="fragment">Asl paket qayerda o'raladi va qayerda ochiladi, belgilang.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Xato tushuncha</h2>
+  <pre data-id="c"><code class="language-text" data-trim>
+VPN = faqat IP ni yashirish
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Xato tushuncha</h2>
+  <pre data-id="c"><code class="language-text" data-trim data-line-numbers="1|1">
+VPN = tunnel + shifrlash + autentifikatsiya
+  </code></pre>
+</section>
+
+<section>
+  <h2>VPN raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="2" data-suf="">0</span></div><div class="l"> ta IPsec rejimi: transport va tunnel</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="4" data-suf="">0</span></div><div class="l"> ta asosiy VPN turi (Remote, Site-to-Site, Client, Clientless)</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="5" data-suf="">0</span></div><div class="l"> ta protokol 2.2-jadvalda</div></div>
+  </div>
+  <p class="small fragment">VPN tunnel, shifr va autentifikatsiyani birlashtiradi.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>VPN nima?: VPN ni 1 jumlada ta'riflang.</div>
+  <div class="task"><span class="level easy">Oson</span>Tur tanlash: Xodim uydan ofisga ulanadi. Qaysi VPN turi?</div>
+  <div class="task"><span class="level mid">O'rta</span>Simmetrik: Simmetrik va assimetrik shifrlashni solishtiring.</div>
+  <div class="task"><span class="level mid">O'rta</span>Rejim tanlash: Ikki filialni bog'laymiz. IPsec ning qaysi rejimi?</div>
+  <div class="task"><span class="level hard">Qiyin</span>Chizma: Ikki ofis orasidagi tunnel paketini chizing va qismlarini yozing.</div>
+  <div class="task"><span class="level hard">Bonus</span>Zaif protokol: Nega PPTP zaif hisoblanadi?</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Nega kerak</h3><p>IP ochiq; VPN himoya qiladi.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Tunnel</h3><p>Inkapsulyatsiya + shifrlash.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>IPsec</h3><p>Transport va tunnel rejimi.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: VPN va IPsec tushunchalari.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="shield-check" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: WireGuard va OpenVPN</h1>
+  <p class="muted">Xavfsiz tunnel o'rnatish</p>
+  <span class="badge">6-hafta · 18-dars</span>
+</section>
+
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>

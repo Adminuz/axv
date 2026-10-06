@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Test: 17-dars. VPN va IPsec</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>Test: 17-dars. VPN va IPsec</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">10-sinf</span><span class="badge">Kiberxavfsizlik</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">IP protokolida nima yo'q?</p>
+    <div class="opts">
+      <button class="opt" type="button">Manzil</button>
+      <button class="opt" type="button">Paket</button>
+      <button class="opt" type="button" data-ok>Konfidensiallik</button>
+      <button class="opt" type="button">Sarlavha</button>
+    </div>
+    <div class="explain">IP shifrlamaydi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q">Simmetrik shifrlashda nechta kalit?</p>
+    <div class="opts">
+      <button class="opt" type="button">Ikkita</button>
+      <button class="opt" type="button">Uchta</button>
+      <button class="opt" type="button">Kalit yo'q</button>
+      <button class="opt" type="button" data-ok>Bitta</button>
+    </div>
+    <div class="explain">Bitta umumiy kalit.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q">Inkapsulyatsiya nima?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>Paketni boshqa paket ichiga o'rash</button>
+      <button class="opt" type="button">Paketni o'chirish</button>
+      <button class="opt" type="button">Parolni o'zgartirish</button>
+      <button class="opt" type="button">IP ni topish</button>
+    </div>
+    <div class="explain">Tunnellash asosi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q">Xodimni ofisga ulaydigan VPN?</p>
+    <div class="opts">
+      <button class="opt" type="button">Site-to-Site</button>
+      <button class="opt" type="button">Local</button>
+      <button class="opt" type="button" data-ok>Remote Access</button>
+      <button class="opt" type="button">Hub</button>
+    </div>
+    <div class="explain">Remote Access.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q">Filiallarni bog'laydigan VPN?</p>
+    <div class="opts">
+      <button class="opt" type="button">Remote Access</button>
+      <button class="opt" type="button" data-ok>Site-to-Site</button>
+      <button class="opt" type="button">Clientless</button>
+      <button class="opt" type="button">Browser</button>
+    </div>
+    <div class="explain">Site-to-Site.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q">Brauzer orqali ishlaydigan VPN?</p>
+    <div class="opts">
+      <button class="opt" type="button">Client-Based</button>
+      <button class="opt" type="button">Site-to-Site</button>
+      <button class="opt" type="button">Hub</button>
+      <button class="opt" type="button" data-ok>Clientless</button>
+    </div>
+    <div class="explain">Clientless (SSL/TLS).</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q">IPsec qaysi OSI sathida?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>Tarmoq</button>
+      <button class="opt" type="button">Fizik</button>
+      <button class="opt" type="button">Ilova</button>
+      <button class="opt" type="button">Seans</button>
+    </div>
+    <div class="explain">Tarmoq sathida.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q">Butun paketni o'rovchi IPsec rejimi?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>Tunnel</button>
+      <button class="opt" type="button">Transport</button>
+      <button class="opt" type="button">Oddiy</button>
+      <button class="opt" type="button">Lokal</button>
+    </div>
+    <div class="explain">Tunnel rejimi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q">Zaif hisoblanadigan eski protokol?</p>
+    <div class="opts">
+      <button class="opt" type="button">WireGuard</button>
+      <button class="opt" type="button">IPsec</button>
+      <button class="opt" type="button" data-ok>PPTP</button>
+      <button class="opt" type="button">OpenVPN</button>
+    </div>
+    <div class="explain">PPTP (RC4).</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q">VPN nimani birlashtiradi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Faqat rang</button>
+      <button class="opt" type="button">Faqat tezlik</button>
+      <button class="opt" type="button" data-ok>Tunnel, shifrlash, autentifikatsiya</button>
+      <button class="opt" type="button">Faqat DNS</button>
+    </div>
+    <div class="explain">Tunnel, shifr, autentifikatsiya, yaxlitlik.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 17-dars konspekti va slaydlari</p>
+</section>
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>

@@ -41,9 +41,9 @@ Manba: `4.6. Standart`, `4.6. Uslubiy ko'rsatma (1-2 qism)`, `4.6. O'quv qo'llan
 | 13 | 5 | IP-manzillash va qism tarmoqlar (subnets) (1-qism): IPv4 va IPv6 arxitekturasi, sinflar | 📝 |
 | 14 | 5 | IP-manzillash va qism tarmoqlar (subnets) (2-qism): CIDR, subnet maska hisoblash va tarmoq segmentatsiyasi | 📝 |
 | 15 | 5 | Tarmoqlararo ekran va filtrlash (1-qism): Firewall turlari va ishlash prinsiplari | 📝 |
-| 16 | 6 | Tarmoqlararo ekran va filtrlash (2-qism): Windows Defender Firewall va iptables da qoidalar yaratish | ⬜ |
-| 17 | 6 | Tarmoqlarda VPN qurish va shifrlash (1-qism): VPN arxitekturasi, tunnellash va IPsec protokoli | ⬜ |
-| 18 | 6 | Tarmoqlarda VPN qurish va shifrlash (2-qism): WireGuard va OpenVPN yordamida xavfsiz tunnel o'rnatish | ⬜ |
+| 16 | 6 | Tarmoqlararo ekran va filtrlash (2-qism): Windows Defender Firewall va iptables da qoidalar yaratish | 📝 |
+| 17 | 6 | Tarmoqlarda VPN qurish va shifrlash (1-qism): VPN arxitekturasi, tunnellash va IPsec protokoli | 📝 |
+| 18 | 6 | Tarmoqlarda VPN qurish va shifrlash (2-qism): WireGuard va OpenVPN yordamida xavfsiz tunnel o'rnatish | 📝 |
 | 19 | 7 | Tarmoqlarda VPN qurish va shifrlash (3-qism): Shifrlangan trafikni tahlil qilish va oraliq nazorat | ⬜ |
 
 ## III bob. Operatsion tizimlar va fayl xavfsizligi
