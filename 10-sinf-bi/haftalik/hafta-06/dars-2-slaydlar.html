@@ -1,0 +1,278 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Data Warehouse (DWH)</h1>
+  <p class="muted">DWH ta'rifi, OLTP va OLAP, ETL, staging, qatlamlar, afzalliklar, texnologiyalar</p>
+  <span class="badge">10-sinf</span><span class="badge">BI &amp; ML</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Takrorlash: SCD va surrogate kalit. Savol: «Maktab ma'lumotlari ro'yxatdan o'tish tizimida, moliya jadvalida va Excel da turibdi. Rahbar bitta hisobot so'rasa, nima qilamiz?»</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="warehouse" data-anim="pulse"></i></div><h3>DWH nima</h3><p>Yagona haqiqat manbai</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="layers" data-anim="float"></i></div><h3>Arxitektura</h3><p>Qatlamlar</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="trophy" data-anim="blink"></i></div><h3>Afzalliklar va texnologiyalar</h3><p>Nega DWH</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q">Tarix kerak bo'lsa, qaysi SCD turi tanlanadi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Type 2</button>
+    <button class="opt" type="button">Type 1</button>
+    <button class="opt" type="button">Hech biri</button>
+    <button class="opt" type="button">Faqat Type 0</button>
+    </div>
+    <div class="explain">Type 2 yangi qator bilan tarixni saqlaydi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>DWH nima</h1>
+  <p>Yagona haqiqat manbai</p>
+</section>
+
+<section>
+  <h2>DWH xususiyatlari</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">Mavzuga</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">yo'naltirilgan</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Integratsiyalangan</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Tarixiy</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Barqaror</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Ombor operatsion bazadan ongli ravishda farq qiladi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>OLTP va OLAP</h2>
+  <pre><code class="language-text" data-trim data-line-numbers="1|2-3|4-5">
+OLTP (kundalik ish)          OLAP / DWH (tahlil)
+- bitta qatorni o'zgartirish  - ko'p qatorni o'qish, jamlash
+- tez, qisqa tranzaksiyalar   - murakkab so'rovlar
+- joriy holat                 - tarix
+- normallashgan jadvallar     - star schema (fakt + dimension)
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>DWH operatsion bazani almashtirmaydi: u undan nusxa oladi va tahlil uchun qayta tashkil qiladi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">DWH asosan nima uchun?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Tahlil va hisobotlar uchun</button>
+    <button class="opt" type="button">Kundalik tranzaksiyalar uchun</button>
+    <button class="opt" type="button">Rasm saqlash uchun</button>
+    <button class="opt" type="button">Dasturni yig'ish uchun</button>
+    </div>
+    <div class="explain">DWH tahlil va BI uchun.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>Arxitektura</h1>
+  <p>Qatlamlar</p>
+</section>
+
+<section>
+  <h2>Ma'lumot yo'li</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Manbalar</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Staging</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">DWH</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Mart va BI</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">ETL manbadan omborga yo'l</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Qatlamlar (maktab misoli)</h2>
+  <pre><code class="language-text" data-trim data-line-numbers="1|3|5|7|9">
+Manbalar:  qabul.csv, moliya.xlsx, kadrlar_baza
+   |  ETL (Extract -&gt; Transform -&gt; Load)
+Staging:   stg_qabul, stg_moliya      (xom nusxa)
+   |
+DWH:       dim_hudud, dim_maktab, fact_kpi
+   |
+Martlar:   mart_oquvchilar, mart_moliya
+   |
+BI:        hisobot, dashboard
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Staging jadvalini hisobotda ishlatmang: u xom va tozalanmagan. Hisobot faqat DWH yoki martdan o'qiydi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Staging qatlami nima?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Manbadan olingan xom vaqtinchalik nusxa</button>
+    <button class="opt" type="button">Yakuniy hisobot</button>
+    <button class="opt" type="button">Parollar ombori</button>
+    <button class="opt" type="button">Rasm arxivi</button>
+    </div>
+    <div class="explain">Staging — xom nusxa.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>Afzalliklar va texnologiyalar</h1>
+  <p>Nega DWH</p>
+</section>
+
+<section>
+  <h2>DWH foydasi</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Yagona manba</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Tarix</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Tez tahlil</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Sifat nazorati</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Bir savol, bir javob</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Kichik DWH (sqlite3)</h2>
+  <pre><code class="language-sql" data-trim data-line-numbers="2-3|4|5">
+-- Ikki manbadagi ma'lumotni DWH ga birlashtirish
+INSERT INTO dw_oquvchilar (hudud, yil, oquvchilar)
+SELECT hudud, yil, oquvchilar FROM stg_qabul
+UNION ALL
+SELECT hudud, yil, oquvchilar FROM stg_arxiv;
+  </code></pre>
+  <div class="callout warn mt fragment"><i data-ic="triangle-alert"></i>Birlashtirishdan oldin ustun nomlari va turlarini bir xil qiling: bu ETL ning Transform bosqichi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Qaysi biri bulutdagi DWH texnologiyasi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Snowflake</button>
+    <button class="opt" type="button">Photoshop</button>
+    <button class="opt" type="button">Notepad</button>
+    <button class="opt" type="button">Paint</button>
+    </div>
+    <div class="explain">Snowflake, BigQuery, Redshift, Synapse.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Operatsion baza va DWH</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>Operatsion baza (OLTP)</h3>Joriy holat, tez yozuv, normallashgan; tahlil so'rovi uni sekinlashtiradi</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>DWH</h3>Tarix, integratsiya, star schema; tahlil uchun optimallashgan</div>
+  </div>
+  <div class="card accent fragment mt"><p>Tahlil uchun alohida ombor qurish kerak.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>DWH</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Tahlil uchun integratsiyalangan ombor</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>ETL</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Extract, Transform, Load</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Staging</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Xom vaqtinchalik qatlam</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>OLAP</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Tahliliy so'rovlar uchun model</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Kichik DWH qurish</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="download" data-anim="pulse"></i></div><h3>1. Extract</h3><p>Manbalardan staging ga nusxa oling.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="shuffle"></i></div><h3>2. Transform</h3><p>Nom va turlarni bir xil qiling.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="upload"></i></div><h3>3. Load</h3><p>Tozalangan ma'lumotni DWH ga yozing.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>OLTP va OLAP</h2>
+    <table>
+      <thead><tr><th>Belgi</th><th>OLTP</th><th>OLAP / DWH</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td>Maqsad</td><td>kundalik ish</td><td>tahlil</td></tr>
+        <tr class="fragment"><td>So'rov</td><td>qisqa, bitta qator</td><td>murakkab, ko'p qator</td></tr>
+        <tr class="fragment"><td>Ma'lumot</td><td>joriy holat</td><td>tarix</td></tr>
+        <tr class="fragment"><td>Model</td><td>normallashgan</td><td>star schema</td></tr>
+        <tr class="fragment"><td>Misol</td><td>qabul tizimi</td><td>maktab DWH</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: tekshirish</p>
+  </section>
+  <section>
+    <h2>Ikki manbani birlashtirish</h2>
+    <ol class="steps-n">
+      <li class="fragment"><code>stg_qabul</code> va <code>stg_arxiv</code> jadvallarini yarating.</li>
+      <li class="fragment">Ustun nomlarini bir xil qiling.</li>
+      <li class="fragment"><code>UNION ALL</code> bilan <code>dw_oquvchilar</code> ga yuklang.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Manbalarni birlashtirish</h2>
+  <pre data-id="c"><code class="language-sql" data-trim>
+SELECT * FROM stg_qabul;
+SELECT * FROM stg_arxiv;
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Manbalarni birlashtirish</h2>
+  <pre data-id="c"><code class="language-sql" data-trim data-line-numbers="1-2|1-4">
+INSERT INTO dw_oquvchilar
+SELECT hudud, yil, oquvchilar FROM stg_qabul
+UNION ALL
+SELECT hudud, yil, oquvchilar FROM stg_arxiv;
+  </code></pre>
+</section>
+
+<section>
+  <h2>DWH raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="4" data-suf="">0</span></div><div class="l"> xususiyat: mavzu, integratsiya, tarix, barqarorlik</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="5" data-suf="">0</span></div><div class="l"> ta qatlam: manba, staging, DWH, mart, BI</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> ta ETL bosqichi: E, T, L</div></div>
+  </div>
+  <p class="small fragment">Qatlamlar soni soddalashtirilgan sxemadan.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>DWH ta'rifi: DWH ni 2 jumlada ta'riflang va 4 xususiyatini sanang.</div>
+  <div class="task"><span class="level easy">Oson</span>OLTP yoki OLAP: «Bitta o'quvchini ro'yxatdan o'tkazish» va «3 yillik hudud kesimidagi hisobot» qaysi turga kiradi?</div>
+  <div class="task"><span class="level mid">O'rta</span>Qatlamlar: Maktab ma'lumoti uchun DWH oqimini 5 qatlamda yozing.</div>
+  <div class="task"><span class="level mid">O'rta</span>Staging: Nima uchun manbadan to'g'ridan-to'g'ri DWH ga yuklamay, staging ishlatiladi?</div>
+  <div class="task"><span class="level hard">Qiyin</span>Ikki manba: <code>stg_qabul</code> va <code>stg_arxiv</code> ni <code>dw_oquvchilar</code> ga birlashtiring va 2024-yil jamini chiqaring.</div>
+  <div class="task"><span class="level hard">Bonus</span>Texnologiya tanlash: Kichik tuman ta'lim bo'limi uchun DWH texnologiyasini tanlang va sababini yozing.</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>DWH</h3><p>Integratsiyalangan, tarixiy ombor.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Arxitektura</h3><p>Manba, ETL, staging, DWH, mart, BI.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Texnologiya</h3><p>Snowflake, BigQuery, Redshift, Synapse, PostgreSQL.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: kichik DWH ni qurish va qatlamlar sxemasi.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="droplets" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: Data Lake</h1>
+  <p class="muted">Bronze, Silver, Gold zonalari</p>
+  <span class="badge">6-hafta · 18-dars</span>
+</section>
+

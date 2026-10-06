@@ -1,0 +1,274 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Data Lake va Bronze/Silver/Gold</h1>
+  <p class="muted">Data Lake, raw, Bronze, Silver, Gold, DWH va Lake farqi, Lakehouse</p>
+  <span class="badge">10-sinf</span><span class="badge">BI &amp; ML</span><span class="badge">6-hafta · 18-dars</span>
+  <aside class="notes">Takrorlash: DWH, ETL, staging. Savol: «Agar ma'lumot hali tahlilga tayyor bo'lmasa, uni qayerda saqlaymiz? Nimani tashlab yubormaymiz?»</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="droplets" data-anim="pulse"></i></div><h3>Data Lake</h3><p>Hamma narsani xom saqlash</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="layers" data-anim="float"></i></div><h3>Bronze, Silver, Gold</h3><p>Medallion qatlamlari</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="scale" data-anim="blink"></i></div><h3>DWH va Lake</h3><p>Lakehouse</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q">Hisobot qaysi qatlamdan olinadi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>DWH yoki martdan</button>
+    <button class="opt" type="button">Stagingdan</button>
+    <button class="opt" type="button">Xom fayldan</button>
+    <button class="opt" type="button">Brauzerdan</button>
+    </div>
+    <div class="explain">Tozalangan qatlamdan.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>Data Lake</h1>
+  <p>Hamma narsani xom saqlash</p>
+</section>
+
+<section>
+  <h2>Lake xususiyatlari</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Xom format</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Katta hajm</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Arzon</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Schema-on-read</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Tuzilma o'qishda belgilanadi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Loyiha papkalari</h2>
+  <pre><code class="language-text" data-trim data-line-numbers="3|4|5|6">
+maktab-pipeline/
+  data/
+    raw/      # asl fayllar, o'zgartirilmaydi
+    bronze/   # minimal ishlov
+    silver/   # tozalangan
+    gold/     # biznes uchun tayyor
+  src/
+  logs/
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Raw qatlamdagi fayllarni hech qachon tahrirlamang: xato bo'lsa, qayta ishlash uchun asl nusxa kerak.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Data Lake da ma'lumot qanday saqlanadi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Xom holatda, har xil formatda</button>
+    <button class="opt" type="button">Faqat jadval ko'rinishida</button>
+    <button class="opt" type="button">Faqat rasm sifatida</button>
+    <button class="opt" type="button">Saqlanmaydi</button>
+    </div>
+    <div class="explain">Xom, tuzilmasiz ham mumkin.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>Bronze, Silver, Gold</h1>
+  <p>Medallion qatlamlari</p>
+</section>
+
+<section>
+  <h2>Sifat oshadi</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Raw</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Bronze:</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">minimal</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Silver: toza</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Gold: biznes</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Har qatlam o'z vazifasiga ega</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Raw dan Gold gacha</h2>
+  <pre><code class="language-python" data-trim data-line-numbers="1|3-4|6">
+bronze = pd.read_csv("data/raw/maktab.csv", dtype=str)
+
+silver = bronze.drop_duplicates().dropna().copy()
+silver["oquvchilar"] = silver["oquvchilar"].astype(int)
+
+gold = silver.groupby("yil", as_index=False)["oquvchilar"].sum()
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Tozalash qoidasini (<code>dropna</code>, <code>drop_duplicates</code>) hujjatlang: Silver da nima tashlab yuborilganini keyin tushuntira olishingiz kerak.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Tozalangan va tekshirilgan qatlam?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Silver</button>
+    <button class="opt" type="button">Bronze</button>
+    <button class="opt" type="button">Raw</button>
+    <button class="opt" type="button">Hech biri</button>
+    </div>
+    <div class="explain">Silver: dublikat va bo'sh qiymatlar boshqarilgan.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>DWH va Lake</h1>
+  <p>Lakehouse</p>
+</section>
+
+<section>
+  <h2>Birga ishlash</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Lake: xom</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Bronze, Silver</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">DWH / Gold</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">BI va ML</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Lake xom ma'lumotni, DWH hisobotni boshqaradi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Gold ni saqlash</h2>
+  <pre><code class="language-python" data-trim data-line-numbers="1|2-4">
+gold.to_csv("data/gold/oquvchilar_yillik.csv", index=False)
+print(gold.to_string(index=False))
+#  yil  oquvchilar
+# 2024      932000
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Real loyihada Gold va Silver ko'pincha Parquet formatda saqlanadi; bu yerda soddalik uchun CSV ishlatildi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Lakehouse nima?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Lake va DWH imkoniyatlarini birlashtirish</button>
+    <button class="opt" type="button">Faqat xotira turi</button>
+    <button class="opt" type="button">Dasturlash tili</button>
+    <button class="opt" type="button">Rasm formati</button>
+    </div>
+    <div class="explain">Lake va DWH birgalikda.</div>
+  </div>
+</section>
+
+<section>
+  <h2>DWH va Data Lake</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>DWH</h3>Tuzilmali, tozalangan, schema-on-write, hisobot va BI uchun</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>Data Lake</h3>Xom, har xil format, schema-on-read, ML va saqlash uchun</div>
+  </div>
+  <div class="card accent fragment mt"><p>Ikkalasi bir-birini to'ldiradi.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Bronze</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Minimal ishlov bilan xom qatlam</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Silver</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Tozalangan qatlam</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Gold</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Biznes uchun tayyor qatlam</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Lakehouse</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Lake + DWH birligi</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Oqim qurish</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="folder-plus" data-anim="pulse"></i></div><h3>1. Papkalar</h3><p>raw, bronze, silver, gold.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="sparkles"></i></div><h3>2. Tozalash</h3><p>Dublikat va bo'sh qiymatlar.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="chart-column"></i></div><h3>3. Jamlash</h3><p>Gold da yillik jami.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>DWH va Data Lake</h2>
+    <table>
+      <thead><tr><th>Belgi</th><th>DWH</th><th>Data Lake</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td>Ma'lumot</td><td>tuzilmali</td><td>har xil</td></tr>
+        <tr class="fragment"><td>Schema</td><td>yozishda</td><td>o'qishda</td></tr>
+        <tr class="fragment"><td>Narx</td><td>yuqoriroq</td><td>arzon</td></tr>
+        <tr class="fragment"><td>Foydalanuvchi</td><td>BI tahlilchi</td><td>muhandis, ML</td></tr>
+        <tr class="fragment"><td>Xavf</td><td>qat'iy</td><td>botqoq</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: tekshirish</p>
+  </section>
+  <section>
+    <h2>Kichik oqim</h2>
+    <ol class="steps-n">
+      <li class="fragment"><code>data/raw/maktab.csv</code> yarating (4 qator, 1 dublikat, 1 bo'sh).</li>
+      <li class="fragment">Bronze, Silver, Gold ni yuqoridagi kod bilan yarating.</li>
+      <li class="fragment">Har qatlamdagi qatorlar sonini solishtiring.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Silver ga o'tish</h2>
+  <pre data-id="c"><code class="language-python" data-trim>
+bronze = pd.read_csv("data/raw/maktab.csv", dtype=str)
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Silver ga o'tish</h2>
+  <pre data-id="c"><code class="language-python" data-trim data-line-numbers="1|1-2">
+silver = bronze.drop_duplicates().dropna().copy()
+silver["oquvchilar"] = silver["oquvchilar"].astype(int)
+  </code></pre>
+</section>
+
+<section>
+  <h2>Lake raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> ta asosiy qatlam: Bronze, Silver, Gold</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="4" data-suf="">0</span></div><div class="l"> ta papka: raw, bronze, silver, gold</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="2" data-suf="">0</span></div><div class="l"> tizim birga: Lake va DWH</div></div>
+  </div>
+  <p class="small fragment">Qatlamlar uslubiy ko'rsatmadagi papkalar tuzilmasiga mos.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Qatlamni toping: Quyidagi har amal qaysi qatlamda bajariladi: dublikatlarni olib tashlash; yillik jami hisoblash; asl faylni saqlash?</div>
+  <div class="task"><span class="level easy">Oson</span>Lake yoki DWH: «Ijtimoiy tarmoqdagi rasmlar va loglar» va «yillik KPI hisoboti» qayerda saqlanadi?</div>
+  <div class="task"><span class="level mid">O'rta</span>Papkalar: <code>maktab-pipeline</code> papkalarini yarating va vazifasini yozing.</div>
+  <div class="task"><span class="level mid">O'rta</span>Silver yozing: Bronze dagi dublikat va bo'sh qatorlarni olib tashlab, <code>oquvchilar</code> ni <code>int</code> qiling.</div>
+  <div class="task"><span class="level hard">Qiyin</span>Gold yozing: Silver dan yillik jami o'quvchilarni hisoblang.</div>
+  <div class="task"><span class="level hard">Bonus</span>Lakehouse: Lakehouse nima va kim uchun foydali? 2 jumlada yozing.</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Data Lake</h3><p>Xom, har xil format, schema-on-read.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Qatlamlar</h3><p>Bronze: minimal; Silver: toza; Gold: biznes.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Lake va DWH</h3><p>Birga ishlaydi; Lakehouse ikkalasini birlashtiradi.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: raw dan gold gacha kichik oqim.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="arrow-right" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: 7-hafta</h1>
+  <p class="muted">keyingi mavzu: kartaga qarang</p>
+  <span class="badge">7-hafta · 19-dars</span>
+</section>
+

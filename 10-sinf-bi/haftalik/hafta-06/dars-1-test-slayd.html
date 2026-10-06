@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Test: 16-dars. SCD va surrogate kalitlar</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>Test: 16-dars. SCD va surrogate kalitlar</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">10-sinf</span><span class="badge">BI &amp; ML</span><span class="badge">6-hafta · 16-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">SCD nima?</p>
+    <div class="opts">
+      <button class="opt" type="button">Tez grafik</button>
+      <button class="opt" type="button">Saqlash qurilmasi</button>
+      <button class="opt" type="button" data-ok>Sekin o'zgaruvchi dimension</button>
+      <button class="opt" type="button">Test turi</button>
+    </div>
+    <div class="explain">Slowly Changing Dimension.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q">Type 1 da nima bo'ladi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Yangi qator qo'shiladi</button>
+      <button class="opt" type="button" data-ok>Ustiga yoziladi</button>
+      <button class="opt" type="button">Jadval o'chadi</button>
+      <button class="opt" type="button">Fakt o'zgaradi</button>
+    </div>
+    <div class="explain">Tarix yo'qoladi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q">Type 2 da nima bo'ladi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Ustiga yoziladi</button>
+      <button class="opt" type="button">Hech narsa</button>
+      <button class="opt" type="button">Jadval o'chadi</button>
+      <button class="opt" type="button" data-ok>Yangi qator qo'shiladi</button>
+    </div>
+    <div class="explain">Tarix saqlanadi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q">Type 2 uchun odatiy ustun?</p>
+    <div class="opts">
+      <button class="opt" type="button"><code>rasm</code></button>
+      <button class="opt" type="button"><code>parol</code></button>
+      <button class="opt" type="button"><code>ekran</code></button>
+      <button class="opt" type="button" data-ok><code>joriy</code></button>
+    </div>
+    <div class="explain"><code>joriy</code> bayrog'i.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q">Surrogate kalit nima?</p>
+    <div class="opts">
+      <button class="opt" type="button">Telefon raqami</button>
+      <button class="opt" type="button" data-ok>Sun'iy butun kalit</button>
+      <button class="opt" type="button">Matnli nom</button>
+      <button class="opt" type="button">Parol</button>
+    </div>
+    <div class="explain">Ombor beradigan kalit.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q">Type 2 da birlamchi kalit?</p>
+    <div class="opts">
+      <button class="opt" type="button">Natural kalit</button>
+      <button class="opt" type="button">Direktor ismi</button>
+      <button class="opt" type="button" data-ok>Surrogate kalit</button>
+      <button class="opt" type="button">Sana</button>
+    </div>
+    <div class="explain">Natural kalit takrorlanadi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q">Joriy qator sharti?</p>
+    <div class="opts">
+      <button class="opt" type="button"><code>joriy = 5</code></button>
+      <button class="opt" type="button" data-ok><code>joriy = 1</code></button>
+      <button class="opt" type="button"><code>nomi = 1</code></button>
+      <button class="opt" type="button"><code>yil = 1</code></button>
+    </div>
+    <div class="explain">Joriy qatorni ko'rsatadi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q">Imlo xatosini tuzatish uchun qaysi tur?</p>
+    <div class="opts">
+      <button class="opt" type="button">Type 2</button>
+      <button class="opt" type="button">Hech biri</button>
+      <button class="opt" type="button" data-ok>Type 1</button>
+      <button class="opt" type="button">Ikkalasi shart</button>
+    </div>
+    <div class="explain">Tarix kerak emas.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q">Fakt jadval qaysi kalitga bog'lanadi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Natural</button>
+      <button class="opt" type="button">Parolga</button>
+      <button class="opt" type="button" data-ok>Surrogate</button>
+      <button class="opt" type="button">Sanaga</button>
+    </div>
+    <div class="explain">Surrogate kalit.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q">Type 2 ning kamchiligi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Tarix yo'qoladi</button>
+      <button class="opt" type="button">Kalit yo'q</button>
+      <button class="opt" type="button">Fakt yo'q</button>
+      <button class="opt" type="button" data-ok>Jadval kattalashadi</button>
+    </div>
+    <div class="explain">Qatorlar ko'payadi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 16-dars konspekti va slaydlari</p>
+</section>
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>
