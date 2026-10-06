@@ -1,0 +1,157 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Test: 16-dars. Aggregatsiya funksiyalari</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">9-sinf</span><span class="badge">Business Intelligence</span><span class="badge">6-hafta · 16-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">Qaysi funksiya qatorlar sonini beradi?</p>
+    <div class="opts">
+      <button class="opt" type="button">SUM</button>
+      <button class="opt" type="button">AVG</button>
+      <button class="opt" type="button" data-ok>COUNT</button>
+      <button class="opt" type="button">MAX</button>
+    </div>
+    <div class="explain"><code>COUNT</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q">Yig'indini hisoblaydigan funksiya?</p>
+    <div class="opts">
+      <button class="opt" type="button">COUNT</button>
+      <button class="opt" type="button">MIN</button>
+      <button class="opt" type="button">LEN</button>
+      <button class="opt" type="button" data-ok>SUM</button>
+    </div>
+    <div class="explain"><code>SUM</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q">O'rtacha qiymat funksiyasi?</p>
+    <div class="opts">
+      <button class="opt" type="button">MID</button>
+      <button class="opt" type="button" data-ok>AVG</button>
+      <button class="opt" type="button">MEAN</button>
+      <button class="opt" type="button">SUM</button>
+    </div>
+    <div class="explain"><code>AVG</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q">Eng kichik qiymat funksiyasi?</p>
+    <div class="opts">
+      <button class="opt" type="button">LOW</button>
+      <button class="opt" type="button">SMALL</button>
+      <button class="opt" type="button">BOTTOM</button>
+      <button class="opt" type="button" data-ok>MIN</button>
+    </div>
+    <div class="explain"><code>MIN</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q"><code>COUNT(*)</code> nimani sanaydi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Faqat NULL bo'lmaganlarni</button>
+      <button class="opt" type="button">Faqat NULL larni</button>
+      <button class="opt" type="button" data-ok>Barcha qatorlarni</button>
+      <button class="opt" type="button">Ustunlarni</button>
+    </div>
+    <div class="explain">Barcha qatorlarni.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q"><code>COUNT(Chegirma)</code> nimani sanaydi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Barcha qatorlarni</button>
+      <button class="opt" type="button">NULL larni</button>
+      <button class="opt" type="button" data-ok>NULL bo'lmagan qiymatlarni</button>
+      <button class="opt" type="button">Takrorlanmaslarni</button>
+    </div>
+    <div class="explain">NULL bo'lmagan qiymatlarni.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q">Aggregatsiya NULL ni nima qiladi?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>O'tkazib yuboradi</button>
+      <button class="opt" type="button">Nolga aylantiradi</button>
+      <button class="opt" type="button">Xato beradi</button>
+      <button class="opt" type="button">Matn qiladi</button>
+    </div>
+    <div class="explain">O'tkazib yuboradi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q">Natija ustuniga nom beradigan kalit so'z?</p>
+    <div class="opts">
+      <button class="opt" type="button">NAME</button>
+      <button class="opt" type="button" data-ok>AS</button>
+      <button class="opt" type="button">LABEL</button>
+      <button class="opt" type="button">TO</button>
+    </div>
+    <div class="explain"><code>AS</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q"><code>SELECT MIN(Sana)</code> qanday ishlaydi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Xato beradi</button>
+      <button class="opt" type="button" data-ok>Eng erta sanani qaytaradi</button>
+      <button class="opt" type="button">Eng kechki sanani qaytaradi</button>
+      <button class="opt" type="button">NULL qaytaradi</button>
+    </div>
+    <div class="explain"><code>MIN</code> sanada eng erta sanani beradi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q"><code>WHERE SUM(Summa) &gt; 100</code> nega xato?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>WHERE ichida aggregatsiya yozib bo'lmaydi</button>
+      <button class="opt" type="button">SUM mavjud emas</button>
+      <button class="opt" type="button">Summa son emas</button>
+      <button class="opt" type="button">Operator noto'g'ri</button>
+    </div>
+    <div class="explain">Aggregatsiya bo'yicha shart <code>HAVING</code> da yoziladi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 16-dars konspekti va slaydlari</p>
+</section>

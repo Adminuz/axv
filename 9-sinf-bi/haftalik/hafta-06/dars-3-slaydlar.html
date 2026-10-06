@@ -1,0 +1,298 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>HAVING va WHERE</h1>
+  <p class="muted">HAVING mohiyati, WHERE va HAVING farqi, bajarilish tartibi, birga qo'llash</p>
+  <span class="badge">9-sinf</span><span class="badge">Business Intelligence</span><span class="badge">6-hafta · 18-dars</span>
+  <aside class="notes">Takrorlash: 17-dars (GROUP BY, SELECT qoidasi, WHERE + GROUP BY). Savol: «Faqat jami sotuvi 4 mln dan oshgan shaharlarni ko'rsatmoqchimiz. WHERE SUM(Summa) &gt; 4000000 yozsak nima bo'ladi?» (xato — shuni dars boshida ko'rsating).</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="funnel" data-anim="pulse"></i></div><h3>HAVING</h3><p>Guruhlarni filtrlash</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="scale" data-anim="float"></i></div><h3>WHERE va HAVING</h3><p>Farqi va tartib</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="book-open" data-anim="blink"></i></div><h3>Amaliy misollar</h3><p>Hisobot va xatolar</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q"><code>GROUP BY Shahar</code> (3 ta shahar) nechta qator qaytaradi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>3</button>
+    <button class="opt" type="button">10</button>
+    <button class="opt" type="button">1</button>
+    <button class="opt" type="button">6</button>
+    </div>
+    <div class="explain">Har guruh uchun bitta qator.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>HAVING</h1>
+  <p>Guruhlarni filtrlash</p>
+</section>
+
+<section>
+  <h2>HAVING g'oyasi</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">Guruhlar</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">tayyor</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Aggregatsiya</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">hisoblandi</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">HAVING shartni</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">tekshiradi</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Mos guruhlar</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">qoladi</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">HAVING — guruh filtri</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Katta shaharlarni tanlash</h2>
+  <pre><code class="language-sql" data-trim data-line-numbers="1-3|4|5-6|8-11|12|13">
+SELECT Shahar, SUM(Summa) AS Jami
+FROM Sotuvlar
+GROUP BY Shahar
+HAVING SUM(Summa) &gt; 4000000;
+-- Samarqand | 9640000
+-- Toshkent  | 5380000
+
+SELECT Shahar, COUNT(*) AS SotuvSoni
+FROM Sotuvlar
+GROUP BY Shahar
+HAVING COUNT(*) &gt;= 4;
+-- Toshkent | 4
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i><code>HAVING</code> da <code>SELECT</code> dagi alias ishlamaydi (T-SQL'da): <code>HAVING Jami &gt; 4000000</code> xato, funksiyani qayta yozing.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Aggregatsiya bo'yicha guruhlarni qaysi operator filtrlaydi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>HAVING</button>
+    <button class="opt" type="button">WHERE</button>
+    <button class="opt" type="button">ORDER BY</button>
+    <button class="opt" type="button">TOP</button>
+    </div>
+    <div class="explain"><code>HAVING</code> guruhlangan natijani filtrlaydi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>WHERE va HAVING</h1>
+  <p>Farqi va tartib</p>
+</section>
+
+<section>
+  <h2>Mantiqiy tartib</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">FROM, WHERE</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">GROUP BY</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">HAVING</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">SELECT,</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">ORDER BY</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Avval qator filtri, keyin guruh filtri</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>WHERE va HAVING birga</h2>
+  <pre><code class="language-sql" data-trim data-line-numbers="1|3|4|5|6|7|10-13">
+SELECT Shahar, SUM(Summa) AS Jami
+FROM Sotuvlar
+WHERE Kategoriya &lt;&gt; N'Ekran'
+GROUP BY Shahar
+HAVING SUM(Summa) &gt; 3500000
+ORDER BY SUM(Summa) DESC;
+-- Samarqand | 7740000
+
+-- Qator sharti WHERE ga:
+SELECT Shahar, SUM(Summa) AS Jami
+FROM Sotuvlar
+WHERE Shahar = N'Toshkent'
+GROUP BY Shahar;
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Eslab qoling: WHERE — «qaysi qatorlar?», HAVING — «qaysi guruhlar?».</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>SUM(Summa) &gt; 4000000</code> sharti qayerda yoziladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>HAVING da</button>
+    <button class="opt" type="button">WHERE da</button>
+    <button class="opt" type="button">FROM da</button>
+    <button class="opt" type="button">SELECT da</button>
+    </div>
+    <div class="explain">Aggregatsiya sharti HAVING da.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>Amaliy misollar</h1>
+  <p>Hisobot va xatolar</p>
+</section>
+
+<section>
+  <h2>Hisobot tuzish</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Savolni o'qing</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Qator shartini</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">WHERE ga</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Guruhlang</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Guruh shartini</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">HAVING ga</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Savol → WHERE / HAVING taqsimoti</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Juftliklar va o'rtacha</h2>
+  <pre><code class="language-sql" data-trim data-line-numbers="1-3|4|5-6|8-10|11|12">
+SELECT Shahar, Kategoriya, COUNT(*) AS Soni
+FROM Sotuvlar
+GROUP BY Shahar, Kategoriya
+HAVING COUNT(*) &gt; 1;
+-- Buxoro  | Aksessuar | 2
+-- Toshkent| Aksessuar | 2
+
+SELECT Kategoriya, AVG(Summa) AS Ortacha
+FROM Sotuvlar
+GROUP BY Kategoriya
+HAVING AVG(Summa) &gt; 2000000;
+-- Kompyuter | 4633333.33
+  </code></pre>
+  <div class="callout warn mt fragment"><i data-ic="triangle-alert"></i>Savol so'zlariga e'tibor bering: «har bir qator ...» → WHERE; «jami / o'rtacha / soni ... bo'lgan guruhlar» → HAVING.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>HAVING COUNT(*) &gt; 1</code> qaysi guruhlarni qoldiradi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Kamida 2 ta qatori bor guruhlarni</button>
+    <button class="opt" type="button">Faqat bitta qatorli guruhlarni</button>
+    <button class="opt" type="button">Barcha guruhlarni</button>
+    <button class="opt" type="button">Bo'sh guruhlarni</button>
+    </div>
+    <div class="explain">1 dan ko'p qatorli guruhlar.</div>
+  </div>
+</section>
+
+<section>
+  <h2>WHERE va HAVING</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>WHERE</h3>Qatorlarni guruhlashdan oldin filtrlaydi</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>HAVING</h3>Guruhlarni guruhlashdan keyin filtrlaydi</div>
+  </div>
+  <div class="card accent fragment mt"><p>Aggregatsiya sharti faqat HAVING da.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>HAVING</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Guruhlarni filtrlaydi</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>WHERE</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Qatorlarni filtrlaydi</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Bajarilish tartibi</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>FROM → WHERE → GROUP BY → HAVING → SELECT</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Aggregatsiya sharti</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>SUM, COUNT, AVG bo'yicha shart</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>HAVING yozish</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="funnel" data-anim="pulse"></i></div><h3>1. Shartni aniqlang</h3><p>Qator yoki guruh?</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="layers"></i></div><h3>2. Guruhlang</h3><p>GROUP BY.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="check"></i></div><h3>3. HAVING yozing</h3><p>Aggregatsiya sharti.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>WHERE va HAVING</h2>
+    <table>
+      <thead><tr><th>Xususiyat</th><th>WHERE</th><th>HAVING</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td>Nimani filtrlaydi</td><td>Qatorlarni</td><td>Guruhlarni</td></tr>
+        <tr class="fragment"><td>Qachon ishlaydi</td><td>GROUP BY dan oldin</td><td>GROUP BY dan keyin</td></tr>
+        <tr class="fragment"><td>Aggregatsiya</td><td>Ishlatib bo'lmaydi</td><td>Ishlatiladi</td></tr>
+        <tr class="fragment"><td>Misol</td><td><code>Shahar = N'Toshkent'</code></td><td><code>SUM(Summa) &gt; 4000000</code></td></tr>
+        <tr class="fragment"><td>GROUP BY siz</td><td>Ishlaydi</td><td>Odatda kerak</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: farqlar</p>
+  </section>
+  <section>
+    <h2>Birinchi HAVING</h2>
+    <ol class="steps-n">
+      <li class="fragment">Shaharlar bo'yicha jami summani <code>GROUP BY</code> bilan chiqaring.</li>
+      <li class="fragment"><code>HAVING SUM(Summa) &gt; 4000000</code> qo'shing va qaysi shahar tushib qolganini ko'ring.</li>
+      <li class="fragment"><code>WHERE</code> bilan Ekran toifasini olib tashlab, natijani solishtiring.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Aggregatsiya sharti</h2>
+  <pre data-id="c"><code class="language-sql" data-trim>
+SELECT Shahar, SUM(Summa) AS Jami
+FROM Sotuvlar
+WHERE SUM(Summa) &gt; 4000000
+GROUP BY Shahar;
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Aggregatsiya sharti</h2>
+  <pre data-id="c"><code class="language-sql" data-trim data-line-numbers="3|4">
+SELECT Shahar, SUM(Summa) AS Jami
+FROM Sotuvlar
+GROUP BY Shahar
+HAVING SUM(Summa) &gt; 4000000;
+  </code></pre>
+</section>
+
+<section>
+  <h2>Natijalar</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> ta shahar guruhlandi</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="2" data-suf="">0</span></div><div class="l"> ta shahar HAVING dan o'tdi</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="6" data-suf="">0</span></div><div class="l"> bosqichli mantiqiy tartib</div></div>
+  </div>
+  <p class="small fragment">HAVING guruhlar sonini kamaytiradi.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Katta shaharlar: Jami summasi 4 000 000 dan oshgan shaharlarni chiqaring.</div>
+  <div class="task"><span class="level easy">Oson</span>Ko'p sotuvli shaharlar: Kamida 4 ta sotuvi bo'lgan shaharni toping.</div>
+  <div class="task"><span class="level mid">O'rta</span>Qimmat toifa: O'rtacha summasi 2 000 000 dan oshgan toifalarni chiqaring.</div>
+  <div class="task"><span class="level mid">O'rta</span>Takroriy juftliklar: Shahar va toifa juftligi bo'yicha 1 dan ko'p sotuvi bor guruhlarni toping.</div>
+  <div class="task"><span class="level hard">Qiyin</span>WHERE va HAVING birga: Ekran sotuvlarisiz, jami 3 500 000 dan oshgan shaharlarni jami bo'yicha kamayish tartibida chiqaring.</div>
+  <div class="task"><span class="level hard">Bonus</span>Xatoni tuzating: <code>WHERE SUM(Summa) &gt; 4000000</code> so'rovini to'g'rilab, nima uchun xato ekanini yozing.</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>HAVING</h3><p>Guruhlarni filtrlaydi.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>WHERE va HAVING</h3><p>Qatorlar yoki guruhlar.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Tartib</h3><p>FROM → WHERE → GROUP BY → HAVING.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: HAVING va WHERE bilan hisobotlar.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="calculator" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: DISTINCT COUNT</h1>
+  <p class="muted">Kompleks tahlil</p>
+  <span class="badge">7-hafta · 19-dars</span>
+</section>
+

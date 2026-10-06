@@ -1,0 +1,157 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Test: 17-dars. GROUP BY va guruhlash</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">9-sinf</span><span class="badge">Business Intelligence</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">Qatorlarni guruhlaydigan operator?</p>
+    <div class="opts">
+      <button class="opt" type="button">ORDER BY</button>
+      <button class="opt" type="button">SORT</button>
+      <button class="opt" type="button">UNION</button>
+      <button class="opt" type="button" data-ok>GROUP BY</button>
+    </div>
+    <div class="explain"><code>GROUP BY</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q"><code>GROUP BY Shahar</code> nechta guruh beradi (3 ta shahar)?</p>
+    <div class="opts">
+      <button class="opt" type="button">10</button>
+      <button class="opt" type="button">1</button>
+      <button class="opt" type="button" data-ok>3</button>
+      <button class="opt" type="button">2</button>
+    </div>
+    <div class="explain">Shaharlar soniga teng.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q"><code>SELECT</code> dagi ustun qayerda bo'lishi shart?</p>
+    <div class="opts">
+      <button class="opt" type="button">Faqat WHERE da</button>
+      <button class="opt" type="button">Faqat ORDER BY da</button>
+      <button class="opt" type="button" data-ok>Funksiyada yoki GROUP BY da</button>
+      <button class="opt" type="button">Hech qayerda</button>
+    </div>
+    <div class="explain">Qoida.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q"><code>WHERE</code> qachon bajariladi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Guruhlashdan keyin</button>
+      <button class="opt" type="button">Saralashdan keyin</button>
+      <button class="opt" type="button">Hech qachon</button>
+      <button class="opt" type="button" data-ok>Guruhlashdan oldin</button>
+    </div>
+    <div class="explain">FROM dan keyin, GROUP BY dan oldin.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q">Ikki ustun bo'yicha guruhlash?</p>
+    <div class="opts">
+      <button class="opt" type="button">GROUP BY A AND B</button>
+      <button class="opt" type="button">GROUP A, B</button>
+      <button class="opt" type="button" data-ok>GROUP BY A, B</button>
+      <button class="opt" type="button">GROUP BY A; B</button>
+    </div>
+    <div class="explain">Vergul bilan.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q"><code>GROUP BY</code> da alias ishlaydimi?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>Yo'q</button>
+      <button class="opt" type="button">Ha</button>
+      <button class="opt" type="button">Faqat sonda</button>
+      <button class="opt" type="button">Faqat matnda</button>
+    </div>
+    <div class="explain">Alias <code>ORDER BY</code> da ishlaydi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q">Natijani kamayish tartibida saralash?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>ORDER BY Jami DESC</button>
+      <button class="opt" type="button">ORDER BY Jami UP</button>
+      <button class="opt" type="button">SORT Jami</button>
+      <button class="opt" type="button">GROUP Jami DESC</button>
+    </div>
+    <div class="explain"><code>DESC</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q">NULL qiymatlar guruhlashda?</p>
+    <div class="opts">
+      <button class="opt" type="button">O'chiriladi</button>
+      <button class="opt" type="button">Xato beradi</button>
+      <button class="opt" type="button">0 bo'ladi</button>
+      <button class="opt" type="button" data-ok>Bitta guruh bo'ladi</button>
+    </div>
+    <div class="explain">NULL lar birlashadi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q"><code>SELECT Shahar, Summa ... GROUP BY Shahar</code> natijasi?</p>
+    <div class="opts">
+      <button class="opt" type="button">3 qator</button>
+      <button class="opt" type="button" data-ok>Xato</button>
+      <button class="opt" type="button">10 qator</button>
+      <button class="opt" type="button">NULL</button>
+    </div>
+    <div class="explain">Summa guruhlanmagan.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q"><code>GROUP BY Shahar, Kategoriya</code> (jadvalda) nechta guruh?</p>
+    <div class="opts">
+      <button class="opt" type="button">3</button>
+      <button class="opt" type="button">10</button>
+      <button class="opt" type="button" data-ok>8</button>
+      <button class="opt" type="button">6</button>
+    </div>
+    <div class="explain">8 ta noyob juftlik.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 17-dars konspekti va slaydlari</p>
+</section>

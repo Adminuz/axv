@@ -41,9 +41,9 @@ Manba: `2.4. Standart (BI)`, `2.4. Uslubiy ko'rsatma`, `2.4. O'quv qo'llanma`. M
 | 13 | 5 | SQL asoslari: WHERE shartli filtrlash, taqqoslash va mantiqiy operatorlar (AND, OR, NOT) | 📝 |
 | 14 | 5 | SQL asoslari: ORDER BY saralash (ASC, DESC), LIMIT va OFFSET | 📝 |
 | 15 | 5 | SQL asoslari: NULL qiymatlar bilan ishlash va ma'lumot turlari | 📝 |
-| 16 | 6 | Aggregatsiya funksiyalari: COUNT, SUM, AVG, MIN, MAX | ⬜ |
-| 17 | 6 | GROUP BY operatori va guruhlash mexanizmi | ⬜ |
-| 18 | 6 | HAVING filtrlash operatori (WHERE vs HAVING) | ⬜ |
+| 16 | 6 | Aggregatsiya funksiyalari: COUNT, SUM, AVG, MIN, MAX | 📝 |
+| 17 | 6 | GROUP BY operatori va guruhlash mexanizmi | 📝 |
+| 18 | 6 | HAVING filtrlash operatori (WHERE vs HAVING) | 📝 |
 | 19 | 7 | Guruhlangan ma'lumotlar bilan kompleks tahlil va DISTINCT COUNT | ⬜ |
 | 20 | 7 | Shartli tahlil: CASE WHEN asosiy sintaksisi va mantiqiy shartlar | ⬜ |
 | 21 | 7 | CASE WHEN orqali ma'lumotlarni segmentatsiya qilish va toifalash | ⬜ |
