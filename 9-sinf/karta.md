@@ -33,7 +33,7 @@ Manba: `9-sinf/2_1_O'quv_qo'llanma_UXUI_dizayn_va_Advanced_Front_end.docx` (naza
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 16–18 | 6 | Figma'da interfeys dizayni | ⬜ |
+| 16–18 | 6 | Figma'da interfeys dizayni | 📝 |
 | 19–22 | 7–8 | Sketch asoslari: UI elementlar yaratish | ⬜ |
 | 23–26 | 8–9 | Figma'da interaktiv prototip yaratish | ⬜ |
 | 27–29 | 9–10 | InVision yordamida prototipni test qilish | ⬜ |

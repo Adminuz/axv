@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Jamoaviy ishlash va Dev Mode</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>Jamoaviy ishlash va Dev Mode</h1>
+  <p class="muted">Ulashish va ruxsatlar, sharhlar, versiya tarixi, Dev Mode, handoff ro'yxati</p>
+  <span class="badge">9-sinf</span><span class="badge">UX/UI dizayn va Advanced Front-end</span><span class="badge">6-hafta · 18-dars</span>
+  <aside class="notes">Takrorlash: 17-dars (komponent va variantlar). Savol: «Dizayn tayyor. Dasturchi uni qanday aniq kodga o'tkazadi — «ko'z bilan» o'lchaymizmi?» Dev Mode tarifga bog'liq: o'quvchilar akkauntida yo'q bo'lsa, mentor ekranida ko'rsating; asosiy qiymatlar Design panelidan ham olinadi.</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="share-2" data-anim="pulse"></i></div><h3>Ulashish va ruxsatlar</h3><p>Kim nimani qila oladi</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="message-square" data-anim="float"></i></div><h3>Sharhlar va versiyalar</h3><p>Fikr va tarix</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="code" data-anim="blink"></i></div><h3>Dev Mode</h3><p>Dizayndan kodga</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q">Main component o'zgarsa, instance lar bilan nima bo'ladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Ular ham yangilanadi</button>
+    <button class="opt" type="button">O'zgarmaydi</button>
+    <button class="opt" type="button">O'chiriladi</button>
+    <button class="opt" type="button">Nusxa bo'ladi</button>
+    </div>
+    <div class="explain">Instance lar bog'liq.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>Ulashish va ruxsatlar</h1>
+  <p>Kim nimani qila oladi</p>
+</section>
+
+<section>
+  <h2>Ulashish tartibi</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Share tugmasi</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Odam yoki</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">havola</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">View / Edit</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Ruxsatni</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">tekshirish</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Eng kam ruxsat qoidasi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Ruxsat tanlash qoidasi</h2>
+  <pre><code class="language-text" data-trim data-line-numbers="1|2|3|4">
+Mentor, dasturchi, mijoz : Can view
+Jamoadosh dizayner       : Can edit
+Ommaviy havola           : faqat kerak bo'lsa, Can view
+Ish tugagach             : keraksiz ruxsatni olib tashlash
+  </code></pre>
+  <div class="callout warn mt fragment"><i data-ic="triangle-alert"></i>Havolasi bor har kim tahrirlay oladigan (Can edit) ommaviy havola — xavfli: dizayn tasodifan buzilishi yoki o'chirilishi mumkin.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Dasturchiga dizaynni ko'rsatish uchun odatda qaysi ruxsat yetarli?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Can view</button>
+    <button class="opt" type="button">Can edit</button>
+    <button class="opt" type="button">Egalik</button>
+    <button class="opt" type="button">Hech qaysi</button>
+    </div>
+    <div class="explain">Eng kam ruxsat: faqat ko'rish.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>Sharhlar va versiyalar</h1>
+  <p>Fikr va tarix</p>
+</section>
+
+<section>
+  <h2>Sharh aylanishi</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">Joyni</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">tanlash (C)</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Yozish va</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">@belgilash</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Javob</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Resolve</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Aniq va muloyim sharh</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Yaxshi sharh namunasi</h2>
+  <pre><code class="language-text" data-trim data-line-numbers="1|2-3|4|5">
+Yomon  : "Yoqmadi"
+Yaxshi : "Header: qidiruv tugmasi matni
+         ko'rinmayapti. Fonni to'qroq qilsak-chi?"
+Kimga  : @dasturchi (agar kod uchun)
+Holat  : hal bo'lsa Resolve
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Muhim bosqichdan oldin versiyani nom bilan saqlang: «Komponentlar tayyor», «Handoff v1». Keyin qaytish oson.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Sharh qoldirish tugmasi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>C</button>
+    <button class="opt" type="button">P</button>
+    <button class="opt" type="button">F</button>
+    <button class="opt" type="button">T</button>
+    </div>
+    <div class="explain"><code>C</code> — Comment.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>Dev Mode</h1>
+  <p>Dizayndan kodga</p>
+</section>
+
+<section>
+  <h2>Handoff</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">Dev Mode</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">(Shift+D)</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Element</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">tanlash</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">Qiymat va</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">CSS nusxalash</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Assets eksport</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Kod — boshlang'ich nuqta</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Dev Mode qiymatlari → loyiha CSS</h2>
+  <pre><code class="language-css" data-trim data-line-numbers="1-2|4-5">
+/* Figma Dev Mode bergan (taxminan) */
+.karta { width: 280px; padding: 16px; border-radius: 12px; }
+
+/* Loyihamizga moslangan */
+.karta { max-width: 17.5rem; padding: 1rem; border-radius: 0.75rem; }
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Qotirilgan <code>width: 280px</code> ni to'g'ridan-to'g'ri ko'chirmang: responsiv maket uchun <code>max-width</code> va <code>rem</code> ishlating (8-sinf, 15–16-darslar).</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Dev Mode da olingan CSS ga nisbatan to'g'ri yondashuv?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Loyiha qoidalariga moslab yozish</button>
+    <button class="opt" type="button">Ko'r-ko'rona ko'chirish</button>
+    <button class="opt" type="button">Umuman foydalanmaslik</button>
+    <button class="opt" type="button">Hammasini o'chirish</button>
+    </div>
+    <div class="explain">Figma kodi — boshlang'ich nuqta.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Can view va Can edit</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>Can view</h3>Faqat ko'radi va sharh qoldiradi; dizaynni buza olmaydi</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>Can edit</h3>Tahrirlaydi; faqat jamoadoshlarga beriladi</div>
+  </div>
+  <div class="card accent fragment mt"><p>Eng kam ruxsat qoidasi.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Share</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Faylni ulashish tugmasi</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Resolve</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Hal bo'lgan sharhni yopish</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Version history</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Fayl o'zgarishlari tarixi</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Dev Mode</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Dasturchi uchun qiymat va kod ko'rinishi</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Handoff</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="share-2" data-anim="pulse"></i></div><h3>1. Ulashish</h3><p>Can view bering.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="message-square"></i></div><h3>2. Sharh</h3><p>Fikr va Resolve.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="code"></i></div><h3>3. Dev Mode</h3><p>Qiymat va eksport.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>Handoff ro'yxati</h2>
+    <table>
+      <thead><tr><th>Tekshiruv</th><th>Nima uchun</th><th>Qachon</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td>Qatlam nomlari ma'noli</td><td>Dasturchi tez topadi</td><td>Topshirishdan oldin</td></tr>
+        <tr class="fragment"><td>Komponentlar ishlatilgan</td><td>Izchillik va oson yangilash</td><td>Topshirishdan oldin</td></tr>
+        <tr class="fragment"><td>Rang va shriftlar bir tizimda</td><td>Kodda o'zgaruvchilarga aylanadi</td><td>Topshirishdan oldin</td></tr>
+        <tr class="fragment"><td>Assets eksport qilingan</td><td>SVG, PNG, JPEG tayyor</td><td>Topshirishdan oldin</td></tr>
+        <tr class="fragment"><td>Barcha holatlar chizilgan</td><td>Hover, disabled, xato</td><td>Topshirishdan oldin</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: handoff ro'yxati</p>
+  </section>
+  <section>
+    <h2>Dizaynni topshirish</h2>
+    <ol class="steps-n">
+      <li class="fragment">Faylni sinfdoshingizga Can view ruxsati bilan ulashing va havolani tekshiring.</li>
+      <li class="fragment">Sinfdoshingiz dizaynida kamida 2 ta sharh qoldiring (1 ta taklif bilan).</li>
+      <li class="fragment">Kitob kartasidagi o'lcham, masofa va ranglarni Dev Mode yoki Design paneldan olib, CSS yozing.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Sharh yozish</h2>
+  <pre data-id="c"><code class="language-text" data-trim>
+Yoqmadi
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Sharh yozish</h2>
+  <pre data-id="c"><code class="language-text" data-trim data-line-numbers="1|1">
+Header: tugma matni ko'rinmayapti. Fonni to'qroq qilsak-chi?
+  </code></pre>
+</section>
+
+<section>
+  <h2>Hamkorlik raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="2" data-suf="">0</span></div><div class="l"> ruxsat darajasi: view va edit</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> sharh qoidasi: aniq, muloyim, taklif bilan</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="4" data-suf="">0</span></div><div class="l"> asosiy qiymat: o'lcham, masofa, rang, shrift</div></div>
+  </div>
+  <p class="small fragment">Yaxshi handoff — kam savol va kam xato.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Ruxsat tanlash: Mentor va jamoadosh uchun qaysi ruxsatlarni berasiz?</div>
+  <div class="task"><span class="level easy">Oson</span>Sharh yozish: «Yoqmadi» sharhini aniq va muloyim qilib qayta yozing.</div>
+  <div class="task"><span class="level mid">O'rta</span>Versiya saqlash: Muhim bosqichda versiyani qanday saqlaysiz? Nom taklif qiling.</div>
+  <div class="task"><span class="level mid">O'rta</span>CSS ga o'tkazish: Dev Mode: width 280, padding 16, radius 12. Loyihaga moslab CSS yozing.</div>
+  <div class="task"><span class="level hard">Qiyin</span>Handoff ro'yxati: Dasturchiga topshirishdan oldin 5 ta tekshiruvni yozing.</div>
+  <div class="task"><span class="level hard">Bonus</span>Ommaviy havola xavfi: Can edit ommaviy havolaning 2 ta xavfini yozing.</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Ulashish</h3><p>View va Edit; eng kam ruxsat.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Sharh va versiya</h3><p>Comment, Resolve, nomli versiya.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Dev Mode</h3><p>Qiymat, CSS, eksport.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: Handoff: ulashish, sharh va CSS qiymatlari.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="film" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: Figma'da prototip</h1>
+  <p class="muted">Interaktiv prototip yaratish</p>
+  <span class="badge">7-hafta · 19-dars</span>
+</section>
+
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>UI komponentlar va variantlar</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>UI komponentlar va variantlar</h1>
+  <p class="muted">Tugma, maydon, karta, holatlar, Auto layout, komponent va variantlar</p>
+  <span class="badge">9-sinf</span><span class="badge">UX/UI dizayn va Advanced Front-end</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Takrorlash: 16-dars (fayl tuzilmasi, vektor). Savol: «Qaysi elementlar sahifada ko'p marta takrorlanadi? Ularni har safar qaytadan chizamizmi?» Darsda E-kutubxona uchun tugma va kitob kartasi komponentlari yaratiladi.</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="mouse-pointer-click" data-anim="pulse"></i></div><h3>Interfeys elementlari</h3><p>Tugma, maydon, karta</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="align-horizontal-distribute-center" data-anim="float"></i></div><h3>Auto layout</h3><p>Moslashuvchan element</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="component" data-anim="blink"></i></div><h3>Komponent va variantlar</h3><p>Bir marta chizing</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q">Ikonka uchun qaysi format qulay?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>SVG</button>
+    <button class="opt" type="button">JPEG</button>
+    <button class="opt" type="button">BMP</button>
+    <button class="opt" type="button">DOCX</button>
+    </div>
+    <div class="explain">SVG — vektor.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>Interfeys elementlari</h1>
+  <p>Tugma, maydon, karta</p>
+</section>
+
+<section>
+  <h2>Tugma holatlari</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Oddiy</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Hover</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Bosilgan</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">O'chirilgan</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Har holat — alohida ko'rinish</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Tugma holatlari CSS da</h2>
+  <pre><code class="language-css" data-trim data-line-numbers="1|2|3|4">
+.tugma { background: #17e; color: #fff; padding: 12px 24px; border-radius: 8px; }
+.tugma:hover { background: #15b; }
+.tugma:active { background: #148; }
+.tugma:disabled { background: #ccc; color: #666; }
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Dizaynda ham har holatni alohida chizing: dasturchi hover va disabled ko'rinishini siz chizmasangiz, o'zi taxmin qiladi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Tugmaning kursor ustiga kelgandagi holati nima deyiladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Hover</button>
+    <button class="opt" type="button">Disabled</button>
+    <button class="opt" type="button">Default</button>
+    <button class="opt" type="button">Focus faqat</button>
+    </div>
+    <div class="explain">Hover — kursor ustida.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>Auto layout</h1>
+  <p>Moslashuvchan element</p>
+</section>
+
+<section>
+  <h2>Auto layout sozlash</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">Elementlarni</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">tanlash</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Shift+A</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Gap va padding</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Hug / Fill</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">CSS Flexbox'ga mos</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Auto layout → CSS</h2>
+  <pre><code class="language-css" data-trim data-line-numbers="2|3-4|5|7">
+.tugma {
+  display: inline-flex;     /* Hug contents */
+  align-items: center;
+  gap: 8px;                 /* ikonka va matn orasi */
+  padding: 12px 24px;
+}
+.qidiruv { flex: 1; }       /* Fill container */
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Auto layout bilan maket yaratsangiz, kodga o'tkazish ancha oson bo'ladi: Auto layout qiymatlari to'g'ridan-to'g'ri <code>gap</code> va <code>padding</code> ga aylanadi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Fill container nimani bildiradi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Element bo'sh joyni to'ldiradi</button>
+    <button class="opt" type="button">Element qotirilgan o'lchamda</button>
+    <button class="opt" type="button">Element yashirin</button>
+    <button class="opt" type="button">Element nusxalanadi</button>
+    </div>
+    <div class="explain">Fill — ota element ichidagi bo'sh joyni to'ldiradi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>Komponent va variantlar</h1>
+  <p>Bir marta chizing</p>
+</section>
+
+<section>
+  <h2>Komponent yaratish</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Element tayyor</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Ctrl+Alt+K</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">Variantlar</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">qo'shish</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Instance</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">ishlatish</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Bir joyda o'zgartiring — hamma joyda yangilanadi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Komponent nomlari va xossalari</h2>
+  <pre><code class="language-text" data-trim data-line-numbers="1-3|4-6">
+Tugma/Asosiy
+  Holat    : oddiy | hover | bosilgan | o'chirilgan
+  O'lcham  : kichik | katta
+Karta/Kitob
+  Holat    : oddiy | tanlangan
+  Matn     : nom, muallif (override)
+  </code></pre>
+  <div class="callout warn mt fragment"><i data-ic="triangle-alert"></i>Komponentni yaratgach, uni hech qachon nusxalab «ajratmang» (Detach instance): aks holda bog'lanish uziladi va yangilanishlar kelmaydi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Main component o'zgarsa, instance larga nima bo'ladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Ular ham yangilanadi</button>
+    <button class="opt" type="button">Hech narsa</button>
+    <button class="opt" type="button">O'chib ketadi</button>
+    <button class="opt" type="button">Frame yo'qoladi</button>
+    </div>
+    <div class="explain">Instance lar main componentga bog'liq.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Komponent va instance</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>Main component</h3>Asl nusxa; o'zgartirilsa hammasi yangilanadi</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>Instance</h3>Undan olingan nusxa; matn va ikonka o'zgartirilishi mumkin</div>
+  </div>
+  <div class="card accent fragment mt"><p>Bir marta chizing, ko'p marta ishlating.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Auto layout</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Elementlarni avtomatik qator/ustunga tizish</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Hug contents</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Mazmunga moslashish</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Instance</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Komponentdan olingan nusxa</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Variant</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Komponentning boshqa holati</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Komponent yaratish</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="mouse-pointer-click" data-anim="pulse"></i></div><h3>1. Element</h3><p>Tugma, karta chizing.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="align-horizontal-distribute-center"></i></div><h3>2. Auto layout</h3><p>Gap va padding.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="component"></i></div><h3>3. Komponent</h3><p>Variantlar qo'shing.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>Element holatlari</h2>
+    <table>
+      <thead><tr><th>Holat</th><th>Qachon</th><th>Ko'rinish</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td>Oddiy (default)</td><td>Hech narsa qilinmagan</td><td>Asosiy rang</td></tr>
+        <tr class="fragment"><td>Hover</td><td>Kursor ustida</td><td>Biroz to'qroq</td></tr>
+        <tr class="fragment"><td>Bosilgan (pressed)</td><td>Bosilganda</td><td>Yana to'qroq</td></tr>
+        <tr class="fragment"><td>O'chirilgan (disabled)</td><td>Ishlamaydi</td><td>Kulrang</td></tr>
+        <tr class="fragment"><td>Xato (error)</td><td>Noto'g'ri kiritilgan</td><td>Qizil chegara</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: holatlar</p>
+  </section>
+  <section>
+    <h2>Kitob kartasi</h2>
+    <ol class="steps-n">
+      <li class="fragment">Karta uchun frame chizing: rasm, nom, muallif va «O'qish» tugmasi.</li>
+      <li class="fragment">Auto layout (vertikal, gap 12, padding 16) bering va tugmani komponentga aylantiring.</li>
+      <li class="fragment">Kartani komponentga aylantirib, variant <code>Holat = oddiy / tanlangan</code> qo'shing va 3 nusxa joylashtiring.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Tugma yaratish</h2>
+  <pre data-id="c"><code class="language-text" data-trim>
+Har tugmani alohida chizish
+Rangni 20 joyda o'zgartirish
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Tugma yaratish</h2>
+  <pre data-id="c"><code class="language-text" data-trim data-line-numbers="1|1">
+Bitta komponent + instance
+Rangni bir joyda o'zgartirish
+  </code></pre>
+</section>
+
+<section>
+  <h2>Komponentlar raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="5" data-suf="">0</span></div><div class="l"> holat: oddiy, hover, bosilgan, o'chirilgan, xato</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="44" data-suf="px">0</span></div><div class="l"> — tugma uchun qulay minimal o'lcham</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="8" data-suf="px">0</span></div><div class="l"> — masofa uchun asos qadam</div></div>
+  </div>
+  <p class="small fragment">Komponent — dizayn tizimining g'isht'i.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Holatlarni sanang: Tugmaning 4 ta holatini yozing.</div>
+  <div class="task"><span class="level easy">Oson</span>Hover CSS: Tugma hover holatida to'qroq bo'lsin: CSS yozing.</div>
+  <div class="task"><span class="level mid">O'rta</span>Auto layout qiymatlari: Auto layout: gorizontal, gap 8, padding 12/24. CSS ga o'tkazing.</div>
+  <div class="task"><span class="level mid">O'rta</span>Hug yoki Fill: Qidiruv maydoni qolgan joyni to'ldirsin: qaysi o'lcham rejimi?</div>
+  <div class="task"><span class="level hard">Qiyin</span>Variantlar xossalari: Tugma komponenti uchun 2 ta variant xossasini va qiymatlarini yozing.</div>
+  <div class="task"><span class="level hard">Bonus</span>Karta komponenti: Kitob kartasi komponentining tuzilishini (qatlamlar va xossalar) yozing.</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Elementlar</h3><p>Tugma, maydon, karta va holatlar.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Auto layout</h3><p>Gap, padding, Hug va Fill.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Komponent</h3><p>Main, instance va variantlar.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: E-kutubxona tugma va kitob kartasi komponentlari.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="users" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: Jamoaviy ishlash va Dev Mode</h1>
+  <p class="muted">Sharh, versiya va dasturchiga topshirish</p>
+  <span class="badge">6-hafta · 18-dars</span>
+</section>
+
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>
