@@ -1,0 +1,277 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Responsiv maket amaliyoti</h1>
+  <p class="muted">Mobile-first maket, moslashuvchan o'lchamlar, rasmlar, DevTools tekshiruvi</p>
+  <span class="badge">8-sinf</span><span class="badge">Web Full-stack</span><span class="badge">6-hafta · 16-dars</span>
+  <aside class="notes">Takrorlash: 15-dars (viewport, <code>@media</code>, breakpoint, mobile-first). Savol: «Telefonda sayt qanday ko'rinsa qulay? Qaysi element eng avval muammo tug'diradi: menyu, rasm yoki jadval?»</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="smartphone" data-anim="pulse"></i></div><h3>Mobile-first asos</h3><p>Avval telefon</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="image" data-anim="float"></i></div><h3>Moslashuvchan rasmlar</h3><p>Rasm toshmasin</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="layout-template" data-anim="blink"></i></div><h3>Loyiha: maktab sayti</h3><p>Uch breakpoint</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q"><code>@media (min-width: 768px)</code> qachon ishlaydi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Ekran 768px yoki kengroq bo'lganda</button>
+    <button class="opt" type="button">Ekran 768px dan tor bo'lganda</button>
+    <button class="opt" type="button">Faqat telefonda</button>
+    <button class="opt" type="button">Faqat chop etishda</button>
+    </div>
+    <div class="explain"><code>min-width</code> — «shundan boshlab va kengroq».</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>Mobile-first asos</h1>
+  <p>Avval telefon</p>
+</section>
+
+<section>
+  <h2>Moslashtirish tartibi</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">Telefon</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">uchun asos</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">≥768px:</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">planshet</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">≥992px:</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">kompyuter</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">DevTools'da</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">tekshirish</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Kichikdan kattaga</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Asos va menyu</h2>
+  <pre><code class="language-css" data-trim data-line-numbers="1|2|3|4|6-8">
+* { box-sizing: border-box; }
+.konteyner { width: 90%; max-width: 1100px; margin: 0 auto; }
+h1 { font-size: clamp(1.5rem, 5vw, 2.5rem); }
+.menyu { display: flex; flex-direction: column; gap: 8px; }
+
+@media (min-width: 768px) {
+  .menyu { flex-direction: row; gap: 24px; }
+}
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Brauzerda matn o'lchamini piksel bilan qotirib qo'ymang: <code>rem</code> foydalanuvchi sozlamasini hurmat qiladi. Tugmalar telefonda barmoq bilan bosishga qulay bo'lishi uchun kamida 44×44px bo'lsin.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>clamp(1.5rem, 5vw, 2.5rem)</code> sarlavha o'lchamini qanday belgilaydi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Ekranga qarab o'zgaradi, lekin 1.5rem–2.5rem oralig'ida qoladi</button>
+    <button class="opt" type="button">Doim 5vw</button>
+    <button class="opt" type="button">Doim 2.5rem</button>
+    <button class="opt" type="button">Faqat 1.5rem</button>
+    </div>
+    <div class="explain"><code>clamp</code> — eng kichik, ideal va eng katta qiymat.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>Moslashuvchan rasmlar</h1>
+  <p>Rasm toshmasin</p>
+</section>
+
+<section>
+  <h2>Rasm bilan ishlash</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">max-width:</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">100%</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">aspect-ratio</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">object-fit:</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">cover</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">srcset /</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">picture</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Toshmaydi va bir xil ko'rinadi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Karta va rasm</h2>
+  <pre><code class="language-css" data-trim data-line-numbers="1|2|3|5|6">
+img { max-width: 100%; height: auto; display: block; }
+.karta img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.kartalar { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+@media (min-width: 768px) { .kartalar { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 992px) { .kartalar { grid-template-columns: repeat(3, 1fr); } }
+  </code></pre>
+  <div class="callout warn mt fragment"><i data-ic="triangle-alert"></i><code>object-fit: cover</code> rasmni kesishi mumkin: muhim qismi (masalan, yuz) chetga tushmasligi uchun rasmni tekshiring. Har rasmda <code>alt</code> matnini yozing.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>object-fit: cover</code> nima qiladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Rasmni kesib, butun maydonni to'ldiradi</button>
+    <button class="opt" type="button">Rasmni cho'zib buzadi</button>
+    <button class="opt" type="button">Rasmni yashiradi</button>
+    <button class="opt" type="button">Rasmni kichraytiradi</button>
+    </div>
+    <div class="explain">Nisbat saqlanadi, ortiqcha qismi kesiladi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>Loyiha: maktab sayti</h1>
+  <p>Uch breakpoint</p>
+</section>
+
+<section>
+  <h2>Loyiha bosqichlari</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Semantik HTML</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Telefon CSS</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">Breakpoint</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">qo'shish</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Uch kenglikda</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">tekshirish</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Gorizontal skroll bo'lmasin</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Hero va footer</h2>
+  <pre><code class="language-css" data-trim data-line-numbers="1|2|3|5-7">
+.hero { padding: 2rem 1rem; text-align: center; background: #eef; }
+.hero .tugma { display: inline-block; padding: 12px 24px; }
+footer { padding: 1rem; text-align: center; }
+
+@media (min-width: 992px) {
+  .hero { padding: 5rem 1rem; }
+}
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Breakpoint qiymatini qurilma nomiga emas, sahifangiz «buzilgan» joyiga qarab tanlang. Odatda 768px va 992px ham yetarli.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Breakpoint ni qanday tanlash to'g'riroq?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Sahifa buzilgan kenglikka qarab</button>
+    <button class="opt" type="button">Faqat bitta mashhur telefon bo'yicha</button>
+    <button class="opt" type="button">Har 10px da yangi</button>
+    <button class="opt" type="button">Umuman ishlatmaslik</button>
+    </div>
+    <div class="explain">Kontent buzilgan joyda breakpoint qo'shiladi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>rem va px</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>rem</h3>Asosiy shriftga nisbatan; foydalanuvchi sozlamasini hurmat qiladi</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>px</h3>Qotirilgan piksel; moslashmaydi</div>
+  </div>
+  <div class="card accent fragment mt"><p>Matn va masofalar uchun <code>rem</code> qulay.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>clamp()</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Eng kichik, ideal va eng katta qiymat</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>aspect-ratio</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Elementning eni va bo'yi nisbati</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>object-fit</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Rasm maydonni qanday to'ldirishi</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>srcset</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Turli o'lchamdagi rasm fayllari ro'yxati</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Maket yaratish</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="smartphone" data-anim="pulse"></i></div><h3>1. Telefon</h3><p>Asos CSS.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="tablet"></i></div><h3>2. Planshet</h3><p>≥768px qoidalari.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="monitor"></i></div><h3>3. Kompyuter</h3><p>≥992px qoidalari.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>Qurilma kengliklari</h2>
+    <table>
+      <thead><tr><th>Qurilma</th><th>Kenglik</th><th>Ustun</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td>Telefon</td><td>~375px</td><td>1 ustun</td></tr>
+        <tr class="fragment"><td>Planshet</td><td>≥768px</td><td>2 ustun</td></tr>
+        <tr class="fragment"><td>Noutbuk</td><td>≥992px</td><td>3 ustun</td></tr>
+        <tr class="fragment"><td>Katta monitor</td><td>≥1200px</td><td><code>max-width</code> bilan cheklash</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: kengliklar</p>
+  </section>
+  <section>
+    <h2>«Maktab sayti» sahifasi</h2>
+    <ol class="steps-n">
+      <li class="fragment">Semantik HTML yozing: header, hero, 6 ta karta va footer.</li>
+      <li class="fragment">Telefon uchun CSS yozing, so'ng 768px va 992px da ustunlar sonini o'zgartiring.</li>
+      <li class="fragment">DevTools qurilma rejimida 375, 768 va 1280px da tekshiring.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">O'lchamlar</h2>
+  <pre data-id="c"><code class="language-css" data-trim>
+h1 { font-size: 40px; }
+img { width: 800px; }
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">O'lchamlar</h2>
+  <pre data-id="c"><code class="language-css" data-trim data-line-numbers="1|1">
+h1 { font-size: clamp(1.5rem, 5vw, 2.5rem); }
+img { max-width: 100%; height: auto; }
+  </code></pre>
+</section>
+
+<section>
+  <h2>Responsiv dizayn raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> breakpoint: telefon, planshet, kompyuter</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="16" data-suf="px">0</span></div><div class="l"> — 1rem odatiy qiymati</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="44" data-suf="px">0</span></div><div class="l"> — tugma uchun qulay minimal o'lcham</div></div>
+  </div>
+  <p class="small fragment">Kichikdan kattaga: har bosqichda tekshiring.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Menyu yo'nalishi: Menyu telefonda ustun, 768px dan qator bo'lsin.</div>
+  <div class="task"><span class="level easy">Oson</span>Sarlavha o'lchami: <code>h1</code> o'lchami 1.5rem dan 2.5rem gacha ekranga qarab o'zgarsin.</div>
+  <div class="task"><span class="level mid">O'rta</span>Rasm toshmasin: Barcha rasmlar konteynerga sig'sin va nisbati buzilmasin.</div>
+  <div class="task"><span class="level mid">O'rta</span>Bir xil karta rasmi: Karta rasmlari 16:9 nisbatda bo'lib, maydonni to'ldirsin.</div>
+  <div class="task"><span class="level hard">Qiyin</span>1 → 2 → 3 ustun: Kartalar telefonda 1, ≥768px da 2, ≥992px da 3 ustunda bo'lsin.</div>
+  <div class="task"><span class="level hard">Bonus</span>Gorizontal skroll: Tor ekranda gorizontal skroll chiqdi. Qaysi 3 sababni tekshirasiz?</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Mobile-first</h3><p>Avval telefon, keyin <code>min-width</code>.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Moslashuvchan o'lcham</h3><p><code>rem</code>, <code>%</code>, <code>clamp()</code>.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Rasmlar</h3><p><code>max-width</code>, <code>aspect-ratio</code>, <code>object-fit</code>, <code>srcset</code>.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: Responsiv «Maktab sayti» sahifasi.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="pen-tool" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: Figma</h1>
+  <p class="muted">Dizayn asoslari va front-endga tayyorlash</p>
+  <span class="badge">6-hafta · 17-dars</span>
+</section>
+

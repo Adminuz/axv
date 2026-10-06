@@ -34,8 +34,9 @@ Manba: `8-sinf web full-stack dasturlash.docx` (o'quv dasturi). Agentlar avval s
 |---|---|---|---|
 | 10–11 | 4 | CSS asoslari: selektorlar, rang, shrift | 📝 |
 | 12–14 | 4–5 | Box model, flexbox va grid | 📝 |
-| 15–17 | 5–6 | Responsiv dizayn, media so'rovlar, Figma | ⬜ |
-| 18–20 | 6–7 | Git va GitHub, hosting, SEO. Jamoa bilan loyiha | ⬜ |
+| 15–17 | 5–6 | Responsiv dizayn, media so'rovlar, Figma | 📝 |
+| 18 | 6 | Git va GitHub (1-qism): versiya nazorati, commit va GitHub'ga push | 📝 |
+| 19–20 | 7 | Git va GitHub (2-qism): clone, pull, branch, merge. Hosting, SEO. Jamoa bilan loyiha | ⬜ |
 | 21–22 | 7–8 | CSS animatsiya va transformatsiya. Serverga deploy | ⬜ |
 
 ## III-bob. CSS Framework - Bootstrap (5 dars)
