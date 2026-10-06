@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Flexbox</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>Flexbox</h1>
+  <p class="muted">display:flex, bosh va ko'ndalang o'q, justify-content, align-items, gap, flex-wrap, flex: grow/shrink/basis</p>
+  <span class="badge">10-sinf</span><span class="badge">Advanced UX/UI</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Takrorlash: 16-dars (selektorlar, kaskad, Box Model). Savol: «<code>border-box</code> nima beradi? Ikki kartani yonma-yon qo'ymoqchisiz — qanday qilasiz?»</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="columns-3" data-anim="pulse"></i></div><h3>Flex asoslari</h3><p>Konteyner va o'qlar</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="sliders-horizontal" data-anim="float"></i></div><h3>Tekislash va gap</h3><p>justify va align</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="move-horizontal" data-anim="blink"></i></div><h3>flex elementi</h3><p>grow, shrink, basis</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q"><code>box-sizing: border-box</code> da <code>width</code> nimani o'z ichiga oladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Padding va border ni</button>
+    <button class="opt" type="button">Faqat margin ni</button>
+    <button class="opt" type="button">Faqat content ni</button>
+    <button class="opt" type="button">Hech narsani</button>
+    </div>
+    <div class="explain">Umumiy o'lcham padding va border ni ham kiritadi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>Flex asoslari</h1>
+  <p>Konteyner va o'qlar</p>
+</section>
+
+<section>
+  <h2>Flex o'qlari</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">display: flex</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Bosh o'q</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Ko'ndalang o'q</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Elementlar</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Konteyner bolalarini tartiblaydi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Birinchi flex</h2>
+  <pre><code class="language-css" data-trim data-line-numbers="1-2|3|4">
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i><code>display: flex</code> ni <b>ota</b> (konteyner) ga yozasiz, bolalarga emas. Faqat bevosita bolalar flex elementi bo'ladi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>display: flex</code> qaysi elementga yoziladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Konteynerga (ota)</button>
+    <button class="opt" type="button">Har bir bolaga</button>
+    <button class="opt" type="button">Faqat <code>body</code> ga</button>
+    <button class="opt" type="button">Faqat rasmga</button>
+    </div>
+    <div class="explain">Konteynerga yoziladi, bolalari tartiblanadi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>Tekislash va gap</h1>
+  <p>justify va align</p>
+</section>
+
+<section>
+  <h2>Tekislash</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">justify-content</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">align-items</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">gap</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">flex-wrap</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">O'qlarga qarab ishlaydi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Tekislash va qatorlash</h2>
+  <pre><code class="language-css" data-trim data-line-numbers="2-6|9-13">
+/* markazlash */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* kartalar qatori */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i><code>align-items: center</code> vertikal markazlash uchun konteynerning balandligi bo'lishi kerak (<code>min-height</code> yoki <code>height</code>).</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Elementlarni chetga surib, oralig'ini teng qiluvchi qiymat?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>space-between</button>
+    <button class="opt" type="button">center</button>
+    <button class="opt" type="button">flex-end</button>
+    <button class="opt" type="button">stretch</button>
+    </div>
+    <div class="explain"><code>space-between</code>: birinchi va oxirgi chetda, oraliq teng.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>flex elementi</h1>
+  <p>grow, shrink, basis</p>
+</section>
+
+<section>
+  <h2>Navbar</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Logo</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">margin-left:</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">auto</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Havolalar</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Tugma</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Auto margin bo'sh joyni oladi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Navbar va teng kartalar</h2>
+  <pre><code class="language-css" data-trim data-line-numbers="1-4|6|8-10">
+nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+nav .links { margin-left: auto; }
+
+.card {
+  flex: 1 1 200px;
+}
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i><code>flex: 1 1 200px</code> + <code>flex-wrap: wrap</code> — mobilda kartalar avtomatik pastga tushadi (kamida 200px kenglikda).</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>flex: 1</code> nimani anglatadi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Elementlar bo'sh joyni teng bo'lishadi</button>
+    <button class="opt" type="button">Element yo'qoladi</button>
+    <button class="opt" type="button">Element 1px bo'ladi</button>
+    <button class="opt" type="button">Tartib 1 bo'ladi</button>
+    </div>
+    <div class="explain">Barcha elementlar teng o'sadi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>block va flex</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>Oddiy (block)</h3>Elementlar ustma-ust turadi, tekislash qiyin</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>flex</h3>Qatorda tizadi, markazlash va oraliq oson</div>
+  </div>
+  <div class="card accent fragment mt"><p>Bir yo'nalishda — Flexbox; ikki yo'nalishda — Grid.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Flex konteyner</h3><span class="flip-hint">bosing</span></div><div class="face back"><p><code>display: flex</code> berilgan ota element</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Bosh o'q</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Elementlar tizilgan yo'nalish</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>gap</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Elementlar orasidagi masofa</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>flex: 1</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Bo'sh joyni teng bo'lishish</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Navbar yasash</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="columns-3" data-anim="pulse"></i></div><h3>1. Flex</h3><p><code>nav { display: flex; }</code>.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="sliders-horizontal"></i></div><h3>2. Tekislang</h3><p><code>align-items: center</code>, <code>gap</code>.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="move-horizontal"></i></div><h3>3. Surib qo'ying</h3><p><code>margin-left: auto</code>.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>justify-content qiymatlari</h2>
+    <table>
+      <thead><tr><th>Qiymat</th><th>Natija</th><th>Qachon</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td><code>flex-start</code></td><td>boshiga</td><td>standart</td></tr>
+        <tr class="fragment"><td><code>center</code></td><td>o'rtaga</td><td>markazlash</td></tr>
+        <tr class="fragment"><td><code>space-between</code></td><td>chetlarga</td><td>navbar, kartalar</td></tr>
+        <tr class="fragment"><td><code>space-around</code></td><td>atrofida teng</td><td>tugmalar</td></tr>
+        <tr class="fragment"><td><code>space-evenly</code></td><td>hammasi teng</td><td>galereya</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: qiymatlar</p>
+  </section>
+  <section>
+    <h2>Kartalar qatori</h2>
+    <ol class="steps-n">
+      <li class="fragment">Konteynerga <code>display: flex; flex-wrap: wrap; gap: 16px;</code> bering.</li>
+      <li class="fragment">Har bir kartaga <code>flex: 1 1 200px;</code> bering.</li>
+      <li class="fragment">Brauzer oynasini torayting: kartalar pastga tushishini ko'ring.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Markazlash</h2>
+  <pre data-id="c"><code class="language-css" data-trim>
+/* ota */
+.hero { text-align: center; }
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Markazlash</h2>
+  <pre data-id="c"><code class="language-css" data-trim data-line-numbers="2|2">
+/* ota */
+.hero { display: flex; justify-content: center; align-items: center; }
+  </code></pre>
+</section>
+
+<section>
+  <h2>Flexbox raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="2" data-suf="">0</span></div><div class="l"> ta o'q: bosh va ko'ndalang</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> ta flex xossasi: grow, shrink, basis</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="1" data-suf="">0</span></div><div class="l"> ta yo'nalish: Flexbox bir o'lchamli</div></div>
+  </div>
+  <p class="small fragment">Flexbox — qator yoki ustun uchun eng qulay vosita.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Qatorga tizing: 3 ta <code>.box</code> ni qatorga qo'yib, oralariga 16px bering.</div>
+  <div class="task"><span class="level easy">Oson</span>Markazlash: <code>.hero</code> ichidagi matnni gorizontal va vertikal markazlang.</div>
+  <div class="task"><span class="level mid">O'rta</span>Navbar: Logo chapda, havolalar o'ngda turadigan navbar yozing.</div>
+  <div class="task"><span class="level mid">O'rta</span>Teng kartalar: 3 ta karta bo'sh joyni teng bo'lishsin.</div>
+  <div class="task"><span class="level hard">Qiyin</span>Moslashuvchan qator: Kartalar kamida 220px bo'lsin va mobilda pastga tushsin.</div>
+  <div class="task"><span class="level hard">Bonus</span>Tartib: <code>order</code> bilan 3-elementni birinchi qiling.</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Konteyner</h3><p><code>display: flex</code>, <code>flex-direction</code>, <code>gap</code>.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Tekislash</h3><p><code>justify-content</code> (bosh), <code>align-items</code> (ko'ndalang).</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Element</h3><p><code>flex: 1</code>, <code>flex-wrap</code>, <code>margin-left: auto</code>.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: Flexbox navbar va kartalar qatori.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="layout-grid" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: CSS Grid</h1>
+  <p class="muted">Murakkab sahifa to'rlari</p>
+  <span class="badge">6-hafta · 18-dars</span>
+</section>
+
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>

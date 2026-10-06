@@ -1,0 +1,282 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>CSS Grid</h1>
+  <p class="muted">display:grid, fr, repeat va minmax, gap, grid-template-areas, auto-fit, Grid va Flexbox solishtiruvi</p>
+  <span class="badge">10-sinf</span><span class="badge">Advanced UX/UI</span><span class="badge">6-hafta · 18-dars</span>
+  <aside class="notes">Takrorlash: 17-dars (Flexbox). Savol: «Flexbox qaysi holatda yetarli bo'lmaydi? Qator ham, ustun ham kerak bo'lsa nima qilamiz?»</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="layout-grid" data-anim="pulse"></i></div><h3>Grid asoslari</h3><p>Ustun va qatorlar</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="layout-template" data-anim="float"></i></div><h3>grid-template-areas</h3><p>Sahifa maketi</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="smartphone" data-anim="blink"></i></div><h3>Responsiv to'r</h3><p>auto-fit va minmax</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q">Flexbox qaysi o'lchamli joylashuv uchun?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Bir o'lchamli</button>
+    <button class="opt" type="button">Ikki o'lchamli</button>
+    <button class="opt" type="button">Uch o'lchamli</button>
+    <button class="opt" type="button">3D</button>
+    </div>
+    <div class="explain">Flexbox bir vaqtda bitta o'q bilan ishlaydi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>Grid asoslari</h1>
+  <p>Ustun va qatorlar</p>
+</section>
+
+<section>
+  <h2>Grid to'ri</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">display: grid</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Ustunlar</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">gap</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Elementlar</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">to'rga joylashadi</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Elementlar katakchalarga tushadi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Uch ustunli to'r</h2>
+  <pre><code class="language-css" data-trim data-line-numbers="1-2|3|4">
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i><code>fr</code> mavjud bo'sh joyni bo'ladi, <code>gap</code> hisobga olinadi. Qatorlar elementlar soniga qarab avtomatik qo'shiladi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>grid-template-columns: 1fr 2fr</code> natijasi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Ikkinchi ustun 2 baravar keng</button>
+    <button class="opt" type="button">Ikkala ustun teng</button>
+    <button class="opt" type="button">Uchta ustun</button>
+    <button class="opt" type="button">Ustun yo'q</button>
+    </div>
+    <div class="explain">Bo'sh joyning 1/3 va 2/3 qismi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>grid-template-areas</h1>
+  <p>Sahifa maketi</p>
+</section>
+
+<section>
+  <h2>Maket xaritasi</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">header</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">sidebar</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">main</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">footer</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Nomlar bo'yicha joylashadi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Sahifa maketi</h2>
+  <pre><code class="language-css" data-trim data-line-numbers="2-3|4-7|9|10-13">
+body {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-areas:
+    "header  header"
+    "sidebar main"
+    "footer  footer";
+  min-height: 100vh;
+}
+header  { grid-area: header; }
+aside   { grid-area: sidebar; }
+main    { grid-area: main; }
+footer  { grid-area: footer; }
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Har qatordagi ustunlar soni bir xil bo'lishi kerak va nomlar to'rtburchak shakl hosil qilsin (L shakl mumkin emas).</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Elementni nomlangan sohaga joylashtirish xossasi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>grid-area</button>
+    <button class="opt" type="button">grid-name</button>
+    <button class="opt" type="button">area-place</button>
+    <button class="opt" type="button">grid-slot</button>
+    </div>
+    <div class="explain"><code>grid-area: nom</code>.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>Responsiv to'r</h1>
+  <p>auto-fit va minmax</p>
+</section>
+
+<section>
+  <h2>Responsiv to'r</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">Keng ekran:</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">4 ustun</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">O'rta: 2 ustun</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Tor: 1 ustun</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Avtomatik</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Media-so'rovsiz moslashadi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Responsiv kartalar</h2>
+  <pre><code class="language-css" data-trim data-line-numbers="1-4|3|7-9">
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.card.featured {
+  grid-column: span 2;
+}
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i><code>auto-fit</code> o'rniga <code>auto-fill</code> bo'sh ustunlarni saqlab qoladi; kartalar uchun odatda <code>auto-fit</code> qulayroq.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Media-so'rovsiz responsiv to'r uchun qaysi yozuv?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>repeat(auto-fit, minmax(200px, 1fr))</button>
+    <button class="opt" type="button">repeat(3, 100px)</button>
+    <button class="opt" type="button">1fr 1fr 1fr</button>
+    <button class="opt" type="button">auto auto</button>
+    </div>
+    <div class="explain">Ustunlar soni oyna kengligiga qarab o'zi o'zgaradi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Flexbox va Grid</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>Flexbox</h3>Bir o'lchamli: navbar, tugmalar qatori</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>Grid</h3>Ikki o'lchamli: sahifa maketi, kartalar to'ri</div>
+  </div>
+  <div class="card accent fragment mt"><p>Ko'pincha ikkalasi birga ishlatiladi.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>fr</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Bo'sh joyning ulushi</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>minmax()</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Eng kam va eng ko'p o'lcham</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>grid-area</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Elementni nomlangan sohaga qo'yish</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>auto-fit</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Sig'gancha ustun joylash</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Sahifa maketi</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="layout-grid" data-anim="pulse"></i></div><h3>1. Ustunlar</h3><p><code>grid-template-columns</code>.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="layout-template"></i></div><h3>2. Sohalar</h3><p><code>grid-template-areas</code>.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="smartphone"></i></div><h3>3. Moslang</h3><p><code>auto-fit</code> va media-so'rov.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>Grid xossalari</h2>
+    <table>
+      <thead><tr><th>Xossa</th><th>Vazifa</th><th>Misol</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td><code>grid-template-columns</code></td><td>ustunlar</td><td><code>repeat(3, 1fr)</code></td></tr>
+        <tr class="fragment"><td><code>gap</code></td><td>oraliq</td><td><code>16px</code></td></tr>
+        <tr class="fragment"><td><code>grid-template-areas</code></td><td>maket xaritasi</td><td><code>"header header"</code></td></tr>
+        <tr class="fragment"><td><code>grid-area</code></td><td>soha nomi</td><td><code>header</code></td></tr>
+        <tr class="fragment"><td><code>grid-column</code></td><td>ustun yoyish</td><td><code>span 2</code></td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: xossalar</p>
+  </section>
+  <section>
+    <h2>Kartalar to'ri</h2>
+    <ol class="steps-n">
+      <li class="fragment">Konteynerga <code>display: grid</code> bering.</li>
+      <li class="fragment"><code>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))</code> yozing.</li>
+      <li class="fragment">Oynani torayting: ustunlar soni avtomatik kamayishini ko'ring.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Responsiv to'r</h2>
+  <pre data-id="c"><code class="language-css" data-trim>
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); }
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Responsiv to'r</h2>
+  <pre data-id="c"><code class="language-css" data-trim data-line-numbers="1|1">
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  </code></pre>
+</section>
+
+<section>
+  <h2>Grid raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="2" data-suf="">0</span></div><div class="l"> o'lchamli tizim: ustun va qator</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="12" data-suf="">0</span></div><div class="l"> ustunli grid — dizaynda keng tarqalgan</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="8" data-suf="pt">0</span></div><div class="l"> grid — oraliqlar uchun asos (qo'llanma)</div></div>
+  </div>
+  <p class="small fragment">Grid sahifa maketining asosiy vositasi.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>3 ustun: Konteynerda 3 ta teng ustun va 16px oraliq yarating.</div>
+  <div class="task"><span class="level easy">Oson</span>fr hisobi: <code>1fr 3fr</code> da ikkinchi ustun nechta marta keng?</div>
+  <div class="task"><span class="level mid">O'rta</span>Sidebar maket: Chap ustun 220px, o'ng ustun qolgan joyni olsin.</div>
+  <div class="task"><span class="level mid">O'rta</span>Areas: header, sidebar, main, footer maketini <code>areas</code> bilan yozing.</div>
+  <div class="task"><span class="level hard">Qiyin</span>Responsiv kartalar: Kartalar kamida 200px bo'lib, oynaga qarab ustun sonini o'zgartirsin.</div>
+  <div class="task"><span class="level hard">Bonus</span>Yoyilgan karta: Birinchi kartani 2 ustunga yoying.</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Asoslar</h3><p><code>display: grid</code>, <code>fr</code>, <code>repeat()</code>, <code>gap</code>.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Maket</h3><p><code>grid-template-areas</code> va <code>grid-area</code>.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Responsiv</h3><p><code>auto-fit</code> va <code>minmax()</code>.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: CSS Grid sahifa maketi.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="smartphone" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: Responsiv dizayn</h1>
+  <p class="muted">Media Queries, Mobile First</p>
+  <span class="badge">7-hafta · 19-dars</span>
+</section>
+

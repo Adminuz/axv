@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Test: 18-dars. CSS Grid</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>Test: 18-dars. CSS Grid</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">10-sinf</span><span class="badge">Advanced UX/UI</span><span class="badge">6-hafta · 18-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">Grid yoqish?</p>
+    <div class="opts">
+      <button class="opt" type="button">grid: on</button>
+      <button class="opt" type="button" data-ok>display: grid</button>
+      <button class="opt" type="button">layout: grid</button>
+      <button class="opt" type="button">position: grid</button>
+    </div>
+    <div class="explain"><code>display: grid</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q">Ustunlarni belgilovchi xossa?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>grid-template-columns</button>
+      <button class="opt" type="button">grid-columns-set</button>
+      <button class="opt" type="button">columns-grid</button>
+      <button class="opt" type="button">grid-cols</button>
+    </div>
+    <div class="explain"><code>grid-template-columns</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q"><code>fr</code> nima?</p>
+    <div class="opts">
+      <button class="opt" type="button">Piksel</button>
+      <button class="opt" type="button">Foiz</button>
+      <button class="opt" type="button" data-ok>Bo'sh joy ulushi</button>
+      <button class="opt" type="button">Rang</button>
+    </div>
+    <div class="explain">Fraction.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q"><code>repeat(3, 1fr)</code> natijasi?</p>
+    <div class="opts">
+      <button class="opt" type="button">1 ustun</button>
+      <button class="opt" type="button">3 qator</button>
+      <button class="opt" type="button" data-ok>3 teng ustun</button>
+      <button class="opt" type="button">Xato</button>
+    </div>
+    <div class="explain">Uch teng ustun.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q">Oraliq xossasi?</p>
+    <div class="opts">
+      <button class="opt" type="button">space</button>
+      <button class="opt" type="button">between</button>
+      <button class="opt" type="button" data-ok>gap</button>
+      <button class="opt" type="button">margin-grid</button>
+    </div>
+    <div class="explain"><code>gap</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q">Maketni xaritadek yozuvchi xossa?</p>
+    <div class="opts">
+      <button class="opt" type="button">grid-map</button>
+      <button class="opt" type="button" data-ok>grid-template-areas</button>
+      <button class="opt" type="button">grid-layout</button>
+      <button class="opt" type="button">areas-set</button>
+    </div>
+    <div class="explain"><code>grid-template-areas</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q">Elementni sohaga qo'yish?</p>
+    <div class="opts">
+      <button class="opt" type="button">grid-place</button>
+      <button class="opt" type="button">area-name</button>
+      <button class="opt" type="button">grid-slot</button>
+      <button class="opt" type="button" data-ok>grid-area</button>
+    </div>
+    <div class="explain"><code>grid-area</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q">Bir elementni 2 ustunga yoyish?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>grid-column: span 2</button>
+      <button class="opt" type="button">grid-span: 2</button>
+      <button class="opt" type="button">column: 2</button>
+      <button class="opt" type="button">grid-wide: 2</button>
+    </div>
+    <div class="explain"><code>span 2</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q">Responsiv to'r uchun qiymat?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>repeat(auto-fit, minmax(200px, 1fr))</button>
+      <button class="opt" type="button">repeat(3, 200px)</button>
+      <button class="opt" type="button">1fr 1fr</button>
+      <button class="opt" type="button">auto</button>
+    </div>
+    <div class="explain"><code>auto-fit</code> + <code>minmax</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q">Sahifa maketi uchun qaysi tizim qulay?</p>
+    <div class="opts">
+      <button class="opt" type="button">Flexbox</button>
+      <button class="opt" type="button">Float</button>
+      <button class="opt" type="button">Table</button>
+      <button class="opt" type="button" data-ok>Grid</button>
+    </div>
+    <div class="explain">Grid.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 18-dars konspekti va slaydlari</p>
+</section>
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>

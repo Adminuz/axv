@@ -56,9 +56,9 @@ Manba: `4.1.Standart`, `4_1_O'quv_qo'llanma...`, `4_1_Uslubiy_ko'rsatma...`. Mat
 | 13 | 5 | Semantik HTML5 teglari va accessibility (WCAG) asoslari | 📝 |
 | 14 | 5 | Formalar, validatsiya va interfeys elementlari semantikasi | 📝 |
 | 15 | 5 | SEO tamoyillari va meta teglarni to'g'ri qo'llash | 📝 |
-| 16 | 6 | CSS3 selektorlari, kaskadlik va Box Model arxitekturasi | ⬜ |
-| 17 | 6 | Flexbox layout tizimi va bir o'lchamli joylashuv | ⬜ |
-| 18 | 6 | CSS Grid layout tizimi va murakkab sahifa to'rlari | ⬜ |
+| 16 | 6 | CSS3 selektorlari, kaskadlik va Box Model arxitekturasi | 📝 |
+| 17 | 6 | Flexbox layout tizimi va bir o'lchamli joylashuv | 📝 |
+| 18 | 6 | CSS Grid layout tizimi va murakkab sahifa to'rlari | 📝 |
 | 19 | 7 | Responsiv dizayn tamoyillari va Media Queries (Mobile First) | ⬜ |
 | 20 | 7 | Adaptiv tipografiya va elastik o'lchov birliklari (rem, em, vh, vw) | ⬜ |
 | 21 | 7 | Zamonaviy CSS o'zgaruvchilari (CSS Variables) va Dark/Light mavzular | ⬜ |
