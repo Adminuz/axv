@@ -109,20 +109,26 @@ nav .links { margin-left: auto; display: flex; gap: 16px; }
 
 **Kutiladigan natija:** Markazdagi matn.
 
-**Yechim:** .hero {
+**Yechim:** 
+```css
+.hero {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 200px;
 }
+```
 
 ### 3-topshiriq (o'rta). Navbar
 Logo chapda, havolalar o'ngda turadigan navbar yozing.
 
 **Kutiladigan natija:** Havolalar o'ngga suriladi.
 
-**Yechim:** nav { display: flex; align-items: center; }
+**Yechim:** 
+```css
+nav { display: flex; align-items: center; }
 nav .links { margin-left: auto; }
+```
 
 ### 4-topshiriq (o'rta). Teng kartalar
 3 ta karta bo'sh joyni teng bo'lishsin.
@@ -136,8 +142,11 @@ Kartalar kamida 220px bo'lsin va mobilda pastga tushsin.
 
 **Kutiladigan natija:** Qatorlarga bo'linadi.
 
-**Yechim:** .cards { display: flex; flex-wrap: wrap; gap: 16px; }
+**Yechim:** 
+```css
+.cards { display: flex; flex-wrap: wrap; gap: 16px; }
 .card { flex: 1 1 220px; }
+```
 
 ### 6-topshiriq (qo'shimcha). Tartib
 `order` bilan 3-elementni birinchi qiling.

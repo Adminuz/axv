@@ -94,8 +94,11 @@ Barcha `h2` ni ko'k, `.note` ni sariq fonda bering.
 
 **Kutiladigan natija:** Ikki qoida.
 
-**Yechim:** h2 { color: blue; }
+**Yechim:** 
+```css
+h2 { color: blue; }
 .note { background: #fff3b0; }
+```
 
 ### 2-topshiriq (oson). Specificity
 `nav a` va `.menu a` dan qaysi biri kuchli?
@@ -123,9 +126,12 @@ Shu qutini umumiy kengligi 200px bo'ladigan qiling.
 
 **Kutiladigan natija:** Soyali karta.
 
-**Yechim:** .card:hover {
+**Yechim:** 
+```css
+.card:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,.2);
 }
+```
 
 ### 6-topshiriq (qo'shimcha). Meros
 `color` meros bo'ladimi, `border` ham? Misol bering.

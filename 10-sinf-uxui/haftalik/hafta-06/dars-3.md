@@ -100,11 +100,14 @@ Konteynerda 3 ta teng ustun va 16px oraliq yarating.
 
 **Kutiladigan natija:** Uch ustunli to'r.
 
-**Yechim:** .grid {
+**Yechim:** 
+```css
+.grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
+```
 
 ### 2-topshiriq (oson). fr hisobi
 `1fr 3fr` da ikkinchi ustun nechta marta keng?
@@ -118,20 +121,26 @@ Chap ustun 220px, o'ng ustun qolgan joyni olsin.
 
 **Kutiladigan natija:** Sidebar va asosiy qism.
 
-**Yechim:** .layout {
+**Yechim:** 
+```css
+.layout {
   display: grid;
   grid-template-columns: 220px 1fr;
 }
+```
 
 ### 4-topshiriq (o'rta). Areas
 header, sidebar, main, footer maketini `areas` bilan yozing.
 
 **Kutiladigan natija:** To'rt qismli sahifa.
 
-**Yechim:** grid-template-areas:
+**Yechim:** 
+```css
+grid-template-areas:
   "header header"
   "sidebar main"
   "footer footer";
+```
 
 ### 5-topshiriq (qiyin). Responsiv kartalar
 Kartalar kamida 200px bo'lib, oynaga qarab ustun sonini o'zgartirsin.
