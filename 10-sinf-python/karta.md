@@ -45,9 +45,9 @@ Manba: `4_2_Standart...`, `4_2_Uslubiy_ko`rsatma...`, `4_2_O'quv_qo'llanma...`. 
 | 13 | 5 | Foydalanuvchilarni boshqarish: Identifikatsiya, autentifikatsiya va avtorizatsiya. Token, session va JWT | 📝 |
 | 14 | 5 | CRUD amallarni bajarish (model, forma, validatsiya) | 📝 |
 | 15 | 5 | Filtrlash, qidiruv va tartiblash | 📝 |
-| 16 | 6 | Fayllar bilan ishlash | ⬜ |
-| 17 | 6 | Loyihani yakunlash | ⬜ |
-| 18 | 6 | Docker orqali deploy qilish | ⬜ |
+| 16 | 6 | Fayllar bilan ishlash | 📝 |
+| 17 | 6 | Loyihani yakunlash | 📝 |
+| 18 | 6 | Docker orqali deploy qilish | 📝 |
 | 19 | 7 | FastAPI da real time ilova ishlab chiqish (Web socket) | ⬜ |
 
 ## III BOB. Prompt engineering

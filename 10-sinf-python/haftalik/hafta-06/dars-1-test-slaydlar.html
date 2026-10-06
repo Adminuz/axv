@@ -1,0 +1,157 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Test: 16-dars. Fayllar (UploadFile)</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">10-sinf</span><span class="badge">Advanced Python Back-end</span><span class="badge">6-hafta · 16-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">Fayl qabul qilish tipi?</p>
+    <div class="opts">
+      <button class="opt" type="button">FileText</button>
+      <button class="opt" type="button">BinaryStr</button>
+      <button class="opt" type="button" data-ok>UploadFile</button>
+      <button class="opt" type="button">FormData</button>
+    </div>
+    <div class="explain"><code>UploadFile</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q">Qaysi paket kerak?</p>
+    <div class="opts">
+      <button class="opt" type="button">python-file</button>
+      <button class="opt" type="button">pillow-upload</button>
+      <button class="opt" type="button">fastapi-files</button>
+      <button class="opt" type="button" data-ok>python-multipart</button>
+    </div>
+    <div class="explain"><code>python-multipart</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q">Noto'g'ri fayl turi uchun status?</p>
+    <div class="opts">
+      <button class="opt" type="button">200</button>
+      <button class="opt" type="button">201</button>
+      <button class="opt" type="button" data-ok>415</button>
+      <button class="opt" type="button">301</button>
+    </div>
+    <div class="explain">415.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q">Katta fayl uchun status?</p>
+    <div class="opts">
+      <button class="opt" type="button">415</button>
+      <button class="opt" type="button">404</button>
+      <button class="opt" type="button" data-ok>413</button>
+      <button class="opt" type="button">418</button>
+    </div>
+    <div class="explain">413.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q">Faylni nega <code>uuid4</code> nomi bilan saqlaymiz?</p>
+    <div class="opts">
+      <button class="opt" type="button">Chiroyli bo'lishi uchun</button>
+      <button class="opt" type="button">Tezroq bo'lishi uchun</button>
+      <button class="opt" type="button">Sababi yo'q</button>
+      <button class="opt" type="button" data-ok>Xavfsizlik va noyoblik uchun</button>
+    </div>
+    <div class="explain">Zararli va takroriy nomdan himoya.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q">Yuklab olish uchun javob turi?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>FileResponse</button>
+      <button class="opt" type="button">JSONResponse</button>
+      <button class="opt" type="button">HTMLResponse</button>
+      <button class="opt" type="button">TextResponse</button>
+    </div>
+    <div class="explain"><code>FileResponse</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q">Path traversal belgisi?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>../</button>
+      <button class="opt" type="button">@@</button>
+      <button class="opt" type="button">##</button>
+      <button class="opt" type="button">**</button>
+    </div>
+    <div class="explain"><code>../</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q"><code>await file.read()</code> nima qaytaradi?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>bytes</button>
+      <button class="opt" type="button">str</button>
+      <button class="opt" type="button">dict</button>
+      <button class="opt" type="button">list</button>
+    </div>
+    <div class="explain">Fayl mazmuni baytlarda.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q">Maydon bilan fayl birga yuborilsa?</p>
+    <div class="opts">
+      <button class="opt" type="button">Json(...)</button>
+      <button class="opt" type="button">Body(...)</button>
+      <button class="opt" type="button" data-ok>Form(...)</button>
+      <button class="opt" type="button">Path(...)</button>
+    </div>
+    <div class="explain"><code>Form</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q">Bazada fayldan nima saqlanadi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Butun mazmuni har doim</button>
+      <button class="opt" type="button">Hech narsa</button>
+      <button class="opt" type="button">Parol</button>
+      <button class="opt" type="button" data-ok>Nomi (yo'li)</button>
+    </div>
+    <div class="explain">Odatda nom yoki yo'l.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 16-dars konspekti va slaydlari</p>
+</section>
