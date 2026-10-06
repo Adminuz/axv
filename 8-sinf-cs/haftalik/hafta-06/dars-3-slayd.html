@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Zamonaviy IT yo'nalishlari</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>Zamonaviy IT yo'nalishlari</h1>
+  <p class="muted">Web, Mobile, Data Science, AI/ML, DevOps, Cybersecurity</p>
+  <span class="badge">8-sinf</span><span class="badge">Computer Science Foundation</span><span class="badge">6-hafta · 18-dars</span>
+  <aside class="notes">Takrorlash: 14–17-darslar (Git, GitHub). Savol: «Telefondagi ilova, sayt va o'yinni kimlar yaratadi? Qaysi kasb sizga qiziq?» Dars — tanishuv: chuqur texnik tafsilotlar kerak emas, asosiy e'tibor g'oya va misollarda.</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="globe" data-anim="pulse"></i></div><h3>Web va Mobile</h3><p>Sayt va ilovalar</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="chart-column" data-anim="float"></i></div><h3>Data Science va AI</h3><p>Ma'lumotdan bilim</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="shield" data-anim="blink"></i></div><h3>DevOps va Cybersecurity</h3><p>Ishonchli va xavfsiz</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q">Loyihani GitHub'ga yuboradigan buyruq?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok><code>git push</code></button>
+    <button class="opt" type="button"><code>git pull</code></button>
+    <button class="opt" type="button"><code>git clone</code></button>
+    <button class="opt" type="button"><code>git init</code></button>
+    </div>
+    <div class="explain"><code>push</code> — yuborish.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>Web va Mobile</h1>
+  <p>Sayt va ilovalar</p>
+</section>
+
+<section>
+  <h2>Web va Mobile</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">Front-end:</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">ko'rinish</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Back-end:</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">server</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Android / iOS</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Ilova do'konga</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Sayt yoki ilova yaratish yo'li</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Web va Mobile: qisqacha</h2>
+  <pre><code class="language-text" data-trim data-line-numbers="1|2|3|4|5">
+Web Front-end : HTML, CSS, JavaScript
+Web Back-end  : Python, JavaScript (Node.js), baza
+Android       : Kotlin
+iPhone (iOS)  : Swift
+Ikkala tizim  : Flutter, React Native
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Hozir hamma narsani o'rganish shart emas. Birinchi qadam — HTML va oddiy sahifa yaratish: shu yo'l kelasi bosqichlarda Web Full-Stack yo'nalishiga olib boradi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Foydalanuvchi ko'radigan sayt qismi nima deyiladi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Front-end</button>
+    <button class="opt" type="button">Back-end</button>
+    <button class="opt" type="button">Server xonasi</button>
+    <button class="opt" type="button">Antivirus</button>
+    </div>
+    <div class="explain">Front-end — ko'rinadigan qism.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>Data Science va AI</h1>
+  <p>Ma'lumotdan bilim</p>
+</section>
+
+<section>
+  <h2>Ma'lumotdan AI gacha</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">Ma'lumot</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">yig'ish</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Tahlil (Data</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">Science)</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">O'rgatish (ML)</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Natija:</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">bashorat</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">AI ning yoqilg'isi — ma'lumot</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Data Science va AI: qisqacha</h2>
+  <pre><code class="language-text" data-trim data-line-numbers="1|2|3|4">
+Data Science : ma'lumot -&gt; jadval, diagramma, xulosa
+AI           : kompyuter aqlli ish bajaradi
+ML           : misollardan o'rganish (AI ning qismi)
+Vositalar    : Excel, Python, SQL
+  </code></pre>
+  <div class="callout warn mt fragment"><i data-ic="triangle-alert"></i>AI hamma narsani to'g'ri bilmaydi: u xato qilishi mumkin. Muhim ma'lumotni (masalan, uyga vazifa javobi) ishonchli manbada tekshiring.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Machine Learning'da dastur qanday o'rganadi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Ko'p misollardan</button>
+    <button class="opt" type="button">Faqat qo'lda yozilgan qoidalardan</button>
+    <button class="opt" type="button">Internetsiz</button>
+    <button class="opt" type="button">Antivirus orqali</button>
+    </div>
+    <div class="explain">ML — misollardan o'rganish.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>DevOps va Cybersecurity</h1>
+  <p>Ishonchli va xavfsiz</p>
+</section>
+
+<section>
+  <h2>Ishonchli tizim</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Kod yoziladi</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Serverga</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">chiqariladi</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Kuzatiladi</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Himoya</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">qilinadi</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">DevOps + Cybersecurity</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>DevOps va Cybersecurity: qisqacha</h2>
+  <pre><code class="language-text" data-trim data-line-numbers="1|2|3|4">
+DevOps        : dastur -&gt; server, avtomatlashtirish
+Vositalar     : Git, GitHub, bulut
+Cybersecurity : tizim va ma'lumot himoyasi
+Etik xaker    : ruxsat bilan zaiflik topadi
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Etik xaker faqat ruxsat bilan ishlaydi. Boshqaning akkaunti yoki saytiga ruxsatsiz kirish — qonunbuzarlik.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">DevOps nima bilan shug'ullanadi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Dasturni serverga chiqarish va ishlashini ta'minlash</button>
+    <button class="opt" type="button">Faqat rasm chizish</button>
+    <button class="opt" type="button">Faqat video tahrirlash</button>
+    <button class="opt" type="button">Faqat chop etish</button>
+    </div>
+    <div class="explain">DevOps — chiqarish va avtomatlashtirish.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Data Science va AI/ML</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>Data Science</h3>Ma'lumotni tahlil qilib xulosa chiqaradi</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>AI / ML</h3>Kompyuter misollardan o'rganib, bashorat qiladi</div>
+  </div>
+  <div class="card accent fragment mt"><p>Data — xom ashyo, ML — undan o'rgangan model.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Front-end</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Foydalanuvchi ko'radigan qism</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Back-end</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Server va baza qismi</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Machine Learning</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Misollardan o'rganish</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>DevOps</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Dasturni chiqarish va avtomatlashtirish</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Yo'l tanlash</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="compass" data-anim="pulse"></i></div><h3>1. Qiziqish</h3><p>Nima yoqadi?</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="search"></i></div><h3>2. Sinab ko'rish</h3><p>Kichik mashq.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="rocket"></i></div><h3>3. Boshlash</h3><p>Birinchi qadam.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>6 yo'nalish</h2>
+    <table>
+      <thead><tr><th>Yo'nalish</th><th>Nima yaratadi</th><th>Vosita</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td>Web</td><td>Saytlar</td><td>HTML, CSS, JS</td></tr>
+        <tr class="fragment"><td>Mobile</td><td>Telefon ilovalari</td><td>Kotlin, Swift, Flutter</td></tr>
+        <tr class="fragment"><td>Data Science</td><td>Tahlil va xulosa</td><td>Excel, Python, SQL</td></tr>
+        <tr class="fragment"><td>AI / ML</td><td>Aqlli tizimlar</td><td>Python</td></tr>
+        <tr class="fragment"><td>DevOps</td><td>Ishonchli server</td><td>Git, bulut</td></tr>
+        <tr class="fragment"><td>Cybersecurity</td><td>Himoya</td><td>Parol, tekshiruv</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: yo'nalishlar</p>
+  </section>
+  <section>
+    <h2>«Mening IT yo'lim»</h2>
+    <ol class="steps-n">
+      <li class="fragment">Har bir yo'nalishdan bitta mahsulot misolini yozing.</li>
+      <li class="fragment">Eng qiziqarli 2 ta yo'nalishni tanlang va sababini yozing.</li>
+      <li class="fragment">Tanlangan yo'nalish uchun 1 ta birinchi qadam belgilang (masalan, HTML sahifa).</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Yo'nalishni tanlash</h2>
+  <pre data-id="c"><code class="language-text" data-trim>
+«Hammasi menga qiziq» deb tanlamaslik
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Yo'nalishni tanlash</h2>
+  <pre data-id="c"><code class="language-text" data-trim data-line-numbers="1|1">
+Sinab ko'rib, 1–2 ta yo'nalishni tanlash
+  </code></pre>
+</section>
+
+<section>
+  <h2>IT raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="6" data-suf="">0</span></div><div class="l"> asosiy yo'nalish bugun tanishildi</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="2" data-suf="">0</span></div><div class="l"> yo'nalish — Web va Mobile — ko'rinadigan natija beradi</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="1" data-suf="">0</span></div><div class="l"> birinchi qadam yetarli</div></div>
+  </div>
+  <p class="small fragment">Boshlash uchun bitta yo'nalish va bitta kichik loyiha yetadi.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Front yoki back: Tugma rangi va sahifa ko'rinishi front-end'ga mi yoki back-end'ga?</div>
+  <div class="task"><span class="level easy">Oson</span>Mobile tillari: Android uchun va iPhone uchun qaysi tillar ishlatiladi?</div>
+  <div class="task"><span class="level mid">O'rta</span>Data Science misoli: Sinfdagi baholar bo'yicha qanday tahlil qilish mumkin?</div>
+  <div class="task"><span class="level mid">O'rta</span>AI yoki ML: AI va ML o'rtasidagi bog'liqlikni bir jumlada yozing.</div>
+  <div class="task"><span class="level hard">Qiyin</span>Xavfsiz foydalanish: AI javobini nega tekshirish kerak? 2 sabab yozing.</div>
+  <div class="task"><span class="level hard">Bonus</span>Mening yo'lim: Qiziq yo'nalishingiz va birinchi qadamni yozing.</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Web va Mobile</h3><p>Sayt va ilovalar yaratadi.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Data Science va AI</h3><p>Ma'lumotdan bilim va o'rganuvchi tizimlar.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>DevOps va Cybersecurity</h3><p>Ishonchli va xavfsiz tizim.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: «Mening IT yo'lim» kartochkasi.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="shield" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: Kiberxavfsizlik asoslari</h1>
+  <p class="muted">Shaxsiy ma'lumotlarni himoyalash</p>
+  <span class="badge">7-hafta · 19-dars</span>
+</section>
+
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>

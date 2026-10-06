@@ -1,0 +1,272 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>GitHub akkaunti va push</h1>
+  <p class="muted">GitHub akkaunt, yangi repository, remote, push, tekshirish</p>
+  <span class="badge">8-sinf</span><span class="badge">Computer Science Foundation</span><span class="badge">6-hafta · 16-dars</span>
+  <aside class="notes">Takrorlash: 15-dars (init, add, commit, log). Savol: «Kundalik loyihamiz hozir qayerda saqlanyapti? Kompyuter buzilsa nima bo'ladi?» Akkaunt ochish — ota-ona ruxsati va yordami bilan (GitHub uchun eng kichik yosh — 13).</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="user-plus" data-anim="pulse"></i></div><h3>GitHub akkaunt</h3><p>Internetdagi omborxona</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="folder-plus" data-anim="float"></i></div><h3>Yangi repository</h3><p>Bo'sh ombor</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="upload" data-anim="blink"></i></div><h3>remote va push</h3><p>Loyiha internetga chiqadi</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q">Commit qilish uchun avval qaysi buyruq kerak?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok><code>git add</code></button>
+    <button class="opt" type="button"><code>git init</code> yana bir marta</button>
+    <button class="opt" type="button"><code>git log</code></button>
+    <button class="opt" type="button"><code>git clone</code></button>
+    </div>
+    <div class="explain">Avval <code>git add</code> (staging), keyin <code>git commit</code>.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>GitHub akkaunt</h1>
+  <p>Internetdagi omborxona</p>
+</section>
+
+<section>
+  <h2>Akkaunt ochish</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Sign up</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Email</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">tasdiqlash</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">Username</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">tanlash</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">2FA yoqish</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Ota-ona bilan birga</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Git'ga o'zingizni tanishtiring (15-dars)</h2>
+  <pre><code class="language-bash" data-trim data-line-numbers="1|2|3">
+git config --global user.name "Alisher Karimov"
+git config --global user.email "alisher@example.com"
+git config --list
+  </code></pre>
+  <div class="callout warn mt fragment"><i data-ic="triangle-alert"></i>Commit email'i GitHub akkauntidagi email bilan bir xil bo'lsa, commitlar profilingizga bog'lanadi. Xohlasangiz, GitHub'ning yashirin (noreply) email manzilidan foydalaning.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Username tanlashda qaysi biri xavfsizroq?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok><code>alisher-codes</code></button>
+    <button class="opt" type="button"><code>alisher-karimov-2012-toshkent</code></button>
+    <button class="opt" type="button"><code>07-mart-2012</code></button>
+    <button class="opt" type="button"><code>mening-uy-manzilim</code></button>
+    </div>
+    <div class="explain">Username ommaviy: shaxsiy ma'lumotni yozmang.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>Yangi repository</h1>
+  <p>Bo'sh ombor</p>
+</section>
+
+<section>
+  <h2>Yangi repository</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">+ → New</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">repository</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Nom yozish</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">Public /</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">Private</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Create</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">README qo'shmang: repo bo'sh bo'lsin</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Repository manzili</h2>
+  <pre><code class="language-bash" data-trim data-line-numbers="2|4-5">
+# GitHub bergan manzil (HTTPS):
+https://github.com/username/kundalik.git
+
+# Manzil tuzilishi:
+# github.com / egasi / repository nomi .git
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Repository nomini kichik harf va chiziqcha bilan yozing (<code>mening-kundaligim</code>): bo'sh joy va maxsus belgilar GitHub'da chiziqchaga aylanadi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Mavjud loyihani yuklashda nega «Add a README» belgisini qo'ymaymiz?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Repo bo'sh bo'lsin, tarixlar farq qilmasin</button>
+    <button class="opt" type="button">README foydasiz</button>
+    <button class="opt" type="button">Belgi pullik</button>
+    <button class="opt" type="button">Repo o'chib ketadi</button>
+    </div>
+    <div class="explain">Bo'sh repo — kompyuterdagi tarixni to'g'ridan-to'g'ri yuklash uchun qulay.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>remote va push</h1>
+  <p>Loyiha internetga chiqadi</p>
+</section>
+
+<section>
+  <h2>Push yo'li</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Ishchi papka</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Staging</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Mahalliy repo</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">GitHub</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">(origin)</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">add → commit → push</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Kundalik loyihasini GitHub'ga yuklash</h2>
+  <pre><code class="language-bash" data-trim data-line-numbers="1|2|3|4|5">
+cd kundalik
+git remote add origin https://github.com/username/kundalik.git
+git remote -v
+git branch -M main
+git push -u origin main
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Keyingi o'zgarishlarda: <code>git add .</code> → <code>git commit -m "xabar"</code> → <code>git push</code>. Commit qilmagan o'zgarish push bilan yuklanmaydi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>git push</code> nimani yuboradi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Commit qilingan o'zgarishlarni GitHub'ga</button>
+    <button class="opt" type="button">Hali add qilinmagan fayllarni</button>
+    <button class="opt" type="button">Faqat README'ni</button>
+    <button class="opt" type="button">Parolni</button>
+    </div>
+    <div class="explain">Faqat commit qilinganlar yuboriladi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Git va GitHub</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>Git</h3>Kompyuterdagi dastur, internetsiz ishlaydi</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>GitHub</h3>Internetdagi sayt, loyihani bulutda saqlaydi</div>
+  </div>
+  <div class="card accent fragment mt"><p>Git — suratga oladi, GitHub — albomda saqlaydi.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>remote</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Masofaviy repository manzili</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>origin</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Remote'ning odatiy nomi</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>push</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Commitlarni GitHub'ga yuborish</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Public / Private</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Hamma ko'radi / faqat taklif qilinganlar</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Loyihani joylash</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="user-plus" data-anim="pulse"></i></div><h3>1. Akkaunt</h3><p>GitHub'ga kiring.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="folder-plus"></i></div><h3>2. Repository</h3><p>Bo'sh repo yarating.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="upload"></i></div><h3>3. Push</h3><p>remote qo'shib, yuboring.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>Yangi buyruqlar</h2>
+    <table>
+      <thead><tr><th>Buyruq</th><th>Vazifasi</th><th>Qachon</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td><code>git remote add origin URL</code></td><td>GitHub manzilini ulaydi</td><td>Bir marta</td></tr>
+        <tr class="fragment"><td><code>git remote -v</code></td><td>Ulangan manzillarni ko'rsatadi</td><td>Tekshirish</td></tr>
+        <tr class="fragment"><td><code>git branch -M main</code></td><td>Branch nomini <code>main</code> qiladi</td><td>Bir marta</td></tr>
+        <tr class="fragment"><td><code>git push -u origin main</code></td><td>Birinchi yuklash</td><td>Bir marta</td></tr>
+        <tr class="fragment"><td><code>git push</code></td><td>Keyingi yuklashlar</td><td>Har commitdan keyin</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: push buyruqlari</p>
+  </section>
+  <section>
+    <h2>«Kundalik» GitHub'da</h2>
+    <ol class="steps-n">
+      <li class="fragment">GitHub'da <code>kundalik</code> nomli bo'sh repository yarating.</li>
+      <li class="fragment">Kompyuterda <code>git remote add origin ...</code> va <code>git push -u origin main</code> ni bajaring.</li>
+      <li class="fragment">Yana bitta o'zgarish qiling: <code>add</code>, <code>commit</code>, <code>push</code>, GitHub'da yangi commitni toping.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Push tartibi</h2>
+  <pre data-id="c"><code class="language-bash" data-trim>
+git push
+git commit -m "Yangi qator"
+git add .
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Push tartibi</h2>
+  <pre data-id="c"><code class="language-bash" data-trim data-line-numbers="1|1">
+git add .
+git commit -m "Yangi qator"
+git push
+  </code></pre>
+</section>
+
+<section>
+  <h2>GitHub raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="13" data-suf="">0</span></div><div class="l"> yosh — GitHub akkaunti uchun eng kichik yosh</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> buyruq: add → commit → push</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="1" data-suf="">0</span></div><div class="l"> marta — remote qo'shiladi</div></div>
+  </div>
+  <p class="small fragment">Bir marta ulaysiz, keyin har safar uchta buyruq.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Akkaunt qoidalari: GitHub akkauntini xavfsiz ochishning 4 qoidasini yozing.</div>
+  <div class="task"><span class="level easy">Oson</span>Manzilni o'qing: <code>github.com/ali/kundalik.git</code> da egasi va repo nomi qaysi?</div>
+  <div class="task"><span class="level mid">O'rta</span>Remote ulash: <code>kundalik</code> repo'sini GitHub manziliga ulang.</div>
+  <div class="task"><span class="level mid">O'rta</span>Birinchi push: Branch nomini <code>main</code> qilib, birinchi marta yuboring.</div>
+  <div class="task"><span class="level hard">Qiyin</span>Keyingi o'zgarish: README'ga qator qo'shing va GitHub'ga yuboring.</div>
+  <div class="task"><span class="level hard">Bonus</span>Public yoki Private: Shaxsiy kundalik uchun qaysi ko'rinishni tanlaysiz? Nega?</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Akkaunt</h3><p>Xavfsiz username, kuchli parol, 2FA.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Repository</h3><p>Bo'sh repo, Public yoki Private.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Push</h3><p>remote qo'shing, <code>push -u origin main</code>.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: Kundalik loyihasini GitHub'ga yuklash.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="git-branch" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: clone, pull va branch</h1>
+  <p class="muted">Nusxa olish va yangilash</p>
+  <span class="badge">6-hafta · 17-dars</span>
+</section>
+
