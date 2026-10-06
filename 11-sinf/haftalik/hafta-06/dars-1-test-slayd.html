@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Test: 16-dars. Unix/Linux muhiti</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>Test: 16-dars. Unix/Linux muhiti</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">11-sinf</span><span class="badge">Professional IT development</span><span class="badge">6-hafta · 16-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">Sozlamalar fayllari qaysi katalogda?</p>
+    <div class="opts">
+      <button class="opt" type="button">/tmp</button>
+      <button class="opt" type="button">/dev</button>
+      <button class="opt" type="button" data-ok>/etc</button>
+      <button class="opt" type="button">/proc</button>
+    </div>
+    <div class="explain"><code>/etc</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q">Loglar odatda qayerda?</p>
+    <div class="opts">
+      <button class="opt" type="button">/home</button>
+      <button class="opt" type="button" data-ok>/var/log</button>
+      <button class="opt" type="button">/opt</button>
+      <button class="opt" type="button">/sys</button>
+    </div>
+    <div class="explain"><code>/var/log</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q"><code>rwxr-x---</code> oktali?</p>
+    <div class="opts">
+      <button class="opt" type="button">755</button>
+      <button class="opt" type="button">640</button>
+      <button class="opt" type="button">700</button>
+      <button class="opt" type="button" data-ok>750</button>
+    </div>
+    <div class="explain">750.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q">Ruxsatni o'zgartiruvchi buyruq?</p>
+    <div class="opts">
+      <button class="opt" type="button">chown</button>
+      <button class="opt" type="button">chdir</button>
+      <button class="opt" type="button">chperm</button>
+      <button class="opt" type="button" data-ok>chmod</button>
+    </div>
+    <div class="explain"><code>chmod</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q">Egasini o'zgartiruvchi buyruq?</p>
+    <div class="opts">
+      <button class="opt" type="button">chmod</button>
+      <button class="opt" type="button">chuser</button>
+      <button class="opt" type="button">owner</button>
+      <button class="opt" type="button" data-ok>chown</button>
+    </div>
+    <div class="explain"><code>chown</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q"><code>umask 022</code> da oddiy fayl?</p>
+    <div class="opts">
+      <button class="opt" type="button">666</button>
+      <button class="opt" type="button" data-ok>644</button>
+      <button class="opt" type="button">755</button>
+      <button class="opt" type="button">600</button>
+    </div>
+    <div class="explain">644.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q">Xizmat holatini ko'rsatuvchi buyruq?</p>
+    <div class="opts">
+      <button class="opt" type="button">systemctl info</button>
+      <button class="opt" type="button">service show</button>
+      <button class="opt" type="button" data-ok>systemctl status</button>
+      <button class="opt" type="button">status systemctl</button>
+    </div>
+    <div class="explain"><code>systemctl status</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q">Xizmat logini jonli ko'rish?</p>
+    <div class="opts">
+      <button class="opt" type="button">tail -u nom</button>
+      <button class="opt" type="button">log -f nom</button>
+      <button class="opt" type="button">show log nom</button>
+      <button class="opt" type="button" data-ok>journalctl -u nom -f</button>
+    </div>
+    <div class="explain"><code>journalctl -u nom -f</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q">Tinglayotgan portlarni ko'rsatuvchi?</p>
+    <div class="opts">
+      <button class="opt" type="button">ip a</button>
+      <button class="opt" type="button">dig</button>
+      <button class="opt" type="button">curl -I</button>
+      <button class="opt" type="button" data-ok>ss -lntp</button>
+    </div>
+    <div class="explain"><code>ss -lntp</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q">Minimal ruxsat qoidasi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Hammaga 777</button>
+      <button class="opt" type="button" data-ok>Kerak bo'lgancha, ortig'i yo'q</button>
+      <button class="opt" type="button">Faqat root</button>
+      <button class="opt" type="button">Ruxsat kerak emas</button>
+    </div>
+    <div class="explain">Kerakli huquq berilsin.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 16-dars konspekti va slaydlari</p>
+</section>
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>

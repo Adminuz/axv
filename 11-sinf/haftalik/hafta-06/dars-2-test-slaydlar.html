@@ -1,0 +1,157 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Test: 17-dars. SSH kalitlari</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">11-sinf</span><span class="badge">Professional IT development</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">Serverga qo'yiladigan kalit?</p>
+    <div class="opts">
+      <button class="opt" type="button">Shaxsiy</button>
+      <button class="opt" type="button" data-ok>Ommaviy</button>
+      <button class="opt" type="button">Ikkalasi</button>
+      <button class="opt" type="button">Hech qaysi</button>
+    </div>
+    <div class="explain">Ommaviy (<code>.pub</code>).</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q">Tavsiya etilgan algoritm?</p>
+    <div class="opts">
+      <button class="opt" type="button">md5</button>
+      <button class="opt" type="button" data-ok>ed25519</button>
+      <button class="opt" type="button">des</button>
+      <button class="opt" type="button">rot13</button>
+    </div>
+    <div class="explain"><code>ed25519</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q">Kalit yaratuvchi buyruq?</p>
+    <div class="opts">
+      <button class="opt" type="button">ssh-make</button>
+      <button class="opt" type="button">ssh-new</button>
+      <button class="opt" type="button">key-gen</button>
+      <button class="opt" type="button" data-ok>ssh-keygen</button>
+    </div>
+    <div class="explain"><code>ssh-keygen</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q">Kalitni serverga joylovchi buyruq?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>ssh-copy-id</button>
+      <button class="opt" type="button">ssh-send</button>
+      <button class="opt" type="button">ssh-put</button>
+      <button class="opt" type="button">scp-key</button>
+    </div>
+    <div class="explain"><code>ssh-copy-id</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q"><code>~/.ssh</code> ruxsati?</p>
+    <div class="opts">
+      <button class="opt" type="button">777</button>
+      <button class="opt" type="button">666</button>
+      <button class="opt" type="button">755 va hammaga yozish</button>
+      <button class="opt" type="button" data-ok>700</button>
+    </div>
+    <div class="explain">700.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q"><code>authorized_keys</code> ruxsati?</p>
+    <div class="opts">
+      <button class="opt" type="button">777</button>
+      <button class="opt" type="button">666</button>
+      <button class="opt" type="button" data-ok>600</button>
+      <button class="opt" type="button">000</button>
+    </div>
+    <div class="explain">600.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q">Parol bilan kirishni o'chirish?</p>
+    <div class="opts">
+      <button class="opt" type="button">PasswordAuthentication yes</button>
+      <button class="opt" type="button" data-ok>PasswordAuthentication no</button>
+      <button class="opt" type="button">PermitPassword no</button>
+      <button class="opt" type="button">NoPassword on</button>
+    </div>
+    <div class="explain"><code>PasswordAuthentication no</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q">Root bilan kirishni taqiqlash?</p>
+    <div class="opts">
+      <button class="opt" type="button">PermitRootLogin yes</button>
+      <button class="opt" type="button">RootOnly no</button>
+      <button class="opt" type="button" data-ok>PermitRootLogin no</button>
+      <button class="opt" type="button">BlockRoot yes</button>
+    </div>
+    <div class="explain"><code>PermitRootLogin no</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q">Batafsil ulanish logi?</p>
+    <div class="opts">
+      <button class="opt" type="button">ssh --fast</button>
+      <button class="opt" type="button">ssh -q</button>
+      <button class="opt" type="button">ssh -n</button>
+      <button class="opt" type="button" data-ok>ssh -vvv</button>
+    </div>
+    <div class="explain"><code>ssh -vvv</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q">Server kaliti o'zgarganda nima qilinadi?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>Sababini tekshiriladi</button>
+      <button class="opt" type="button">Darrov o'chiriladi</button>
+      <button class="opt" type="button">E'tibor berilmaydi</button>
+      <button class="opt" type="button">Parol o'zgartiriladi</button>
+    </div>
+    <div class="explain">MITM ehtimolini inkor eting.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 17-dars konspekti va slaydlari</p>
+</section>

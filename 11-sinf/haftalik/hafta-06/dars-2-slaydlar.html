@@ -1,0 +1,274 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>SSH kalitlari</h1>
+  <p class="muted">Kalit juftligi, ssh-keygen, ssh-copy-id, authorized_keys, sshd_config, ssh-agent, ~/.ssh/config, diagnostika</p>
+  <span class="badge">11-sinf</span><span class="badge">Professional IT development</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Takrorlash: 16-dars (ruxsatlar 700/600, <code>systemctl</code>). Savol: «Parol bilan SSH nega zaif? Sizning kompyuteringizda <code>~/.ssh</code> papkasi bormi?»</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="key" data-anim="pulse"></i></div><h3>Kalit juftligi</h3><p>Private va public</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="upload" data-anim="float"></i></div><h3>Serverga joylash</h3><p>authorized_keys</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="shield-check" data-anim="blink"></i></div><h3>Server qattiqlashtirish</h3><p>sshd_config</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q"><code>~/.ssh</code> katalogi uchun to'g'ri ruxsat?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>700</button>
+    <button class="opt" type="button">777</button>
+    <button class="opt" type="button">644</button>
+    <button class="opt" type="button">666</button>
+    </div>
+    <div class="explain">Faqat egasi kira oladi: 700.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>Kalit juftligi</h1>
+  <p>Private va public</p>
+</section>
+
+<section>
+  <h2>Kalit mantig'i</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">Mijozda</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">kalit jufti</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Public kalit</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">serverga</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">Server</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">tekshiradi</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">Parolsiz</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">kirish</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Private kalit hech qachon ketmaydi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Kalit yaratish</h2>
+  <pre><code class="language-bash" data-trim data-line-numbers="1|2-4|5">
+ssh-keygen -t ed25519 -C "ali@maktab"
+ls ~/.ssh
+# id_ed25519      shaxsiy (sir)
+# id_ed25519.pub  ommaviy
+cat ~/.ssh/id_ed25519.pub
+  </code></pre>
+  <div class="callout warn mt fragment"><i data-ic="triangle-alert"></i>Shaxsiy kalit (<code>id_ed25519</code>) ni hech kimga bermang va GitHub ga qo'ymang. Faqat <code>.pub</code> faylni ulashing.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Serverga qaysi kalit joylanadi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Ommaviy (public)</button>
+    <button class="opt" type="button">Shaxsiy (private)</button>
+    <button class="opt" type="button">Ikkalasi</button>
+    <button class="opt" type="button">Parol</button>
+    </div>
+    <div class="explain">Shaxsiy kalit mijozda qoladi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>Serverga joylash</h1>
+  <p>authorized_keys</p>
+</section>
+
+<section>
+  <h2>Kalitni joylash</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">ssh-copy-id</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">authorized_keys</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">chmod</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">700 / 600</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">ssh</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">user@server</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Ruxsat noto'g'ri bo'lsa, kalit ishlamaydi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Ulanish</h2>
+  <pre><code class="language-bash" data-trim data-line-numbers="1|2-3|4">
+ssh-copy-id user@203.0.113.10
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+ssh user@203.0.113.10
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i><code>203.0.113.10</code> — hujjatlarda ishlatiladigan namunaviy IP. Server kaliti o'zgarganida ogohlantirishni «o'chirib tashlash»ga shoshilmang: avval sababni tekshiring.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>authorized_keys</code> ruxsati qanday bo'lishi kerak?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>600</button>
+    <button class="opt" type="button">777</button>
+    <button class="opt" type="button">666</button>
+    <button class="opt" type="button">644 va boshqalar yozishi mumkin</button>
+    </div>
+    <div class="explain">Faqat egasi o'qiydi va yozadi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>Server qattiqlashtirish</h1>
+  <p>sshd_config</p>
+</section>
+
+<section>
+  <h2>Xavfsiz tartib</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Kalit ishlaydi</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Boshqa</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">terminalda sinash</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">PasswordAuthentication</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">no</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">restart sshd</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Avval sinang, keyin parolni o'chiring</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Sozlama va config</h2>
+  <pre><code class="language-ini" data-trim data-line-numbers="2-4|7-10">
+# /etc/ssh/sshd_config
+PubkeyAuthentication yes
+PasswordAuthentication no
+PermitRootLogin no
+
+# ~/.ssh/config
+Host prod
+  HostName 203.0.113.10
+  User deploy
+  IdentityFile ~/.ssh/id_ed25519
+  </code></pre>
+  <div class="callout warn mt fragment"><i data-ic="triangle-alert"></i>Sozlamadan keyin <code>ssh prod</code> bilan ulaning. Ulana olmasangiz: <code>ssh -vvv prod</code> va serverdagi log, odatda sabab ruxsat yoki <code>authorized_keys</code> formatida.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>PasswordAuthentication no</code> dan oldin nima qilinadi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Kalit bilan kira olishni boshqa terminalda tekshirish</button>
+    <button class="opt" type="button">Serverni o'chirish</button>
+    <button class="opt" type="button">Hech narsa</button>
+    <button class="opt" type="button">Kalitni o'chirish</button>
+    </div>
+    <div class="explain">Aks holda o'zingizni tashqarida qoldirasiz.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Parol va kalit</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>Parol</h3>Tez, lekin brute-force va tinglashga zaif</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>Kalit</h3>Parol yuborilmaydi, avtomatlashtirish oson</div>
+  </div>
+  <div class="card accent fragment mt"><p>Server uchun kalitga asoslangan kirish tavsiya etiladi.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Private key</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Shaxsiy kalit, faqat sizda</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Public key</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Serverga qo'yiladigan kalit</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>authorized_keys</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Serverda ruxsat berilgan kalitlar fayli</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>known_hosts</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Tanilgan serverlar ro'yxati</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>SSH ni sozlash</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="key" data-anim="pulse"></i></div><h3>1. Kalit yarating</h3><p><code>ssh-keygen -t ed25519</code>.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="upload"></i></div><h3>2. Serverga qo'ying</h3><p><code>ssh-copy-id</code>.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="shield-check"></i></div><h3>3. Qattiqlashtiring</h3><p>Parolni o'chiring.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>SSH sozlamalari</h2>
+    <table>
+      <thead><tr><th>Sozlama</th><th>Qiymat</th><th>Nima uchun</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td><code>PubkeyAuthentication</code></td><td>yes</td><td>kalit bilan kirish</td></tr>
+        <tr class="fragment"><td><code>PasswordAuthentication</code></td><td>no</td><td>brute-force oldi</td></tr>
+        <tr class="fragment"><td><code>PermitRootLogin</code></td><td>no</td><td>root orqali kirishni taqiqlash</td></tr>
+        <tr class="fragment"><td><code>~/.ssh</code></td><td>700</td><td>faqat egasi</td></tr>
+        <tr class="fragment"><td><code>authorized_keys</code></td><td>600</td><td>faqat egasi o'qiydi</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: sozlamalar</p>
+  </section>
+  <section>
+    <h2>Birinchi kalitli ulanish</h2>
+    <ol class="steps-n">
+      <li class="fragment"><code>ssh-keygen -t ed25519 -C "ismingiz@loyiha"</code> ni bajaring.</li>
+      <li class="fragment"><code>ssh-copy-id user@server</code> bilan kalitni joylang.</li>
+      <li class="fragment"><code>ssh user@server</code> bilan parolsiz kiring.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Ruxsat xatosi</h2>
+  <pre data-id="c"><code class="language-bash" data-trim>
+chmod 777 ~/.ssh
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Ruxsat xatosi</h2>
+  <pre data-id="c"><code class="language-bash" data-trim data-line-numbers="1|1">
+chmod 700 ~/.ssh
+  </code></pre>
+</section>
+
+<section>
+  <h2>SSH raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="2" data-suf="">0</span></div><div class="l"> ta kalit: shaxsiy va ommaviy</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="700" data-suf="">0</span></div><div class="l"> — <code>~/.ssh</code> ruxsati</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="600" data-suf="">0</span></div><div class="l"> — <code>authorized_keys</code> ruxsati</div></div>
+  </div>
+  <p class="small fragment">Kalit juftligi — parolga kuchli alternativa.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Kalit yarating: <code>ed25519</code> kalit juftini <code>ali@maktab</code> izohi bilan yarating.</div>
+  <div class="task"><span class="level easy">Oson</span>Qaysi kalit?: Serverga qaysi faylni joylaymiz va qaysini yashiramiz?</div>
+  <div class="task"><span class="level mid">O'rta</span>Ruxsatlar: SSH kalitlari ishlashi uchun ruxsatlarni to'g'rilang.</div>
+  <div class="task"><span class="level mid">O'rta</span>Config yozing: <code>prod</code> nomi bilan serverga <code>deploy</code> foydalanuvchisi bilan ulanishni yozing.</div>
+  <div class="task"><span class="level hard">Qiyin</span>Qattiqlashtirish: <code>sshd_config</code> da parol va root kirishni o'chiring, xavfsiz tartibni yozing.</div>
+  <div class="task"><span class="level hard">Bonus</span>Diagnostika: <code>Permission denied (publickey)</code> chiqdi. 4 ta tekshiruv yozing.</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Kalit juftligi</h3><p><code>ssh-keygen -t ed25519</code>; private sirda.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Serverga</h3><p><code>ssh-copy-id</code>, <code>authorized_keys</code>, 700/600.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Xavfsizlik</h3><p><code>PasswordAuthentication no</code>, <code>ssh -vvv</code>.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: SSH kalit va config.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="globe" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: Nginx reverse-proxy</h1>
+  <p class="muted">Ilova oldidagi eshik</p>
+  <span class="badge">6-hafta · 18-dars</span>
+</section>
+

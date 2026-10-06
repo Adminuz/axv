@@ -36,7 +36,8 @@ Manba: `11-sinf/++6. Professional IT development .docx` (o'quv dasturi) va `++6.
 
 | Dars | Hafta | Mavzu | Holat |
 |---|---|---|---|
-| 16–19 | 6–7 | Unix/Linux muhiti va tarmoq xizmati konfiguratsiyasi: SSH hamda Nginx reverse-proxyga kirish | ⬜ |
+| 16–18 | 6 | Unix/Linux muhiti va tarmoq xizmati konfiguratsiyasi: SSH hamda Nginx reverse-proxyga kirish (1-qism: Linux, SSH, Nginx asoslari) | 📝 |
+| 19 | 7 | Unix/Linux muhiti va tarmoq xizmati konfiguratsiyasi (2-qism): TLS/HTTPS, port forwarding va diagnostika | ⬜ |
 | 20–23 | 7–8 | Konteynerlashtirish: Docker arxitekturasi, image lifecycle, tarmoq/volume | ⬜ |
 | 24–26 | 8–9 | Uzluksiz integratsiya (CI) GitHub Actions: workflow dizayni va avtomatlashtirilgan sinovlar | ⬜ |
 | 27 | 9 | ORALIQ NAZORAT | ⬜ |

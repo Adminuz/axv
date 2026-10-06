@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <title>Test: 18-dars. Nginx reverse-proxy</title>
+  <!-- Bu fayl QOBIQ: barcha slaydlar shu shablonga o'ralib chiqadi (slayd_yigish.py). Tahrirlash: bir joyda, hamma slaydga ta'sir qiladi. -->
+  <link rel="stylesheet" href="../../../reveal/dist/reveal.css">
+  <link rel="stylesheet" href="../../../reveal/dist/theme/black.css">
+  <link rel="stylesheet" href="../../../reveal/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="../../../reveal/dars.css">
+  <link rel="icon" href="../../../reveal/logo.png">
+  <script src="../../../reveal/tema.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <img class="slide-logo" src="../../../reveal/logo.png" alt="">
+    <div class="slides">
+<section class="hero">
+  <img class="logo-big" src="../../../reveal/logo.png" alt="AXV">
+  <h1>Test: 18-dars. Nginx reverse-proxy</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">11-sinf</span><span class="badge">Professional IT development</span><span class="badge">6-hafta · 18-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">Reverse-proxy vazifasi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Parol saqlash</button>
+      <button class="opt" type="button" data-ok>So'rovni ichki ilovaga uzatish</button>
+      <button class="opt" type="button">Rasm chizish</button>
+      <button class="opt" type="button">Kod yozish</button>
+    </div>
+    <div class="explain">Ilovaga uzatadi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q">HTTP porti?</p>
+    <div class="opts">
+      <button class="opt" type="button">443</button>
+      <button class="opt" type="button" data-ok>80</button>
+      <button class="opt" type="button">22</button>
+      <button class="opt" type="button">3306</button>
+    </div>
+    <div class="explain">80.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q">HTTPS porti?</p>
+    <div class="opts">
+      <button class="opt" type="button">80</button>
+      <button class="opt" type="button">22</button>
+      <button class="opt" type="button">8080</button>
+      <button class="opt" type="button" data-ok>443</button>
+    </div>
+    <div class="explain">443.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q">Nginx asosiy konfig fayli?</p>
+    <div class="opts">
+      <button class="opt" type="button">/home/nginx.conf</button>
+      <button class="opt" type="button" data-ok>/etc/nginx/nginx.conf</button>
+      <button class="opt" type="button">/tmp/nginx.txt</button>
+      <button class="opt" type="button">/dev/nginx</button>
+    </div>
+    <div class="explain"><code>/etc/nginx/nginx.conf</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q">So'rovni orqa manzilga uzatuvchi direktiva?</p>
+    <div class="opts">
+      <button class="opt" type="button">listen</button>
+      <button class="opt" type="button">server_name</button>
+      <button class="opt" type="button" data-ok>proxy_pass</button>
+      <button class="opt" type="button">expires</button>
+    </div>
+    <div class="explain"><code>proxy_pass</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q">Asl mijoz IP sarlavhasi?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>X-Forwarded-For</button>
+      <button class="opt" type="button">X-Page</button>
+      <button class="opt" type="button">X-Color</button>
+      <button class="opt" type="button">X-Log</button>
+    </div>
+    <div class="explain"><code>X-Forwarded-For</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q">Konfigni tekshirish?</p>
+    <div class="opts">
+      <button class="opt" type="button">nginx -x</button>
+      <button class="opt" type="button" data-ok>nginx -t</button>
+      <button class="opt" type="button">nginx --run</button>
+      <button class="opt" type="button">nginx -p</button>
+    </div>
+    <div class="explain"><code>nginx -t</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q">Sozlamani yangilash?</p>
+    <div class="opts">
+      <button class="opt" type="button">systemctl delete nginx</button>
+      <button class="opt" type="button">rm nginx</button>
+      <button class="opt" type="button">nginx --kill</button>
+      <button class="opt" type="button" data-ok>systemctl reload nginx</button>
+    </div>
+    <div class="explain"><code>reload</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q"><code>sites-enabled</code> da nima turadi?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>Faol konfig havolalari (symlink)</button>
+      <button class="opt" type="button">Rasmlar</button>
+      <button class="opt" type="button">Parollar</button>
+      <button class="opt" type="button">Loglar</button>
+    </div>
+    <div class="explain">Symlinklar.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q">Yukni taqsimlovchi blok?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>upstream</button>
+      <button class="opt" type="button">location-only</button>
+      <button class="opt" type="button">listen</button>
+      <button class="opt" type="button">alias</button>
+    </div>
+    <div class="explain"><code>upstream</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 18-dars konspekti va slaydlari</p>
+</section>
+
+    </div>
+  </div>
+
+  <script src="../../../reveal/ikonlar.js"></script>
+  <script src="../../../reveal/dist/reveal.js"></script>
+  <script src="../../../reveal/interaktiv.js"></script>
+  <script src="../../../reveal/dist/plugin/highlight.js"></script>
+  <script src="../../../reveal/dist/plugin/notes.js"></script>
+  <script>
+    Reveal.initialize({ scrollActivationWidth: null, hash: true, slideNumber: true, width: 1280, height: 720, margin: 0.06,
+      transition: 'slide', autoAnimateDuration: 0.7, plugins: [RevealHighlight, RevealNotes] });
+  </script>
+</body>
+</html>
