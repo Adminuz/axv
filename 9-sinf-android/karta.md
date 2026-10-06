@@ -38,9 +38,9 @@ Manba: `2.3 Standart (Android dasturlash).doc`, `2.3 Uslubiy ko'rsatma`, `2.3 O'
 |---|---|---|---|
 | 11 | 4 | Kotlin sintaksisi (1-qism): Kotlin afzalliklari, o‘zgaruvchilar (val vs var) va ma’lumot turlari | 📝 |
 | 12 | 4 | Kotlin sintaksisi (2-qism): Shart operatorlari (if, when) va ularning ifoda sifatida qo'llanilishi | 📝 |
-| 13 | 5 | Kotlin sintaksisi (3-qism): Sikllar (for, while, do-while) va oraliqlar (ranges: in, downTo, step) | ⬜ |
-| 14 | 5 | Funksiyalar va sinflar (1-qism): Funksiya e'lon qilish, parametrlar, standart qiymatlar va nomlangan argumentlar | ⬜ |
-| 15 | 5 | Funksiyalar va sinflar (2-qism): Sinflar, obyektlar, konstruktorlar (primary vs secondary) va metodlar | ⬜ |
+| 13 | 5 | Kotlin sintaksisi (3-qism): Sikllar (for, while, do-while) va oraliqlar (ranges: in, downTo, step) | 📝 |
+| 14 | 5 | Funksiyalar va sinflar (1-qism): Funksiya e'lon qilish, parametrlar, standart qiymatlar va nomlangan argumentlar | 📝 |
+| 15 | 5 | Funksiyalar va sinflar (2-qism): Sinflar, obyektlar, konstruktorlar (primary vs secondary) va metodlar | 📝 |
 | 16 | 6 | Kotlinda ma’lumot turlari, list va maplar (1-qism): Kolleksiyalar: List, MutableList, Set va Map tuzilmasi | ⬜ |
 | 17 | 6 | Kotlinda ma’lumot turlari, list va maplar (2-qism): Lambda ifodalar va kolleksiyalarni filtrlash (filter, map, forEach) | ⬜ |
 | 18 | 6 | Kotlinda OOP bilan tanishish (1-qism): Obyektga yo'naltirilgan dasturlash asoslari va inkapsulyatsiya (private, protected, public) | ⬜ |
