@@ -46,9 +46,9 @@ Manba: `4.5. Uslubiy ko'rsatma`, `4.5. O'quv qo'llanma`. Matnlari `_matn/` papka
 | 13 | 5 | Matn filtralari va muntazam ifodalar: grep, sed, awk va xargs amaliyoti | 📝 |
 | 14 | 5 | Linux jarayonlari va rejalashtirish: cron, crontab, at va tizim monitoringi (htop, iotop) | 📝 |
 | 15 | 5 | Linux xavfsizligi va foydalanuvchilar: useradd, usermod, sudoers, SSH kalitlar bilan xavfsiz ulanish | 📝 |
-| 16 | 6 | Git ilg'or texnikalari: git stash, rebase, cherry-pick va reflog imkoniyatlari | ⬜ |
-| 17 | 6 | Git taglar va versiyalash: semantik versiyalash (SemVer), release yaratish | ⬜ |
-| 18 | 6 | GitHub Flow va GitKraken/CLI orqali jamoaviy kollaboratsiya | ⬜ |
+| 16 | 6 | Git ilg'or texnikalari: git stash, rebase, cherry-pick va reflog imkoniyatlari | 📝 |
+| 17 | 6 | Git taglar va versiyalash: semantik versiyalash (SemVer), release yaratish | 📝 |
+| 18 | 6 | GitHub Flow va GitKraken/CLI orqali jamoaviy kollaboratsiya | 📝 |
 | 19 | 7 | GitHub Actions asoslari: birinchi workflow yaratish, triggerlar va runnerlar | ⬜ |
 | 20 | 7 | Continuous Integration (CI) amaliyoti: avtomatik testlar va lint tekshiruvlari | ⬜ |
 | 21 | 7 | GitLab CI/CD asoslari: .gitlab-ci.yml strukturasi va pipeline bosqichlari | ⬜ |

@@ -1,0 +1,276 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Taglar va SemVer</h1>
+  <p class="muted">git tag (lightweight va annotated), tagni push qilish, SemVer MAJOR.MINOR.PATCH, GitHub Release</p>
+  <span class="badge">10-sinf</span><span class="badge">DevOps</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Takrorlash: 16-dars. Savol: «cherry-pick va reflog nima uchun? Dastur versiyasi <code>1.4.2</code> ning raqamlari nimani bildiradi?»</aside>
+</section>
+
+<section>
+  <h2>Bugun nimalarni o'rganamiz?</h2>
+  <div class="cards three">
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="tag" data-anim="pulse"></i></div><h3>Git taglar</h3><p>Versiya belgisi</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="hash" data-anim="float"></i></div><h3>SemVer</h3><p>MAJOR.MINOR.PATCH</p></div>
+    <div class="card fragment fade-up"><div class="icon"><i data-ic="rocket" data-anim="blink"></i></div><h3>GitHub Release</h3><p>Nashr</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Takrorlash</h2>
+  <div class="quiz">
+    <p class="q">Yo'qolgan commit ni topish uchun qaysi buyruq?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>git reflog</button>
+    <button class="opt" type="button">git tag</button>
+    <button class="opt" type="button">git stash</button>
+    <button class="opt" type="button">git init</button>
+    </div>
+    <div class="explain"><code>git reflog</code> HEAD harakatlarini ko'rsatadi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">01</div>
+  <h1>Git taglar</h1>
+  <p>Versiya belgisi</p>
+</section>
+
+<section>
+  <h2>Tag oqimi</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Commit</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">git tag -a</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">git push</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">origin tag</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="145" text-anchor="middle" font-size="22">GitHub da</text><text class="t-head" x="875" y="171" text-anchor="middle" font-size="22">ko'rinadi</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Tag push qilinmasa, GitHub da bo'lmaydi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Tag buyruqlari</h2>
+  <pre><code class="language-bash" data-trim data-line-numbers="1|2|3-4|5|6">
+git tag v0.9.0
+git tag -a v1.0.0 -m "Birinchi barqaror versiya"
+git tag -l
+git show v1.0.0
+git push origin v1.0.0
+git tag -d v0.9.0
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>Tag ni push qilingan keyin o'zgartirmang yoki o'chirmang: boshqalar ham uni ishlatadi. Yangi tag yarating.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Tag ni GitHub ga yuborish buyrug'i?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>git push origin v1.0.0</button>
+    <button class="opt" type="button">git tag push</button>
+    <button class="opt" type="button">git commit v1.0.0</button>
+    <button class="opt" type="button">git send v1.0.0</button>
+    </div>
+    <div class="explain">Taglar alohida yuboriladi.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">02</div>
+  <h1>SemVer</h1>
+  <p>MAJOR.MINOR.PATCH</p>
+</section>
+
+<section>
+  <h2>Qaysi raqam oshadi</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="145" text-anchor="middle" font-size="22">Xato tuzatildi:</text><text class="t-head" x="125" y="171" text-anchor="middle" font-size="22">PATCH</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="145" text-anchor="middle" font-size="22">Yangi</text><text class="t-head" x="375" y="171" text-anchor="middle" font-size="22">imkoniyat: MINOR</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="145" text-anchor="middle" font-size="22">Buzuvchi</text><text class="t-head" x="625" y="171" text-anchor="middle" font-size="22">o'zgarish: MAJOR</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Tag: v2.5.0</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Past raqamlar 0 ga tushadi</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>Versiyani oshirish</h2>
+  <pre><code class="language-python" data-trim data-line-numbers="1-2|3-4|5-6|7|9">
+def bump(v, qism):
+    major, minor, patch = map(int, v.split("."))
+    if qism == "major":
+        return f"{major + 1}.0.0"
+    if qism == "minor":
+        return f"{major}.{minor + 1}.0"
+    return f"{major}.{minor}.{patch + 1}"
+
+print(bump("2.4.1", "minor"))
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i>MINOR oshganda PATCH 0 bo'ladi, MAJOR oshganda MINOR va PATCH 0 bo'ladi.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q"><code>2.4.1</code> da xato tuzatilsa, yangi versiya?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>2.4.2</button>
+    <button class="opt" type="button">2.5.0</button>
+    <button class="opt" type="button">3.0.0</button>
+    <button class="opt" type="button">2.4.0</button>
+    </div>
+    <div class="explain">Xato tuzatish — PATCH.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="num">03</div>
+  <h1>GitHub Release</h1>
+  <p>Nashr</p>
+</section>
+
+<section>
+  <h2>Release yaratish</h2>
+  <div class="illus">
+    <svg viewBox="0 0 1000 300">
+    <g class="fragment"><rect class="fa" x="25" y="110" width="200" height="80" rx="14"/><text class="t-head" x="125" y="158" text-anchor="middle" font-size="22">Kod tayyor</text></g>
+    <g class="fragment"><line class="la flowing" x1="475" y1="150" x2="275" y2="150"/><rect class="fb" x="275" y="110" width="200" height="80" rx="14"/><text class="t-head" x="375" y="158" text-anchor="middle" font-size="22">Tag v1.0.0</text></g>
+    <g class="fragment"><line class="lb flowing" x1="725" y1="150" x2="525" y2="150"/><rect class="fc" x="525" y="110" width="200" height="80" rx="14"/><text class="t-head" x="625" y="158" text-anchor="middle" font-size="22">Release notes</text></g>
+    <g class="fragment"><line class="lc flowing" x1="975" y1="150" x2="775" y2="150"/><rect class="fg pulse" x="775" y="110" width="200" height="80" rx="14"/><text class="t-head" x="875" y="158" text-anchor="middle" font-size="22">Publish</text></g>
+      <text class="t-muted" x="500" y="260" text-anchor="middle" font-size="22">Tag + tavsif = release</text>
+    </svg>
+  </div>
+</section>
+
+<section>
+  <h2>gh bilan release</h2>
+  <pre><code class="language-bash" data-trim data-line-numbers="1-2|3|4">
+git tag -a v1.0.0 -m "1.0.0"
+git push origin v1.0.0
+gh release create v1.0.0 --title "1.0.0" --notes "Birinchi barqaror versiya"
+gh release list
+  </code></pre>
+  <div class="callout tip mt fragment"><i data-ic="lightbulb"></i><code>gh</code> ni birinchi marta <code>gh auth login</code> bilan ulash kerak. Release notes ni tag nomi emas, o'zgarishlar mazmuni bilan yozing.</div>
+</section>
+
+<section>
+  <h2>Mini-test</h2>
+  <div class="quiz">
+    <p class="q">Release asosida nima turadi?</p>
+    <div class="opts">
+    <button class="opt" type="button" data-ok>Tag</button>
+    <button class="opt" type="button">Parol</button>
+    <button class="opt" type="button">Stash</button>
+    <button class="opt" type="button">Reflog</button>
+    </div>
+    <div class="explain">Release tag ga bog'lanadi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Lightweight va annotated tag</h2>
+  <div class="vs">
+    <div class="side fragment"><h3>Lightweight</h3>Oddiy ko'rsatkich, xabarsiz</div>
+    <div class="mid">VS</div>
+    <div class="side b fragment"><h3>Annotated</h3>Muallif, sana va xabar bilan; release uchun</div>
+  </div>
+  <div class="card accent fragment mt"><p>Release uchun annotated tavsiya etiladi.</p></div>
+</section>
+
+<section>
+  <h2>Atamalar. Bosing</h2>
+  <div class="cards two">
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>tag</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Commit ga doimiy belgi</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>SemVer</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>MAJOR.MINOR.PATCH versiyalash</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Release</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Tag asosidagi nashr sahifasi</p></div></div></div>
+    <div class="flip" style="min-height:150px"><div class="flip-in"><div class="face front"><h3>Rollback</h3><span class="flip-hint">bosing</span></div><div class="face back"><p>Oldingi barqaror versiyaga qaytish</p></div></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Release chiqarish</h2>
+  <div class="stepper">
+    <div class="stp on"><div class="card"><div class="icon"><i data-ic="check" data-anim="pulse"></i></div><h3>1. Tayyorlang</h3><p>Testlar o'tdi, main toza.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="tag"></i></div><h3>2. Tag</h3><p><code>v1.0.0</code> ni yarating.</p></div></div>
+    <div class="stp"><div class="card"><div class="icon"><i data-ic="rocket"></i></div><h3>3. Release</h3><p>GitHub da publish.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <section>
+    <h2>SemVer qoidalari</h2>
+    <table>
+      <thead><tr><th>O'zgarish</th><th>Oshadi</th><th>Misol</th></tr></thead>
+      <tbody>
+        <tr class="fragment"><td>Xato tuzatish</td><td>PATCH</td><td>2.4.1 → 2.4.2</td></tr>
+        <tr class="fragment"><td>Yangi imkoniyat</td><td>MINOR</td><td>2.4.2 → 2.5.0</td></tr>
+        <tr class="fragment"><td>Buzuvchi o'zgarish</td><td>MAJOR</td><td>2.5.0 → 3.0.0</td></tr>
+        <tr class="fragment"><td>Sinov nashri</td><td>pre-release</td><td>3.0.0-rc.1</td></tr>
+        <tr class="fragment"><td>Birinchi barqaror</td><td>1.0.0</td><td>0.x dan 1.0.0 ga</td></tr>
+      </tbody>
+    </table>
+    <p class="small">Pastga bosing: qoidalar</p>
+  </section>
+  <section>
+    <h2>Tag va release</h2>
+    <ol class="steps-n">
+      <li class="fragment"><code>git tag -a v1.0.0 -m "1.0.0"</code> bajaring.</li>
+      <li class="fragment"><code>git push origin v1.0.0</code> bilan yuboring.</li>
+      <li class="fragment">GitHub da Releases bo'limida release yarating.</li>
+    </ol>
+  </section>
+</section>
+
+<section data-auto-animate>
+  <h2 data-id="t">Versiya xatosi</h2>
+  <pre data-id="c"><code class="language-bash" data-trim>
+git tag version1
+git push
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <h2 data-id="t">Versiya xatosi</h2>
+  <pre data-id="c"><code class="language-bash" data-trim data-line-numbers="1-2|1-2">
+git tag -a v1.0.0 -m "1.0.0"
+git push origin v1.0.0
+  </code></pre>
+</section>
+
+<section>
+  <h2>SemVer raqamlarda</h2>
+  <div class="stats">
+    <div class="stat"><div class="v"><span class="count" data-to="3" data-suf="">0</span></div><div class="l"> ta raqam: MAJOR.MINOR.PATCH</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="2" data-suf="">0</span></div><div class="l"> ta tag turi: lightweight va annotated</div></div>
+    <div class="stat"><div class="v"><span class="count" data-to="1" data-suf="">0</span></div><div class="l"> ta buyruq tag ni yuboradi: git push origin v1.0.0</div></div>
+  </div>
+  <p class="small fragment">Versiya raqami jamoaga o'zgarish xarakterini aytadi.</p>
+</section>
+
+<section>
+  <h2>Amaliy topshiriq <span class="timer"><i data-ic="timer"></i>20 daqiqa</span></h2>
+  <div class="task"><span class="level easy">Oson</span>Tag yarating: <code>v1.0.0</code> annotated tag ni xabar bilan yarating.</div>
+  <div class="task"><span class="level easy">Oson</span>Tagni yuboring: Tag ni GitHub ga yuboring.</div>
+  <div class="task"><span class="level mid">O'rta</span>Versiya oshirish: <code>2.4.1</code> dan yangi imkoniyat qo'shilsa, qaysi versiya?</div>
+  <div class="task"><span class="level mid">O'rta</span>Buzuvchi o'zgarish: <code>2.5.0</code> da API buzildi. Yangi versiya?</div>
+  <div class="task"><span class="level hard">Qiyin</span>Release: <code>gh</code> bilan <code>v1.0.0</code> release yarating.</div>
+  <div class="task"><span class="level hard">Bonus</span>Rollback: Oldingi <code>v0.9.0</code> ga qaytish yo'lini yozing.</div>
+</section>
+
+<section>
+  <h2>Dars xulosasi</h2>
+  <div class="cards three">
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Tag</h3><p><code>git tag -a v1.0.0 -m</code>, <code>git push origin v1.0.0</code>.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>SemVer</h3><p>MAJOR.MINOR.PATCH qoidalari.</p></div>
+    <div class="card fragment"><div class="icon"><i data-ic="circle-check" data-anim="draw"></i></div><h3>Release</h3><p>GitHub Release va release notes.</p></div>
+  </div>
+  <p class="small fragment mt">Uyga vazifa: Tag, SemVer va release.</p>
+</section>
+
+<section class="hero">
+  <div class="icon"><i data-ic="git-pull-request" data-anim="pulse"></i></div>
+  <h1>Keyingi dars: GitHub Flow</h1>
+  <p class="muted">Jamoaviy kollaboratsiya</p>
+  <span class="badge">6-hafta · 18-dars</span>
+</section>
+

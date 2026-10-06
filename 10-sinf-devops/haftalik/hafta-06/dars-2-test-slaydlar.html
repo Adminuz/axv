@@ -1,0 +1,157 @@
+<section class="hero">
+  <img class="logo-big" src="{{UP}}reveal/logo.png" alt="AXV">
+  <h1>Test: 17-dars. Taglar va SemVer</h1>
+  <p class="muted">10 ta savol &middot; taxminan 8 daqiqa</p>
+  <span class="badge">10-sinf</span><span class="badge">DevOps</span><span class="badge">6-hafta · 17-dars</span>
+  <aside class="notes">Har bir savolga javob bering. To'g'ri javob yashil bo'ladi va izoh chiqadi.</aside>
+</section>
+
+<section>
+  <h2>Savol 1/10</h2>
+  <div class="quiz">
+    <p class="q">Commit ga doimiy belgi qo'yuvchi?</p>
+    <div class="opts">
+      <button class="opt" type="button">stash</button>
+      <button class="opt" type="button" data-ok>tag</button>
+      <button class="opt" type="button">reflog</button>
+      <button class="opt" type="button">remote</button>
+    </div>
+    <div class="explain"><code>git tag</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 2/10</h2>
+  <div class="quiz">
+    <p class="q">Annotated tag yaratuvchi bayroq?</p>
+    <div class="opts">
+      <button class="opt" type="button">-d</button>
+      <button class="opt" type="button" data-ok>-a</button>
+      <button class="opt" type="button">-l</button>
+      <button class="opt" type="button">-f</button>
+    </div>
+    <div class="explain"><code>git tag -a</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 3/10</h2>
+  <div class="quiz">
+    <p class="q">Tag ni GitHub ga yuborish?</p>
+    <div class="opts">
+      <button class="opt" type="button">git tag send</button>
+      <button class="opt" type="button">git upload</button>
+      <button class="opt" type="button" data-ok>git push origin v1.0.0</button>
+      <button class="opt" type="button">git sync</button>
+    </div>
+    <div class="explain">Tag alohida yuboriladi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 4/10</h2>
+  <div class="quiz">
+    <p class="q">SemVer formati?</p>
+    <div class="opts">
+      <button class="opt" type="button">YYYY.MM.DD</button>
+      <button class="opt" type="button">A.B</button>
+      <button class="opt" type="button" data-ok>MAJOR.MINOR.PATCH</button>
+      <button class="opt" type="button">X-Y-Z</button>
+    </div>
+    <div class="explain">MAJOR.MINOR.PATCH.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 5/10</h2>
+  <div class="quiz">
+    <p class="q">Xato tuzatish qaysi raqamni oshiradi?</p>
+    <div class="opts">
+      <button class="opt" type="button">MINOR</button>
+      <button class="opt" type="button">MAJOR</button>
+      <button class="opt" type="button">Hech qaysini</button>
+      <button class="opt" type="button" data-ok>PATCH</button>
+    </div>
+    <div class="explain">PATCH.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 6/10</h2>
+  <div class="quiz">
+    <p class="q">Yangi imkoniyat (mos) qaysi raqam?</p>
+    <div class="opts">
+      <button class="opt" type="button">PATCH</button>
+      <button class="opt" type="button">MAJOR</button>
+      <button class="opt" type="button" data-ok>MINOR</button>
+      <button class="opt" type="button">Hech qaysi</button>
+    </div>
+    <div class="explain">MINOR.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 7/10</h2>
+  <div class="quiz">
+    <p class="q"><code>2.4.1</code> + buzuvchi o'zgarish?</p>
+    <div class="opts">
+      <button class="opt" type="button">2.5.0</button>
+      <button class="opt" type="button" data-ok>3.0.0</button>
+      <button class="opt" type="button">2.4.2</button>
+      <button class="opt" type="button">2.4.1</button>
+    </div>
+    <div class="explain">MAJOR oshadi, qolgani 0.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 8/10</h2>
+  <div class="quiz">
+    <p class="q">Pre-release misoli?</p>
+    <div class="opts">
+      <button class="opt" type="button">1.0.0.final</button>
+      <button class="opt" type="button" data-ok>1.0.0-rc.1</button>
+      <button class="opt" type="button">v1</button>
+      <button class="opt" type="button">1,0,0</button>
+    </div>
+    <div class="explain"><code>-rc.1</code> qo'shimchasi.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 9/10</h2>
+  <div class="quiz">
+    <p class="q">Barcha tag larni yuboruvchi bayroq?</p>
+    <div class="opts">
+      <button class="opt" type="button" data-ok>--tags</button>
+      <button class="opt" type="button">--all-tags</button>
+      <button class="opt" type="button">-t</button>
+      <button class="opt" type="button">--tag-all</button>
+    </div>
+    <div class="explain"><code>git push --tags</code>.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Savol 10/10</h2>
+  <div class="quiz">
+    <p class="q">GitHub da release nimaga asoslanadi?</p>
+    <div class="opts">
+      <button class="opt" type="button">Parol</button>
+      <button class="opt" type="button" data-ok>Tag</button>
+      <button class="opt" type="button">Issue</button>
+      <button class="opt" type="button">Stash</button>
+    </div>
+    <div class="explain">Tag ga.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Natijangiz</h2>
+  <div class="cards three">
+    <div class="card"><h3>10 dan 9+</h3><p>A'lo. Mavzu yaxshi o'zlashtirilgan.</p></div>
+    <div class="card"><h3>10 dan 6-8</h3><p>Yaxshi. Xato qilgan savollar izohini qayta o'qing.</p></div>
+    <div class="card accent"><h3>5 va undan kam</h3><p>Konspekt va slaydlarni takrorlang, so'ng testni qayta yeching.</p></div>
+  </div>
+  <p class="small mt">Takrorlang: 17-dars konspekti va slaydlari</p>
+</section>
