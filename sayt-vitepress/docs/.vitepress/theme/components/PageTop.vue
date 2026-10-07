@@ -26,11 +26,6 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
       <h1 class="org">{{ home.org }}</h1>
       <p class="tag">{{ home.tag }}</p>
       <p class="tag2">{{ home.tag2 }}</p>
-      <div v-if="kind === 'home'" class="hero-act" style="margin-top: 14px;">
-        <a :href="withBase('/trenajyor/')" class="btn btn-primary btn-sm">
-          <Icon name="keyboard" /> Klaviatura trenajyori (Stamina) <Icon name="arrow-right" />
-        </a>
-      </div>
     </section>
     <h2 class="sec-title">{{ kind === 'mentor_home' ? 'Sinfni tanlang (Mentor rejasi)' : 'Sinfingizni tanlang' }}</h2>
     <div class="tiles">
