@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { withBase } from 'vitepress'
 import Icon from './Icon.vue'
 import Crumbs from './Crumbs.vue'
 
 // --- Active Tab State ---
-// 'binary' | 'logic' | 'memory' | 'flowchart' | 'hardware'
+// 'binary' | 'logic' | 'memory' | 'flowchart' | 'hardware' | 'sorting' | 'git' | 'crypto' | 'design'
 const activeTab = ref<string>('binary')
 
 // ==========================================
@@ -102,22 +102,22 @@ const gateExplanations: Record<string, { desc: string; formula: string; code: st
     code: 'if a or b: # kamida bittasi rost bo\'lsa yetarli'
   },
   NOT: {
-    desc: 'INKOR (NOT) — Kirish signalini teskarisiga aylantiradi: 0 bo\'lsa 1, 1 bo\'lsa 0 qiladi (Faqat bitta kirish).',
-    formula: '¬A (yoki !A)',
-    code: 'if not a: # teskari qiymat'
+    desc: 'INKOR (NOT) — Kirish signalini teskarisiga o\'zgartiradi. 1 kirsa 0, 0 kirsa 1 chiqadi.',
+    formula: '¬A (yoki NOT A)',
+    code: 'not a # qiymatni teskarisiga o\'giradi'
   },
   XOR: {
-    desc: 'ISTISNO YOKI (XOR) — Kirishlar har xil bo\'lganda 1, bir xil bo\'lganda 0 chiqadi.',
+    desc: 'ISTISNOLI YOKI (XOR) — Kirish signallari har xil bo\'lsagina 1 bo\'ladi. Ikkisi bir xil (0-0 yoki 1-1) bo\'lsa 0.',
     formula: 'A ⊕ B',
-    code: 'if a != b: # biri 1, ikkinchisi 0 bo\'lganda'
+    code: 'if a != b: # faqat bittasi rost bo\'lishi kerak'
   },
   NAND: {
-    desc: 'AND ning teskarisi (NOT-AND) — Ikkisi ham 1 bo\'lgandagina 0 beradi, qolgan barcha holatda 1.',
+    desc: 'AND-NOT — AND natijasining teskarisi. Ikkala kirish 1 bo\'lgandagina 0 bo\'ladi, qolgan barcha holatda 1.',
     formula: '¬(A · B)',
     code: 'not (a and b)'
   },
   NOR: {
-    desc: 'OR ning teskarisi (NOT-OR) — Ikkisi ham 0 bo\'lgandagina 1 beradi, qolgan holatlarda 0.',
+    desc: 'OR-NOT — OR natijasining teskarisi. Faqat ikkala kirish 0 bo\'lgandagina 1 bo\'ladi.',
     formula: '¬(A + B)',
     code: 'not (a or b)'
   }
@@ -126,8 +126,8 @@ const gateExplanations: Record<string, { desc: string; formula: string; code: st
 const truthTableRows = computed(() => {
   if (gateType.value === 'NOT') {
     return [
-      { a: 0, b: '-', out: 1 },
-      { a: 1, b: '-', out: 0 }
+      { a: 0, b: null, out: 1, active: inputA.value === 0 },
+      { a: 1, b: null, out: 0, active: inputA.value === 1 }
     ]
   }
   const combinations = [
@@ -138,205 +138,679 @@ const truthTableRows = computed(() => {
   ]
   return combinations.map(c => {
     let out = 0
-    const a = c.a === 1, b = c.b === 1
+    const a = c.a === 1
+    const b = c.b === 1
     if (gateType.value === 'AND') out = (a && b) ? 1 : 0
     else if (gateType.value === 'OR') out = (a || b) ? 1 : 0
     else if (gateType.value === 'XOR') out = (a !== b) ? 1 : 0
     else if (gateType.value === 'NAND') out = !(a && b) ? 1 : 0
     else if (gateType.value === 'NOR') out = !(a || b) ? 1 : 0
-    return { a: c.a, b: c.b, out }
+    return {
+      a: c.a,
+      b: c.b,
+      out,
+      active: inputA.value === c.a && inputB.value === c.b
+    }
   })
 })
 
 // ==========================================
 // 3. AXBOROT HAJMI VA XOTIRA (MEMORY)
 // ==========================================
-const inputDataValue = ref<number>(1)
-const inputDataUnit = ref<string>('GB')
+const memoryUnits = [
+  { id: 'b', name: 'Bit (b)', factor: 1 / 8, baseName: '1 yoki 0 (eng kichik birlik)' },
+  { id: 'B', name: 'Bayt (Byte)', factor: 1, baseName: '8 ta bit (bitta harf/simvol)' },
+  { id: 'KB', name: 'Kilobayt (KB)', factor: 1024, baseName: '1,024 Bayt (kichik matn)' },
+  { id: 'MB', name: 'Megabayt (MB)', factor: 1024 * 1024, baseName: '1,024 KB (qo\'shiq, rasm)' },
+  { id: 'GB', name: 'Gigabayt (GB)', factor: 1024 * 1024 * 1024, baseName: '1,024 MB (kino, o\'yin)' },
+  { id: 'TB', name: 'Terabayt (TB)', factor: 1024 * 1024 * 1024 * 1024, baseName: '1,024 GB (katta disk)' }
+]
 
-const unitsPower: Record<string, number> = {
-  Bit: 1 / 8,
-  Bayt: 1,
-  KB: 1024,
-  MB: 1024 ** 2,
-  GB: 1024 ** 3,
-  TB: 1024 ** 4
-}
+const inputMemoryValue = ref<number>(1)
+const selectedMemoryUnit = ref<string>('MB')
 
-const totalBytes = computed(() => {
-  const factor = unitsPower[inputDataUnit.value] || 1
-  return inputDataValue.value * factor
+const bytesTotal = computed(() => {
+  const unit = memoryUnits.find(u => u.id === selectedMemoryUnit.value) || memoryUnits[3]
+  return (inputMemoryValue.value || 0) * unit.factor
 })
 
-const convertedValues = computed(() => {
-  const bytes = totalBytes.value
-  return {
-    bits: (bytes * 8).toLocaleString('uz-UZ'),
-    bytes: Math.round(bytes).toLocaleString('uz-UZ'),
-    kb: (bytes / 1024).toFixed(2),
-    mb: (bytes / (1024 ** 2)).toFixed(3),
-    gb: (bytes / (1024 ** 3)).toFixed(4),
-    tb: (bytes / (1024 ** 4)).toFixed(6)
-  }
+const formattedMemoryUnits = computed(() => {
+  const b = bytesTotal.value
+  return [
+    { id: 'bit', name: 'Bit (b)', val: (b * 8).toLocaleString('uz-UZ') + ' bit' },
+    { id: 'byte', name: 'Bayt (B)', val: b.toLocaleString('uz-UZ', { maximumFractionDigits: 2 }) + ' B' },
+    { id: 'kb', name: 'Kilobayt (KB)', val: (b / 1024).toLocaleString('uz-UZ', { maximumFractionDigits: 4 }) + ' KB' },
+    { id: 'mb', name: 'Megabayt (MB)', val: (b / (1024 * 1024)).toLocaleString('uz-UZ', { maximumFractionDigits: 4 }) + ' MB' },
+    { id: 'gb', name: 'Gigabayt (GB)', val: (b / (1024 * 1024 * 1024)).toLocaleString('uz-UZ', { maximumFractionDigits: 6 }) + ' GB' },
+    { id: 'tb', name: 'Terabayt (TB)', val: (b / (1024 * 1024 * 1024 * 1024)).toLocaleString('uz-UZ', { maximumFractionDigits: 8 }) + ' TB' }
+  ]
 })
 
-const realWorldAnalogy = computed(() => {
-  const gb = totalBytes.value / (1024 ** 3)
-  const mb = totalBytes.value / (1024 ** 2)
-  const kb = totalBytes.value / 1024
-
-  if (gb >= 1) {
-    const movies = (gb / 1.5).toFixed(1)
-    const photos = Math.round(gb * 300)
-    const books = Math.round(gb * 1000)
-    return `Bu hajmga taxminan ${movies} ta Full HD film, ${photos.toLocaleString()} ta sifatli fotosurat yoki ${books.toLocaleString()} ta elektron kitob sig'adi.`
-  } else if (mb >= 1) {
-    const songs = Math.round(mb / 4)
-    const photos = Math.round(mb / 3)
-    return `Bu hajmga taxminan ${songs} ta MP3 musiqa yoki ${photos} ta telefon fotosurati sig'adi.`
-  } else {
-    const pages = Math.round(kb / 2)
-    return `Bu hajmga taxminan ${pages || 1} sahifalik to'liq matnli hujjat sig'adi.`
-  }
+const realWorldEquivalents = computed(() => {
+  const mb = bytesTotal.value / (1024 * 1024)
+  return [
+    { name: 'Kitob sahifasi (~2 KB)', count: Math.round(mb * 512).toLocaleString('uz-UZ') + ' bet matn' },
+    { name: 'Yuqori sifatli rasm (~3 MB)', count: (mb / 3).toFixed(1) + ' ta fotosurat' },
+    { name: 'MP3 Qo\'shiq (~4 MB)', count: (mb / 4).toFixed(1) + ' ta audio trek' },
+    { name: 'Full HD Film (~2.5 GB)', count: (mb / 2560).toFixed(2) + ' ta kinofilm' }
+  ]
 })
 
 // ==========================================
-// 4. BLOK-SXEMA VA ALGORITMLAR (FLOWCHART)
+// 4. BLOK-SXEMALAR VA ALGORITM VIZUALIZATORI
 // ==========================================
 interface FlowStep {
-  id: number
-  type: 'start' | 'process' | 'decision' | 'output' | 'end'
-  text: string
+  id: string
+  label: string
+  shape: 'oval' | 'rect' | 'rhomb' | 'io'
+  codeLine: number
   detail: string
-  code: string
 }
 
-const algorithmMode = ref<'linear' | 'branch' | 'loop'>('branch')
-const currentStepIndex = ref<number>(0)
-const algoVariables = ref<Record<string, any>>({ son: 7, natija: '' })
+interface AlgorithmDef {
+  id: string
+  title: string
+  desc: string
+  pythonCode: string[]
+  steps: FlowStep[]
+  variables: Record<string, any>
+  runLogic: (stepIdx: number, vars: any) => { nextIdx: number; log: string }
+}
 
-const ALGORITHMS: Record<string, { title: string; desc: string; steps: FlowStep[] }> = {
-  linear: {
-    title: '1. Chiziqli algoritm (Ketma-ketlik)',
-    desc: 'Barcha qadamlar hech qanday shartsiz, ketma-ket bir martadan bajariladi.',
+const ALGORITHMS: AlgorithmDef[] = [
+  {
+    id: 'linear',
+    title: '1. Chiziqli algoritm (Kofe tayyorlash)',
+    desc: 'Har bir qadam ketma-ket, birin-ketin bajariladi.',
+    pythonCode: [
+      'def make_coffee():',
+      '    print("1. Suvni qaynatish")',
+      '    print("2. Qahva va shakarni solish")',
+      '    print("3. Qaynagan suvni quyish")',
+      '    print("4. Qahva tayyor!")'
+    ],
     steps: [
-      { id: 1, type: 'start', text: 'Boshlanish', detail: 'Dastur ishga tushirildi.', code: '# Dastur start' },
-      { id: 2, type: 'process', text: 'a = 15, b = 25', detail: 'O\'zgaruvchilarga qiymat yuklandi.', code: 'a = 15\nb = 25' },
-      { id: 3, type: 'process', text: 'yigindi = a + b', detail: 'Amal bajarildi: 15 + 25 = 40', code: 'yigindi = a + b' },
-      { id: 4, type: 'output', text: 'Chiqarish: yigindi', detail: 'Ekranga 40 soni chiqarildi.', code: 'print("Yig\'indi:", yigindi)' },
-      { id: 5, type: 'end', text: 'Tamom', detail: 'Algoritm muvaffaqiyatli yakunlandi.', code: '# Dastur tugadi' }
-    ]
+      { id: 's1', label: 'Boshlash', shape: 'oval', codeLine: 0, detail: 'Algoritm boshlandi' },
+      { id: 's2', label: 'Suvni qaynatish', shape: 'rect', codeLine: 1, detail: 'Choynakda suv qaynadi' },
+      { id: 's3', label: 'Qahva va shakar solish', shape: 'rect', codeLine: 2, detail: 'Finjonga masalliqlar solindi' },
+      { id: 's4', label: 'Suvni quyish va aralashtirish', shape: 'rect', codeLine: 3, detail: 'Issiq suv quyilib aralashtirildi' },
+      { id: 's5', label: 'Tamom (Tayyor)', shape: 'oval', codeLine: 4, detail: 'Qahva ichishga tayyor!' }
+    ],
+    variables: { holat: 'Boshlanmoqda' },
+    runLogic: (idx, v) => {
+      const msgs = ['Boshlandi', 'Suv qaynatildi', 'Qahva solindi', 'Aralashtirildi', 'Tayyor bo\'ldi!']
+      v.holat = msgs[idx] || 'Tamom'
+      return { nextIdx: idx + 1, log: msgs[idx] }
+    }
   },
-  branch: {
-    title: '2. Tarmoqlanuvchi algoritm (Shart if/else)',
-    desc: 'Shart tekshiriladi: to\'g\'ri bo\'lsa bir yo\'ldan, noto\'g\'ri bo\'lsa boshqa yo\'ldan ketadi.',
+  {
+    id: 'branching',
+    title: '2. Tarmoqlanuvchi algoritm (Imtihon bahosi)',
+    desc: 'Shart (if/else) tekshiriladi: ball >= 60 bo\'lsa "O\'tdi", aks holda "Qayta topshirish".',
+    pythonCode: [
+      'ball = 75',
+      'if ball >= 60:',
+      '    natija = "Imtihondan o\'tdi (Ajoyib!)"',
+      'else:',
+      '    natija = "Qayta topshirish kerak"',
+      'print(natija)'
+    ],
     steps: [
-      { id: 1, type: 'start', text: 'Boshlanish', detail: 'Son tekshirish boshlandi.', code: 'son = 7' },
-      { id: 2, type: 'decision', text: 'son % 2 == 0 ?', detail: '7 ni 2 ga bo\'lgandagi qoldiq 0 ga tengmi? (Yo\'q: 1 == 0 yolg\'on)', code: 'if son % 2 == 0:' },
-      { id: 3, type: 'process', text: 'natija = "Toq son"', detail: 'Shart bajarilmadi, else bloki ishladi.', code: 'else:\n    natija = "Toq son"' },
-      { id: 4, type: 'output', text: 'Chiqarish: "Toq son"', detail: 'Ekranga "Toq son" javobi chiqdi.', code: 'print(natija)' },
-      { id: 5, type: 'end', text: 'Tamom', detail: 'Algoritm yakunlandi.', code: '# Finish' }
-    ]
+      { id: 's1', label: 'Boshlash (Ball = 75)', shape: 'oval', codeLine: 0, detail: 'O\'quvchi balli kiritildi: 75' },
+      { id: 's2', label: 'Ball >= 60 ?', shape: 'rhomb', codeLine: 1, detail: 'Shart tekshirilmoqda: 75 >= 60 rostmi?' },
+      { id: 's3', label: 'Natija: "O\'tdi"', shape: 'rect', codeLine: 2, detail: 'Shart rost bo\'lgani uchun ijobiy tarmoq ishga tushdi' },
+      { id: 's4', label: 'Natijani chop etish', shape: 'io', codeLine: 5, detail: 'Ekranga xabar chiqarildi' },
+      { id: 's5', label: 'Tamom', shape: 'oval', codeLine: 5, detail: 'Jarayon yakunlandi' }
+    ],
+    variables: { ball: 75, natija: 'Noma\'lum' },
+    runLogic: (idx, v) => {
+      if (idx === 1) {
+        v.natija = v.ball >= 60 ? 'Imtihondan o\'tdi' : 'Qayta topshirish'
+      }
+      return { nextIdx: idx + 1, log: `Qadam: ${idx + 1}` }
+    }
   },
-  loop: {
-    title: '3. Takrorlanuvchi algoritm (Sikl / While loop)',
-    desc: 'Berilgan shart bajarilguncha ma\'lum bir amallar qayta-qayta takrorlanadi.',
+  {
+    id: 'loop',
+    title: '3. Takrorlanuvchi algoritm (1 dan 5 gacha sanash)',
+    desc: 'Sikl (while / for) toki shart bajarilguncha takrorlanadi.',
+    pythonCode: [
+      'son = 1',
+      'while son <= 5:',
+      '    print("Hozirgi son:", son)',
+      '    son += 1',
+      'print("Sikl tugadi!")'
+    ],
     steps: [
-      { id: 1, type: 'start', text: 'Boshlanish (i = 1, sum = 0)', detail: 'Boshlang\'ich hisoblagichlar o\'rnatildi.', code: 'i = 1\nsum = 0' },
-      { id: 2, type: 'decision', text: 'i <= 3 ?', detail: 'Hozir i = 1 (1 <= 3 rost, sikl davom etadi)', code: 'while i <= 3:' },
-      { id: 3, type: 'process', text: 'sum += i, i += 1', detail: 'sum = 1, i endi 2 bo\'ldi.', code: '    sum += i\n    i += 1' },
-      { id: 4, type: 'output', text: 'Chiqarish: sum (6)', detail: 'Jami yig\'indi 1+2+3 = 6 chiqarildi.', code: 'print("Jami:", sum)' },
-      { id: 5, type: 'end', text: 'Tamom', detail: 'Sikl to\'xtadi va yakunlandi.', code: '# Loop finish' }
-    ]
+      { id: 's1', label: 'Boshlash: son = 1', shape: 'oval', codeLine: 0, detail: 'Boshlang\'ich qiymat o\'rnatildi' },
+      { id: 's2', label: 'son <= 5 ?', shape: 'rhomb', codeLine: 1, detail: 'Sikl sharti tekshirilmoqda' },
+      { id: 's3', label: 'Ekranga: son ni chiqarish', shape: 'io', codeLine: 2, detail: 'Chop etildi' },
+      { id: 's4', label: 'son = son + 1', shape: 'rect', codeLine: 3, detail: 'Son 1 taga oshirildi' },
+      { id: 's5', label: 'Tamom (Sikl tugadi)', shape: 'oval', codeLine: 4, detail: 'Shart yolg\'on bo\'ldi va sikl yakunlandi' }
+    ],
+    variables: { son: 1, ekranda: [] },
+    runLogic: (idx, v) => {
+      if (idx === 3) {
+        v.son++
+      }
+      return { nextIdx: idx + 1, log: `Son: ${v.son}` }
+    }
   }
+]
+
+const selectedAlgorithmId = ref<string>('linear')
+const currentStepIndex = ref<number>(0)
+const algoVars = ref<any>({})
+const algoLogs = ref<string[]>([])
+
+const currentAlgorithm = computed(() => ALGORITHMS.find(a => a.id === selectedAlgorithmId.value) || ALGORITHMS[0])
+
+const resetAlgorithm = () => {
+  currentStepIndex.value = 0
+  algoVars.value = JSON.parse(JSON.stringify(currentAlgorithm.value.variables))
+  algoLogs.value = ['Algoritm ishga tushirishga tayyor.']
 }
 
-const currentAlgorithm = computed(() => ALGORITHMS[algorithmMode.value])
-const currentFlowStep = computed(() => currentAlgorithm.value.steps[currentStepIndex.value] || currentAlgorithm.value.steps[0])
+watch(selectedAlgorithmId, () => {
+  resetAlgorithm()
+})
 
 const nextAlgoStep = () => {
   if (currentStepIndex.value < currentAlgorithm.value.steps.length - 1) {
     currentStepIndex.value++
-  } else {
-    currentStepIndex.value = 0
+    const res = currentAlgorithm.value.runLogic(currentStepIndex.value, algoVars.value)
+    algoLogs.value.push(currentAlgorithm.value.steps[currentStepIndex.value].detail)
   }
-}
-
-const resetAlgo = () => {
-  currentStepIndex.value = 0
 }
 
 // ==========================================
 // 5. KOMPYUTER ANATOMIYASI (HARDWARE)
 // ==========================================
-const selectedPart = ref<string>('cpu')
-
-const HARDWARE_PARTS: Record<string, {
+interface HardwarePart {
+  id: string
   name: string
-  badge: string
-  icon: string
-  analogy: string
   role: string
+  analogy: string
   unit: string
-  example: string
-}> = {
-  cpu: {
+  details: string
+  examples: string
+  icon: string
+}
+
+const HARDWARE_PARTS: HardwarePart[] = [
+  {
+    id: 'cpu',
     name: 'CPU (Markaziy Protsessor)',
-    badge: 'Kompyuterning "Miyasi"',
-    icon: 'cpu',
-    analogy: 'Oshpaz (Barcha hisob-kitoblar va buyruqlarni birma-bir tezda bajaradi)',
-    role: 'Dasturlar yozilgan buyruqlarni milliardlab marta soniyasiga hisoblaydi, mantiqiy va arifmetik amallarni boshqaradi.',
-    unit: 'Gigagerts (GHz) — soniyasiga milliardlab taktlar, hamda Yadrolar soni (Masalan: 8 yadro 3.8 GHz).',
-    example: 'Intel Core i7, AMD Ryzen 7, Apple M3.'
+    role: 'Kompyuterning miyasi. Barcha hisob-kitoblar, dastur buyruqlari va mantiqiy amallarni bajaradi.',
+    analogy: '🧠 Oshxonadagi bosh oshpaz: barcha buyurtmalarni o\'zi tahlil qiladi va tezlikda pishiradi.',
+    unit: 'Gigagerts (GHz) — soniyasiga necha milliard amal bajarishi, Yadrolar (Cores).',
+    details: 'Intel Core i5/i7/i9, AMD Ryzen, Apple M1/M2/M3/M4 chiplari.',
+    examples: 'Dastur kodini kompilyatsiya qilish, matematik hisoblar, o\'yin fizikasini hisoblash.',
+    icon: 'cpu'
   },
-  ram: {
+  {
+    id: 'ram',
     name: 'RAM (Tezkor Xotira)',
-    badge: 'Vaqtinchalik ish maydoni',
-    icon: 'memory-stick',
-    analogy: 'Oshpazning ish stoli (Hozir ishlayotgan mahsulotlar stol ustida turadi, tok o\'chsa stol tozalanadi)',
-    role: 'Hozirda ochiq turgan dasturlar, o\'yinlar va brauzer yorliqlari ma\'lumotlarini o\'ta tezkor o\'qish va yozish uchun saqlaydi.',
-    unit: 'Gigabayt (GB) va Megagerts (MHz) — Masalan: 16 GB DDR5 5600 MHz.',
-    example: '8 GB, 16 GB, 32 GB DDR4/DDR5.'
+    role: 'Vaqtinchalik tezkor xotira. Kompyuter o\'chsa ma\'lumot o\'chib ketadi (uchuvchan xotira).',
+    analogy: '🪑 Oshpazning ish stoli: kerakli masalliqlar shu yerda turadi, tezda qo\'l yetadi. Ish tugagach stol tozalanadi.',
+    unit: 'Gigabayt (GB) — 8 GB, 16 GB, 32 GB, 64 GB.',
+    details: 'DDR4, DDR5 xotira modullari. Ochiq dasturlar va brauzer varaqlari aynan RAM\'da saqlanadi.',
+    examples: 'O\'yin o\'ynayotganda yoki brauzerda 20 ta tab ochganda kerak bo\'ladigan joy.',
+    icon: 'memory-stick'
   },
-  storage: {
+  {
+    id: 'storage',
     name: 'SSD / HDD (Doimiy Xotira)',
-    badge: 'Uzoq muddatli omborxona',
-    icon: 'hard-drive',
-    analogy: 'Muzlatgich yoki javon (Barcha fayllar, rasmlar va dasturlar saqlanadi, tok o\'chsa ham o\'chmaydi)',
-    role: 'Operatsion tizim (Windows/Linux/macOS), fayllar, o\'yinlar va kodlarni kompyuter o\'chganda ham o\'chmasdan doimiy saqlash.',
-    unit: 'Gigabayt (GB) va Terabayt (TB) — Masalan: 512 GB yoki 1 TB NVMe SSD.',
-    example: 'Kingston NVMe SSD, Samsung 990 Pro.'
+    role: 'Ma\'lumotlarni uzoq muddat xavfsiz saqlash. Kompyuter o\'chganda ham saqlanib qoladi.',
+    analogy: '📦 Oshxona ombori (muzlatgich): barcha mahsulotlar javonlarda yillar davomida saqlanadi.',
+    unit: 'Gigabayt (GB) va Terabayt (TB) — 512 GB SSD, 1 TB NVMe SSD.',
+    details: 'SSD (Solid State Drive) mikrosxemalarda ishlaydi va HDD dan 10-20 barobar tezroq ishlaydi.',
+    examples: 'Windows/macOS operatsion tizimi, o\'rnatilgan dasturlar, foto va videolar.',
+    icon: 'hard-drive'
   },
-  gpu: {
+  {
+    id: 'gpu',
     name: 'GPU (Videokarta)',
-    badge: 'Grafika va Vizual hisob-kitoblar',
-    icon: 'circuit-board',
-    analogy: 'Rassomlar jamoasi (Millionlab piksellarni bir vaqtda parallel chizib beradi)',
-    role: 'Ekrandagi 3D grafika, o\'yinlar, video montaj va sun\'iy intellekt (AI) modellarining parallel hisob-kitoblarini tezlashtiradi.',
-    unit: 'VRAM (GB) va CUDA/Stream yadrolar soni — Masalan: 8 GB GDDR6.',
-    example: 'NVIDIA RTX 4060, AMD Radeon RX 7600.'
+    role: 'Grafika va 3D tasvirlarni, piksellarni hamda sun\'iy intellekt (AI/ML) matritsalarini qayta ishlash.',
+    analogy: '🎨 Rassomlar guruhi: bitta bosh oshpaz emas, minglab yordamchilar bir vaqtda millionlab nuqtalarni chizadi.',
+    unit: 'VRAM (GB) — masalan, NVIDIA RTX 4090 24GB VRAM.',
+    details: 'Minglab kichik parallel yadrolardan (CUDA cores) iborat bo\'lib, parallel hisoblashda CPU dan ancha tez.',
+    examples: '3D o\'yinlar, video montaj (4K rendering), Neyron tarmoqlarni o\'qitish.',
+    icon: 'circuit-board'
   },
-  motherboard: {
-    name: 'Ona plata (Motherboard)',
-    badge: 'Magistral yo\'l va asab tizimi',
-    icon: 'circuit-board',
-    analogy: 'Shahar yo\'llari tarmog\'i (Barcha qismlarni bir-biri bilan bog\'laydi)',
-    role: 'Protsessor, xotira, videokarta va boshqa barcha qurilmalarni elektr quvvati va yuqori tezlikdagi ma\'lumot shinalari bilan tutashtiradi.',
-    unit: 'Chipset va Soket turi — Masalan: B650 chipset, AM5 soket.',
-    example: 'ASUS ROG, MSI Tomahawk, Gigabyte AORUS.'
+  {
+    id: 'motherboard',
+    name: 'Ona Plata (Motherboard)',
+    role: 'Barcha qismlarni (CPU, RAM, SSD, GPU, quvvat bloki) bir-biriga bog\'lovchi markaziy magistral.',
+    analogy: '🏙️ Shahar yo\'llari va ko\'priklari: har bir bino va transportni bog\'lab turuvchi infratuzilma.',
+    unit: 'Form-faktor: ATX, Micro-ATX, Mini-ITX, Chipset (masalan, B650, Z790).',
+    details: 'Shinalar (Buses), portlar (USB, PCIe, SATA) va BIOS chipini o\'zida saqlaydi.',
+    examples: 'Barcha signallarning o\'z vaqtida bir qismdan ikkinchisiga xatosiz yetib borishini ta\'minlaydi.',
+    icon: 'circuit-board'
+  }
+]
+
+const selectedHardwareId = ref<string>('cpu')
+const currentHardware = computed(() => HARDWARE_PARTS.find(p => p.id === selectedHardwareId.value) || HARDWARE_PARTS[0])
+
+// ==========================================
+// 6. SARALASH VA QIDIRUV (SORTING & SEARCH)
+// ==========================================
+type SortAlgoType = 'bubble' | 'selection' | 'insertion' | 'binary_search'
+const sortAlgorithm = ref<SortAlgoType>('bubble')
+const sortArraySize = ref<number>(10)
+const sortArray = ref<{ val: number; state: 'default' | 'comparing' | 'swapping' | 'sorted' | 'target' }[]>([])
+const sortComparisons = ref<number>(0)
+const sortSwaps = ref<number>(0)
+const sortIsRunning = ref<boolean>(false)
+const sortSpeedMs = ref<number>(200) // 400 = slow, 200 = normal, 60 = fast
+const sortExplanation = ref<string>('')
+const searchTargetVal = ref<number>(45)
+let sortTimer: any = null
+
+const generateSortArray = (type: 'random' | 'reversed' | 'sorted' = 'random') => {
+  stopSorting()
+  const arr: number[] = []
+  for (let i = 0; i < sortArraySize.value; i++) {
+    arr.push(Math.floor(Math.random() * 85) + 10)
+  }
+  if (type === 'reversed') arr.sort((a, b) => b - a)
+  if (type === 'sorted') arr.sort((a, b) => a - b)
+  sortArray.value = arr.map(v => ({ val: v, state: 'default' }))
+  sortComparisons.value = 0
+  sortSwaps.value = 0
+  sortExplanation.value = 'Yangi massiv yaratildi. Saralashni boshlash uchun "Boshlash" tugmasini bosing.'
+  if (sortAlgorithm.value === 'binary_search') {
+    sortArray.value.sort((a, b) => a.val - b.val)
+    searchTargetVal.value = sortArray.value[Math.floor(Math.random() * sortArray.value.length)].val
+    sortExplanation.value = `Ikkilik qidiruv uchun massiv saralandi. Qidirilayotgan son: ${searchTargetVal.value}`
   }
 }
 
-const currentHardware = computed(() => HARDWARE_PARTS[selectedPart.value] || HARDWARE_PARTS.cpu)
+const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
+
+const startSorting = async () => {
+  if (sortIsRunning.value) return
+  sortIsRunning.value = true
+  sortComparisons.value = 0
+  sortSwaps.value = 0
+
+  if (sortAlgorithm.value === 'bubble') {
+    const n = sortArray.value.length
+    for (let i = 0; i < n - 1; i++) {
+      for (let j = 0; j < n - i - 1; j++) {
+        if (!sortIsRunning.value) return
+        sortArray.value[j].state = 'comparing'
+        sortArray.value[j + 1].state = 'comparing'
+        sortComparisons.value++
+        sortExplanation.value = `Taqqoslanmoqda: ${sortArray.value[j].val} va ${sortArray.value[j + 1].val}`
+        await sleep(sortSpeedMs.value)
+
+        if (sortArray.value[j].val > sortArray.value[j + 1].val) {
+          sortArray.value[j].state = 'swapping'
+          sortArray.value[j + 1].state = 'swapping'
+          sortSwaps.value++
+          sortExplanation.value = `O'rin almashmoqda: ${sortArray.value[j].val} > ${sortArray.value[j + 1].val}`
+          const tmp = sortArray.value[j].val
+          sortArray.value[j].val = sortArray.value[j + 1].val
+          sortArray.value[j + 1].val = tmp
+          await sleep(sortSpeedMs.value)
+        }
+        sortArray.value[j].state = 'default'
+        sortArray.value[j + 1].state = 'default'
+      }
+      sortArray.value[n - i - 1].state = 'sorted'
+    }
+    sortArray.value[0].state = 'sorted'
+    sortExplanation.value = 'Bubble Sort muvaffaqiyatli yakunlandi! Barcha elementlar tartiblandi.'
+  } else if (sortAlgorithm.value === 'selection') {
+    const n = sortArray.value.length
+    for (let i = 0; i < n; i++) {
+      let minIdx = i
+      sortArray.value[i].state = 'comparing'
+      for (let j = i + 1; j < n; j++) {
+        if (!sortIsRunning.value) return
+        sortArray.value[j].state = 'comparing'
+        sortComparisons.value++
+        sortExplanation.value = `Eng kichigini qidirish: joriy min=${sortArray.value[minIdx].val}, tekshirilmoqda=${sortArray.value[j].val}`
+        await sleep(sortSpeedMs.value)
+
+        if (sortArray.value[j].val < sortArray.value[minIdx].val) {
+          if (minIdx !== i) sortArray.value[minIdx].state = 'default'
+          minIdx = j
+          sortArray.value[minIdx].state = 'swapping'
+        } else {
+          sortArray.value[j].state = 'default'
+        }
+      }
+      if (minIdx !== i) {
+        sortSwaps.value++
+        sortExplanation.value = `Eng kichik element topildi (${sortArray.value[minIdx].val}) va ${i}-o'ringa qo'yildi.`
+        const tmp = sortArray.value[i].val
+        sortArray.value[i].val = sortArray.value[minIdx].val
+        sortArray.value[minIdx].val = tmp
+        await sleep(sortSpeedMs.value)
+      }
+      if (minIdx !== i) sortArray.value[minIdx].state = 'default'
+      sortArray.value[i].state = 'sorted'
+    }
+    sortExplanation.value = 'Selection Sort yakunlandi! Har bir qadamda minimum element topildi.'
+  } else if (sortAlgorithm.value === 'insertion') {
+    const n = sortArray.value.length
+    sortArray.value[0].state = 'sorted'
+    for (let i = 1; i < n; i++) {
+      const key = sortArray.value[i].val
+      let j = i - 1
+      sortArray.value[i].state = 'swapping'
+      sortExplanation.value = `Qo'yish uchun element tanlandi: ${key}`
+      await sleep(sortSpeedMs.value)
+
+      while (j >= 0 && sortArray.value[j].val > key) {
+        if (!sortIsRunning.value) return
+        sortComparisons.value++
+        sortSwaps.value++
+        sortArray.value[j + 1].val = sortArray.value[j].val
+        sortArray.value[j].state = 'comparing'
+        sortExplanation.value = `${sortArray.value[j].val} > ${key} bo'lgani uchun o'ngga surildi.`
+        await sleep(sortSpeedMs.value)
+        sortArray.value[j].state = 'sorted'
+        j--
+      }
+      sortArray.value[j + 1].val = key
+      sortArray.value[j + 1].state = 'sorted'
+      for (let k = 0; k <= i; k++) sortArray.value[k].state = 'sorted'
+      await sleep(sortSpeedMs.value)
+    }
+    sortExplanation.value = 'Insertion Sort yakunlandi! Elementlar o\'z o\'rniga joylashtirildi.'
+  } else if (sortAlgorithm.value === 'binary_search') {
+    let low = 0
+    let high = sortArray.value.length - 1
+    let found = false
+    while (low <= high) {
+      if (!sortIsRunning.value) return
+      const mid = Math.floor((low + high) / 2)
+      sortArray.value[mid].state = 'comparing'
+      sortComparisons.value++
+      sortExplanation.value = `O'rtadagi element (${sortArray.value[mid].val}) nishon (${searchTargetVal.value}) bilan solishtirilmoqda. [Diapazon: ${low} dan ${high} gacha]`
+      await sleep(sortSpeedMs.value * 1.5)
+
+      if (sortArray.value[mid].val === searchTargetVal.value) {
+        sortArray.value[mid].state = 'target'
+        sortExplanation.value = `🎉 Nishon topildi! Indeks: ${mid}, Qiymat: ${searchTargetVal.value}`
+        found = true
+        break
+      } else if (sortArray.value[mid].val < searchTargetVal.value) {
+        for (let k = low; k <= mid; k++) sortArray.value[k].state = 'default'
+        low = mid + 1
+        sortExplanation.value = `${sortArray.value[mid].val} < ${searchTargetVal.value} bo'lgani uchun chap yarmi tashlab yuborildi.`
+      } else {
+        for (let k = mid; k <= high; k++) sortArray.value[k].state = 'default'
+        high = mid - 1
+        sortExplanation.value = `${sortArray.value[mid].val} > ${searchTargetVal.value} bo'lgani uchun o'ng yarmi tashlab yuborildi.`
+      }
+      await sleep(sortSpeedMs.value)
+    }
+    if (!found) sortExplanation.value = `Nishon (${searchTargetVal.value}) massivda topilmadi.`
+  }
+
+  sortIsRunning.value = false
+}
+
+const stopSorting = () => {
+  sortIsRunning.value = false
+  if (sortTimer) clearTimeout(sortTimer)
+  sortArray.value.forEach(item => { item.state = 'default' })
+}
+
+watch(sortAlgorithm, () => {
+  generateSortArray()
+})
+
+// ==========================================
+// 7. VISUAL GIT SIMULYATORI (GIT SANDBOX)
+// ==========================================
+interface GitCommit {
+  id: string
+  msg: string
+  branch: string
+  parent: string | null
+}
+
+const gitCommits = ref<GitCommit[]>([
+  { id: 'c1', msg: 'Initial commit: README', branch: 'main', parent: null },
+  { id: 'c2', msg: 'Add HTML structure', branch: 'main', parent: 'c1' },
+  { id: 'c3', msg: 'Style with CSS', branch: 'main', parent: 'c2' }
+])
+const gitBranches = ref<string[]>(['main', 'feature'])
+const gitCurrentBranch = ref<string>('main')
+const gitCommitMsg = ref<string>('Add responsive layout')
+const gitNewBranchName = ref<string>('dev')
+const gitTerminalLogs = ref<string[]>([
+  '$ git init',
+  '$ git commit -m "Initial commit: README"',
+  '$ git commit -m "Add HTML structure"',
+  '$ git commit -m "Style with CSS"',
+  'Hozirgi shox: main (HEAD)'
+])
+
+const gitDoCommit = () => {
+  if (!gitCommitMsg.value.trim()) return
+  const idNum = gitCommits.value.length + 1
+  const newCommit: GitCommit = {
+    id: 'c' + idNum,
+    msg: gitCommitMsg.value.trim(),
+    branch: gitCurrentBranch.value,
+    parent: gitCommits.value[gitCommits.value.length - 1]?.id || null
+  }
+  gitCommits.value.push(newCommit)
+  gitTerminalLogs.value.push(`$ git commit -m "${newCommit.msg}"`)
+  gitTerminalLogs.value.push(`[${gitCurrentBranch.value} ${newCommit.id}] ${newCommit.msg}`)
+  gitCommitMsg.value = `Update module ${idNum}`
+}
+
+const gitCreateBranch = () => {
+  const b = gitNewBranchName.value.trim().toLowerCase().replace(/\s+/g, '-')
+  if (!b || gitBranches.value.includes(b)) return
+  gitBranches.value.push(b)
+  gitTerminalLogs.value.push(`$ git branch ${b}`)
+  gitTerminalLogs.value.push(`Yangi shox yaratildi: '${b}'`)
+  gitNewBranchName.value = 'bugfix'
+}
+
+const gitCheckoutBranch = (branchName: string) => {
+  gitCurrentBranch.value = branchName
+  gitTerminalLogs.value.push(`$ git checkout ${branchName}`)
+  gitTerminalLogs.value.push(`Switched to branch '${branchName}'`)
+}
+
+const gitMergeBranch = (sourceBranch: string) => {
+  if (sourceBranch === gitCurrentBranch.value) return
+  const idNum = gitCommits.value.length + 1
+  const mergeCommit: GitCommit = {
+    id: 'c' + idNum,
+    msg: `Merge branch '${sourceBranch}' into ${gitCurrentBranch.value}`,
+    branch: gitCurrentBranch.value,
+    parent: gitCommits.value[gitCommits.value.length - 1]?.id || null
+  }
+  gitCommits.value.push(mergeCommit)
+  gitTerminalLogs.value.push(`$ git merge ${sourceBranch}`)
+  gitTerminalLogs.value.push(`Auto-merging... Merge made by the 'ort' strategy.`)
+}
+
+const gitResetGraph = () => {
+  gitCommits.value = [
+    { id: 'c1', msg: 'Initial commit: README', branch: 'main', parent: null },
+    { id: 'c2', msg: 'Add HTML structure', branch: 'main', parent: 'c1' },
+    { id: 'c3', msg: 'Style with CSS', branch: 'main', parent: 'c2' }
+  ]
+  gitBranches.value = ['main', 'feature']
+  gitCurrentBranch.value = 'main'
+  gitTerminalLogs.value = ['$ git init', 'Git holati tiklandi.']
+}
+
+// ==========================================
+// 8. KIBERXAVFSIZLIK & KRIPTOGRAFIYA (CYBER)
+// ==========================================
+// Caesar Cipher
+const caesarText = ref<string>('AXV MENTOR 2026')
+const caesarShift = ref<number>(3)
+
+const caesarEncrypted = computed(() => {
+  const text = caesarText.value
+  const s = ((caesarShift.value % 26) + 26) % 26
+  let res = ''
+  for (let i = 0; i < text.length; i++) {
+    const code = text.charCodeAt(i)
+    if (code >= 65 && code <= 90) {
+      res += String.fromCharCode(((code - 65 + s) % 26) + 65)
+    } else if (code >= 97 && code <= 122) {
+      res += String.fromCharCode(((code - 97 + s) % 26) + 97)
+    } else {
+      res += text[i]
+    }
+  }
+  return res
+})
+
+// Base64 Converter
+const base64Input = ref<string>('Salom')
+const base64Output = computed(() => {
+  try {
+    return btoa(unescape(encodeURIComponent(base64Input.value)))
+  } catch (e) {
+    return 'Xatolik'
+  }
+})
+
+const base64BinaryBreakdown = computed(() => {
+  const str = base64Input.value.slice(0, 4) // show first 4 chars
+  return str.split('').map(ch => {
+    const code = ch.charCodeAt(0)
+    return {
+      char: ch,
+      dec: code,
+      bin: code.toString(2).padStart(8, '0')
+    }
+  })
+})
+
+// Password Strength Analyzer
+const testPassword = ref<string>('P@ssw0rd2026!')
+const passwordStats = computed(() => {
+  const p = testPassword.value
+  const hasLower = /[a-z]/.test(p)
+  const hasUpper = /[A-Z]/.test(p)
+  const hasNumber = /[0-9]/.test(p)
+  const hasSymbol = /[^a-zA-Z0-9]/.test(p)
+  const len = p.length
+
+  let poolSize = 0
+  if (hasLower) poolSize += 26
+  if (hasUpper) poolSize += 26
+  if (hasNumber) poolSize += 10
+  if (hasSymbol) poolSize += 32
+
+  const entropy = len > 0 && poolSize > 0 ? Math.round(len * Math.log2(poolSize)) : 0
+
+  let crackTime = 'Bir lahzada'
+  let rank = 'Juda kuchsiz'
+  let color = '#e06c75'
+  let scorePct = Math.min(100, Math.round((entropy / 80) * 100))
+
+  if (entropy < 28) {
+    crackTime = '1 soniyadan kam'
+    rank = 'Xavfli darajada ojiz'
+    color = '#e06c75'
+  } else if (entropy < 45) {
+    crackTime = 'Bir necha daqiqa'
+    rank = 'Kuchsiz'
+    color = '#d19a66'
+  } else if (entropy < 60) {
+    crackTime = 'Bir necha oy'
+    rank = 'O\'rtacha'
+    color = '#e5c07b'
+  } else if (entropy < 80) {
+    crackTime = '100+ yil'
+    rank = 'Kuchli'
+    color = '#98c379'
+  } else {
+    crackTime = 'Millionlab yillar'
+    rank = 'Super mustahkam 🛡️'
+    color = '#56b6c2'
+  }
+
+  return {
+    len,
+    hasLower,
+    hasUpper,
+    hasNumber,
+    hasSymbol,
+    entropy,
+    crackTime,
+    rank,
+    color,
+    scorePct
+  }
+})
+
+// ==========================================
+// 9. WEB & UI DIZAYN LAB (CSS & DESIGN)
+// ==========================================
+// Color Converter
+const colorHex = ref<string>('#007acc')
+const colorRgb = computed(() => {
+  let hex = colorHex.value.replace('#', '')
+  if (hex.length === 3) hex = hex.split('').map(c => c + c).join('')
+  const r = parseInt(hex.substring(0, 2), 16) || 0
+  const g = parseInt(hex.substring(2, 4), 16) || 0
+  const b = parseInt(hex.substring(4, 6), 16) || 0
+  return { r, g, b, str: `rgb(${r}, ${g}, ${b})` }
+})
+
+// Glassmorphism controls
+const glassBlur = ref<number>(12)
+const glassOpacity = ref<number>(20)
+const glassBorder = ref<number>(25)
+const glassRadius = ref<number>(16)
+
+const glassCss = computed(() => {
+  return `background: rgba(255, 255, 255, ${glassOpacity.value / 100});\nbackdrop-filter: blur(${glassBlur.value}px);\n-webkit-backdrop-filter: blur(${glassBlur.value}px);\nborder: 1px solid rgba(255, 255, 255, ${glassBorder.value / 100});\nborder-radius: ${glassRadius.value}px;`
+})
+
+// Box Shadow controls
+const shadowX = ref<number>(0)
+const shadowY = ref<number>(10)
+const shadowBlur = ref<number>(25)
+const shadowSpread = ref<number>(-5)
+const shadowColor = ref<string>('rgba(0, 122, 204, 0.4)')
+
+const shadowCss = computed(() => {
+  return `box-shadow: ${shadowX.value}px ${shadowY.value}px ${shadowBlur.value}px ${shadowSpread.value}px ${shadowColor.value};`
+})
+
+const copiedCss = ref<boolean>(false)
+const copyToClipboard = (text: string) => {
+  if (typeof navigator !== 'undefined') {
+    navigator.clipboard.writeText(text)
+    copiedCss.value = true
+    setTimeout(() => { copiedCss.value = false }, 1800)
+  }
+}
 
 onMounted(() => {
   generateNewGameTarget()
+  resetAlgorithm()
+  generateSortArray()
+})
+
+onUnmounted(() => {
+  stopSorting()
 })
 </script>
 
 <template>
-  <div class="axv foundation-container">
-    <Crumbs :items="[{ t: 'Bosh sahifa', l: '/' }, { t: 'CS Laboratoriya (Foundation)' }]" />
+  <div class="foundation-page">
+    <Crumbs :items="[{ t: 'Bosh sahifa', l: '/' }, { t: 'CS Laboratoriya' }]" />
 
     <!-- HERO SECTION -->
     <header class="foundation-hero">
@@ -350,40 +824,32 @@ onMounted(() => {
 
       <!-- TAB NAVIGATION -->
       <nav class="foundation-tabs" aria-label="Laboratoriya bo'limlari">
-        <button
-          class="f-tab"
-          :class="{ active: activeTab === 'binary' }"
-          @click="activeTab = 'binary'"
-        >
+        <button class="f-tab" :class="{ active: activeTab === 'binary' }" @click="activeTab = 'binary'">
           <Icon name="binary" /> Ikkilik sanoq
         </button>
-        <button
-          class="f-tab"
-          :class="{ active: activeTab === 'logic' }"
-          @click="activeTab = 'logic'"
-        >
+        <button class="f-tab" :class="{ active: activeTab === 'logic' }" @click="activeTab = 'logic'">
           <Icon name="zap" /> Mantiqiy elementlar
         </button>
-        <button
-          class="f-tab"
-          :class="{ active: activeTab === 'memory' }"
-          @click="activeTab = 'memory'"
-        >
+        <button class="f-tab" :class="{ active: activeTab === 'memory' }" @click="activeTab = 'memory'">
           <Icon name="hard-drive" /> Axborot hajmi
         </button>
-        <button
-          class="f-tab"
-          :class="{ active: activeTab === 'flowchart' }"
-          @click="activeTab = 'flowchart'"
-        >
+        <button class="f-tab" :class="{ active: activeTab === 'flowchart' }" @click="activeTab = 'flowchart'">
           <Icon name="git-branch" /> Blok-sxemalar
         </button>
-        <button
-          class="f-tab"
-          :class="{ active: activeTab === 'hardware' }"
-          @click="activeTab = 'hardware'"
-        >
-          <Icon name="cpu" /> Qurilmalar (Hardware)
+        <button class="f-tab" :class="{ active: activeTab === 'hardware' }" @click="activeTab = 'hardware'">
+          <Icon name="cpu" /> Qurilmalar
+        </button>
+        <button class="f-tab" :class="{ active: activeTab === 'sorting' }" @click="activeTab = 'sorting'">
+          <Icon name="layers" /> Saralash & Qidiruv
+        </button>
+        <button class="f-tab" :class="{ active: activeTab === 'git' }" @click="activeTab = 'git'">
+          <Icon name="git-branch" /> Git Simulyatori
+        </button>
+        <button class="f-tab" :class="{ active: activeTab === 'crypto' }" @click="activeTab = 'crypto'">
+          <Icon name="shield" /> Kripto & Xavfsizlik
+        </button>
+        <button class="f-tab" :class="{ active: activeTab === 'design' }" @click="activeTab = 'design'">
+          <Icon name="palette" /> CSS & Dizayn
         </button>
       </nav>
     </header>
@@ -395,83 +861,106 @@ onMounted(() => {
       <div class="card-head">
         <div>
           <h2><Icon name="binary" /> 8-bitli Ikkilik sanoq tizimi trenajyori</h2>
-          <p>Har bir bit (0 yoki 1) ning qiymatini ko'rish uchun kalitlarni yoqing yoki o'chiring.</p>
+          <p>Har bir bit (kalit) 0 yoki 1 holatida bo'ladi. Har bir bitning o'z o'nlik qiymati (vazni) bor.</p>
         </div>
         <button class="btn btn-ghost btn-sm" @click="resetBits">
           <Icon name="rotate-ccw" /> Tozalash (0)
         </button>
       </div>
 
-      <!-- 8-Bit Interactive Board -->
+      <!-- 8-Bit Interactive Switchboard -->
       <div class="bit-board">
         <div
-          v-for="(val, idx) in bitValues"
-          :key="val"
+          v-for="(bit, idx) in bits"
+          :key="idx"
           class="bit-col"
-          :class="{ 'bit-active': bits[idx] === 1 }"
+          :class="{ active: bit === 1 }"
           @click="toggleBit(idx)"
         >
-          <div class="bit-weight">2<sup>{{ 7 - idx }}</sup></div>
-          <div class="bit-val-label">{{ val }}</div>
+          <div class="bit-weight">{{ bitValues[idx] }}</div>
+          <div class="bit-power">2<sup>{{ 7 - idx }}</sup></div>
           <div class="bit-switch">
-            <span class="bit-state">{{ bits[idx] }}</span>
+            <span class="bit-digit">{{ bit }}</span>
           </div>
-          <div class="bit-led" :class="{ on: bits[idx] === 1 }"></div>
+          <div class="bit-state">{{ bit === 1 ? 'YONIQ' : 'O\'CHIQ' }}</div>
         </div>
       </div>
 
-      <!-- Conversion Live Displays -->
-      <div class="conv-grid">
-        <div class="conv-box highlight">
-          <span class="cb-lbl">O'nlik (10-lik) son</span>
-          <span class="cb-val">{{ decimalValue }}</span>
-          <span class="cb-sub">{{ bits.map((b, i) => b ? bitValues[i] : null).filter(Boolean).join(' + ') || '0' }}</span>
+      <!-- Live Calculation & Encodings -->
+      <div class="calc-grid">
+        <div class="calc-box highlight">
+          <span class="cb-label">O'nlik sanoq (Decimal, 10-lik)</span>
+          <div class="cb-val">{{ decimalValue }}</div>
+          <span class="cb-sub">
+            <span v-for="(b, idx) in bits" :key="idx" v-show="b === 1">
+              {{ bitValues[idx] }}<span v-if="idx < bits.lastIndexOf(1)"> + </span>
+            </span>
+            <span v-if="decimalValue === 0">0</span>
+          </span>
         </div>
-        <div class="conv-box">
-          <span class="cb-lbl">Ikkilik (2-lik) kod</span>
-          <span class="cb-val font-mono">{{ binaryString }}</span>
-          <span class="cb-sub">8 ta bit (1 bayt)</span>
+
+        <div class="calc-box">
+          <span class="cb-label">Ikkilik kod (Binary, 2-lik)</span>
+          <div class="cb-val mono">{{ binaryString }}</div>
+          <span class="cb-sub">8 bit = 1 Bayt</span>
         </div>
-        <div class="conv-box">
-          <span class="cb-lbl">O'n oltilik (16-lik Hex)</span>
-          <span class="cb-val font-mono">{{ hexValue }}</span>
-          <span class="cb-sub">0x00 dan 0xFF gacha</span>
+
+        <div class="calc-box">
+          <span class="cb-label">O'n oltilik (Hexadecimal, 16-lik)</span>
+          <div class="cb-val mono">{{ hexValue }}</div>
+          <span class="cb-sub">Rang kodlari va xotira manzillari</span>
         </div>
-        <div class="conv-box">
-          <span class="cb-lbl">ASCII belgisi</span>
-          <span class="cb-val font-mono">{{ asciiChar }}</span>
-          <span class="cb-sub">Kod: {{ decimalValue }}</span>
+
+        <div class="calc-box">
+          <span class="cb-label">ASCII Belgisi</span>
+          <div class="cb-val ascii">{{ asciiChar }}</div>
+          <span class="cb-sub">Kompyuter matnni qanday ko'radi</span>
         </div>
       </div>
 
-      <!-- Mini-Game: Binary Challenge -->
-      <div class="game-panel">
-        <div class="gp-header">
+      <!-- Quick Preset Buttons -->
+      <div class="presets-row">
+        <span class="pr-label">Tezkor namunalar:</span>
+        <button class="pr-btn" @click="setDecimal(1)">1 (Faqat oxirgi bit)</button>
+        <button class="pr-btn" @click="setDecimal(42)">42 (00101010)</button>
+        <button class="pr-btn" @click="setDecimal(65)">65 ('A' harfi)</button>
+        <button class="pr-btn" @click="setDecimal(127)">127 (01111111)</button>
+        <button class="pr-btn" @click="setDecimal(255)">255 (Barchasi 1)</button>
+      </div>
+
+      <!-- Binary Challenge Game -->
+      <div class="game-section">
+        <div class="game-head">
           <div>
             <h3><Icon name="sparkles" /> Ikkilik chaqiriq: Sonni yig'ing!</h3>
-            <p>Quyidagi sonni bitlar yordamida hosil qiling:</p>
+            <p>Berilgan sonni hosil qilish uchun kerakli bitlarni yoqing.</p>
           </div>
-          <div class="gp-stats">
-            <span class="gp-score">Ball: <b>{{ gameScore }}</b></span>
-            <span class="gp-streak" v-if="gameStreak > 1">🔥 {{ gameStreak }}x</span>
+          <div class="game-stats">
+            <div class="gs-pill">Ball: <b>{{ gameScore }}</b></div>
+            <div class="gs-pill">Streak: <b>{{ gameStreak }} 🔥</b></div>
           </div>
         </div>
 
-        <div class="gp-target-row">
-          <div class="gp-target-num">{{ gameTarget }}</div>
-          <button class="btn btn-primary btn-lg" @click="checkGameAnswer">
-            <Icon name="check" /> Tekshirish
-          </button>
-          <button class="btn btn-ghost btn-sm" @click="generateNewGameTarget">
-            Boshqa son
-          </button>
+        <div class="game-body">
+          <div class="game-target-box">
+            <span>Maqsad son:</span>
+            <div class="gt-number">{{ gameTarget }}</div>
+          </div>
+          <div class="game-action">
+            <button class="btn btn-primary btn-lg" @click="checkGameAnswer">
+              <Icon name="check" /> Tekshirish
+            </button>
+            <button class="btn btn-ghost btn-lg" @click="generateNewGameTarget">
+              O'tkazib yuborish
+            </button>
+          </div>
         </div>
 
-        <div v-if="gameFeedback === 'success'" class="feedback-msg success">
-          🎉 Ajoyib! To'g'ri topdingiz! Yangi son yuklanmoqda...
+        <div v-if="gameFeedback === 'success'" class="feedback-toast success">
+          🎉 Barakalla! To'g'ri yig'ildi (+10 ball).
         </div>
-        <div v-else-if="gameFeedback === 'error'" class="feedback-msg error">
-          ❌ Hozirgi yig'indi: {{ decimalValue }}. Yana urinib ko'ring! (Kerakli: {{ gameTarget }})
+        <div v-else-if="gameFeedback === 'error'" class="feedback-toast error">
+          ❌ Hozircha {{ decimalValue }} bo'ldi, kutilgan: {{ gameTarget }}. Yana urinib ko'ring!
         </div>
       </div>
     </section>
@@ -479,33 +968,32 @@ onMounted(() => {
     <!-- ========================================== -->
     <!-- TAB 2: MANTIQIY ELEMENTLAR (LOGIC GATES)  -->
     <!-- ========================================== -->
-    <section v-else-if="activeTab === 'logic'" class="lab-card">
+    <section v-if="activeTab === 'logic'" class="lab-card">
       <div class="card-head">
         <div>
           <h2><Icon name="zap" /> Mantiqiy elementlar (Logic Gates) simulyatori</h2>
-          <p>Mantiqiy amallar kompyuter chipining asosi hisoblanadi. Elementni tanlang va signallarni tekshiring.</p>
+          <p>Dasturlashdagi <code>if / else</code> shartlari va kompyuter mikrosxemalari aynan shu mantiqiy darvozalar ustiga qurilgan.</p>
         </div>
       </div>
 
-      <!-- Gate Selector Tabs -->
+      <!-- Gate Selector -->
       <div class="gate-selector">
         <button
-          v-for="g in ['AND', 'OR', 'NOT', 'XOR', 'NAND', 'NOR'] as const"
+          v-for="g in ['AND', 'OR', 'NOT', 'XOR', 'NAND', 'NOR']"
           :key="g"
-          class="gate-tab"
+          class="gate-btn"
           :class="{ active: gateType === g }"
-          @click="gateType = g"
+          @click="gateType = g as any"
         >
           {{ g }}
         </button>
       </div>
 
-      <!-- Interactive Circuit View -->
-      <div class="circuit-view">
-        <!-- Input Switches -->
+      <!-- Interactive Circuit Simulation -->
+      <div class="circuit-area">
         <div class="circuit-inputs">
-          <div class="circ-switch-group">
-            <span class="cs-label">Kirish A:</span>
+          <div class="sw-wrapper">
+            <span class="sw-label">Kirish A</span>
             <button
               class="switch-btn"
               :class="{ on: inputA === 1 }"
@@ -513,10 +1001,11 @@ onMounted(() => {
             >
               {{ inputA }}
             </button>
+            <span class="sw-status">{{ inputA === 1 ? 'ROST (True)' : 'YOLG\'ON (False)' }}</span>
           </div>
 
-          <div v-if="gateType !== 'NOT'" class="circ-switch-group">
-            <span class="cs-label">Kirish B:</span>
+          <div v-if="gateType !== 'NOT'" class="sw-wrapper">
+            <span class="sw-label">Kirish B</span>
             <button
               class="switch-btn"
               :class="{ on: inputB === 1 }"
@@ -524,303 +1013,671 @@ onMounted(() => {
             >
               {{ inputB }}
             </button>
+            <span class="sw-status">{{ inputB === 1 ? 'ROST (True)' : 'YOLG\'ON (False)' }}</span>
           </div>
         </div>
 
-        <!-- Gate Chip Representation -->
-        <div class="circuit-gate-box">
-          <div class="gate-name-badge">{{ gateType }}</div>
-          <div class="gate-symbol">{{ gateExplanations[gateType].formula }}</div>
+        <!-- Visual Gate Diagram -->
+        <div class="gate-visual">
+          <div class="gv-box">
+            <span class="gv-title">{{ gateType }}</span>
+            <span class="gv-sub">GATE</span>
+          </div>
+          <div class="gv-wire" :class="{ live: gateOutput === 1 }"></div>
         </div>
 
-        <!-- Output Bulb -->
+        <!-- Output Indicator (Bulb) -->
         <div class="circuit-output">
-          <span class="cs-label">Chiqish:</span>
-          <div class="output-lamp" :class="{ 'lamp-on': gateOutput === 1 }">
+          <span class="out-label">Natija (Chiqish)</span>
+          <div class="bulb-box" :class="{ on: gateOutput === 1 }">
             <Icon name="lightbulb" />
-            <span class="lamp-val">{{ gateOutput }}</span>
+            <div class="bulb-glow" v-if="gateOutput === 1"></div>
           </div>
+          <div class="out-val mono">{{ gateOutput }}</div>
+          <span class="out-text">{{ gateOutput === 1 ? '💡 Signal bor (1)' : '⭕ Signal yo\'q (0)' }}</span>
         </div>
       </div>
 
-      <!-- Explanation & Truth Table Row -->
-      <div class="gate-details-row">
-        <!-- Left: Rule explanation -->
-        <div class="g-info-card">
-          <h3>Qoida va Tavsif</h3>
+      <!-- Logic Explanation & Python code -->
+      <div class="gate-info-grid">
+        <div class="gi-box">
+          <h4>Qoida va formula:</h4>
           <p>{{ gateExplanations[gateType].desc }}</p>
-          <div class="code-preview">
-            <code>{{ gateExplanations[gateType].code }}</code>
-          </div>
+          <div class="formula-badge">Formula: <code>{{ gateExplanations[gateType].formula }}</code></div>
         </div>
 
-        <!-- Right: Truth Table -->
-        <div class="g-table-card">
-          <h3>Haqiqiylik jadvali (Truth Table)</h3>
-          <table class="truth-table">
-            <thead>
-              <tr>
-                <th>A</th>
-                <th v-if="gateType !== 'NOT'">B</th>
-                <th>Chiqish</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr
-                v-for="r in truthTableRows"
-                :key="`${r.a}-${r.b}`"
-                :class="{ 'row-active': r.a === inputA && (gateType === 'NOT' || r.b === inputB) }"
-              >
-                <td>{{ r.a }}</td>
-                <td v-if="gateType !== 'NOT'">{{ r.b }}</td>
-                <td :class="{ 'out-one': r.out === 1 }">{{ r.out }}</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="gi-box">
+          <h4>Python tilidagi ifodasi:</h4>
+          <pre class="code-preview"><code>{{ gateExplanations[gateType].code }}</code></pre>
         </div>
+      </div>
+
+      <!-- Truth Table -->
+      <div class="truth-table-card">
+        <h3>Rostlik jadvali (Truth Table)</h3>
+        <table class="truth-table">
+          <thead>
+            <tr>
+              <th>Kirish A</th>
+              <th v-if="gateType !== 'NOT'">Kirish B</th>
+              <th>Chiqish (Natija)</th>
+              <th>Holat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              v-for="(row, idx) in truthTableRows"
+              :key="idx"
+              :class="{ 'row-active': row.active }"
+            >
+              <td><span class="badge-bit" :class="{ one: row.a === 1 }">{{ row.a }}</span></td>
+              <td v-if="gateType !== 'NOT'"><span class="badge-bit" :class="{ one: row.b === 1 }">{{ row.b }}</span></td>
+              <td><span class="badge-bit out" :class="{ one: row.out === 1 }">{{ row.out }}</span></td>
+              <td>
+                <span v-if="row.active" class="active-tag">Hozirgi holat ◀</span>
+                <span v-else class="idle-tag">—</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <!-- ========================================== -->
     <!-- TAB 3: AXBOROT HAJMI VA XOTIRA (MEMORY)   -->
     <!-- ========================================== -->
-    <section v-else-if="activeTab === 'memory'" class="lab-card">
+    <section v-if="activeTab === 'memory'" class="lab-card">
       <div class="card-head">
         <div>
           <h2><Icon name="hard-drive" /> Axborot o'lchov birliklari kalkulyatori</h2>
-          <p>Bitdan Terabaytgacha: axborot qanday o'lchanishini va o'zaro nisbatlarini hisoblang.</p>
+          <p>Kompyuterda har bir pog'ona 1024 (2<sup>10</sup>) ga karrali ravishda ortadi.</p>
         </div>
       </div>
 
-      <!-- Interactive Calculator Inputs -->
-      <div class="mem-calc-bar">
-        <div class="mcb-input-group">
-          <label>Miqdor:</label>
+      <!-- Input Converter -->
+      <div class="memory-input-row">
+        <div class="mi-field">
+          <label>Qiymatni kiriting:</label>
           <input
             type="number"
-            v-model.number="inputDataValue"
-            min="1"
-            class="mem-num-input"
+            min="0"
+            step="1"
+            v-model.number="inputMemoryValue"
+            class="mem-input"
           />
         </div>
-        <div class="mcb-input-group">
-          <label>Birlik:</label>
-          <select v-model="inputDataUnit" class="mem-select">
-            <option value="Bit">Bit</option>
-            <option value="Bayt">Bayt (B)</option>
-            <option value="KB">Kilobayt (KB)</option>
-            <option value="MB">Megabayt (MB)</option>
-            <option value="GB">Gigabayt (GB)</option>
-            <option value="TB">Terabayt (TB)</option>
-          </select>
+        <div class="mi-field">
+          <label>Birlikni tanlang:</label>
+          <div class="unit-selector">
+            <button
+              v-for="u in memoryUnits"
+              :key="u.id"
+              class="u-btn"
+              :class="{ active: selectedMemoryUnit === u.id }"
+              @click="selectedMemoryUnit = u.id"
+            >
+              {{ u.name }}
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- Converted Matrix -->
-      <div class="mem-matrix">
-        <div class="mem-card">
-          <span class="mc-lbl">Bit (b)</span>
-          <span class="mc-val">{{ convertedValues.bits }}</span>
-          <span class="mc-hint">0 yoki 1</span>
-        </div>
-        <div class="mem-card">
-          <span class="mc-lbl">Bayt (B)</span>
-          <span class="mc-val">{{ convertedValues.bytes }}</span>
-          <span class="mc-hint">8 bit</span>
-        </div>
-        <div class="mem-card">
-          <span class="mc-lbl">Kilobayt (KB)</span>
-          <span class="mc-val">{{ convertedValues.kb }}</span>
-          <span class="mc-hint">1024 bayt</span>
-        </div>
-        <div class="mem-card">
-          <span class="mc-lbl">Megabayt (MB)</span>
-          <span class="mc-val">{{ convertedValues.mb }}</span>
-          <span class="mc-hint">1024 KB</span>
-        </div>
-        <div class="mem-card">
-          <span class="mc-lbl">Gigabayt (GB)</span>
-          <span class="mc-val">{{ convertedValues.gb }}</span>
-          <span class="mc-hint">1024 MB</span>
-        </div>
-        <div class="mem-card">
-          <span class="mc-lbl">Terabayt (TB)</span>
-          <span class="mc-val">{{ convertedValues.tb }}</span>
-          <span class="mc-hint">1024 GB</span>
-        </div>
-      </div>
-
-      <!-- Real world Analogy Card -->
-      <div class="analogy-box">
-        <span class="ab-icon"><Icon name="sparkles" /></span>
-        <div class="ab-content">
-          <h4>Amaliy hayotdagi hajmi:</h4>
-          <p>{{ realWorldAnalogy }}</p>
+      <!-- Converted Values Grid -->
+      <div class="units-grid">
+        <div v-for="unit in formattedMemoryUnits" :key="unit.id" class="unit-card">
+          <span class="uc-name">{{ unit.name }}</span>
+          <div class="uc-val">{{ unit.val }}</div>
         </div>
       </div>
 
       <!-- Memory Ladder Hierarchy -->
-      <div class="ladder-section">
-        <h3>Axborot zinapoyasi (Ierarxiya)</h3>
-        <div class="ladder-grid">
-          <div class="ladder-step">
-            <span class="ls-badge">1 Bit</span>
-            <p>1 ta tranzistor holati (0 yoki 1)</p>
-          </div>
-          <div class="ladder-arrow">➔</div>
-          <div class="ladder-step">
-            <span class="ls-badge">1 Bayt</span>
-            <p>8 bit (1 ta harf yoki belgi, masalan 'A')</p>
-          </div>
-          <div class="ladder-arrow">➔</div>
-          <div class="ladder-step">
-            <span class="ls-badge">1 KB</span>
-            <p>1024 bayt (1 bet matnli hujjat)</p>
-          </div>
-          <div class="ladder-arrow">➔</div>
-          <div class="ladder-step">
-            <span class="ls-badge">1 MB</span>
-            <p>1024 KB (1 ta sifatli rasm yoki qo'shiq)</p>
-          </div>
-          <div class="ladder-arrow">➔</div>
-          <div class="ladder-step">
-            <span class="ls-badge">1 GB</span>
-            <p>1024 MB (1 ta to'liq film yoki 1000 kitob)</p>
+      <div class="ladder-card">
+        <h3>Xotira narvoni (1024 qoidasi)</h3>
+        <div class="ladder-steps">
+          <div class="l-step"><span class="ls-u">8 Bit</span> = 1 Bayt</div>
+          <div class="l-step"><span class="ls-u">1024 Bayt</span> = 1 KB (Kilobayt)</div>
+          <div class="l-step"><span class="ls-u">1024 KB</span> = 1 MB (Megabayt)</div>
+          <div class="l-step"><span class="ls-u">1024 MB</span> = 1 GB (Gigabayt)</div>
+          <div class="l-step"><span class="ls-u">1024 GB</span> = 1 TB (Terabayt)</div>
+        </div>
+      </div>
+
+      <!-- Real World Analogies -->
+      <div class="analogies-card">
+        <h3>Hayotiy misollarda bu qancha?</h3>
+        <p class="an-sub">Kiritilgan <b>{{ inputMemoryValue }} {{ selectedMemoryUnit }}</b> hajmga taxminan quyidagilar sig'adi:</p>
+        <div class="an-grid">
+          <div v-for="item in realWorldEquivalents" :key="item.name" class="an-box">
+            <span class="ab-icon"><Icon name="sparkles" /></span>
+            <div>
+              <div class="ab-title">{{ item.name }}</div>
+              <div class="ab-val">{{ item.count }}</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ========================================== -->
-    <!-- TAB 4: BLOK-SXEMA VA ALGORITMLAR          -->
+    <!-- TAB 4: ALGORITM VA BLOK-SXEMALAR          -->
     <!-- ========================================== -->
-    <section v-else-if="activeTab === 'flowchart'" class="lab-card">
+    <section v-if="activeTab === 'flowchart'" class="lab-card">
       <div class="card-head">
         <div>
           <h2><Icon name="git-branch" /> Algoritmlar va Blok-sxemalar vizualizatori</h2>
-          <p>Algoritm turini tanlang va "Keyingi qadam" orqali qanday ishlashini bosqichma-bosqich kuzating.</p>
+          <p>Algoritm — maqsadga erishish uchun bajariladigan aniq buyruqlar ketma-ketligi.</p>
         </div>
-        <div class="flow-controls">
-          <button class="btn btn-primary" @click="nextAlgoStep">
+        <div class="head-actions">
+          <button class="btn btn-primary btn-sm" @click="nextAlgoStep">
             <Icon name="play" /> Keyingi qadam ({{ currentStepIndex + 1 }}/{{ currentAlgorithm.steps.length }})
           </button>
-          <button class="btn btn-ghost btn-sm" @click="resetAlgo">
+          <button class="btn btn-ghost btn-sm" @click="resetAlgorithm">
             <Icon name="rotate-ccw" /> Boshiga
           </button>
         </div>
       </div>
 
-      <!-- Algorithm Type Tabs -->
-      <div class="gate-selector">
+      <!-- Algorithm Type Selector -->
+      <div class="algo-type-tabs">
         <button
-          class="gate-tab"
-          :class="{ active: algorithmMode === 'linear' }"
-          @click="algorithmMode = 'linear'; resetAlgo()"
+          v-for="a in ALGORITHMS"
+          :key="a.id"
+          class="at-tab"
+          :class="{ active: selectedAlgorithmId === a.id }"
+          @click="selectedAlgorithmId = a.id"
         >
-          Chiziqli algoritm
-        </button>
-        <button
-          class="gate-tab"
-          :class="{ active: algorithmMode === 'branch' }"
-          @click="algorithmMode = 'branch'; resetAlgo()"
-        >
-          Tarmoqlanuvchi (if/else)
-        </button>
-        <button
-          class="gate-tab"
-          :class="{ active: algorithmMode === 'loop' }"
-          @click="algorithmMode = 'loop'; resetAlgo()"
-        >
-          Takrorlanuvchi (Sikl / Loop)
+          {{ a.title }}
         </button>
       </div>
 
-      <!-- Interactive Flowchart Diagram -->
-      <div class="flowchart-visual">
-        <div
-          v-for="(st, idx) in currentAlgorithm.steps"
-          :key="st.id"
-          class="flow-node"
-          :class="[
-            `node-${st.type}`,
-            { 'node-active': idx === currentStepIndex },
-            { 'node-passed': idx < currentStepIndex }
-          ]"
-        >
-          <div class="fn-type-badge">{{ st.type.toUpperCase() }}</div>
-          <div class="fn-text">{{ st.text }}</div>
-          <div v-if="idx < currentAlgorithm.steps.length - 1" class="fn-connector">
-            <span class="fn-arrow-down">↓</span>
+      <div class="algo-main-grid">
+        <!-- Visual Flowchart Box -->
+        <div class="flowchart-box">
+          <div class="fc-header">
+            <h4>Blok-sxema ko'rinishi</h4>
+            <span>Qadam: {{ currentStepIndex + 1 }}</span>
+          </div>
+
+          <div class="fc-chain">
+            <div
+              v-for="(step, idx) in currentAlgorithm.steps"
+              :key="step.id"
+              class="fc-node-wrapper"
+            >
+              <div
+                class="fc-node"
+                :class="[step.shape, { active: currentStepIndex === idx, done: currentStepIndex > idx }]"
+              >
+                <span class="fcn-idx">{{ idx + 1 }}</span>
+                <span class="fcn-label">{{ step.label }}</span>
+              </div>
+              <div v-if="idx < currentAlgorithm.steps.length - 1" class="fc-arrow">
+                ↓
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Current Step Live Explanation -->
-      <div class="step-live-card">
-        <div class="slc-info">
-          <h4>Qadam {{ currentStepIndex + 1 }}: {{ currentFlowStep.text }}</h4>
-          <p>{{ currentFlowStep.detail }}</p>
-        </div>
-        <div class="slc-code">
-          <span class="code-label">Python kodi:</span>
-          <code>{{ currentFlowStep.code }}</code>
+        <!-- Python Code & Variables Inspector -->
+        <div class="algo-details-col">
+          <div class="adc-card">
+            <h4>Mos keluvchi Python kodi:</h4>
+            <div class="code-flow-wrapper">
+              <div
+                v-for="(line, lIdx) in currentAlgorithm.pythonCode"
+                :key="lIdx"
+                class="code-line"
+                :class="{ highlight: currentAlgorithm.steps[currentStepIndex]?.codeLine === lIdx }"
+              >
+                <span class="ln">{{ lIdx + 1 }}</span>
+                <span class="code-txt">{{ line }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="adc-card">
+            <h4>O'zgaruvchilar xotirasi:</h4>
+            <pre class="vars-json"><code>{{ JSON.stringify(algoVars, null, 2) }}</code></pre>
+          </div>
+
+          <div class="adc-card">
+            <h4>Ijro jurnali:</h4>
+            <ul class="logs-list">
+              <li v-for="(log, logIdx) in algoLogs" :key="logIdx">
+                ✓ {{ log }}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ========================================== -->
-    <!-- TAB 5: KOMPYUTER ANATOMIYASI (HARDWARE)   -->
+    <!-- TAB 5: KOMPYUTER ANATOMIYASI (HARDWARE)    -->
     <!-- ========================================== -->
-    <section v-else-if="activeTab === 'hardware'" class="lab-card">
+    <section v-if="activeTab === 'hardware'" class="lab-card">
       <div class="card-head">
         <div>
           <h2><Icon name="cpu" /> Kompyuter Anatomiyasi (Hardware)</h2>
-          <p>Kompyuterning asosiy qismlari qanday ishlashini va bir-biri bilan qanday bog'langanini ko'ring.</p>
+          <p>Kompyuterning asosiy apparat qismlari, ularning o'zaro bog'liqligi va amaliy vazifalari.</p>
         </div>
       </div>
 
-      <!-- Interactive Component Selector -->
-      <div class="hw-selector-grid">
+      <!-- Parts Navigation -->
+      <div class="hardware-nav">
         <button
-          v-for="(part, key) in HARDWARE_PARTS"
-          :key="key"
-          class="hw-nav-card"
-          :class="{ active: selectedPart === key }"
-          @click="selectedPart = key as string"
+          v-for="part in HARDWARE_PARTS"
+          :key="part.id"
+          class="hwn-btn"
+          :class="{ active: selectedHardwareId === part.id }"
+          @click="selectedHardwareId = part.id"
         >
           <span class="hwn-icon"><Icon :name="part.icon" /></span>
-          <span class="hwn-title">{{ part.name.split(' ')[0] }}</span>
-          <span class="hwn-sub">{{ part.badge }}</span>
+          <span class="hwn-name">{{ part.name.split(' (')[0] }}</span>
         </button>
       </div>
 
-      <!-- Detailed Hardware View -->
-      <div class="hw-detail-card">
-        <div class="hwd-header">
-          <div class="hwd-title-box">
-            <span class="hwd-badge">{{ currentHardware.badge }}</span>
-            <h3>{{ currentHardware.name }}</h3>
-          </div>
-          <div class="hwd-unit">
-            <span class="hu-lbl">O'lchov birligi:</span>
-            <b>{{ currentHardware.unit }}</b>
-          </div>
+      <!-- Selected Part Interactive Showcase -->
+      <div class="part-showcase">
+        <div class="ps-header">
+          <div class="ps-badge"><Icon :name="currentHardware.icon" /> {{ currentHardware.name }}</div>
+          <div class="ps-unit"><b>Birligi:</b> {{ currentHardware.unit }}</div>
         </div>
 
-        <div class="hwd-body">
-          <div class="hwd-block">
+        <div class="ps-body">
+          <div class="ps-info-block">
             <h4><Icon name="sparkles" /> Hayotiy o'xshatish:</h4>
-            <p class="analogy-text">{{ currentHardware.analogy }}</p>
+            <p class="ps-analogy">{{ currentHardware.analogy }}</p>
           </div>
 
-          <div class="hwd-block">
+          <div class="ps-info-block">
             <h4><Icon name="info" /> Asosiy vazifasi:</h4>
             <p>{{ currentHardware.role }}</p>
           </div>
 
-          <div class="hwd-block">
+          <div class="ps-info-block">
             <h4><Icon name="check" /> Haqiqiy misollar:</h4>
-            <p class="font-mono text-brand">{{ currentHardware.example }}</p>
+            <p>{{ currentHardware.details }}</p>
+            <div class="ps-examples"><b>Qayerda kerak:</b> {{ currentHardware.examples }}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 6: SARALASH VA QIDIRUV (SORTING)      -->
+    <!-- ========================================== -->
+    <section v-if="activeTab === 'sorting'" class="lab-card">
+      <div class="card-head">
+        <div>
+          <h2><Icon name="layers" /> Saralash va Qidiruv algoritmlari vizualizatori</h2>
+          <p>Elementlarni tartiblash va qidirish algoritmlarining qadam-baqadam animatsion ko'rinishi.</p>
+        </div>
+        <div class="head-actions">
+          <button v-if="!sortIsRunning" class="btn btn-primary btn-sm" @click="startSorting">
+            <Icon name="play" /> Boshlash
+          </button>
+          <button v-else class="btn btn-warning btn-sm" @click="stopSorting">
+            To'xtatish
+          </button>
+          <button class="btn btn-ghost btn-sm" @click="generateSortArray('random')">
+            <Icon name="rotate-ccw" /> Yangi massiv
+          </button>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div class="sort-controls">
+        <div class="sc-group">
+          <label>Algoritm:</label>
+          <div class="btn-group-sm">
+            <button class="sc-btn" :class="{ active: sortAlgorithm === 'bubble' }" @click="sortAlgorithm = 'bubble'">Bubble Sort</button>
+            <button class="sc-btn" :class="{ active: sortAlgorithm === 'selection' }" @click="sortAlgorithm = 'selection'">Selection Sort</button>
+            <button class="sc-btn" :class="{ active: sortAlgorithm === 'insertion' }" @click="sortAlgorithm = 'insertion'">Insertion Sort</button>
+            <button class="sc-btn" :class="{ active: sortAlgorithm === 'binary_search' }" @click="sortAlgorithm = 'binary_search'">Binary Search</button>
+          </div>
+        </div>
+
+        <div class="sc-group">
+          <label>Tezlik:</label>
+          <div class="btn-group-sm">
+            <button class="sc-btn" :class="{ active: sortSpeedMs === 400 }" @click="sortSpeedMs = 400">Sekin</button>
+            <button class="sc-btn" :class="{ active: sortSpeedMs === 200 }" @click="sortSpeedMs = 200">Normal</button>
+            <button class="sc-btn" :class="{ active: sortSpeedMs === 60 }" @click="sortSpeedMs = 60">Tez</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Bar Visualizer -->
+      <div class="bars-container">
+        <div
+          v-for="(item, idx) in sortArray"
+          :key="idx"
+          class="sort-bar"
+          :class="item.state"
+          :style="{ height: `${Math.max(18, (item.val / 100) * 220)}px` }"
+        >
+          <span class="bar-val">{{ item.val }}</span>
+          <span class="bar-idx">{{ idx }}</span>
+        </div>
+      </div>
+
+      <!-- Explanation & Metrics -->
+      <div class="sort-status-bar">
+        <div class="ss-stats">
+          <span class="ss-pill">Taqqoslashlar: <b>{{ sortComparisons }}</b></span>
+          <span class="ss-pill" v-if="sortAlgorithm !== 'binary_search'">Almashishlar (Swaps): <b>{{ sortSwaps }}</b></span>
+          <span class="ss-pill" v-else>Nishon: <b>{{ searchTargetVal }}</b></span>
+        </div>
+        <div class="ss-exp">{{ sortExplanation }}</div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 7: VISUAL GIT SIMULYATORI (GIT)       -->
+    <!-- ========================================== -->
+    <section v-if="activeTab === 'git'" class="lab-card">
+      <div class="card-head">
+        <div>
+          <h2><Icon name="git-branch" /> Visual Git Simulyatori</h2>
+          <p>Git versiya nazorati daraxti, commitlar, shoxlar (branches) va merge jarayonini interaktiv sinab ko'ring.</p>
+        </div>
+        <button class="btn btn-ghost btn-sm" @click="gitResetGraph">
+          <Icon name="rotate-ccw" /> Tiklash
+        </button>
+      </div>
+
+      <!-- Git Actions Panel -->
+      <div class="git-actions-panel">
+        <div class="ga-card">
+          <label>Yangi commit qilish:</label>
+          <div class="ga-input-row">
+            <input type="text" v-model="gitCommitMsg" placeholder="Commit xabari..." class="git-input" />
+            <button class="btn btn-primary btn-sm" @click="gitDoCommit">
+              git commit
+            </button>
+          </div>
+        </div>
+
+        <div class="ga-card">
+          <label>Yangi shox (Branch) ochish:</label>
+          <div class="ga-input-row">
+            <input type="text" v-model="gitNewBranchName" placeholder="Shox nomi..." class="git-input" />
+            <button class="btn btn-ghost btn-sm" @click="gitCreateBranch">
+              git branch
+            </button>
+          </div>
+        </div>
+
+        <div class="ga-card">
+          <label>Shoxlar orasida o'tish (Checkout):</label>
+          <div class="btn-group-sm">
+            <button
+              v-for="b in gitBranches"
+              :key="b"
+              class="sc-btn"
+              :class="{ active: gitCurrentBranch === b }"
+              @click="gitCheckoutBranch(b)"
+            >
+              {{ b }} <span v-if="gitCurrentBranch === b">★</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="ga-card">
+          <label>Merge qilish (Hozirgi shoxga birlashtirish):</label>
+          <div class="btn-group-sm">
+            <button
+              v-for="b in gitBranches.filter(x => x !== gitCurrentBranch)"
+              :key="b"
+              class="sc-btn"
+              @click="gitMergeBranch(b)"
+            >
+              merge {{ b }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual Git Graph & Terminal Logs -->
+      <div class="git-view-grid">
+        <!-- SVG Commit Graph -->
+        <div class="git-graph-card">
+          <h4>Git Commit Daraxti</h4>
+          <div class="git-commits-chain">
+            <div
+              v-for="(c, idx) in gitCommits"
+              :key="c.id"
+              class="commit-node"
+              :class="{ current: idx === gitCommits.length - 1 }"
+            >
+              <div class="cn-badge">{{ c.id }}</div>
+              <div class="cn-info">
+                <div class="cn-msg">{{ c.msg }}</div>
+                <div class="cn-meta">
+                  <span class="cn-branch">shox: {{ c.branch }}</span>
+                  <span v-if="idx === gitCommits.length - 1" class="cn-head">HEAD -> {{ gitCurrentBranch }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Logs -->
+        <div class="git-term-card">
+          <h4>Mini Terminal</h4>
+          <div class="term-window">
+            <div v-for="(log, lIdx) in gitTerminalLogs" :key="lIdx" class="term-line">
+              {{ log }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 8: KIBERXAVFSIZLIK & KRIPTO (CRYPTO)   -->
+    <!-- ========================================== -->
+    <section v-if="activeTab === 'crypto'" class="lab-card">
+      <div class="card-head">
+        <div>
+          <h2><Icon name="shield" /> Kiberxavfsizlik va Kriptografiya laboratoriyasi</h2>
+          <p>Shifrlash (Encryption), Base64 va parollarning xavfsizlik darajasi tahlili.</p>
+        </div>
+      </div>
+
+      <div class="crypto-grid">
+        <!-- 1. Caesar Cipher -->
+        <div class="crypto-card">
+          <div class="cc-head">
+            <h3><Icon name="key" /> Sezar shifri (Caesar Cipher)</h3>
+            <span class="cc-badge">Siljitish: +{{ caesarShift }}</span>
+          </div>
+          <div class="cc-body">
+            <div class="cc-field">
+              <label>Asl matn:</label>
+              <input type="text" v-model="caesarText" class="mem-input" />
+            </div>
+            <div class="cc-field">
+              <label>Siljitish qadami (Shift 0..25): {{ caesarShift }}</label>
+              <input type="range" min="0" max="25" v-model.number="caesarShift" class="range-slider" />
+            </div>
+            <div class="cc-result">
+              <span class="cc-res-label">Shifrlangan natija:</span>
+              <div class="cc-res-val mono">{{ caesarEncrypted }}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Base64 Converter -->
+        <div class="crypto-card">
+          <div class="cc-head">
+            <h3><Icon name="binary" /> Base64 Kodlash</h3>
+            <span class="cc-badge">8-bit → 6-bit</span>
+          </div>
+          <div class="cc-body">
+            <div class="cc-field">
+              <label>Matn kiriting:</label>
+              <input type="text" v-model="base64Input" class="mem-input" />
+            </div>
+            <div class="cc-result">
+              <span class="cc-res-label">Base64 qatori:</span>
+              <div class="cc-res-val mono">{{ base64Output }}</div>
+            </div>
+            <div class="base64-bits-box">
+              <span class="bbb-title">Belgilarning 8-bitli ikkilik ko'rinishi:</span>
+              <div class="bbb-grid">
+                <div v-for="b in base64BinaryBreakdown" :key="b.char" class="bbb-item">
+                  <b>'{{ b.char }}'</b> → <code>{{ b.bin }}</code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Password Strength Analyzer -->
+        <div class="crypto-card full-width">
+          <div class="cc-head">
+            <h3><Icon name="shield" /> Parol Mustahkamligi Tahlilchisi</h3>
+            <span class="cc-badge" :style="{ background: passwordStats.color + '22', color: passwordStats.color }">
+              {{ passwordStats.rank }}
+            </span>
+          </div>
+          <div class="cc-body">
+            <div class="pass-input-row">
+              <input type="text" v-model="testPassword" placeholder="Parolni kiriting..." class="mem-input mono" />
+            </div>
+
+            <!-- Strength Bar -->
+            <div class="pass-bar-wrapper">
+              <div class="pass-bar" :style="{ width: `${passwordStats.scorePct}%`, background: passwordStats.color }"></div>
+            </div>
+
+            <div class="pass-metrics-grid">
+              <div class="pm-box">
+                <span class="pm-label">Entropiya (Bitlar):</span>
+                <div class="pm-val">{{ passwordStats.entropy }} bit</div>
+              </div>
+              <div class="pm-box">
+                <span class="pm-label">Buzishga ketadigan vaqt:</span>
+                <div class="pm-val highlight">{{ passwordStats.crackTime }}</div>
+              </div>
+            </div>
+
+            <div class="pass-checklist">
+              <span class="pc-item" :class="{ ok: passwordStats.len >= 12 }">
+                {{ passwordStats.len >= 12 ? '✓' : '✗' }} Kamida 12 belgi
+              </span>
+              <span class="pc-item" :class="{ ok: passwordStats.hasUpper }">
+                {{ passwordStats.hasUpper ? '✓' : '✗' }} Katta harf (A-Z)
+              </span>
+              <span class="pc-item" :class="{ ok: passwordStats.hasLower }">
+                {{ passwordStats.hasLower ? '✓' : '✗' }} Kichik harf (a-z)
+              </span>
+              <span class="pc-item" :class="{ ok: passwordStats.hasNumber }">
+                {{ passwordStats.hasNumber ? '✓' : '✗' }} Raqamlar (0-9)
+              </span>
+              <span class="pc-item" :class="{ ok: passwordStats.hasSymbol }">
+                {{ passwordStats.hasSymbol ? '✓' : '✗' }} Maxsus belgi (!@#$)
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 9: WEB & UI DIZAYN LAB (DESIGN)       -->
+    <!-- ========================================== -->
+    <section v-if="activeTab === 'design'" class="lab-card">
+      <div class="card-head">
+        <div>
+          <h2><Icon name="palette" /> Web & UI Dizayn laboratoriyasi</h2>
+          <p>Zamonaviy CSS effektlari, ranglar gammasi va Glassmorphism generatori.</p>
+        </div>
+      </div>
+
+      <div class="design-grid">
+        <!-- Glassmorphism Generator -->
+        <div class="design-card">
+          <h3>Glassmorphism Generatori</h3>
+          <div class="dc-controls">
+            <div class="dcc-field">
+              <label>Xiralashtirish (Blur): {{ glassBlur }}px</label>
+              <input type="range" min="0" max="30" v-model.number="glassBlur" class="range-slider" />
+            </div>
+            <div class="dcc-field">
+              <label>Shaffoflik (Opacity): {{ glassOpacity }}%</label>
+              <input type="range" min="5" max="90" v-model.number="glassOpacity" class="range-slider" />
+            </div>
+            <div class="dcc-field">
+              <label>Burchak radiusi: {{ glassRadius }}px</label>
+              <input type="range" min="0" max="40" v-model.number="glassRadius" class="range-slider" />
+            </div>
+          </div>
+
+          <!-- Preview on Gradient BG -->
+          <div class="glass-bg-preview">
+            <div
+              class="glass-preview-box"
+              :style="{
+                background: `rgba(255, 255, 255, ${glassOpacity / 100})`,
+                backdropFilter: `blur(${glassBlur}px)`,
+                webkitBackdropFilter: `blur(${glassBlur}px)`,
+                border: `1px solid rgba(255, 255, 255, ${glassBorder / 100})`,
+                borderRadius: `${glassRadius}px`
+              }"
+            >
+              <h4>Glassmorphism</h4>
+              <p>Muzdek shaffof oyna effekti</p>
+            </div>
+          </div>
+
+          <!-- Code Snippet -->
+          <div class="css-code-box">
+            <pre><code>{{ glassCss }}</code></pre>
+            <button class="btn btn-ghost btn-xs copy-btn" @click="copyToClipboard(glassCss)">
+              <Icon name="copy" /> {{ copiedCss ? 'Nusxalandi!' : 'Nusxa olish' }}
+            </button>
+          </div>
+        </div>
+
+        <!-- Box Shadow Generator -->
+        <div class="design-card">
+          <h3>CSS Box Shadow Generatori</h3>
+          <div class="dc-controls">
+            <div class="dcc-field">
+              <label>Surilish Y: {{ shadowY }}px</label>
+              <input type="range" min="-30" max="50" v-model.number="shadowY" class="range-slider" />
+            </div>
+            <div class="dcc-field">
+              <label>Tarqalish (Blur): {{ shadowBlur }}px</label>
+              <input type="range" min="0" max="60" v-model.number="shadowBlur" class="range-slider" />
+            </div>
+            <div class="dcc-field">
+              <label>Kengayish (Spread): {{ shadowSpread }}px</label>
+              <input type="range" min="-20" max="30" v-model.number="shadowSpread" class="range-slider" />
+            </div>
+          </div>
+
+          <!-- Preview -->
+          <div class="shadow-preview-area">
+            <div
+              class="shadow-box"
+              :style="{
+                boxShadow: `${shadowX}px ${shadowY}px ${shadowBlur}px ${shadowSpread}px ${shadowColor}`
+              }"
+            >
+              Soyali Blok
+            </div>
+          </div>
+
+          <!-- Code Snippet -->
+          <div class="css-code-box">
+            <pre><code>{{ shadowCss }}</code></pre>
+            <button class="btn btn-ghost btn-xs copy-btn" @click="copyToClipboard(shadowCss)">
+              <Icon name="copy" /> {{ copiedCss ? 'Nusxalandi!' : 'Nusxa olish' }}
+            </button>
           </div>
         </div>
       </div>
@@ -829,900 +1686,1436 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.foundation-container {
+.foundation-page {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 8px 16px 32px;
+  padding: 1.5rem 1rem 4rem;
 }
 
-/* HERO */
+/* HERO SECTION */
 .foundation-hero {
-  margin-bottom: 24px;
+  background: var(--vp-c-bg-elv, #1e1e1e);
+  border: 1px solid var(--vp-c-divider, #333);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
-
 .fh-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 0.5rem;
   font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 4px 12px;
-  border-radius: 999px;
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
-  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--vp-c-brand-1, #007acc);
+  background: rgba(0, 122, 204, 0.12);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
 }
-
-.fh-left h1 {
-  font-size: 2.1rem;
+.foundation-hero h1 {
+  font-size: 2.2rem;
   font-weight: 800;
-  margin: 0 0 8px;
-  background: var(--ax-grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
 }
-
 .fh-sub {
-  color: var(--vp-c-text-2);
-  margin: 0 0 20px;
-  max-width: 700px;
-  font-size: 1rem;
-  line-height: 1.5;
+  color: var(--vp-c-text-2, #999);
+  font-size: 1.05rem;
+  margin: 0 0 1.5rem;
+  max-width: 750px;
 }
 
-/* TABS */
+/* TAB NAVIGATION */
 .foundation-tabs {
   display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  padding-bottom: 6px;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
-
 .f-tab {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border-radius: 12px;
+  gap: 0.5rem;
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  color: var(--vp-c-text-1, #d4d4d4);
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
   font-size: 0.92rem;
-  font-weight: 700;
-  color: var(--vp-c-text-2);
-  background: var(--ax-card);
-  border: 1px solid var(--ax-line);
   cursor: pointer;
-  transition: all 0.15s ease;
-  white-space: nowrap;
+  transition: all 0.2s ease;
 }
-
 .f-tab:hover {
-  border-color: var(--vp-c-brand-1);
-  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-brand-1, #007acc);
+  background: rgba(0, 122, 204, 0.08);
 }
-
 .f-tab.active {
-  background: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-1, #007acc);
+  border-color: var(--vp-c-brand-1, #007acc);
   color: #fff;
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 4px 14px rgba(14, 112, 192, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.35);
 }
 
-/* MAIN CARD */
+/* LAB CARD */
 .lab-card {
-  background: var(--ax-card);
-  border: 1px solid var(--ax-line);
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: var(--ax-shadow);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  background: var(--vp-c-bg-elv, #1e1e1e);
+  border: 1px solid var(--vp-c-divider, #333);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
-
 .card-head {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 12px;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
 }
-
 .card-head h2 {
-  font-size: 1.4rem;
-  font-weight: 800;
-  margin: 0 0 4px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.6rem;
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
 }
-
 .card-head p {
-  color: var(--vp-c-text-2);
+  color: var(--vp-c-text-2, #999);
   margin: 0;
   font-size: 0.95rem;
 }
+.head-actions {
+  display: flex;
+  gap: 0.5rem;
+}
 
-/* TAB 1: BIT BOARD */
+/* 1. BINARY BOARD */
 .bit-board {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 10px;
-  background: var(--vp-c-bg);
-  border: 1px solid var(--ax-line);
-  border-radius: 16px;
-  padding: 18px 12px;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
 }
-
 .bit-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  background: var(--ax-card);
-  border: 1px solid var(--ax-line);
-  border-radius: 12px;
-  padding: 12px 6px;
-  cursor: pointer;
-  user-select: none;
-  transition: all 0.15s ease;
-}
-
-.bit-col:hover {
-  border-color: var(--vp-c-brand-1);
-  transform: translateY(-2px);
-}
-
-.bit-col.bit-active {
-  background: var(--vp-c-brand-soft);
-  border-color: var(--vp-c-brand-1);
-}
-
-.bit-weight {
-  font-size: 0.75rem;
-  color: var(--vp-c-text-2);
-}
-
-.bit-val-label {
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: var(--vp-c-text-1);
-}
-
-.bit-switch {
-  width: 44px;
-  height: 44px;
+  background: var(--vp-c-bg, #252526);
+  border: 2px solid var(--vp-c-divider, #3e3e42);
   border-radius: 10px;
-  background: var(--vp-c-bg-alt);
-  border: 2px solid var(--ax-line);
+  padding: 1rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+.bit-col:hover {
+  transform: translateY(-3px);
+  border-color: var(--vp-c-brand-1, #007acc);
+}
+.bit-col.active {
+  background: rgba(0, 122, 204, 0.15);
+  border-color: var(--vp-c-brand-1, #007acc);
+  box-shadow: 0 0 16px rgba(0, 122, 204, 0.3);
+}
+.bit-weight {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--vp-c-text-1, #fff);
+}
+.bit-power {
+  font-size: 0.75rem;
+  color: var(--vp-c-text-2, #888);
+  margin-bottom: 0.75rem;
+}
+.bit-switch {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 0.5rem;
+  border-radius: 50%;
+  background: #333;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--vp-c-text-2);
-  transition: all 0.15s ease;
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: monospace;
+  color: #888;
+  transition: all 0.2s;
 }
-
-.bit-active .bit-switch {
-  background: var(--vp-c-brand-1);
+.bit-col.active .bit-switch {
+  background: var(--vp-c-brand-1, #007acc);
   color: #fff;
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 0 12px rgba(14, 112, 192, 0.5);
+  box-shadow: 0 0 12px rgba(0, 122, 204, 0.6);
 }
-
-.bit-led {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #454545;
-  transition: all 0.15s ease;
-}
-
-.bit-led.on {
-  background: var(--ax-good);
-  box-shadow: 0 0 8px var(--ax-good);
-}
-
-/* CONVERSION GRID */
-.conv-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-
-.conv-box {
-  background: var(--vp-c-bg);
-  border: 1px solid var(--ax-line);
-  border-radius: 14px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-.conv-box.highlight {
-  border-color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
-}
-
-.cb-lbl {
-  font-size: 0.75rem;
-  text-transform: uppercase;
+.bit-state {
+  font-size: 0.7rem;
+  font-weight: 700;
   letter-spacing: 0.05em;
-  color: var(--vp-c-text-2);
-  margin-bottom: 4px;
+  color: var(--vp-c-text-2, #888);
+}
+.bit-col.active .bit-state {
+  color: var(--vp-c-brand-1, #007acc);
 }
 
-.cb-val {
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--vp-c-text-1);
+/* CALC GRID */
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.75rem;
 }
-
-.cb-sub {
+.calc-box {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+.calc-box.highlight {
+  border-color: var(--vp-c-brand-1, #007acc);
+  background: rgba(0, 122, 204, 0.08);
+}
+.cb-label {
+  display: block;
   font-size: 0.8rem;
-  color: var(--vp-c-text-2);
-  margin-top: 4px;
+  font-weight: 600;
+  color: var(--vp-c-text-2, #999);
+  margin-bottom: 0.35rem;
+}
+.cb-val {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--vp-c-text-1, #fff);
+  line-height: 1.2;
+}
+.cb-val.mono {
+  font-family: monospace;
+  letter-spacing: 0.05em;
+}
+.cb-val.ascii {
+  color: #e5c07b;
+}
+.cb-sub {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--vp-c-text-2, #888);
+  margin-top: 0.5rem;
 }
 
-/* MINI-GAME */
-.game-panel {
-  background: var(--vp-c-bg-alt);
-  border: 1px solid var(--ax-line);
-  border-radius: 16px;
-  padding: 20px;
-}
-
-.gp-header {
+/* PRESETS */
+.presets-row {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--vp-c-divider, #333);
+  margin-bottom: 1.75rem;
+}
+.pr-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2, #999);
+}
+.pr-btn {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  color: var(--vp-c-text-1, #ccc);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.pr-btn:hover {
+  border-color: var(--vp-c-brand-1, #007acc);
+  color: #fff;
 }
 
-.gp-header h3 {
+/* GAME SECTION */
+.game-section {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.game-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.game-head h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1.15rem;
   font-weight: 700;
-  margin: 0 0 4px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  margin: 0 0 0.25rem;
+  color: #e5c07b;
 }
-
-.gp-header p {
-  color: var(--vp-c-text-2);
+.game-head p {
+  font-size: 0.88rem;
+  color: var(--vp-c-text-2, #999);
   margin: 0;
-  font-size: 0.9rem;
 }
-
-.gp-stats {
+.game-stats {
+  display: flex;
+  gap: 0.5rem;
+}
+.gs-pill {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--vp-c-divider, #444);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+.game-body {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-
-.gp-score {
-  background: var(--ax-card);
-  padding: 4px 12px;
-  border-radius: 8px;
-  border: 1px solid var(--ax-line);
-  font-size: 0.9rem;
-}
-
-.gp-streak {
-  font-size: 1.1rem;
-}
-
-.gp-target-row {
+.game-target-box {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 12px;
+  gap: 1rem;
 }
-
-.gp-target-num {
-  font-size: 2.8rem;
+.game-target-box span {
+  font-size: 1rem;
+  color: var(--vp-c-text-2, #aaa);
+}
+.gt-number {
+  font-size: 2.5rem;
   font-weight: 900;
-  color: var(--vp-c-brand-1);
-  min-width: 100px;
-}
-
-.feedback-msg {
-  padding: 10px 16px;
+  color: var(--vp-c-brand-1, #007acc);
+  background: rgba(0, 122, 204, 0.12);
+  padding: 0.2rem 1.2rem;
   border-radius: 10px;
+}
+.game-action {
+  display: flex;
+  gap: 0.75rem;
+}
+.feedback-toast {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
   font-size: 0.95rem;
   font-weight: 600;
 }
-
-.feedback-msg.success {
-  background: rgba(46, 125, 50, 0.15);
-  color: var(--ax-good);
-  border: 1px solid var(--ax-good);
+.feedback-toast.success {
+  background: rgba(46, 125, 50, 0.2);
+  border: 1px solid #2e7d32;
+  color: #4caf50;
+}
+.feedback-toast.error {
+  background: rgba(198, 40, 40, 0.2);
+  border: 1px solid #c62828;
+  color: #ef5350;
 }
 
-.feedback-msg.error {
-  background: rgba(224, 108, 117, 0.15);
-  color: #e06c75;
-  border: 1px solid #e06c75;
-}
-
-/* TAB 2: LOGIC GATES */
+/* 2. LOGIC GATES */
 .gate-selector {
   display: flex;
-  gap: 8px;
-  overflow-x: auto;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
 }
-
-.gate-tab {
-  padding: 8px 20px;
-  border-radius: 10px;
-  font-size: 0.95rem;
+.gate-btn {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  color: var(--vp-c-text-1, #ccc);
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
   font-weight: 700;
-  background: var(--vp-c-bg);
-  border: 1px solid var(--ax-line);
-  color: var(--vp-c-text-2);
+  font-size: 0.95rem;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.2s;
 }
-
-.gate-tab.active {
-  background: var(--vp-c-brand-1);
+.gate-btn:hover {
+  border-color: var(--vp-c-brand-1, #007acc);
+}
+.gate-btn.active {
+  background: var(--vp-c-brand-1, #007acc);
+  border-color: var(--vp-c-brand-1, #007acc);
   color: #fff;
-  border-color: var(--vp-c-brand-1);
 }
-
-.circuit-view {
+.circuit-area {
+  background: var(--vp-c-bg, #181818);
+  border: 1px solid var(--vp-c-divider, #333);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: var(--vp-c-bg);
-  border: 1px solid var(--ax-line);
-  border-radius: 18px;
-  padding: 32px 20px;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
-
 .circuit-inputs {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1.5rem;
 }
-
-.circ-switch-group {
+.sw-wrapper {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0.75rem;
 }
-
-.cs-label {
-  font-weight: 700;
-  font-size: 0.95rem;
-  min-width: 70px;
+.sw-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2, #aaa);
+  min-width: 60px;
 }
-
 .switch-btn {
-  width: 54px;
-  height: 54px;
-  border-radius: 12px;
-  background: var(--ax-card);
-  border: 2px solid var(--ax-line);
-  font-size: 1.6rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #2d2d30;
+  border: 2px solid #444;
+  color: #888;
+  font-size: 1.5rem;
   font-weight: 900;
-  color: var(--vp-c-text-2);
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.2s;
 }
-
 .switch-btn.on {
-  background: var(--ax-good);
+  background: #2e7d32;
+  border-color: #4caf50;
   color: #fff;
-  border-color: var(--ax-good);
-  box-shadow: 0 0 14px rgba(46, 125, 50, 0.5);
+  box-shadow: 0 0 16px rgba(76, 175, 80, 0.4);
 }
-
-.circuit-gate-box {
+.sw-status {
+  font-size: 0.8rem;
+  color: var(--vp-c-text-2, #888);
+}
+.gate-visual {
+  display: flex;
+  align-items: center;
+}
+.gv-box {
+  width: 110px;
+  height: 90px;
+  background: var(--vp-c-bg-elv, #252526);
+  border: 2px solid var(--vp-c-brand-1, #007acc);
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 140px;
-  height: 100px;
-  background: linear-gradient(135deg, #0e70c0, #2392dc);
-  border-radius: 16px;
-  color: #fff;
-  box-shadow: 0 8px 20px rgba(14, 112, 192, 0.35);
+  box-shadow: 0 0 20px rgba(0, 122, 204, 0.25);
 }
-
-.gate-name-badge {
+.gv-title {
   font-size: 1.4rem;
   font-weight: 900;
-  letter-spacing: 0.05em;
+  color: var(--vp-c-text-1, #fff);
 }
-
-.gate-symbol {
-  font-size: 0.9rem;
-  opacity: 0.85;
+.gv-sub {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--vp-c-brand-1, #007acc);
 }
-
+.gv-wire {
+  width: 60px;
+  height: 4px;
+  background: #444;
+  transition: all 0.3s;
+}
+.gv-wire.live {
+  background: #ffeb3b;
+  box-shadow: 0 0 12px #ffeb3b;
+}
 .circuit-output {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 0.5rem;
 }
-
-.output-lamp {
+.out-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2, #aaa);
+}
+.bulb-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #2d2d30;
+  border: 2px solid #444;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  width: 90px;
-  height: 54px;
-  border-radius: 14px;
-  background: var(--ax-card);
-  border: 2px solid var(--ax-line);
-  font-size: 1.3rem;
-  color: var(--vp-c-text-3);
-  transition: all 0.2s ease;
+  font-size: 1.8rem;
+  color: #555;
+  transition: all 0.3s;
+  position: relative;
 }
-
-.output-lamp.lamp-on {
-  background: rgba(229, 192, 123, 0.2);
-  color: #e5c07b;
-  border-color: #e5c07b;
-  box-shadow: 0 0 20px rgba(229, 192, 123, 0.6);
+.bulb-box.on {
+  background: #fbc02d;
+  border-color: #fff59d;
+  color: #000;
+  box-shadow: 0 0 28px #ffeb3b;
 }
-
-.lamp-val {
+.out-val {
+  font-size: 1.8rem;
   font-weight: 900;
-  font-size: 1.4rem;
 }
-
-.gate-details-row {
+.out-text {
+  font-size: 0.82rem;
+  color: var(--vp-c-text-2, #888);
+}
+.gate-info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
 }
-
-.g-info-card, .g-table-card {
-  background: var(--vp-c-bg);
-  border: 1px solid var(--ax-line);
-  border-radius: 16px;
-  padding: 20px;
+.gi-box {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  border-radius: 10px;
+  padding: 1.25rem;
 }
-
-.g-info-card h3, .g-table-card h3 {
-  font-size: 1.1rem;
+.gi-box h4 {
+  font-size: 0.95rem;
   font-weight: 700;
-  margin: 0 0 10px;
+  margin: 0 0 0.5rem;
 }
-
+.gi-box p {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2, #aaa);
+  margin: 0 0 0.75rem;
+}
+.formula-badge {
+  display: inline-block;
+  font-size: 0.85rem;
+  background: rgba(0, 122, 204, 0.12);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  color: var(--vp-c-brand-1, #007acc);
+}
 .code-preview {
-  margin-top: 12px;
-  background: var(--vp-c-bg-alt);
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--ax-line);
-  font-family: monospace;
+  margin: 0;
+  padding: 0.75rem;
+  background: #111;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #98c379;
 }
-
+.truth-table-card h3 {
+  font-size: 1.15rem;
+  margin: 0 0 1rem;
+}
 .truth-table {
   width: 100%;
   border-collapse: collapse;
-  text-align: center;
-  font-size: 0.95rem;
+  background: var(--vp-c-bg, #252526);
+  border-radius: 8px;
+  overflow: hidden;
 }
-
+.truth-table th, .truth-table td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--vp-c-divider, #3e3e42);
+}
 .truth-table th {
-  background: var(--ax-card);
-  padding: 8px;
-  border-bottom: 2px solid var(--ax-line);
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 0.85rem;
 }
-
-.truth-table td {
-  padding: 8px;
-  border-bottom: 1px solid var(--ax-line);
-  font-weight: 600;
-}
-
 .truth-table tr.row-active {
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
-}
-
-.out-one {
-  color: var(--ax-good);
-  font-weight: 800;
-}
-
-/* TAB 3: MEMORY */
-.mem-calc-bar {
-  display: flex;
-  gap: 16px;
-  background: var(--vp-c-bg);
-  border: 1px solid var(--ax-line);
-  border-radius: 14px;
-  padding: 16px 20px;
-  align-items: center;
-}
-
-.mcb-input-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.mem-num-input {
-  padding: 8px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--ax-line);
-  background: var(--ax-card);
-  color: var(--vp-c-text-1);
-  font-size: 1.1rem;
+  background: rgba(0, 122, 204, 0.15);
   font-weight: 700;
-  width: 140px;
 }
-
-.mem-select {
-  padding: 8px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--ax-line);
-  background: var(--ax-card);
-  color: var(--vp-c-text-1);
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.mem-matrix {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
-.mem-card {
-  background: var(--vp-c-bg);
-  border: 1px solid var(--ax-line);
-  border-radius: 14px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-.mc-lbl {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: var(--vp-c-text-2);
-  margin-bottom: 4px;
-}
-
-.mc-val {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--vp-c-text-1);
-  word-break: break-all;
-}
-
-.mc-hint {
-  font-size: 0.8rem;
-  color: var(--vp-c-brand-1);
-  margin-top: 4px;
-}
-
-.analogy-box {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: var(--vp-c-brand-soft);
-  border: 1px solid var(--vp-c-brand-1);
-  border-radius: 14px;
-  padding: 16px 20px;
-}
-
-.ab-icon {
-  font-size: 1.8rem;
-  color: var(--vp-c-brand-1);
-}
-
-.ab-content h4 {
-  margin: 0 0 4px;
-  font-weight: 800;
-}
-
-.ab-content p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: var(--vp-c-text-1);
-}
-
-.ladder-section h3 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin: 0 0 12px;
-}
-
-.ladder-grid {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--vp-c-bg);
-  border: 1px solid var(--ax-line);
-  border-radius: 16px;
-  padding: 18px;
-  overflow-x: auto;
-  gap: 10px;
-}
-
-.ladder-step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  min-width: 140px;
-}
-
-.ls-badge {
-  background: var(--ax-card-hi);
-  border: 1px solid var(--ax-line);
-  padding: 4px 12px;
-  border-radius: 8px;
-  font-weight: 800;
-  color: var(--vp-c-brand-1);
-  margin-bottom: 6px;
-}
-
-.ladder-step p {
-  font-size: 0.78rem;
-  color: var(--vp-c-text-2);
-  margin: 0;
-}
-
-.ladder-arrow {
-  color: var(--vp-c-text-3);
-  font-size: 1.2rem;
-}
-
-/* TAB 4: FLOWCHART */
-.flowchart-visual {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  background: var(--vp-c-bg);
-  border: 1px solid var(--ax-line);
-  border-radius: 18px;
-  padding: 28px;
-}
-
-.flow-node {
-  position: relative;
-  min-width: 260px;
-  padding: 12px 20px;
-  text-align: center;
-  border: 2px solid var(--ax-line);
-  background: var(--ax-card);
-  transition: all 0.2s ease;
-}
-
-.node-start, .node-end {
-  border-radius: 999px;
-}
-
-.node-process {
-  border-radius: 8px;
-}
-
-.node-decision {
+.badge-bit {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
   border-radius: 6px;
-  transform: rotate(0deg);
-  border-color: #d19a66;
-}
-
-.node-output {
-  border-radius: 12px;
-  transform: skewX(-10deg);
-}
-
-.node-active {
-  background: var(--vp-c-brand-soft) !important;
-  border-color: var(--vp-c-brand-1) !important;
-  box-shadow: 0 0 16px rgba(14, 112, 192, 0.5);
-  transform: scale(1.05);
-}
-
-.node-passed {
-  opacity: 0.6;
-}
-
-.fn-type-badge {
-  font-size: 0.65rem;
+  background: #333;
+  color: #888;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  color: var(--vp-c-text-3);
-  margin-bottom: 2px;
-}
-
-.fn-text {
-  font-size: 0.95rem;
-  font-weight: 700;
-}
-
-.fn-connector {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--vp-c-text-3);
-  font-size: 1rem;
-}
-
-.step-live-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--vp-c-bg-alt);
-  border: 1px solid var(--ax-line);
-  border-radius: 14px;
-  padding: 16px 20px;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.slc-info h4 {
-  margin: 0 0 4px;
-  font-size: 1.05rem;
-  font-weight: 800;
-}
-
-.slc-info p {
-  margin: 0;
-  font-size: 0.92rem;
-  color: var(--vp-c-text-2);
-}
-
-.slc-code {
-  display: flex;
-  flex-direction: column;
-  background: var(--vp-c-bg);
-  padding: 8px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--ax-line);
   font-family: monospace;
 }
-
-.code-label {
-  font-size: 0.7rem;
-  color: var(--vp-c-text-3);
-  text-transform: uppercase;
+.badge-bit.one {
+  background: #2e7d32;
+  color: #fff;
+}
+.badge-bit.out.one {
+  background: #fbc02d;
+  color: #000;
+}
+.active-tag {
+  color: var(--vp-c-brand-1, #007acc);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+.idle-tag {
+  color: #666;
 }
 
-/* TAB 5: HARDWARE */
-.hw-selector-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+/* 3. MEMORY CALCULATOR */
+.memory-input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
-
-.hw-nav-card {
+.mi-field {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: var(--vp-c-bg);
-  border: 1px solid var(--ax-line);
-  border-radius: 14px;
-  padding: 14px 10px;
+  gap: 0.5rem;
+}
+.mi-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2, #aaa);
+}
+.mem-input {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #444);
+  color: var(--vp-c-text-1, #fff);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  min-width: 160px;
+}
+.unit-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.u-btn {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  color: var(--vp-c-text-1, #ccc);
+  padding: 0.5rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.15s;
 }
-
-.hw-nav-card:hover {
-  border-color: var(--vp-c-brand-1);
+.u-btn.active {
+  background: var(--vp-c-brand-1, #007acc);
+  border-color: var(--vp-c-brand-1, #007acc);
+  color: #fff;
 }
-
-.hw-nav-card.active {
-  background: var(--vp-c-brand-soft);
-  border-color: var(--vp-c-brand-1);
+.units-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
-
-.hwn-icon {
-  font-size: 1.6rem;
-  color: var(--vp-c-brand-1);
-  margin-bottom: 6px;
+.unit-card {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  border-radius: 10px;
+  padding: 1.25rem;
 }
-
-.hwn-title {
+.uc-name {
+  font-size: 0.82rem;
+  color: var(--vp-c-text-2, #888);
+}
+.uc-val {
+  font-size: 1.2rem;
   font-weight: 800;
-  font-size: 0.95rem;
-  color: var(--vp-c-text-1);
+  margin-top: 0.35rem;
+  color: var(--vp-c-brand-1, #007acc);
+  word-break: break-all;
+}
+.ladder-card, .analogies-card {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.ladder-card h3, .analogies-card h3 {
+  font-size: 1.15rem;
+  margin: 0 0 1rem;
+}
+.ladder-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.l-step {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.5rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  border: 1px solid #333;
+}
+.ls-u {
+  color: #e5c07b;
+  font-weight: 700;
+}
+.an-sub {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2, #aaa);
+  margin-bottom: 1.25rem;
+}
+.an-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.an-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+.ab-icon {
+  color: #e5c07b;
+  font-size: 1.2rem;
+}
+.ab-title {
+  font-size: 0.82rem;
+  color: var(--vp-c-text-2, #888);
+}
+.ab-val {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--vp-c-text-1, #fff);
 }
 
-.hwn-sub {
-  font-size: 0.75rem;
-  color: var(--vp-c-text-2);
-  margin-top: 2px;
+/* 4. FLOWCHART */
+.algo-type-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 }
-
-.hw-detail-card {
-  background: var(--vp-c-bg);
-  border: 1px solid var(--ax-line);
-  border-radius: 18px;
-  padding: 24px;
+.at-tab {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  color: var(--vp-c-text-1, #ccc);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s;
 }
-
-.hwd-header {
+.at-tab.active {
+  background: var(--vp-c-brand-1, #007acc);
+  color: #fff;
+  border-color: var(--vp-c-brand-1, #007acc);
+}
+.algo-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.flowchart-box {
+  background: var(--vp-c-bg, #181818);
+  border: 1px solid var(--vp-c-divider, #333);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.fc-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  border-bottom: 1px solid var(--ax-line);
-  padding-bottom: 16px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.hwd-badge {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
-  padding: 2px 10px;
-  border-radius: 6px;
-  margin-bottom: 6px;
-}
-
-.hwd-title-box h3 {
-  font-size: 1.4rem;
-  font-weight: 800;
-  margin: 0;
-}
-
-.hwd-unit {
+  margin-bottom: 1.5rem;
   font-size: 0.9rem;
+  color: var(--vp-c-text-2, #aaa);
 }
-
-.hu-lbl {
-  color: var(--vp-c-text-2);
-  margin-right: 6px;
+.fc-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
 }
-
-.hwd-body {
+.fc-chain {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  align-items: center;
+  gap: 0.5rem;
+}
+.fc-node-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.fc-node {
+  width: 85%;
+  max-width: 280px;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  background: #252526;
+  border: 2px solid #444;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.2s;
+}
+.fc-node.oval {
+  border-radius: 24px;
+  background: #1f2e3d;
+  border-color: #2b5b84;
+}
+.fc-node.rhomb {
+  background: #3a2e1f;
+  border-color: #855f2b;
+}
+.fc-node.io {
+  border-radius: 0;
+  transform: skewX(-10deg);
+  background: #253326;
+  border-color: #3b6b3e;
+}
+.fc-node.active {
+  border-color: var(--vp-c-brand-1, #007acc);
+  box-shadow: 0 0 16px rgba(0, 122, 204, 0.5);
+  transform: scale(1.04);
+}
+.fc-node.done {
+  opacity: 0.6;
+}
+.fcn-idx {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  background: rgba(0, 0, 0, 0.4);
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+}
+.fc-arrow {
+  color: #666;
+  font-size: 1.2rem;
+  margin: 0.2rem 0;
+}
+.algo-details-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.adc-card {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+.adc-card h4 {
+  font-size: 0.9rem;
+  margin: 0 0 0.75rem;
+  color: var(--vp-c-text-2, #aaa);
+}
+.code-flow-wrapper {
+  background: #111;
+  border-radius: 6px;
+  padding: 0.5rem 0;
+}
+.code-line {
+  padding: 0.2rem 0.75rem;
+  font-family: monospace;
+  font-size: 0.85rem;
+  display: flex;
+  gap: 0.75rem;
+}
+.code-line.highlight {
+  background: rgba(0, 122, 204, 0.25);
+  border-left: 3px solid var(--vp-c-brand-1, #007acc);
+}
+.code-line .ln {
+  color: #555;
+}
+.code-line .code-txt {
+  color: #d4d4d4;
+}
+.vars-json {
+  margin: 0;
+  background: #111;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  color: #e5c07b;
+}
+.logs-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.85rem;
+  color: #98c379;
 }
 
-.hwd-block h4 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin: 0 0 4px;
+/* 5. HARDWARE */
+.hardware-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+.hwn-btn {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 0.5rem;
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  color: var(--vp-c-text-1, #ccc);
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.hwn-btn.active {
+  background: var(--vp-c-brand-1, #007acc);
+  border-color: var(--vp-c-brand-1, #007acc);
+  color: #fff;
+}
+.part-showcase {
+  background: var(--vp-c-bg, #181818);
+  border: 1px solid var(--vp-c-divider, #333);
+  border-radius: 12px;
+  padding: 2rem;
+}
+.ps-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--vp-c-divider, #333);
+}
+.ps-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fff;
+}
+.ps-unit {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2, #aaa);
+}
+.ps-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.ps-info-block h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  margin: 0 0 0.35rem;
+  color: var(--vp-c-brand-1, #007acc);
+}
+.ps-analogy {
+  font-size: 1.05rem;
+  color: #e5c07b;
+  font-weight: 600;
+  margin: 0;
+}
+.ps-examples {
+  margin-top: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--vp-c-text-2, #888);
 }
 
-.hwd-block p {
-  margin: 0;
+/* 6. SORTING */
+.sort-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.sc-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sc-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2, #aaa);
+}
+.btn-group-sm {
+  display: flex;
+  gap: 0.3rem;
+}
+.sc-btn {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  color: var(--vp-c-text-1, #ccc);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.sc-btn.active {
+  background: var(--vp-c-brand-1, #007acc);
+  border-color: var(--vp-c-brand-1, #007acc);
+  color: #fff;
+}
+.bars-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+  height: 250px;
+  background: var(--vp-c-bg, #141414);
+  border: 1px solid var(--vp-c-divider, #333);
+  border-radius: 10px;
+  padding: 1.5rem 1rem 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.sort-bar {
+  flex: 1;
+  max-width: 45px;
+  background: var(--vp-c-brand-1, #007acc);
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 2px;
+  transition: all 0.15s ease;
+}
+.sort-bar.comparing {
+  background: #e5c07b !important;
+  box-shadow: 0 0 12px rgba(229, 192, 123, 0.6);
+}
+.sort-bar.swapping {
+  background: #e06c75 !important;
+  box-shadow: 0 0 12px rgba(224, 108, 117, 0.8);
+}
+.sort-bar.sorted {
+  background: #98c379 !important;
+}
+.sort-bar.target {
+  background: #c678dd !important;
+  box-shadow: 0 0 16px rgba(198, 120, 221, 0.8);
+}
+.bar-val {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #fff;
+}
+.bar-idx {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.sort-status-bar {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+.ss-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.ss-pill {
+  font-size: 0.85rem;
+  color: var(--vp-c-text-2, #aaa);
+}
+.ss-pill b {
+  color: var(--vp-c-brand-1, #007acc);
+}
+.ss-exp {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #e5c07b;
+}
+
+/* 7. GIT SIMULATOR */
+.git-actions-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.ga-card {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.ga-card label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2, #aaa);
+  margin-bottom: 0.5rem;
+}
+.ga-input-row {
+  display: flex;
+  gap: 0.5rem;
+}
+.git-input {
+  flex: 1;
+  background: #181818;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+}
+.git-view-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.git-graph-card, .git-term-card {
+  background: var(--vp-c-bg, #181818);
+  border: 1px solid var(--vp-c-divider, #333);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+.git-graph-card h4, .git-term-card h4 {
   font-size: 0.95rem;
-  color: var(--vp-c-text-2);
+  margin: 0 0 1rem;
+}
+.git-commits-chain {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.commit-node {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #252526;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+}
+.commit-node.current {
+  border-color: var(--vp-c-brand-1, #007acc);
+  box-shadow: 0 0 10px rgba(0, 122, 204, 0.3);
+}
+.cn-badge {
+  background: #007acc;
+  color: #fff;
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+.cn-info {
+  flex: 1;
+}
+.cn-msg {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.cn-meta {
+  font-size: 0.75rem;
+  color: #888;
+  display: flex;
+  gap: 0.75rem;
+}
+.cn-head {
+  color: #98c379;
+  font-weight: 700;
+}
+.term-window {
+  background: #0d0d0d;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-family: monospace;
+  font-size: 0.8rem;
+  min-height: 180px;
+  max-height: 240px;
+  overflow-y: auto;
+  color: #98c379;
+}
+.term-line {
   line-height: 1.5;
 }
 
-.analogy-text {
-  color: var(--vp-c-text-1) !important;
+/* 8. CRYPTO & SECURITY */
+.crypto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.crypto-card {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+.crypto-card.full-width {
+  grid-column: 1 / -1;
+}
+.cc-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.cc-head h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  margin: 0;
+}
+.cc-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(0, 122, 204, 0.15);
+  color: var(--vp-c-brand-1, #007acc);
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+}
+.cc-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.cc-field label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--vp-c-text-2, #aaa);
+  margin-bottom: 0.35rem;
+}
+.range-slider {
+  width: 100%;
+  accent-color: var(--vp-c-brand-1, #007acc);
+}
+.cc-result {
+  background: #181818;
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+.cc-res-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 0.25rem;
+}
+.cc-res-val {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #e5c07b;
+  word-break: break-all;
+}
+.base64-bits-box {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+.bbb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+.bbb-item {
+  background: #181818;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+}
+.pass-bar-wrapper {
+  height: 8px;
+  background: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0.5rem 0 1rem;
+}
+.pass-bar {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+.pass-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.pm-box {
+  background: #181818;
+  padding: 0.75rem;
+  border-radius: 6px;
+}
+.pm-label {
+  font-size: 0.75rem;
+  color: #888;
+}
+.pm-val {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-top: 0.25rem;
+}
+.pm-val.highlight {
+  color: #98c379;
+}
+.pass-checklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.pc-item {
+  font-size: 0.82rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #888;
+}
+.pc-item.ok {
+  background: rgba(152, 195, 121, 0.15);
+  color: #98c379;
   font-weight: 600;
+}
+
+/* 9. DESIGN LAB */
+.design-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.design-card {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+.design-card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 1rem;
+}
+.dc-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.dcc-field label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--vp-c-text-2, #aaa);
+  margin-bottom: 0.25rem;
+}
+.glass-bg-preview {
+  height: 140px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.glass-preview-box {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+.glass-preview-box h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+.glass-preview-box p {
+  margin: 0;
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+.shadow-preview-area {
+  height: 140px;
+  background: #181818;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.shadow-box {
+  width: 140px;
+  height: 70px;
+  background: var(--vp-c-bg, #252526);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.css-code-box {
+  position: relative;
+  background: #111;
+  border-radius: 6px;
+  padding: 0.75rem;
+}
+.css-code-box pre {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #98c379;
+}
+.copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+  border: none;
+}
+.btn-sm {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+}
+.btn-xs {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+.btn-lg {
+  padding: 0.65rem 1.4rem;
+  font-size: 1rem;
+}
+.btn-primary {
+  background: var(--vp-c-brand-1, #007acc);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #0062a3;
+}
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--vp-c-text-1, #d4d4d4);
+  border: 1px solid var(--vp-c-divider, #444);
+}
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+.btn-warning {
+  background: #d19a66;
+  color: #000;
 }
 
 @media (max-width: 768px) {
   .bit-board {
     grid-template-columns: repeat(4, 1fr);
   }
-  .conv-grid, .mem-matrix, .gate-details-row {
+  .circuit-area, .algo-main-grid, .gate-info-grid, .git-view-grid, .crypto-grid, .design-grid {
     grid-template-columns: 1fr;
-  }
-  .hw-selector-grid {
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
   }
 }
 </style>

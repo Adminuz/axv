@@ -236,7 +236,78 @@ const totalKeystrokes = ref<number>(0)
 const currentStreak = ref<number>(0)
 const maxStreak = ref<number>(0)
 const showKeyboard = ref<boolean>(true)
+const showFingerZones = ref<boolean>(false)
+const showAchievementsModal = ref<boolean>(false)
+const achievementToast = ref<{ title: string; badge: string; desc: string } | null>(null)
+const mistakesMap = ref<Record<string, number>>({})
+const personalBestWpm = ref<number>(0)
 const pressedKey = ref<string | null>(null)
+
+interface Achievement {
+  id: string
+  title: string
+  desc: string
+  icon: string
+  unlocked: boolean
+}
+
+const achievementsList = ref<Achievement[]>([
+  { id: 'first_lesson', title: 'Birinchi qadam', desc: 'Birinchi mashqni muvaffaqiyatli yakunlash', icon: '🌟', unlocked: false },
+  { id: 'speed_40', title: 'Tezkor barmoqlar', desc: '40+ WPM tezlikka erishish', icon: '🚀', unlocked: false },
+  { id: 'speed_60', title: 'Kiber chaqmoq', desc: '60+ WPM tezlikka erishish', icon: '⚡', unlocked: false },
+  { id: 'accuracy_100', title: 'Xatosiz snayper', desc: '100% aniqlik bilan mashqni yakunlash', icon: '🎯', unlocked: false },
+  { id: 'streak_50', title: 'Combo Master', desc: '50 ta belgini ketma-ket xatosiz terish', icon: '🔥', unlocked: false },
+  { id: 'code_runner', title: 'Poliglot dasturchi', desc: 'Kod mashqlarini muvaffaqiyatli bajarish', icon: '💻', unlocked: false }
+])
+
+const loadAchievements = () => {
+  if (typeof window !== 'undefined') {
+    try {
+      const saved = JSON.parse(localStorage.getItem('axv_typing_achievements') || '[]')
+      achievementsList.value.forEach(a => {
+        if (saved.includes(a.id)) a.unlocked = true
+      })
+      const records = JSON.parse(localStorage.getItem('axv_stamina_records') || '{}')
+      if (records[currentLesson.value.id]) {
+        personalBestWpm.value = records[currentLesson.value.id].wpm || 0
+      } else {
+        personalBestWpm.value = 0
+      }
+    } catch (e) {}
+  }
+}
+
+const unlockAchievement = (id: string) => {
+  const ach = achievementsList.value.find(a => a.id === id)
+  if (ach && !ach.unlocked) {
+    ach.unlocked = true
+    achievementToast.value = { title: ach.title, badge: ach.icon, desc: ach.desc }
+    setTimeout(() => { achievementToast.value = null }, 4000)
+    if (typeof window !== 'undefined') {
+      try {
+        const unlockedIds = achievementsList.value.filter(a => a.unlocked).map(a => a.id)
+        localStorage.setItem('axv_typing_achievements', JSON.stringify(unlockedIds))
+      } catch (e) {}
+    }
+  }
+}
+
+const startMistakesDrill = () => {
+  const mistakeChars = Object.keys(mistakesMap.value)
+  if (mistakeChars.length === 0) return
+  const words: string[] = []
+  for (let i = 0; i < 18; i++) {
+    let word = ''
+    for (let j = 0; j < 4; j++) {
+      const char = mistakeChars[Math.floor(Math.random() * mistakeChars.length)]
+      word += char
+    }
+    words.push(word)
+  }
+  customTextInput.value = words.join(' ')
+  activeCategory.value = 'custom'
+  resetLesson()
+}
 
 // Stats
 const elapsedTimeSec = ref<number>(0)
@@ -679,6 +750,9 @@ const handleKeyDown = (e: KeyboardEvent) => {
     errorCount.value++
     currentStreak.value = 0
     charStatus.value[currentIndex.value] = 'error'
+    if (expected) {
+      mistakesMap.value[expected] = (mistakesMap.value[expected] || 0) + 1
+    }
     playKeySound(true)
   }
 
@@ -708,6 +782,14 @@ const finishLesson = () => {
   }
   playVictorySound()
 
+  // Achievements checking
+  unlockAchievement('first_lesson')
+  if (wpm.value >= 40) unlockAchievement('speed_40')
+  if (wpm.value >= 60) unlockAchievement('speed_60')
+  if (accuracy.value === 100 && totalKeystrokes.value >= 40) unlockAchievement('accuracy_100')
+  if (maxStreak.value >= 50) unlockAchievement('streak_50')
+  if (activeCategory.value === 'code' || activeCategory.value === 'tracks') unlockAchievement('code_runner')
+
   if (typeof window !== 'undefined') {
     try {
       const records = JSON.parse(localStorage.getItem('axv_stamina_records') || '{}')
@@ -720,6 +802,7 @@ const finishLesson = () => {
           date: new Date().toISOString()
         }
         localStorage.setItem('axv_stamina_records', JSON.stringify(records))
+        personalBestWpm.value = wpm.value
       }
     } catch (e) {}
   }
@@ -857,6 +940,7 @@ const downloadResultImage = () => {
 
 onMounted(() => {
   resetLesson()
+  loadAchievements()
   if (typeof window !== 'undefined') {
     window.addEventListener('keydown', handleKeyDown)
     window.addEventListener('keyup', handleKeyUp)
@@ -873,11 +957,21 @@ onUnmounted(() => {
 
 watch(() => currentLesson.value, () => {
   resetLesson()
+  loadAchievements()
 })
 </script>
 
 <template>
   <div class="stamina-wrapper">
+    <!-- ACHIEVEMENT UNLOCKED TOAST -->
+    <div v-if="achievementToast" class="achievement-toast">
+      <span class="at-badge">{{ achievementToast.badge }}</span>
+      <div>
+        <div class="at-title">Yangi Yutuq: {{ achievementToast.title }}!</div>
+        <div class="at-desc">{{ achievementToast.desc }}</div>
+      </div>
+    </div>
+
     <div class="stamina-app">
       <!-- TOP CONTROLS & BREADCRUMBS -->
       <div class="stamina-header-bar">
@@ -894,6 +988,25 @@ watch(() => currentLesson.value, () => {
 
           <!-- Quick Action Controls -->
           <div class="stamina-quick-actions">
+            <!-- Finger Zones Toggle -->
+            <button
+              class="t-btn-pill"
+              :class="{ active: showFingerZones }"
+              @click="showFingerZones = !showFingerZones"
+              title="Klaviaturada har bir barmoq rangini ko'rsatish"
+            >
+              <Icon name="palette" /> Barmoq zonalari
+            </button>
+
+            <!-- Achievements Button -->
+            <button
+              class="icon-btn"
+              @click="showAchievementsModal = true"
+              title="Yutuqlar (Achievements)"
+            >
+              <Icon name="sparkles" />
+            </button>
+
             <!-- Streak Flame indicator -->
             <div v-if="currentStreak >= 10" class="streak-badge" title="Ketma-ket xatosiz belgilar">
               🔥 {{ currentStreak }}
@@ -918,7 +1031,7 @@ watch(() => currentLesson.value, () => {
           <div class="m-icon"><Icon name="zap" /></div>
           <div class="m-content">
             <div class="m-num">{{ wpm }}</div>
-            <div class="m-lbl">WPM (so'z/daq)</div>
+            <div class="m-lbl">WPM <span v-if="personalBestWpm > 0" class="pb-tag">(PB: {{ personalBestWpm }})</span></div>
           </div>
         </div>
         <div class="metric-card">
@@ -998,7 +1111,7 @@ watch(() => currentLesson.value, () => {
       </div>
 
       <!-- ENLARGED & ROCK-SOLID KEYBOARD (COMFORTABLE SPACING) -->
-      <div v-if="showKeyboard" class="stamina-keyboard">
+      <div v-if="showKeyboard" class="stamina-keyboard" :class="{ 'zones-active': showFingerZones }">
         <div v-for="(row, rIdx) in KEYBOARD_ROWS" :key="rIdx" class="kb-row">
           <div
             v-for="k in row"
@@ -1018,6 +1131,19 @@ watch(() => currentLesson.value, () => {
             <div class="k-bump" v-if="k.home">_</div>
           </div>
         </div>
+      </div>
+
+      <!-- FINGER ZONES LEGEND BAR -->
+      <div v-if="showKeyboard && showFingerZones" class="finger-legend-bar">
+        <span class="flb-item"><i class="flb-dot" style="background: #e06c75"></i> Chap jimjiloq</span>
+        <span class="flb-item"><i class="flb-dot" style="background: #d19a66"></i> Chap nomsiz</span>
+        <span class="flb-item"><i class="flb-dot" style="background: #e5c07b"></i> Chap o'rta</span>
+        <span class="flb-item"><i class="flb-dot" style="background: #98c379"></i> Chap ko'rsatkich</span>
+        <span class="flb-item"><i class="flb-dot" style="background: #c678dd"></i> Katta barmoq (Space)</span>
+        <span class="flb-item"><i class="flb-dot" style="background: #56b6c2"></i> O'ng ko'rsatkich</span>
+        <span class="flb-item"><i class="flb-dot" style="background: #61afef"></i> O'ng o'rta</span>
+        <span class="flb-item"><i class="flb-dot" style="background: #e5c07b"></i> O'ng nomsiz</span>
+        <span class="flb-item"><i class="flb-dot" style="background: #e06c75"></i> O'ng jimjiloq</span>
       </div>
     </div>
 
@@ -1070,6 +1196,40 @@ watch(() => currentLesson.value, () => {
               <Icon name="play" /> Matnni yuklash va boshlash
             </button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACHIEVEMENTS MODAL -->
+    <div v-if="showAchievementsModal" class="stamina-modal-overlay" @click.self="showAchievementsModal = false">
+      <div class="stamina-achievements-modal">
+        <div class="slm-header">
+          <h2><Icon name="sparkles" /> Yutuqlar va Nishonlar</h2>
+          <button class="slm-close" @click="showAchievementsModal = false">✕</button>
+        </div>
+
+        <div class="achievements-grid">
+          <div
+            v-for="ach in achievementsList"
+            :key="ach.id"
+            class="achievement-card"
+            :class="{ unlocked: ach.unlocked }"
+          >
+            <div class="ac-badge">{{ ach.icon }}</div>
+            <div class="ac-info">
+              <div class="ac-title">
+                {{ ach.title }}
+                <span class="ac-status">{{ ach.unlocked ? '✓ OCHILGAN' : '🔒 QULFLANGAN' }}</span>
+              </div>
+              <div class="ac-desc">{{ ach.desc }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="set-footer">
+          <button class="btn btn-primary" @click="showAchievementsModal = false">
+            <Icon name="check" /> Yopish
+          </button>
         </div>
       </div>
     </div>
@@ -1222,6 +1382,9 @@ watch(() => currentLesson.value, () => {
         <div class="sm-actions">
           <button class="btn btn-ghost" @click="resetLesson">
             <Icon name="rotate-ccw" /> Qaytadan
+          </button>
+          <button v-if="errorCount > 0" class="btn btn-warning" @click="startMistakesDrill" title="Xato qilingan belgilar ustida mashq">
+            <Icon name="target" /> Xatolar mashqi
           </button>
           <button class="btn btn-ghost" @click="downloadResultImage" title="Natijani rasm qilib yuklab olish">
             <Icon name="camera" /> Rasm qilib yuklash
@@ -1960,6 +2123,162 @@ watch(() => currentLesson.value, () => {
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.t-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--ax-card);
+  border: 1px solid var(--ax-line);
+  padding: 0 12px;
+  height: clamp(38px, 4.6vh, 44px);
+  border-radius: 10px;
+  color: var(--vp-c-text-2);
+  font-size: clamp(0.8rem, 0.9vw, 0.88rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.t-btn-pill:hover, .t-btn-pill.active {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+
+.pb-tag {
+  color: #98c379;
+  font-weight: 700;
+  font-size: 0.8em;
+}
+
+/* ACHIEVEMENT TOAST */
+.achievement-toast {
+  position: fixed;
+  top: 70px;
+  right: 24px;
+  z-index: 1000;
+  background: var(--vp-c-bg-elv, #1e1e1e);
+  border: 2px solid #e5c07b;
+  border-radius: 12px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 32px rgba(229, 192, 123, 0.25);
+  animation: slideInToast 0.3s ease-out;
+}
+@keyframes slideInToast {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.at-badge {
+  font-size: 2rem;
+}
+.at-title {
+  font-weight: 800;
+  color: #e5c07b;
+  font-size: 0.95rem;
+}
+.at-desc {
+  font-size: 0.82rem;
+  color: var(--vp-c-text-2);
+}
+
+/* FINGER ZONES TINTS */
+.stamina-keyboard.zones-active .finger-lp { border-color: rgba(224, 108, 117, 0.5); background: rgba(224, 108, 117, 0.08); }
+.stamina-keyboard.zones-active .finger-lr { border-color: rgba(209, 154, 102, 0.5); background: rgba(209, 154, 102, 0.08); }
+.stamina-keyboard.zones-active .finger-lm { border-color: rgba(229, 192, 123, 0.5); background: rgba(229, 192, 123, 0.08); }
+.stamina-keyboard.zones-active .finger-li { border-color: rgba(152, 195, 121, 0.5); background: rgba(152, 195, 121, 0.08); }
+.stamina-keyboard.zones-active .finger-ri { border-color: rgba(86, 182, 194, 0.5); background: rgba(86, 182, 194, 0.08); }
+.stamina-keyboard.zones-active .finger-rm { border-color: rgba(97, 175, 239, 0.5); background: rgba(97, 175, 239, 0.08); }
+.stamina-keyboard.zones-active .finger-rr { border-color: rgba(229, 192, 123, 0.5); background: rgba(229, 192, 123, 0.08); }
+.stamina-keyboard.zones-active .finger-rp { border-color: rgba(224, 108, 117, 0.5); background: rgba(224, 108, 117, 0.08); }
+
+.finger-legend-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  background: var(--ax-card);
+  border: 1px solid var(--ax-line);
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 0.78rem;
+  color: var(--vp-c-text-2);
+}
+.flb-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.flb-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ACHIEVEMENTS MODAL */
+.stamina-achievements-modal {
+  background: var(--vp-c-bg-elv, #1e1e1e);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 680px;
+  padding: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.achievement-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #333);
+  border-radius: 10px;
+  padding: 12px 14px;
+  opacity: 0.5;
+  transition: all 0.2s ease;
+}
+.achievement-card.unlocked {
+  opacity: 1;
+  border-color: #e5c07b;
+  background: rgba(229, 192, 123, 0.08);
+}
+.ac-badge {
+  font-size: 2rem;
+}
+.ac-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ac-status {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--vp-c-text-2);
+}
+.achievement-card.unlocked .ac-status {
+  background: rgba(152, 195, 121, 0.2);
+  color: #98c379;
+}
+.ac-desc {
+  font-size: 0.8rem;
+  color: var(--vp-c-text-2);
+  margin-top: 2px;
 }
 
 @media (max-width: 768px) {
