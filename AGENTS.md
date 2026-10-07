@@ -38,7 +38,8 @@ shablon/slaydlar.html          sample slides (14 block types), only <section> el
 shablon/slayd-qobiq.html       the shell every slide file is wrapped in
 reveal/                        reveal.js 6.0.2, dars.css (theme), tema.js, logo.png, lucide/ (icons), ikonlar.js
 sayt_sozlama.json              site wording (organisation name, home texts, footer)
-slayd_yigish.py                wraps slides in the shell, builds icons
+slayd_yigish.py                wraps slides in the shell, builds icons; test files become quiz pages via quiz_yigish.py
+quiz_yigish.py                 builds the mobile quiz page (one question per screen) from *-test-slaydlar.html
 vitepress_yigish.py            exports content for the student website (sayt-vitepress/)
 ikon_yigish.py                 collects used Lucide icons into reveal/ikonlar.js
 sayt-vitepress/                VitePress student website (theme + components are hand-written, content under docs/ is generated)
@@ -59,6 +60,7 @@ Input from the mentor: a class and a week number, for example "9-sinf, week 4". 
 5. For each lesson K = 1..3 create in `<sinf>/haftalik/hafta-NN/`:
    - `dars-K.md` mentor file (plan, notes, code, tasks with `**Yechim:**` solutions, quick check)
    - `dars-K-oquvchi.md` student page (no solutions; at least 10 tasks tagged ` · oson/o'rta/qiyin/bonus`)
+   - `dars-K-test-slaydlar.html` lesson test (10 questions, source of the quiz page, see "Tests" below)
    - `dars-K-slaydlar.html` slides: **only `<section>` elements** (20 to 28 slides, big SVG illustrations, fragments, icons via `<i data-ic="name"></i>`, no emoji)
 6. Create `uyga-vazifa.md` (homework; its `## Mentor uchun` section is removed from the public site) and `baholash.md` (mentor-only grading template). Homework must match what the student pages say.
 7. Run `python3 slayd_yigish.py` (wraps slides, builds icons, reports unknown icon names) and fix any errors.
@@ -95,6 +97,23 @@ Checks to run after writing slides:
 2. Leaks (after `npm run build`): `grep -rli "yechim" sayt-vitepress/docs/.vitepress/dist` must not show task solutions (the plain word may appear in running text), and `grep -rl 'class="notes"' sayt-vitepress/docs/.vitepress/dist` must be empty.
 3. Visual (if you have a browser tool): serve the folder with `python3 -m http.server <port>`, open `hafta-NN/dars-K-slayd.html`, step through slides with `Reveal.slide(i, 0, 99)` (shows all fragments), check that nothing leaves the 1280×720 area, check the light theme (`document.documentElement.dataset.theme = 'light'`) and a phone-size viewport (375×812). Screenshots can lag 1 to 2 seconds. Stop the server afterwards.
 4. If you cannot view slides, say so in the report ("visual check not done").
+
+## Tests (quiz pages, do not break)
+
+- Source: `dars-K-test-slaydlar.html` (10 questions per lesson) and `hafta-test-slaydlar.html` (20 per week). Only `<section>` elements with `class="quiz"`, 4 options, the right one marked `data-ok`, a short `.explain` for every question (format: see "Testlar" in `shablon/qoidalar.md`).
+- Output `*-test-slayd.html` is **not a slideshow**: `slayd_yigish.py` detects `class="quiz"` and delegates to `quiz_yigish.py`, which writes a standalone mobile-first page (one question per screen, big tap targets, green/red feedback + explanation, progress bar, score, review of mistakes, retry, light/dark theme, keys 1-4). Never edit the output; edit the source and rebuild.
+- After `python3 slayd_yigish.py` about 240 unrelated `dars-N-slayd.html` files may show diffs. Revert them (`git checkout -- <files>`) and commit only the files you changed.
+- The site exporter reuses `wrap()`, so after `/sayt` the site tests are quizzes too.
+
+## Week conventions (keep every new week identical)
+
+- Files per week: 3 x (`dars-K.md`, `dars-K-oquvchi.md`, `dars-K-slaydlar.html`, `dars-K-test-slaydlar.html`) + `hafta-test-slaydlar.html`, `uyga-vazifa.md`, `baholash.md`; generated `*-slayd.html` / `*-test-slayd.html`.
+- Badge on slides/pages: `N-hafta · M-dars` (M = global lesson number). `karta.md`: set the 3 rows of the week from ⬜ to 📝.
+- Mentor file sections: `Dars rejasi`, `Mentor konspekti`, `Amaliy topshiriqlar va yechimlar`, `Tezkor nazorat savollari`, `Uyga vazifa` (follow the style of the previous week of the same class).
+- Slide lint: no 6-digit hex / `rgba()`, no emoji; icons only from `reveal/lucide` (known missing: help-circle, history, bar-chart-3, waves, align-center, filter, function-square, wrap-text, figma, github, use a neighbour icon).
+- Primary content only from `_matn`; anything extra is flagged in the report. Check code samples by running them where possible and say what was not verified (e.g. Kotlin, `nginx -t`).
+- Before finishing: `python3 slayd_yigish.py`, `python3 slayd_lint.py <hafta>` (0 problems), `shablon/slayd_audit.js` (0), then sync `karta.md`.
+- Pushing to GitHub (`Adminuz/axv`) only when the mentor asks. With the GitHub MCP `push_files`, keep each payload file under 1 MiB (chunks of about 850 KB), then `git fetch && git reset --hard origin/main`. The repo is public and contains mentor solutions: recommend making it private.
 
 ## Design facts (do not break)
 
