@@ -82,6 +82,37 @@ const CATEGORIES: Category[] = [
     ]
   },
   {
+    id: 'hotkeys',
+    title: 'Tezkor tugmalar (Hotkeys)',
+    icon: 'zap',
+    lessons: [
+      {
+        id: 'hk1',
+        title: 'Umumiy tezkor klavishlar',
+        desc: 'Ctrl+C, Ctrl+V, Ctrl+Z, Ctrl+S va tizim kombinatsiyalari',
+        text: 'Ctrl+C nusxalash, Ctrl+V qo\'yish, Ctrl+Z bekor qilish, Ctrl+S saqlash, Ctrl+A hammasini tanlash, Ctrl+F qidirish, Ctrl+X qirqib olish, Ctrl+P chop etish.'
+      },
+      {
+        id: 'hk2',
+        title: 'VS Code dasturchi klavishlari',
+        desc: 'Kod muharriridagi eng muhim kombinatsiyalar',
+        text: 'Ctrl+Shift+P buyruqlar paneli, Ctrl+` terminalni ochish, Ctrl+D keyingi moslikni tanlash, Ctrl+Shift+K qatorni o\'chirish, Alt+Up qatorni ko\'tarish, Ctrl+/ izohga olish.'
+      },
+      {
+        id: 'hk3',
+        title: 'Terminal va Git buyruqlari',
+        desc: 'Git va CLI da eng ko\'p teriladigan qisqa buyruqlar',
+        text: 'git status && git add . && git commit -m "feat: yangi modul qo\'shildi" && git push origin main && npm run dev && python3 main.py'
+      },
+      {
+        id: 'hk4',
+        title: 'Matn bo\'ylab tezkor harakat',
+        desc: 'Ctrl+Left, Ctrl+Right, Ctrl+Backspace, Home, End',
+        text: 'Ctrl+Left so\'z boshiga, Ctrl+Right so\'z oxiriga, Ctrl+Backspace butun so\'zni o\'chirish, Shift+Home qator boshigacha tanlash, Shift+End qator oxirigacha tanlash.'
+      }
+    ]
+  },
+  {
     id: 'code',
     title: 'Dasturchilar kodi',
     icon: 'code',
@@ -162,8 +193,13 @@ const CATEGORIES: Category[] = [
 const activeCategory = ref<string>('basics')
 const activeLessonId = ref<string>('b1')
 const showLessonModal = ref<boolean>(false)
+const showSettingsModal = ref<boolean>(false)
 const customTextInput = ref<string>('')
 const isCustomMode = computed(() => activeCategory.value === 'custom')
+
+// Sound Theme: 'blue' | 'brown' | 'typewriter' | 'mute'
+const soundTheme = ref<string>('blue')
+const timeLimitMode = ref<number>(0) // 0 = unlimited, 30 = 30s, 60 = 60s
 
 const streamBoxRef = ref<HTMLElement | null>(null)
 
@@ -191,7 +227,8 @@ const startTime = ref<number | null>(null)
 const endTime = ref<number | null>(null)
 const errorCount = ref<number>(0)
 const totalKeystrokes = ref<number>(0)
-const soundEnabled = ref<boolean>(true)
+const currentStreak = ref<number>(0)
+const maxStreak = ref<number>(0)
 const showKeyboard = ref<boolean>(true)
 const pressedKey = ref<string | null>(null)
 
@@ -223,6 +260,15 @@ const accuracy = computed(() => {
 const progressPct = computed(() => {
   if (!targetText.value.length) return 0
   return Math.round((currentIndex.value / targetText.value.length) * 100)
+})
+
+const currentRank = computed(() => {
+  const speed = wpm.value
+  if (speed >= 75) return { title: 'Kiber Tezlik', badge: '⚡', color: '#af00db' }
+  if (speed >= 50) return { title: 'Pro Dasturchi', badge: '🚀', color: '#007acc' }
+  if (speed >= 35) return { title: 'Tezkor Yozuvchi', badge: '🥇', color: '#2e7d32' }
+  if (speed >= 20) return { title: 'Ilg\'or O\'quvchi', badge: '🥈', color: '#d19a66' }
+  return { title: 'Boshlovchi', badge: '🌱', color: '#8b8b8b' }
 })
 
 // Active character & needed finger
@@ -462,7 +508,7 @@ const initAudio = () => {
 }
 
 const playKeySound = (isError = false, isSpace = false) => {
-  if (!soundEnabled.value) return
+  if (soundTheme.value === 'mute') return
   initAudio()
   if (!audioCtx) return
 
@@ -476,18 +522,37 @@ const playKeySound = (isError = false, isSpace = false) => {
 
     if (isError) {
       osc.type = 'sawtooth'
-      osc.frequency.setValueAtTime(140, now)
-      osc.frequency.exponentialRampToValueAtTime(70, now + 0.12)
+      osc.frequency.setValueAtTime(130, now)
+      osc.frequency.exponentialRampToValueAtTime(65, now + 0.12)
       gain.gain.setValueAtTime(0.2, now)
       gain.gain.exponentialRampToValueAtTime(0.01, now + 0.12)
       osc.start(now)
       osc.stop(now + 0.12)
-    } else {
+    } else if (soundTheme.value === 'typewriter') {
+      // Typewriter vintage punch sound
+      osc.type = 'square'
+      osc.frequency.setValueAtTime(800, now)
+      osc.frequency.exponentialRampToValueAtTime(100, now + 0.035)
+      gain.gain.setValueAtTime(0.12, now)
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.035)
+      osc.start(now)
+      osc.stop(now + 0.035)
+    } else if (soundTheme.value === 'brown') {
+      // Cherry MX Brown - soft thock
       osc.type = 'sine'
-      const freq = isSpace ? 380 : 550 + Math.random() * 80
+      osc.frequency.setValueAtTime(isSpace ? 280 : 380, now)
+      osc.frequency.exponentialRampToValueAtTime(90, now + 0.045)
+      gain.gain.setValueAtTime(0.18, now)
+      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.045)
+      osc.start(now)
+      osc.stop(now + 0.045)
+    } else {
+      // Cherry MX Blue - crisp click
+      osc.type = 'triangle'
+      const freq = isSpace ? 420 : 620 + Math.random() * 80
       osc.frequency.setValueAtTime(freq, now)
-      osc.frequency.exponentialRampToValueAtTime(120, now + 0.04)
-      gain.gain.setValueAtTime(0.15, now)
+      osc.frequency.exponentialRampToValueAtTime(140, now + 0.04)
+      gain.gain.setValueAtTime(0.16, now)
       gain.gain.exponentialRampToValueAtTime(0.01, now + 0.04)
       osc.start(now)
       osc.stop(now + 0.04)
@@ -496,7 +561,7 @@ const playKeySound = (isError = false, isSpace = false) => {
 }
 
 const playVictorySound = () => {
-  if (!soundEnabled.value) return
+  if (soundTheme.value === 'mute') return
   initAudio()
   if (!audioCtx) return
 
@@ -531,6 +596,8 @@ const resetLesson = () => {
   endTime.value = null
   errorCount.value = 0
   totalKeystrokes.value = 0
+  currentStreak.value = 0
+  maxStreak.value = 0
   elapsedTimeSec.value = 0
   pressedKey.value = null
   if (streamBoxRef.value) {
@@ -555,7 +622,7 @@ const selectLesson = (lesId: string) => {
 
 // Key handler
 const handleKeyDown = (e: KeyboardEvent) => {
-  if (showLessonModal.value) return
+  if (showLessonModal.value || showSettingsModal.value) return
 
   if (['Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'Tab'].includes(e.key)) {
     pressedKey.value = e.key
@@ -574,6 +641,11 @@ const handleKeyDown = (e: KeyboardEvent) => {
     timerInterval = setInterval(() => {
       if (startTime.value) {
         elapsedTimeSec.value = Math.max(1, Math.round((Date.now() - startTime.value) / 1000))
+
+        // Time limit check
+        if (timeLimitMode.value > 0 && elapsedTimeSec.value >= timeLimitMode.value) {
+          finishLesson()
+        }
       }
     }, 500)
   }
@@ -588,6 +660,10 @@ const handleKeyDown = (e: KeyboardEvent) => {
   if (inputChar === expected) {
     charStatus.value[currentIndex.value] = 'correct'
     currentIndex.value++
+    currentStreak.value++
+    if (currentStreak.value > maxStreak.value) {
+      maxStreak.value = currentStreak.value
+    }
     playKeySound(false, inputChar === ' ')
 
     if (currentIndex.value >= targetText.value.length) {
@@ -595,11 +671,11 @@ const handleKeyDown = (e: KeyboardEvent) => {
     }
   } else {
     errorCount.value++
+    currentStreak.value = 0
     charStatus.value[currentIndex.value] = 'error'
     playKeySound(true)
   }
 
-  // Pure internal container scroll without affecting outer window/page
   nextTick(() => {
     if (streamBoxRef.value) {
       const activeEl = streamBoxRef.value.querySelector('.stamina-char.active') as HTMLElement
@@ -664,6 +740,115 @@ const starsCount = computed(() => {
   return 1
 })
 
+// --- Canvas Screenshot / Result Image Exporter ---
+const downloadResultImage = () => {
+  const canvas = document.createElement('canvas')
+  canvas.width = 1000
+  canvas.height = 620
+  const ctx = canvas.getContext('2d')
+  if (!ctx) return
+
+  // Background
+  const grad = ctx.createLinearGradient(0, 0, 1000, 620)
+  grad.addColorStop(0, '#161922')
+  grad.addColorStop(1, '#0e1117')
+  ctx.fillStyle = grad
+  ctx.fillRect(0, 0, 1000, 620)
+
+  // Glowing border
+  ctx.strokeStyle = '#007acc'
+  ctx.lineWidth = 4
+  ctx.strokeRect(16, 16, 968, 588)
+
+  // Header Title
+  ctx.fillStyle = '#4fc1ff'
+  ctx.font = 'bold 24px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+  ctx.fillText('MUHAMMAD AL-XORAZMIY VORISLARI', 50, 65)
+
+  ctx.fillStyle = '#8b8b8b'
+  ctx.font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+  ctx.fillText('AXV · Klaviatura Trenajyori Natijasi', 50, 95)
+
+  // Lesson Name
+  ctx.fillStyle = '#ffffff'
+  ctx.font = 'bold 26px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+  ctx.fillText(currentLesson.value.title, 50, 145)
+
+  // Big Highlight Stat Boxes
+  // Box 1: WPM
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.05)'
+  ctx.fillRect(50, 180, 270, 160)
+  ctx.strokeStyle = '#3c3c3c'
+  ctx.lineWidth = 1
+  ctx.strokeRect(50, 180, 270, 160)
+  ctx.fillStyle = '#58a6ff'
+  ctx.font = 'bold 64px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+  ctx.fillText(`${wpm.value}`, 75, 260)
+  ctx.fillStyle = '#8b8b8b'
+  ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+  ctx.fillText('TEZLIK (WPM - SO\'Z/DAQ)', 75, 305)
+
+  // Box 2: CPM
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.05)'
+  ctx.fillRect(360, 180, 270, 160)
+  ctx.strokeRect(360, 180, 270, 160)
+  ctx.fillStyle = '#4ec9b0'
+  ctx.font = 'bold 64px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+  ctx.fillText(`${cpm.value}`, 385, 260)
+  ctx.fillStyle = '#8b8b8b'
+  ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+  ctx.fillText('BELGI/DAQ (CPM)', 385, 305)
+
+  // Box 3: Accuracy
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.05)'
+  ctx.fillRect(670, 180, 270, 160)
+  ctx.strokeRect(670, 180, 270, 160)
+  ctx.fillStyle = '#89d185'
+  ctx.font = 'bold 64px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+  ctx.fillText(`${accuracy.value}%`, 695, 260)
+  ctx.fillStyle = '#8b8b8b'
+  ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+  ctx.fillText('ANIQLIK DARAJASI', 695, 305)
+
+  // Extra Stats Grid
+  const timeStr = `${Math.floor(elapsedTimeSec.value / 60)}:${(elapsedTimeSec.value % 60).toString().padStart(2, '0')}`
+  ctx.fillStyle = '#d4d4d4'
+  ctx.font = '20px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+  ctx.fillText(`⏱️ Vaqt: ${timeStr}`, 50, 395)
+  ctx.fillText(`❌ Xatolar: ${errorCount.value} ta`, 280, 395)
+  ctx.fillText(`🔥 Maksimal Streak: ${maxStreak.value}`, 510, 395)
+  ctx.fillText(`⌨️ Bosildi: ${totalKeystrokes.value}`, 750, 395)
+
+  // Rank Badge Card
+  ctx.fillStyle = 'rgba(0, 102, 184, 0.15)'
+  ctx.fillRect(50, 440, 890, 80)
+  ctx.strokeStyle = '#007acc'
+  ctx.strokeRect(50, 440, 890, 80)
+
+  ctx.fillStyle = currentRank.value.color
+  ctx.font = 'bold 28px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+  ctx.fillText(`${currentRank.value.badge} Daraja: ${currentRank.value.title}`, 80, 490)
+
+  // Stars
+  ctx.fillStyle = '#e5c07b'
+  ctx.font = 'bold 32px sans-serif'
+  const starsText = '★'.repeat(starsCount.value) + '☆'.repeat(3 - starsCount.value)
+  ctx.fillText(starsText, 760, 492)
+
+  // Footer Date & Domain
+  const dateStr = new Date().toLocaleDateString('uz-UZ', { year: 'numeric', month: 'long', day: 'numeric' })
+  ctx.fillStyle = '#6e7681'
+  ctx.font = '15px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
+  ctx.fillText(`📅 Sana: ${dateStr}`, 50, 565)
+  ctx.fillText('🌐 https://axvhub.uz/trenajyor/', 700, 565)
+
+  // Trigger Download
+  const link = document.createElement('a')
+  link.download = `axv-stamina-natija-${Date.now()}.png`
+  link.href = canvas.toDataURL('image/png')
+  link.click()
+}
+
 onMounted(() => {
   resetLesson()
   if (typeof window !== 'undefined') {
@@ -703,22 +888,17 @@ watch(() => currentLesson.value, () => {
 
           <!-- Quick Action Controls -->
           <div class="stamina-quick-actions">
-            <button
-              class="icon-btn"
-              :class="{ active: soundEnabled }"
-              @click="soundEnabled = !soundEnabled"
-              :title="soundEnabled ? 'Ovozni o\'chirish' : 'Ovozni yoqish'"
-            >
-              <Icon :name="soundEnabled ? 'volume-2' : 'volume-x'" />
+            <!-- Streak Flame indicator -->
+            <div v-if="currentStreak >= 10" class="streak-badge" title="Ketma-ket xatosiz belgilar">
+              🔥 {{ currentStreak }}
+            </div>
+
+            <!-- Settings Modal Button -->
+            <button class="icon-btn" @click="showSettingsModal = true" title="Sozlamalar va Ovoz">
+              <Icon name="settings" />
             </button>
-            <button
-              class="icon-btn"
-              :class="{ active: showKeyboard }"
-              @click="showKeyboard = !showKeyboard"
-              :title="showKeyboard ? 'Klaviaturani yashirish' : 'Klaviaturani ko\'rsatish'"
-            >
-              <Icon name="keyboard" />
-            </button>
+
+            <!-- Reset Button -->
             <button class="icon-btn" @click="resetLesson" title="Qayta boshlash">
               <Icon name="rotate-ccw" />
             </button>
@@ -888,6 +1068,108 @@ watch(() => currentLesson.value, () => {
       </div>
     </div>
 
+    <!-- SETTINGS MODAL (SOUND, TIMER & MODES) -->
+    <div v-if="showSettingsModal" class="stamina-modal-overlay" @click.self="showSettingsModal = false">
+      <div class="stamina-settings-modal">
+        <div class="slm-header">
+          <h2><Icon name="settings" /> Trenajyor sozlamalari</h2>
+          <button class="slm-close" @click="showSettingsModal = false">✕</button>
+        </div>
+
+        <div class="settings-body">
+          <!-- Sound Theme Selection -->
+          <div class="set-section">
+            <label class="set-title"><Icon name="volume-2" /> Klaviatura ovoz profili:</label>
+            <div class="set-chips">
+              <button
+                class="set-chip"
+                :class="{ active: soundTheme === 'blue' }"
+                @click="soundTheme = 'blue'; playKeySound()"
+              >
+                🔵 Cherry MX Blue (Jarangdor)
+              </button>
+              <button
+                class="set-chip"
+                :class="{ active: soundTheme === 'brown' }"
+                @click="soundTheme = 'brown'; playKeySound()"
+              >
+                🟤 Cherry MX Brown (Yumshoq)
+              </button>
+              <button
+                class="set-chip"
+                :class="{ active: soundTheme === 'typewriter' }"
+                @click="soundTheme = 'typewriter'; playKeySound()"
+              >
+                📟 Yozuv mashinkasi
+              </button>
+              <button
+                class="set-chip"
+                :class="{ active: soundTheme === 'mute' }"
+                @click="soundTheme = 'mute'"
+              >
+                🔇 Ovoz o'chirilgan
+              </button>
+            </div>
+          </div>
+
+          <!-- Time Limit Mode -->
+          <div class="set-section">
+            <label class="set-title"><Icon name="timer" /> Vaqt rejimi (Sprint):</label>
+            <div class="set-chips">
+              <button
+                class="set-chip"
+                :class="{ active: timeLimitMode === 0 }"
+                @click="timeLimitMode = 0; resetLesson()"
+              >
+                Cheksiz (Matn oxirigacha)
+              </button>
+              <button
+                class="set-chip"
+                :class="{ active: timeLimitMode === 30 }"
+                @click="timeLimitMode = 30; resetLesson()"
+              >
+                ⏱️ 30 soniya sprint
+              </button>
+              <button
+                class="set-chip"
+                :class="{ active: timeLimitMode === 60 }"
+                @click="timeLimitMode = 60; resetLesson()"
+              >
+                ⏱️ 60 soniya test
+              </button>
+            </div>
+          </div>
+
+          <!-- Virtual Keyboard Display Toggle -->
+          <div class="set-section">
+            <label class="set-title"><Icon name="keyboard" /> Virtual klaviatura:</label>
+            <div class="set-chips">
+              <button
+                class="set-chip"
+                :class="{ active: showKeyboard }"
+                @click="showKeyboard = true"
+              >
+                Ko'rsatish
+              </button>
+              <button
+                class="set-chip"
+                :class="{ active: !showKeyboard }"
+                @click="showKeyboard = false"
+              >
+                Yashirish (Faqat matn)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="set-footer">
+          <button class="btn btn-primary" @click="showSettingsModal = false">
+            <Icon name="check" /> Saqlash va yopish
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- RESULTS MODAL -->
     <div v-if="isFinished" class="stamina-modal-overlay">
       <div class="stamina-modal">
@@ -896,6 +1178,9 @@ watch(() => currentLesson.value, () => {
             <span v-for="s in 3" :key="s" class="star" :class="{ filled: s <= starsCount }">★</span>
           </div>
           <h2>Mashq yakunlandi!</h2>
+          <div class="sm-rank-pill" :style="{ borderColor: currentRank.color, color: currentRank.color }">
+            {{ currentRank.badge }} {{ currentRank.title }}
+          </div>
           <p class="sm-sub">
             {{ starsCount === 3 ? 'Ajoyib natija! Professional tezlik.' : starsCount === 2 ? 'Juda yaxshi! Tezlikni oshirishda davom eting.' : 'Yaxshi boshlanish! Ko\'proq mashq qiling.' }}
           </p>
@@ -923,16 +1208,19 @@ watch(() => currentLesson.value, () => {
             <span class="sm-val">{{ errorCount }}</span>
           </div>
           <div class="sm-stat">
-            <span class="sm-lbl">Jami tugmalar</span>
-            <span class="sm-val">{{ totalKeystrokes }}</span>
+            <span class="sm-lbl">Maksimal Combo</span>
+            <span class="sm-val" style="color: #d19a66;">🔥 {{ maxStreak }}</span>
           </div>
         </div>
 
         <div class="sm-actions">
-          <button class="btn btn-ghost btn-lg" @click="resetLesson">
-            <Icon name="rotate-ccw" /> Qaytadan urinish
+          <button class="btn btn-ghost" @click="resetLesson">
+            <Icon name="rotate-ccw" /> Qaytadan
           </button>
-          <button class="btn btn-primary btn-lg" @click="nextLesson">
+          <button class="btn btn-ghost" @click="downloadResultImage" title="Natijani rasm qilib yuklab olish">
+            <Icon name="camera" /> Rasm qilib yuklash
+          </button>
+          <button class="btn btn-primary" @click="nextLesson">
             Keyingi bosqich <Icon name="arrow-right" />
           </button>
         </div>
@@ -1028,6 +1316,23 @@ watch(() => currentLesson.value, () => {
   gap: 8px;
 }
 
+.streak-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 8px;
+  background: rgba(209, 154, 102, 0.2);
+  color: #d19a66;
+  font-weight: 800;
+  font-size: 0.95rem;
+  animation: pulseFire 0.8s infinite alternate;
+}
+
+@keyframes pulseFire {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
 .icon-btn {
   display: inline-flex;
   align-items: center;
@@ -1044,12 +1349,6 @@ watch(() => currentLesson.value, () => {
 }
 
 .icon-btn:hover {
-  border-color: var(--vp-c-brand-1);
-  color: var(--vp-c-brand-1);
-}
-
-.icon-btn.active {
-  background: var(--vp-c-brand-soft);
   border-color: var(--vp-c-brand-1);
   color: var(--vp-c-brand-1);
 }
@@ -1219,7 +1518,7 @@ watch(() => currentLesson.value, () => {
   height: clamp(38px, 4.6vh, 44px);
   box-sizing: border-box;
   font-size: clamp(0.88rem, 1vw, 1rem);
-  margin-bottom: clamp(6px, 1.2vh, 14px); /* Extra distance to give space for keyboard */
+  margin-bottom: clamp(6px, 1.2vh, 14px);
   flex-shrink: 0;
 }
 
@@ -1333,7 +1632,7 @@ watch(() => currentLesson.value, () => {
   filter: brightness(1.15);
 }
 
-/* LESSON SELECTOR MODAL */
+/* MODALS */
 .stamina-modal-overlay {
   position: fixed;
   inset: 0;
@@ -1346,7 +1645,7 @@ watch(() => currentLesson.value, () => {
   padding: 16px;
 }
 
-.stamina-lesson-modal {
+.stamina-lesson-modal, .stamina-settings-modal {
   background: var(--vp-c-bg);
   border: 1px solid var(--ax-line);
   border-radius: 20px;
@@ -1510,13 +1809,72 @@ watch(() => currentLesson.value, () => {
   font-size: 1rem;
 }
 
+/* SETTINGS MODAL */
+.settings-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.set-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.set-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--vp-c-text-1);
+}
+
+.set-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.set-chip {
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: var(--ax-card);
+  border: 1px solid var(--ax-line);
+  color: var(--vp-c-text-2);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.set-chip:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-text-1);
+}
+
+.set-chip.active {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+}
+
+.set-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--ax-line);
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* RESULTS MODAL */
 .stamina-modal {
   background: var(--vp-c-bg);
   border: 1px solid var(--ax-line);
   border-radius: 22px;
   padding: 32px;
-  max-width: 500px;
+  max-width: 520px;
   width: 100%;
   text-align: center;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
@@ -1544,9 +1902,19 @@ watch(() => currentLesson.value, () => {
   margin: 0 0 4px;
 }
 
+.sm-rank-pill {
+  display: inline-block;
+  font-weight: 800;
+  font-size: 0.95rem;
+  border: 1.5px solid currentColor;
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin: 6px 0 10px;
+}
+
 .sm-sub {
   color: var(--vp-c-text-2);
-  margin: 0 0 20px;
+  margin: 0 0 16px;
   font-size: 0.95rem;
 }
 
@@ -1584,7 +1952,7 @@ watch(() => currentLesson.value, () => {
 .sm-actions {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 

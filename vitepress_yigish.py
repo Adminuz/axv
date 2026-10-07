@@ -178,7 +178,8 @@ BADGE = {"easy": "tip", "mid": "warning", "hard": "danger", "bonus": "info"}
 UI_ICONS = ["play", "layers", "chevron-right", "chevron-left", "lock", "calendar-days", "timer", "house",
             "list-checks", "book-open", "languages", "sparkles", "clipboard-list", "circle-question-mark",
             "file-text", "presentation", "arrow-right", "arrow-left", "graduation-cap",
-            "keyboard", "volume-2", "volume-x", "rotate-ccw", "zap", "gauge", "target", "code"]
+            "keyboard", "volume-2", "volume-x", "rotate-ccw", "zap", "gauge", "target", "code",
+            "settings", "camera", "download", "check"]
 
 
 def esc_text(line):
