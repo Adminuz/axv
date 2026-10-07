@@ -5,6 +5,7 @@ import Icon from './Icon.vue'
 import Crumbs from './Crumbs.vue'
 import TypingTrainer from './TypingTrainer.vue'
 import FoundationLab from './FoundationLab.vue'
+import GlossaryExplorer from './GlossaryExplorer.vue'
 
 const { frontmatter } = useData()
 const kind = computed(() => frontmatter.value.kind)
@@ -22,6 +23,9 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
   <!-- CS LABORATORIYA -->
   <FoundationLab v-else-if="kind === 'foundation'" />
 
+  <!-- IT GLOSSARIY VA CHEAT-SHEET -->
+  <GlossaryExplorer v-else-if="kind === 'glossariy'" />
+
   <!-- BOSH SAHIFA / MENTOR BOSH SAHIFA -->
   <div v-else-if="kind === 'home' || kind === 'mentor_home'" class="axv">
     <Crumbs v-if="kind === 'mentor_home'" :items="[{ t: 'Bosh sahifa', l: '/' }, { t: 'Mentor bo\'limi' }]" />
@@ -31,27 +35,6 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
       <p class="tag">{{ home.tag }}</p>
       <p class="tag2">{{ home.tag2 }}</p>
     </section>
-
-    <!-- INTERAKTIV TRENAJYORLAR VA LABORATORIYALAR -->
-    <div v-if="kind === 'home'" class="interactive-tools-banner">
-      <a :href="withBase('/trenajyor/')" class="tool-banner-card">
-        <span class="tbc-icon"><Icon name="keyboard" /></span>
-        <div class="tbc-text">
-          <h3>Klaviatura trenajyori</h3>
-          <p>10 barmoq bilan tez va xatosiz yozishni o'rganing (ovoz profillari, WPM tezlik va yutuqlar)</p>
-        </div>
-        <span class="tbc-arrow"><Icon name="arrow-right" /></span>
-      </a>
-
-      <a :href="withBase('/foundation/')" class="tool-banner-card lab">
-        <span class="tbc-icon"><Icon name="binary" /></span>
-        <div class="tbc-text">
-          <h3>CS Laboratoriya</h3>
-          <p>7 ta interaktiv modul: Ikkilik sanoq, mantiqiy darvozalar, xotira, algoritmlar, saralash va kriptografiya</p>
-        </div>
-        <span class="tbc-arrow"><Icon name="arrow-right" /></span>
-      </a>
-    </div>
 
     <h2 class="sec-title">{{ kind === 'mentor_home' ? 'Sinfni tanlang (Mentor rejasi)' : 'Sinfingizni tanlang' }}</h2>
     <div class="tiles">

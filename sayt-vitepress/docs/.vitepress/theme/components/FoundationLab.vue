@@ -5,7 +5,7 @@ import Icon from './Icon.vue'
 import Crumbs from './Crumbs.vue'
 
 // --- Active Tab State ---
-// 'binary' | 'logic' | 'memory' | 'flowchart' | 'hardware' | 'sorting' | 'crypto'
+// 'binary' | 'logic' | 'memory' | 'flowchart' | 'hardware' | 'sorting' | 'datastruct' | 'networking' | 'crypto'
 const activeTab = ref<string>('binary')
 
 // ==========================================
@@ -403,7 +403,7 @@ const sortArray = ref<{ val: number; state: 'default' | 'comparing' | 'swapping'
 const sortComparisons = ref<number>(0)
 const sortSwaps = ref<number>(0)
 const sortIsRunning = ref<boolean>(false)
-const sortSpeedMs = ref<number>(200) // 400 = slow, 200 = normal, 60 = fast
+const sortSpeedMs = ref<number>(200)
 const sortExplanation = ref<string>('')
 const searchTargetVal = ref<number>(45)
 let sortTimer: any = null
@@ -567,9 +567,146 @@ watch(sortAlgorithm, () => {
 })
 
 // ==========================================
-// 7. KIBERXAVFSIZLIK & KRIPTOGRAFIYA (CYBER)
+// 7. MA'LUMOTLAR TUZILMALARI (DATA STRUCTURES)
 // ==========================================
-// Caesar Cipher
+const dsMode = ref<'stack' | 'queue' | 'linked_list'>('stack')
+
+// Stack (LIFO)
+const stackItems = ref<number[]>([10, 25, 42])
+const stackInputValue = ref<number>(55)
+const stackLog = ref<string>('Stack tayyor (LIFO: Last In, First Out).')
+
+const stackPush = () => {
+  if (stackItems.value.length >= 7) {
+    stackLog.value = '⚠️ Stack Overflow (Xotira to\'ldi! Maksimal 7 ta element).'
+    return
+  }
+  const val = stackInputValue.value || Math.floor(Math.random() * 90) + 10
+  stackItems.value.push(val)
+  stackLog.value = `push(${val}) — ${val} stak tepasiga qo'shildi.`
+  stackInputValue.value = Math.floor(Math.random() * 90) + 10
+}
+
+const stackPop = () => {
+  if (stackItems.value.length === 0) {
+    stackLog.value = '⚠️ Stack Underflow (Stak bo\'sh! O\'chirish mumkin emas).'
+    return
+  }
+  const popped = stackItems.value.pop()
+  stackLog.value = `pop() -> ${popped} stak tepasidan olindi va o'chirildi.`
+}
+
+// Queue (FIFO)
+const queueItems = ref<number[]>([14, 28, 63])
+const queueInputValue = ref<number>(77)
+const queueLog = ref<string>('Queue tayyor (FIFO: First In, First Out).')
+
+const queueEnqueue = () => {
+  if (queueItems.value.length >= 7) {
+    queueLog.value = '⚠️ Queue Full (Navbat to\'ldi!).'
+    return
+  }
+  const val = queueInputValue.value || Math.floor(Math.random() * 90) + 10
+  queueItems.value.push(val)
+  queueLog.value = `enqueue(${val}) — ${val} navbat oxiriga (Rear) qo'shildi.`
+  queueInputValue.value = Math.floor(Math.random() * 90) + 10
+}
+
+const queueDequeue = () => {
+  if (queueItems.value.length === 0) {
+    queueLog.value = '⚠️ Queue Empty (Navbat bo\'sh).'
+    return
+  }
+  const dequeued = queueItems.value.shift()
+  queueLog.value = `dequeue() -> ${dequeued} navbat boshidan (Front) xizmat ko'rsatilib chiqdi.`
+}
+
+// Linked List
+interface LLNode {
+  id: string
+  val: number
+}
+const listNodes = ref<LLNode[]>([
+  { id: 'n1', val: 12 },
+  { id: 'n2', val: 34 },
+  { id: 'n3', val: 56 }
+])
+const listInputValue = ref<number>(88)
+const listLog = ref<string>('Zanjirli ro\'yxat: har bir tugun (Node) qiymat va keyingi ko\'rsatkichni saqlaydi.')
+
+const listAppend = () => {
+  if (listNodes.value.length >= 6) return
+  const val = listInputValue.value || Math.floor(Math.random() * 90) + 10
+  listNodes.value.push({ id: 'n' + (Date.now() % 1000), val })
+  listLog.value = `append(${val}) — Yangi tugun oxiriga ulandi.`
+  listInputValue.value = Math.floor(Math.random() * 90) + 10
+}
+
+const listPrepend = () => {
+  if (listNodes.value.length >= 6) return
+  const val = listInputValue.value || Math.floor(Math.random() * 90) + 10
+  listNodes.value.unshift({ id: 'n' + (Date.now() % 1000), val })
+  listLog.value = `prepend(${val}) — Yangi tugun boshiga ulandi (HEAD o'zgardi).`
+  listInputValue.value = Math.floor(Math.random() * 90) + 10
+}
+
+const listDeleteNode = (idx: number) => {
+  const removed = listNodes.value.splice(idx, 1)
+  listLog.value = `deleteNode — ${removed[0]?.val} qiymatli tugun o'chirildi va pointerlar qayta ulandi.`
+}
+
+// ==========================================
+// 8. TARMOQ VA INTERNET (NETWORKING & WEB)
+// ==========================================
+const netTab = ref<'packets' | 'ports_dns'>('packets')
+
+// Packet simulation
+const packetStep = ref<number>(0)
+const packetIsRunning = ref<boolean>(false)
+const selectedStatusCode = ref<number>(200)
+
+const PACKET_STEPS = [
+  { id: 'client_req', title: '1. Foydalanuvchi so\'rovi (Client)', desc: 'Brauzer URL manzilni kiritdi: GET https://axvhub.uz/api/lessons', node: 'client' },
+  { id: 'dns_lookup', title: '2. DNS So\'rovi (DNS Lookup)', desc: 'DNS Server axvhub.uz domeniga mos IP manzilni aniqladi: 142.250.185.78', node: 'dns' },
+  { id: 'router_hop', title: '3. Router va Shlyuz (Routing)', desc: 'Tarmoq paketi routerlar orqali server joylashgan Data-markazga yo\'naltirildi.', node: 'router' },
+  { id: 'server_proc', title: '4. Web Server (Back-end)', desc: 'FastAPI/Nginx server so\'rovni qabul qildi, marshrut va xavfsizlikni tekshirdi.', node: 'server' },
+  { id: 'db_query', title: '5. Ma\'lumotlar bazasi (Database)', desc: 'SELECT * FROM lessons WHERE active=true so\'rovi bajarildi va natija qaytdi.', node: 'db' },
+  { id: 'server_resp', title: '6. Server javobi (HTTP Response)', desc: 'Server JSON ma\'lumotni tayyorlab, HTTP 200 OK paketi bilan qaytardi.', node: 'server' },
+  { id: 'client_render', title: '7. Ekranga chizish (Rendering)', desc: 'Brauzer JSON ma\'lumotni qabul qildi va chiroyli Vue interfeysida ko\'rsatdi!', node: 'client' }
+]
+
+const startPacketSimulation = async () => {
+  if (packetIsRunning.value) return
+  packetIsRunning.value = true
+  for (let i = 0; i < PACKET_STEPS.length; i++) {
+    packetStep.value = i
+    await sleep(1100)
+  }
+  packetIsRunning.value = false
+}
+
+// Ports & DNS Data
+const COMMON_PORTS = [
+  { port: 80, proto: 'HTTP', name: 'Web Server (Shifrlanmagan)', desc: 'Standart veb-sahifalarni ochish uchun asosiy port.' },
+  { port: 443, proto: 'HTTPS', name: 'Xavfsiz Web Server (SSL/TLS)', desc: 'Shifrlangan barcha xavfsiz zamonaviy veb-saytlar porti.' },
+  { port: 22, proto: 'SSH', name: 'Xavfsiz Masofaviy Boshqaruv', desc: 'Serverga terminal orqali xavfsiz ulanish va boshqarish.' },
+  { port: 3306, proto: 'MySQL', name: 'MySQL / MariaDB Ma\'lumotlar bazasi', desc: 'Relyatsion ma\'lumotlar bazasi standart porti.' },
+  { port: 5432, proto: 'PostgreSQL', name: 'PostgreSQL Ma\'lumotlar bazasi', desc: 'Katta loyihalar uchun ilg\'or SQL ma\'lumotlar bazasi.' },
+  { port: 8080, proto: 'HTTP Dev', name: 'Lokal Dasturlash Serveri', desc: 'Dasturchilar kompyuterida (localhost) sinov uchun server.' }
+]
+
+const dnsDomainInput = ref<string>('axvhub.uz')
+const dnsResult = computed(() => {
+  const d = dnsDomainInput.value.toLowerCase().trim()
+  if (d.includes('google')) return { ip: '142.250.185.78', type: 'A Record', ttl: '300s', isp: 'Google LLC (USA)' }
+  if (d.includes('kun.uz')) return { ip: '185.196.214.50', type: 'A Record', ttl: '3600s', isp: 'UzCloud / TAS-IX' }
+  if (d.includes('github')) return { ip: '140.82.121.4', type: 'A Record', ttl: '60s', isp: 'GitHub Inc.' }
+  return { ip: '172.67.182.204', type: 'A Record', ttl: '300s', isp: 'Cloudflare Anycast DNS' }
+})
+
+// ==========================================
+// 9. KIBERXAVFSIZLIK & KRIPTOGRAFIYA (CYBER)
+// ==========================================
 const caesarText = ref<string>('AXV MENTOR 2026')
 const caesarShift = ref<number>(3)
 
@@ -590,7 +727,6 @@ const caesarEncrypted = computed(() => {
   return res
 })
 
-// Base64 Converter
 const base64Input = ref<string>('Salom')
 const base64Output = computed(() => {
   try {
@@ -601,7 +737,7 @@ const base64Output = computed(() => {
 })
 
 const base64BinaryBreakdown = computed(() => {
-  const str = base64Input.value.slice(0, 4) // show first 4 chars
+  const str = base64Input.value.slice(0, 4)
   return str.split('').map(ch => {
     const code = ch.charCodeAt(0)
     return {
@@ -612,7 +748,6 @@ const base64BinaryBreakdown = computed(() => {
   })
 })
 
-// Password Strength Analyzer
 const testPassword = ref<string>('P@ssw0rd2026!')
 const passwordStats = computed(() => {
   const p = testPassword.value
@@ -696,7 +831,7 @@ onUnmounted(() => {
         </p>
       </div>
 
-      <!-- TAB NAVIGATION (7 CORE MODULES) -->
+      <!-- TAB NAVIGATION -->
       <nav class="foundation-tabs" aria-label="Laboratoriya bo'limlari">
         <button class="f-tab" :class="{ active: activeTab === 'binary' }" @click="activeTab = 'binary'">
           <Icon name="binary" /> Ikkilik sanoq
@@ -715,6 +850,12 @@ onUnmounted(() => {
         </button>
         <button class="f-tab" :class="{ active: activeTab === 'sorting' }" @click="activeTab = 'sorting'">
           <Icon name="layers" /> Saralash & Qidiruv
+        </button>
+        <button class="f-tab" :class="{ active: activeTab === 'datastruct' }" @click="activeTab = 'datastruct'">
+          <Icon name="layers" /> Tuzilmalar (Stack/Queue)
+        </button>
+        <button class="f-tab" :class="{ active: activeTab === 'networking' }" @click="activeTab = 'networking'">
+          <Icon name="globe" /> Tarmoq & Internet
         </button>
         <button class="f-tab" :class="{ active: activeTab === 'crypto' }" @click="activeTab = 'crypto'">
           <Icon name="shield" /> Kripto & Xavfsizlik
@@ -736,7 +877,6 @@ onUnmounted(() => {
         </button>
       </div>
 
-      <!-- 8-Bit Interactive Switchboard -->
       <div class="bit-board">
         <div
           v-for="(bit, idx) in bits"
@@ -754,7 +894,6 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Live Calculation & Encodings -->
       <div class="calc-grid">
         <div class="calc-box highlight">
           <span class="cb-label">O'nlik sanoq (Decimal, 10-lik)</span>
@@ -786,7 +925,6 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Quick Preset Buttons -->
       <div class="presets-row">
         <span class="pr-label">Tezkor namunalar:</span>
         <button class="pr-btn" @click="setDecimal(1)">1 (Faqat oxirgi bit)</button>
@@ -796,7 +934,6 @@ onUnmounted(() => {
         <button class="pr-btn" @click="setDecimal(255)">255 (Barchasi 1)</button>
       </div>
 
-      <!-- Binary Challenge Game -->
       <div class="game-section">
         <div class="game-head">
           <div>
@@ -844,7 +981,6 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Gate Selector -->
       <div class="gate-selector">
         <button
           v-for="g in ['AND', 'OR', 'NOT', 'XOR', 'NAND', 'NOR']"
@@ -857,7 +993,6 @@ onUnmounted(() => {
         </button>
       </div>
 
-      <!-- Interactive Circuit Simulation -->
       <div class="circuit-area">
         <div class="circuit-inputs">
           <div class="sw-wrapper">
@@ -885,7 +1020,6 @@ onUnmounted(() => {
           </div>
         </div>
 
-        <!-- Visual Gate Diagram -->
         <div class="gate-visual">
           <div class="gv-box">
             <span class="gv-title">{{ gateType }}</span>
@@ -894,7 +1028,6 @@ onUnmounted(() => {
           <div class="gv-wire" :class="{ live: gateOutput === 1 }"></div>
         </div>
 
-        <!-- Output Indicator (Bulb) -->
         <div class="circuit-output">
           <span class="out-label">Natija (Chiqish)</span>
           <div class="bulb-box" :class="{ on: gateOutput === 1 }">
@@ -906,7 +1039,6 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Logic Explanation & Python code -->
       <div class="gate-info-grid">
         <div class="gi-box">
           <h4>Qoida va formula:</h4>
@@ -920,7 +1052,6 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Truth Table -->
       <div class="truth-table-card">
         <h3>Rostlik jadvali (Truth Table)</h3>
         <table class="truth-table">
@@ -962,7 +1093,6 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Input Converter -->
       <div class="memory-input-row">
         <div class="mi-field">
           <label>Qiymatni kiriting:</label>
@@ -990,7 +1120,6 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Converted Values Grid -->
       <div class="units-grid">
         <div v-for="unit in formattedMemoryUnits" :key="unit.id" class="unit-card">
           <span class="uc-name">{{ unit.name }}</span>
@@ -998,7 +1127,6 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Memory Ladder Hierarchy -->
       <div class="ladder-card">
         <h3>Xotira narvoni (1024 qoidasi)</h3>
         <div class="ladder-steps">
@@ -1010,7 +1138,6 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Real World Analogies -->
       <div class="analogies-card">
         <h3>Hayotiy misollarda bu qancha?</h3>
         <p class="an-sub">Kiritilgan <b>{{ inputMemoryValue }} {{ selectedMemoryUnit }}</b> hajmga taxminan quyidagilar sig'adi:</p>
@@ -1045,7 +1172,6 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Algorithm Type Selector -->
       <div class="algo-type-tabs">
         <button
           v-for="a in ALGORITHMS"
@@ -1059,7 +1185,6 @@ onUnmounted(() => {
       </div>
 
       <div class="algo-main-grid">
-        <!-- Visual Flowchart Box -->
         <div class="flowchart-box">
           <div class="fc-header">
             <h4>Blok-sxema ko'rinishi</h4>
@@ -1086,7 +1211,6 @@ onUnmounted(() => {
           </div>
         </div>
 
-        <!-- Python Code & Variables Inspector -->
         <div class="algo-details-col">
           <div class="adc-card">
             <h4>Mos keluvchi Python kodi:</h4>
@@ -1131,7 +1255,6 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Parts Navigation -->
       <div class="hardware-nav">
         <button
           v-for="part in HARDWARE_PARTS"
@@ -1145,7 +1268,6 @@ onUnmounted(() => {
         </button>
       </div>
 
-      <!-- Selected Part Interactive Showcase -->
       <div class="part-showcase">
         <div class="ps-header">
           <div class="ps-badge"><Icon :name="currentHardware.icon" /> {{ currentHardware.name }}</div>
@@ -1194,7 +1316,6 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Controls Row -->
       <div class="sort-controls">
         <div class="sc-group">
           <label>Algoritm:</label>
@@ -1216,7 +1337,6 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Live Bar Visualizer -->
       <div class="bars-container">
         <div
           v-for="(item, idx) in sortArray"
@@ -1230,7 +1350,6 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Explanation & Metrics -->
       <div class="sort-status-bar">
         <div class="ss-stats">
           <span class="ss-pill">Taqqoslashlar: <b>{{ sortComparisons }}</b></span>
@@ -1242,7 +1361,247 @@ onUnmounted(() => {
     </section>
 
     <!-- ========================================== -->
-    <!-- TAB 7: KIBERXAVFSIZLIK & KRIPTO (CRYPTO)   -->
+    <!-- TAB 7: MA'LUMOTLAR TUZILMALARI (DATA STRUCT) -->
+    <!-- ========================================== -->
+    <section v-if="activeTab === 'datastruct'" class="lab-card">
+      <div class="card-head">
+        <div>
+          <h2><Icon name="layers" /> Ma'lumotlar tuzilmalari (Data Structures)</h2>
+          <p>Stack (LIFO), Queue (FIFO) va Linked List tuzilmalarining amaliy ishlash tamoyillari.</p>
+        </div>
+      </div>
+
+      <!-- Structure Mode Selector -->
+      <div class="ds-nav">
+        <button class="ds-tab-btn" :class="{ active: dsMode === 'stack' }" @click="dsMode = 'stack'">
+          📚 Stack (LIFO)
+        </button>
+        <button class="ds-tab-btn" :class="{ active: dsMode === 'queue' }" @click="dsMode = 'queue'">
+          🚶 Queue (FIFO)
+        </button>
+        <button class="ds-tab-btn" :class="{ active: dsMode === 'linked_list' }" @click="dsMode = 'linked_list'">
+          🔗 Zanjirli Ro'yxat (Linked List)
+        </button>
+      </div>
+
+      <!-- 1. STACK SIMULATOR -->
+      <div v-if="dsMode === 'stack'" class="ds-module">
+        <div class="ds-controls">
+          <div class="ds-input-group">
+            <input type="number" v-model.number="stackInputValue" class="mem-input-sm" placeholder="Son..." />
+            <button class="btn btn-primary btn-sm" @click="stackPush">push() Qo'shish</button>
+            <button class="btn btn-warning btn-sm" @click="stackPop">pop() O'chirish</button>
+          </div>
+          <div class="ds-pill">Prinsip: <b>LIFO (Last In, First Out)</b> — Eng oxirgi kirgan birinchi chiqadi</div>
+        </div>
+
+        <div class="stack-visual-wrapper">
+          <div class="stack-cup">
+            <div v-if="stackItems.length === 0" class="empty-placeholder">Stak bo'sh</div>
+            <div
+              v-for="(item, idx) in [...stackItems].reverse()"
+              :key="idx"
+              class="stack-block"
+              :class="{ top: idx === 0 }"
+            >
+              <span class="sb-val">{{ item }}</span>
+              <span v-if="idx === 0" class="sb-top-tag">◀ TOP (Tepa)</span>
+            </div>
+          </div>
+          <div class="ds-explanation">
+            <h4>Hayotiy misol:</h4>
+            <p>🥞 Likopchalar yoki kitoblar taxlami: yangisi ustiga qo'yiladi, olishda esa eng tepadagisi olinadi.</p>
+            <p><b>Dasturlashda:</b> Brauzerdagi "Orqaga" (Back) tugmasi, Matn muharriridagi "Undo / Ctrl+Z", Rekursiv funksiyalar chaqiruvi (Call Stack).</p>
+          </div>
+        </div>
+        <div class="ds-log-bar">Jurnal: <code>{{ stackLog }}</code></div>
+      </div>
+
+      <!-- 2. QUEUE SIMULATOR -->
+      <div v-if="dsMode === 'queue'" class="ds-module">
+        <div class="ds-controls">
+          <div class="ds-input-group">
+            <input type="number" v-model.number="queueInputValue" class="mem-input-sm" placeholder="Son..." />
+            <button class="btn btn-primary btn-sm" @click="queueEnqueue">enqueue() Qo'shish</button>
+            <button class="btn btn-warning btn-sm" @click="queueDequeue">dequeue() O'chirish</button>
+          </div>
+          <div class="ds-pill">Prinsip: <b>FIFO (First In, First Out)</b> — Birinchi kelgan birinchi chiqadi</div>
+        </div>
+
+        <div class="queue-visual-wrapper">
+          <div class="queue-lane">
+            <div class="ql-label front">Chiqish (Front) ➔</div>
+            <div class="ql-items">
+              <div v-if="queueItems.length === 0" class="empty-placeholder">Navbat bo'sh</div>
+              <div
+                v-for="(item, idx) in queueItems"
+                :key="idx"
+                class="queue-block"
+                :class="{ front: idx === 0, rear: idx === queueItems.length - 1 }"
+              >
+                <span class="qb-val">{{ item }}</span>
+                <span class="qb-idx">{{ idx === 0 ? 'Front' : idx === queueItems.length - 1 ? 'Rear' : '' }}</span>
+              </div>
+            </div>
+            <div class="ql-label rear">➔ Kirish (Rear)</div>
+          </div>
+          <div class="ds-explanation">
+            <h4>Hayotiy misol:</h4>
+            <p>🚶 Kassadagi yoki do'kondagi navbat: birinchi kelgan odam birinchi xarid qiladi.</p>
+            <p><b>Dasturlashda:</b> Printer chop etish navbati, Serverdagi so'rovlar navbati (Message Queue, RabbitMQ), O'yinlardagi voqealar navbati.</p>
+          </div>
+        </div>
+        <div class="ds-log-bar">Jurnal: <code>{{ queueLog }}</code></div>
+      </div>
+
+      <!-- 3. LINKED LIST SIMULATOR -->
+      <div v-if="dsMode === 'linked_list'" class="ds-module">
+        <div class="ds-controls">
+          <div class="ds-input-group">
+            <input type="number" v-model.number="listInputValue" class="mem-input-sm" placeholder="Son..." />
+            <button class="btn btn-primary btn-sm" @click="listAppend">+ Oxiriga (Append)</button>
+            <button class="btn btn-ghost btn-sm" @click="listPrepend">+ Boshiga (Prepend)</button>
+          </div>
+          <div class="ds-pill">Xususiyati: <b>Tugunlar (Nodes)</b> xotirada tarqoq joylashib, pointer bilan ulanadi</div>
+        </div>
+
+        <div class="list-visual-wrapper">
+          <div class="nodes-chain">
+            <div class="head-marker">HEAD ➔</div>
+            <div v-for="(n, idx) in listNodes" :key="n.id" class="node-item">
+              <div class="node-box">
+                <div class="nb-data">{{ n.val }}</div>
+                <div class="nb-ptr">Next •</div>
+                <button class="nb-del" @click="listDeleteNode(idx)" title="O'chirish">✕</button>
+              </div>
+              <div class="node-arrow">➔</div>
+            </div>
+            <div class="null-marker">NULL (Tamom)</div>
+          </div>
+          <div class="ds-explanation">
+            <h4>Afzalligi va farqi:</h4>
+            <p>Massiv (Array) dan farqli ravishda, Linked List xotiradan ketma-ket joy talab qilmaydi. Boshiga yangi element qo'shish juda tez $O(1)$ amalga oshadi.</p>
+          </div>
+        </div>
+        <div class="ds-log-bar">Jurnal: <code>{{ listLog }}</code></div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 8: TARMOQ VA INTERNET (NETWORKING)    -->
+    <!-- ========================================== -->
+    <section v-if="activeTab === 'networking'" class="lab-card">
+      <div class="card-head">
+        <div>
+          <h2><Icon name="globe" /> Tarmoq va Internet simulyatori</h2>
+          <p>Ma'lumot paketlarining yo'li (Client ➔ Server ➔ Database) hamda IP, Port va DNS tushunchalari.</p>
+        </div>
+      </div>
+
+      <!-- Net Sub Tabs -->
+      <div class="ds-nav">
+        <button class="ds-tab-btn" :class="{ active: netTab === 'packets' }" @click="netTab = 'packets'">
+          📡 Paketlar Harakati Simulyatori
+        </button>
+        <button class="ds-tab-btn" :class="{ active: netTab === 'ports_dns' }" @click="netTab = 'ports_dns'">
+          🌐 IP, Portlar va DNS Katalogi
+        </button>
+      </div>
+
+      <!-- 1. PACKET FLOW SIMULATOR -->
+      <div v-if="netTab === 'packets'" class="packet-sim-module">
+        <div class="ps-ctrl-row">
+          <div class="ps-url-box">
+            <span class="ps-method">GET</span>
+            <span class="ps-url">https://axvhub.uz/api/v1/lessons</span>
+          </div>
+          <button
+            class="btn btn-primary"
+            :disabled="packetIsRunning"
+            @click="startPacketSimulation"
+          >
+            <Icon name="play" /> {{ packetIsRunning ? 'Paket harakatlanmoqda...' : 'So\'rovni yuborish' }}
+          </button>
+        </div>
+
+        <!-- Animated Network Graph -->
+        <div class="net-graph-grid">
+          <div class="net-node" :class="{ active: PACKET_STEPS[packetStep]?.node === 'client' }">
+            <span class="nn-icon">💻</span>
+            <div class="nn-title">Mijoz (Client)</div>
+            <div class="nn-sub">Brauzer / Mobil ilova</div>
+          </div>
+          <div class="net-edge" :class="{ live: packetStep >= 1 && packetStep <= 6 }">
+            <span class="edge-packet" v-if="packetIsRunning">📦 HTTP</span>
+            ➔
+          </div>
+          <div class="net-node" :class="{ active: PACKET_STEPS[packetStep]?.node === 'dns' || PACKET_STEPS[packetStep]?.node === 'router' }">
+            <span class="nn-icon">🌐</span>
+            <div class="nn-title">DNS & Router</div>
+            <div class="nn-sub">Yo'naltirish & IP</div>
+          </div>
+          <div class="net-edge" :class="{ live: packetStep >= 3 && packetStep <= 5 }">
+            ➔
+          </div>
+          <div class="net-node" :class="{ active: PACKET_STEPS[packetStep]?.node === 'server' }">
+            <span class="nn-icon">🖥️</span>
+            <div class="nn-title">Web Server</div>
+            <div class="nn-sub">FastAPI / Nginx</div>
+          </div>
+          <div class="net-edge" :class="{ live: packetStep === 4 }">
+            ➔
+          </div>
+          <div class="net-node" :class="{ active: PACKET_STEPS[packetStep]?.node === 'db' }">
+            <span class="nn-icon">🗄️</span>
+            <div class="nn-title">Database</div>
+            <div class="nn-sub">PostgreSQL / MySQL</div>
+          </div>
+        </div>
+
+        <!-- Current Step Details -->
+        <div class="packet-step-card">
+          <div class="psc-title">{{ PACKET_STEPS[packetStep]?.title }}</div>
+          <p class="psc-desc">{{ PACKET_STEPS[packetStep]?.desc }}</p>
+        </div>
+      </div>
+
+      <!-- 2. PORTS & DNS DIRECTORY -->
+      <div v-if="netTab === 'ports_dns'" class="ports-dns-module">
+        <div class="pd-grid">
+          <!-- DNS Lookup Card -->
+          <div class="pd-card">
+            <h3>DNS Lookup (Domen ➔ IP aniqlash)</h3>
+            <p class="pd-sub">Domen nomini kiriting va DNS server qaysi IP manzilni qaytarishini ko'ring:</p>
+            <div class="dns-input-row">
+              <input type="text" v-model="dnsDomainInput" class="mem-input" placeholder="axvhub.uz" />
+            </div>
+            <div class="dns-res-box">
+              <div class="dr-item"><b>Aniqlangan IP:</b> <code class="ip-tag">{{ dnsResult.ip }}</code></div>
+              <div class="dr-item"><b>Yozuv turi:</b> {{ dnsResult.type }}</div>
+              <div class="dr-item"><b>Kesh vaqti (TTL):</b> {{ dnsResult.ttl }}</div>
+              <div class="dr-item"><b>Provayder:</b> {{ dnsResult.isp }}</div>
+            </div>
+          </div>
+
+          <!-- Common Ports List -->
+          <div class="pd-card">
+            <h3>Eng muhim Tarmoq Portlari</h3>
+            <div class="ports-list">
+              <div v-for="p in COMMON_PORTS" :key="p.port" class="port-item">
+                <span class="port-badge">{{ p.port }}</span>
+                <div class="port-info">
+                  <div class="port-name">{{ p.name }} ({{ p.proto }})</div>
+                  <div class="port-desc">{{ p.desc }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- TAB 9: KIBERXAVFSIZLIK & KRIPTO (CRYPTO)   -->
     <!-- ========================================== -->
     <section v-if="activeTab === 'crypto'" class="lab-card">
       <div class="card-head">
@@ -1253,7 +1612,6 @@ onUnmounted(() => {
       </div>
 
       <div class="crypto-grid">
-        <!-- 1. Caesar Cipher -->
         <div class="crypto-card">
           <div class="cc-head">
             <h3><Icon name="key" /> Sezar shifri (Caesar Cipher)</h3>
@@ -1275,7 +1633,6 @@ onUnmounted(() => {
           </div>
         </div>
 
-        <!-- 2. Base64 Converter -->
         <div class="crypto-card">
           <div class="cc-head">
             <h3><Icon name="binary" /> Base64 Kodlash</h3>
@@ -1301,7 +1658,6 @@ onUnmounted(() => {
           </div>
         </div>
 
-        <!-- 3. Password Strength Analyzer -->
         <div class="crypto-card full-width">
           <div class="cc-head">
             <h3><Icon name="shield" /> Parol Mustahkamligi Tahlilchisi</h3>
@@ -1314,7 +1670,6 @@ onUnmounted(() => {
               <input type="text" v-model="testPassword" placeholder="Parolni kiriting..." class="mem-input mono" />
             </div>
 
-            <!-- Strength Bar -->
             <div class="pass-bar-wrapper">
               <div class="pass-bar" :style="{ width: `${passwordStats.scorePct}%`, background: passwordStats.color }"></div>
             </div>
@@ -2403,7 +2758,435 @@ onUnmounted(() => {
   color: #e5c07b;
 }
 
-/* 7. CRYPTO & SECURITY */
+/* 7. DATA STRUCTURES */
+.ds-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.ds-tab-btn {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  color: var(--vp-c-text-1, #ccc);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.ds-tab-btn.active {
+  background: var(--vp-c-brand-1, #007acc);
+  border-color: var(--vp-c-brand-1, #007acc);
+  color: #fff;
+}
+.ds-module {
+  background: var(--vp-c-bg, #181818);
+  border: 1px solid var(--vp-c-divider, #333);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.ds-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.ds-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.mem-input-sm {
+  width: 80px;
+  background: #252526;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 700;
+}
+.ds-pill {
+  font-size: 0.85rem;
+  color: var(--vp-c-text-2, #aaa);
+}
+.ds-pill b {
+  color: #e5c07b;
+}
+.stack-visual-wrapper, .queue-visual-wrapper, .list-visual-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.stack-cup {
+  width: 140px;
+  min-height: 240px;
+  border-left: 4px solid var(--vp-c-brand-1, #007acc);
+  border-right: 4px solid var(--vp-c-brand-1, #007acc);
+  border-bottom: 4px solid var(--vp-c-brand-1, #007acc);
+  border-radius: 0 0 12px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 4px;
+  padding: 8px;
+  background: rgba(0, 122, 204, 0.05);
+  margin: 0 auto;
+}
+.stack-block {
+  background: #252526;
+  border: 2px solid #444;
+  border-radius: 6px;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: 800;
+  position: relative;
+  transition: all 0.2s;
+}
+.stack-block.top {
+  border-color: #e5c07b;
+  background: rgba(229, 192, 123, 0.15);
+  box-shadow: 0 0 10px rgba(229, 192, 123, 0.3);
+}
+.sb-top-tag {
+  position: absolute;
+  left: 105%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.72rem;
+  color: #e5c07b;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.empty-placeholder {
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+  margin: auto 0;
+}
+.queue-lane {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #141414;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  overflow-x: auto;
+}
+.ql-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #888;
+  white-space: nowrap;
+}
+.ql-label.front {
+  color: #98c379;
+}
+.ql-items {
+  display: flex;
+  gap: 8px;
+  min-width: 160px;
+}
+.queue-block {
+  min-width: 48px;
+  height: 48px;
+  background: #252526;
+  border: 2px solid #444;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  position: relative;
+}
+.queue-block.front {
+  border-color: #98c379;
+  background: rgba(152, 195, 121, 0.15);
+}
+.queue-block.rear {
+  border-color: var(--vp-c-brand-1, #007acc);
+}
+.qb-idx {
+  font-size: 0.6rem;
+  color: #aaa;
+}
+.nodes-chain {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: #141414;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.head-marker, .null-marker {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--vp-c-brand-1, #007acc);
+}
+.null-marker {
+  color: #e06c75;
+}
+.node-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.node-box {
+  display: flex;
+  background: #252526;
+  border: 2px solid #444;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.nb-data {
+  padding: 0.5rem 0.75rem;
+  font-weight: 800;
+  border-right: 1px solid #444;
+}
+.nb-ptr {
+  padding: 0.5rem 0.6rem;
+  font-size: 0.72rem;
+  color: var(--vp-c-brand-1, #007acc);
+  background: rgba(0, 122, 204, 0.1);
+  display: flex;
+  align-items: center;
+}
+.nb-del {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  font-size: 0.6rem;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+}
+.nb-del:hover {
+  color: #e06c75;
+}
+.node-arrow {
+  color: #888;
+  font-size: 1.1rem;
+}
+.ds-explanation {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+.ds-explanation h4 {
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem;
+  color: var(--vp-c-brand-1, #007acc);
+}
+.ds-explanation p {
+  font-size: 0.88rem;
+  color: var(--vp-c-text-2, #aaa);
+  margin: 0 0 0.5rem;
+}
+.ds-log-bar {
+  background: #111;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #e5c07b;
+}
+
+/* 8. NETWORKING */
+.packet-sim-module, .ports-dns-module {
+  background: var(--vp-c-bg, #181818);
+  border: 1px solid var(--vp-c-divider, #333);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.ps-ctrl-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.ps-url-box {
+  display: flex;
+  align-items: center;
+  background: #252526;
+  border: 1px solid #444;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+.ps-method {
+  background: #2e7d32;
+  color: #fff;
+  font-weight: 800;
+  padding: 0.4rem 0.75rem;
+}
+.ps-url {
+  padding: 0.4rem 1rem;
+  color: #fff;
+}
+.net-graph-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  background: #111;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+}
+.net-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #252526;
+  border: 2px solid #444;
+  border-radius: 10px;
+  padding: 1rem;
+  min-width: 120px;
+  transition: all 0.3s ease;
+}
+.net-node.active {
+  border-color: var(--vp-c-brand-1, #007acc);
+  background: rgba(0, 122, 204, 0.18);
+  box-shadow: 0 0 20px rgba(0, 122, 204, 0.4);
+  transform: translateY(-4px);
+}
+.nn-icon {
+  font-size: 2rem;
+  margin-bottom: 0.35rem;
+}
+.nn-title {
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+.nn-sub {
+  font-size: 0.7rem;
+  color: #888;
+}
+.net-edge {
+  font-size: 1.4rem;
+  color: #555;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.net-edge.live {
+  color: #ffeb3b;
+}
+.edge-packet {
+  position: absolute;
+  top: -24px;
+  font-size: 0.7rem;
+  background: #007acc;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.packet-step-card {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+.psc-title {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--vp-c-brand-1, #007acc);
+  margin-bottom: 0.35rem;
+}
+.psc-desc {
+  font-size: 0.92rem;
+  color: var(--vp-c-text-2, #aaa);
+  margin: 0;
+}
+.pd-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.pd-card {
+  background: var(--vp-c-bg, #252526);
+  border: 1px solid var(--vp-c-divider, #3e3e42);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+.pd-card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
+}
+.pd-sub {
+  font-size: 0.82rem;
+  color: #888;
+  margin: 0 0 1rem;
+}
+.dns-input-row {
+  margin-bottom: 1rem;
+}
+.dns-res-box {
+  background: #181818;
+  border-radius: 6px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+.ip-tag {
+  color: #98c379;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+.ports-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.port-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #181818;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+}
+.port-badge {
+  background: #007acc;
+  color: #fff;
+  font-family: monospace;
+  font-weight: 800;
+  font-size: 0.82rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  min-width: 44px;
+  text-align: center;
+}
+.port-name {
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.port-desc {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+/* 9. CRYPTO & SECURITY */
 .crypto-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2585,7 +3368,7 @@ onUnmounted(() => {
   .bit-board {
     grid-template-columns: repeat(4, 1fr);
   }
-  .circuit-area, .algo-main-grid, .gate-info-grid, .crypto-grid {
+  .circuit-area, .algo-main-grid, .gate-info-grid, .crypto-grid, .stack-visual-wrapper, .queue-visual-wrapper, .list-visual-wrapper, .pd-grid {
     grid-template-columns: 1fr;
     flex-direction: column;
   }

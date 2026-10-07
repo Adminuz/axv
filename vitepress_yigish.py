@@ -180,7 +180,8 @@ UI_ICONS = ["play", "layers", "chevron-right", "chevron-left", "lock", "calendar
             "file-text", "presentation", "arrow-right", "arrow-left", "graduation-cap",
             "keyboard", "volume-2", "volume-x", "rotate-ccw", "zap", "gauge", "target", "code",
             "settings", "camera", "download", "check", "binary", "hard-drive", "circuit-board",
-            "git-branch", "lightbulb", "cpu", "memory-stick", "info", "calculator", "sliders-horizontal"]
+            "git-branch", "lightbulb", "cpu", "memory-stick", "info", "calculator", "sliders-horizontal",
+            "search", "book", "shield", "brain", "globe", "server", "smartphone", "gamepad-2", "database", "network"]
 
 
 def esc_text(line):
@@ -501,11 +502,19 @@ def main():
     (DOCS / "foundation").mkdir(parents=True, exist_ok=True)
     (DOCS / "foundation" / "index.md").write_text(fm(foundation_page), encoding="utf-8")
 
+    glossariy_page = {
+        "title": "IT Glossariy & Cheat-Sheet", "layout": "doc", "sidebar": False, "aside": False, "outline": False,
+        "kind": "glossariy",
+    }
+    (DOCS / "glossariy").mkdir(parents=True, exist_ok=True)
+    (DOCS / "glossariy" / "index.md").write_text(fm(glossariy_page), encoding="utf-8")
+
     nav = []
     if nav_items:
         nav.append({"text": "Sinflar", "items": nav_items})
     nav.append({"text": "Klaviatura trenajyori", "link": "/trenajyor/"})
     nav.append({"text": "CS Laboratoriya", "link": "/foundation/"})
+    nav.append({"text": "IT Glossariy", "link": "/glossariy/"})
 
     gen = {"tashkilot": SOZLAMA["tashkilot"], "podval": SOZLAMA["podval"], "nav": nav}
     (DOCS / ".vitepress").mkdir(parents=True, exist_ok=True)

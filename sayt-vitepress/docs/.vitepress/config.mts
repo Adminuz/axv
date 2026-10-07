@@ -1,9 +1,7 @@
 // VitePress sozlamalari (qo'lda tahrirlanadi). Menyu va sinflar ro'yxati generated.json dan keladi:
 // uni `python3 vitepress_yigish.py` yaratadi, qo'lda tahrirlamang.
 import { defineConfig } from 'vitepress'
-import fs from 'node:fs'
-
-const gen = JSON.parse(fs.readFileSync(new URL('./generated.json', import.meta.url), 'utf-8'))
+import gen from './generated.json'
 
 export default defineConfig({
   lang: 'uz',
