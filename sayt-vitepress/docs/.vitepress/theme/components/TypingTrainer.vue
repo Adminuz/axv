@@ -726,7 +726,7 @@ watch(() => currentLesson.value, () => {
         </div>
       </div>
 
-      <!-- CENTERED BEAUTIFUL METRIC CARDS (ROCK-SOLID FIXED SIZES) -->
+      <!-- CENTERED BEAUTIFUL METRIC CARDS (FLUID SCALING) -->
       <div class="stamina-metrics-row">
         <div class="metric-card">
           <div class="m-icon"><Icon name="zap" /></div>
@@ -770,7 +770,7 @@ watch(() => currentLesson.value, () => {
         <div class="spb-inner" :style="{ width: progressPct + '%' }"></div>
       </div>
 
-      <!-- MAIN INPUT / STREAM BOX (ROCK SOLID HEIGHT & SMOOTH TYPING) -->
+      <!-- MAIN INPUT / STREAM BOX (EXPANDED FLUID FONT & PADDING) -->
       <div ref="streamBoxRef" class="stamina-stream-box" tabindex="0">
         <div class="stream-inner">
           <span
@@ -811,7 +811,7 @@ watch(() => currentLesson.value, () => {
         </div>
       </div>
 
-      <!-- ENLARGED & ROCK-SOLID KEYBOARD -->
+      <!-- ENLARGED & ROCK-SOLID KEYBOARD (COMFORTABLE SPACING) -->
       <div v-if="showKeyboard" class="stamina-keyboard">
         <div v-for="(row, rIdx) in KEYBOARD_ROWS" :key="rIdx" class="kb-row">
           <div
@@ -946,15 +946,19 @@ watch(() => currentLesson.value, () => {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 12px 16px;
+  align-items: center;
+  min-height: calc(100vh - 90px);
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .stamina-app {
   width: 100%;
-  max-width: 960px;
+  max-width: min(1280px, 96vw);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: clamp(8px, 1.3vh, 14px);
+  box-sizing: border-box;
 }
 
 /* TOP HEADER & CONTROLS */
@@ -963,8 +967,8 @@ watch(() => currentLesson.value, () => {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-  min-height: 42px;
+  gap: 12px;
+  min-height: 40px;
 }
 
 .stamina-top-controls {
@@ -976,17 +980,17 @@ watch(() => currentLesson.value, () => {
 .stamina-btn-select {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   background: var(--ax-card);
   border: 1px solid var(--ax-line);
-  padding: 6px 14px;
+  padding: 0 16px;
+  height: clamp(38px, 4.6vh, 44px);
   border-radius: 10px;
   color: var(--vp-c-text-1);
-  font-size: 0.88rem;
+  font-size: clamp(0.88rem, 1vw, 1rem);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.15s ease;
-  height: 38px;
 }
 
 .stamina-btn-select:hover {
@@ -999,6 +1003,7 @@ watch(() => currentLesson.value, () => {
   align-items: center;
   gap: 6px;
   color: var(--vp-c-brand-1);
+  font-weight: 700;
 }
 
 .sbs-div {
@@ -1006,7 +1011,7 @@ watch(() => currentLesson.value, () => {
 }
 
 .sbs-les {
-  max-width: 220px;
+  max-width: 300px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1014,27 +1019,28 @@ watch(() => currentLesson.value, () => {
 
 .sbs-arrow {
   opacity: 0.6;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
 .stamina-quick-actions {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .icon-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: clamp(38px, 4.6vh, 44px);
+  height: clamp(38px, 4.6vh, 44px);
   border-radius: 10px;
   background: var(--ax-card);
   border: 1px solid var(--ax-line);
   color: var(--vp-c-text-2);
   cursor: pointer;
   transition: all 0.15s ease;
+  font-size: 1.1rem;
 }
 
 .icon-btn:hover {
@@ -1048,22 +1054,22 @@ watch(() => currentLesson.value, () => {
   color: var(--vp-c-brand-1);
 }
 
-/* CENTERED METRICS ROW (FIXED STABLE BOXES) */
+/* CENTERED METRICS ROW */
 .stamina-metrics-row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+  gap: clamp(8px, 1.2vw, 16px);
 }
 
 .metric-card {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: clamp(10px, 1.2vw, 14px);
   background: var(--ax-card);
   border: 1px solid var(--ax-line);
-  border-radius: 12px;
-  padding: 8px 14px;
-  height: 56px;
+  border-radius: 14px;
+  padding: clamp(8px, 1vh, 12px) clamp(12px, 1.2vw, 18px);
+  height: clamp(58px, 7.2vh, 72px);
   box-sizing: border-box;
 }
 
@@ -1071,12 +1077,12 @@ watch(() => currentLesson.value, () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
+  width: clamp(36px, 4.4vh, 44px);
+  height: clamp(36px, 4.4vh, 44px);
+  border-radius: 10px;
   background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
-  font-size: 1.1rem;
+  font-size: clamp(1.1rem, 1.3vw, 1.35rem);
   flex-shrink: 0;
 }
 
@@ -1088,7 +1094,7 @@ watch(() => currentLesson.value, () => {
 }
 
 .m-num {
-  font-size: 1.25rem;
+  font-size: clamp(1.3rem, 1.7vw, 1.75rem);
   font-weight: 800;
   line-height: 1.1;
   color: var(--vp-c-text-1);
@@ -1096,7 +1102,7 @@ watch(() => currentLesson.value, () => {
 }
 
 .m-lbl {
-  font-size: 0.7rem;
+  font-size: clamp(0.68rem, 0.8vw, 0.78rem);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--vp-c-text-2);
@@ -1124,14 +1130,14 @@ watch(() => currentLesson.value, () => {
   transition: width 0.15s ease;
 }
 
-/* TYPING STREAM BOX (FROZEN HEIGHT, CLEAN MONOSPACE) */
+/* TYPING STREAM BOX */
 .stamina-stream-box {
   position: relative;
   background: var(--vp-c-bg-alt);
   border: 2px solid var(--ax-line);
-  border-radius: 14px;
-  padding: 16px 22px;
-  height: 110px;
+  border-radius: 16px;
+  padding: clamp(16px, 2vh, 22px) clamp(20px, 2.2vw, 32px);
+  height: clamp(110px, 14vh, 145px);
   box-sizing: border-box;
   overflow-y: hidden;
   outline: none;
@@ -1147,9 +1153,9 @@ watch(() => currentLesson.value, () => {
 
 .stream-inner {
   font-family: 'Consolas', 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 1.55rem;
-  line-height: 1.7;
-  letter-spacing: 0.05em;
+  font-size: clamp(1.6rem, 2vw, 2.15rem);
+  line-height: 1.65;
+  letter-spacing: 0.06em;
   white-space: pre-wrap;
   word-break: break-word;
   user-select: none;
@@ -1157,12 +1163,12 @@ watch(() => currentLesson.value, () => {
 
 .stamina-char {
   position: relative;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .stamina-char.pending {
   color: var(--vp-c-text-2);
-  opacity: 0.7;
+  opacity: 0.65;
 }
 
 .stamina-char.correct {
@@ -1172,15 +1178,15 @@ watch(() => currentLesson.value, () => {
 .stamina-char.error {
   color: #fff;
   background: #e06c75;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .stamina-char.active {
   color: var(--vp-c-text-1);
-  background: rgba(0, 102, 184, 0.25);
-  border-bottom: 3px solid var(--vp-c-brand-1);
+  background: rgba(0, 102, 184, 0.28);
+  border-bottom: 3.5px solid var(--vp-c-brand-1);
   font-weight: 700;
-  box-shadow: 0 0 8px rgba(0, 102, 184, 0.5);
+  box-shadow: 0 0 10px rgba(0, 102, 184, 0.6);
 }
 
 .stamina-char.active.space {
@@ -1191,12 +1197,12 @@ watch(() => currentLesson.value, () => {
 
 .stream-hint {
   position: absolute;
-  right: 14px;
+  right: 16px;
   bottom: 8px;
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.8rem;
+  font-size: clamp(0.75rem, 0.85vw, 0.88rem);
   color: var(--vp-c-text-3);
   pointer-events: none;
 }
@@ -1208,23 +1214,24 @@ watch(() => currentLesson.value, () => {
   align-items: center;
   background: var(--ax-card);
   border: 1px solid var(--ax-line);
-  border-radius: 10px;
-  padding: 6px 14px;
-  height: 38px;
+  border-radius: 12px;
+  padding: 0 clamp(14px, 1.5vw, 20px);
+  height: clamp(38px, 4.6vh, 44px);
   box-sizing: border-box;
-  font-size: 0.88rem;
+  font-size: clamp(0.88rem, 1vw, 1rem);
+  margin-bottom: clamp(6px, 1.2vh, 14px); /* Extra distance to give space for keyboard */
   flex-shrink: 0;
 }
 
 .fg-info {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .fg-dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   display: inline-block;
 }
@@ -1232,28 +1239,29 @@ watch(() => currentLesson.value, () => {
 .fg-target {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   color: var(--vp-c-text-2);
 }
 
 .target-badge {
   background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
-  padding: 2px 10px;
-  border-radius: 6px;
+  padding: 3px 12px;
+  border-radius: 8px;
   font-weight: 700;
   font-family: monospace;
+  font-size: 1.05em;
 }
 
-/* ROCK-SOLID ERGONOMIC KEYBOARD */
+/* ENLARGED & ROCK-SOLID ERGONOMIC KEYBOARD */
 .stamina-keyboard {
   background: var(--ax-card);
   border: 1px solid var(--ax-line);
-  border-radius: 14px;
-  padding: 12px;
+  border-radius: 16px;
+  padding: clamp(10px, 1.2vh, 16px) clamp(10px, 1.2vw, 16px);
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: clamp(5px, 0.7vh, 8px);
   user-select: none;
   box-shadow: var(--ax-shadow);
   flex-shrink: 0;
@@ -1261,13 +1269,13 @@ watch(() => currentLesson.value, () => {
 
 .kb-row {
   display: flex;
-  gap: 6px;
+  gap: clamp(5px, 0.6vw, 8px);
   justify-content: center;
 }
 
 .kb-key {
   position: relative;
-  height: 46px;
+  height: clamp(46px, 5.8vh, 60px);
   background: var(--vp-c-bg);
   border: 1px solid var(--ax-line);
   border-radius: 8px;
@@ -1275,61 +1283,61 @@ watch(() => currentLesson.value, () => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
+  font-size: clamp(0.82rem, 1.05vw, 1.05rem);
   font-weight: 600;
   color: var(--vp-c-text-1);
-  box-shadow: 0 2px 0 var(--ax-line);
+  box-shadow: 0 2.5px 0 var(--ax-line);
   box-sizing: border-box;
 }
 
 .k-top {
-  font-size: 0.65rem;
+  font-size: clamp(0.62rem, 0.75vw, 0.75rem);
   opacity: 0.6;
   margin-bottom: -2px;
 }
 
 .k-main {
-  font-size: 0.85rem;
+  font-size: clamp(0.85rem, 1.05vw, 1.05rem);
 }
 
 .k-bump {
   position: absolute;
   bottom: 2px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: bold;
   opacity: 0.6;
 }
 
-.finger-lp, .finger-rp { border-bottom: 3px solid #e06c75; }
-.finger-lr, .finger-rr { border-bottom: 3px solid #d19a66; }
-.finger-lm, .finger-rm { border-bottom: 3px solid #e5c07b; }
-.finger-li, .finger-ri { border-bottom: 3px solid #98c379; }
-.finger-thumb { border-bottom: 3px solid #c678dd; }
+.finger-lp, .finger-rp { border-bottom: 3.5px solid #e06c75; }
+.finger-lr, .finger-rr { border-bottom: 3.5px solid #d19a66; }
+.finger-lm, .finger-rm { border-bottom: 3.5px solid #e5c07b; }
+.finger-li, .finger-ri { border-bottom: 3.5px solid #98c379; }
+.finger-thumb { border-bottom: 3.5px solid #c678dd; }
 
 .key-target {
   background: linear-gradient(135deg, #0e70c0, #2392dc) !important;
   color: #fff !important;
   border-color: #0e70c0 !important;
-  box-shadow: 0 0 10px rgba(14, 112, 192, 0.6) !important;
+  box-shadow: 0 0 14px rgba(14, 112, 192, 0.7) !important;
 }
 
 .key-shift-target {
   background: linear-gradient(135deg, #af00db, #c586c0) !important;
   color: #fff !important;
   border-color: #af00db !important;
-  box-shadow: 0 0 10px rgba(175, 0, 219, 0.6) !important;
+  box-shadow: 0 0 14px rgba(175, 0, 219, 0.7) !important;
 }
 
 .key-pressed {
   background: var(--vp-c-brand-soft) !important;
-  filter: brightness(1.1);
+  filter: brightness(1.15);
 }
 
 /* LESSON SELECTOR MODAL */
 .stamina-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
@@ -1341,41 +1349,41 @@ watch(() => currentLesson.value, () => {
 .stamina-lesson-modal {
   background: var(--vp-c-bg);
   border: 1px solid var(--ax-line);
-  border-radius: 18px;
+  border-radius: 20px;
   width: 100%;
-  max-width: 680px;
+  max-width: 720px;
   max-height: 85vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
 }
 
 .slm-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
+  padding: 18px 24px;
   border-bottom: 1px solid var(--ax-line);
 }
 
 .slm-header h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.35rem;
+  font-weight: 800;
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .slm-close {
   background: transparent;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--vp-c-text-2);
   cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 6px;
+  padding: 4px 10px;
+  border-radius: 8px;
 }
 
 .slm-close:hover {
@@ -1385,8 +1393,8 @@ watch(() => currentLesson.value, () => {
 
 .slm-cats {
   display: flex;
-  gap: 6px;
-  padding: 12px 20px;
+  gap: 8px;
+  padding: 12px 24px;
   border-bottom: 1px solid var(--ax-line);
   background: var(--ax-card);
   overflow-x: auto;
@@ -1395,10 +1403,10 @@ watch(() => currentLesson.value, () => {
 .slm-cat-tab {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-size: 0.85rem;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--vp-c-text-2);
   background: transparent;
@@ -1419,28 +1427,28 @@ watch(() => currentLesson.value, () => {
 }
 
 .slm-body {
-  padding: 18px 20px;
+  padding: 20px 24px;
   overflow-y: auto;
   max-height: 55vh;
 }
 
 .slm-lessons-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
 }
 
 .slm-lesson-card {
   text-align: left;
   background: var(--ax-card);
   border: 1px solid var(--ax-line);
-  border-radius: 10px;
-  padding: 12px 14px;
+  border-radius: 12px;
+  padding: 14px 16px;
   cursor: pointer;
   transition: all 0.15s ease;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
 }
 
 .slm-lesson-card:hover {
@@ -1456,69 +1464,69 @@ watch(() => currentLesson.value, () => {
 .slm-card-top {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .slm-idx {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 700;
 }
 
 .slm-title {
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--vp-c-text-1);
 }
 
 .slm-desc {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   color: var(--vp-c-text-2);
   margin: 0;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .slm-custom-box {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .slm-custom-box textarea {
   width: 100%;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 14px;
+  border-radius: 10px;
   border: 1px solid var(--ax-line);
   background: var(--vp-c-bg);
   color: var(--vp-c-text-1);
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 /* RESULTS MODAL */
 .stamina-modal {
   background: var(--vp-c-bg);
   border: 1px solid var(--ax-line);
-  border-radius: 20px;
-  padding: 28px;
-  max-width: 480px;
+  border-radius: 22px;
+  padding: 32px;
+  max-width: 500px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
 
 .sm-stars {
   display: flex;
   justify-content: center;
   gap: 6px;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 6px;
 }
 
@@ -1531,26 +1539,26 @@ watch(() => currentLesson.value, () => {
 }
 
 .sm-header h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 800;
   margin: 0 0 4px;
 }
 
 .sm-sub {
   color: var(--vp-c-text-2);
-  margin: 0 0 16px;
-  font-size: 0.9rem;
+  margin: 0 0 20px;
+  font-size: 0.95rem;
 }
 
 .sm-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 12px;
   background: var(--ax-card);
   border: 1px solid var(--ax-line);
-  border-radius: 12px;
-  padding: 14px;
-  margin-bottom: 20px;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 24px;
 }
 
 .sm-stat {
@@ -1559,13 +1567,13 @@ watch(() => currentLesson.value, () => {
 }
 
 .sm-lbl {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   color: var(--vp-c-text-2);
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .sm-val {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   font-weight: 800;
 }
 
@@ -1576,7 +1584,7 @@ watch(() => currentLesson.value, () => {
 .sm-actions {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -1588,7 +1596,7 @@ watch(() => currentLesson.value, () => {
     display: none;
   }
   .stream-inner {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 }
 </style>

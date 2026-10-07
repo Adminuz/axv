@@ -8,7 +8,7 @@ const dars = computed(() => (frontmatter.value.kind === 'dars' ? frontmatter.val
 </script>
 
 <template>
-  <div class="axv">
+  <div v-if="frontmatter.kind !== 'trenajyor'" class="axv">
     <nav v-if="dars && (dars.prev || dars.next)" class="pn" aria-label="Darslar">
       <a v-if="dars.prev" class="pn-card prev" :href="withBase(dars.prev.link)">
         <span class="dir"><Icon name="arrow-left" />Oldingi dars</span>

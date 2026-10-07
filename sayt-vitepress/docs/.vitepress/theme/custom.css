@@ -73,6 +73,8 @@ body {
 .VPDoc:not(.has-sidebar) .container { max-width: 1200px !important; }
 .VPDoc:not(.has-sidebar) .content { max-width: 1200px !important; padding: 0 !important; }
 .VPDoc .content-container { max-width: none !important; }
+.VPDoc:has(.stamina-wrapper) .container { max-width: 1440px !important; }
+.VPDoc:has(.stamina-wrapper) .content { max-width: 1440px !important; }
 .VPDoc { padding-top: 8px !important; }
 .VPDocFooter { display: none; }
 .vp-doc { max-width: 1140px; margin: 0 auto; padding: 0 16px; }
