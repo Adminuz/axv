@@ -177,7 +177,8 @@ REVEAL = ROOT / "reveal"
 BADGE = {"easy": "tip", "mid": "warning", "hard": "danger", "bonus": "info"}
 UI_ICONS = ["play", "layers", "chevron-right", "chevron-left", "lock", "calendar-days", "timer", "house",
             "list-checks", "book-open", "languages", "sparkles", "clipboard-list", "circle-question-mark",
-            "file-text", "presentation", "arrow-right", "arrow-left", "graduation-cap"]
+            "file-text", "presentation", "arrow-right", "arrow-left", "graduation-cap",
+            "keyboard", "volume-2", "volume-x", "rotate-ccw", "zap", "gauge", "target", "code"]
 
 
 def esc_text(line):
@@ -484,7 +485,17 @@ def main():
     (DOCS / "mentor").mkdir(parents=True, exist_ok=True)
     (DOCS / "mentor" / "index.md").write_text(fm(mentor_home), encoding="utf-8")
 
-    nav = [{"text": "Sinflar", "items": nav_items}] if nav_items else []
+    trenajyor_page = {
+        "title": "Klaviatura trenajyori", "layout": "doc", "sidebar": False, "aside": False, "outline": False,
+        "kind": "trenajyor",
+    }
+    (DOCS / "trenajyor").mkdir(parents=True, exist_ok=True)
+    (DOCS / "trenajyor" / "index.md").write_text(fm(trenajyor_page), encoding="utf-8")
+
+    nav = []
+    if nav_items:
+        nav.append({"text": "Sinflar", "items": nav_items})
+    nav.append({"text": "Klaviatura trenajyori", "link": "/trenajyor/"})
 
     gen = {"tashkilot": SOZLAMA["tashkilot"], "podval": SOZLAMA["podval"], "nav": nav}
     (DOCS / ".vitepress").mkdir(parents=True, exist_ok=True)

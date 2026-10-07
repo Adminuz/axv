@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useData, withBase } from 'vitepress'
 import Icon from './Icon.vue'
 import Crumbs from './Crumbs.vue'
+import TypingTrainer from './TypingTrainer.vue'
 
 const { frontmatter } = useData()
 const kind = computed(() => frontmatter.value.kind)
@@ -14,14 +15,22 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
 </script>
 
 <template>
+  <!-- KLAVIATURA TRENAJYORI (STAMINA) -->
+  <TypingTrainer v-if="kind === 'trenajyor'" />
+
   <!-- BOSH SAHIFA / MENTOR BOSH SAHIFA -->
-  <div v-if="kind === 'home' || kind === 'mentor_home'" class="axv">
+  <div v-else-if="kind === 'home' || kind === 'mentor_home'" class="axv">
     <Crumbs v-if="kind === 'mentor_home'" :items="[{ t: 'Bosh sahifa', l: '/' }, { t: 'Mentor bo\'limi' }]" />
     <section class="hero">
       <img :src="withBase('/logo.png')" alt="AXV" />
       <h1 class="org">{{ home.org }}</h1>
       <p class="tag">{{ home.tag }}</p>
       <p class="tag2">{{ home.tag2 }}</p>
+      <div v-if="kind === 'home'" class="hero-act" style="margin-top: 14px;">
+        <a :href="withBase('/trenajyor/')" class="btn btn-primary btn-sm">
+          <Icon name="keyboard" /> Klaviatura trenajyori (Stamina) <Icon name="arrow-right" />
+        </a>
+      </div>
     </section>
     <h2 class="sec-title">{{ kind === 'mentor_home' ? 'Sinfni tanlang (Mentor rejasi)' : 'Sinfingizni tanlang' }}</h2>
     <div class="tiles">
