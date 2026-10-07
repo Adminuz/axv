@@ -161,6 +161,7 @@ const CATEGORIES: Category[] = [
 // --- State ---
 const activeCategory = ref<string>('basics')
 const activeLessonId = ref<string>('b1')
+const showLessonModal = ref<boolean>(false)
 const customTextInput = ref<string>('')
 const isCustomMode = computed(() => activeCategory.value === 'custom')
 
@@ -199,7 +200,6 @@ let timerInterval: any = null
 const wpm = computed(() => {
   if (elapsedTimeSec.value === 0) return 0
   const minutes = elapsedTimeSec.value / 60
-  // Standard: 5 characters = 1 word
   const correctChars = charStatus.value.filter(s => s === 'correct').length
   const words = correctChars / 5
   return Math.round(words / minutes)
@@ -436,7 +436,6 @@ const isTargetKey = (k: any) => {
 const isTargetShift = computed(() => {
   const c = currentChar.value
   if (!c) return false
-  // Check if character is uppercase or shift symbol
   for (const row of KEYBOARD_ROWS) {
     for (const k of row) {
       if (k.shift === c && k.key !== c) return true
@@ -445,7 +444,7 @@ const isTargetShift = computed(() => {
   return false
 })
 
-// Web Audio API Sound Synthesizer (0 dependencies, ultra-fast click & feedback)
+// Web Audio API Sound Synthesizer
 let audioCtx: AudioContext | null = null
 
 const initAudio = () => {
@@ -474,7 +473,6 @@ const playKeySound = (isError = false, isSpace = false) => {
     const now = audioCtx.currentTime
 
     if (isError) {
-      // Pleasant error "boop"
       osc.type = 'sawtooth'
       osc.frequency.setValueAtTime(140, now)
       osc.frequency.exponentialRampToValueAtTime(70, now + 0.12)
@@ -483,7 +481,6 @@ const playKeySound = (isError = false, isSpace = false) => {
       osc.start(now)
       osc.stop(now + 0.12)
     } else {
-      // Crisp mechanical key switch sound
       osc.type = 'sine'
       const freq = isSpace ? 380 : 550 + Math.random() * 80
       osc.frequency.setValueAtTime(freq, now)
@@ -493,9 +490,7 @@ const playKeySound = (isError = false, isSpace = false) => {
       osc.start(now)
       osc.stop(now + 0.04)
     }
-  } catch (e) {
-    // Ignore audio glitches
-  }
+  } catch (e) {}
 }
 
 const playVictorySound = () => {
@@ -504,7 +499,7 @@ const playVictorySound = () => {
   if (!audioCtx) return
 
   try {
-    const notes = [440, 554.37, 659.25, 880] // A major arpeggio
+    const notes = [440, 554.37, 659.25, 880]
     notes.forEach((freq, idx) => {
       const osc = audioCtx!.createOscillator()
       const gain = audioCtx!.createGain()
@@ -543,30 +538,32 @@ const selectCategory = (catId: string) => {
   if (catId !== 'custom') {
     activeLessonId.value = CATEGORIES.find(c => c.id === catId)?.lessons[0]?.id || ''
   }
+  showLessonModal.value = false
   resetLesson()
 }
 
 const selectLesson = (lesId: string) => {
   activeLessonId.value = lesId
+  showLessonModal.value = false
   resetLesson()
 }
 
 // Key handler
 const handleKeyDown = (e: KeyboardEvent) => {
-  // Ignore modifier keys alone
+  // If modal is open, ignore
+  if (showLessonModal.value) return
+
   if (['Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'Tab'].includes(e.key)) {
     pressedKey.value = e.key
     return
   }
 
-  // Prevent default scroll on Space
   if (e.key === ' ' || e.key === 'Enter') {
     e.preventDefault()
   }
 
   if (isFinished.value) return
 
-  // Start timer on first keypress
   if (!isStarted.value) {
     isStarted.value = true
     startTime.value = Date.now()
@@ -585,23 +582,19 @@ const handleKeyDown = (e: KeyboardEvent) => {
   if (e.key === 'Enter') inputChar = '\n'
 
   if (inputChar === expected) {
-    // Correct
     charStatus.value[currentIndex.value] = 'correct'
     currentIndex.value++
     playKeySound(false, inputChar === ' ')
 
-    // Check completion
     if (currentIndex.value >= targetText.value.length) {
       finishLesson()
     }
   } else {
-    // Error
     errorCount.value++
     charStatus.value[currentIndex.value] = 'error'
     playKeySound(true)
   }
 
-  // Auto-scroll the stream container
   nextTick(() => {
     const activeEl = document.querySelector('.stamina-char.active')
     if (activeEl) {
@@ -623,7 +616,6 @@ const finishLesson = () => {
   }
   playVictorySound()
 
-  // Save record to localStorage
   if (typeof window !== 'undefined') {
     try {
       const records = JSON.parse(localStorage.getItem('axv_stamina_records') || '{}')
@@ -647,7 +639,6 @@ const nextLesson = () => {
     activeLessonId.value = currentCategory.value.lessons[currentIdx + 1].id
     resetLesson()
   } else {
-    // Switch to next category
     const catIdx = CATEGORIES.findIndex(c => c.id === activeCategory.value)
     if (catIdx >= 0 && catIdx + 1 < CATEGORIES.length) {
       selectCategory(CATEGORIES[catIdx + 1].id)
@@ -657,7 +648,6 @@ const nextLesson = () => {
   }
 }
 
-// Star rating
 const starsCount = computed(() => {
   if (accuracy.value >= 95 && wpm.value >= 40) return 3
   if (accuracy.value >= 85 && wpm.value >= 25) return 2
@@ -686,129 +676,67 @@ watch(() => currentLesson.value, () => {
 </script>
 
 <template>
-  <div class="axv stamina-container">
-    <Crumbs :items="[{ t: 'Bosh sahifa', l: '/' }, { t: 'Klaviatura trenajyori' }]" />
+  <div class="stamina-screen">
+    <!-- COMPACT TOP BAR: SELECTOR + HUD METRICS + ACTIONS -->
+    <header class="stamina-top-bar">
+      <!-- Lesson selector trigger -->
+      <button class="stamina-btn-select" @click="showLessonModal = true">
+        <span class="sbs-cat"><Icon :name="currentCategory.icon" /> {{ currentCategory.title }}</span>
+        <span class="sbs-div">·</span>
+        <span class="sbs-les">{{ currentLesson.title }}</span>
+        <span class="sbs-arrow">▾</span>
+      </button>
 
-    <!-- HERO HEADER -->
-    <header class="stamina-hero">
-      <div class="sh-left">
-        <span class="sh-badge"><Icon name="keyboard" /> 10 barmoq mashqi</span>
-        <h1>Klaviatura trenajyori</h1>
-        <p class="sh-sub">
-          Tez va xatosiz yozish ko'nikmasini shakllantiring. Barmoqlaringizni to'g'ri joylashtiring va dasturlash tezligingizni oshiring.
-        </p>
+      <!-- Live HUD Metrics -->
+      <div class="stamina-hud">
+        <div class="hud-item">
+          <span class="hud-num">{{ wpm }}</span>
+          <span class="hud-lbl">WPM</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-num" :style="{ color: accuracy >= 95 ? 'var(--ax-good)' : 'inherit' }">{{ accuracy }}%</span>
+          <span class="hud-lbl">Aniqlik</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-num">{{ Math.floor(elapsedTimeSec / 60) }}:{{ (elapsedTimeSec % 60).toString().padStart(2, '0') }}</span>
+          <span class="hud-lbl">Vaqt</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-num error-num">{{ errorCount }}</span>
+          <span class="hud-lbl">Xato</span>
+        </div>
       </div>
-      <div class="sh-controls">
+
+      <!-- Quick Action Controls -->
+      <div class="stamina-actions">
         <button
-          class="btn btn-ghost btn-sm"
+          class="icon-btn"
           :class="{ active: soundEnabled }"
           @click="soundEnabled = !soundEnabled"
           :title="soundEnabled ? 'Ovozni o\'chirish' : 'Ovozni yoqish'"
         >
           <Icon :name="soundEnabled ? 'volume-2' : 'volume-x'" />
-          {{ soundEnabled ? 'Ovoz: Yoqilgan' : 'Ovoz: O\'chirilgan' }}
         </button>
         <button
-          class="btn btn-ghost btn-sm"
+          class="icon-btn"
           :class="{ active: showKeyboard }"
           @click="showKeyboard = !showKeyboard"
+          :title="showKeyboard ? 'Klaviaturani yashirish' : 'Klaviaturani ko\'rsatish'"
         >
           <Icon name="keyboard" />
-          {{ showKeyboard ? 'Klaviatura: Ochiq' : 'Klaviatura: Yopiq' }}
         </button>
-        <button class="btn btn-ghost btn-sm" @click="resetLesson">
-          <Icon name="rotate-ccw" /> Qaytadan
+        <button class="icon-btn" @click="resetLesson" title="Qayta boshlash">
+          <Icon name="rotate-ccw" />
         </button>
       </div>
     </header>
 
-    <!-- CATEGORY & LESSON SELECTOR TABS -->
-    <div class="stamina-nav-panel">
-      <div class="stamina-cat-tabs">
-        <button
-          v-for="cat in CATEGORIES"
-          :key="cat.id"
-          class="cat-tab"
-          :class="{ active: activeCategory === cat.id }"
-          @click="selectCategory(cat.id)"
-        >
-          <Icon :name="cat.icon" />
-          <span>{{ cat.title }}</span>
-        </button>
-      </div>
-
-      <!-- Lessons in Category -->
-      <div v-if="!isCustomMode" class="stamina-lesson-chips">
-        <button
-          v-for="(les, idx) in currentCategory.lessons"
-          :key="les.id"
-          class="chip-btn"
-          :class="{ active: activeLessonId === les.id }"
-          @click="selectLesson(les.id)"
-        >
-          <span class="chip-idx">{{ idx + 1 }}</span>
-          <span class="chip-title">{{ les.title }}</span>
-        </button>
-      </div>
-
-      <!-- Custom Text Input -->
-      <div v-else class="stamina-custom-box">
-        <textarea
-          v-model="customTextInput"
-          placeholder="Mashq qilmoqchi bo'lgan matningizni bu yerga kiriting yoki paste qiling..."
-          rows="3"
-        ></textarea>
-        <button class="btn btn-primary btn-sm" @click="resetLesson">
-          <Icon name="play" /> Matnni boshlash
-        </button>
-      </div>
-    </div>
-
-    <!-- LIVE METRICS BAR -->
-    <div class="stamina-metrics">
-      <div class="metric-card">
-        <span class="m-icon"><Icon name="zap" /></span>
-        <div class="m-data">
-          <span class="m-val">{{ wpm }}</span>
-          <span class="m-lbl">WPM (so'z/daq)</span>
-        </div>
-      </div>
-      <div class="metric-card">
-        <span class="m-icon"><Icon name="gauge" /></span>
-        <div class="m-data">
-          <span class="m-val">{{ cpm }}</span>
-          <span class="m-lbl">CPM (belgi/daq)</span>
-        </div>
-      </div>
-      <div class="metric-card">
-        <span class="m-icon"><Icon name="target" /></span>
-        <div class="m-data">
-          <span class="m-val" :style="{ color: accuracy >= 95 ? 'var(--ax-good)' : 'inherit' }">{{ accuracy }}%</span>
-          <span class="m-lbl">Aniqlik</span>
-        </div>
-      </div>
-      <div class="metric-card">
-        <span class="m-icon"><Icon name="timer" /></span>
-        <div class="m-data">
-          <span class="m-val">{{ Math.floor(elapsedTimeSec / 60) }}:{{ (elapsedTimeSec % 60).toString().padStart(2, '0') }}</span>
-          <span class="m-lbl">Vaqt</span>
-        </div>
-      </div>
-      <div class="metric-card">
-        <span class="m-icon"><Icon name="circle-question-mark" /></span>
-        <div class="m-data">
-          <span class="m-val error-val">{{ errorCount }}</span>
-          <span class="m-lbl">Xatolar</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- PROGRESS BAR -->
+    <!-- SLIM PROGRESS BAR -->
     <div class="stamina-progress-bar">
       <div class="spb-inner" :style="{ width: progressPct + '%' }"></div>
     </div>
 
-    <!-- INTERACTIVE TYPING STREAM (STAMINA CARRET DISPLAY) -->
+    <!-- MAIN TYPING STREAM BOX (LARGE, CRISP, FOCUSED) -->
     <div class="stamina-stream-box" tabindex="0">
       <div class="stream-inner">
         <span
@@ -828,25 +756,28 @@ watch(() => currentLesson.value, () => {
         </span>
       </div>
       <div v-if="!isStarted && !isFinished" class="stream-hint">
-        <Icon name="play" /> Istalgan tugmani bosib yozishni boshlang...
+        <Icon name="play" /> Tugmalarni bosib yozishni boshlang...
       </div>
     </div>
 
-    <!-- FINGER GUIDE HELPER BAR -->
-    <div v-if="!isFinished" class="stamina-finger-guide">
+    <!-- FINGER & KEY HELPER BAR -->
+    <div class="stamina-finger-guide">
       <div class="fg-info">
         <span class="fg-dot" :style="{ background: currentFingerGuide.color }"></span>
         <span class="fg-text">
-          Tavsiya etilgan barmoq: <b>{{ currentFingerGuide.finger }}</b>
+          Barmoq: <b>{{ currentFingerGuide.finger }}</b>
           <template v-if="isTargetShift"> (Shift bilan)</template>
         </span>
       </div>
-      <div class="fg-hint">
-        Klaviatura tilini <b>English (US)</b> holatida ushlang
+      <div class="fg-target">
+        Bosiladigan belgi:
+        <span class="target-badge">
+          {{ currentChar === ' ' ? 'Space (Bo\'sh joy)' : currentChar === '\n' ? 'Enter ↵' : currentChar }}
+        </span>
       </div>
     </div>
 
-    <!-- ON-SCREEN VIRTUAL KEYBOARD -->
+    <!-- ERGONOMIC ON-SCREEN VIRTUAL KEYBOARD -->
     <div v-if="showKeyboard" class="stamina-keyboard">
       <div v-for="(row, rIdx) in KEYBOARD_ROWS" :key="rIdx" class="kb-row">
         <div
@@ -865,6 +796,59 @@ watch(() => currentLesson.value, () => {
           <div class="k-top" v-if="k.shift && k.shift !== k.key">{{ k.shift }}</div>
           <div class="k-main">{{ k.label || k.key.toUpperCase() }}</div>
           <div class="k-bump" v-if="k.home">_</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LESSON SELECTOR MODAL -->
+    <div v-if="showLessonModal" class="stamina-modal-overlay" @click.self="showLessonModal = false">
+      <div class="stamina-lesson-modal">
+        <div class="slm-header">
+          <h2><Icon name="keyboard" /> Darslar va mashqlar</h2>
+          <button class="slm-close" @click="showLessonModal = false">✕</button>
+        </div>
+
+        <div class="slm-cats">
+          <button
+            v-for="cat in CATEGORIES"
+            :key="cat.id"
+            class="slm-cat-tab"
+            :class="{ active: activeCategory === cat.id }"
+            @click="activeCategory = cat.id"
+          >
+            <Icon :name="cat.icon" />
+            <span>{{ cat.title }}</span>
+          </button>
+        </div>
+
+        <div class="slm-body">
+          <div v-if="!isCustomMode" class="slm-lessons-grid">
+            <button
+              v-for="(les, idx) in currentCategory.lessons"
+              :key="les.id"
+              class="slm-lesson-card"
+              :class="{ active: activeLessonId === les.id }"
+              @click="selectLesson(les.id)"
+            >
+              <div class="slm-card-top">
+                <span class="slm-idx">{{ idx + 1 }}</span>
+                <span class="slm-title">{{ les.title }}</span>
+              </div>
+              <p class="slm-desc">{{ les.desc }}</p>
+            </button>
+          </div>
+
+          <div v-else class="slm-custom-box">
+            <label>O'zingiz xohlagan matnni kiriting:</label>
+            <textarea
+              v-model="customTextInput"
+              placeholder="Matnni bu yerga paste qiling yoki yozing..."
+              rows="5"
+            ></textarea>
+            <button class="btn btn-primary" @click="selectCategory('custom')">
+              <Icon name="play" /> Matnni yuklash va boshlash
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -900,11 +884,11 @@ watch(() => currentLesson.value, () => {
             <span class="sm-val">{{ Math.floor(elapsedTimeSec / 60) }}:{{ (elapsedTimeSec % 60).toString().padStart(2, '0') }}</span>
           </div>
           <div class="sm-stat">
-            <span class="sm-lbl">Xatolar soni</span>
+            <span class="sm-lbl">Xatolar</span>
             <span class="sm-val">{{ errorCount }}</span>
           </div>
           <div class="sm-stat">
-            <span class="sm-lbl">Jami bosilgan</span>
+            <span class="sm-lbl">Jami tugmalar</span>
             <span class="sm-val">{{ totalKeystrokes }}</span>
           </div>
         </div>
@@ -923,233 +907,139 @@ watch(() => currentLesson.value, () => {
 </template>
 
 <style scoped>
-.stamina-container {
-  max-width: 1140px;
+.stamina-screen {
+  max-width: 980px;
   margin: 0 auto;
-  padding: 16px;
-}
-
-/* HERO */
-.stamina-hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.sh-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
-  margin-bottom: 8px;
-}
-
-.sh-left h1 {
-  font-size: 2rem;
-  font-weight: 800;
-  margin: 0 0 6px;
-  background: var(--ax-grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.sh-sub {
-  color: var(--vp-c-text-2);
-  margin: 0;
-  max-width: 650px;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.sh-controls {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-/* NAV PANEL & TABS */
-.stamina-nav-panel {
-  background: var(--ax-card);
-  border: 1px solid var(--ax-line);
-  border-radius: 16px;
-  padding: 14px;
-  margin-bottom: 18px;
-}
-
-.stamina-cat-tabs {
-  display: flex;
-  gap: 8px;
-  border-bottom: 1px solid var(--ax-line);
-  padding-bottom: 12px;
-  margin-bottom: 12px;
-  overflow-x: auto;
-}
-
-.cat-tab {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--vp-c-text-2);
-  background: transparent;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: 0.15s ease;
-  white-space: nowrap;
-}
-
-.cat-tab:hover {
-  background: var(--ax-card-hi);
-  color: var(--vp-c-text-1);
-}
-
-.cat-tab.active {
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
-  border-color: rgba(0, 102, 184, 0.25);
-}
-
-.stamina-lesson-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.chip-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
-  border-radius: 8px;
-  background: var(--ax-card-hi);
-  border: 1px solid var(--ax-line);
-  color: var(--vp-c-text-2);
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: 0.15s ease;
-}
-
-.chip-btn:hover {
-  border-color: var(--vp-c-brand-1);
-  color: var(--vp-c-text-1);
-}
-
-.chip-btn.active {
-  background: var(--vp-c-brand-1);
-  color: #fff;
-  border-color: var(--vp-c-brand-1);
-  font-weight: 700;
-}
-
-.chip-idx {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.15);
-  font-size: 0.75rem;
-}
-
-.chip-btn.active .chip-idx {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.stamina-custom-box {
+  padding: 4px 12px 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.stamina-custom-box textarea {
-  width: 100%;
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--ax-line);
-  background: var(--vp-c-bg);
-  color: var(--vp-c-text-1);
-  font-family: inherit;
-  font-size: 0.95rem;
-  resize: vertical;
-}
-
-/* METRICS */
-.stamina-metrics {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.metric-card {
+/* TOP BAR */
+.stamina-top-bar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 12px;
   background: var(--ax-card);
   border: 1px solid var(--ax-line);
   border-radius: 12px;
-  padding: 10px 14px;
+  padding: 8px 14px;
 }
 
-.m-icon {
+.stamina-btn-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--ax-line);
+  padding: 6px 14px;
+  border-radius: 8px;
+  color: var(--vp-c-text-1);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.stamina-btn-select:hover {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+
+.sbs-cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--vp-c-brand-1);
+}
+
+.sbs-div {
+  opacity: 0.4;
+}
+
+.sbs-les {
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sbs-arrow {
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+
+/* HUD METRICS */
+.stamina-hud {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
-  font-size: 1.1rem;
+  gap: 16px;
 }
 
-.m-data {
+.hud-item {
   display: flex;
-  flex-direction: column;
+  align-items: baseline;
+  gap: 5px;
 }
 
-.m-val {
-  font-size: 1.35rem;
+.hud-num {
+  font-size: 1.25rem;
   font-weight: 800;
-  line-height: 1.1;
   color: var(--vp-c-text-1);
+  line-height: 1;
 }
 
-.m-lbl {
+.hud-lbl {
   font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   color: var(--vp-c-text-2);
-  margin-top: 2px;
 }
 
-.error-val {
+.error-num {
   color: #e06c75;
 }
 
-/* PROGRESS BAR */
+/* ACTIONS */
+.stamina-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--ax-line);
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.icon-btn:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+.icon-btn.active {
+  background: var(--vp-c-brand-soft);
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+/* PROGRESS */
 .stamina-progress-bar {
-  height: 6px;
+  height: 4px;
   background: var(--ax-line);
   border-radius: 999px;
   overflow: hidden;
-  margin-bottom: 16px;
 }
 
 .spb-inner {
@@ -1158,20 +1048,19 @@ watch(() => currentLesson.value, () => {
   transition: width 0.15s ease;
 }
 
-/* TYPING STREAM BOX */
+/* TYPING STREAM BOX (FOCUSED & CLEAN) */
 .stamina-stream-box {
   position: relative;
   background: var(--vp-c-bg-alt);
   border: 2px solid var(--ax-line);
-  border-radius: 16px;
-  padding: 24px;
-  min-height: 130px;
-  max-height: 200px;
+  border-radius: 14px;
+  padding: 18px 24px;
+  min-height: 110px;
+  max-height: 140px;
   overflow-y: auto;
-  margin-bottom: 16px;
   outline: none;
-  transition: border-color 0.2s;
   cursor: text;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .stamina-stream-box:focus {
@@ -1181,9 +1070,9 @@ watch(() => currentLesson.value, () => {
 
 .stream-inner {
   font-family: 'Consolas', 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 1.45rem;
-  line-height: 1.8;
-  letter-spacing: 0.04em;
+  font-size: 1.55rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
   white-space: pre-wrap;
   word-break: break-word;
 }
@@ -1196,7 +1085,7 @@ watch(() => currentLesson.value, () => {
 
 .stamina-char.pending {
   color: var(--vp-c-text-2);
-  opacity: 0.85;
+  opacity: 0.75;
 }
 
 .stamina-char.correct {
@@ -1207,38 +1096,37 @@ watch(() => currentLesson.value, () => {
   color: #fff;
   background: #e06c75;
   border-radius: 3px;
-  text-decoration: underline;
 }
 
 .stamina-char.active {
   color: var(--vp-c-text-1);
-  background: rgba(0, 102, 184, 0.2);
+  background: rgba(0, 102, 184, 0.25);
   border-bottom: 3px solid var(--vp-c-brand-1);
   font-weight: 700;
-  animation: pulse 1s infinite alternate;
+  animation: charPulse 0.9s infinite alternate;
 }
 
 .stamina-char.active.space {
-  background: rgba(0, 102, 184, 0.3);
+  background: rgba(0, 102, 184, 0.35);
   display: inline-block;
-  min-width: 0.6em;
+  min-width: 0.55em;
 }
 
 .stream-hint {
   position: absolute;
-  right: 18px;
-  bottom: 14px;
+  right: 14px;
+  bottom: 8px;
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--vp-c-text-3);
   pointer-events: none;
 }
 
-@keyframes pulse {
+@keyframes charPulse {
   from { box-shadow: 0 0 0 rgba(0, 102, 184, 0); }
-  to { box-shadow: 0 0 8px rgba(0, 102, 184, 0.5); }
+  to { box-shadow: 0 0 6px rgba(0, 102, 184, 0.6); }
 }
 
 /* FINGER GUIDE */
@@ -1248,100 +1136,106 @@ watch(() => currentLesson.value, () => {
   align-items: center;
   background: var(--ax-card);
   border: 1px solid var(--ax-line);
-  border-radius: 12px;
-  padding: 10px 16px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-  gap: 10px;
+  border-radius: 10px;
+  padding: 6px 14px;
+  font-size: 0.88rem;
 }
 
 .fg-info {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.95rem;
+  gap: 8px;
 }
 
 .fg-dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   display: inline-block;
 }
 
-.fg-hint {
-  font-size: 0.85rem;
+.fg-target {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: var(--vp-c-text-2);
 }
 
-/* VIRTUAL KEYBOARD */
+.target-badge {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-family: monospace;
+}
+
+/* KEYBOARD */
 .stamina-keyboard {
   background: var(--ax-card);
   border: 1px solid var(--ax-line);
-  border-radius: 16px;
-  padding: 16px;
+  border-radius: 14px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 5px;
   user-select: none;
   box-shadow: var(--ax-shadow);
 }
 
 .kb-row {
   display: flex;
-  gap: 6px;
+  gap: 5px;
   justify-content: center;
 }
 
 .kb-key {
   position: relative;
-  height: 48px;
+  height: 40px;
   background: var(--vp-c-bg);
   border: 1px solid var(--ax-line);
-  border-radius: 8px;
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--vp-c-text-1);
-  box-shadow: 0 2px 0 var(--ax-line);
+  box-shadow: 0 1.5px 0 var(--ax-line);
   transition: all 0.08s ease;
 }
 
 .k-top {
-  font-size: 0.65rem;
-  opacity: 0.6;
+  font-size: 0.6rem;
+  opacity: 0.55;
   margin-bottom: -2px;
 }
 
 .k-main {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 .k-bump {
   position: absolute;
-  bottom: 2px;
-  font-size: 0.9rem;
+  bottom: 1px;
+  font-size: 0.8rem;
   font-weight: bold;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
-/* Finger color subtle tints */
-.finger-lp, .finger-rp { border-bottom: 3px solid #e06c75; }
-.finger-lr, .finger-rr { border-bottom: 3px solid #d19a66; }
-.finger-lm, .finger-rm { border-bottom: 3px solid #e5c07b; }
-.finger-li, .finger-ri { border-bottom: 3px solid #98c379; }
-.finger-thumb { border-bottom: 3px solid #c678dd; }
+.finger-lp, .finger-rp { border-bottom: 2.5px solid #e06c75; }
+.finger-lr, .finger-rr { border-bottom: 2.5px solid #d19a66; }
+.finger-lm, .finger-rm { border-bottom: 2.5px solid #e5c07b; }
+.finger-li, .finger-ri { border-bottom: 2.5px solid #98c379; }
+.finger-thumb { border-bottom: 2.5px solid #c678dd; }
 
-/* Target & Pressed states */
 .key-target {
   background: linear-gradient(135deg, #0e70c0, #2392dc) !important;
   color: #fff !important;
   border-color: #0e70c0 !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(14, 112, 192, 0.45) !important;
+  box-shadow: 0 3px 8px rgba(14, 112, 192, 0.45) !important;
   animation: keyPulse 0.8s infinite alternate;
 }
 
@@ -1353,7 +1247,7 @@ watch(() => currentLesson.value, () => {
 }
 
 .key-pressed {
-  transform: translateY(2px) !important;
+  transform: translateY(1.5px) !important;
   box-shadow: 0 0 0 transparent !important;
   background: var(--vp-c-brand-soft) !important;
 }
@@ -1363,7 +1257,7 @@ watch(() => currentLesson.value, () => {
   to { filter: brightness(1.2); }
 }
 
-/* RESULTS MODAL */
+/* LESSON SELECTOR MODAL */
 .stamina-modal-overlay {
   position: fixed;
   inset: 0;
@@ -1376,12 +1270,179 @@ watch(() => currentLesson.value, () => {
   padding: 16px;
 }
 
+.stamina-lesson-modal {
+  background: var(--vp-c-bg);
+  border: 1px solid var(--ax-line);
+  border-radius: 18px;
+  width: 100%;
+  max-width: 680px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  animation: modalPop 0.2s ease-out;
+}
+
+.slm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--ax-line);
+}
+
+.slm-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.slm-close {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.slm-close:hover {
+  background: var(--ax-card-hi);
+  color: var(--vp-c-text-1);
+}
+
+.slm-cats {
+  display: flex;
+  gap: 6px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--ax-line);
+  background: var(--ax-card);
+  overflow-x: auto;
+}
+
+.slm-cat-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.slm-cat-tab:hover {
+  background: var(--ax-card-hi);
+  color: var(--vp-c-text-1);
+}
+
+.slm-cat-tab.active {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  border-color: rgba(0, 102, 184, 0.25);
+}
+
+.slm-body {
+  padding: 18px 20px;
+  overflow-y: auto;
+  max-height: 55vh;
+}
+
+.slm-lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+}
+
+.slm-lesson-card {
+  text-align: left;
+  background: var(--ax-card);
+  border: 1px solid var(--ax-line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.slm-lesson-card:hover {
+  border-color: var(--vp-c-brand-1);
+  background: var(--ax-card-hi);
+  transform: translateY(-1px);
+}
+
+.slm-lesson-card.active {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+
+.slm-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.slm-idx {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.slm-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--vp-c-text-1);
+}
+
+.slm-desc {
+  font-size: 0.78rem;
+  color: var(--vp-c-text-2);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.slm-custom-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.slm-custom-box textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--ax-line);
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+/* RESULTS MODAL */
 .stamina-modal {
   background: var(--vp-c-bg);
   border: 1px solid var(--ax-line);
   border-radius: 20px;
-  padding: 32px;
-  max-width: 520px;
+  padding: 28px;
+  max-width: 480px;
   width: 100%;
   text-align: center;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
@@ -1389,7 +1450,7 @@ watch(() => currentLesson.value, () => {
 }
 
 @keyframes modalPop {
-  from { transform: scale(0.9); opacity: 0; }
+  from { transform: scale(0.92); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
 
@@ -1398,7 +1459,7 @@ watch(() => currentLesson.value, () => {
   justify-content: center;
   gap: 6px;
   font-size: 2rem;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .sm-stars .star {
@@ -1410,26 +1471,26 @@ watch(() => currentLesson.value, () => {
 }
 
 .sm-header h2 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 800;
-  margin: 0 0 6px;
+  margin: 0 0 4px;
 }
 
 .sm-sub {
   color: var(--vp-c-text-2);
-  margin: 0 0 20px;
-  font-size: 0.95rem;
+  margin: 0 0 16px;
+  font-size: 0.9rem;
 }
 
 .sm-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 10px;
   background: var(--ax-card);
   border: 1px solid var(--ax-line);
-  border-radius: 14px;
-  padding: 16px;
-  margin-bottom: 24px;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 20px;
 }
 
 .sm-stat {
@@ -1438,13 +1499,13 @@ watch(() => currentLesson.value, () => {
 }
 
 .sm-lbl {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--vp-c-text-2);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .sm-val {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 800;
 }
 
@@ -1455,16 +1516,19 @@ watch(() => currentLesson.value, () => {
 .sm-actions {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
   .stamina-keyboard {
-    display: none; /* Hide heavy keyboard on small mobile screens */
+    display: none;
   }
   .stream-inner {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
+  }
+  .stamina-hud {
+    gap: 10px;
   }
 }
 </style>
