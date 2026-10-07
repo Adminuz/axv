@@ -4,6 +4,7 @@ import { useData, withBase } from 'vitepress'
 import Icon from './Icon.vue'
 import Crumbs from './Crumbs.vue'
 import TypingTrainer from './TypingTrainer.vue'
+import FoundationLab from './FoundationLab.vue'
 
 const { frontmatter } = useData()
 const kind = computed(() => frontmatter.value.kind)
@@ -17,6 +18,9 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
 <template>
   <!-- KLAVIATURA TRENAJYORI (STAMINA) -->
   <TypingTrainer v-if="kind === 'trenajyor'" />
+
+  <!-- CS LABORATORIYA -->
+  <FoundationLab v-else-if="kind === 'foundation'" />
 
   <!-- BOSH SAHIFA / MENTOR BOSH SAHIFA -->
   <div v-else-if="kind === 'home' || kind === 'mentor_home'" class="axv">
