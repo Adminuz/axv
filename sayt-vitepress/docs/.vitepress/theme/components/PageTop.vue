@@ -31,6 +31,28 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
       <p class="tag">{{ home.tag }}</p>
       <p class="tag2">{{ home.tag2 }}</p>
     </section>
+
+    <!-- INTERAKTIV TRENAJYORLAR VA LABORATORIYALAR -->
+    <div v-if="kind === 'home'" class="interactive-tools-banner">
+      <a :href="withBase('/trenajyor/')" class="tool-banner-card">
+        <span class="tbc-icon"><Icon name="keyboard" /></span>
+        <div class="tbc-text">
+          <h3>Klaviatura trenajyori</h3>
+          <p>10 barmoq bilan tez va xatosiz yozishni o'rganing (ovoz profillari, WPM tezlik va yutuqlar)</p>
+        </div>
+        <span class="tbc-arrow"><Icon name="arrow-right" /></span>
+      </a>
+
+      <a :href="withBase('/foundation/')" class="tool-banner-card lab">
+        <span class="tbc-icon"><Icon name="binary" /></span>
+        <div class="tbc-text">
+          <h3>CS Laboratoriya</h3>
+          <p>9 ta interaktiv modul: Ikkilik sanoq, mantiqiy darvozalar, xotira, algoritmlar, Git va kripto</p>
+        </div>
+        <span class="tbc-arrow"><Icon name="arrow-right" /></span>
+      </a>
+    </div>
+
     <h2 class="sec-title">{{ kind === 'mentor_home' ? 'Sinfni tanlang (Mentor rejasi)' : 'Sinfingizni tanlang' }}</h2>
     <div class="tiles">
       <component
