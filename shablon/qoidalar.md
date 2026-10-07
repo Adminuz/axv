@@ -140,6 +140,7 @@ Faqat `reveal/dars.css` da bor CSS sinflarini ishlat. `browser-bar`, `vs-a`, `te
 Har tayyor hafta uchun **4 ta test fayli** yoziladi (slaydlar bilan bir papkada, xuddi shu qoidalar: faqat `<section>`lar, `.quiz` bloki):
 
 - `dars-K-test-slaydlar.html` — shu darsning **10 ta** savoli (K = 1–3).
+- Test fayllari (`*-test-slaydlar.html`) — manba; `slayd_yigish.py` ularni slayd emas, telefonga mos **quiz sahifasi** (`*-test-slayd.html`, `quiz_yigish.py`) qilib yig'adi.
 - `hafta-test-slaydlar.html` — butun haftaning **20 ta** savoli: har darsdan 5–6 ta (darsdagi testlarni takrorlama, yangi savollar) + 3–4 ta darslarni bog'laydigan savol.
 
 Tuzilma: 1-slayd `hero` (logo-big, sarlavha «N-dars testi» / «N-hafta testi», 10 yoki 20 savol, taxminiy vaqt) → har savol alohida `<section>` (`<h2>Savol i/10</h2>` + `.quiz`) → oxirgi `<section>`: xulosa (`Natijangiz`, nimani takrorlash kerak).

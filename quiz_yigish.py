@@ -1,13 +1,10 @@
-<!doctype html>
-<html lang="uz">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark light">
-<title>1-dars testi</title>
-<link rel="icon" href="../../../reveal/logo.png">
-<script src="../../../reveal/tema.js"></script>
-<style>
+#!/usr/bin/env python3
+"""Test slaydlari (*-test-slaydlar.html) dan telefonga mos mustaqil QUIZ sahifasi yasaydi.
+slayd_yigish.wrap() tarkibida `class="quiz"` bo'lsa shu modulni chaqiradi."""
+import html, json, re
+from bs4 import BeautifulSoup
+
+CSS = r"""
 :root{--bg:#fff;--fg:#1e1e1e;--mut:#667;--card:#f4f5f7;--bd:#d5d8de;--ac:#2a6df4;--ok:#1a8f4a;--okbg:#e3f6ea;--no:#c62828;--nobg:#fdeaea}
 [data-theme=dark]{--bg:#1e1e1e;--fg:#eee;--mut:#9aa;--card:#2a2b2e;--bd:#44464b;--ac:#5b9bff;--ok:#4cc77f;--okbg:#17321f;--no:#ff7b72;--nobg:#3a1c1c}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
@@ -43,19 +40,9 @@ code{font-family:ui-monospace,Consolas,monospace;background:var(--card);border:1
 .theme-toggle{position:fixed;top:10px;right:10px;width:38px;height:38px;border-radius:50%;border:1px solid var(--bd);background:var(--card);color:var(--fg);padding:0;display:grid;place-items:center;z-index:5;cursor:pointer}.theme-toggle svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}.sun{display:none}[data-theme=dark] .sun{display:block}[data-theme=dark] .moon{display:none}
 header{padding-right:48px}.opt{-webkit-tap-highlight-color:transparent;user-select:none}
 @media(min-width:700px){body{font-size:18px}.wrap{padding-top:32px}}
-</style>
-</head>
-<body>
-<div class="wrap">
-<header><img src="../../../reveal/logo.png" alt="AXV"><h1>1-dars testi</h1></header>
-<div class="badges"><span class="badge">9-sinf</span><span class="badge">UX/UI dizayn va Advanced Front-end</span><span class="badge">3-hafta</span><span class="badge">10 ta savol · taxminan 8 daqiqa</span></div>
-<div class="bar"><i id="fill"></i></div>
-<div class="meta"><span id="cnt"></span><span id="sc"></span></div>
-<main id="card"></main>
-</div>
-<div class="foot"><div><button class="btn" id="next" type="button" disabled>Keyingi savol</button></div></div>
-<script type="application/json" id="qdata">[{"q": "Interaktiv wireframe nima?", "o": ["Bosishga javob beradigan, harakatdagi karkas model", "Faqat rangli rasm", "Bosma varaq", "Kod fayli"], "a": 0, "e": "Statik chizmadan farqli, u chertiladi (clickable)."}, {"q": "Axure RP da Interaction qaysi tartibda tuziladi?", "o": ["Target, Color, Font", "Trigger, Action, Target", "Action, Print, Save", "Page, Image, Text"], "a": 1, "e": "Hodisa, harakat va ta'sir qiluvchi nishon."}, {"q": "Quyidagilardan qaysi biri Trigger (hodisa)?", "o": ["Open Link", "Set Panel State", "OnClick", "Show/Hide"], "a": 2, "e": "OnClick va OnMouseEnter hodisalar, Open Link esa harakat."}, {"q": "Sahifalararo o'tish uchun qaysi Action ishlatiladi?", "o": ["Set Panel State", "Set Opacity", "Print Page", "Open Link"], "a": 3, "e": "Home_books dan Book_details ga o'tish Open Link orqali bajariladi."}, {"q": "Dynamic Panel nima?", "o": ["Bir joyda bir nechta holatni (States) saqlay oluvchi konteyner", "Rasm formati", "Parol turi", "Brauzer nomi"], "a": 0, "e": "U tablar, modal oynalar va slayderlar uchun ishlatiladi."}, {"q": "Dynamic Panel ning hayotiy analogiyasi qaysi?", "o": ["Uy qurilishi", "Ramka bir xil, ichidagi rasm almashadi", "Svetofor", "Eshik qulfi"], "a": 1, "e": "Ramka o'zgarmaydi, ichidagi holat almashadi."}, {"q": "Kitob sahifasida 3 ta tab (Annotatsiya, Muallif haqida, Fikrlar) uchun nechta State kerak?", "o": ["1 ta", "10 ta", "3 ta", "Hech nechta"], "a": 2, "e": "Har bir tab uchun alohida State yaratiladi."}, {"q": "Nega tablarni yangi sahifa ochmasdan Dynamic Panel bilan qilish qulayroq?", "o": ["Sahifa soni ko'payadi", "Rang yo'qoladi", "Dastur sekinlashadi", "Sahifa qayta ochilmaydi, interfeys tezkor va silliq ishlaydi"], "a": 3, "e": "Bu foydalanuvchi tajribasini yaxshilaydi."}, {"q": "Preview (Ko'rib chiqish) rejimi nima uchun kerak?", "o": ["Prototipni brauzerda haqiqiy dastur kabi sinash uchun", "Faylni o'chirish uchun", "Rangni almashtirish uchun", "Kod yozish uchun"], "a": 0, "e": "Preview interaktivlikni tekshiradi."}, {"q": "Foydalanuvchi sahifani aylantirganda Header yo'qolmasligi uchun qaysi tamoyil qo'llanadi?", "o": ["Elementni o'chirish", "Elementni qotirish (Pin to Browser kabi)", "Uni kichraytirish", "Rangni oq qilish"], "a": 1, "e": "Pastki navigatsiya paneli ham xuddi shunday qotiriladi."}]</script>
-<script>
+"""
+
+JS = r"""
 (function(){
 var Q=JSON.parse(document.getElementById('qdata').textContent),i=0,score=0,wrong=[],done=false;
 var $=function(s){return document.querySelector(s)},card=$('#card'),next=$('#next');
@@ -96,6 +83,48 @@ document.addEventListener('keydown',function(e){
 });
 show();
 })();
-</script>
+"""
+
+def inner(el):
+    return "".join(str(c) for c in el.contents).strip()
+
+def build(content, up):
+    soup = BeautifulSoup(content, "html.parser")
+    h1 = soup.find("h1")
+    title = h1.get_text(" ", strip=True) if h1 else "Test"
+    muted = soup.find(class_="muted")
+    sub = muted.get_text(" ", strip=True) if muted else ""
+    badges = [b.get_text(strip=True) for b in soup.select(".hero .badge")]
+    qs = []
+    for qz in soup.select(".quiz"):
+        opts = qz.select(".opt")
+        ok = next((k for k, o in enumerate(opts) if o.has_attr("data-ok")), 0)
+        ex = qz.select_one(".explain")
+        qs.append({"q": inner(qz.select_one(".q")), "o": [inner(o) for o in opts], "a": ok, "e": inner(ex) if ex else ""})
+    data = json.dumps(qs, ensure_ascii=False).replace("</", "<\\/")
+    bh = "".join(f'<span class="badge">{html.escape(b)}</span>' for b in badges)
+    return f"""<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>{html.escape(title, quote=False)}</title>
+<link rel="icon" href="{up}reveal/logo.png">
+<script src="{up}reveal/tema.js"></script>
+<style>{CSS}</style>
+</head>
+<body>
+<div class="wrap">
+<header><img src="{up}reveal/logo.png" alt="AXV"><h1>{html.escape(title, quote=False)}</h1></header>
+<div class="badges">{bh}<span class="badge">{html.escape(sub, quote=False)}</span></div>
+<div class="bar"><i id="fill"></i></div>
+<div class="meta"><span id="cnt"></span><span id="sc"></span></div>
+<main id="card"></main>
+</div>
+<div class="foot"><div><button class="btn" id="next" type="button" disabled>Keyingi savol</button></div></div>
+<script type="application/json" id="qdata">{data}</script>
+<script>{JS}</script>
 </body>
 </html>
+"""

@@ -27,6 +27,9 @@ def title_of(content):
 
 def wrap(content, up, title=None):
     """content: faqat <section>lar. up: reveal/ papkasigacha nisbiy yo'l prefiksi (masalan '../../../')."""
+    if 'class="quiz"' in content:  # test fayllari: slayd emas, telefonga mos quiz sahifasi
+        from quiz_yigish import build as quiz_build
+        return quiz_build(content, up)
     shell = SHELL.read_text(encoding="utf-8")
     title = title or title_of(content)
     return (shell.replace("{{TITLE}}", html.escape(title, quote=False))
