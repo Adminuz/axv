@@ -165,6 +165,8 @@ const showLessonModal = ref<boolean>(false)
 const customTextInput = ref<string>('')
 const isCustomMode = computed(() => activeCategory.value === 'custom')
 
+const streamBoxRef = ref<HTMLElement | null>(null)
+
 const currentCategory = computed(() => CATEGORIES.find(c => c.id === activeCategory.value) || CATEGORIES[0])
 const currentLesson = computed(() => {
   if (isCustomMode.value) {
@@ -531,6 +533,9 @@ const resetLesson = () => {
   totalKeystrokes.value = 0
   elapsedTimeSec.value = 0
   pressedKey.value = null
+  if (streamBoxRef.value) {
+    streamBoxRef.value.scrollTop = 0
+  }
 }
 
 const selectCategory = (catId: string) => {
@@ -550,7 +555,6 @@ const selectLesson = (lesId: string) => {
 
 // Key handler
 const handleKeyDown = (e: KeyboardEvent) => {
-  // If modal is open, ignore
   if (showLessonModal.value) return
 
   if (['Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'Tab'].includes(e.key)) {
@@ -595,10 +599,16 @@ const handleKeyDown = (e: KeyboardEvent) => {
     playKeySound(true)
   }
 
+  // Pure internal container scroll without affecting outer window/page
   nextTick(() => {
-    const activeEl = document.querySelector('.stamina-char.active')
-    if (activeEl) {
-      activeEl.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' })
+    if (streamBoxRef.value) {
+      const activeEl = streamBoxRef.value.querySelector('.stamina-char.active') as HTMLElement
+      if (activeEl) {
+        const relativeTop = activeEl.offsetTop
+        if (relativeTop > streamBoxRef.value.clientHeight / 2) {
+          streamBoxRef.value.scrollTop = relativeTop - (streamBoxRef.value.clientHeight / 3)
+        }
+      }
     }
   })
 }
@@ -676,126 +686,151 @@ watch(() => currentLesson.value, () => {
 </script>
 
 <template>
-  <div class="stamina-screen">
-    <!-- COMPACT TOP BAR: SELECTOR + HUD METRICS + ACTIONS -->
-    <header class="stamina-top-bar">
-      <!-- Lesson selector trigger -->
-      <button class="stamina-btn-select" @click="showLessonModal = true">
-        <span class="sbs-cat"><Icon :name="currentCategory.icon" /> {{ currentCategory.title }}</span>
-        <span class="sbs-div">·</span>
-        <span class="sbs-les">{{ currentLesson.title }}</span>
-        <span class="sbs-arrow">▾</span>
-      </button>
+  <div class="stamina-wrapper">
+    <div class="stamina-app">
+      <!-- TOP CONTROLS & BREADCRUMBS -->
+      <div class="stamina-header-bar">
+        <Crumbs :items="[{ t: 'Bosh sahifa', l: '/' }, { t: 'Klaviatura trenajyori' }]" />
 
-      <!-- Live HUD Metrics -->
-      <div class="stamina-hud">
-        <div class="hud-item">
-          <span class="hud-num">{{ wpm }}</span>
-          <span class="hud-lbl">WPM</span>
+        <div class="stamina-top-controls">
+          <!-- Lesson selector trigger -->
+          <button class="stamina-btn-select" @click="showLessonModal = true">
+            <span class="sbs-cat"><Icon :name="currentCategory.icon" /> {{ currentCategory.title }}</span>
+            <span class="sbs-div">·</span>
+            <span class="sbs-les">{{ currentLesson.title }}</span>
+            <span class="sbs-arrow">▾</span>
+          </button>
+
+          <!-- Quick Action Controls -->
+          <div class="stamina-quick-actions">
+            <button
+              class="icon-btn"
+              :class="{ active: soundEnabled }"
+              @click="soundEnabled = !soundEnabled"
+              :title="soundEnabled ? 'Ovozni o\'chirish' : 'Ovozni yoqish'"
+            >
+              <Icon :name="soundEnabled ? 'volume-2' : 'volume-x'" />
+            </button>
+            <button
+              class="icon-btn"
+              :class="{ active: showKeyboard }"
+              @click="showKeyboard = !showKeyboard"
+              :title="showKeyboard ? 'Klaviaturani yashirish' : 'Klaviaturani ko\'rsatish'"
+            >
+              <Icon name="keyboard" />
+            </button>
+            <button class="icon-btn" @click="resetLesson" title="Qayta boshlash">
+              <Icon name="rotate-ccw" />
+            </button>
+          </div>
         </div>
-        <div class="hud-item">
-          <span class="hud-num" :style="{ color: accuracy >= 95 ? 'var(--ax-good)' : 'inherit' }">{{ accuracy }}%</span>
-          <span class="hud-lbl">Aniqlik</span>
+      </div>
+
+      <!-- CENTERED BEAUTIFUL METRIC CARDS (ROCK-SOLID FIXED SIZES) -->
+      <div class="stamina-metrics-row">
+        <div class="metric-card">
+          <div class="m-icon"><Icon name="zap" /></div>
+          <div class="m-content">
+            <div class="m-num">{{ wpm }}</div>
+            <div class="m-lbl">WPM (so'z/daq)</div>
+          </div>
         </div>
-        <div class="hud-item">
-          <span class="hud-num">{{ Math.floor(elapsedTimeSec / 60) }}:{{ (elapsedTimeSec % 60).toString().padStart(2, '0') }}</span>
-          <span class="hud-lbl">Vaqt</span>
+        <div class="metric-card">
+          <div class="m-icon"><Icon name="gauge" /></div>
+          <div class="m-content">
+            <div class="m-num">{{ cpm }}</div>
+            <div class="m-lbl">CPM (belgi/daq)</div>
+          </div>
         </div>
-        <div class="hud-item">
-          <span class="hud-num error-num">{{ errorCount }}</span>
-          <span class="hud-lbl">Xato</span>
+        <div class="metric-card">
+          <div class="m-icon"><Icon name="target" /></div>
+          <div class="m-content">
+            <div class="m-num" :style="{ color: accuracy >= 95 ? 'var(--ax-good)' : 'inherit' }">{{ accuracy }}%</div>
+            <div class="m-lbl">Aniqlik</div>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="m-icon"><Icon name="timer" /></div>
+          <div class="m-content">
+            <div class="m-num">{{ Math.floor(elapsedTimeSec / 60) }}:{{ (elapsedTimeSec % 60).toString().padStart(2, '0') }}</div>
+            <div class="m-lbl">Vaqt</div>
+          </div>
+        </div>
+        <div class="metric-card">
+          <div class="m-icon"><Icon name="circle-question-mark" /></div>
+          <div class="m-content">
+            <div class="m-num error-num">{{ errorCount }}</div>
+            <div class="m-lbl">Xatolar</div>
+          </div>
         </div>
       </div>
 
-      <!-- Quick Action Controls -->
-      <div class="stamina-actions">
-        <button
-          class="icon-btn"
-          :class="{ active: soundEnabled }"
-          @click="soundEnabled = !soundEnabled"
-          :title="soundEnabled ? 'Ovozni o\'chirish' : 'Ovozni yoqish'"
-        >
-          <Icon :name="soundEnabled ? 'volume-2' : 'volume-x'" />
-        </button>
-        <button
-          class="icon-btn"
-          :class="{ active: showKeyboard }"
-          @click="showKeyboard = !showKeyboard"
-          :title="showKeyboard ? 'Klaviaturani yashirish' : 'Klaviaturani ko\'rsatish'"
-        >
-          <Icon name="keyboard" />
-        </button>
-        <button class="icon-btn" @click="resetLesson" title="Qayta boshlash">
-          <Icon name="rotate-ccw" />
-        </button>
+      <!-- SLIM PROGRESS BAR -->
+      <div class="stamina-progress-bar">
+        <div class="spb-inner" :style="{ width: progressPct + '%' }"></div>
       </div>
-    </header>
 
-    <!-- SLIM PROGRESS BAR -->
-    <div class="stamina-progress-bar">
-      <div class="spb-inner" :style="{ width: progressPct + '%' }"></div>
-    </div>
+      <!-- MAIN INPUT / STREAM BOX (ROCK SOLID HEIGHT & SMOOTH TYPING) -->
+      <div ref="streamBoxRef" class="stamina-stream-box" tabindex="0">
+        <div class="stream-inner">
+          <span
+            v-for="(char, idx) in targetText"
+            :key="idx"
+            class="stamina-char"
+            :class="[
+              charStatus[idx],
+              { active: idx === currentIndex },
+              { space: char === ' ' },
+              { newline: char === '\n' }
+            ]"
+          >
+            <template v-if="char === ' '">&nbsp;</template>
+            <template v-else-if="char === '\n'">↵<br /></template>
+            <template v-else>{{ char }}</template>
+          </span>
+        </div>
+        <div v-if="!isStarted && !isFinished" class="stream-hint">
+          <Icon name="play" /> Tugmalarni bosib yozishni boshlang...
+        </div>
+      </div>
 
-    <!-- MAIN TYPING STREAM BOX (LARGE, CRISP, FOCUSED) -->
-    <div class="stamina-stream-box" tabindex="0">
-      <div class="stream-inner">
-        <span
-          v-for="(char, idx) in targetText"
-          :key="idx"
-          class="stamina-char"
-          :class="[
-            charStatus[idx],
-            { active: idx === currentIndex },
-            { space: char === ' ' },
-            { newline: char === '\n' }
-          ]"
-        >
-          <template v-if="char === ' '">&nbsp;</template>
-          <template v-else-if="char === '\n'">↵<br /></template>
-          <template v-else>{{ char }}</template>
-        </span>
+      <!-- FINGER & KEY HELPER BAR -->
+      <div class="stamina-finger-guide">
+        <div class="fg-info">
+          <span class="fg-dot" :style="{ background: currentFingerGuide.color }"></span>
+          <span class="fg-text">
+            Tavsiya etilgan barmoq: <b>{{ currentFingerGuide.finger }}</b>
+            <template v-if="isTargetShift"> (Shift bilan)</template>
+          </span>
+        </div>
+        <div class="fg-target">
+          Bosiladigan belgi:
+          <span class="target-badge">
+            {{ currentChar === ' ' ? 'Space (Bo\'sh joy)' : currentChar === '\n' ? 'Enter ↵' : currentChar }}
+          </span>
+        </div>
       </div>
-      <div v-if="!isStarted && !isFinished" class="stream-hint">
-        <Icon name="play" /> Tugmalarni bosib yozishni boshlang...
-      </div>
-    </div>
 
-    <!-- FINGER & KEY HELPER BAR -->
-    <div class="stamina-finger-guide">
-      <div class="fg-info">
-        <span class="fg-dot" :style="{ background: currentFingerGuide.color }"></span>
-        <span class="fg-text">
-          Barmoq: <b>{{ currentFingerGuide.finger }}</b>
-          <template v-if="isTargetShift"> (Shift bilan)</template>
-        </span>
-      </div>
-      <div class="fg-target">
-        Bosiladigan belgi:
-        <span class="target-badge">
-          {{ currentChar === ' ' ? 'Space (Bo\'sh joy)' : currentChar === '\n' ? 'Enter ↵' : currentChar }}
-        </span>
-      </div>
-    </div>
-
-    <!-- ERGONOMIC ON-SCREEN VIRTUAL KEYBOARD -->
-    <div v-if="showKeyboard" class="stamina-keyboard">
-      <div v-for="(row, rIdx) in KEYBOARD_ROWS" :key="rIdx" class="kb-row">
-        <div
-          v-for="k in row"
-          :key="k.key"
-          class="kb-key"
-          :class="[
-            `finger-${k.finger}`,
-            { 'key-target': isTargetKey(k) },
-            { 'key-shift-target': isTargetShift && (k.code === 'ShiftLeft' || k.code === 'ShiftRight') },
-            { 'key-pressed': pressedKey === k.key || pressedKey === k.code },
-            { 'key-home': k.home }
-          ]"
-          :style="{ flex: k.w || '1' }"
-        >
-          <div class="k-top" v-if="k.shift && k.shift !== k.key">{{ k.shift }}</div>
-          <div class="k-main">{{ k.label || k.key.toUpperCase() }}</div>
-          <div class="k-bump" v-if="k.home">_</div>
+      <!-- ENLARGED & ROCK-SOLID KEYBOARD -->
+      <div v-if="showKeyboard" class="stamina-keyboard">
+        <div v-for="(row, rIdx) in KEYBOARD_ROWS" :key="rIdx" class="kb-row">
+          <div
+            v-for="k in row"
+            :key="k.key"
+            class="kb-key"
+            :class="[
+              `finger-${k.finger}`,
+              { 'key-target': isTargetKey(k) },
+              { 'key-shift-target': isTargetShift && (k.code === 'ShiftLeft' || k.code === 'ShiftRight') },
+              { 'key-pressed': pressedKey === k.key || pressedKey === k.code },
+              { 'key-home': k.home }
+            ]"
+            :style="{ flex: k.w || '1' }"
+          >
+            <div class="k-top" v-if="k.shift && k.shift !== k.key">{{ k.shift }}</div>
+            <div class="k-main">{{ k.label || k.key.toUpperCase() }}</div>
+            <div class="k-bump" v-if="k.home">_</div>
+          </div>
         </div>
       </div>
     </div>
@@ -907,40 +942,51 @@ watch(() => currentLesson.value, () => {
 </template>
 
 <style scoped>
-.stamina-screen {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 4px 12px 16px;
+.stamina-wrapper {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: center;
+  padding: 0 12px 16px;
 }
 
-/* TOP BAR */
-.stamina-top-bar {
+.stamina-app {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* TOP HEADER & CONTROLS */
+.stamina-header-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  background: var(--ax-card);
-  border: 1px solid var(--ax-line);
-  border-radius: 12px;
-  padding: 8px 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-height: 42px;
+}
+
+.stamina-top-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .stamina-btn-select {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--vp-c-bg);
+  background: var(--ax-card);
   border: 1px solid var(--ax-line);
   padding: 6px 14px;
-  border-radius: 8px;
+  border-radius: 10px;
   color: var(--vp-c-text-1);
   font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.15s ease;
+  height: 38px;
 }
 
 .stamina-btn-select:hover {
@@ -971,39 +1017,7 @@ watch(() => currentLesson.value, () => {
   font-size: 0.8rem;
 }
 
-/* HUD METRICS */
-.stamina-hud {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.hud-item {
-  display: flex;
-  align-items: baseline;
-  gap: 5px;
-}
-
-.hud-num {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--vp-c-text-1);
-  line-height: 1;
-}
-
-.hud-lbl {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--vp-c-text-2);
-}
-
-.error-num {
-  color: #e06c75;
-}
-
-/* ACTIONS */
-.stamina-actions {
+.stamina-quick-actions {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -1013,10 +1027,10 @@ watch(() => currentLesson.value, () => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  background: var(--vp-c-bg);
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--ax-card);
   border: 1px solid var(--ax-line);
   color: var(--vp-c-text-2);
   cursor: pointer;
@@ -1034,12 +1048,74 @@ watch(() => currentLesson.value, () => {
   color: var(--vp-c-brand-1);
 }
 
-/* PROGRESS */
+/* CENTERED METRICS ROW (FIXED STABLE BOXES) */
+.stamina-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.metric-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--ax-card);
+  border: 1px solid var(--ax-line);
+  border-radius: 12px;
+  padding: 8px 14px;
+  height: 56px;
+  box-sizing: border-box;
+}
+
+.m-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.m-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.m-num {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--vp-c-text-1);
+  font-variant-numeric: tabular-nums;
+}
+
+.m-lbl {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--vp-c-text-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.error-num {
+  color: #e06c75;
+}
+
+/* PROGRESS BAR */
 .stamina-progress-bar {
   height: 4px;
   background: var(--ax-line);
   border-radius: 999px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .spb-inner {
@@ -1048,19 +1124,20 @@ watch(() => currentLesson.value, () => {
   transition: width 0.15s ease;
 }
 
-/* TYPING STREAM BOX (FOCUSED & CLEAN) */
+/* TYPING STREAM BOX (FROZEN HEIGHT, CLEAN MONOSPACE) */
 .stamina-stream-box {
   position: relative;
   background: var(--vp-c-bg-alt);
   border: 2px solid var(--ax-line);
   border-radius: 14px;
-  padding: 18px 24px;
-  min-height: 110px;
-  max-height: 140px;
-  overflow-y: auto;
+  padding: 16px 22px;
+  height: 110px;
+  box-sizing: border-box;
+  overflow-y: hidden;
   outline: none;
   cursor: text;
   transition: border-color 0.2s, box-shadow 0.2s;
+  flex-shrink: 0;
 }
 
 .stamina-stream-box:focus {
@@ -1075,17 +1152,17 @@ watch(() => currentLesson.value, () => {
   letter-spacing: 0.05em;
   white-space: pre-wrap;
   word-break: break-word;
+  user-select: none;
 }
 
 .stamina-char {
   position: relative;
   border-radius: 3px;
-  transition: background-color 0.1s, color 0.1s;
 }
 
 .stamina-char.pending {
   color: var(--vp-c-text-2);
-  opacity: 0.75;
+  opacity: 0.7;
 }
 
 .stamina-char.correct {
@@ -1103,7 +1180,7 @@ watch(() => currentLesson.value, () => {
   background: rgba(0, 102, 184, 0.25);
   border-bottom: 3px solid var(--vp-c-brand-1);
   font-weight: 700;
-  animation: charPulse 0.9s infinite alternate;
+  box-shadow: 0 0 8px rgba(0, 102, 184, 0.5);
 }
 
 .stamina-char.active.space {
@@ -1124,12 +1201,7 @@ watch(() => currentLesson.value, () => {
   pointer-events: none;
 }
 
-@keyframes charPulse {
-  from { box-shadow: 0 0 0 rgba(0, 102, 184, 0); }
-  to { box-shadow: 0 0 6px rgba(0, 102, 184, 0.6); }
-}
-
-/* FINGER GUIDE */
+/* FINGER & KEY INDICATOR BAR */
 .stamina-finger-guide {
   display: flex;
   justify-content: space-between;
@@ -1138,7 +1210,10 @@ watch(() => currentLesson.value, () => {
   border: 1px solid var(--ax-line);
   border-radius: 10px;
   padding: 6px 14px;
+  height: 38px;
+  box-sizing: border-box;
   font-size: 0.88rem;
+  flex-shrink: 0;
 }
 
 .fg-info {
@@ -1164,97 +1239,90 @@ watch(() => currentLesson.value, () => {
 .target-badge {
   background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
-  padding: 2px 8px;
+  padding: 2px 10px;
   border-radius: 6px;
   font-weight: 700;
   font-family: monospace;
 }
 
-/* KEYBOARD */
+/* ROCK-SOLID ERGONOMIC KEYBOARD */
 .stamina-keyboard {
   background: var(--ax-card);
   border: 1px solid var(--ax-line);
   border-radius: 14px;
-  padding: 10px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   user-select: none;
   box-shadow: var(--ax-shadow);
+  flex-shrink: 0;
 }
 
 .kb-row {
   display: flex;
-  gap: 5px;
+  gap: 6px;
   justify-content: center;
 }
 
 .kb-key {
   position: relative;
-  height: 40px;
+  height: 46px;
   background: var(--vp-c-bg);
   border: 1px solid var(--ax-line);
-  border-radius: 6px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--vp-c-text-1);
-  box-shadow: 0 1.5px 0 var(--ax-line);
-  transition: all 0.08s ease;
+  box-shadow: 0 2px 0 var(--ax-line);
+  box-sizing: border-box;
 }
 
 .k-top {
-  font-size: 0.6rem;
-  opacity: 0.55;
+  font-size: 0.65rem;
+  opacity: 0.6;
   margin-bottom: -2px;
 }
 
 .k-main {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 
 .k-bump {
   position: absolute;
-  bottom: 1px;
-  font-size: 0.8rem;
+  bottom: 2px;
+  font-size: 0.85rem;
   font-weight: bold;
   opacity: 0.6;
 }
 
-.finger-lp, .finger-rp { border-bottom: 2.5px solid #e06c75; }
-.finger-lr, .finger-rr { border-bottom: 2.5px solid #d19a66; }
-.finger-lm, .finger-rm { border-bottom: 2.5px solid #e5c07b; }
-.finger-li, .finger-ri { border-bottom: 2.5px solid #98c379; }
-.finger-thumb { border-bottom: 2.5px solid #c678dd; }
+.finger-lp, .finger-rp { border-bottom: 3px solid #e06c75; }
+.finger-lr, .finger-rr { border-bottom: 3px solid #d19a66; }
+.finger-lm, .finger-rm { border-bottom: 3px solid #e5c07b; }
+.finger-li, .finger-ri { border-bottom: 3px solid #98c379; }
+.finger-thumb { border-bottom: 3px solid #c678dd; }
 
 .key-target {
   background: linear-gradient(135deg, #0e70c0, #2392dc) !important;
   color: #fff !important;
   border-color: #0e70c0 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 3px 8px rgba(14, 112, 192, 0.45) !important;
-  animation: keyPulse 0.8s infinite alternate;
+  box-shadow: 0 0 10px rgba(14, 112, 192, 0.6) !important;
 }
 
 .key-shift-target {
   background: linear-gradient(135deg, #af00db, #c586c0) !important;
   color: #fff !important;
   border-color: #af00db !important;
-  animation: keyPulse 0.8s infinite alternate;
+  box-shadow: 0 0 10px rgba(175, 0, 219, 0.6) !important;
 }
 
 .key-pressed {
-  transform: translateY(1.5px) !important;
-  box-shadow: 0 0 0 transparent !important;
   background: var(--vp-c-brand-soft) !important;
-}
-
-@keyframes keyPulse {
-  from { filter: brightness(1); }
-  to { filter: brightness(1.2); }
+  filter: brightness(1.1);
 }
 
 /* LESSON SELECTOR MODAL */
@@ -1281,7 +1349,6 @@ watch(() => currentLesson.value, () => {
   flex-direction: column;
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-  animation: modalPop 0.2s ease-out;
 }
 
 .slm-header {
@@ -1379,7 +1446,6 @@ watch(() => currentLesson.value, () => {
 .slm-lesson-card:hover {
   border-color: var(--vp-c-brand-1);
   background: var(--ax-card-hi);
-  transform: translateY(-1px);
 }
 
 .slm-lesson-card.active {
@@ -1446,12 +1512,6 @@ watch(() => currentLesson.value, () => {
   width: 100%;
   text-align: center;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
-  animation: modalPop 0.25s ease-out;
-}
-
-@keyframes modalPop {
-  from { transform: scale(0.92); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
 }
 
 .sm-stars {
@@ -1521,14 +1581,14 @@ watch(() => currentLesson.value, () => {
 }
 
 @media (max-width: 768px) {
+  .stamina-metrics-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .stamina-keyboard {
     display: none;
   }
   .stream-inner {
     font-size: 1.2rem;
-  }
-  .stamina-hud {
-    gap: 10px;
   }
 }
 </style>
