@@ -47,7 +47,7 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
         <span class="tbc-icon"><Icon name="binary" /></span>
         <div class="tbc-text">
           <h3>CS Laboratoriya</h3>
-          <p>9 ta interaktiv modul: Ikkilik sanoq, mantiqiy darvozalar, xotira, algoritmlar, Git va kripto</p>
+          <p>7 ta interaktiv modul: Ikkilik sanoq, mantiqiy darvozalar, xotira, algoritmlar, saralash va kriptografiya</p>
         </div>
         <span class="tbc-arrow"><Icon name="arrow-right" /></span>
       </a>

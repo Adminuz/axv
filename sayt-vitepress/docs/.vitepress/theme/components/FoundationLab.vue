@@ -5,7 +5,7 @@ import Icon from './Icon.vue'
 import Crumbs from './Crumbs.vue'
 
 // --- Active Tab State ---
-// 'binary' | 'logic' | 'memory' | 'flowchart' | 'hardware' | 'sorting' | 'git' | 'crypto' | 'design'
+// 'binary' | 'logic' | 'memory' | 'flowchart' | 'hardware' | 'sorting' | 'crypto'
 const activeTab = ref<string>('binary')
 
 // ==========================================
@@ -318,7 +318,7 @@ watch(selectedAlgorithmId, () => {
 const nextAlgoStep = () => {
   if (currentStepIndex.value < currentAlgorithm.value.steps.length - 1) {
     currentStepIndex.value++
-    const res = currentAlgorithm.value.runLogic(currentStepIndex.value, algoVars.value)
+    currentAlgorithm.value.runLogic(currentStepIndex.value, algoVars.value)
     algoLogs.value.push(currentAlgorithm.value.steps[currentStepIndex.value].detail)
   }
 }
@@ -567,89 +567,7 @@ watch(sortAlgorithm, () => {
 })
 
 // ==========================================
-// 7. VISUAL GIT SIMULYATORI (GIT SANDBOX)
-// ==========================================
-interface GitCommit {
-  id: string
-  msg: string
-  branch: string
-  parent: string | null
-}
-
-const gitCommits = ref<GitCommit[]>([
-  { id: 'c1', msg: 'Initial commit: README', branch: 'main', parent: null },
-  { id: 'c2', msg: 'Add HTML structure', branch: 'main', parent: 'c1' },
-  { id: 'c3', msg: 'Style with CSS', branch: 'main', parent: 'c2' }
-])
-const gitBranches = ref<string[]>(['main', 'feature'])
-const gitCurrentBranch = ref<string>('main')
-const gitCommitMsg = ref<string>('Add responsive layout')
-const gitNewBranchName = ref<string>('dev')
-const gitTerminalLogs = ref<string[]>([
-  '$ git init',
-  '$ git commit -m "Initial commit: README"',
-  '$ git commit -m "Add HTML structure"',
-  '$ git commit -m "Style with CSS"',
-  'Hozirgi shox: main (HEAD)'
-])
-
-const gitDoCommit = () => {
-  if (!gitCommitMsg.value.trim()) return
-  const idNum = gitCommits.value.length + 1
-  const newCommit: GitCommit = {
-    id: 'c' + idNum,
-    msg: gitCommitMsg.value.trim(),
-    branch: gitCurrentBranch.value,
-    parent: gitCommits.value[gitCommits.value.length - 1]?.id || null
-  }
-  gitCommits.value.push(newCommit)
-  gitTerminalLogs.value.push(`$ git commit -m "${newCommit.msg}"`)
-  gitTerminalLogs.value.push(`[${gitCurrentBranch.value} ${newCommit.id}] ${newCommit.msg}`)
-  gitCommitMsg.value = `Update module ${idNum}`
-}
-
-const gitCreateBranch = () => {
-  const b = gitNewBranchName.value.trim().toLowerCase().replace(/\s+/g, '-')
-  if (!b || gitBranches.value.includes(b)) return
-  gitBranches.value.push(b)
-  gitTerminalLogs.value.push(`$ git branch ${b}`)
-  gitTerminalLogs.value.push(`Yangi shox yaratildi: '${b}'`)
-  gitNewBranchName.value = 'bugfix'
-}
-
-const gitCheckoutBranch = (branchName: string) => {
-  gitCurrentBranch.value = branchName
-  gitTerminalLogs.value.push(`$ git checkout ${branchName}`)
-  gitTerminalLogs.value.push(`Switched to branch '${branchName}'`)
-}
-
-const gitMergeBranch = (sourceBranch: string) => {
-  if (sourceBranch === gitCurrentBranch.value) return
-  const idNum = gitCommits.value.length + 1
-  const mergeCommit: GitCommit = {
-    id: 'c' + idNum,
-    msg: `Merge branch '${sourceBranch}' into ${gitCurrentBranch.value}`,
-    branch: gitCurrentBranch.value,
-    parent: gitCommits.value[gitCommits.value.length - 1]?.id || null
-  }
-  gitCommits.value.push(mergeCommit)
-  gitTerminalLogs.value.push(`$ git merge ${sourceBranch}`)
-  gitTerminalLogs.value.push(`Auto-merging... Merge made by the 'ort' strategy.`)
-}
-
-const gitResetGraph = () => {
-  gitCommits.value = [
-    { id: 'c1', msg: 'Initial commit: README', branch: 'main', parent: null },
-    { id: 'c2', msg: 'Add HTML structure', branch: 'main', parent: 'c1' },
-    { id: 'c3', msg: 'Style with CSS', branch: 'main', parent: 'c2' }
-  ]
-  gitBranches.value = ['main', 'feature']
-  gitCurrentBranch.value = 'main'
-  gitTerminalLogs.value = ['$ git init', 'Git holati tiklandi.']
-}
-
-// ==========================================
-// 8. KIBERXAVFSIZLIK & KRIPTOGRAFIYA (CYBER)
+// 7. KIBERXAVFSIZLIK & KRIPTOGRAFIYA (CYBER)
 // ==========================================
 // Caesar Cipher
 const caesarText = ref<string>('AXV MENTOR 2026')
@@ -753,50 +671,6 @@ const passwordStats = computed(() => {
   }
 })
 
-// ==========================================
-// 9. WEB & UI DIZAYN LAB (CSS & DESIGN)
-// ==========================================
-// Color Converter
-const colorHex = ref<string>('#007acc')
-const colorRgb = computed(() => {
-  let hex = colorHex.value.replace('#', '')
-  if (hex.length === 3) hex = hex.split('').map(c => c + c).join('')
-  const r = parseInt(hex.substring(0, 2), 16) || 0
-  const g = parseInt(hex.substring(2, 4), 16) || 0
-  const b = parseInt(hex.substring(4, 6), 16) || 0
-  return { r, g, b, str: `rgb(${r}, ${g}, ${b})` }
-})
-
-// Glassmorphism controls
-const glassBlur = ref<number>(12)
-const glassOpacity = ref<number>(20)
-const glassBorder = ref<number>(25)
-const glassRadius = ref<number>(16)
-
-const glassCss = computed(() => {
-  return `background: rgba(255, 255, 255, ${glassOpacity.value / 100});\nbackdrop-filter: blur(${glassBlur.value}px);\n-webkit-backdrop-filter: blur(${glassBlur.value}px);\nborder: 1px solid rgba(255, 255, 255, ${glassBorder.value / 100});\nborder-radius: ${glassRadius.value}px;`
-})
-
-// Box Shadow controls
-const shadowX = ref<number>(0)
-const shadowY = ref<number>(10)
-const shadowBlur = ref<number>(25)
-const shadowSpread = ref<number>(-5)
-const shadowColor = ref<string>('rgba(0, 122, 204, 0.4)')
-
-const shadowCss = computed(() => {
-  return `box-shadow: ${shadowX.value}px ${shadowY.value}px ${shadowBlur.value}px ${shadowSpread.value}px ${shadowColor.value};`
-})
-
-const copiedCss = ref<boolean>(false)
-const copyToClipboard = (text: string) => {
-  if (typeof navigator !== 'undefined') {
-    navigator.clipboard.writeText(text)
-    copiedCss.value = true
-    setTimeout(() => { copiedCss.value = false }, 1800)
-  }
-}
-
 onMounted(() => {
   generateNewGameTarget()
   resetAlgorithm()
@@ -822,7 +696,7 @@ onUnmounted(() => {
         </p>
       </div>
 
-      <!-- TAB NAVIGATION -->
+      <!-- TAB NAVIGATION (7 CORE MODULES) -->
       <nav class="foundation-tabs" aria-label="Laboratoriya bo'limlari">
         <button class="f-tab" :class="{ active: activeTab === 'binary' }" @click="activeTab = 'binary'">
           <Icon name="binary" /> Ikkilik sanoq
@@ -842,14 +716,8 @@ onUnmounted(() => {
         <button class="f-tab" :class="{ active: activeTab === 'sorting' }" @click="activeTab = 'sorting'">
           <Icon name="layers" /> Saralash & Qidiruv
         </button>
-        <button class="f-tab" :class="{ active: activeTab === 'git' }" @click="activeTab = 'git'">
-          <Icon name="git-branch" /> Git Simulyatori
-        </button>
         <button class="f-tab" :class="{ active: activeTab === 'crypto' }" @click="activeTab = 'crypto'">
           <Icon name="shield" /> Kripto & Xavfsizlik
-        </button>
-        <button class="f-tab" :class="{ active: activeTab === 'design' }" @click="activeTab = 'design'">
-          <Icon name="palette" /> CSS & Dizayn
         </button>
       </nav>
     </header>
@@ -1374,109 +1242,7 @@ onUnmounted(() => {
     </section>
 
     <!-- ========================================== -->
-    <!-- TAB 7: VISUAL GIT SIMULYATORI (GIT)       -->
-    <!-- ========================================== -->
-    <section v-if="activeTab === 'git'" class="lab-card">
-      <div class="card-head">
-        <div>
-          <h2><Icon name="git-branch" /> Visual Git Simulyatori</h2>
-          <p>Git versiya nazorati daraxti, commitlar, shoxlar (branches) va merge jarayonini interaktiv sinab ko'ring.</p>
-        </div>
-        <button class="btn btn-ghost btn-sm" @click="gitResetGraph">
-          <Icon name="rotate-ccw" /> Tiklash
-        </button>
-      </div>
-
-      <!-- Git Actions Panel -->
-      <div class="git-actions-panel">
-        <div class="ga-card">
-          <label>Yangi commit qilish:</label>
-          <div class="ga-input-row">
-            <input type="text" v-model="gitCommitMsg" placeholder="Commit xabari..." class="git-input" />
-            <button class="btn btn-primary btn-sm" @click="gitDoCommit">
-              git commit
-            </button>
-          </div>
-        </div>
-
-        <div class="ga-card">
-          <label>Yangi shox (Branch) ochish:</label>
-          <div class="ga-input-row">
-            <input type="text" v-model="gitNewBranchName" placeholder="Shox nomi..." class="git-input" />
-            <button class="btn btn-ghost btn-sm" @click="gitCreateBranch">
-              git branch
-            </button>
-          </div>
-        </div>
-
-        <div class="ga-card">
-          <label>Shoxlar orasida o'tish (Checkout):</label>
-          <div class="btn-group-sm">
-            <button
-              v-for="b in gitBranches"
-              :key="b"
-              class="sc-btn"
-              :class="{ active: gitCurrentBranch === b }"
-              @click="gitCheckoutBranch(b)"
-            >
-              {{ b }} <span v-if="gitCurrentBranch === b">★</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="ga-card">
-          <label>Merge qilish (Hozirgi shoxga birlashtirish):</label>
-          <div class="btn-group-sm">
-            <button
-              v-for="b in gitBranches.filter(x => x !== gitCurrentBranch)"
-              :key="b"
-              class="sc-btn"
-              @click="gitMergeBranch(b)"
-            >
-              merge {{ b }}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Visual Git Graph & Terminal Logs -->
-      <div class="git-view-grid">
-        <!-- SVG Commit Graph -->
-        <div class="git-graph-card">
-          <h4>Git Commit Daraxti</h4>
-          <div class="git-commits-chain">
-            <div
-              v-for="(c, idx) in gitCommits"
-              :key="c.id"
-              class="commit-node"
-              :class="{ current: idx === gitCommits.length - 1 }"
-            >
-              <div class="cn-badge">{{ c.id }}</div>
-              <div class="cn-info">
-                <div class="cn-msg">{{ c.msg }}</div>
-                <div class="cn-meta">
-                  <span class="cn-branch">shox: {{ c.branch }}</span>
-                  <span v-if="idx === gitCommits.length - 1" class="cn-head">HEAD -> {{ gitCurrentBranch }}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Terminal Logs -->
-        <div class="git-term-card">
-          <h4>Mini Terminal</h4>
-          <div class="term-window">
-            <div v-for="(log, lIdx) in gitTerminalLogs" :key="lIdx" class="term-line">
-              {{ log }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- TAB 8: KIBERXAVFSIZLIK & KRIPTO (CRYPTO)   -->
+    <!-- TAB 7: KIBERXAVFSIZLIK & KRIPTO (CRYPTO)   -->
     <!-- ========================================== -->
     <section v-if="activeTab === 'crypto'" class="lab-card">
       <div class="card-head">
@@ -1581,103 +1347,6 @@ onUnmounted(() => {
                 {{ passwordStats.hasSymbol ? '✓' : '✗' }} Maxsus belgi (!@#$)
               </span>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- TAB 9: WEB & UI DIZAYN LAB (DESIGN)       -->
-    <!-- ========================================== -->
-    <section v-if="activeTab === 'design'" class="lab-card">
-      <div class="card-head">
-        <div>
-          <h2><Icon name="palette" /> Web & UI Dizayn laboratoriyasi</h2>
-          <p>Zamonaviy CSS effektlari, ranglar gammasi va Glassmorphism generatori.</p>
-        </div>
-      </div>
-
-      <div class="design-grid">
-        <!-- Glassmorphism Generator -->
-        <div class="design-card">
-          <h3>Glassmorphism Generatori</h3>
-          <div class="dc-controls">
-            <div class="dcc-field">
-              <label>Xiralashtirish (Blur): {{ glassBlur }}px</label>
-              <input type="range" min="0" max="30" v-model.number="glassBlur" class="range-slider" />
-            </div>
-            <div class="dcc-field">
-              <label>Shaffoflik (Opacity): {{ glassOpacity }}%</label>
-              <input type="range" min="5" max="90" v-model.number="glassOpacity" class="range-slider" />
-            </div>
-            <div class="dcc-field">
-              <label>Burchak radiusi: {{ glassRadius }}px</label>
-              <input type="range" min="0" max="40" v-model.number="glassRadius" class="range-slider" />
-            </div>
-          </div>
-
-          <!-- Preview on Gradient BG -->
-          <div class="glass-bg-preview">
-            <div
-              class="glass-preview-box"
-              :style="{
-                background: `rgba(255, 255, 255, ${glassOpacity / 100})`,
-                backdropFilter: `blur(${glassBlur}px)`,
-                webkitBackdropFilter: `blur(${glassBlur}px)`,
-                border: `1px solid rgba(255, 255, 255, ${glassBorder / 100})`,
-                borderRadius: `${glassRadius}px`
-              }"
-            >
-              <h4>Glassmorphism</h4>
-              <p>Muzdek shaffof oyna effekti</p>
-            </div>
-          </div>
-
-          <!-- Code Snippet -->
-          <div class="css-code-box">
-            <pre><code>{{ glassCss }}</code></pre>
-            <button class="btn btn-ghost btn-xs copy-btn" @click="copyToClipboard(glassCss)">
-              <Icon name="copy" /> {{ copiedCss ? 'Nusxalandi!' : 'Nusxa olish' }}
-            </button>
-          </div>
-        </div>
-
-        <!-- Box Shadow Generator -->
-        <div class="design-card">
-          <h3>CSS Box Shadow Generatori</h3>
-          <div class="dc-controls">
-            <div class="dcc-field">
-              <label>Surilish Y: {{ shadowY }}px</label>
-              <input type="range" min="-30" max="50" v-model.number="shadowY" class="range-slider" />
-            </div>
-            <div class="dcc-field">
-              <label>Tarqalish (Blur): {{ shadowBlur }}px</label>
-              <input type="range" min="0" max="60" v-model.number="shadowBlur" class="range-slider" />
-            </div>
-            <div class="dcc-field">
-              <label>Kengayish (Spread): {{ shadowSpread }}px</label>
-              <input type="range" min="-20" max="30" v-model.number="shadowSpread" class="range-slider" />
-            </div>
-          </div>
-
-          <!-- Preview -->
-          <div class="shadow-preview-area">
-            <div
-              class="shadow-box"
-              :style="{
-                boxShadow: `${shadowX}px ${shadowY}px ${shadowBlur}px ${shadowSpread}px ${shadowColor}`
-              }"
-            >
-              Soyali Blok
-            </div>
-          </div>
-
-          <!-- Code Snippet -->
-          <div class="css-code-box">
-            <pre><code>{{ shadowCss }}</code></pre>
-            <button class="btn btn-ghost btn-xs copy-btn" @click="copyToClipboard(shadowCss)">
-              <Icon name="copy" /> {{ copiedCss ? 'Nusxalandi!' : 'Nusxa olish' }}
-            </button>
           </div>
         </div>
       </div>
@@ -2734,114 +2403,7 @@ onUnmounted(() => {
   color: #e5c07b;
 }
 
-/* 7. GIT SIMULATOR */
-.git-actions-panel {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-.ga-card {
-  background: var(--vp-c-bg, #252526);
-  border: 1px solid var(--vp-c-divider, #3e3e42);
-  border-radius: 8px;
-  padding: 1rem;
-}
-.ga-card label {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--vp-c-text-2, #aaa);
-  margin-bottom: 0.5rem;
-}
-.ga-input-row {
-  display: flex;
-  gap: 0.5rem;
-}
-.git-input {
-  flex: 1;
-  background: #181818;
-  border: 1px solid #444;
-  color: #fff;
-  padding: 0.35rem 0.6rem;
-  border-radius: 6px;
-  font-size: 0.82rem;
-}
-.git-view-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-.git-graph-card, .git-term-card {
-  background: var(--vp-c-bg, #181818);
-  border: 1px solid var(--vp-c-divider, #333);
-  border-radius: 10px;
-  padding: 1.25rem;
-}
-.git-graph-card h4, .git-term-card h4 {
-  font-size: 0.95rem;
-  margin: 0 0 1rem;
-}
-.git-commits-chain {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.commit-node {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: #252526;
-  border: 1px solid #444;
-  border-radius: 8px;
-  padding: 0.6rem 0.85rem;
-}
-.commit-node.current {
-  border-color: var(--vp-c-brand-1, #007acc);
-  box-shadow: 0 0 10px rgba(0, 122, 204, 0.3);
-}
-.cn-badge {
-  background: #007acc;
-  color: #fff;
-  font-family: monospace;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-}
-.cn-info {
-  flex: 1;
-}
-.cn-msg {
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-.cn-meta {
-  font-size: 0.75rem;
-  color: #888;
-  display: flex;
-  gap: 0.75rem;
-}
-.cn-head {
-  color: #98c379;
-  font-weight: 700;
-}
-.term-window {
-  background: #0d0d0d;
-  border-radius: 6px;
-  padding: 0.75rem;
-  font-family: monospace;
-  font-size: 0.8rem;
-  min-height: 180px;
-  max-height: 240px;
-  overflow-y: auto;
-  color: #98c379;
-}
-.term-line {
-  line-height: 1.5;
-}
-
-/* 8. CRYPTO & SECURITY */
+/* 7. CRYPTO & SECURITY */
 .crypto-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2976,96 +2538,6 @@ onUnmounted(() => {
   font-weight: 600;
 }
 
-/* 9. DESIGN LAB */
-.design-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-.design-card {
-  background: var(--vp-c-bg, #252526);
-  border: 1px solid var(--vp-c-divider, #3e3e42);
-  border-radius: 10px;
-  padding: 1.25rem;
-}
-.design-card h3 {
-  font-size: 1.05rem;
-  margin: 0 0 1rem;
-}
-.dc-controls {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 1.25rem;
-}
-.dcc-field label {
-  display: block;
-  font-size: 0.8rem;
-  color: var(--vp-c-text-2, #aaa);
-  margin-bottom: 0.25rem;
-}
-.glass-bg-preview {
-  height: 140px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-.glass-preview-box {
-  padding: 1rem 1.5rem;
-  text-align: center;
-  color: #fff;
-}
-.glass-preview-box h4 {
-  margin: 0 0 0.25rem;
-  font-size: 1rem;
-}
-.glass-preview-box p {
-  margin: 0;
-  font-size: 0.75rem;
-  opacity: 0.9;
-}
-.shadow-preview-area {
-  height: 140px;
-  background: #181818;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-.shadow-box {
-  width: 140px;
-  height: 70px;
-  background: var(--vp-c-bg, #252526);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.85rem;
-  transition: all 0.2s;
-}
-.css-code-box {
-  position: relative;
-  background: #111;
-  border-radius: 6px;
-  padding: 0.75rem;
-}
-.css-code-box pre {
-  margin: 0;
-  font-size: 0.78rem;
-  color: #98c379;
-}
-.copy-btn {
-  position: absolute;
-  top: 6px;
-  right: 6px;
-}
-
 /* BUTTONS */
 .btn {
   display: inline-flex;
@@ -3113,7 +2585,7 @@ onUnmounted(() => {
   .bit-board {
     grid-template-columns: repeat(4, 1fr);
   }
-  .circuit-area, .algo-main-grid, .gate-info-grid, .git-view-grid, .crypto-grid, .design-grid {
+  .circuit-area, .algo-main-grid, .gate-info-grid, .crypto-grid {
     grid-template-columns: 1fr;
     flex-direction: column;
   }
