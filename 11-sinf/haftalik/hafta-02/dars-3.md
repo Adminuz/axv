@@ -74,12 +74,12 @@ Reviewer har bir o'zgarishning darajasini to'g'ri ajrata bilishi kerak:
 GitHub PR interfeysidagi `Files changed` bo'limida:
 - Qator ustiga kursor olib borib, `+` tugmasini bosish orqali aynan o'sha qatorga sharh qoldiriladi.
 - **Taklif kodi (Code Suggestion):** Sharh oynasidagi maxsus tugma orqali kod taklif qilish mumkin:
-```markdown
+````markdown
 ```suggestion
 def calculate_total(items):
     return sum(item.price for item in items)
 ```
-```
+````
 Muallif ushbu taklifni ko'rganda, o'z kompyuterida kod yozib o'tirmasdan, GitHub'dagi **"Commit suggestion"** tugmasini bitta bosish orqali taklifni to'g'ridan-to'g'ri o'z branchiga commit qilib oladi!
 
 **Review yakuni bo'yicha 3 ta qaror:**
@@ -105,13 +105,13 @@ Hamkasbingiz kodida quyidagi qatorni ko'rdingiz:
 Unga xavfsizlik (SQL Injection) bo'yicha professional, konstruktiv va xushmuomala sharh matnini yozing.
 
 **Yechim:**
-```markdown
+````markdown
 Ushbu so'rovda stringlarni to'g'ridan-to'g'ri qo'shish (concatenation) SQL Injection zaifligiga olib kelishi mumkin. Foydalanuvchi ma'lumotlari orqali bazani buzib kirmasliklari uchun parametrlangan so'rovlardan (prepared statements) foydalanishni taklif qilaman:
 
 ```suggestion
 cursor.execute("SELECT * FROM users WHERE name = %s", (user_input,))
 ```
-```
+````
 
 ### 2-topshiriq. Branch Protection qoidalarini sozlash
 GitHub repozitoriyangizda `main` tarmog'ini himoyalash qoidasini o'rnating: to'g'ridan-to'g'ri push qilishni taqiqlang va PR orqali kamida 1 ta approve talab qiling.

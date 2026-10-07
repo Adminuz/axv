@@ -50,13 +50,13 @@ if _cfg.exists():
 # papka, nomi, fan, ikonka, choraklar (nom, boshlang'ich hafta, oxirgi hafta)
 SINFLAR = [
     # 8-sinf
-    ("8-sinf", "8-sinf", "Web Full-stack dasturlash", "globe",
-     [("I chorak", 1, 9), ("II chorak", 10, 16), ("III chorak", 17, 26), ("IV chorak", 27, 34)]),
     ("8-sinf-cs", "8-sinf (Foundation)", "Computer Science Foundation", "laptop",
      [("I chorak", 1, 12)]),
+    ("8-sinf", "8-sinf (Web Full-stack)", "Web Full-stack dasturlash", "globe",
+     [("I chorak", 1, 9), ("II chorak", 10, 16), ("III chorak", 17, 26), ("IV chorak", 27, 34)]),
 
     # 9-sinf
-    ("9-sinf", "9-sinf", "UX/UI dizayn va Advanced Front-end", "palette",
+    ("9-sinf", "9-sinf (UX/UI)", "UX/UI dizayn va Advanced Front-end", "palette",
      [("I chorak", 1, 9), ("II chorak", 10, 16), ("III chorak", 17, 26), ("IV chorak", 27, 34)]),
     ("9-sinf-backend", "9-sinf (Back-end)", "Advanced Back-end va DevOps", "server",
      [("I chorak", 1, 9), ("II chorak", 10, 16), ("III chorak", 17, 26), ("IV chorak", 27, 34)]),
@@ -192,12 +192,21 @@ def esc_text(line):
 
 def safe_md(md):
     """Markdown ni VitePress uchun xavfsiz qiladi; kod bloklariga tegmaydi."""
-    out, fence = [], False
+    out = []
+    fence_delim = None
     for line in md.split("\n"):
-        if line.startswith("```"):
-            fence = not fence
-            out.append(line)
-        elif fence:
+        m = re.match(r"^(```+|~~~+)", line)
+        if m:
+            delim = m.group(1)
+            if fence_delim is None:
+                fence_delim = delim
+                out.append(line)
+            elif line.startswith(fence_delim):
+                fence_delim = None
+                out.append(line)
+            else:
+                out.append(line)
+        elif fence_delim is not None:
             out.append(line)
         else:
             out.append(esc_text(line))
@@ -258,12 +267,24 @@ def build_sinf(sinf_dir, sinf_name, fan, icon, choraklar, gacha):
     out_dir.mkdir(parents=True)
     sinf_link = f"/{sinf_dir}/"
 
+    mentor_out = DOCS / "mentor" / sinf_dir
+    if mentor_out.exists():
+        shutil.rmtree(mentor_out)
+    mentor_out.mkdir(parents=True)
+    mentor_sinf_link = f"/mentor/{sinf_dir}/"
+
     for n, (wdir, _, lessons) in sorted(weeks.items()):
         wout = out_dir / f"hafta-{n:02d}"
         wout.mkdir()
         wlink = f"/{sinf_dir}/hafta-{n:02d}/"
+
+        m_wout = mentor_out / f"hafta-{n:02d}"
+        m_wout.mkdir()
+        m_wlink = f"/mentor/{sinf_dir}/hafta-{n:02d}/"
+
         bob = karta.get(lessons[0]["g"], ("", "", ""))[0]
         cards, entries = [], []
+        cards_mentor = []
         for L in lessons:
             has_slide = L["slide"].exists()
             slide_url = f"/slaydlar/{sinf_dir}/hafta-{n:02d}/dars-{L['k']}.html" if has_slide else None
@@ -271,20 +292,22 @@ def build_sinf(sinf_dir, sinf_name, fan, icon, choraklar, gacha):
                 content = re.sub(r"<aside class=\"notes\">.*?</aside>", "", L["slide"].read_text(encoding="utf-8"), flags=re.S)
                 dst = PUB / "slaydlar" / sinf_dir / f"hafta-{n:02d}" / f"dars-{L['k']}.html"
                 dst.parent.mkdir(parents=True, exist_ok=True)
-                dst.write_text(wrap(content, "../../../"), encoding="utf-8")
+                dst.write_text(wrap(content, "../../../", is_quiz=False), encoding="utf-8")
             test_url = None
             if L["test"].exists():
                 test_url = f"/slaydlar/{sinf_dir}/hafta-{n:02d}/dars-{L['k']}-test.html"
                 tdst = PUB / "slaydlar" / sinf_dir / f"hafta-{n:02d}" / f"dars-{L['k']}-test.html"
                 tdst.parent.mkdir(parents=True, exist_ok=True)
-                tdst.write_text(wrap(re.sub(r"<aside class=\"notes\">.*?</aside>", "", L["test"].read_text(encoding="utf-8"), flags=re.S), "../../../"), encoding="utf-8")
+                tdst.write_text(wrap(re.sub(r"<aside class=\"notes\">.*?</aside>", "", L["test"].read_text(encoding="utf-8"), flags=re.S), "../../../", is_quiz=True), encoding="utf-8")
             L["test_url"] = test_url
             link = f"/{sinf_dir}/hafta-{n:02d}/dars-{L['k']}"
+            m_link = f"/mentor/{sinf_dir}/hafta-{n:02d}/dars-{L['k']}"
             lead = lead_of(L["stu"]) or karta.get(L["g"], ("", "", ""))[1]
             cards.append({"g": L["g"], "title": plain(L["title"]), "lead": plain(lead), "link": link, "slide": slide_url, "test": test_url})
-            entries.append((L, link, slide_url, lead))
+            cards_mentor.append({"g": L["g"], "title": plain(L["title"]), "lead": plain(lead), "link": m_link, "slide": slide_url, "test": test_url})
+            entries.append((L, link, slide_url, lead, m_link))
 
-        for idx, (L, link, slide_url, lead) in enumerate(entries):
+        for idx, (L, link, slide_url, lead, m_link) in enumerate(entries):
             body = re.sub(r"^# .*\n", "", L["stu"], count=1, flags=re.M)
             body = re.sub(r"^>.*\n", "", body, count=1, flags=re.M)
             body = as_blocks(badge_headings(safe_md(strip_solutions(body))))
@@ -296,26 +319,54 @@ def build_sinf(sinf_dir, sinf_name, fan, icon, choraklar, gacha):
                 "kind": "dars",
                 "dars": {"sinf": {"name": sinf_name, "link": sinf_link}, "week": {"n": n, "link": wlink},
                          "g": L["g"], "title": plain(L["title"]), "lead": plain(lead), "slide": slide_url, "test": L.get("test_url"),
+                         "mentor_link": m_link,
                          "tabs": [{"g": c["g"], "link": c["link"], "current": c["g"] == L["g"]} for c in cards],
                          "prev": prev_l, "next": next_l},
             }
             (wout / f"dars-{L['k']}.md").write_text(fm(data) + "\n" + body + "\n", encoding="utf-8")
 
+            # Mentor dars rejasi
+            m_body = re.sub(r"^# .*\n", "", L["md"], count=1, flags=re.M)
+            m_body = as_blocks(safe_md(m_body))
+            prev_m = {"g": entries[idx - 1][0]["g"], "title": plain(entries[idx - 1][0]["title"]), "link": entries[idx - 1][4]} if idx > 0 else None
+            next_m = {"g": entries[idx + 1][0]["g"], "title": plain(entries[idx + 1][0]["title"]), "link": entries[idx + 1][4]} if idx + 1 < len(entries) else None
+            m_data = {
+                "title": plain(f'{L["g"]}-dars (Mentor). {L["title"]}'),
+                "layout": "doc", "sidebar": False, "aside": False, "outline": False,
+                "kind": "mentor_dars",
+                "dars": {"sinf": {"name": sinf_name, "link": mentor_sinf_link}, "week": {"n": n, "link": m_wlink},
+                         "g": L["g"], "title": plain(L["title"]), "lead": plain(lead), "slide": slide_url, "test": L.get("test_url"),
+                         "student_link": link,
+                         "tabs": [{"g": c["g"], "link": c["link"], "current": c["g"] == L["g"]} for c in cards_mentor],
+                         "prev": prev_m, "next": next_m},
+            }
+            (m_wout / f"dars-{L['k']}.md").write_text(fm(m_data) + "\n" + m_body + "\n", encoding="utf-8")
+
         hw = wdir / "uyga-vazifa.md"
         hw_md = ""
+        m_hw_md = ""
         if hw.exists():
-            t = hw.read_text(encoding="utf-8")
-            t = re.sub(r"^# .*\n", "", t, count=1)
-            t = re.split(r"^## Mentor uchun", t, flags=re.M)[0]
-            t = re.sub(r"^## (\d+-dars)", r"### \1", t, flags=re.M)
-            hw_md = f'\n<div class="blk">\n\n## <Icon name="house" /> Uyga vazifa\n\n{badge_headings(safe_md(strip_solutions(t))).strip()}\n\n</div>\n'
+            t_full = hw.read_text(encoding="utf-8")
+            t_full = re.sub(r"^# .*\n", "", t_full, count=1)
+            t_student = re.split(r"^## Mentor uchun", t_full, flags=re.M)[0]
+            t_student = re.sub(r"^## (\d+-dars)", r"### \1", t_student, flags=re.M)
+            hw_md = f'\n<div class="blk">\n\n## <Icon name="house" /> Uyga vazifa\n\n{badge_headings(safe_md(strip_solutions(t_student))).strip()}\n\n</div>\n'
+            m_hw_md = f'\n<div class="blk">\n\n## <Icon name="house" /> Uyga vazifa va mentor tavsiyalari\n\n{safe_md(t_full).strip()}\n\n</div>\n'
+
+        bah = wdir / "baholash.md"
+        bah_md = ""
+        if bah.exists():
+            b_text = bah.read_text(encoding="utf-8")
+            b_text = re.sub(r"^# .*\n", "", b_text, count=1)
+            bah_md = f'\n<div class="blk">\n\n## <Icon name="list-checks" /> Baholash mezoni\n\n{safe_md(b_text).strip()}\n\n</div>\n'
+
         wtest = wdir / "hafta-test-slaydlar.html"
         wtest_url = None
         if wtest.exists():
             wtest_url = f"/slaydlar/{sinf_dir}/hafta-{n:02d}/hafta-test.html"
             wdst = PUB / "slaydlar" / sinf_dir / f"hafta-{n:02d}" / "hafta-test.html"
             wdst.parent.mkdir(parents=True, exist_ok=True)
-            wdst.write_text(wrap(re.sub(r"<aside class=\"notes\">.*?</aside>", "", wtest.read_text(encoding="utf-8"), flags=re.S), "../../../"), encoding="utf-8")
+            wdst.write_text(wrap(re.sub(r"<aside class=\"notes\">.*?</aside>", "", wtest.read_text(encoding="utf-8"), flags=re.S), "../../../", is_quiz=True), encoding="utf-8")
         data = {
             "title": f"{n}-hafta", "layout": "doc", "sidebar": False, "aside": False, "outline": False,
             "kind": "hafta",
@@ -323,12 +374,20 @@ def build_sinf(sinf_dir, sinf_name, fan, icon, choraklar, gacha):
         }
         (wout / "index.md").write_text(fm(data) + hw_md, encoding="utf-8")
 
+        m_week_data = {
+            "title": f"{n}-hafta (Mentor)", "layout": "doc", "sidebar": False, "aside": False, "outline": False,
+            "kind": "mentor_hafta",
+            "hafta": {"sinf": {"name": sinf_name, "link": mentor_sinf_link}, "n": n, "bob": bob, "lessons": cards_mentor, "test": wtest_url},
+        }
+        (m_wout / "index.md").write_text(fm(m_week_data) + m_hw_md + bah_md, encoding="utf-8")
+
     quarters = []
+    mentor_quarters = []
     for qname, a, b in (choraklar or [("Haftalik reja", 1, total)]):
         if a > total:
             continue
         b = min(b, total)
-        wl = []
+        wl, m_wl = [], []
         for w in range(a, b + 1):
             gs = [glob_lesson(w, k) for k in range(1, DARS_HAFTADA + 1)]
             rows = [karta.get(g) for g in gs]
@@ -340,7 +399,11 @@ def build_sinf(sinf_dir, sinf_name, fan, icon, choraklar, gacha):
             wl.append({"n": w, "bob": next((r[0] for r in rows if r), ""), "topics": topics,
                        "link": f"/{sinf_dir}/hafta-{w:02d}/" if w in weeks else None,
                        "done": all(r and r[2] == "✅" for r in rows)})
+            m_wl.append({"n": w, "bob": next((r[0] for r in rows if r), ""), "topics": topics,
+                         "link": f"/mentor/{sinf_dir}/hafta-{w:02d}/" if w in weeks else None,
+                         "done": all(r and r[2] == "✅" for r in rows)})
         quarters.append({"name": qname, "range": f"{a}–{b}-haftalar", "weeks": wl})
+        mentor_quarters.append({"name": qname, "range": f"{a}–{b}-haftalar", "weeks": m_wl})
     data = {
         "title": sinf_name, "layout": "doc", "sidebar": False, "aside": False, "outline": False,
         "kind": "sinf",
@@ -351,6 +414,17 @@ def build_sinf(sinf_dir, sinf_name, fan, icon, choraklar, gacha):
                  "quarters": quarters},
     }
     (out_dir / "index.md").write_text(fm(data), encoding="utf-8")
+
+    m_sinf_data = {
+        "title": f"{sinf_name} (Mentor)", "layout": "doc", "sidebar": False, "aside": False, "outline": False,
+        "kind": "mentor_sinf",
+        "sinf": {"name": sinf_name, "fan": fan, "icon": icon, "open": len(weeks), "total": total,
+                 "facts": [{"icon": "calendar-days", "text": f"{total} hafta"},
+                           {"icon": "layers", "text": f"{total * DARS_HAFTADA} dars"},
+                           {"icon": "timer", "text": f"haftasiga {DARS_HAFTADA} dars · 80 daqiqa"}],
+                 "quarters": mentor_quarters},
+    }
+    (mentor_out / "index.md").write_text(fm(m_sinf_data), encoding="utf-8")
     return {"weeks": len(weeks), "total": total}
 
 
@@ -380,13 +454,16 @@ def main():
     for n in UI_ICONS:
         copy_icon(n)
 
-    classes, nav_items = [], []
+    classes, mentor_classes, nav_items = [], [], []
     for sinf_dir, sinf_name, fan, icon, choraklar in SINFLAR:
         copy_icon(icon)
         res = build_sinf(sinf_dir, sinf_name, fan, icon, choraklar, args.gacha)
         classes.append({"name": sinf_name, "fan": fan, "icon": icon,
                         "link": f"/{sinf_dir}/" if res else None,
                         "done": res["weeks"] if res else 0, "total": res["total"] if res else 0})
+        mentor_classes.append({"name": sinf_name, "fan": fan, "icon": icon,
+                               "link": f"/mentor/{sinf_dir}/" if res else None,
+                               "done": res["weeks"] if res else 0, "total": res["total"] if res else 0})
         if res:
             nav_items.append({"text": sinf_name, "link": f"/{sinf_dir}/"})
 
@@ -398,8 +475,18 @@ def main():
     }
     (DOCS / "index.md").write_text(fm(home), encoding="utf-8")
 
-    gen = {"tashkilot": SOZLAMA["tashkilot"], "podval": SOZLAMA["podval"],
-           "nav": [{"text": "Sinflar", "items": nav_items}] if nav_items else []}
+    mentor_home = {
+        "title": "Mentor bo'limi", "layout": "doc", "sidebar": False, "aside": False, "outline": False,
+        "kind": "mentor_home",
+        "home": {"org": "Mentor bo'limi", "tag": "Dars rejalari, konspektlar va yechimlar", "tag2": "O'qituvchi va mentorlar uchun to'liq materiallar",
+                 "classes": mentor_classes},
+    }
+    (DOCS / "mentor").mkdir(parents=True, exist_ok=True)
+    (DOCS / "mentor" / "index.md").write_text(fm(mentor_home), encoding="utf-8")
+
+    nav = [{"text": "Sinflar", "items": nav_items}] if nav_items else []
+
+    gen = {"tashkilot": SOZLAMA["tashkilot"], "podval": SOZLAMA["podval"], "nav": nav}
     (DOCS / ".vitepress").mkdir(parents=True, exist_ok=True)
     (DOCS / ".vitepress" / "generated.json").write_text(json.dumps(gen, ensure_ascii=False, indent=1), encoding="utf-8")
     print("Tayyor:", DOCS)

@@ -7,7 +7,8 @@
     "yigish": "python3 ../vitepress_yigish.py",
     "dev": "python3 ../vitepress_yigish.py && vitepress dev docs",
     "build": "python3 ../vitepress_yigish.py && vitepress build docs",
-    "preview": "vitepress preview docs"
+    "preview": "vitepress preview docs",
+    "deploy": "npm run build && cd docs/.vitepress/dist && touch .nojekyll && git init && git add -A && git commit -m 'Deploy build' && git branch -M main && (git remote add origin https://github.com/Adminuz/axvhub.git 2>/dev/null || git remote set-url origin https://github.com/Adminuz/axvhub.git) && git push -u origin main --force"
   },
   "devDependencies": {
     "vitepress": "^1.6.4"

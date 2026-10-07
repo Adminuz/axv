@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Test slaydlari (*-test-slaydlar.html) dan telefonga mos mustaqil QUIZ sahifasi yasaydi.
 slayd_yigish.wrap() tarkibida `class="quiz"` bo'lsa shu modulni chaqiradi."""
-import html, json, re
-from bs4 import BeautifulSoup
+import html
+import json
+import re
 
 CSS = r"""
 :root{--bg:#fff;--fg:#1e1e1e;--mut:#667;--card:#f4f5f7;--bd:#d5d8de;--ac:#2a6df4;--ok:#1a8f4a;--okbg:#e3f6ea;--no:#c62828;--nobg:#fdeaea}
@@ -85,24 +86,57 @@ show();
 })();
 """
 
-def inner(el):
-    return "".join(str(c) for c in el.contents).strip()
+
+def _strip_tags(text):
+    return re.sub(r"<[^>]+>", "", text).strip()
+
 
 def build(content, up):
-    soup = BeautifulSoup(content, "html.parser")
-    h1 = soup.find("h1")
-    title = h1.get_text(" ", strip=True) if h1 else "Test"
-    muted = soup.find(class_="muted")
-    sub = muted.get_text(" ", strip=True) if muted else ""
-    badges = [b.get_text(strip=True) for b in soup.select(".hero .badge")]
+    # 1. Sarlavha (h1)
+    m_h1 = re.search(r"<h1[^>]*>(.*?)</h1>", content, re.S)
+    title = _strip_tags(m_h1.group(1)) if m_h1 else "Test"
+
+    # 2. Tavsif (.muted)
+    m_muted = re.search(r'<p[^>]*class=["\'][^"\']*muted[^"\']*["\'][^>]*>(.*?)</p>', content, re.S)
+    sub = _strip_tags(m_muted.group(1)) if m_muted else ""
+
+    # 3. Belgilar (.hero .badge)
+    m_hero = re.search(r'<section[^>]*class=["\'][^"\']*hero[^"\']*["\'][^>]*>(.*?)</section>', content, re.S)
+    hero_html = m_hero.group(1) if m_hero else content
+    badges = [_strip_tags(b) for b in re.findall(r'<span[^>]*class=["\'][^"\']*badge[^"\']*["\'][^>]*>(.*?)</span>', hero_html, re.S)]
+
+    # 4. Savollar (.quiz)
     qs = []
-    for qz in soup.select(".quiz"):
-        opts = qz.select(".opt")
-        ok = next((k for k, o in enumerate(opts) if o.has_attr("data-ok")), 0)
-        ex = qz.select_one(".explain")
-        qs.append({"q": inner(qz.select_one(".q")), "o": [inner(o) for o in opts], "a": ok, "e": inner(ex) if ex else ""})
+    quiz_blocks = re.findall(r'<div[^>]*class=["\'][^"\']*quiz[^"\']*["\'][^>]*>(.*?)</div>\s*</section>', content, re.S)
+    if not quiz_blocks:
+        quiz_blocks = re.findall(r'<div[^>]*class=["\'][^"\']*quiz[^"\']*["\'][^>]*>(.*?)(?:</div>\s*</div>|</div>\s*<aside|</div>\s*</section>)', content, re.S)
+
+    for qz in quiz_blocks:
+        m_q = re.search(r'<p[^>]*class=["\'][^"\']*q[^"\']*["\'][^>]*>(.*?)</p>', qz, re.S)
+        q_text = m_q.group(1).strip() if m_q else ""
+
+        opt_matches = re.findall(r'<button([^>]*)>(.*?)</button>', qz, re.S)
+        opts = []
+        ok_idx = 0
+        for idx, (attrs, opt_content) in enumerate(opt_matches):
+            opts.append(opt_content.strip())
+            if "data-ok" in attrs:
+                ok_idx = idx
+
+        m_ex = re.search(r'<div[^>]*class=["\'][^"\']*explain[^"\']*["\'][^>]*>(.*?)</div>', qz, re.S)
+        ex_text = m_ex.group(1).strip() if m_ex else ""
+
+        if q_text and opts:
+            qs.append({
+                "q": q_text,
+                "o": opts,
+                "a": ok_idx,
+                "e": ex_text
+            })
+
     data = json.dumps(qs, ensure_ascii=False).replace("</", "<\\/")
     bh = "".join(f'<span class="badge">{html.escape(b)}</span>' for b in badges)
+
     return f"""<!doctype html>
 <html lang="uz">
 <head>

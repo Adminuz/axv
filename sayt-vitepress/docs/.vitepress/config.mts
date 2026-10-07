@@ -14,7 +14,9 @@ export default defineConfig({
   appearance: 'dark', // standart qorong'i (VS Code Dark+), tugma bilan yorug' (Light+)
   head: [
     ['meta', { name: 'robots', content: 'noindex' }],
+    ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
     ['link', { rel: 'icon', href: '/logo.png' }],
+    ['script', {}, `if ('serviceWorker' in navigator) { navigator.serviceWorker.getRegistrations().then(function(regs) { for (var r of regs) { r.unregister(); } }); }`],
   ],
   markdown: {
     theme: { light: 'light-plus', dark: 'dark-plus' }, // VS Code kod ranglari

@@ -25,9 +25,9 @@ def title_of(content):
     return html.unescape(t)
 
 
-def wrap(content, up, title=None):
+def wrap(content, up, title=None, is_quiz=False):
     """content: faqat <section>lar. up: reveal/ papkasigacha nisbiy yo'l prefiksi (masalan '../../../')."""
-    if 'class="quiz"' in content:  # test fayllari: slayd emas, telefonga mos quiz sahifasi
+    if is_quiz:  # test fayllari: slayd emas, telefonga mos quiz sahifasi
         from quiz_yigish import build as quiz_build
         return quiz_build(content, up)
     shell = SHELL.read_text(encoding="utf-8")
@@ -45,7 +45,8 @@ def main():
         + sorted(ROOT.glob("*/haftalik/*/hafta-test-slaydlar.html"))
     for src in srcs:
         dst = src.with_name(src.name.replace("-slaydlar", "-slayd"))
-        dst.write_text(wrap(src.read_text(encoding="utf-8"), "../../../"), encoding="utf-8")
+        is_quiz = "-test" in src.name
+        dst.write_text(wrap(src.read_text(encoding="utf-8"), "../../../", is_quiz=is_quiz), encoding="utf-8")
         n += 1
     print(f"{n} ta slayd fayli yig'ildi (dars-K-slayd.html)")
 

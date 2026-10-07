@@ -14,15 +14,16 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
 </script>
 
 <template>
-  <!-- BOSH SAHIFA -->
-  <div v-if="kind === 'home'" class="axv">
+  <!-- BOSH SAHIFA / MENTOR BOSH SAHIFA -->
+  <div v-if="kind === 'home' || kind === 'mentor_home'" class="axv">
+    <Crumbs v-if="kind === 'mentor_home'" :items="[{ t: 'Bosh sahifa', l: '/' }, { t: 'Mentor bo\'limi' }]" />
     <section class="hero">
       <img :src="withBase('/logo.png')" alt="AXV" />
       <h1 class="org">{{ home.org }}</h1>
       <p class="tag">{{ home.tag }}</p>
       <p class="tag2">{{ home.tag2 }}</p>
     </section>
-    <h2 class="sec-title">Sinfingizni tanlang</h2>
+    <h2 class="sec-title">{{ kind === 'mentor_home' ? 'Sinfni tanlang (Mentor rejasi)' : 'Sinfingizni tanlang' }}</h2>
     <div class="tiles">
       <component
         :is="c.link ? 'a' : 'div'"
@@ -44,14 +45,15 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
     </div>
   </div>
 
-  <!-- SINF: HAFTALIK REJA -->
-  <div v-else-if="kind === 'sinf'" class="axv">
-    <Crumbs :items="[{ t: 'Bosh sahifa', l: '/' }, { t: sinf.name }]" />
+  <!-- SINF: HAFTALIK REJA (O'quvchi / Mentor) -->
+  <div v-else-if="kind === 'sinf' || kind === 'mentor_sinf'" class="axv">
+    <Crumbs v-if="kind === 'mentor_sinf'" :items="[{ t: 'Bosh sahifa', l: '/' }, { t: 'Mentor bo\'limi', l: '/mentor/' }, { t: sinf.name }]" />
+    <Crumbs v-else :items="[{ t: 'Bosh sahifa', l: '/' }, { t: sinf.name }]" />
     <header class="page-hero">
       <span class="ph-ic"><Icon :name="sinf.icon" /></span>
       <div>
-        <h1>{{ sinf.name }}</h1>
-        <p class="sub">{{ sinf.fan }}</p>
+        <h1>{{ sinf.name }} <span v-if="kind === 'mentor_sinf'" class="badge-mentor">(Mentor)</span></h1>
+        <p class="sub">{{ sinf.fan }} {{ kind === 'mentor_sinf' ? '— Mentor dars rejalari va yechimlari' : '' }}</p>
       </div>
     </header>
     <div class="facts">
@@ -83,13 +85,14 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
     </section>
   </div>
 
-  <!-- HAFTA -->
-  <div v-else-if="kind === 'hafta'" class="axv">
-    <Crumbs :items="[{ t: 'Bosh sahifa', l: '/' }, { t: hafta.sinf.name, l: hafta.sinf.link }, { t: hafta.n + '-hafta' }]" />
+  <!-- HAFTA (O'quvchi / Mentor) -->
+  <div v-else-if="kind === 'hafta' || kind === 'mentor_hafta'" class="axv">
+    <Crumbs v-if="kind === 'mentor_hafta'" :items="[{ t: 'Bosh sahifa', l: '/' }, { t: 'Mentor bo\'limi', l: '/mentor/' }, { t: hafta.sinf.name, l: hafta.sinf.link }, { t: hafta.n + '-hafta' }]" />
+    <Crumbs v-else :items="[{ t: 'Bosh sahifa', l: '/' }, { t: hafta.sinf.name, l: hafta.sinf.link }, { t: hafta.n + '-hafta' }]" />
     <header class="l-hero">
       <div class="kick">{{ hafta.bob }}</div>
-      <h1>{{ hafta.n }}-hafta</h1>
-      <p class="lead">Haftada {{ hafta.lessons.length }} ta dars. Slaydlarni oching va darsning o'quvchi sahifasida qo'shimcha ma'lumot hamda topshiriqlarni toping.</p>
+      <h1>{{ hafta.n }}-hafta <span v-if="kind === 'mentor_hafta'" class="badge-mentor">(Mentor)</span></h1>
+      <p class="lead">{{ kind === 'mentor_hafta' ? 'Haftada ' + hafta.lessons.length + ' ta dars. Har bir dars uchun to\'liq mentor rejasi, konspekt, doska rejasi, topshiriq yechimlari va baholash mezonlari.' : 'Haftada ' + hafta.lessons.length + ' ta dars. Slaydlarni oching va darsning o\'quvchi sahifasida qo\'shimcha ma\'lumot hamda topshiriqlarni toping.' }}</p>
     </header>
     <div class="lessons">
       <article v-for="l in hafta.lessons" :key="l.g" class="lsn">
@@ -103,7 +106,7 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
         <div class="lsn-act">
           <a v-if="l.slide" class="btn btn-primary btn-sm" :href="withBase(l.slide)" target="_blank" rel="noopener"><Icon name="play" />Slaydlar</a>
           <a v-if="l.test" class="btn btn-ghost btn-sm" :href="withBase(l.test)" target="_blank" rel="noopener"><Icon name="list-checks" />Test</a>
-          <a class="btn btn-ghost btn-sm" :href="withBase(l.link)"><Icon name="book-open" />Dars sahifasi</a>
+          <a class="btn btn-ghost btn-sm" :href="withBase(l.link)"><Icon :name="kind === 'mentor_hafta' ? 'graduation-cap' : 'book-open'" />{{ kind === 'mentor_hafta' ? 'Mentor rejasi' : 'Dars sahifasi' }}</a>
         </div>
       </article>
     </div>
@@ -112,7 +115,7 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
     </div>
   </div>
 
-  <!-- DARS -->
+  <!-- DARS (O'quvchi) -->
   <div v-else-if="kind === 'dars'" class="axv">
     <Crumbs
       :items="[
@@ -132,6 +135,35 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
         </a>
         <a v-if="dars.test" class="btn btn-ghost btn-lg" :href="withBase(dars.test)" target="_blank" rel="noopener"><Icon name="list-checks" />Dars testi</a>
         <a class="btn btn-ghost btn-lg" :href="withBase(dars.week.link)"><Icon name="layers" />{{ dars.week.n }}-hafta</a>
+      </div>
+      <nav class="tabs" aria-label="Haftadagi darslar">
+        <a v-for="t in dars.tabs" :key="t.g" class="tab" :class="{ on: t.current }" :href="withBase(t.link)">{{ t.g }}-dars</a>
+      </nav>
+    </header>
+  </div>
+
+  <!-- DARS (Mentor) -->
+  <div v-else-if="kind === 'mentor_dars'" class="axv">
+    <Crumbs
+      :items="[
+        { t: 'Bosh sahifa', l: '/' },
+        { t: 'Mentor bo\'limi', l: '/mentor/' },
+        { t: dars.sinf.name, l: dars.sinf.link },
+        { t: dars.week.n + '-hafta', l: dars.week.link },
+        { t: dars.g + '-dars (Mentor)' },
+      ]"
+    />
+    <header class="l-hero">
+      <div class="kick"><Icon name="graduation-cap" /> Mentor dars rejasi va yechimlari · {{ dars.week.n }}-hafta · {{ dars.g }}-dars</div>
+      <h1>{{ dars.title }}</h1>
+      <p v-if="dars.lead" class="lead">{{ dars.lead }}</p>
+      <div class="btns">
+        <a v-if="dars.slide" class="btn btn-primary btn-lg" :href="withBase(dars.slide)" target="_blank" rel="noopener">
+          <Icon name="play" />Slaydlarni ochish<Icon name="arrow-right" />
+        </a>
+        <a v-if="dars.test" class="btn btn-ghost btn-lg" :href="withBase(dars.test)" target="_blank" rel="noopener"><Icon name="list-checks" />Dars testi</a>
+        <a v-if="dars.student_link" class="btn btn-ghost btn-lg" :href="withBase(dars.student_link)"><Icon name="book-open" />O'quvchi sahifasi</a>
+        <a class="btn btn-ghost btn-lg" :href="withBase(dars.week.link)"><Icon name="layers" />{{ dars.week.n }}-hafta (Mentor)</a>
       </div>
       <nav class="tabs" aria-label="Haftadagi darslar">
         <a v-for="t in dars.tabs" :key="t.g" class="tab" :class="{ on: t.current }" :href="withBase(t.link)">{{ t.g }}-dars</a>
