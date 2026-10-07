@@ -82,33 +82,39 @@ const CATEGORIES: Category[] = [
     ]
   },
   {
-    id: 'hotkeys',
-    title: 'Tezkor tugmalar (Hotkeys)',
-    icon: 'zap',
+    id: 'tracks',
+    title: 'Yo\'nalishlar kodi',
+    icon: 'laptop',
     lessons: [
       {
-        id: 'hk1',
-        title: 'Umumiy tezkor klavishlar',
-        desc: 'Ctrl+C, Ctrl+V, Ctrl+Z, Ctrl+S va tizim kombinatsiyalari',
-        text: 'Ctrl+C nusxalash, Ctrl+V qo\'yish, Ctrl+Z bekor qilish, Ctrl+S saqlash, Ctrl+A hammasini tanlash, Ctrl+F qidirish, Ctrl+X qirqib olish, Ctrl+P chop etish.'
+        id: 'tr_web',
+        title: 'Web Full-stack (React & Vue)',
+        desc: 'React hooklari, Vue reaktivligi va zamonaviy front-end',
+        text: 'const [items, setItems] = useState([]);\nuseEffect(() => {\n  fetchData().then(data => setItems(data));\n}, []);\nreturn <div className="card-list">{items.map(item => <Card key={item.id} {...item} />)}</div>;'
       },
       {
-        id: 'hk2',
-        title: 'VS Code dasturchi klavishlari',
-        desc: 'Kod muharriridagi eng muhim kombinatsiyalar',
-        text: 'Ctrl+Shift+P buyruqlar paneli, Ctrl+` terminalni ochish, Ctrl+D keyingi moslikni tanlash, Ctrl+Shift+K qatorni o\'chirish, Alt+Up qatorni ko\'tarish, Ctrl+/ izohga olish.'
+        id: 'tr_backend',
+        title: 'Back-end & DevOps (FastAPI & Docker)',
+        desc: 'FastAPI marshrutlari, async funksiyalar va Docker',
+        text: 'app = FastAPI(title="AXV Backend API", version="1.0")\n\n@app.get("/api/v1/lessons/{lesson_id}")\nasync def read_lesson(lesson_id: int, db: Session = Depends(get_db)):\n    lesson = await db.query(Lesson).filter(Lesson.id == lesson_id).first()\n    return lesson'
       },
       {
-        id: 'hk3',
-        title: 'Terminal va Git buyruqlari',
-        desc: 'Git va CLI da eng ko\'p teriladigan qisqa buyruqlar',
-        text: 'git status && git add . && git commit -m "feat: yangi modul qo\'shildi" && git push origin main && npm run dev && python3 main.py'
+        id: 'tr_android',
+        title: 'Android dasturlash (Kotlin & Compose)',
+        desc: 'Kotlin funksiyalari va Jetpack Compose interfeysi',
+        text: '@Composable\nfun StudentCard(name: String, progress: Int) {\n    Column(modifier = Modifier.padding(16.dp).fillMaxWidth()) {\n        Text(text = name, style = MaterialTheme.typography.titleLarge)\n        LinearProgressIndicator(progress = progress / 100f)\n    }\n}'
       },
       {
-        id: 'hk4',
-        title: 'Matn bo\'ylab tezkor harakat',
-        desc: 'Ctrl+Left, Ctrl+Right, Ctrl+Backspace, Home, End',
-        text: 'Ctrl+Left so\'z boshiga, Ctrl+Right so\'z oxiriga, Ctrl+Backspace butun so\'zni o\'chirish, Shift+Home qator boshigacha tanlash, Shift+End qator oxirigacha tanlash.'
+        id: 'tr_bi',
+        title: 'BI & Ma\'lumotlar tahlili (Pandas & SQL)',
+        desc: 'Pandas DataFrame va murakkab SQL tahlillari',
+        text: 'import pandas as pd\nimport numpy as np\n\ndf = pd.read_csv("sales_2026.csv")\nmonthly_report = df.groupby(["region", "category"]).agg({\n    "revenue": ["sum", "mean"],\n    "orders": "count"\n}).reset_index()'
+      },
+      {
+        id: 'tr_game',
+        title: 'Game Design (C# & Unity)',
+        desc: 'O\'yin obyekti harakati va kontroller skriptlari',
+        text: 'public class PlayerMovement : MonoBehaviour {\n    [SerializeField] private float speed = 8.5f;\n    private void Update() {\n        float h = Input.GetAxisRaw("Horizontal");\n        float v = Input.GetAxisRaw("Vertical");\n        transform.Translate(new Vector3(h, 0, v).normalized * speed * Time.deltaTime);\n    }\n}'
       }
     ]
   },
