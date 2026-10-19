@@ -119,6 +119,77 @@ a.tile:hover { border-color: var(--vp-c-brand-1); transform: translateY(-3px); }
 .prog i { display: block; height: 100%; background: var(--ax-grad); border-radius: 99px; }
 .prog-l { font-size: 0.82rem; color: var(--vp-c-text-2); margin-top: 6px; }
 
+/* ===== PolyDev Banner (Bosh sahifa) ===== */
+.poly-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  background: linear-gradient(135deg, rgba(88, 166, 255, 0.12), rgba(197, 134, 192, 0.08)), var(--ax-card);
+  border: 1px solid rgba(88, 166, 255, 0.35);
+  border-radius: 20px;
+  padding: 24px 28px;
+  margin: 28px 0 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+.pb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(88, 166, 255, 0.2);
+  color: var(--vp-c-brand-1);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.pb-left h3 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--vp-c-text-1);
+  border: 0;
+  padding: 0;
+}
+.pb-left p {
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
+  max-width: 650px;
+}
+.pb-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.pb-right {
+  flex: none;
+}
+.pb-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+@media (max-width: 768px) {
+  .poly-banner {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 20px;
+  }
+  .pb-actions {
+    justify-content: center;
+  }
+  .pb-logo {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 /* ===== Sinf sahifasi ===== */
 .page-hero { display: flex; align-items: center; gap: 16px; margin: 6px 0 4px; }
 .page-hero h1 { margin: 0; font-size: 2.2rem; line-height: 1.15; }

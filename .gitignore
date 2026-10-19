@@ -10,6 +10,7 @@ node_modules/
 sayt-vitepress/docs/.vitepress/dist/
 sayt-vitepress/docs/.vitepress/cache/
 sayt-vitepress/.vitepress/
+.wrangler/
 sayt/
 test/
 
@@ -23,6 +24,7 @@ sayt-vitepress/docs/mentor/
 sayt-vitepress/docs/trenajyor/
 sayt-vitepress/docs/foundation/
 sayt-vitepress/docs/glossariy/
+sayt-vitepress/docs/polydev/
 sayt-vitepress/docs/index.md
 sayt-vitepress/docs/.vitepress/generated.json
 sayt-vitepress/docs/8-sinf*/

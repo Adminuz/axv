@@ -6,6 +6,7 @@ import Crumbs from './Crumbs.vue'
 import TypingTrainer from './TypingTrainer.vue'
 import FoundationLab from './FoundationLab.vue'
 import GlossaryExplorer from './GlossaryExplorer.vue'
+import PolyDevPage from './PolyDevPage.vue'
 
 const { frontmatter } = useData()
 const kind = computed(() => frontmatter.value.kind)
@@ -26,6 +27,9 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
   <!-- IT GLOSSARIY VA CHEAT-SHEET -->
   <GlossaryExplorer v-else-if="kind === 'glossariy'" />
 
+  <!-- POLYDEV ANDROID IDE -->
+  <PolyDevPage v-else-if="kind === 'polydev'" />
+
   <!-- BOSH SAHIFA / MENTOR BOSH SAHIFA -->
   <div v-else-if="kind === 'home' || kind === 'mentor_home'" class="axv">
     <Crumbs v-if="kind === 'mentor_home'" :items="[{ t: 'Bosh sahifa', l: '/' }, { t: 'Mentor bo\'limi' }]" />
@@ -35,6 +39,31 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
       <p class="tag">{{ home.tag }}</p>
       <p class="tag2">{{ home.tag2 }}</p>
     </section>
+
+    <!-- POLYDEV APP SHOWCASE BANNER -->
+    <div v-if="kind === 'home'" class="poly-banner">
+      <div class="pb-left">
+        <div class="pb-badge">
+          <Icon name="smartphone" />
+          <span>Android Mobil IDE</span>
+        </div>
+        <h3>PolyDev: AI Coding Agent</h3>
+        <p>Telefonda kompyutersiz dasturlash: o'rnatilgan AI agent, Linux terminali (Alpine), Git va 1-bosishda Vercel/Cloudflare'ga deploy qilish.</p>
+        <div class="pb-actions">
+          <a :href="withBase('/polydev/')" class="btn btn-primary btn-sm">
+            <Icon name="sparkles" /> Ilova haqida batafsil
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.xapi.polydev" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+            <Icon name="external-link" /> Google Play
+          </a>
+        </div>
+      </div>
+      <div class="pb-right">
+        <a :href="withBase('/polydev/')">
+          <img :src="withBase('/polydev-icon.png')" alt="PolyDev" class="pb-logo" />
+        </a>
+      </div>
+    </div>
 
     <h2 class="sec-title">{{ kind === 'mentor_home' ? 'Sinfni tanlang (Mentor rejasi)' : 'Sinfingizni tanlang' }}</h2>
     <div class="tiles">
