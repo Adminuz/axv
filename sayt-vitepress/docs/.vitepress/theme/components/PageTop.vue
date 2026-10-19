@@ -40,27 +40,26 @@ const pct = (c: { done: number; total: number }) => (c.total ? Math.round((100 *
       <p class="tag2">{{ home.tag2 }}</p>
     </section>
 
-    <!-- POLYDEV APP SHOWCASE BANNER -->
-    <div v-if="kind === 'home'" class="poly-banner">
+    <!-- POLYDEV APP COMPACT BAR -->
+    <div v-if="kind === 'home'" class="poly-bar">
       <div class="pb-left">
-        <div class="pb-badge">
-          <Icon name="smartphone" />
-          <span>Android Mobil IDE</span>
-        </div>
-        <h3>PolyDev: AI Coding Agent</h3>
-        <p>Telefonda kompyutersiz dasturlash: o'rnatilgan AI agent, Linux terminali (Alpine), Git va 1-bosishda Vercel/Cloudflare'ga deploy qilish.</p>
-        <div class="pb-actions">
-          <a :href="withBase('/polydev/')" class="btn btn-primary btn-sm">
-            <Icon name="sparkles" /> Ilova haqida batafsil
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.xapi.polydev" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
-            <Icon name="external-link" /> Google Play
-          </a>
+        <a :href="withBase('/polydev/')">
+          <img :src="withBase('/polydev-icon.png')" alt="PolyDev" class="pb-icon" />
+        </a>
+        <div class="pb-text">
+          <div class="pb-title">
+            <a :href="withBase('/polydev/')" style="color: inherit; text-decoration: none;">
+              <b>PolyDev: AI Coding Agent</b>
+            </a>
+            <span class="pb-tag">Android</span>
+          </div>
+          <span class="pb-desc">Smartfonda to'liq dasturlash studiyasi (AI Agent, Linux Terminal, Git & Deploy)</span>
         </div>
       </div>
-      <div class="pb-right">
-        <a :href="withBase('/polydev/')">
-          <img :src="withBase('/polydev-icon.png')" alt="PolyDev" class="pb-logo" />
+      <div class="pb-actions">
+        <a :href="withBase('/polydev/')" class="btn btn-ghost btn-sm">Batafsil</a>
+        <a href="https://play.google.com/store/apps/details?id=com.xapi.polydev" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+          <Icon name="external-link" /> Google Play
         </a>
       </div>
     </div>

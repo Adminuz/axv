@@ -119,74 +119,87 @@ a.tile:hover { border-color: var(--vp-c-brand-1); transform: translateY(-3px); }
 .prog i { display: block; height: 100%; background: var(--ax-grad); border-radius: 99px; }
 .prog-l { font-size: 0.82rem; color: var(--vp-c-text-2); margin-top: 6px; }
 
-/* ===== PolyDev Banner (Bosh sahifa) ===== */
-.poly-banner {
+/* ===== PolyDev Compact Bar (Bosh sahifa) ===== */
+.poly-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
-  background: linear-gradient(135deg, rgba(88, 166, 255, 0.12), rgba(197, 134, 192, 0.08)), var(--ax-card);
-  border: 1px solid rgba(88, 166, 255, 0.35);
-  border-radius: 20px;
-  padding: 24px 28px;
-  margin: 28px 0 10px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  gap: 16px;
+  background: linear-gradient(135deg, rgba(88, 166, 255, 0.08), rgba(197, 134, 192, 0.05)), var(--ax-card);
+  border: 1px solid var(--ax-line);
+  border-radius: 14px;
+  padding: 10px 16px;
+  margin: 18px 0 6px;
+  box-shadow: var(--ax-shadow);
+  transition: border-color 0.15s;
 }
-.pb-badge {
-  display: inline-flex;
+.poly-bar:hover {
+  border-color: var(--vp-c-brand-1);
+}
+.pb-left {
+  display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 3px 10px;
-  border-radius: 999px;
-  background: rgba(88, 166, 255, 0.2);
-  color: var(--vp-c-brand-1);
-  font-size: 0.75rem;
-  font-weight: 700;
-  margin-bottom: 8px;
+  gap: 12px;
+  min-width: 0;
 }
-.pb-left h3 {
-  margin: 0 0 6px;
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--vp-c-text-1);
-  border: 0;
-  padding: 0;
+.pb-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  flex: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
-.pb-left p {
-  margin: 0 0 16px;
+.pb-text {
+  min-width: 0;
+}
+.pb-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 0.95rem;
-  line-height: 1.5;
+  color: var(--vp-c-text-1);
+  line-height: 1.2;
+}
+.pb-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: rgba(88, 166, 255, 0.18);
+  color: var(--vp-c-brand-1);
+}
+.pb-desc {
+  display: block;
+  font-size: 0.8rem;
   color: var(--vp-c-text-2);
-  max-width: 650px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
 }
 .pb-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
   align-items: center;
-}
-.pb-right {
   flex: none;
 }
-.pb-logo {
-  width: 90px;
-  height: 90px;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-  border: 2px solid rgba(255, 255, 255, 0.15);
+.pb-actions .btn-sm {
+  font-size: 0.82rem;
+  padding: 0.4em 0.85em;
+  border-radius: 8px;
 }
 @media (max-width: 768px) {
-  .poly-banner {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 20px;
+  .poly-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px;
+  }
+  .pb-desc {
+    white-space: normal;
   }
   .pb-actions {
-    justify-content: center;
-  }
-  .pb-logo {
-    width: 70px;
-    height: 70px;
+    justify-content: flex-end;
   }
 }
 
